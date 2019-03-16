@@ -1,0 +1,1 @@
+Soon more on Scott Wlaschions functional programming with DDD.
