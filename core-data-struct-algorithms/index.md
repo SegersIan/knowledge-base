@@ -43,3 +43,7 @@ Data Structures often differ in their efficiency for each sorting algorithm and 
 * [Quicksort](algorithms/quick-sort.md)
 * [Quickselect](algorithms/quick-select.md)
 * [Graph Algorithms](algorithms/graph.md)
+
+## Other topics
+
+* [NP Completeness](np-completeness.md)
