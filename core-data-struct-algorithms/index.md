@@ -43,3 +43,19 @@ Data Structures often differ in their efficiency for each sorting algorithm and 
 * [Quicksort](algorithms/quick-sort.md)
 * [Quickselect](algorithms/quick-select.md)
 * [Graph Algorithms](algorithms/graph.md)
+
+## General facts and point
+
+* We asume a limit on the size of each word of data. When working with inputs of size `n`, we typically asume that integers are repesented by `c lg n` **bits** for some constant `c >= 1`. We require `c >= 1` so that each word can hold the value of `n`, enabling us to index the indivudual input elements, and we restrict `c` to be constant so the word size does not grow arbitrarly. Because of this property, we can easily index in an array as each item will have the same word size and we kan O(1) access in an array.
+* Quadratic function `an² + bn + c`.
+* A **randmozed alghoritm takes** "random choices" therefore we can not express the max time, instead we express then the **expected running time**.
+
+### Divide-And-Conquer
+
+* An algorithm design approach/technique.
+* They break the problem into several subproblems that are similar to the original problem but smaller in size, solve the subproblems *recursively*,and then combine these solutions to create a solution to the original problem.
+* The divide-and-conquer paradigm involves 3 steps at each level of the recurrursion:
+  * **Divide** the problem into subproblems that are smaller instances of of the same problem.
+  * **Conquer** the subproblems by solving them recursively. If the subprobleme sizes are small enough, howver, just solve the subproblem in a straightforward manner.
+  * **Combine** the solutions of the subproblems into the solution for the original problem.
+
