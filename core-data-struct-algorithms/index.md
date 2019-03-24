@@ -58,4 +58,34 @@ Data Structures often differ in their efficiency for each sorting algorithm and 
   * **Divide** the problem into subproblems that are smaller instances of of the same problem.
   * **Conquer** the subproblems by solving them recursively. If the subprobleme sizes are small enough, howver, just solve the subproblem in a straightforward manner.
   * **Combine** the solutions of the subproblems into the solution for the original problem.
+* When an algorithm contains a recursive call to itself, we can often describe its running time by **recurrence equation** or **recurrence**, which describes the overall running time on a problem of size `n` in terms of the running time on smaller inputs. We can then use the mathematical tools to solve the recurrence and provide bounds on the performance of the algorithm.
+  * Formula
+    * `c` : Some constant
+    * `T(n)` : Running time on problem of size `n`
+    * `D(n)` : Time to divide the problem in subproblems.
+    * `C(n)` : Time to combine the solutions of the subproblems into the solution of the original problem.
+    * `a` : # of subproblems each of which is `1/b` the size of the original. It takes time `T(n/b)` to solve one subproblem of size `n/b`, and so it takes time `aT(n/b)` to solve `a` of then.
+    * We get recurrance: (correction, `O` must be `Θ` here)
+    ![equation](https://latex.codecogs.com/gif.latex?T%28n%29%20%3D%20%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%20O%281%29%20%26%20if%20n%5Cleq%20c%20%5C%5C%20aT%28n/b%29%20&plus;%20D%28n%29%20&plus;%20C%28n%29%20%26%20otherwise.%20%5Cend%7Bmatrix%7D%5Cright.)
+    * If the problem is small enough (`n <= c`) the time might be constant `O(1)`.
+* Elaborate example of the formula
+  * When we have `n > 1`, `n` is an exact power of `2` elements applied with the **merge sort** algorithm:
+    * **Divide**: The divide step just computes the middle of the subarray, wich takes constant time. Thus, `D(n) = O(1)`.
+    * **Conquer**: We recursively solve two subproblems, each of size `n/2`, which contributes `2T(n/2)` to the running time.
+    * **Combine**: Merge procedure on an `n`-element subarray takes `O(n)`, so `C(n) = O(n)`.
+  * Formula: (correction, `O` must be `Θ` here) ![eq](https://latex.codecogs.com/gif.latex?T%28n%29%20%3D%20%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%20O%281%29%20%26%20if%20n%3D1%20%5C%5C%202T%28n/2%29%20&plus;%20O%28n%29%20%26%20if%20n%20%3E%201.%20%5Cend%7Bmatrix%7D%5Cright.)
+  * Where `c` represents the time required to solve problems of size `1` as well as the time per array element of the divide and combine steps.
+
+* It's perfectly reasonable to divide the orginal problem into sub problems untill the subproblems are small enough, and then use a insertion sort on those subproblems as they might perform better on smaller subproblems/arrays.
+
+* **Recursive Case**: When a subproblem is large enough to solve recursively.
+* **Base Case**: When a subproblem is smal enough to not recursive.
+
+#### Methods or solving recurrences
+
+For obtaining asymptotic Θ or O bounds on the solution.
+
+* **Substitution**: Guess a bound and then use math to prove our guess is right.
+* **Recursion-tree**: Convert the recurruence into a tree whose nodes represent the costs incurred at different levels of the recursion. We use techniques for bounding summations to solve the recurrence.
+* **Master**: Provide bounds for recurrences of the form `T(n) = aT(n/b) + f(n)`
 
