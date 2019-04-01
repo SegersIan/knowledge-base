@@ -330,24 +330,118 @@ Like all proxies, you pust sugorate in between so you can add additional logic a
 
 #### Chain of responsibility
 
+> The pattern chains the receiving objects together, and then passes any request messages from object to object until it reaches an object capable of handling the message. The number and type of handler objects isn't known a priori, they can be configured dynamically. The chaining mechanism uses recursive composition to allow an unlimited number of handlers to be linked.
+
+![image](assets/Chain_of_responsibility_01.png)
+
+Chain of Responsibility simplifies object interconnections. Instead of senders and receivers maintaining references to all candidate receivers, each sender keeps a single reference to the head of the chain, and each receiver keeps a single reference to its immediate successor in the chain.
+
+![image](assets/Chain_of_responsibility_02.png)
+
 #### Command
 
-#### Interpreter
+> Encapsulate a request as an object, thereby letting you parametrize clients with different requests, queue or log requests, and support undoable operations.
+
+Basically put all the data required to run a command in an object. Pass this on so dynamically a proper command handler can execute the command. 
+
+```C#
+interface ICommand {
+    void execute();
+}
+
+var queue = new List<ICommands>{...};
+queue.execute();
+
+```
 
 #### Iterator
+Hide the underlying logic and complecity for getting the next value.
 
 #### Mediator
 
+> Design an intermediary to decouple many peers. Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.
+
+> Partitioning a system into many objects generally enhances reusability, but proliferating interconnections between those objects tend to reduce it again. The mediator object: encapsulates all interconnections, acts as the hub of communication, is responsible for controlling and coordinating the interactions of its clients, and promotes loose coupling by keeping objects from referring to each other explicitly.
+
+Goal is to remove direct/explicit relations between different objects types.
+
+> The Mediator defines an object that controls how a set of objects interact. Loose coupling between colleague objects is achieved by having colleagues communicate with the Mediator, rather than with each other. The control tower at a controlled airport demonstrates this pattern very well. The pilots of the planes approaching or departing the terminal area communicate with the tower rather than explicitly communicating with one another. The constraints on who can take off or land are enforced by the tower. It is important to note that the tower does not control the whole flight. It exists only to enforce constraints in the terminal area.
+
+![mediator](assets/Mediator_example.png)
+
 #### Memento
+
+> Without violating encapsulation, capture and externalize an object's internal state so that the object can be returned to this state later.
+
+Basically we want to be able to do `undo` or `rollback`. So we keep snapshots/deltas of the changes we make so we can return a specific state later.
+
+It's like the following
+```C#
+class TheWorld {
+    setSnapshot();
+    createSnapShot();
+}
+
+class TheWorldMoment{
+    getState();
+    setState();
+}
+
+var world = new TheWorld();
+// Do changes ...
+var snapshot1 = world.createSnapShot();
+// Do changes ...
+var snapshot2 = world.createSnapShot();
+// Restore to state since we took snapshot 1
+world.setSnapshot(snapshot1);
+```
 
 #### Null Object
 
+The null object pattern is perfect to get rid of all this defensive coding with `if returnValue == null` and such.
+
+Instead of returning a `null` from a (e.g. factory) function, you can return an object that implements certain interface or abstract class, but does nothing. So basically doing a silent "no-operation" or anything similar like that.
+
+> It is sometimes thought that Null Objects are over simple and "stupid" but in truth a Null Object always knows exactly what needs to be done without interacting with any other objects. So in truth it is very "smart."
+
+- The Null Object class is often implemented as a Singleton to save memory as it's stateless anyway.
+
 #### Observer
+
+Idea is that you have a `Observable` with zero, one or more `Observers`. If the state changes in the `Observable`, it will notify all `Observers`. Usually with this pattern the `Observable` keeps a list/references of all `Observers`, so this is create a thight coupling of awareness, consider a pub/sub mechanism if you want to create a more loosely coupled approach where the observers and obserables are unaware of each other.
 
 #### State
 
+Intersting, so instead of changing behaviour purely based on changing state in an object, we will create an abstract class, and each subclass will represent an allowed state. (Use polymoprhism instead of ENUMS/Constants). This is one way !
+
+Everytime you have a finite state machine, evaluate this pattern. The State pattern does not specify where the state transitions will be defined. The choices are two: the "context" object, or each individual State derived class. The advantage of the latter option is ease of adding new State derived classes. The disadvantage is each State derived class has knowledge of (coupling to) its siblings, which introduces dependencies between subclasses.
+
+![state](assets/State1.png)
+
+- State objects are often Singletons.
+- Flyweight explains when and how State objects can be shared.
+
+
 #### Strategy
+
+> Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from the clients that use it.
+
+This is perfect when you have algorithms that work perfect for a specific size of data set. This is basicaly the core Open/Closed principle of the SOLID. Define one Interface/Abstract class, and have different implementations that have a different strategy. 
+
+![state](assets/Strategy1.png)
 
 #### Template method
 
-### Visitor
+ > Define the skeleton of an algorithm in an operation, deferring some steps to client subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
+
+ > Base class declares algorithm 'placeholders', and derived classes implement the placeholders.
+
+This use used more than you think. Think of VueJS where you have "hooks". There is a strict process, but you can overwrite or append within a specific atomic step.
+
+This is typicall to have a root class `BusinessProcess`, which has methods `stepA()`, `stepB()`, and `stepC() and then you can subclass it and optionally choose with step you want to override with your own logic.
+
+Another example is : Kind of basic inheritance.
+
+>  "the Hollywood principle" - "don't call us, we'll call you".
+
+![Template](assets/Template_method_example.png)
