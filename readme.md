@@ -6,3 +6,4 @@ Summaries of books and articles of various concepts in it.
 * [Data structures and Algorithms](core-data-struct-algorithms/index.md)
 * [Design Patterns](architecture-design-patterns/index.md)
 * [(NodeJS) Network and Streams](nodejs-streams-and-networking/index.md)
+* [USB Spec and How it works](usb-spec/index.md)
