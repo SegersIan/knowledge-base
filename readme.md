@@ -8,3 +8,4 @@ Summaries of books and articles of various concepts in it.
 * [(NodeJS) Network and Streams](nodejs-streams-and-networking/index.md)
 * [USB Spec and How it works](usb-spec/index.md)
 * [OpenUI5](tech-openui5/readme.md)
+* [Azure](cloud-azure/readme.md)
