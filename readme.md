@@ -9,3 +9,4 @@ Summaries of books and articles of various concepts in it.
 * [USB Spec and How it works](usb-spec/index.md)
 * [OpenUI5](tech-openui5/readme.md)
 * [Azure](cloud-azure/readme.md)
+* [Linux LPIC 1](linux-lpic-1/readme.md)
