@@ -1,0 +1,23 @@
+{
+  "name": "knowledge-base",
+  "version": "1.0.0",
+  "description": "Summaries and Articles",
+  "main": "index.js",
+  "dependencies": {
+    "mdpdf": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "render": "./node_modules/mdpdf --format A4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SegersIan/knowledge-base.git"
+  },
+  "author": "Ian Segers",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/SegersIan/knowledge-base/issues"
+  },
+  "homepage": "https://github.com/SegersIan/knowledge-base#readme"
+}
