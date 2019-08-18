@@ -33,6 +33,8 @@ Summary of network relevant topics regarding computers.
   * Link Layer: OSI Data Link Layer (#2) and Phsyical Layer (#1)
   * Notice how OSI Session layer relates to Internet Application and Transport layer of TCP/IP.
   
+![layers](assets/layers.png)
+  
 ## Layer 1: Physical
 
 
