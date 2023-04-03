@@ -13,6 +13,7 @@
 - https://www.wigle.net/
 - https://www.openwall.com/john/
 - https://www.aircrack-ng.org/
+- https://finchsec.com/courses/wifi-exploitation-101/
 
 
 ### Grouped
