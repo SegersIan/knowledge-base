@@ -11,6 +11,7 @@
 - https://www.wireshark.org/
 - https://portswigger.net/burp
 - https://www.wigle.net/
+- https://www.openwall.com/john/
 
 
 ### Grouped
