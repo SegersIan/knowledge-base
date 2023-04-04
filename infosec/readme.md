@@ -83,3 +83,15 @@
 - https://radar.cncf.io/2021-09-devsecops
 - https://www.microsoft.com/en-us/securityengineering
 - https://www.microsoft.com/en-us/securityengineering/opensource/
+- [OOSTMM - Open Source Security Testing Methodology Manual](https://www.isecom.org/research.html)
+
+## Vulnerability Databases
+
+- technet.microsoft.com
+- www.securityfocus.com
+- www.hackerstorm.co.uk
+- www.exploit-db.com
+- www.securitymagazine.com
+- www.trendmicro.com
+- www.darkreading.com
+
