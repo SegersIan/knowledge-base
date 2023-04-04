@@ -67,7 +67,10 @@
 10. Penetration Testing:
     a. **Kali Linux**: A Linux distribution designed for penetration testing, with preinstalled security tools like Metasploit, Nmap.
 
-
+## Google Hacking
+- Type `allinurl:tsweb/default.htm` in google, returns Remote access connection pages.
+- https://www.exploit-db.com/google-hacking-database
+- 
 ## Podcasts
 
 - https://darknetdiaries.com/
