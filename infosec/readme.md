@@ -75,6 +75,14 @@
 - https://github.com/laramies/theharvester
 - https://github.com/xmendez/wfuzz
 
+## Web Mirroring / Website footprinting
+
+- [HTTrack](www.httrack.com)
+- [Black Widow](https://softbytelabs.com/wp/)
+- [WebRippter](https://webripper.software.informer.com/download/ (Not OFFICIAL DOWNLOAD)
+- [Backstreet Browser](http://www.spadixbd.com/)
+- [Use WGET](https://bash-prompt.net/guides/wget-mirror-website/)
+
 ## Podcasts
 
 - https://darknetdiaries.com/
