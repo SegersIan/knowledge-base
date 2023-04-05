@@ -91,6 +91,10 @@
 - https://www.hackthebox.com/
 - https://www.itpro.tv/
 
+## Social Engineering
+
+- [SEF: Social Engineering Franework BOOK](https://subscription.packtpub.com/book/security/9781788837927/1/ch01lvl1sec04/the-social-engineering-framework)
+- https://www.maltego.com/downloads/
 ## Others
 
 - https://cloudsecurityalliance.org/
@@ -101,6 +105,7 @@
 - https://www.tenable.com/products/nessus
 - [Way Back Machine](www.archive.org) - (In history, some interesting formation can be found on company sites or so)
 - [Website watcher](https://www.aignes.com/) - Wath websites and notify if anything changes
+- https://www.shodan.io/ - Find anything connected    
 
 ## Vulnerability Databases
 
