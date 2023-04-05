@@ -82,7 +82,6 @@
 - [WebRippter](https://webripper.software.informer.com/download/ (Not OFFICIAL DOWNLOAD)
 - [Backstreet Browser](http://www.spadixbd.com/)
 - [Use WGET](https://bash-prompt.net/guides/wget-mirror-website/)
-
 ## Podcasts
 
 - https://darknetdiaries.com/
@@ -100,6 +99,7 @@
 - https://www.microsoft.com/en-us/securityengineering/opensource/
 - [OOSTMM - Open Source Security Testing Methodology Manual](https://www.isecom.org/research.html)
 - https://www.tenable.com/products/nessus
+- [Way Back Machine](www.archive.org) - (In history, some interesting formation can be found on company sites or so)
 - 
 
 ## Vulnerability Databases
