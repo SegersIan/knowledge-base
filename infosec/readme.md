@@ -16,6 +16,8 @@
 - https://finchsec.com/courses/wifi-exploitation-101/
 - https://github.com/aircrack-ng/aircrack-ng
 - git@github.com:xwmx/airport.git
+- `netstat` for checking all active ports 
+- Wireshark - Sniff packets in local machine or network
 
 ### Grouped
 
