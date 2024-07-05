@@ -1,4 +1,9 @@
-# Knowledge Base
+# About
+
+My personal knowledge base where I keep summaries and note of useful professional knowledge.
+All the content is publicly available on [GitHub](https://segersian.github.io/knowledge-base/) and [my public site](https://kb.segersian.com)
+
+# Index
 
 Summaries of books and articles of various concepts in it.
 
@@ -13,8 +18,3 @@ Read this rendered on [https://segersian.github.io/knowledge-base/](https://sege
 * [Azure](cloud-azure/readme.md)
 * [Linux LPIC 1](linux-lpic-1/readme.md)
 
-## Render a page
-
-1. Clone repo
-2. `npm i`
-3. `npm run render -- path/to/file.md`
