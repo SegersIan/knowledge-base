@@ -23,6 +23,12 @@ He works for the infamous ThoughtWorks which has many thought leaders and releva
 Author of many [books](https://martinfowler.com/books/) like [Patterns of Enterprise Application Architecture](https://martinfowler.com/books/eaa.html), [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html) and [UML Distilled: A Brief Guide to the Standard Object Modeling Language](https://martinfowler.com/books/uml.html).
 He works for the infamous ThoughtWorks which has many thought leaders and relevant authors on its payroll.
 
+## Micheal Nygard
+
+* Website: [michaelnygard.com](https://michaelnygard.com)
+
+Well-known software architect which authored [Release IT!](https://pragprog.com/titles/mnee2/release-it-second-edition/).
+
 ## Neal Ford
 
 * Website: [nealford.com](https://nealford.com/)
@@ -41,6 +47,12 @@ Author of many books and mostly known for clean code and design principles. Howe
 * Website: [samnewman.io](https://samnewman.io/)
 
 Author of [books](https://samnewman.io/books/) like [Building Microservices](https://samnewman.io/books/building_microservices/) and [Monolith To Microservices](https://samnewman.io/books/monolith-to-microservices/).
+
+## Susanne Kaiser
+
+* Website [SusanneKaiser.net](https://www.susannekaiser.net/)
+
+Does many [architecture talks](https://www.susannekaiser.net/#conferences).
 
 ## Vaughn Vernon
 

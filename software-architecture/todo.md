@@ -1,55 +1,24 @@
 ## Topics to cover - AKA THE TODO
 * What is Software Enterprise Architecture
-* How to do Enterprise Architecture 
-    * Understand the perceived role of IT
-    * Translate the business Strategy into IT strategy
-    * Create Transparancy
-    * Define the target picture
-    * Create a roadmap to get from the current to target picture
-    * Govern/Harmonize the exection of the plan
-    * Obtain process about the process and refine
-    * Coach and mentor the people on the journey/road
-    * Somewhere side track from this steps in also things like Business capabilities and such.
 * How to get "TRUST" from the engineering team, and how to measure it (doing surveys for example)
 * How to get architecture in the "AGILE" or "SAFE" ecosystem ?
 * How to get architecture adapted all together
-* What are architectural styles and can they co-exist ?
 * Where/how does "clean Architecture" fit in ?
 * Make a good split and difference between architecture and enterprise architecture
-* What is the difference between architecture and design, or "systen design".
-    * See Clean Architecture first chapter ?
 * Consider on how to discuss the points of Software Architecture and the hard parts book
 * Consider how the architect elevator fits the big picture.
-* Discuss the architectural styles
-* Evolutionary Architecture - Go deeper with the fitness function and such. Circle back to "Defining charachteristics".
-    * https://martinfowler.com/articles/evodb.html evolutionary database change
-    * See "Build microservices" book of sam newmann, which has "Evolutionary Architect" 
 * Discuss managed evolution, but go deeper, what it solves or does. Like, IT allignment. Circle that back to the enterprise architecture and understand how the role of IT is perceived and the relation.
-* Discuss evolutionary psychology
 * Emphasize how 'data' and *'relations/connections* impact architecture.
 * The concepts of "lenses/views" and how they can be used. Which are they, and when to use which ones?
-* Role of conways law in architecture
-    * See "Build microservices" book of sam newmann, which has "Evolutionary Architect" 
-* Operational aspects of architects
-    * Architectural Decision Records
-    * Record exceptions
-    * Exceptions are ok, just measure how many you make.
+
 * Look at managed evolution KPIs
 * Make a throrough list of fitness function examples
-* Make a reference list of all the -ilities that we can think off.
 * Domain Events, Event Driven Architecure, Even Sourcing...
     * https://martinfowler.com/articles/201701-event-driven.html
 * "Emerging design/architecture"
 * Add also something about all the database reading models, like eventual consistency and such. Cause this is very important when architecting or designing stuff, and the what you should take in consideration.
     * https://www.microsoft.com/en-us/research/wp-content/uploads/2011/10/ConsistencyAndBaseballReport.pdf
     * Also see the Data instensive applications
-* Nuggets of wisdom list
-    * Don't split services/domains on "entity", entity driven design I call it. Cause where goes to the entity independent, or aggregate of enttities business logic?
-    * Your thoughts on the DRY principle, and using the rule of 3. You want to apply DRY for code that changes at the same time, for the same actor/end user. (e.g. a logic for a user vs admin that seems similar at first).
-    * Clean architecture book page 62
-        * v1: A module should be responsible to one, and only one, user ornstakeholder
-        * v2 (better): A module should be responsible to one, and only one, actor.
-            * Note: module can be a small as a single source file, so maybe it is not really DRY specific, but more a guide.
 * Technology radar and application radar
 * SAGA Pattern
     * Choreography (is basically event driven choreography, while orchestration is more SAGA as you would know it. I would do research if "SAGA Choreography" is really SAGA all together, read back the original whitepaper to validate.)
@@ -65,37 +34,10 @@ buildings are. It is limited by imagination, by design, by organization. In
 short, it is limited by properties of people, not by properties of the world. “We
 have met the enemy, and he is us.” - ralph johnson
 
-* DDD - I (IAN) would label it as a data/scope modelling tool, not an "structuring" tool.
-
-### (Anti) Patterns
-
-*This section might be moved to a page of it's own, listing all (anti) patterns.
-
-* Big Ball of Mud (Anti Pattern)
-    * Absence of architecture, or absence of architecture governance (making sure the vision is followed).
-    * No real structure
-    * [Orignal Whitepaper](https://www.researchgate.net/publication/2938621_Big_Ball_of_Mud)
-* Unitary Architecture (Pattern)
-    * System lives on one piece of hardware, no integrations or such.
-    * e.g. Embedded systems
-* Client/Server (Pattern)
-    * Desktop + database server
-    * Browser + web server
-    * Three-Tier 
-* Architecture by implication (Anti Pattern)
-* Accident Architecture (Anti Pattern)
-
-
-## Managed Evolution Notes
-
 * Architecture domains/domains/fields
     * Application Architecture
     * Integration Architecture
     * Infrastructure Architecture
-
-## Framework thinking
-
-These notes are intended to help "framework thinking" on this topic
 
 ## Architecture over time - patterns
 Discuss patterns or techniques which allow to gradually migrate from todays architecture/design to the target architecture/design.
@@ -110,50 +52,9 @@ Discuss patterns or techniques which allow to gradually migrate from todays arch
 
 ## Others
 
-* Think of guides or methodologies for several use cases
-    * When greenfield (Define new characteristics)
-    * When replacing systems (review desire characteritics, and current once, etc...)
-        * Did something change meanwhile ? Like stakeholders ? Or pure replace.
-    * When ...
-    * Tips of questions and concerns
-
-# Next Chapters for main page:
-
-## 5. Concepts
-
-### Evolutionary Architecture
-
-That change is constant, is a fundamental fact for many areas of life. This is no different for software systems and software architecture. 
-
-Architecture will have to evolve, if the systems wants to survive over a long time. A system is like a biological organism, it must adapt and change to survive. Survival of the fittest is a law that also exists for organisations and the systems that support them.
-
-> Survival of the fittest... suggestes that organisms best adjusted to their environment are the most successful in surviving and reproducing.
-
-In [Building Evolutionary Architectures](https://www.oreilly.com/library/view/building-evolutionary-architectures/9781491986356/) the authors build further on the concept of Evolutionary Architectures.
-
-**As an architect, you should take this in consideration. Try to define your architecture in a way that allows and expect change over time. Business and its requirements change constantly, as the technologies and platforms that support them.**
-
 ### Understanding Needs
 
 To do good architecture, one must really try to understand the **needs of all the stakeholders** involved, and **understand their priorities**. **All your architectural decisions should be guided by the this**.
-
-### Foundations
-
-#### Architectural Thinking
-
-*based on [Fundamentals of Software Architecture](https://fundamentalsofsoftwarearchitecture.com/)*
-
-#### Modularity
-
-*based on [Fundamentals of Software Architecture](https://fundamentalsofsoftwarearchitecture.com/)*
-
-#### Architectura Characteristics
-
-*based on [Fundamentals of Software Architecture](https://fundamentalsofsoftwarearchitecture.com/)*
-
-#### Component Based Thinking
-
-*based on [Fundamentals of Software Architecture](https://fundamentalsofsoftwarearchitecture.com/)*
 
 ### Component Principles
 
@@ -171,11 +72,90 @@ To do good architecture, one must really try to understand the **needs of all th
 
 - Add your thoughts on how this element is relevant in larger architectures, and about microservices , where if the service is small enough, it might be less "important". I think it's still relevant, to follow this,  but on a smaller scale. Cause it has a solid point to avoid "bleeding in" of external concepts/ideas/or such.
 
-
 ### Techniques and Soft Skills
-
-
 
 * BASE
 * ACID
     * What they mean, and how they related to architectures (monolith vs distributed etc...)
+* emergent design and intentional architecture 
+
+## Modelling
+    * Go deeper on domain modelling techniques and approaches.
+
+### Data 
+* Draw the comparison with your blog on cloud services.
+* Operational vs Anlytical data
+* Data mesh
+* Look at data intensive applications book to see 
+* Data vs Application architecture might be a more mainstream approach.
+
+### Concurrency Models
+* What is covered in the book
+
+### 7 databases in 7 weeks
+* ANy thoughts from there
+
+## Architecture Katas
+
+## The role of patterns in architecture + a list of patterns (might be the parent placeholder for things like the SAGA.)
+
+## Secure By Design
+
+## Privacy By Design
+
+## Technology Radar
+
+## Application Radar
+
+## Talk about emergent design, usually design emerges from the path of least resistance (technically or from organization, like, which team had the least bandwith or knows the stakeholder best?, they get to implement features). Also identify what other "forces" impact systems or emergent design more specific.
+
+ChatGPT input:
+
+
+When discussing emergent design or architecture in IT systems, especially in the absence of intentional design, several forces or "laws" akin to the law of the "path of least resistance" can be observed. These forces collectively influence the system's evolution and characteristics:
+
+1. **Conway's Law**: This principle states that system designs are constrained to mimic the communication structures of the organization that creates them. In other words, the system's architecture will mirror the organizational structure.
+
+2. **Accidental Complexity**: This refers to complexity that arises from the chosen tools, languages, or approaches rather than from the inherent complexity of the system itself. Over time, this accidental complexity can shape the system in unforeseen ways.
+
+3. **Technical Debt**: As shortcuts are taken or temporary solutions are implemented, technical debt accumulates. This debt can guide future development choices, often leading to more complex and less optimal solutions.
+
+4. **Survivorship Bias**: The systems or components that endure are often those that are good enough, not necessarily the best. This bias can guide the evolution of a system based on what works adequately under certain conditions, rather than what might be optimal in a different context.
+
+5. **Erosion of Design**: Over time, the original design of a system can erode due to multiple incremental changes, leading to a structure that no longer resembles the intended design. This erosion shapes the emergent design.
+
+6. **Resource Limitation**: The availability of resources (time, budget, skills) heavily influences system design. Constraints in these areas can lead to simpler, more pragmatic solutions.
+
+7. **Feedback Loops**: The responses and feedback from a system's users or environment can significantly influence its evolution. Positive feedback may lead to the reinforcement of certain features or designs, while negative feedback may prompt changes.
+
+8. **Evolutionary Design**: The system evolves over time through a process of natural selection, where the most successful features or components survive and less successful ones are discarded or modified.
+
+9. **Market and User Demand**: Market trends and user needs can greatly influence the direction of a system's development, often pushing it in directions not initially anticipated.
+
+10. **Regulatory and Compliance Forces**: Legal and compliance requirements can impose constraints on a system's design, often leading to architectures that prioritize compliance over other aspects.
+
+These forces often interact with each other, leading to complex dynamics that shape the emergent design of IT systems. Understanding these forces can help in managing and guiding the evolution of such systems.
+
+The list of ten forces shaping emergent IT system design was a curated selection, not an exhaustive one. There are indeed additional factors that can influence system architecture in the absence of intentional design:
+
+11. **Technology Lock-In**: The initial choice of technology (like a programming language or platform) can constrain future development, leading to a path dependency where changing technologies becomes increasingly difficult and costly.
+
+12. **Security Considerations**: Security needs can profoundly shape system architecture, often resulting in trade-offs with usability, performance, or cost.
+
+13. **Scalability Needs**: The necessity to scale a system to handle increased load can lead to significant architectural changes, often emphasizing distributed systems, cloud computing, or microservices.
+
+14. **Legacy Systems Integration**: The need to integrate with or build upon legacy systems can significantly influence architecture, often leading to more complex and less ideal solutions.
+
+15. **Performance Optimization**: The drive to optimize for performance can lead to specific architectural choices, such as the use of certain algorithms, data structures, or hardware optimizations.
+
+16. **Cultural and Social Factors**: The cultural and social context in which a system is developed can subtly influence design choices, especially in terms of user interface and experience.
+
+17. **Environmental Impact and Sustainability**: Increasingly, considerations about a system's environmental impact and sustainability can influence architectural decisions, such as energy-efficient computing or reduced electronic waste.
+
+18. **Knowledge and Experience of the Development Team**: The collective knowledge, experience, and biases of the development team can greatly influence the architecture, often leading to a preference for familiar technologies and patterns.
+
+19. **Data Gravity**: The concept that data and applications tend to move towards the largest data pools. Large datasets can influence the architecture by necessitating processing and analytics to be close to where the data resides.
+
+20. **User Feedback and Behavior**: The way users interact with a system and their feedback can lead to iterative changes in the system, shaping its design over time.
+
+These additional forces, along with the initial ten, highlight the multifaceted and complex nature of system design in IT, especially when there's no intentional architecture or design in place. The emergent design is often a product of these varied, sometimes conflicting, influences.

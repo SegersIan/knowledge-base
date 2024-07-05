@@ -8,7 +8,7 @@
 
 ## Description
 
-Known as the underlying principle behind Unix terminal shell languages, those who dable in functional programming will also see parallells. MapReduce is also a popular concept following this style. An entire **process** is built up from pipes and filters to deliver a certain functionality.
+Known as the underlying principle behind Unix terminal shell languages, those who dabble in functional programming will also see parallel's. MapReduce is also a popular concept following this style. An entire **process** is built up from pipes and filters to deliver a certain functionality.
 
 The power of **composition** is key in this architectural style.
 
@@ -38,7 +38,7 @@ By default don't use it, unless the "reasons to use" are clearly met.
 
 ## Considerations
 
-This is still a monolothic style, so it comes with all the flaws of monolithic architectures.
+This is still a monolithic style, so it comes with all the flaws of monolithic architectures.
 
 ## Characteristics
 
