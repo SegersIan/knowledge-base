@@ -5,7 +5,7 @@ All the content is publicly available on [GitHub](https://segersian.github.io/kn
 
 # Index
 
-* [Software Architecture](softwar-architecture/index.md)
+* [Software Architecture](software-architecture/index.md)
 * [Clean Architecture](architecture-clean/index.md)
 * [Data structures and Algorithms](core-data-struct-algorithms/index.md)
 * [Design Patterns](architecture-design-patterns/index.md)
