@@ -1,15 +1,15 @@
 # Clean Architecture
 
 ## General Overview
-Clean architecture was created by Robert C. Martin. The general idea is that any type of architecture should respect the rights direction of the dependecies, see the Dependency Rule.
+Clean architecture was created by Robert C. Martin. The general idea is that any type of architecture should respect the rights direction of the dependencies, see the Dependency Rule.
 
 The core, the entities is the purest part of the system with 0 impurity. The more we move to outer layers, the more impure the layers become, note that functional programming languages tend to encourage this idea.
 
-For more on how functional programming encourages clean architecutes styles, watch the talk from [Mark Seemann "Functional Architecture - The Pits of Success"](https://youtu.be/US8QG9I1XW0) on YouTube.
+For more on how functional programming encourages clean architectures styles, watch the talk from [Mark Seemann "Functional Architecture - The Pits of Success"](https://youtu.be/US8QG9I1XW0) on YouTube.
 
 Notice that most of the rules of the architecture emerge from the SOLID principles, translated in their module level equivalents. More on that later. 
 
-![alt text](assets/architecture_overview.png)
+![alt text](../attachments/architecture_overview.png)
 
 ### Dependency Rule
 > Source code dependencies must point only inward, toward higher level policies.
@@ -18,7 +18,7 @@ Meaning, the inner modules must be be unaware and not depend on outer layers of 
 
 Using the Dependency Inversion principle helps to achieve this. E.g. if a use cases must call an external service, it should use an interface. The outer layer that access the external service should then implement this interface. Notice that this enforces the outer layer to depend on the inner layer, not the other way around. The inner layers are more abstract, the more you move outwards, things become more concrete and "implementation details".
 
-Moving data accross the layers should be only simple data structures, known as DTOs.
+Moving data across the layers should be only simple data structures, known as DTOs.
 
 ### Entities
 This encapsulates enterprise wide business rules. This can be objects with methods, set of data structures and functions. Here we want all the high level rules set in stone so to say. Operational changes for example should have 0 impact on the entities.
@@ -88,7 +88,7 @@ Imagine that because of overtime, the CFO wants to change the algorithm on how t
 
 > Separate the code that different actors depend on.
 
-Solution? Move the functions in separate classes and isolate the Employee data. So youend up with a `PayCalculator`, `HourReporter` and `EmployeeSaver` class alongside the `Employee` class.
+Solution? Move the functions in separate classes and isolate the Employee data. So you end up with a `PayCalculator`, `HourReporter` and `EmployeeSaver` class alongside the `Employee` class.
 
 With a simple facade you can still bring all these functions in a simple class that provides all the functionality, like a `EmployeeFacade`.
 
@@ -102,21 +102,21 @@ This principle is mainly to protect changes in one component to another componen
 
 ### LSP: Liskov Substitution Principle
 
-> What is wanted here is something like the following substitution property: if for each object o1 of type S there is an object 02 of type T such that for all programs P defined in terms of T, the behaviour of P is unchanged when o1 is substituted for o2 then S is a subtype of T.
+> What is wanted here is something like the following substitution property: if for each object o1 of type S there is an object 02 of type T such that for all programs P defined in terms of T, the behavior of P is unchanged when o1 is substituted for o2 then S is a subtype of T.
 This rule is a good guide in asserting if the inheritance makes sense between two types. This principle easily translates to an architectural level.
 
-Imagine calling 4 different API's that should follow a spec, but one doesn't. Now you have to create special code for the exceptions, clearly, there is not simple substition possible.
+Imagine calling 4 different API's that should follow a spec, but one doesn't. Now you have to create special code for the exceptions, clearly, there is not simple substitution possible.
 
 #### Example: Good
 We have an interface `License` and we have then two classes `Personal License` and `Business License`. They both can implement the `calculateFee()` function without weird unexpected side effects.
 
 #### Example: Bad
-We have a class `Rectangle` with `setHeight` and `setWidth`, a `Square` should not inherit/sublcass the rectangle. Because there you should have a function `setSide()`. Now the user needs to be aware that:
+We have a class `Rectangle` with `setHeight` and `setWidth`, a `Square` should not inherit/subclass the rectangle. Because there you should have a function `setSide()`. Now the user needs to be aware that:
 ```
 Rectange r = ...
 r.setWidth(5);
 r.setHeight(2);
-assert(r.area() == 10); // This will fail, and come as a suprise
+assert(r.area() == 10); // This will fail, and come as a surprise
 ```
 the `Square` is not a suitable subtype of `Rectangle` in this solution. 
 
@@ -124,7 +124,7 @@ the `Square` is not a suitable subtype of `Rectangle` in this solution.
 
 The ISP is a bit of a language depending principle, dynamic typed languages might not suffer as much of the violations of this principle.
 
-The idea is not to polute an interface with too many responsibilities which are not cohesive or relevant to each other. You might force certain code and modules to be too much aware or create unnecessary dependencies because of a poluted interace. You might have to depend on more than you need, meaning, unnecessary dependencies.
+The idea is not to pollute an interface with too many responsibilities which are not cohesive or relevant to each other. You might force certain code and modules to be too much aware or create unnecessary dependencies because of a polluted interact. You might have to depend on more than you need, meaning, unnecessary dependencies.
 
 This might cause unnecessary recompilations.
 
@@ -132,18 +132,18 @@ This might cause unnecessary recompilations.
 
 > The most flexible systems are those in which source code dependencies refer only to abstractions, not to concretions.
 
-In a statically typed language this means `use`, `import` and `include` statements should refer only to source modules containing `interaces`, `abstract classes` or other kind of abstract declaration.
+In a statically typed language this means `use`, `import` and `include` statements should refer only to source modules containing `interacts`, `abstract classes` or other kind of abstract declaration.
 
 In dynamic languages, same applies, only it is harder to define what is "abstract".
 
-Note that `String` is a concrete dependency, but has a very low volatile charachteristic, so this should be a safe depenency, unlike other more volatile elements. Usually these are systems we are actively developing or external services.
+Note that `String` is a concrete dependency, but has a very low volatile characteristic, so this should be a safe dependency, unlike other more volatile elements. Usually these are systems we are actively developing or external services.
 
-As it is often the implementation that changes a lot and not the interface, the intefaces are less volatile than the concrete implementations.
+As it is often the implementation that changes a lot and not the interface, the interfaces are less volatile than the concrete implementations.
 
-* Don't refer to volatile concrete classess.
+* Don't refer to volatile concrete classes.
 * Don't derive from volatile concrete classes.
 * Don't override concrete functions.
-* Never mention the namde of anything concrete and volatile.
+* Never mention the name of anything concrete and volatile.
 
 Remember: Concrete implementations require more dependencies.
 
@@ -160,8 +160,8 @@ Principles for which classes belong in which components.
 
 > The granule of reuse os the granule of release.
 
-* Use a release process with release nunbers, else reuse is impossible.
-* Classes and modules that are grouped together should be releaseable together.
+* Use a release process with release numbers, else reuse is impossible.
+* Classes and modules that are grouped together should be releasable together.
 
 Consider googling more on this principle.
 
@@ -169,16 +169,16 @@ Consider googling more on this principle.
 
 > Gather into components those classes that change for the same reasons and at the same time. Separate into different components those classes that change at different times and for different reasons.
 
-> Gather together those things that change at the same times and for the same reasons. Separate those things tjat change at different times or for different reasons.
+> Gather together those things that change at the same times and for the same reasons. Separate those things that change at different times or for different reasons.
 
-This is **SRP (Single Responsibilty Principe) for components**.
+This is **SRP (Single Responsibility Principe) for components**.
 
 * Most applications, maintainability is more important than reusability.
 * Remember, don't overdo DRY.
 * Place code together that can't move orthogonally from each other and always moves in parallel.
 * Also associates with the **OCP (Open Closed Principle)**.
 
-#### CRP: The Commong Reuse Principle
+#### CRP: The Common Reuse Principle
 
 > Don't force users of a component to depend on things they don't need.
 
@@ -186,7 +186,7 @@ This is **SRP (Single Responsibilty Principe) for components**.
 
 When one component uses another, a dependency is created between the components. Perhaps the using components uses only one class within the used component, but that still doesn't weaken the dependency. The using components still depends on the used component.
 
-Because of the dependency, everytime the used component is changed, the using component will likely need corresponding channges. Even if no changes are necessary to the using component, you still might need to recompile, revalidate an redeploy.
+Because of the dependency, every time the used component is changed, the using component will likely need corresponding changes. Even if no changes are necessary to the using component, you still might need to recompile, revalidate an redeploy.
 
 **This principle tells us more about which classes shouldn't be together than which classes should be together**.
 
@@ -198,13 +198,13 @@ So we have the following principles for component cohesion:
 
 * REP: The Reuse/Release Equivalence Principle (Tends to make components larger)
 * CCP: The Common Closure Principle (Tends to make components larger)
-* CRP: The Commong Reuse Principle (Tends to make componens smaller)
+* CRP: The Common Reuse Principle (Tends to make component smaller)
 
 And they tend to find with each other. A good architect finds a position in that tension triangle that meets the *current* concerns of the development team, but is also aware that those concerns will change over time. For example, early in the development of a project, the CCP is much more important than the REP, because developability is more important than reuse.
 
 Generally projects tend to start on the right hand side of the triangle. As it matures, and other projects begin to draw from it, it will slide over to the left.
 
-![alt text](assets/component_cohesion.jpg)
+![alt text](../attachments/component_cohesion.jpg)
 
 ### Component Coupling
 Deals with relationships between components. Same as cohesion, there will be tension between developability and logical design.
@@ -218,7 +218,7 @@ Solution is often to partition the development environment in releasable compone
 > There can be no cycles.
 
 Solutions
-* Apply the DIP (Depeneency Inversion Principle)
+* Apply the DIP (Dependency Inversion Principle)
 * Create a new component that depends on the two components that have a cyclic dependency.
 
 #### Top-Down Design
@@ -231,11 +231,11 @@ Solutions
 
 Some components are expected to be volatile, while others aren't. This is important to take in consideration to see which components will depend on other components.
 
-*Stability has nothing directly to do with frequence of change. Rather to the amount of work required to make a change.*
+*Stability has nothing directly to do with frequency of change. Rather to the amount of work required to make a change.*
 
 How does that happen, by having many other components depend on it. If you have a component `x` that has 3 other components depend on it, it has three good reasons not to change. As `x` is *responsible* for those 3 components. But if component `x` depends on nothing, it's considered a `independent` component.
 
-When we have a component `y` that depends on 3 separate components. So `y` is dependent, but also *iresponsible*, as it's not responsible for any other components that depend on it. This is also considered a unstable component.
+When we have a component `y` that depends on 3 separate components. So `y` is dependent, but also *irresponsible*, as it's not responsible for any other components that depend on it. This is also considered a unstable component.
 
 > The metric I of a component should be larger than the I metrics of the components it depends on. That is, I metrics should decrease  in the direction of dependency.
 
@@ -245,7 +245,7 @@ Often, we can fix violations on the rule with the DIP. In Static languages you m
 
 How can we quantify the stability of a component?
 
-One way way is to count the # of depeendencies that enter and leave the component. This will give us a **positional stability**.
+One way way is to count the # of dependencies that enter and leave the component. This will give us a **positional stability**.
 
 * Fan-in: Incoming dependencies.
 * Fan-out: Outgoing dependencies.
@@ -253,17 +253,17 @@ One way way is to count the # of depeendencies that enter and leave the componen
   * I = 1 : Max instability
   * I = 0 : Max stability 
 
-Note that "dependencies" are counted by the amount of classes are dependend on. If a component `x` depends on `2` classes in component `y`, this means the fan-in is `2` between the two components, not `1`.
+Note that "dependencies" are counted by the amount of classes are depended on. If a component `x` depends on `2` classes in component `y`, this means the fan-in is `2` between the two components, not `1`.
 
 #### SAP: Stable Abstractions Principle
 
 > A component should be as abstract as it is stable.
 
-Some software should not change very often. This represents high-level architecture and policiy decisions. We don't want these business and architectural decisions to be volatile (notice Entities in the center). So these components should be `I = 0`, meaning stable. Unstable components `I = 1` should contain only software that is volatile (in outer layers).
+Some software should not change very often. This represents high-level architecture and policy decisions. We don't want these business and architectural decisions to be volatile (notice Entities in the center). So these components should be `I = 0`, meaning stable. Unstable components `I = 1` should contain only software that is volatile (in outer layers).
 
 This is **OCP (Open Closed Principle) for components**.
 
-> On the one hand, a stable component should also be abstract so that its stability does not prevent it from being extended. On the other hand, an ubstable component should be concrete since its instabillity allows the code within to be easily changed.
+> On the one hand, a stable component should also be abstract so that its stability does not prevent it from being extended. On the other hand, an unstable component should be concrete since its instability allows the code within to be easily changed.
 
 If a component is to be stable, it should consist of interfaces and abstract classes so that it can be extended.
 
@@ -283,14 +283,14 @@ The combination of SAP and SDP allows a component to be partially abstract and p
 
 **Relation Abstraction (A) and Instability (I)**
 
-![alt text](assets/abstract_instability.jpg)
+![alt text](../attachments/abstract_instability.jpg)
 
 The zones of exclusion:
 
-* **The Zone of Pain** : Highly stable and concrete. Cannot be extend because there is not abstraction, and hard to change because it is stable. So read, a lot of concrete code that is dependend on.
+* **The Zone of Pain** : Highly stable and concrete. Cannot be extend because there is not abstraction, and hard to change because it is stable. So read, a lot of concrete code that is depended on.
 * **The Zone of Uselessness** : Means it's max abstract, but no one depends on it, making it useless.
 
-> Some entities in fact faill in the Zone of Pain. Like database schema. They are volatile, extremely concrete and highly dependend on. This is why the interface between OO and databases is difficult to manage and why schem updates are generally painful. Another example is `String`, this is very stable, but no abstractions. But as it's so commonly used, we can consider it nonvolatile. Nonvolatile components in the zone of pain are harmless. One could consider the level of volotility to be a Z axis.
+> Some entities in fact fail in the Zone of Pain. Like database schema. They are volatile, extremely concrete and highly depended on. This is why the interface between OO and databases is difficult to manage and why schema updates are generally painful. Another example is `String`, this is very stable, but no abstractions. But as it's so commonly used, we can consider it nonvolatile. Nonvolatile components in the zone of pain are harmless. One could consider the level of volatility to be a Z axis.
 
 Ideally we try to have our components on the **Main Sequence** which have ideal balance. Most desirable tho is to be on a endpoint of the main sequence.
 
@@ -305,4 +305,4 @@ This helps us measure how far a component is from the ideal. We do this to calcu
 * Any `D > 0.1` is worth finding out why it's so far from the main sequence.
 
 #### Conclusion
-The metrics `A`, `I` and `D` are good guideliness to measure how well we comply with the Component coupling principles, but a metric is not a god. This is an arbitrary stand, they are imperfect, but they can be usefull. 
+The metrics `A`, `I` and `D` are good guidelines to measure how well we comply with the Component coupling principles, but a metric is not a god. This is an arbitrary stand, they are imperfect, but they can be useful. 

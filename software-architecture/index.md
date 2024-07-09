@@ -93,6 +93,7 @@ When "doing architecture" as a software architect you should:
 * [Architecture Decisions](topics/architecture-decisions.md)
 * [Architecture Risk](topics/architecture-risk.md)
 * [Best Practices](topics/best-practices.md)
+* [Clean Architecture](topics/clean-architecture.md)
 * [Components](topics/components.md)
 * [Conways Law](topics/conway-law.md)
 * [Domain-Driven-Design](topics/domain-driven-design.md)
