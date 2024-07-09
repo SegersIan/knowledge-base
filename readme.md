@@ -5,6 +5,7 @@ All the content is publicly available on [GitHub](https://segersian.github.io/kn
 
 # Index
 
+* [Communication](communication/index.md)
 * [Facilitation](facilitation/index.md)
 * [Software Architecture](software-architecture/index.md)
 * [Clean Architecture](architecture-clean/index.md)
