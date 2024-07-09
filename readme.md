@@ -13,7 +13,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 
 ## Software Engineering
 
-* [Data structures and Algorithms](core-data-struct-algo/index.md)
+* [Data structures and Algorithms](data-struct-algo/index.md)
 * [InfoSec](infosec/index.md)
 * [Networking](network/index.md)
 * [Software Architecture](software-architecture/index.md)
@@ -21,7 +21,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 
 ## Niche Topics
 
-* [Study Notes: Azure](azure/readme.md)
+* [Study Notes: Azure](azure/index.md)
 * [(NodeJS) Network and Streams](nodejs-streams-and-networking/index.md)
 * [USB Spec and How it works](usb-spec/index.md)
-* [Study Notes: Linux LPIC 1](linux-lpic-1/readme.md)
+* [Study Notes: Linux LPIC 1](linux-lpic-1/index.md)
