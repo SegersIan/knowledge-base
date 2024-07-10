@@ -1,6 +1,12 @@
 # Communication
 
-## Quotes
+## Writing
+
+These notes come from 2 different books by the same author, but the content feel so intertwined, it feels like one book.
+
+Writing organizes and clarifies our thoughts. You might fear that "simple, clear thoughts" means a "simple mind", but that's not true. Someone who is able to formulate clear, simple thoughts put in the extra thinking, required after the first offloading of thoughts.
+
+### Quotes
 
 * "If i had more time, i would have written a shorter letter" (Blaise Pascal, a French mathematician and philosopher)
 * "great writing is all about the power of the deleted word" (richard bach, author)
@@ -11,11 +17,7 @@
 * "What are any of the disciplines but a way in which people try to make sense of the world or the universe? Mathematics is one of way of doing that, just as literature is, or philosophy, or history. Mat does it by looking for patterns and abstracting-that is, by examining a specific case and generalizing from that."
 * "I believe that writing is an effective means of improving thinking skills because a person must mentally process ideas in order to write an explanation. Writing als improves self-esteem because mentally processed ideas then belong to the write and not just the teach or the textbook author" (Professor VanOrden)
 
-## Writing Well And Writing To Learn
 
-These notes come from 2 different books by the same author, but the content feel so intertwined, it feels like one book.
-
-Writing organizes and clarifies our thoughts. You might fear that "simple, clear thoughts" means a "simple mind", but that's not true. Someone who is able to formulate clear, simple thoughts put in the extra thinking, required after the first offloading of thoughts.
 
 ### Types Of Non-Fiction Writing
 
@@ -26,7 +28,9 @@ The Explanatory writing is the one that has the most need for clarity and needs 
 
 Both writing skills are necessary, all can be thought and honed, none of it is a skill you must be born with.
 
-### General Tips
+### Type 1: Explanatory Writing
+
+#### General Tips
 
 This are all soft rules.
 
@@ -58,7 +62,7 @@ This are all soft rules.
 * Sentences should have people in them
 * Copy styles you like, as you mature, you will split of in your own style. There is no shame in copying a style you like and that works.
 
-### The Process
+#### The Process
 
 * Iterative:
    * Write what you want to say
@@ -81,21 +85,21 @@ This are all soft rules.
    * Then ask "Did it do the hob I wanted it to do, with no ambiguity?" 
    * Keep thinking and writing and rewriting.
 
-#### Tips
+##### Tips
 
 * As you write, you might discover other unities you want to adapt, thats fine and natural, whatever vibes well. Just update the whole piece to conform.
 * Am i saying what i want to say?
 
-### The Structure
+#### The Structure
 
-#### The Lead
+##### The Lead
 
 * Show what's in it for the reader, so they know why to keep reading. Get them hooked, nudge curiosity.
    * Freshness, novelty, humor, surprise, unusual idea, paradox, interesting fact, question
 * Continue to build. Every paragraph should amplify the preceding one. Give more thought to adding solid detail and less to entertaining the reader.
 * Last sentence of paragraph must be springboard to next one. Give that sentence extra humor or surprise, so you have them for another paragraph. That sentence can also restore to an easy going tone, after some colder facts or details.
 
-#### The Ending
+##### The Ending
 
 * Give almost as much thought to your last sentence, as your first.
 * When you announce the beginning of a summary of things covered in the article, people loose focus
@@ -104,7 +108,7 @@ This are all soft rules.
 * When you are ready to stop, stop
 * Once presented all facts, made your point, go for nearest exit
 
-### Clutter and Verbosity Examples
+#### Clutter and Verbosity Examples
 * currently : now
 * At the presence: now
 * Even «now» can be often dropped «its raining», the tense says enough!
@@ -114,7 +118,7 @@ This are all soft rules.
 * I might add: just add it, don’t go so meta (it’s interesting to note, just note)
 * Smile happy: smile
 
-### Writing Across The Curriculum - Insights
+### Type 2: Exploratory Writing (Across The Curriculum)
 
 By giving a math problem in a context and have students write about it, they will naturally think more across the curriculum. Think of the world population growth issue, the question was all about how would you calculate or understand exponential growth. The writes would also think, do we have room? What is the impact? What are the solutions? So aside of thinking about the math, they also thought about all the other related and relevant parts in other fields (sociology, economics, ethics, sustainability, …)
 
@@ -166,14 +170,14 @@ In Math, some teachers grade on "how" and "how far" you got to the answer, not o
    * If I can take as long as I want to, no preparation at all. I'am ready now.
 
 
-## The Iterative Thought Process (to achieve clear thinking?)
-A self defined process, based on the insights of writing well and writing to learn.
+## The Iterative Thought Process
+A self defined process based on my insights on becoming a more clear thinker.
 
 * The **"The Iterative Thought Process"** is a more generic version of this. You guide your brain, you structure your thoughts through different mediums (writing, drawing, visualizing, ...). Writing happens to be one of them that works quite well.
    * Visual Methods: Miro board, mind map, Business Model Canvas, Value Proposition Canvas, KanBan Board, ...
    * Key is to have a way to "Annotate" or "Visualize" concepts and thoughts and their relations (just like a system) so you can offload it all. Then you can review it, restructure, simplify, prune, do all the usual iterative steps to improve your thoughts and understanding.
    * Steps:
-      * Offload your thoughts
+      * Offload your thoughts (all of partially)
       * Structure (relations between them)
       * Prune
       * Review
@@ -203,8 +207,6 @@ According to ChatGPT.
 ## Reasoning
 
 ... Pending as I'm reading [Reasoning](https://www.goodreads.com/book/show/1645567.Reasoning) by Michael Scriven.
-
-
 
 ## Resources
 
