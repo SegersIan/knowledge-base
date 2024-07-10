@@ -213,7 +213,3 @@ According to ChatGPT.
 * [Ted Talks: The Official TED Guide to Public Speaking](https://www.goodreads.com/book/show/41044212-ted-talks?) by Chris J. Anderson.
 * [WAC: Writing Across The Curriculum](https://wac.colostate.edu/repository/teaching/intro/)
 * [Writing To Learn](https://www.goodreads.com/book/show/53343.On_Writing_Well) by Willian Zinsser.
-
-## Todo
-
-* THE IMAGES!
