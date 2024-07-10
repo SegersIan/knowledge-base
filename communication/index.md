@@ -1,8 +1,84 @@
 # Communication
 
-## Clear Communication 
+## Writing Well And Writing To Learn
+
+These notes come from 2 different books by the same author, but the content feel so intertwined, it feels like one book.
+
+### Simplicity
+
+* "Clutter is the disease of american writing." Scratch any excess words and use simple words.
+
+### Clutter
+
+* «Clutter is political correctness gone amok.»
+* Clutter hides often painful truth.
+* «Political speech and writing are largely the defense of the indefensible» aka clutter is used
+* Cuter can be intentional vagueness.
+* «Beware of the long word thats no beyer than the short word»
+* Be cautious of meta text «its interesting to note..», just note it.
+* Don't inflate (with the possible exception… just use «exception»)
+* Don’t repeat recently mention information.
+* Don't use adjectives that are implied (tall skyscraper)
+* Reread often, but bracket around potential clutter, if its pompous or pretention , its for sure clutter. Simplify, reread, remove, simplify,…
+* The more vague your ideas, the less confident or selling
+
+
+### Style
+
+- Size doesnt matter. When you shorten stuff, you won’t loose your style. When you simplify, you validate if the core structure is there. Once that is read, you can fluff it up a bit to your style. 
+- It is common that it takes a while to warm up also your writing style. It’s common for authors to throw away first paragraphs or pages as it took a while to get into their style.
+- Try to write in first person, its more intimate, if your writing is good, you writing is worthy, people will care about your say. Don’t be shy or think you are egocentric. Some areas don’t allow this obviously, like writing  newspapers.
+
+### The Audience
+
+- have unity in pronoun (talking 1st, 2nd or 3th person) across your text, formal, informal,…
+- Have unity in tense (past, current,…?)
+- Have unity in mood/tone. Any is good, just dont mix (dont go : let me take you on my trip, then sound as a travel broxhure, then sound as guidebook). Judgemental? Detached ? Amused? Conversational?
+- How much do i want to cover
+- What one point do i want to make, a good piece has one povocative thought to leave to the reader, and only one
+- As you write, you might discover other unities you want to adapt, thats fine and natural, whatever vibes wel. Just update the whole article to conform.
+
+### The Lead And The Ending
+
+- the begining must show what’s in it for the reader, so they know why to keep reading. Get them hooked. Anything will do as long it nudges curiosity and tugd at his sleeve. (Frehness, novelty, humor, surprise, unusual idea, paradox, interesting fact, wuestion)
+- Continue to build. Everey paragraph should amplify the preceding one. Give more thought to adding solid detail and less to entertaining the reader.
+- Last sentence of paragraph must be springboard to next one. Give that sentence extra humor or surprise, so you have em for another paragraph. That sentence can also restore to an easy going tone, after some colder facts or details.
+- Have more resesrch material or detail than necessary, so you can pick what works well for yo
+- Narrative is oldest and most compelling method of holding someones attention, everybody wants to be told a story. Always look fo says to convey information in narrative form.
+- Give almost as much thought to your last sentence, as your first.
+- When you announce the beginning of a summary of things covered in the article, people loose focus
+- Be weary of the sandwich technique
+- The last paragraph must linger, take by surprise, a joy in itself
+- When you are ready to stop, stop
+- Once presented all facts, made your point, go for nearest exit
+
+### Examples
+- currently : now
+- At the presence: now
+- Even «now» can be often dropped «its raining»
+- Are you experiencing pain? Does it hury?
+- Assistance : help
+- Reffered to as: called
+- «I might add»: just add it, don’t go so meta (it’s interestinh to note, just note)
+- Smile happy: smile
+
+
+
+
+## Resources
+
+* [On Writing Well: The Classic Guide to Writing Nonfiction](https://www.goodreads.com/book/show/53343.On_Writing_Well) by William Zinsser.
+* [Writing To Learn](https://www.goodreads.com/book/show/53343.On_Writing_Well) by Willian Zinsser.
 
 ## Raw Notes
+
+
+
+- to conceal meaning is equally to conceal the lack of meaning 
+- Sentences should have people in them
+
+
+
 
 Use the business idea testing experiments to make a list of potential facilitations events.
 

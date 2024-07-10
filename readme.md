@@ -8,6 +8,8 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 # Index
 
 ## General
+
+* [Career](career/index.md)
 * [Communication](communication/index.md)
 * [Facilitation](facilitation/index.md)
 
