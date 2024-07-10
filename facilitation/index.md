@@ -201,3 +201,9 @@ by Josef W. Seifert
 * [YouTube Video: Deal with dominant people in conversation](https://youtu.be/tWKoQv45wzo?si=TaZqqunDKvMeaL1B)
 * [Training: The Effective Facilitator](https://www.leadstrat.com/courses/effective-facilitator/)
 * [YouTube Video: Process Facilitation Explained](https://www.youtube.com/watch?v=3YgIS0N1dII)
+
+# Personal Ideas
+
+* Use the business idea testing experiments to make a list of potential facilitation events.
+* How can we use the wisdom of writing clearly, structuring thoughts and the thought process for facilitation events?
+    * A small assignment where we ask people to write and think for themselves before joining? Think about how this lady with math, asking students to write first 5 min on how they would go about solving something a math problem that was information incomplete (“how would you try to solve this, if i were to give more information”).

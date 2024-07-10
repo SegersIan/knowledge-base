@@ -2,7 +2,8 @@
 
 ## General Tips
 
-
+* “Let me take care of that” are the golden words to tell someone. Disregarding the size of it. You will get noticed for taking care of things, that attitude, and getting things done.
+* Communication and networking are the true difficult skills that create impact.
 
 ## Job Search Tips
 
