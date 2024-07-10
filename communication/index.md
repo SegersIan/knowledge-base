@@ -1,25 +1,24 @@
 # Communication
 
-## Writing
+## 1. Writing
 
 These notes come from 2 different books by the same author, but the content feel so intertwined, it feels like one book.
 
 Writing organizes and clarifies our thoughts. You might fear that "simple, clear thoughts" means a "simple mind", but that's not true. Someone who is able to formulate clear, simple thoughts put in the extra thinking, required after the first offloading of thoughts.
 
-### Quotes
+### 1.1. Quotes
 
 * "If i had more time, i would have written a shorter letter" (Blaise Pascal, a French mathematician and philosopher)
 * "great writing is all about the power of the deleted word" (richard bach, author)
 * "Leave space and say less" (Peter Drucker)
 * "Reading, writing and thinking are all integrated" (Kevin Byrne)
-* "The answer is not the most important, but ***HOW*** you got to the answer" (Ian Segers)
 * "The hard part isn't the writing, the hard part is the thinking".
 * "What are any of the disciplines but a way in which people try to make sense of the world or the universe? Mathematics is one of way of doing that, just as literature is, or philosophy, or history. Mat does it by looking for patterns and abstracting-that is, by examining a specific case and generalizing from that."
 * "I believe that writing is an effective means of improving thinking skills because a person must mentally process ideas in order to write an explanation. Writing als improves self-esteem because mentally processed ideas then belong to the write and not just the teach or the textbook author" (Professor VanOrden)
 
 
 
-### Types Of Non-Fiction Writing
+### 1.2. Types Of Non-Fiction Writing
 
 * **Explanatory** writing: Transmits existing information or ideas. **> On Writing Well**
 * **Exploratory** Writing: Enables us to discover what we want to say. **> Writing To Learn**
@@ -28,9 +27,9 @@ The Explanatory writing is the one that has the most need for clarity and needs 
 
 Both writing skills are necessary, all can be thought and honed, none of it is a skill you must be born with.
 
-### Type 1: Explanatory Writing
+### 1.3. Type 1: Explanatory Writing
 
-#### General Tips
+#### 1.3.1. General Tips
 
 This are all soft rules.
 
@@ -62,7 +61,7 @@ This are all soft rules.
 * Sentences should have people in them
 * Copy styles you like, as you mature, you will split of in your own style. There is no shame in copying a style you like and that works.
 
-#### The Process
+#### 1.3.2. The Process
 
 * Iterative:
    * Write what you want to say
@@ -90,16 +89,16 @@ This are all soft rules.
 * As you write, you might discover other unities you want to adapt, thats fine and natural, whatever vibes well. Just update the whole piece to conform.
 * Am i saying what i want to say?
 
-#### The Structure
+#### 1.3.2. The Structure
 
-##### The Lead
+##### 1.3.3. The Lead
 
 * Show what's in it for the reader, so they know why to keep reading. Get them hooked, nudge curiosity.
    * Freshness, novelty, humor, surprise, unusual idea, paradox, interesting fact, question
 * Continue to build. Every paragraph should amplify the preceding one. Give more thought to adding solid detail and less to entertaining the reader.
 * Last sentence of paragraph must be springboard to next one. Give that sentence extra humor or surprise, so you have them for another paragraph. That sentence can also restore to an easy going tone, after some colder facts or details.
 
-##### The Ending
+##### 1.3.4. The Ending
 
 * Give almost as much thought to your last sentence, as your first.
 * When you announce the beginning of a summary of things covered in the article, people loose focus
@@ -108,7 +107,7 @@ This are all soft rules.
 * When you are ready to stop, stop
 * Once presented all facts, made your point, go for nearest exit
 
-#### Clutter and Verbosity Examples
+#### 1.3.5. Clutter and Verbosity Examples
 * currently : now
 * At the presence: now
 * Even «now» can be often dropped «its raining», the tense says enough!
@@ -118,7 +117,9 @@ This are all soft rules.
 * I might add: just add it, don’t go so meta (it’s interesting to note, just note)
 * Smile happy: smile
 
-### Type 2: Exploratory Writing (Across The Curriculum)
+### 1.4. Type 2: Exploratory Writing (Across The Curriculum)
+
+This type of writing is more to explore, clarify and refine your thoughts. The focus is not on the end result or the answer. It's the journey towards the answer. Like a diary or journal, keeping track of observations and ideas and then share how you got to a result.
 
 By giving a math problem in a context and have students write about it, they will naturally think more across the curriculum. Think of the world population growth issue, the question was all about how would you calculate or understand exponential growth. The writes would also think, do we have room? What is the impact? What are the solutions? So aside of thinking about the math, they also thought about all the other related and relevant parts in other fields (sociology, economics, ethics, sustainability, …)
 
@@ -126,11 +127,10 @@ If you write your thought process down, and not only a report, you will expand y
 
 In Math, some teachers grade on "how" and "how far" you got to the answer, not only if you have the answer. Try to go from Explanatory to Exploratory writing.
 
-## Presenting
+## 2. Presenting
 
 * Throughline: same as a lead? At least the tips of a good throughline should be listed as good tips.
 * Prune tip “plan your talk, cut 50%, once you’ve grieved the loss of half your talk, cut it another 50 percent” 
-* Page 38 of [Ted Talks](https://www.goodreads.com/book/show/41044212-ted-talks?) has a beautiful rewrite on how to write more engaging, introduce yourself, without going’s through a long boring list off facts.
 * Old formula used by sir ken robinson **“a good essay answers 3 questions: what? So what? Now what?”**.
 * An idea based talk starts with curiosity, a issue based talk starts with morality, and that can cause morality fatigue
 * Most speakers are used to talking for 30 or 40 minutes or longer. They find it literally hard to imagine giving a proper talk in such a short period of time. Hear we see the recurring team and need to write and think clear. Pruning clutter.
@@ -144,7 +144,7 @@ In Math, some teachers grade on "how" and "how far" you got to the answer, not o
 > Anyone looking objectively at the scene would have concluded that this biy was some weird combination of arrogant, deluded, or perhaps just socially awkward and lonely, proffering the company of ideas to people.
 > But my own narrative? I'm a dreamer. I've always been obsessed by the power of ideas. And I'm pretty sure it's that inward focus that helped me survive growing up in a boarding schools in India and England, away from my missionary parents, and that gave me confidence to try build a media company. Certainly it was the dreamer in me that fell in love so deeply with TED.
 
-## Insights
+## 3. Insights
 
 * Writing code is the same mental process.
    * You make something work (e.g. Make a test pass)
@@ -170,7 +170,7 @@ In Math, some teachers grade on "how" and "how far" you got to the answer, not o
    * If I can take as long as I want to, no preparation at all. I'am ready now.
 
 
-## The Iterative Thought Process
+## 4. The Iterative Thought Process
 A self defined process based on my insights on becoming a more clear thinker.
 
 * The **"The Iterative Thought Process"** is a more generic version of this. You guide your brain, you structure your thoughts through different mediums (writing, drawing, visualizing, ...). Writing happens to be one of them that works quite well.
@@ -204,11 +204,11 @@ According to ChatGPT.
 
 6. **Clarity in Communication**: The process of rewriting or rephrasing thoughts to enhance clarity is a fundamental principle in communication studies. Techniques from this field are often employed to ensure messages are clear, concise, and effective.
 
-## Reasoning
+## 5. Reasoning
 
 ... Pending as I'm reading [Reasoning](https://www.goodreads.com/book/show/1645567.Reasoning) by Michael Scriven.
 
-## Resources
+## 6. Resources
 
 * [On Writing Well: The Classic Guide to Writing Nonfiction](https://www.goodreads.com/book/show/53343.On_Writing_Well) by William Zinsser.
 * [Reasoning](https://www.goodreads.com/book/show/1645567.Reasoning) by Michael Scriven.
