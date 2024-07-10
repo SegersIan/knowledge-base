@@ -5,16 +5,35 @@
 * "If i had more time, i would have written a shorter letter" (Blaise Pascal, a French mathematician and philosopher)
 * "great writing is all about the power of the deleted word" (richard bach, author)
 * "Leave space and say less" (Peter Drucker)
+* "Reading, writing and thinking are all integrated" (Kevin Byrne)
+* "The answer is not the most important, but ***HOW*** you got to the answer" (Ian Segers)
+* "The hard part isn't the writing, the hard part is the thinking".
+* "What are any of the disciplines but a way in which people try to make sense of the world or the universe? Mathematics is one of way of doing that, just as literature is, or philosophy, or history. Mat does it by looking for patterns and abstracting-that is, by examining a specific case and generalizing from that."
+* "I believe that writing is an effective means of improving thinking skills because a person must mentally process ideas in order to write an explanation. Writing als improves self-esteem because mentally processed ideas then belong to the write and not just the teach or the textbook author" (Professor VanOrden)
 
 ## Writing Well And Writing To Learn
 
 These notes come from 2 different books by the same author, but the content feel so intertwined, it feels like one book.
 
+Writing organizes and clarifies our thoughts. You might fear that "simple, clear thoughts" means a "simple mind", but that's not true. Someone who is able to formulate clear, simple thoughts put in the extra thinking, required after the first offloading of thoughts.
+
+### Types Of Non-Fiction Writing
+
+* **Explanatory** writing: Transmits existing information or ideas. **> On Writing Well**
+* **Exploratory** Writing: Enables us to discover what we want to say. **> Writing To Learn**
+
+The Explanatory writing is the one that has the most need for clarity and needs rigorous attention and iteration. The Exploratory writing is more about the "writing across the curriculum" or the "Writing To Learn".
+
+Both writing skills are necessary, all can be thought and honed, none of it is a skill you must be born with.
+
 ### General Tips
 
 This are all soft rules.
 
-* Know you audience.
+* Mind your audience.
+   * Is it clear to someone who doesn't know anything about the subject?
+* The text must linearly and logically built up.
+* Writing is a process, not a product,
 * Simplicity: prune any excess words and use simple words.
    * Clutter is the disease of american writing
    * Clutter hides often painful truth
@@ -37,6 +56,7 @@ This are all soft rules.
 * Narrative is oldest and most compelling method of holding someones attention, everybody wants to be told a story. Always look fo says to convey information in narrative form.
 * To conceal meaning is equally to conceal the lack of meaning 
 * Sentences should have people in them
+* Copy styles you like, as you mature, you will split of in your own style. There is no shame in copying a style you like and that works.
 
 ### The Process
 
@@ -44,13 +64,22 @@ This are all soft rules.
    * Write what you want to say
    * Then prune what does not add value or clutters.
    * Use a [thesaurus](https://www.thesaurus.com/) to find better wording.
-   * Simplify where possible, rewrite.
+   * Simplify where possible, rewrite, rethink.
    * Reread
    * Repeat
 * Once you have the core of what you want to say, you can gently add some fluff to your liking.
 * Warming up: It’s common to throw away first paragraphs once you found your style.
 * This iterative process causes you to structure and clarify your thoughts, resulting into better understanding.
 * Short: What do I want to say? Write ? Did I say what I wanted ? Review, Iterate.
+* A new paragraph can explain something or expand on something that was introduce in preceding paragraph. That's a logical order, cause the reader might wonder "What is X that he just mentioned"?
+* Another way to put it:
+   * What do I want to say? 
+   * Try to say it.
+   * Have I said it?
+   * Is this [sentence] clear to someone who knows nothing about the subject? No? Consider making it clear. Rewrite it.
+   * What do I need to say next? Will it lead logically out of what I've just written ? Will it also lead logically towards where I want to go? If it will, write the sentence. 
+   * Then ask "Did it do the hob I wanted it to do, with no ambiguity?" 
+   * Keep thinking and writing and rewriting.
 
 #### Tips
 
@@ -85,7 +114,33 @@ This are all soft rules.
 * I might add: just add it, don’t go so meta (it’s interesting to note, just note)
 * Smile happy: smile
 
-### Insights
+### Writing Across The Curriculum - Insights
+
+By giving a math problem in a context and have students write about it, they will naturally think more across the curriculum. Think of the world population growth issue, the question was all about how would you calculate or understand exponential growth. The writes would also think, do we have room? What is the impact? What are the solutions? So aside of thinking about the math, they also thought about all the other related and relevant parts in other fields (sociology, economics, ethics, sustainability, …)
+
+If you write your thought process down, and not only a report, you will expand your thinking and reasoning. Making the thought process transparent, it allows a teacher, mentor, or coach to better evaluate the quality of your work. Has the student first gone to existing literature? How did they design the experiment? Why did they do certain things in order, this transparency helps to teacher, but also the student to reflect on "how" they got to the result, not just the result. In the the modern realistic world, the answer is not the most important, but ***HOW*** you got to the answer.
+
+In Math, some teachers grade on "how" and "how far" you got to the answer, not only if you have the answer. Try to go from Explanatory to Exploratory writing.
+
+## Presenting
+
+* Throughline: same as a lead? At least the tips of a good throughline should be listed as good tips.
+* Prune tip “plan your talk, cut 50%, once you’ve grieved the loss of half your talk, cut it another 50 percent” 
+* Page 38 of [Ted Talks](https://www.goodreads.com/book/show/41044212-ted-talks?) has a beautiful rewrite on how to write more engaging, introduce yourself, without going’s through a long boring list off facts.
+* Old formula used by sir ken robinson **“a good essay answers 3 questions: what? So what? Now what?”**.
+* An idea based talk starts with curiosity, a issue based talk starts with morality, and that can cause morality fatigue
+* Most speakers are used to talking for 30 or 40 minutes or longer. They find it literally hard to imagine giving a proper talk in such a short period of time. Hear we see the recurring team and need to write and think clear. Pruning clutter.
+
+### Example of engaging writing
+
+... instead of listing boring facts about yourself
+
+> I want you to come with me to student's room at Oxford university in 1977. You open the door, and at first it seems like there's nobody there.
+> But wait, Over in the corner, there's a boy lying on the floor, face up, staring at the ceiling. He's been like that for more than 90 minutes. That's me, 27 year old me. I'm thinking. Hard. I am trying... please don't laugh... I am trying to solve the problem of free will. That deep mystery that has stumped the world's philosophers for at least 2 millennia? Yp, I'm taking it on.
+> Anyone looking objectively at the scene would have concluded that this biy was some weird combination of arrogant, deluded, or perhaps just socially awkward and lonely, proffering the company of ideas to people.
+> But my own narrative? I'm a dreamer. I've always been obsessed by the power of ideas. And I'm pretty sure it's that inward focus that helped me survive growing up in a boarding schools in India and England, away from my missionary parents, and that gave me confidence to try build a media company. Certainly it was the dreamer in me that fell in love so deeply with TED.
+
+## Insights
 
 * Writing code is the same mental process.
    * You make something work (e.g. Make a test pass)
@@ -104,10 +159,12 @@ This are all soft rules.
    * People that blog often, do write clear ones, often have a good understanding of things, through the process of writing a good blog post.
 * Those who do not try effort in improving and simplifying their writing, yet write a lot, will not grow.
 * The more you embrace the process of writing well, the more clear your thoughts become.
+* Shorter writing does not mean shorter time to work on it ("If i had more time, i would have written a shorter letter").
+* President Woodrow Wilson on how long it takes to prepare a speech: It depends on the length of the speech
+   * If it is a 10 minute speech, it takes me all of 2 weeks to prepare it
+   * If it is half hour, it takes me a week
+   * If I can take as long as I want to, no preparation at all. I'am ready now.
 
-### Writing Across The Curriculum
-
-By giving a math problem in a context and have students write about it, they will naturally think more across the curriculum. Think of the world population growth issue, the question was all about how would you calculate or understand exponential growth. The writes would also think, do we have room? What is the impact? What are the solutions? So aside of thinking about the math, they also thought about all the other related and relevant parts in other fields (sociology, economics, ethics, sustainability, …)
 
 ## The Iterative Thought Process (to achieve clear thinking?)
 A self defined process, based on the insights of writing well and writing to learn.
@@ -147,13 +204,7 @@ According to ChatGPT.
 
 ... Pending as I'm reading [Reasoning](https://www.goodreads.com/book/show/1645567.Reasoning) by Michael Scriven.
 
-## Presenting
 
-* Throughline: same as a lead? At least the tips of a good throughline should be listed as good tips.
-* Prune tip “plan your talk, cut 50%, once you’ve grieved the loss of half your talk, cut it another 50 percent” 
-* Page 38 of [Ted Talks](https://www.goodreads.com/book/show/41044212-ted-talks?) has a beautiful rewrite on how to write more engaging, introduce yourself, without going’s through a long boring list off facts.
-* Old formula used by sir ken robinson **“a good essay answers 3 questions: what? So what? Now what?”**.
-* An idea based talk starts with curiosity, a issue based talk starts with morality, and that can cause morality fatigue 
 
 ## Resources
 
