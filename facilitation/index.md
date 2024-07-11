@@ -38,6 +38,7 @@ They all differ, pick the one applicable to your use case.
 * When being the facilitator, you can't focus on the content and your own opinion.
 * Don't tempt to become the project owner/manager.
 * As facilitator you can/must push action item commitment.
+* Fall back to the excuse "as facilitator it's my role to ...." to allow for pushing certain things that are about the process, not the actual content!
 
 ### Characteristics
 
@@ -53,7 +54,7 @@ They all differ, pick the one applicable to your use case.
 ![theframework](assets/theframework.png)
 
 * **Before Event**:
-    * Determine Audience
+    * Determine Audience, is possible use DISC to prepare.
     * Set Agenda
     * Set objectives
     * Preparation
@@ -68,6 +69,13 @@ They all differ, pick the one applicable to your use case.
         * Agenda (MUST)
         * Way Of Working (OPTIONAL)
             * If you are with a group that often have done this before, this might be implicit.
+            * Examples:
+                * "ELMO": Enough, let's move on. This means what it says, allow stalled conversation to move, as facilitator that's your role.
+                * Raise hand for silence
+                * Open for questions
+                * Be on time
+                * E manners (phone gone, camera on, ...)
+                * No smoking breaks or else agree in advance to it.
         * Objectives (MUST)
         * Expectations (OPTIONAL)
         * Do Ice Breaker/Check In activity to get people (mentally) in the room.
@@ -132,14 +140,64 @@ Read this out in one statement at the beginning of an event/facilitation.
 
 ## Activities & Types
 
-### Template
+And event is made up of activities, there are many variations, but they all try to achieve a certain goal. We can categorize these types based on the goal they try to reach.
+
+* **Energizer**: Get blood flowing and get everyone mentally in the room again.
+    * Help to return the focus and energy.
+    * When too many participants, split in groups, of that shortens the total time of the energizer activity (e.g. playing a game)
+    * Be weary of physical energizers, make sure the room is safe and clean.
+    * A check-in could ben an energizer also.
+* **List**: List facts, known things, statements, limitations.
+* **Brainstorm**: Collect and idea new ideas.
+* **Group**: Group ideas that are very similar.
+* **Prioritize**: Prioritize/group items to decided what gets attention first or not at all.
+* **Commit**: Have participants commit to actions.
+
+### Reflection
 
 * **Description**: 
-    * 
+    * Every participant reflects on the session/workshop/event on a shared template.
+    * Example questions:
+        * How did I as participant contribute to the success of the workshop?
+        * My key takeaways?
+        * Most memorable statement made by fellow participant?
+        * Did we reach our objectives
+            * Visual TIP: Create one dimensional scale from "not at all" to "oh yeah" and let people drop a "dot" on the scale. So you get immediately a visual concentration.
 * **Why**: 
-    * 
+    * Help participants to consolidate their learnings.
 * **When**:
-    * 
+    * Closing of event
+
+### Fist of 5 voting
+
+* **Description**: 
+    * Explain Rules
+        * People show scale of agreement/disagreement with the amount of fingers
+        * 0...2 fingers -> Check in
+        * 3...5 fingers -> move forward
+        * Be aware of culture specifics here
+* **Why**: 
+    * To gauge sentiment quickly
+* **When**:
+    * During event whenever a clarification is needed.
+
+### Prioritize
+
+* **Description**: 
+    * Take any set of items (e.g action items, topics, ...)
+    * Group them if some are similar (affinity)
+    * Now there are 2 methods to choose from:
+        * Get Preference from participants
+            * Voting (suggested rule: 20% of votes vs the amount of items)
+            * Move some dots
+        * Use Logic with Eisenhower Matrix
+* **Why**: 
+    * Need to decide which topics/items to focus on (take only top 3)
+    * Need to decide which topics/items to focus first on
+* **When**:
+    * During event
+
+![eisenhower](assets/eisenhower.png)
 
 ### Check-In Exercise
 
@@ -202,11 +260,59 @@ Read this out in one statement at the beginning of an event/facilitation.
 * **When**:
     * When you need a quick decision or feedback throughout the event.
 
+### Commit To Action Items
+
+* **Description**: 
+    * Get people commit to identified action items.
+    * When no response or volunteers "Hey X, which opf these 2 items you'd like to take?"
+    * Gentle force is OK.
+    * You are not the project manager
+    * As facilitator you can be a bit pushier "As facilitator I must make sure all action items are taken".
+* **Why**: 
+    * Make sure all action items are owned and assigned.
+* **When**:
+    * Throughout or end of event
+
+### Template
+
+* **Description**: 
+    * Group prepare statements on flip charts for x amount.
+    * Groups switch flip charts to review another group's statements for x amount.
+        * Let them put "V" if they agree
+        * Let them put "X" if they disagree
+        * Let then put "?" if they don't understand
+    * Let the groups clarify, after clarification they should choose "V" and "X".
+    * Keep going till only disagreements are left
+    * Now you have a list of disagreements, you have a list to use, or to continue discussion over them. Different deliverables are possible here.
+* **Why**: 
+    * To list disagreements and filter out any agreements, which don't require the participants time. If they agree with it, no need to waste time to it.
+* **When**:
+    * During Event
+
 
 
 ## Communication
 
+* Use positive and proactive language.
+* "Yes, and..."
+* Be aware of cultural differences.
+* Get attention
+    * Raise your hand without shouting, till everyone gets quite.
+* Avoid hybrid events (part offline, part online)
+* Don't know answer to question? State honesty.
+    * Either get back to them later.
+    * Ask the room of anyone knows.
+* Ask random people for input, to keep people on their toes.
+
 ## Tools & Equipment
+
+* Pens
+* Post-its
+* Flip Charts
+* Projector
+* Miro
+* Software
+* Playbooks/runbooks
 
 ### Playbook
 
@@ -215,6 +321,34 @@ Read this out in one statement at the beginning of an event/facilitation.
 * Clear agenda, duration of each section, expectations of facilitation, expectations of the participants, materials needed.
 
 ## Visualization Techniques
+
+## General Topics
+
+### Failure Reasons
+
+Reasons a facilitation/event can fail.
+
+* People don't come prepared or don't do homework (only 30% does it).
+* People don't engage.
+* Wrong people in the room.
+* Participants hogging all the time.
+* Cultural differences and mistakes.
+
+### People Who Are Late
+
+* Fill them in during break, respect others time.
+
+
+### DISC
+
+Allows to identify different personalities. If you are able to locate/place your participants, it will be easier to tailor your messaging accordingly.
+
+![disc](assets/disc.png)
+
+
+
+
+
 
 
 # Older content to revise
