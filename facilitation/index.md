@@ -1,10 +1,21 @@
-My handbook on facilitation which is a useful skill.
+# Facilitation
 
-# Facilitating, Teaching, and Lecturing
+Facilitation is the process of guiding and managing group activities, discussions, or meetings to ensure effective participation, clear communication, and achievement of objectives. It involves creating an environment that encourages collaboration, creativity, and productivity among participants.
 
-![image](./assets/comparison_chart_training_mentoring_groupcoaching_facilitation.PNG)
+## Training, Mentoring, Group Coaching and Facilitation
 
-> TIP: Pick what is most suitable to your goal 
+They all differ, pick the one applicable to your use case.
+
+| Training | Mentoring | Group Coaching | Process Facilitation |
+| ---      | ---       | ---            | ---                  |
+| Content Expertise | Content Expertise | No Content Expertise | Process Expertise |
+| External | External | Internal | Internal |
+| Goal: Subject Understanding | Goal: Improve your competency | Goal: Change Behavior | Goal: Solve a challenge collaboratively |
+| Hierarchical | Hierarchical | Hierarchical| Facilitative |
+| Energetic, Patient, Speaking | Wise, experienced, generous | Encouraging, Supportive, Provocative | Unbiased, neutral, listening, safe, transparent |
+
+[Source of Table](./assets/comparison_chart_training_mentoring_groupcoaching_facilitation.PNG)
+
 
 | Type | Who controls what is being learned | Type of Participation | Comments |
 | ---  | ---                                | ---                   | ---     |
@@ -12,7 +23,201 @@ My handbook on facilitation which is a useful skill.
 | Teaching | Educator primarily             | Mostly from educator, little from group | |
 | Lecturing | Educator solely               | Solely from educator | More if a clear message/topic must be transferred |
 
-[Source](https://www.youtube.com/watch?v=tJwfrxAZjKE)
+[Source of Table](https://www.youtube.com/watch?v=tJwfrxAZjKE)
+
+## The Facilitator
+
+### Role
+
+1. I create the container. The participants create the content.
+2. My actions enforce their self-organization.
+3. It's their meeting. Not Mine.
+4. Meetings are real work (Good facilitator required).
+5. Success = a fulfilled purpose.
+
+* When being the facilitator, you can't focus on the content and your own opinion.
+* Don't tempt to become the project owner/manager.
+* As facilitator you can/must push action item commitment.
+
+### Characteristics
+
+* Organizer
+* Look-Out
+* Orchestrator
+* Guide
+* Conflict Solver
+* Active Listener
+* Coach
+
+## The Framework
+![theframework](assets/theframework.png)
+
+* **Before Event**:
+    * Determine Audience
+    * Set Agenda
+    * Set objectives
+    * Preparation
+    * Find Venue & Invites
+    * Diets & Foods
+    * Deliverables from sponsors
+    * Activity Planning
+    * Planning
+* **During Event**
+    * **Open Event**:
+        * Start with POWER Statement
+        * Agenda (MUST)
+        * Way Of Working (OPTIONAL)
+            * If you are with a group that often have done this before, this might be implicit.
+        * Objectives (MUST)
+        * Expectations (OPTIONAL)
+        * Do Ice Breaker/Check In activity to get people (mentally) in the room.
+    * **Doing The Work**:
+        * Follow activities of playbook
+        * Adjust activities based on the engagement and proceedings.
+    * **Close Event**:
+        * Recap the work done
+        * Recap/Tackle outstanding Issues
+        * Recap Action List
+        * Recap Objectives
+        * Recap the results
+        * Review Results
+        * Review used techniques
+            * We did X by doing Y
+        * Review group communication
+            * We did X by communicating... (TODO)
+        * Review facilitator responsiveness
+        * Participate Expectations
+        * Final Words
+        * Ask Feedback
+        * Short: We close, review the session, how it went, what came out and did we satisfy all relevant items?
+* **After Event**:
+    * What to document?
+    * Who to brief?
+    * Share the feedback.
+    * Monitor action items.
+    * Prepare agenda for next meeting (if applicable).
+    * Debrief session if needed.
+* **Dysfunctional Behavior**: There are various personas that have pro's and con's. Each persona has methods on how to deal with these.
+
+
+### POWER Statement
+
+The POWER statement is build out of 5 parts, use this to open your event strong.
+
+* **P**urpose
+* **O**utcomes & Deliverables
+    * Head - Information, decisions, strategies, shared understanding
+    * Heart - Connecting, buy-in, vision, Caring
+    * Hand - Next steps, action log, output
+* **W**hat's in it for me?
+* **E**nergize & Engage
+* **R**oles & Responsibilities
+    * Of everyone involved (facilitator, participants)
+
+Read this out in one statement at the beginning of an event/facilitation.
+
+#### Example
+
+* **P**urpose: To have more effective communication.
+* **O**utcomes & Deliverables: Run more efficient decision processes and meetings between squads and business.
+* **W**hat's in it for me?
+    * Be less frustrated
+    * Become a good communicator
+    * Have a better way of working
+* **E**nergize & Engage:
+    * To decrease the amount of ineffective meetings
+    * To have variety in how to do meetings
+* **R**oles & Responsibilities
+    * To learn, listen and come forward with ideas
+
+## Activities & Types
+
+### Template
+
+* **Description**: 
+    * 
+* **Why**: 
+    * 
+* **When**:
+    * 
+
+### Check-In Exercise
+
+* **Description**: 
+    * [Typical] Start with asking people to introduce themselves, name, role, fun fact, ...
+    * [Alternative] Let people share, for example "Top 3 success Factors" and "Top 3 reasons of failure" with post its on a board.
+* **Why**: 
+    * Bring people in the room mentally.
+    * Break ice.
+* **When**:
+    * Opening of Event
+
+### Agenda
+
+* **Description**: 
+    * Share agenda, time slots, and stay on agenda.
+    * Ask if anyone has questions
+    * Always end on time, skip content if necessary.
+* **Why**: 
+    * Expectation Management
+    * Respect everyone's time
+* **When**:
+    * Opening of Event
+
+### Issues - Decisions - Action
+
+* **Description**: 
+    * A board / visual aid to track about key issues, decisions and action items raised throughout the event.
+* **Why**: 
+    * Visibility of all issues, decisions and action items.
+* **When**:
+    * Introduced at opening of event.
+    * Maintain it throughout event.
+    * Recap at event closing.
+
+![img](assets/issues_decisions_action.png)
+
+### Weather Check
+
+* **Description**: 
+    * Pay attention to body language (distracted, ...)
+    * "Is there anything that keeps anyone from being mentally in the room?"
+    * "Anything that keeps you from being present?"
+    * When energy is low/distracted > Do an energize activity.
+* **Why**: 
+    * Identify the mood of the room. "Are we stull in collaborative mood?"
+* **When**:
+    * Whenever, should check often.
+
+### Roman Voting
+
+* **Description**: 
+    * Explain the rules
+        * Thumb up: I Agree
+        * Thumb horizontal: I follow the room
+        * Thumb down: I disagree
+    * Ask A question
+* **Why**: 
+    * To determine something quickly
+* **When**:
+    * When you need a quick decision or feedback throughout the event.
+
+
+
+## Communication
+
+## Tools & Equipment
+
+### Playbook
+
+* Playbook/runbook
+* Necessary for each event.
+* Clear agenda, duration of each section, expectations of facilitation, expectations of the participants, materials needed.
+
+## Visualization Techniques
+
+
+# Older content to revise
 
 ## Why the facilitator is different 
 
@@ -25,7 +230,7 @@ My handbook on facilitation which is a useful skill.
 * Adaptive designer: Design a plan, but can be adaptive when necessary based on the needs.
 * Neutral and unbiased: You should not care about the result, only that there is a quality result.
 
-# Facilitation Types
+## Facilitation Types
 
 * Experiential Facilitation: Facilitate experiences for people to learn by doing. Also known as adventure or outdoor education.
     * Examples: Conflict resolution, Communication, and problem solving.
@@ -37,7 +242,7 @@ My handbook on facilitation which is a useful skill.
 
 
 
-# Core Skills
+## Core Skills
 
 * Authenticity: Be yourself while facilitating, don't try to be someone else. If they see you have a "mask" on, you might face resistance. 
 * Clarity: Your instructions and guidance must be clear, else people will get lost.
@@ -56,7 +261,7 @@ My handbook on facilitation which is a useful skill.
 [Source](https://www.youtube.com/watch?v=2cVGI0wo23M)
 
 
-# Tips
+## Tips
 
 ## Create space/time for people before asking
 
@@ -169,7 +374,7 @@ by Josef W. Seifert
         * Driven By: Resistance
         * Handled By: Allow them to get rid of their negative opinions, ask for their opinions proactively. Then bounce back to them "What would you do or suggest"? Try to make them an expert.
 
-# Tools & Techniques
+## Tools & Techniques
 
 ## Parking Lot Method
 * Technique for difficult participants
@@ -187,7 +392,7 @@ by Josef W. Seifert
 [YouTube Video: Parking Lot Method](https://youtu.be/DZiYUSau5LM?si=jn-6IsYsZ4qoLARa)
 
 
-# Resources
+## Resources
 
 * [YouTube Channel: Chad Littlefield](https://www.youtube.com/@chad.littlefield)
 * [YouTube Channel: Facilitating XYZ](https://www.youtube.com/@facilitatingxyz5984)
@@ -202,7 +407,7 @@ by Josef W. Seifert
 * [Training: The Effective Facilitator](https://www.leadstrat.com/courses/effective-facilitator/)
 * [YouTube Video: Process Facilitation Explained](https://www.youtube.com/watch?v=3YgIS0N1dII)
 
-# Personal Ideas
+## Personal Ideas
 
 * Use the business idea testing experiments to make a list of potential facilitation events.
 * How can we use the wisdom of writing clearly, structuring thoughts and the thought process for facilitation events?
