@@ -365,31 +365,175 @@ And event is made up of activities, there are many variations, but they all try 
 
 Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior). A good facilitator can navigate this by doing:  Conscious Prevention, Early Detection, Clean Resolution 
 
-#### Persona: Alpha Leader
-* Tends to naturally take over.
-* Driven by: power
-* Handled by: They need to feel important
+#### Persona: Late Comer Larry
+
+* **Typical Quotes**:
+    * Sorry I'm late... you know how it is to have back to back meetings
+* **DISC Style**: All
+* **Strengths**: 
+    * Creates opportunity to have the conversation about timeliness with the whole team/group.
+* **Weaknesses**:
+    * Derails meetings (everything gets repeated)
+    * Sets a tone of "this is not important" or disrespect by coming in late.
+* **How To Deal**:
+    * ...todo
+
+#### Persona: Electronics Eddie
+
+* **Typical Quotes**:
+    * Nothing will be SAID... he will be on his cell phone texting the whole time.
+* **DISC Style**: All
+* **Strengths**: 
+    * It's a clear sign that process or content is not engaging this person (may be the wrong person for the meeting)
+* **Weaknesses**:
+    * Disengaged behavior might spread
+* **How To Deal**:
+    * ...todo
+
+#### Persona: Spotlight Sam
+
+* **Typical Quotes**:
+    * I/Me/in my experience
+* **DISC Style**: Influence
+* **Strengths**: 
+    * Willing to talk/share to get things started
+    * May provide energy with stories
+* **Weaknesses**:
+    * Likes to be heard, so may repeat ideas already states
+    * May prevent others from speaking
+* **How To Deal**:
+    * Driven By: Knowledge
+    * Handled By: Make them into an expert, you say they are the expert in the room and at a particular point of time they will be asked to present their knowledge. Give them a framework when they can't show off, without interrupting your flow.
+
+#### Persona: Tangent Tom
+
+* **Typical Quotes**:
+    * This one time...
+    * What about THIS (very minimally related tangential topic to what we are talking about)
+* **DISC Style**: Influence
+* **Strengths**: 
+    * May provide a burst of (unrelated) energy when things are getting dull.
+* **Weaknesses**:
+    * Pulls focus of the meeting away from the states purpose or objective.
+* **How To Deal**:
+    * ...todo
+    
+#### Persona: Passive Aggressive Polly
+
+* **Typical Quotes**:
+    * You don't know what she's thinking. Until she says it to someone else outside the meeting.
+* **DISC Style**: Steadiness
+* **Strengths**: 
+    * Wants to maintain harmony (in the meeting)
+    * Does not get in the way of ideas being moved forward (in the meeting)
+* **Weaknesses**:
+    *  Doesn't share displeasures with the group, talks about it outside the meeting with other people
+* **How To Deal**:
+    * ...todo
+
+#### Persona: Silent Sara
+
+* **Typical Quotes**:
+    * I don't want to upset anybody (thought, not said)
+* **DISC Style**: Steadiness
+* **Strengths**: 
+    * Doesn't compete for air time or restate ideas we've already heard.
+    * Brings politeness to the space
+* **Weaknesses**:
+    * Unwilling to share her piece of the puzzle/insight because it may cause conflict
+    * May be shy, introverted
+* **How To Deal**:
+    * Driven By: Instructions
+    * Handled By: Be specific, give examples and clear outlines of that they need to do.
+
+#### Persona: Snarky Sandra
+
+* **Typical Quotes**:
+    * Like they want THAT kind of creativity/honesty/feedback
+* **DISC Style**:  Steadiness/Conscientiousness
+* **Strengths**: 
+    * May be the proverbial "canary in the coal mine" stating something the group is not ready to hear/discuss yet.
+* **Weaknesses**:
+    * May feel like a personal attack to whomever is speaking
+    * Could shut down the space/topic
+* **How To Deal**:
+    * ...todo
+
+#### Persona: Analytical Anil
+
+* **Typical Quotes**:
+    * We need more data
+    * We simply don't know enough to decide this right now.
+* **DISC Style**:  Conscientiousness
+* **Strengths**: 
+    * Provides accuracy & details
+    * Keeps the group from going off a cliff they don't see.
+* **Weaknesses**:
+    * Analysis Paralysis
+    * May overgeneralize to the point of people losing interest all together.
+* **How To Deal**:
+    * Driven By: Safety 
+    * Handled By: Make them feel safe, by outlining what the outcomes the decision at hand will have. Give them the context that the decision is made, and what for. Give them all the information they should know to feel safe to make a decision. Give Them Reassurance!
+
+#### Persona: Cautious Connie
+
+* **Typical Quotes**:
+    * This is too risky
+    * Maybe we should wait this out & see what happens
+* **DISC Style**: Conscientiousness
+* **Strengths**: 
+    * Has safety & quality as top priorities
+    * Keeps the group from going off a cliff they don't see.
+* **Weaknesses**:
+    * Risk averse, may loose opportunities for growth by waiting too long.
+* **How To Deal**:
+    * Driven By: Safety 
+    * Handled By: Make them feel safe, by outlining what the outcomes the decision at hand will have. Give them the context that the decision is made, and what for. Give them all the information they should know to feel safe to make a decision. Give Them Reassurance!
+
+
+#### Persona: Negative Ned
+
+* **Typical Quotes**:
+    * This will never work
+    * We tried this before & it didn't work then... it's not gonna work now
+* **DISC Style**: Conscientiousness/Dominance
+* **Strengths**: 
+    * Keeps the group grounded in reality of impediments to success.
+* **Weaknesses**:
+    * Shoots down potentially good ideas before they are fully formed.
+* **How To Deal**:
+    * Driven By: Resistance
+    * Handled By: Allow them to get rid of their negative opinions, ask for their opinions proactively. Then bounce back to them "What would you do or suggest"? Try to make them an expert.
+
+#### Persona: Work-a-holic Warren
+
+* **Typical Quotes**:
+    * I've got more important things to do
+    * This meeting is a waste of my time... I have real projects that need my attention 
+* **DISC Style**: Dominance
+* **Strengths**: 
+    * Brings awareness tha the current process/topic may not be adding value.
+* **Weaknesses**:
+    * Disengagement may spread to others (who will soon be getting out their laptops)
+    * Voice will be left out of the conversation if he is doing other work
+* **How To Deal**:
+    * ...todo
+
+#### Persona: Dominating Don
+
+* **Typical Quotes**:
+    * ELMO!
+    * Are we done yet?
+    * When will we move to action?
+* **DISC Style**: Dominance
+* **Strengths**: 
+    * Keeps the ball moving forward; 
+    * moves teams from talking about it into action!
+* **Weaknesses**:
+    * Can shut down a space with potentially overbearing energy.
+* **How To Deal**:
+    * Handled by: They need to feel important
     * Give an important task, so the task gives them an outlet. Giving them an opportunity to present themselves.
-### Persona: Know-It-All
-
-* They want to present their own knowledge and want to learn new things, but are looking out for mistakes on the way.
-* Driven By: Knowledge
-* Handled By: Make them into an expert, you say they are the expert in the room and at a particular point of time they will be asked to present their knowledge. Give them a framework when they can't show off, without interrupting your flow.
-### Persona: Introvert
-
-*  Happy to follow, and not make trouble, but observe more than to participate. They avoid to speak up. If you need their input, that's not good.
-* Driven By: Instructions
-* Handled By: Be specific, give examples and clear outlines of that they need to do.
-### Persona: Indecisive One
-
-* Well hidden, good team member, participate, until a decision must be made. Might as for more input and question if we covered everything?
-* Driven By: Safety 
-* Handled By: Make them feel safe, by outlining what the outcomes the decision at hand will have. Give them the context that the decision is made, and what for. Give them all the information they should know to feel safe to make a decision. Give Them Reassurance!
-### Persona: Negativist
-
-* Body language is usually a tell, are grumpy, drain energy and spontaneity.
-* Driven By: Resistance
-* Handled By: Allow them to get rid of their negative opinions, ask for their opinions proactively. Then bounce back to them "What would you do or suggest"? Try to make them an expert.
 
 #### People who dominate conversation
 
@@ -407,8 +551,6 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
     * You can do it publicly but risky: "I can notice we are playing white guy ping-pong, can we step back for a moment and make space for other voices (example from a meeting where it happened the most heavy voices were white, including the facilitator)"
 
 * [YouTube Video: Deal with dominant people in conversation](https://youtu.be/tWKoQv45wzo?si=TaZqqunDKvMeaL1B)
-
-
 
 
 ## Tools & Equipment
