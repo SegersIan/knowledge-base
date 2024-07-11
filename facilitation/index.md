@@ -207,3 +207,6 @@ by Josef W. Seifert
 * Use the business idea testing experiments to make a list of potential facilitation events.
 * How can we use the wisdom of writing clearly, structuring thoughts and the thought process for facilitation events?
     * A small assignment where we ask people to write and think for themselves before joining? Think about how this lady with math, asking students to write first 5 min on how they would go about solving something a math problem that was information incomplete (“how would you try to solve this, if i were to give more information”).
+* Quote from [WAC](https://wac.colostate.edu/repository/teaching/intro/include/)
+    > [T]alk is important for sharing, clarifying, and distributing knowledge among peers, while asking questions, hypothesizing, explaining, and formulating ideas together are all important mechanisms during peer discussions. Analytical writing is an important tool for transforming rudimentary ideas into knowledge that is more coherent and structured. Furthermore, talk combined with writing appears to enhance the retention of science learning over time. (566)
+* Can we use [Blooms Taxonomy](https://tips.uark.edu/using-blooms-taxonomy/) for facilitating ?

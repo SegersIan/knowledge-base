@@ -20,12 +20,43 @@ Writing organizes and clarifies our thoughts. You might fear that "simple, clear
 
 ### 1.2. Types Of Non-Fiction Writing
 
+#### Types defined by William Zissner 
+
+*From the books on learning to write and writing well.*
+
 * **Explanatory** writing: Transmits existing information or ideas. **> On Writing Well**
 * **Exploratory** Writing: Enables us to discover what we want to say. **> Writing To Learn**
 
 The Explanatory writing is the one that has the most need for clarity and needs rigorous attention and iteration. The Exploratory writing is more about the "writing across the curriculum" or the "Writing To Learn".
 
 Both writing skills are necessary, all can be thought and honed, none of it is a skill you must be born with.
+
+#### Types defined by WAC Clearinghouse
+
+![img](assets/img2.jpg)
+
+* **[Writing To Learn (WTL)](https://wac.colostate.edu/repository/teaching/intro/wtl/)**: to help students learn foundational concepts to check students' understanding of material
+* **[Writing To Engage (WTE)](https://wac.colostate.edu/repository/teaching/intro/wte/)**: to practice in critical thinking, reading and writing; to engage students in critical thinking
+   * stands between the two most common approaches to writing across the curriculum: writing to learn (WTL) and writing in the disciplines (WID)
+* **[Writing In The Disciplines (WID)](https://wac.colostate.edu/repository/teaching/intro/wid/)**: to practice writing conventions of the discipline; to gain familiarity with genres and design conventions
+   * Also called writing to communicate
+
+##### Kinds Of Thinking
+*Based on [Blooms Taxonomy](https://tips.uark.edu/using-blooms-taxonomy/), but does not perse include all kinds of thinking, but its a great start. Also note, it does have a pyramid*
+
+* Remembering
+* Understanding
+* Reflecting
+* Applying
+* Analyzing
+* Evaluating
+* Creating
+
+[See imgage](assets/img1.jpg)
+
+
+
+
 
 ### 1.3. Type 1: Explanatory Writing
 
@@ -127,6 +158,20 @@ If you write your thought process down, and not only a report, you will expand y
 
 In Math, some teachers grade on "how" and "how far" you got to the answer, not only if you have the answer. Try to go from Explanatory to Exploratory writing.
 
+A great quotation form the [WAC (Writing Across The Curriculum) site](https://wac.colostate.edu/repository/teaching/intro/include/):
+
+> The purpose of writing to learn assignments—journals, discovery drafts, in-class writing—is to use writing as a tool for learning rather than a test of that learning, to have writers explain concepts or ideas to themselves, to ask questions, to make connections, to speculate, to engage in critical thinking and problem solving. The audience for this kind of writing is the student him- or herself.... The teacher serves as a facilitator rather than a judge, responding to the writing by asking questions, prodding for further thinking, or answering questions posed by the writer rather than "correcting" or grading the piece.... (McLeod & Maimon, 579)
+
+> We cannot emphasize too strongly that it is an error to see writing to learn and writing to communicate as somehow in conflict with each other. Most of us who have been involved in WAC programs from the beginning see "writing to learn" and "writing to communicate" as two complementary, even synergistic, approaches to writing across the curriculum, approaches that can be integrated in individual classrooms as well as in entire programs.
+
+>Writing, then, serves multiple purposes, and students gain as learners and thinkers as we integrate writing as frequently as possible across the curriculum
+
+* You can find [here examples](https://wac.colostate.edu/repository/teaching/intro/wtl/wtlactivities) on different "Writing-To-Learn" (WTL) activities.
+
+> Theoreticians and practitioners alike agree that writing promotes both critical thinking and learning 
+
+> Writing to communicate—or what James Britton calls "transactional writing"—means writing to accomplish something, to inform, instruct, or persuade.... Writing to learn is different. We write to ourselves as well as talk with others to objectify our perceptions of reality; the primary function of this "expressive" language is not to communicate, but to order and represent experience to our own understanding. In this sense language provides us with a unique way of knowing and becomes a tool for discovering, for shaping meaning, and for reaching understanding. (p. x)
+
 ## 2. Presenting
 
 * Throughline: same as a lead? At least the tips of a good throughline should be listed as good tips.
@@ -145,7 +190,7 @@ In Math, some teachers grade on "how" and "how far" you got to the answer, not o
 > But my own narrative? I'm a dreamer. I've always been obsessed by the power of ideas. And I'm pretty sure it's that inward focus that helped me survive growing up in a boarding schools in India and England, away from my missionary parents, and that gave me confidence to try build a media company. Certainly it was the dreamer in me that fell in love so deeply with TED.
 
 ## 3. Insights
-
+* Exploratory teaches and helps you to think more critically and clearly, cause it improves your "way of thinking", how you get there. Teaching you often more and broader on a subject matter. You might naturally also take social implications into account when writing about a scientific invention.
 * Writing code is the same mental process.
    * You make something work (e.g. Make a test pass)
    * You refactor towards cleaner code.
@@ -204,6 +249,24 @@ According to ChatGPT.
 
 6. **Clarity in Communication**: The process of rewriting or rephrasing thoughts to enhance clarity is a fundamental principle in communication studies. Techniques from this field are often employed to ensure messages are clear, concise, and effective.
 
+## Rhetoric
+By investigating the rhetoric the writer or the reader can better understand the other, which might help to write a better document or to interpret it better. Helps also to understand what influences how a reader receives a message, which might be differ over time.
+
+* What is the Writer's Purpose ?
+   * As a writer, understanding your purposes can help you in virtually every aspect of your writing process.
+* What influences writers ?
+   * As a writer, reflecting on your requirements and limitations can help you decide whether a particular decision-such as choice of topic or the inclusion of evidence from a particular type of source-will help or hurt your chances of accomplishing your purposes.
+* What is the Reader's Purpose ?
+   * As a writer, understanding the purposes of your readers can help you create a more effective document.
+* What influences readers ?
+   * Writers who do not take their readers' values and beliefs into account might miss an opportunity to create a more convincing, useful, or acceptable document.
+   * Readers' knowledge of a particular topic will also affect their reading of a document. When writers assume that readers know more about a topic than they actually do, they can create a document that is difficult to understand.
+   * When they assume their readers know less than they actually do, they risk creating documents that repeat information readers already know. In both cases, readers are likely to stop reading the document.
+* What do Writers and Readers Know about Each Other?
+* What is the Context?
+
+* [WAC: Rethoric](https://wac.colostate.edu/repository/teaching/intro/rhetoric/)
+
 ## 5. Reasoning
 
 ... Pending as I'm reading [Reasoning](https://www.goodreads.com/book/show/1645567.Reasoning) by Michael Scriven.
@@ -215,3 +278,4 @@ According to ChatGPT.
 * [Ted Talks: The Official TED Guide to Public Speaking](https://www.goodreads.com/book/show/41044212-ted-talks?) by Chris J. Anderson.
 * [WAC: Writing Across The Curriculum](https://wac.colostate.edu/repository/teaching/intro/)
 * [Writing To Learn](https://www.goodreads.com/book/show/53343.On_Writing_Well) by Willian Zinsser.
+* [WAC: Rethoric](https://wac.colostate.edu/repository/teaching/intro/rhetoric/)
