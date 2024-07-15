@@ -184,6 +184,7 @@ Everyone has their flavour
 
 * Scripted Talk: Write out the talk in full as a complete script (to be read, memorized or both)
     * Risk: Audience feels "being read to"
+    * Remember: You are writing for "spoken language"
     * Process: 
         * First you will sound convincing, unstructured as you rehearse
         * Secondly you start to know the whole talk but sound more robotically (uncanny valley)
@@ -205,23 +206,90 @@ Rehearse is a must and works well. Notice, by rehearsing from day one, you can f
 
 * Start Strong
     * Deliver a dose of drama
-    * Ignite Curiousity
+        * Your first words really do matter.
+        * "Sadly, in the next 18 minutes ... 4 Americans that are alive will be dead ... through the food that they eat".
+        * "I am not drunk ... but the doctor who delivered me was" (Zayid who has cerebral palsy die to botched medical procedure at birth)
+    * Ignite Curiosity
+        * A talk on parasites might sound dull, but you can **lead with curiosity**: 
+        * > A heard of wildebeest, a shoal of fish, a flock of birds. Many animals are in large groups that are among the most wonderful spectacles in the natural world. But why do these groups form? The common answers include things like seeking safety in numbers or hunting in packs or gathering to mate or breed, and all of these explanations, while often true, make a huge assumption about animal behavior, that the animal are in control of their own actions, that they are in charge of their bodies. And that is often not the case.
+        * > How did this fourteen-year-old girl, with less than $200 in her ban account, give her whole town a giant leap into the future?'
+        * **Create questions that create a knowledge gap that the brain fights to close.** And they can to that only by listening hard to what you have to say.
     * Show a compelling slide, video, or object
+        * Something impactful or intriguing
     * Tease, but don't give away
+        * > Over the next few minutes I plan to reveal what I believe is the key to success as an entrepreneur, and how anyone can cultivate it. You'll find clues to it in the story I'm about to tell"
 * End Strong
     * Don't:
-        * ..
+        * "Well, that's my time gone, so I'll wrap up here"
+            * Didn't manage to prepare well enough? There is more ?
+        * "Finally, I just want to thank ..."
+        * "So, given the importance of this issue, I hope we can start a new conversation about it together"
+        * "The future is full of challenges and opportunities, Everyone here has it in their heart to make a difference. Let's dream together. Let's be the change we want to see in the world
+            * Too broad and cliche
+        * "I'' close with this video.. "
+            * No, end with YOU not a video
+        * So that concludes... any questions ?
+            * You preempt your own applause
+        * "I'm sorry I haven't had the time to "
+            * Thank you for not planning and preparing
+        * "In closing, I should point out that my organization could probably solve this"
+            * This was a sales talk?
+        * "Thank you for such an amazing audience, and way to much thank you's!"
+            * "Thank you" is just fine
     * Consider:
         * Camera pull-back
+            * Show the bigger picture of what you idea fitted in
         * call to action
         * personal commitment
         * Values and vision
         * Satisfying encapsulation
+            * Reframe your idea that you have been making
+            * > I think people have obsessed with the wrong question, which is "How do we make people pay for music?" What if we started asking, "How do we let people pay for music?"
         * Narrative symmetry
-        * Lyrical Inspiration
+            * If you have been telling a story throughout, or just started with one, go full circle.
+
 
 ## On Stage
 
+### Wardrobe
+
+* Like the slides, simple and contrast, understand the setting you will be presenting in. 
+* Something you feel comfortable in
+* Well fit, not too loose or baggy
+
+### Nerves
+
+* Drink water
+* Avoid empty stomach
+* Remember the power of vulnerability
+* Find "friends" in the audience
+    * People who look warm in the audience, make often eye contact with them
+* Have a backup plan (notes, cards, ...)
+    * Even when not using them, knowing its there... sooths
+
+### Setup
+
+* Comfort backup: Full notes or script, out of sight
+* Slides as guides: But don't dump your text on it
+* Hand Held Note cards
+* Smartphone or tablet: The touchy stuff is dangerous to accidentally loose where you were
+* Confidence monitors: Current slide, next slide, slide notes. 
+    * Next slide and slide notes might confuse you or distract you
+* Teleprompter can feel "being read to"
+* Unobtrusive lectern
+
+### Voice and Presence
+
+* Give you words the life they deserve
+* Speak with meaning
+* Body can be station on legs but loose upper body, you can also walk, just don't pace annoyingly. Gentle pace and speed.
+* Body posture !
+
+### Format Innovation
+
+* Be open to innovate with the format, as long it delivers the idea, and doesn't distract.
+
+  
 ## General Tips
 * Throughline: same as a lead? At least the tips of a good throughline should be listed as good tips.
 * Prune tip “plan your talk, cut 50%, once you’ve grieved the loss of half your talk, cut it another 50 percent” 
@@ -244,3 +312,6 @@ Rehearse is a must and works well. Notice, by rehearsing from day one, you can f
  * How does the [POWER](../facilitation/index.md#power-statement) work as intro maybe?
     * How does a good start of a talk compare to a power statement? Seems different, one seeks to intrigue, create curiosity, and the other purpose and planning. Makes sense, based on the activities
 * About [Rehearsal](#rehearse): I see the parallel here of, by trying, rehearsing, you see that works, you refine the message, we see again the iterative process of pruning, rewriting, refining, rethinking, am i saying the right thing? Does de build up make sense? Am i telling this linearly? Is every sentence setting up for the next, as you rehearse, you get more clarity, which allows you to then own it and do the talk efficiently, cause you have matured and clarified what you want to say, and the structure is sound.
+* Minimize in going "META" , JUST DO IT
+    * Today I will.... NO ... "Let me show you something"
+    * Here is my opening slide ... NO ... just show it or lead with curiosity.
