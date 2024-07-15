@@ -1,6 +1,8 @@
 
 # Presenting Ideas & Talks (TED)
 
+TED is about sharing ideas in an interconnected world. Ideas worth sharing. Ideas that connect.
+
 * Many of the general tips, process and structure of Explanatory writing are applicable.
 * As with many things, test your talks
 * Talk styles to avoid:
@@ -311,6 +313,10 @@ Rehearse is a must and works well. Notice, by rehearsing from day one, you can f
 
 * The secret of happening is: find something more important than you are, and dedicate your life to it.
 * We're strange creatures, we humans. At one level, we just want to eat, drink, play, and acquire stuff. But life on the hedonic treadmill is ultimately dissatisfying. A beautiful remedy is to hope of by pursuing an idea that's bigger than you are.
+* 2 things will happen
+    * You'll find a meaningful form of happiness.
+    * You'll discover something that matters far more than any piece of advice in this book: You'll discover something worth saying.
+* Imagine 2 political leaders, one of whom appels only to the interests of one race, while the other reaches out to all members of humanity. Be reasonable, look at the issue from a broader perspective. The later may have their moments of power, but it is the former who will win in the end.
 
 ## Insights
 
