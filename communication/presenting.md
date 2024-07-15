@@ -307,6 +307,11 @@ Rehearse is a must and works well. Notice, by rehearsing from day one, you can f
 > Anyone looking objectively at the scene would have concluded that this biy was some weird combination of arrogant, deluded, or perhaps just socially awkward and lonely, proffering the company of ideas to people.
 > But my own narrative? I'm a dreamer. I've always been obsessed by the power of ideas. And I'm pretty sure it's that inward focus that helped me survive growing up in a boarding schools in India and England, away from my missionary parents, and that gave me confidence to try build a media company. Certainly it was the dreamer in me that fell in love so deeply with TED.
 
+## Generic Quotes of book
+
+* The secret of happening is: find something more important than you are, and dedicate your life to it.
+* We're strange creatures, we humans. At one level, we just want to eat, drink, play, and acquire stuff. But life on the hedonic treadmill is ultimately dissatisfying. A beautiful remedy is to hope of by pursuing an idea that's bigger than you are.
+
 ## Insights
 
  * How does the [POWER](../facilitation/index.md#power-statement) work as intro maybe?
@@ -315,3 +320,7 @@ Rehearse is a must and works well. Notice, by rehearsing from day one, you can f
 * Minimize in going "META" , JUST DO IT
     * Today I will.... NO ... "Let me show you something"
     * Here is my opening slide ... NO ... just show it or lead with curiosity.
+
+## Resources
+
+* [TED: Julian Treasure on how to speak](https://www.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen?subtitle=en)
