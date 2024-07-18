@@ -18,7 +18,7 @@ Keep document that you continuously amend (like a diary) where you track your sm
     * What is the impact of my work?
     * How am I doing regarding any goals I set for myself?
 * **Have a documented track record of you achievements**
-* **Share with your leadership your achievements **at any given time (especially during performance reviews and salary renegotiations), remember, your leadership is usually not fully aware of all the work you do and results deliver.
+* **Share with your leadership your achievements** at any given time (especially during performance reviews and salary renegotiations), remember, your leadership is usually not fully aware of all the work you do and results deliver.
     * When the time comes for a performance review, your memory might draw blank and you have little memory of the work you did.
     * Your manager also manages other people, they will not remember all of your work.
     * Good data gives your manager the tools to justify to others your promotion or salary increase.
@@ -82,7 +82,7 @@ Try to update the document **once every week or two**, but eventually find a fre
 
 ### The Job Application Process
 
-* Using your traits & personality 
+* Using your traits & personality
 * Once you have a job you want to apply for...
 * Read through the job ad and highlight any references to skills.
     * Pay especially attention to the "qualifications" and "responsibilities" section.
@@ -100,6 +100,3 @@ Try to update the document **once every week or two**, but eventually find a fre
 * Use ChatGPT: "create a prompt called you are my resume creator”,
 * Use [SkillSyncer](www.skillsyncer.com) to test your resume ATS score.
 * Use [InstaResume](www.instaresume.io) for nice templates
- 
-## Resources
-
