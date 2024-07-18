@@ -19,6 +19,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 * [Data structures and Algorithms](data-struct-algo/index.md)
 * [InfoSec](infosec/index.md)
 * [Networking](network/index.md)
+
 * [Software Architecture](software-architecture/index.md)
 * [Software Design](software-design/index.md)
 
