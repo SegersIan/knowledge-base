@@ -8,18 +8,43 @@
 ### Brag Document / Work Log
 
 Keep document that you continuously amend (like a diary) where you track your smaller and greater achievements and successes at work. This allows you to:
-* Reflect on your achievements
-* Have a documented track record of you achievements
-* Share with your leadership your achievements at any given time (especially during performance reviews and salary renegotiations), remember, your leadership is usually not fully aware of all the work you do and results deliver.
-* Reflect on what skills you have or gained ([see Discover your skills](#discover-your-skills) on a more details)
-* Share during a job interview or job applications about relevant achievements that are relevant for the job.
-* Look back and be proud of what you have achieved.
+* **Reflect on your achievements and how you spend your time at work.**
+    * What work do you feel most proud of?
+    * What do I wish to do more/less off?
+    * Which projects hade the effect I wanted ? Or not ?
+    * What can I do better next time?
+    * What did I struggle with?
+    * How can I grow?
+    * What is the impact of my work?
+    * How am I doing regarding any goals I set for myself?
+* **Have a documented track record of you achievements**
+* **Share with your leadership your achievements **at any given time (especially during performance reviews and salary renegotiations), remember, your leadership is usually not fully aware of all the work you do and results deliver.
+    * When the time comes for a performance review, your memory might draw blank and you have little memory of the work you did.
+    * Your manager also manages other people, they will not remember all of your work.
+    * Good data gives your manager the tools to justify to others your promotion or salary increase.
+    * When you get a new manager a few months before the big performance review, they won't have any knowledge about your recent work.
+* **Reflect on what skills you have or gained** ([see Discover your skills](#discover-your-skills) on a more details)
+* **Share during a job interview** or job applications about relevant achievements that are relevant for the job.
+* **Look back and be proud of what you have achieved.**
 
-Try to update the document **once every week or two.**
+Try to update the document **once every week or two**, but eventually find a frequency that works for you, but allows you to not forget any relevant topics.
+
+#### Important
+
+* Consider documenting also **the little things** you do, now you can reflect on how you spend time at work.
+    * Code Reviews, making a process easier, create more automation.
+* Consider documenting the **direct impact** for each of the things you write down, now you can reflect on the impact of your work.
+    * Maybe you spend a lot of time spend on low impact work. Not ideal!
+* Consider documenting anything **quantifiable through metrics**, insights, KPIs, now you can quantify the impact of your work.
+* Consider documenting and **side effects, n-tier impact** of your work. Maybe your work has resulted in shorter sales cycles for the company, as a result of your automation project which allows for faster building of PoC's.
+    * Think about business areas and processes that gained advantage.
+    * Did it save any money? Did it generate any money?
+    * It's really great for yourself and when talking to others, to know how have an impact on more than your direct surrounding.
+* Consider documenting what you have learned of which skills you gained or honed during certain work.
 
 #### Links
 
-* [https://jvns.ca/blog/brag-documents/](https://jvns.ca/blog/brag-documents/)
+* [Julia Evans's blog on Brag Document](https://jvns.ca/blog/brag-documents/)
 * [Bag Document: Bragdocs.com](https://www.bragdocs.com/)
 
 ### Discover your traits & personality
@@ -35,6 +60,7 @@ Try to update the document **once every week or two.**
 
 * Make a list of projects, feedback from (former) co-workers, efforts, initiatives or roles you were a part of.
 * Write for each list item what you did, how it went, what impact it had, what side effects and positives. Consider adding any "lessons learned".
+    * Don't forget about your [Brag Document](#brag-document--work-log) which would be your natural place to go.
 * Now ask yourself for each list item "What skills did I apply to make this happen?".
 * Now you have a "skill inventory" and examples of where you applied all of these skills.
 * Now go through each skill in your skill inventory and write down, following the STAR method, an example of how you applied this skill. Note that you now can take the examples of previous steps, and you just need to rephrase them into the STAR template.
