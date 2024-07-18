@@ -10,6 +10,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 ## General
 
 * [Career](career/index.md)
+* [Coaching](coaching/index.md)
 * [Communication](communication/index.md)
 * [Facilitation](facilitation/index.md)
 
