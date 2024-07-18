@@ -49,6 +49,7 @@ A self defined process based on my insights on becoming a more clear thinker.
    * By offloading, you can focus on subparts of the whole topic.
    * Did you know that your brain uses a constant amount of energy? Thinking harder, doesn't result in using more energy. That's why, when you focus, other things go to the background. Taking that fact in account, knowing the energy supply is constant, you can offload your thoughts, so the spotlight can then focus on the individual elements and parts, without keeping the big picture in your head.
 * When writing as a part of the thought process: Write in a way that they don’t worry about beings criticized, it would damage/block their train of thoughts and ideas. That’s why a journal works so well.
+* When coaching: During coaching a coach usually focusses on guiding questions (e.g. 5 WHY's.) that help someone clarify someones existing thoughts or teaches them on how to think better, just like with [Writing Across The Curriculim](writing.md#type-2-exploratory-writing-across-the-curriculum).
 
 ### Related Concepts 
 
