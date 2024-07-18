@@ -28,3 +28,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 * [(NodeJS) Network and Streams](nodejs-streams-and-networking/index.md)
 * [USB Spec and How it works](usb-spec/index.md)
 * [Study Notes: Linux LPIC 1](linux-lpic-1/index.md)
+
+## Notes To Myself
+
+* Research [MDBook](https://rust-lang.github.io/mdBook/)
