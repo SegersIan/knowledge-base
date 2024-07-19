@@ -47,6 +47,18 @@ Try to update the document **once every week or two**, but eventually find a fre
 * [Julia Evans's blog on Brag Document](https://jvns.ca/blog/brag-documents/)
 * [Bag Document: Bragdocs.com](https://www.bragdocs.com/)
 
+#### Template
+```
+-  For each Achievement/Activity Event
+    > Some time indication (when, how long, ...)
+    > What was my role or involvement?
+    > What skills did I use, gain, or honed?
+    > What was the direct impact and/or business value?
+    > What was the n-tier impact and/or business value?
+    > Did it had desired impact?
+    > What could I do next time better?
+```
+
 ### Discover your traits & personality
 
 * Make a list of your personality and traits
@@ -100,3 +112,23 @@ Try to update the document **once every week or two**, but eventually find a fre
 * Use ChatGPT: "create a prompt called you are my resume creator”,
 * Use [SkillSyncer](www.skillsyncer.com) to test your resume ATS score.
 * Use [InstaResume](www.instaresume.io) for nice templates
+
+### Cover Letter Template
+```
+Dear [Employer's Name | Hiring Manager],
+
+Opening Paragraph:
+Introduce yourself and state the position you are applying for. Mention how you found out about the job opening. Provide a brief overview of why you are interested in this position and the company.
+
+Body Paragraph(s):
+
+Discuss your qualifications and experience in detail. Highlight key achievements and skills that are relevant to the job. Use specific examples to demonstrate how your background and expertise make you a good fit for the position. This section can be one or two paragraphs depending on how much information you need to convey.
+
+Insert one "about me" paragraph that talks more about you, your personality and traits, who is this person? DO I see myself working with him/her ?
+
+Closing Paragraph:
+Reiterate your interest in the position and the company. Summarize why you would be a good fit and express your enthusiasm for the opportunity to discuss your application further. Mention that you have attached your resume and any other required documents.
+
+Kind Regards
+[Your Name]
+```
