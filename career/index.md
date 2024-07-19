@@ -4,6 +4,7 @@
 
 * “Let me take care of that” are the golden words to tell someone. Disregarding the size of it. You will get noticed for taking care of things, that attitude, and getting things done.
 * Communication and networking are the true difficult skills that create impact.
+* Your network determines your influence and (potential) impact. Network! Within your organization there should is no reason to not reach out to other employees for a coffee chat/meet-n-greet.
 
 ### Brag Document / Work Log
 
