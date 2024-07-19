@@ -13,6 +13,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 * [Coaching](coaching/index.md)
 * [Communication](communication/index.md)
 * [Facilitation](facilitation/index.md)
+* [Reasoning](reasoning/index.md)
 
 ## Software Engineering
 

@@ -31,6 +31,8 @@
    * If I can take as long as I want to, no preparation at all. I'am ready now.
 * Knowledge is stored in the human's mind is multidimensional, hierarchical and cross linking. When talking or speaking, we convert that knowledge into a one dimensional stream of words.
    * That's why, when talking/writing it is important to be linear and and cross link where necessary to avoid ambiguity, certain links are not obvious to the receiver.
+* In the book about [Reasoning]() they the following remark which fits in quite nicely
+  * > First, the emphasis on communication, on the crucial importance of the **social activity of reasoning**, means that we can **scarecely afford any jargon** at all.
 
 ## The Iterative Thought Process
 A self defined process based on my insights on becoming a more clear thinker.
@@ -44,14 +46,14 @@ A self defined process based on my insights on becoming a more clear thinker.
       * Prune
       * Review
       * Iterate
-   * By offloading, it allows us to reflect on it, and work on it, however, most just offload and keep at that. 
+   * By offloading, it allows us to reflect on it, and work on it, however, most just offload and keep at that.
    * By offloading, you create room for other thoughts and reflection, play with all elements.
    * By offloading, you can focus on subparts of the whole topic.
    * Did you know that your brain uses a constant amount of energy? Thinking harder, doesn't result in using more energy. That's why, when you focus, other things go to the background. Taking that fact in account, knowing the energy supply is constant, you can offload your thoughts, so the spotlight can then focus on the individual elements and parts, without keeping the big picture in your head.
 * When writing as a part of the thought process: Write in a way that they don’t worry about beings criticized, it would damage/block their train of thoughts and ideas. That’s why a journal works so well.
 * When coaching: During coaching a coach usually focusses on guiding questions (e.g. 5 WHY's.) that help someone clarify someones existing thoughts or teaches them on how to think better, just like with [Writing Across The Curriculim](writing.md#type-2-exploratory-writing-across-the-curriculum).
 
-### Related Concepts 
+### Related Concepts
 
 According to ChatGPT.
 
@@ -84,10 +86,6 @@ By investigating the rhetoric the writer or the reader can better understand the
 * What is the Context?
 
 * [WAC: Rethoric](https://wac.colostate.edu/repository/teaching/intro/rhetoric/)
-
-## Reasoning
-
-... Pending as I'm reading [Reasoning](https://www.goodreads.com/book/show/1645567.Reasoning) by Michael Scriven.
 
 ## Resources
 
