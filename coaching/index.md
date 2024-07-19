@@ -12,9 +12,10 @@ It is not therapy or counseling, which deal with resolving past issues and emoti
 
 ## "The Coaching Habbit"
 
-This is a coaching strategy by Micheal Bungay Stanier, based on 7 type's questions to use during coaching.
+This is a coaching strategy by Micheal Bungay Stanier, based on 7 type's questions to use during coaching. This strategy is more for coaching people around you and help them, rather than helping someone progress in their career or such. Nevertheless, many of these questions are reusable tools for communicating and coaching in general.
 
 * 1. **The Kickstart Question**: "What's on your mind?"
+  * This turns your conversation into a real conversation.
 * 2. **The AWE Question**: "And What Else?"
 * 3. **The Focus Question**: "What's the real challenge here for you?"
 * 4. **The Foundation Question**: "What do you want?"
@@ -28,10 +29,21 @@ This is a coaching strategy by Micheal Bungay Stanier, based on 7 type's questio
 * **Dont get overwhelmed**: By making others selfsufficient, you get more time again and less workload.
 * **Become More Connected**: You will be more connected to work that matters again and also with the poeople you have coached.
 
-### Tips
+### 3P Method
 
-* Don't give advice.
-* Ask 1 question at a time, and then be quit while waiting for the answer.
+### Tips/Insights
+
+* **Don't offer** advice, answers or a solution.
+* **Ask 1 question** at a time, and then be quit while waiting for the answer.
+* **"Coaching For Development" vs "Coaching For Performance"**
+  * **Coaching For Performance**: Addressing a specific challenge/problem.
+  * **Coaching For Development**: Foussing to the person who is dealing with the challenge/problem.
+* **3P Method**: Choose what to focus on in a coaching session. Which aspect of the challenge/problem might be at the heart of the problem?
+  * *Projects*: What is being worked on.
+  * *People*: The relationship and your role in it.
+  * *Patterns*: Behaviour or ways of working.
+  * You can say "There are these 3 facets we can look at... <explain> ... Where should we start?" and then you can pull in the different facets as you go.
+
 
 ## Resources
 
