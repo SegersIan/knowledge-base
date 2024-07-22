@@ -36,8 +36,13 @@ This is a coaching strategy by Micheal Bungay Stanier, based on 7 type's questio
   * Slows down the rush to action, and forces focus.
   * "For You" is important part of the question, as it focusses on the development of the individual.
 * 4. **The Foundation Question**: "What do you want?"
-
 * 5. **The Lazy Question**: "How can I help?"
+  * Don't offer or tell what you should do to help, they need to formulate this.
+  * Delivery matters, if you are worried, you can soften it with:
+    * "Out of curiousity..."
+    * "Just so I know..."
+    * "To help me understand better..."
+    * "To make sure that I'm clear..."
 * 6. **The Strategic Question**: "If you're saying yes to this. what are you saying no to?"
 * 7. **The Learning Question**: "What was most useful for you?"
 
@@ -77,6 +82,8 @@ This is a coaching strategy by Micheal Bungay Stanier, based on 7 type's questio
   * Participation
   * Protection
   * Subsistence
+* Some of these questions could be effective for facilitation activities.
+  * As facilitator you are also trying to be distant from the content and more focussed on guiding the thought process.
 
 ## Resources
 

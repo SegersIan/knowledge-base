@@ -68,16 +68,16 @@ Usually we make a (right) decisions but then must built up commitment. With a go
         * **Guidelines**: Rules of engagement. Sometimes adding rules makes your gathering better.
         * **Safety**: Try to increase both
             * Physical: If people gonna be running around, make it safe to do so.
-            * Psychological: People who run meetings often don't mention this type of safety. A highly functional team has a high degree of psychological safety. 
+            * Psychological: People who run meetings often don't mention this type of safety. A highly functional team has a high degree of psychological safety.
 
 ### Do and Don't
 
-* Do: 
+* Do:
     * Carefully assess needs
     * Stay neutral
     * Have a lot of tools
     * Create open trusting atmosphere and tell why everyone is there.
-    * Simple & direct language 
+    * Simple & direct language
     * Conclude meetings on positive notes.
     * Clear steps
     * Clarity in general
@@ -209,7 +209,7 @@ And event is made up of activities, there are many variations, but they all try 
 
 ### Reflection
 
-* **Description**: 
+* **Description**:
     * Every participant reflects on the session/workshop/event on a shared template.
     * Example questions:
         * How did I as participant contribute to the success of the workshop?
@@ -217,27 +217,27 @@ And event is made up of activities, there are many variations, but they all try 
         * Most memorable statement made by fellow participant?
         * Did we reach our objectives
             * Visual TIP: Create one dimensional scale from "not at all" to "oh yeah" and let people drop a "dot" on the scale. So you get immediately a visual concentration.
-* **Why**: 
+* **Why**:
     * Help participants to consolidate their learnings.
 * **When**:
     * Closing of event
 
 ### Fist of 5 voting
 
-* **Description**: 
+* **Description**:
     * Explain Rules
         * People show scale of agreement/disagreement with the amount of fingers
         * 0...2 fingers -> Check in
         * 3...5 fingers -> move forward
         * Be aware of culture specifics here
-* **Why**: 
+* **Why**:
     * To gauge sentiment quickly
 * **When**:
     * During event whenever a clarification is needed.
 
 ### Prioritize
 
-* **Description**: 
+* **Description**:
     * Take any set of items (e.g action items, topics, ...)
     * Group them if some are similar (affinity)
     * Now there are 2 methods to choose from:
@@ -245,7 +245,7 @@ And event is made up of activities, there are many variations, but they all try 
             * Voting (suggested rule: 20% of votes vs the amount of items)
             * Move some dots
         * Use Logic with Eisenhower Matrix
-* **Why**: 
+* **Why**:
     * Need to decide which topics/items to focus on (take only top 3)
     * Need to decide which topics/items to focus first on
 * **When**:
@@ -255,10 +255,10 @@ And event is made up of activities, there are many variations, but they all try 
 
 ### Check-In Exercise
 
-* **Description**: 
+* **Description**:
     * [Typical] Start with asking people to introduce themselves, name, role, fun fact, ...
     * [Alternative] Let people share, for example "Top 3 success Factors" and "Top 3 reasons of failure" with post its on a board.
-* **Why**: 
+* **Why**:
     * Bring people in the room mentally.
     * Break ice.
 * **When**:
@@ -266,11 +266,11 @@ And event is made up of activities, there are many variations, but they all try 
 
 ### Agenda
 
-* **Description**: 
+* **Description**:
     * Share agenda, time slots, and stay on agenda.
     * Ask if anyone has questions
     * Always end on time, skip content if necessary.
-* **Why**: 
+* **Why**:
     * Expectation Management
     * Respect everyone's time
 * **When**:
@@ -278,9 +278,9 @@ And event is made up of activities, there are many variations, but they all try 
 
 ### Issues - Decisions - Action
 
-* **Description**: 
+* **Description**:
     * A board / visual aid to track about key issues, decisions and action items raised throughout the event.
-* **Why**: 
+* **Why**:
     * Visibility of all issues, decisions and action items.
 * **When**:
     * Introduced at opening of event.
@@ -291,45 +291,45 @@ And event is made up of activities, there are many variations, but they all try 
 
 ### Weather Check
 
-* **Description**: 
+* **Description**:
     * Pay attention to body language (distracted, ...)
     * "Is there anything that keeps anyone from being mentally in the room?"
     * "Anything that keeps you from being present?"
     * When energy is low/distracted > Do an energize activity.
-* **Why**: 
+* **Why**:
     * Identify the mood of the room. "Are we stull in collaborative mood?"
 * **When**:
     * Whenever, should check often.
 
 ### Roman Voting
 
-* **Description**: 
+* **Description**:
     * Explain the rules
         * Thumb up: I Agree
         * Thumb horizontal: I follow the room
         * Thumb down: I disagree
     * Ask A question
-* **Why**: 
+* **Why**:
     * To determine something quickly
 * **When**:
     * When you need a quick decision or feedback throughout the event.
 
 ### Commit To Action Items
 
-* **Description**: 
+* **Description**:
     * Get people commit to identified action items.
     * When no response or volunteers "Hey X, which opf these 2 items you'd like to take?"
     * Gentle force is OK.
     * You are not the project manager
     * As facilitator you can be a bit pushier "As facilitator I must make sure all action items are taken".
-* **Why**: 
+* **Why**:
     * Make sure all action items are owned and assigned.
 * **When**:
     * Throughout or end of event
 
 ### Template
 
-* **Description**: 
+* **Description**:
     * Group prepare statements on flip charts for x amount.
     * Groups switch flip charts to review another group's statements for x amount.
         * Let them put "V" if they agree
@@ -338,7 +338,7 @@ And event is made up of activities, there are many variations, but they all try 
     * Let the groups clarify, after clarification they should choose "V" and "X".
     * Keep going till only disagreements are left
     * Now you have a list of disagreements, you have a list to use, or to continue discussion over them. Different deliverables are possible here.
-* **Why**: 
+* **Why**:
     * To list disagreements and filter out any agreements, which don't require the participants time. If they agree with it, no need to waste time to it.
 * **When**:
     * During Event
@@ -363,14 +363,14 @@ And event is made up of activities, there are many variations, but they all try 
 
 ### Dysfunctional Behavior & Personas
 
-Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior). A good facilitator can navigate this by doing:  Conscious Prevention, Early Detection, Clean Resolution 
+Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior). A good facilitator can navigate this by doing:  Conscious Prevention, Early Detection, Clean Resolution
 
 #### Persona: Late Comer Larry
 
 * **Typical Quotes**:
     * Sorry I'm late... you know how it is to have back to back meetings
 * **DISC Style**: All
-* **Strengths**: 
+* **Strengths**:
     * Creates opportunity to have the conversation about timeliness with the whole team/group.
 * **Weaknesses**:
     * Derails meetings (everything gets repeated)
@@ -383,7 +383,7 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
 * **Typical Quotes**:
     * Nothing will be SAID... he will be on his cell phone texting the whole time.
 * **DISC Style**: All
-* **Strengths**: 
+* **Strengths**:
     * It's a clear sign that process or content is not engaging this person (may be the wrong person for the meeting)
 * **Weaknesses**:
     * Disengaged behavior might spread
@@ -395,7 +395,7 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
 * **Typical Quotes**:
     * I/Me/in my experience
 * **DISC Style**: Influence
-* **Strengths**: 
+* **Strengths**:
     * Willing to talk/share to get things started
     * May provide energy with stories
 * **Weaknesses**:
@@ -411,19 +411,19 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
     * This one time...
     * What about THIS (very minimally related tangential topic to what we are talking about)
 * **DISC Style**: Influence
-* **Strengths**: 
+* **Strengths**:
     * May provide a burst of (unrelated) energy when things are getting dull.
 * **Weaknesses**:
     * Pulls focus of the meeting away from the states purpose or objective.
 * **How To Deal**:
     * ...todo
-    
+
 #### Persona: Passive Aggressive Polly
 
 * **Typical Quotes**:
     * You don't know what she's thinking. Until she says it to someone else outside the meeting.
 * **DISC Style**: Steadiness
-* **Strengths**: 
+* **Strengths**:
     * Wants to maintain harmony (in the meeting)
     * Does not get in the way of ideas being moved forward (in the meeting)
 * **Weaknesses**:
@@ -436,7 +436,7 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
 * **Typical Quotes**:
     * I don't want to upset anybody (thought, not said)
 * **DISC Style**: Steadiness
-* **Strengths**: 
+* **Strengths**:
     * Doesn't compete for air time or restate ideas we've already heard.
     * Brings politeness to the space
 * **Weaknesses**:
@@ -451,7 +451,7 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
 * **Typical Quotes**:
     * Like they want THAT kind of creativity/honesty/feedback
 * **DISC Style**:  Steadiness/Conscientiousness
-* **Strengths**: 
+* **Strengths**:
     * May be the proverbial "canary in the coal mine" stating something the group is not ready to hear/discuss yet.
 * **Weaknesses**:
     * May feel like a personal attack to whomever is speaking
@@ -465,14 +465,14 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
     * We need more data
     * We simply don't know enough to decide this right now.
 * **DISC Style**:  Conscientiousness
-* **Strengths**: 
+* **Strengths**:
     * Provides accuracy & details
     * Keeps the group from going off a cliff they don't see.
 * **Weaknesses**:
     * Analysis Paralysis
     * May overgeneralize to the point of people losing interest all together.
 * **How To Deal**:
-    * Driven By: Safety 
+    * Driven By: Safety
     * Handled By: Make them feel safe, by outlining what the outcomes the decision at hand will have. Give them the context that the decision is made, and what for. Give them all the information they should know to feel safe to make a decision. Give Them Reassurance!
 
 #### Persona: Cautious Connie
@@ -481,13 +481,13 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
     * This is too risky
     * Maybe we should wait this out & see what happens
 * **DISC Style**: Conscientiousness
-* **Strengths**: 
+* **Strengths**:
     * Has safety & quality as top priorities
     * Keeps the group from going off a cliff they don't see.
 * **Weaknesses**:
     * Risk averse, may loose opportunities for growth by waiting too long.
 * **How To Deal**:
-    * Driven By: Safety 
+    * Driven By: Safety
     * Handled By: Make them feel safe, by outlining what the outcomes the decision at hand will have. Give them the context that the decision is made, and what for. Give them all the information they should know to feel safe to make a decision. Give Them Reassurance!
 
 
@@ -497,7 +497,7 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
     * This will never work
     * We tried this before & it didn't work then... it's not gonna work now
 * **DISC Style**: Conscientiousness/Dominance
-* **Strengths**: 
+* **Strengths**:
     * Keeps the group grounded in reality of impediments to success.
 * **Weaknesses**:
     * Shoots down potentially good ideas before they are fully formed.
@@ -509,9 +509,9 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
 
 * **Typical Quotes**:
     * I've got more important things to do
-    * This meeting is a waste of my time... I have real projects that need my attention 
+    * This meeting is a waste of my time... I have real projects that need my attention
 * **DISC Style**: Dominance
-* **Strengths**: 
+* **Strengths**:
     * Brings awareness tha the current process/topic may not be adding value.
 * **Weaknesses**:
     * Disengagement may spread to others (who will soon be getting out their laptops)
@@ -526,8 +526,8 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
     * Are we done yet?
     * When will we move to action?
 * **DISC Style**: Dominance
-* **Strengths**: 
-    * Keeps the ball moving forward; 
+* **Strengths**:
+    * Keeps the ball moving forward;
     * moves teams from talking about it into action!
 * **Weaknesses**:
     * Can shut down a space with potentially overbearing energy.
@@ -571,7 +571,7 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
 * Example
     * State Purpose
     * State Outcome
-    * State all steps, each step has 
+    * State all steps, each step has
         * a number for easy reference
         * Time length (start/stop times optionally)
         * Activity description
@@ -582,8 +582,8 @@ Dysfunctional behavior (Whispering, sidetracking, arguments, dominant behavior).
 * A placeholder for issues or questions that might need to be dealt with, but at a later point in the session/meeting/workshop.
 * You can either address all of the items at a specific time, or else in 1:1's (e.g. during lunch) but make CLEAR when you will address these.
 * Even if you know these questions will be answered over the workshop, write it down, let them feel heard and appreciated.
-* Goal: 
-    * Avoid the workshop derailing and explode in discussion. 
+* Goal:
+    * Avoid the workshop derailing and explode in discussion.
     * Let people feel heard.
     * It allows them to let go what's in their head, so they can relax more.
 * Examples
@@ -642,6 +642,7 @@ Allows to identify different personalities. If you are able to locate/place your
 * Quote from [WAC](https://wac.colostate.edu/repository/teaching/intro/include/)
     > [T]alk is important for sharing, clarifying, and distributing knowledge among peers, while asking questions, hypothesizing, explaining, and formulating ideas together are all important mechanisms during peer discussions. Analytical writing is an important tool for transforming rudimentary ideas into knowledge that is more coherent and structured. Furthermore, talk combined with writing appears to enhance the retention of science learning over time. (566)
 * Can we use [Blooms Taxonomy](https://tips.uark.edu/using-blooms-taxonomy/) for facilitating ?
+* Use the [Coaching Habit](../coaching/index.md) questions as inspiration of what you try to get from an activity (Acitvity Types).
 
 ## Resources
 
