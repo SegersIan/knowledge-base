@@ -43,8 +43,29 @@ This is a coaching strategy by Micheal Bungay Stanier, based on 7 type's questio
     * "Just so I know..."
     * "To help me understand better..."
     * "To make sure that I'm clear..."
+  * If they ask something you cant/wont do:
+    * "I can't do that... but I could do <counter offer>" if you are not comfortable to just say no.
+    * "Let me think about that" if you need some time before saying yes or no.
+  * Be cautious to not now switch to the "rescuer" habbit
 * 6. **The Strategic Question**: "If you're saying yes to this. what are you saying no to?"
+  * It is easy to say "YES", but with this approach, you go a level deeper.
+  * You can use the 3P's (People, Projects, Patterns) as guide to deliver things one says no to.
+  * It helps for people to not overcommit.
 * 7. **The Learning Question**: "What was most useful for you?"
+  * Helps reflection and people to really grow.
+  * Double loop learning, you fix it and then create a learning moment.
+    * Here the real connections are made and aha moments happen.
+  * Similar:
+    * "What did you learn?"
+    * "What was the key insight?"
+    * "What do you want to remember?"
+  * Reasons for this question:
+    * It assumes the conversation was usefull
+    * Asks people to identify the big thing that was most useful
+    * It makes it personal
+    * It givesy you (the coach) feedback
+    * It's learning, not judgement
+    * It reminds people how useful you are to them
 
 ### Reasons To Coach
 
@@ -56,7 +77,11 @@ This is a coaching strategy by Micheal Bungay Stanier, based on 7 type's questio
 
 ### Tips/Insights
 
+* These questions work via any communication channel
+* Information retention is notourisly bad, so better to help building a habbit of finding answers instead.
 * Get **comfortable with silence** after asking a question
+* Actuall **listen to the answer**
+* **Acknowledge the answers** you get like "nice", "I like it", "Fanastic", "Goone One", "Yes, Thats good", and "mmm-hmmm".
 * **Don't offer** advice, answers or a solution.
   * Neither do this as rhetorical questions ("Have you thought of...")
   * Only consider offering explitly an "idea" when you exhausted all the questions. Offer it as an option.

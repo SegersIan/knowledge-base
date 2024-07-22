@@ -48,6 +48,20 @@ Try to update the document **once every week or two**, but eventually find a fre
 * [Julia Evans's blog on Brag Document](https://jvns.ca/blog/brag-documents/)
 * [Bag Document: Bragdocs.com](https://www.bragdocs.com/)
 
+### Saying No
+
+Before saying no, ask more questions
+
+* What are you asking?
+* Whom else have you asked?
+* When you say this is urgent, what do you mean?"
+* If I couldn't do all of this, but just a part, what part would you have me do?
+* What do you want me to take of my plate to so I can do this?
+
+This might result in having a better scope, no overcommiting or people not comming back to you cause you ask too many (good) questions. Or they force you to do it and shut up, but less likely.
+
+You can also make the thing you say no a 3th party object. "I'm  afraid I have to say no to this" instead of " I'm afraid I have to say no to you".
+
 #### Template
 ```
 -  For each Achievement/Activity Event
