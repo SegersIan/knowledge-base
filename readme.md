@@ -34,3 +34,6 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 ## Notes To Myself
 
 * Research [MDBook](https://rust-lang.github.io/mdBook/)
+* Research [Docosauris](https://docusaurus.io/)
+* Research [GatsbeJS](https://www.gatsbyjs.com/)
+  * How can the GraphQL layer help for living documentation>?
