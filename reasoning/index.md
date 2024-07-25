@@ -1,5 +1,10 @@
-# Reasoning
+# Thinking and Reasoning
 
+## Thinking
+
+Thinking is any mental activity that helps formulate or solve a problem, make a decision, or fulfill a desire to understand. It is searching for answers, and reaching for meaning.
+
+To be a succesful problem solver, you will need both factual knowledge and proficiency in thinking.
 
 ## Nature of reasoning
 * Reasoning is a skill in using thought and language, and it is profficiency in this skill, not the mere possesion of language, which distinguishes the human species from the others on this planet.
