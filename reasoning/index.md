@@ -1,10 +1,63 @@
-# Thinking and Reasoning
+# Thinking
 
-## Thinking
+## Chapter 1: An Overview
 
-Thinking is any mental activity that helps formulate or solve a problem, make a decision, or fulfill a desire to understand. It is searching for answers, and reaching for meaning.
+* Thinking is any mental activity that helps formulate or solve a problem, make a decision, or fulfill a desire to understand. It is searching for answers, and reaching for meaning.
+* To be a succesful problem solver, you will need both factual knowledge and proficiency in thinking.
+* Good thinking: Good thinking is a matter of habbit, yes some will have a more talent for it, but its a habbit that can be trained and improved. Don't need to be in the NBA to enjoy basketball. IQ seems not connected to this.
+  * They have learned strategies for thinking.
+  * They have learned strategies to deal with frustration (conusion, mental blockers, ...).
+  * They have learned strategies to regain focus/concentration.
+  * Comparison:
+    * Good Problem Solvers:
+      * Read a problem and decide how to begin attacking it.
+      * Bring their knowledge to bear on a problem.
+      * Go about solving the problem systematically. (e.g. try simplifyng, breaking into smaller problems, ...)
+      * Tend to trust their reasoning and have confidence in themselves.
+      * Maintain a critical attitude throughout the problem-solving process.
+    * Poor Problem Solvers:
+      * Cannot settle on a way to begin.
+      * Convince themselves they lack sufficient knowledge.
+      * Plunge in, from one part of the problem to the other, trying to justify first impressons
+      * Tend to distrust their reasoning and lack confidence in themselves.
+      * Lack of a critical attitude and take too much for granted.
+* Brain At work: Your brain has 2 distinct phases that complement each other during problem solving and decision making.
+  * The Production Phase: Most closley related to creativity, it produces solutions, ideas, responses.
+    * There are techniques to be learned to be better at this.
+  * The Judgement Phase: Most closely related to critical thinking, it examines, judgjes, adds refinements, evaluates.
+* Meaningful Discussion:
+  * > Many hosts demand that their guests answer complex questions with simple yes or no answers. If the guest responds that way, they are attacked for oversimplifying. If, instead, they try to offer a balanced answer, the host shouts "You're not answering the question".
+  * Guidelines:
+    * Wehever possible, prepare in advance.
+    * Set reasonable expectations. (people will probably not change their conviction on the spot)
+    * Leave agotism and personal agendas at the door.
+    * Contribute but don't dominate
+    * Avoid distracting speech mannerisms
+    * Listen actively
+    * Judge ideas responsibly (try to not have your general impressions or feelings get in the way to judge something on its merrits)
+    * Resist the urge to shout or interrupt
+* Preliminary thinking strategies
+  * When you must analyze a single statement:
+    * Read it again
+    * Ask yourself "Does this make sense?"
+    * If you have a firm YES/NO, decided what makes to respond that way. That argument is probably what to explain to others.
+  * When you get stuck, words fail, dead end road, so difficult challenges:
+    * Use a diagram
+    * Example: "All dogs are animals. Fido is a dog, therefore Fido is an animal" you could diagram as this:
+      * Animal <- All dogs <- Fido
+  * When the statement presents as fact something that is not factual, identify the error and explain how it invalidates the statement.
+  * When the statement confuses two terms or ideas, identify the confusion and show its effect on the statement as a whole.
+  * When the statement presents a conclusion as the only possible conclusion and other conclusions are also possible, present the other conclusions and demonstrate that they, too, are reasonable (perhaps more reasonable).
+  * When the statemnt, or some part of it, is open to interpretation, use the if-then approach to analysis.
+    * Example: IF X is true THEN conclusion A, IF Y is false THEN conclusion B
+    * Also valid if you are unsure about facts
+  * When there is a dialog
+    * First read it to understand the discussion in its entirety
+    * Then read each person's comments individually, note the progression of their thoughts and the degree of logical consistency.
+    * Finally read for implications and assimptions (these are ideas that are not stated directly but are nevertheless identifiable by what is stated directly)
 
-To be a succesful problem solver, you will need both factual knowledge and proficiency in thinking.
+
+# Reasoning
 
 ## Nature of reasoning
 * Reasoning is a skill in using thought and language, and it is profficiency in this skill, not the mere possesion of language, which distinguishes the human species from the others on this planet.
@@ -42,4 +95,5 @@ To be a succesful problem solver, you will need both factual knowledge and profi
 
 ## Resources
 
+* [Art Of Thinking](https://www.amazon.com/Art-Thinking-critical-Creative-Thought/dp/0321953312) by Vincent Ruggiero.
 * [Reasoning](https://www.goodreads.com/book/show/1645567.Reasoning) by Michael Scriven.

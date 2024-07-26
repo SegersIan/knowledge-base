@@ -7,6 +7,16 @@
 * [Writing](writing.md)
 * [Presenting](presenting.md)
 
+## General
+
+* > Althought writing is most commonly thought of as a way of expressong thoughts that we have already formed, it is also an excellent tool for dfiscovering and clarifying thoughts.
+  * Art of thinking, p15
+*  > Most people die vauge about life and death ... We imagine other people know definitly their own minds about things important to them and around them. but it is not so, we live in perpertual vaguengess ...
+  * Art of thinking, p15
+  * Solution: [Freewriting](https://writingprocess.mit.edu/process/step-1-generate-ideas/instructions/freewriting)
+    * It consists of focusong on a problem or issue, letting your mind produce whatever assosciations it will and writing down the resulting ideas, without pausing to evaluate any ideas (lets you shut off ideas prematurely). This writing is not intended to be shared, so there are no rules of composition and such.
+
+
 ## Insights
 * Exploratory teaches and helps you to think more critically and clearly, cause it improves your "way of thinking", how you get there. Teaching you often more and broader on a subject matter. You might naturally also take social implications into account when writing about a scientific invention.
 * Writing code is the same mental process.
@@ -91,6 +101,7 @@ By investigating the rhetoric the writer or the reader can better understand the
 
 ## Resources
 
+* [Art Of Thinking](https://www.amazon.com/Art-Thinking-critical-Creative-Thought/dp/0321953312) by Vincent Ruggiero.
 * [On Writing Well: The Classic Guide to Writing Nonfiction](https://www.goodreads.com/book/show/53343.On_Writing_Well) by William Zinsser.
 * [Reasoning](https://www.goodreads.com/book/show/1645567.Reasoning) by Michael Scriven.
 * [Ted Talks: The Official TED Guide to Public Speaking](https://www.goodreads.com/book/show/41044212-ted-talks?) by Chris J. Anderson.
