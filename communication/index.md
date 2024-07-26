@@ -109,3 +109,4 @@ By investigating the rhetoric the writer or the reader can better understand the
 * [Writing To Learn](https://www.goodreads.com/book/show/53343.On_Writing_Well) by Willian Zinsser.
 * [WAC: Rethoric](https://wac.colostate.edu/repository/teaching/intro/rhetoric/)
 * [Level Of Disagreement](https://themindcollection.com/revisiting-grahams-hierarchy-of-disagreement/)
+* [MIT Writing Process](https://writingprocess.mit.edu/)
