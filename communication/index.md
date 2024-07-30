@@ -7,6 +7,8 @@
 * [Writing](writing.md)
 * [Presenting](presenting.md)
 
+![img](assets/writing_rhytm.png)
+
 ## General
 
 * > Althought writing is most commonly thought of as a way of expressong thoughts that we have already formed, it is also an excellent tool for dfiscovering and clarifying thoughts.
