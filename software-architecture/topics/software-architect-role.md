@@ -29,3 +29,14 @@ The core responsibilities that we discuss here are relevant for all type of arch
 In addition to these core expectations, there are many more and this will change as technology and scale changes.
 
 Note that (7) and (8) are crucial for the ability of the architect to have effective impact and to execute change.
+
+## Culture
+
+> Agile development avoids big design up-front (BDUF) with a simple belief that “the best architectures, requirements, and designs emerge from self-organizing teams [1].” This yields the practice of emergent design—defining and extending the architecture only as necessary to deliver the next increment of functionality.
+> These problems can result in poor solution performance, unfavorable economic outcomes, and delayed time-to-market. Organizations overcome these problems by balancing emergent design with intentional architecture, which requires some centralized planning and cross-team coordination. Both are implemented with Enablers and, together, ‘pave’ the architectural runway (Figure 1).
+* source: [SAFE - Architecture Runway](https://scaledagileframework.com/architectural-runway/)
+
+
+## Resources
+
+* [SAFE - Architecture Runway](https://scaledagileframework.com/architectural-runway/)

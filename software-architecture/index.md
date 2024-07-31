@@ -122,3 +122,5 @@ This handbook is from my experience and many materials that I have read. My inte
 ## Todo
 
 Here you can find my [raw todo notes](./todo.md) on all topics that I plan to address in this handbook.
+
+## Others
