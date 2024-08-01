@@ -71,6 +71,16 @@
 * Rational = Reasonable
 * Practice is more valuable than theory on Reasoning, it's like language, there is no adequate grammar, it changes, you have to use it, just like learning a language.
 
+## Purpose of reasoning
+
+* Reasoning can be used in the service of criticism
+* Reasoning can be used in the service of persuasion or communication.
+* Reasoning is the means whereby we reach new conclusions, gain new knowledge, uncover new and important facts.
+
+## Creativity & Reasoning
+
+Creativity is a major component in reasoning. The process of trying to think of alternative explanations of a set of facts, is an entirely creative process.
+
 ## Argument Analysis
 
 * 3.2
@@ -102,11 +112,12 @@
 * An argument can be criticized either by focusing on the truth of the premises, or the goodness of the inference/step. These 2 ways are directly mapped to the factual sound argument and logically sound argument
 * The Logic of argument : all the steps/inferences from premise to conclusion
 * A conclusion is an inference, actually every inference/step is a kind of mini/inbetween conclusion
-* An inference and implication are different. An implication is something that is not directly inferences by the speaker of the argument, an inference is a clear step that the speaker takes. “The eggs are now rotten, therefore it’s not safe to eat. The inference is that you can’t eat the eggs because they’re rotten, an implication would be, that the spoiled eggs probably now smell like rotten eggs.
+* An inference and implication are different. An implication is something that is not directly inferenced by the speaker of the argument, an inference is a clear step that the speaker takes. “The eggs are now rotten, therefore it’s not safe to eat. The inference is that you can’t eat the eggs because they’re rotten, an implication would be, that the spoiled eggs probably now smell like rotten eggs.
 
 ![argument_structure](assets/argument_structure.png)
 
-## The 7 steps in argument analysis
+
+### The 7 steps in argument analysis
 The steps are not highly technical in itself, the difficult thing is to follow them carefully and skillfully.
 
 1. Clarification of meaning (of the argument and of its components)
