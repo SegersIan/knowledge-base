@@ -92,6 +92,30 @@
     * Deductive argument - Logical deduction (e.g. arithmics showing how much something costs, including hidden costs) - Easy attacked with facts or newer facts
     * Inductive argument - Statistical/probable (e.g. its very likely interest rate will increase next month, because ...) - Harder to attack, cause it's implied it's not factual, but likely.
   * Inconsistency is great attack/weapon if poeople have no interest to communicate.
+* Reasoning can be used in the service of criticism or in the service of persuasion or communication.
+* Logic or reasoning is the means whereby we reach new conclusions, gain new knowledge, uncover new and important facts.
+* Reasoning is a constructive and creative activity that leads us to knowledge.
+* Creativity is important to reasoning, the process of trying to think of alternative explanations of a set of facts, is an entirely creative process.
+* Good thinking, reasoning and creativity go hand in hand
+* An argument is logically sound when the reasoning is sound, that the inferences/steps from premise to conclusion are sound, without saying anything about whether the premises are themselves sound (you might not know the facts about the premises)
+* An argument is factually sound means that the premises are in fact true.
+* An argument can be criticized either by focusing on the truth of the premises, or the goodness of the inference/step. These 2 ways are directly mapped to the factual sound argument and logically sound argument
+* The Logic of argument : all the steps/inferences from premise to conclusion
+* A conclusion is an inference, actually every inference/step is a kind of mini/inbetween conclusion
+* An inference and implication are different. An implication is something that is not directly inferences by the speaker of the argument, an inference is a clear step that the speaker takes. “The eggs are now rotten, therefore it’s not safe to eat. The inference is that you can’t eat the eggs because they’re rotten, an implication would be, that the spoiled eggs probably now smell like rotten eggs.
+
+![argument_structure](assets/argument_structure.png)
+
+## The 7 steps in argument analysis
+The steps are not highly technical in itself, the difficult thing is to follow them carefully and skillfully.
+
+1. Clarification of meaning (of the argument and of its components)
+2. Identification of conclusions (stated and unstated)
+3. Portrayal of structure
+4. Formulation of (unstated) assumptions (the “missing premises “)
+5. Criticism of the premises (given and missing) and the inferences
+6. Introduction of other relevant arguments
+7. Overall evaluation of this argument in the light of 1 through 6
 
 ## Resources
 
