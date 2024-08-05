@@ -128,6 +128,14 @@ The steps are not highly technical in itself, the difficult thing is to follow t
 6. Introduction of other relevant arguments
 7. Overall evaluation of this argument in the light of 1 through 6
 
+#### 1. Clarification of meaning (of the argument and of its components)
+#### 2. Identification of conclusions (stated and unstated)
+#### 3. Portrayal of structure
+#### 4. Formulation of (unstated) assumptions (the “missing premises “)
+#### 5. Criticism of the premises (given and missing) and the inferences
+#### 6. Introduction of other relevant arguments
+#### 7. Overall evaluation of this argument in the light of 1 through 6
+
 ## Resources
 
 * [Art Of Thinking](https://www.amazon.com/Art-Thinking-critical-Creative-Thought/dp/0321953312) by Vincent Ruggiero.
