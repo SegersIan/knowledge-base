@@ -117,7 +117,7 @@ Creativity is a major component in reasoning. The process of trying to think of 
 ![argument_structure](assets/argument_structure.png)
 
 
-### The 7 steps in argument analysis
+## The 7 steps in argument analysis overview
 The steps are not highly technical in itself, the difficult thing is to follow them carefully and skillfully.
 
 1. Clarification of meaning (of the argument and of its components)
@@ -128,13 +128,19 @@ The steps are not highly technical in itself, the difficult thing is to follow t
 6. Introduction of other relevant arguments
 7. Overall evaluation of this argument in the light of 1 through 6
 
-#### 1. Clarification of meaning (of the argument and of its components)
-#### 2. Identification of conclusions (stated and unstated)
-#### 3. Portrayal of structure
-#### 4. Formulation of (unstated) assumptions (the “missing premises “)
-#### 5. Criticism of the premises (given and missing) and the inferences
-#### 6. Introduction of other relevant arguments
-#### 7. Overall evaluation of this argument in the light of 1 through 6
+### Step 1. Clarification of meaning (of the argument and of its components)
+
+### Step 2. Identification of conclusions (stated and unstated)
+
+### Step 3. Portrayal of structure
+
+### Step 4. Formulation of (unstated) assumptions (the “missing premises “)
+
+### Step 5. Criticism of the premises (given and missing) and the inferences
+
+### Step 6. Introduction of other relevant arguments
+
+### Step 7. Overall evaluation of this argument in the light of 1 through 6
 
 ## Resources
 
