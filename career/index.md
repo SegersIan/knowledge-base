@@ -147,3 +147,73 @@ Reiterate your interest in the position and the company. Summarize why you would
 Kind Regards
 [Your Name]
 ```
+
+### The Job Interview
+
+* **What are your Salary expectations?**
+    * Remember the total package is what matters, so you can never give an educated guess until you understand the full package:
+        * The role
+        * Position
+        * Growth opportunities
+        * Culture
+        * Benefits
+        * Tools
+    * remember, Try to frame it as you are in it together, towards a mutual goal. Say WE, avoid YOU and I.
+    * You are eager to learn about them all through the process.
+    * "The time to discuss salary is after they've fallen in love with you" - John Lees
+    * keep it vague but positive, and if possible, put ball in their court.
+    * [Source 1](https://www.youtube.com/watch?v=WChxbBSlWnQ) 
+        * Trick question, your answer depends on the stage of the interview process you are.
+        * Last Round: They might be actually interested in accommodating your expectation.
+        * Early Round: They don't try to accommodate, but eliminate you if your expectations are wide off. 
+            * No way of knowing the actual Salary range
+            * Avoid giving a single number
+            * Example:
+                * Part 1: At this point I need more details about the role before I can give an accurate answer on that.
+                    * They might counter with "what details do you need?". You can respond EITHER
+                        * A: Need to know about the work hours, flexibility, location, expectations, scope of responsibility, benefits, remote work, bonus structure and such.
+                        * B: "Maybe just more of a feel for the culture"
+                * Part 2: If they push: I understand this is an approved position, so the salary range must be approved, can I ask what it is for this position?
+                    * Whatever they say, you can say "That would work for me", unless they still ask for a number...
+                * Part 3: If no range but still push for number: give a wide range. Really low to really high.
+                    * I will need between 40 000 to 100 000 per year, based on the details.
+                * Key take away: NEVER GIVE A NUMBER, wide range.
+            * Now they can't eliminate you due to salary expectations and you are able to push for the upper range when they start talking about it at a later more serious round.
+    * [Source 2](https://www.youtube.com/watch?v=Qhr7Cy7YLrM)
+        * Strategy One: Redirect the conversation (2 ways)
+            1. Ask about their budget: "I actually don't understand the full scope of the role at this point to accurately price myself, but I would love to know the budgeted salary range."
+                * If they answer, you can respond: "That's helpful to know, If you were to offer me the job, is there room to negotiate?"
+            2. Move past the question and go back to your qualifications:
+                * "I'm stull trying to fully understand the role and what's involved. I'd love to continue talking about my qualifications and why I think I'm a fit for this position."
+                * "That's not I'm comfortable answering, but I'm happy to talk about my qualifications for this role"
+        * Strategy 2: Offer a salary range
+            * When your deflecting didn't work or you have enough information.
+            * Try to do research for salaries for similar roles. LinkedIn, Glassdoor, recruiters, Salary.com, if possible.
+                * Or ask people in your network if possible.
+                * Don't focus on a single number.
+            * State your range and provide a rationale (research, skills, etc.)
+            * Acknowledge that salary is just one factor in your decision.
+            * Signal flexibility, this is a conversation, not a demand about to the total compensation.
+            * Show enthusiasm.
+            * 3 examples:
+                1. `I'm looking for a competitive salary that reflects my qualifications and experience. Based on my research and the requirements of the role as I understand them, I would expect a salary in the range of <insert>. Of course, I'm open to discussing the details of the entire compensation package, since salary is just one factor. I'm particularly excited to learn more about the opportunities for growth and advancement here.`
+                2. `Given my experience and expertise, I'm looking to make between x and y in my next role. I've done some research on similar roles and talked to people in comparable organizations, all of which helped me confirm that range. I know I'd be a valuable asset to your team and am open to learning more about the budget for the role and the other benefits that you offer employees.`
+                3. `I've been doing some research on similar roles and my understanding is that, for someone at my level, with my background and experience, I can expect to make a salary in the range of x to y. Of course compensation is not the only thing that is important to me. So I'm eager to hear more about your benefits package, including paid time off and other perks. What's most important to me is finding a place where I can thrive. I can be flexible around the exact numbers for a job that's a great fit.`
+            * Tweak it to your liking.
+    * [Source 3](https://youtu.be/_yAsdP9SOLg?si=K-LjMno5cnSCYpLc&t=506)
+        * Examples:
+            * "Thank you so much for asking. I definitely want to make sure we're aligned before moving forward. Do you have the salary band for this position?" -> Trying to align along mutual goal.
+            * "I'm flexible on salary, depending on other elements of the compensation package. Do you have the salary band for this position?"
+            * "While I am flexible on salary, I am currently interviewing for positions that are in range x to y." -IF you really know what you want. Reminds also, there is competition. Not if you are desperate or insecure. Good if you have many options and know what you want.
+* Asking questions...
+    * [Source](https://www.youtube.com/watch?v=jzqOLoorgOs)
+    * 
+
+### The Negotiation
+
+* Example flow when getting an offer:
+    * Express gratitude: "Thank you for your offer. I am so excited to join the team"
+    * Counter: "After learning more about the position, a salary of x feels more appropriate to me." 
+    * Unique Offering: "With my extensive background in x, I bring much more to the table than .... . "
+    * Enroll them to help: "Are you able to help me get closer to that number?"
+    * Close with urgency: "If so, I'm happy to sign right now".
