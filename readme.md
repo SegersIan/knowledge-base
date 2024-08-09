@@ -24,6 +24,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 
 * [Software Architecture](software-architecture/index.md)
 * [Software Design](software-design/index.md)
+* [Software Development Process](software-development-process/index.md)
 * [Software Testing](software-testing/index.md)
 
 ## Niche Topics
