@@ -135,58 +135,100 @@ The steps are not highly technical in itself, the difficult thing is to follow t
 #### Method
 
 A. Read most or all of the argument of passage under consideration before trying any clarification.
+
 B. Replace unknown terms by reference to a dictionary.
+
 C. Rewrite any unclear parts, using clearer language.
-D. In particulatr, identify vague or ambiguous terms that you suspect the argument is 'exploiting'.
+
+D. In particular, identify vague or ambiguous terms that you suspect the argument is 'exploiting'.
   * E.g By shifting from one meaning to another.
-  * Translate the clause or sentence containing each orccurence of these terms into other language that conveys the correct meaning  of the term in each ccontext. That will show up any shifts in meaning
+  * Translate the clause or sentence containing each occurrence of these terms into other language that conveys the correct meaning  of the term in each context. That will show up any shifts in meaning
+
 E. Write out any important unstated but intended implications or suggestions of the premises, the conclusions, and the argument as a whole.
   * What's it trying to get across that isn't actually spelled out?
+
 F. Ask yourself if you really understand how everything fits together. In other words, have you a "feeling" for the argument or passage as a whole (even if you don't accept it)?
-  * Don't let hostility youy may have for the position expressed mislead you into misprepresenting the argument - say, by making it more stupid than it already is (you think).
-* Look over resutls of A through E and critized the pssage for inclarity where appropiate. Most of step 1 is laying ground for later analysis. But this part, G is a component of your final criticism.
+  * Don't let hostility you may have for the position expressed mislead you into misrepresenting the argument - say, by making it more stupid than it already is (you think).
+* Look over results of A through E and criticized the passage for unclarity where appropriate. Most of step 1 is laying ground for later analysis. But this part, G is a component of your final criticism.
 
 #### Remember
 
 * The "meaning" of an argument (or word, or other expression) is not what the arguer intended but what he or she said, taken as a native speaker of the language would hear it.
 * Still, You want tom kae the best guess at the arguer's intended meaning, and we can take account of context.
-  * Ine one context "Dogs Bite" may mean "All dogs bite"; ion another, "most do"' and in another "Dogs, sometimes bite". That is, the meaning of words or phrases isn't to be found in those worlds all by themselves. Look at the context; if the speaker is present, ask for clarification. If not, treat the words as haviung their usual meaning.
+  * Ine one context "Dogs Bite" may mean "All dogs bite"; ion another, "most do"' and in another "Dogs, sometimes bite". That is, the meaning of words or phrases isn't to be found in those worlds all by themselves. Look at the context; if the speaker is present, ask for clarification. If not, treat the words as having their usual meaning.
 
 ### Step 2. Identification of conclusions (stated and unstated)
 
 #### Method
 
-A. Some of the unstated conclusions turn up in step 1(E) while you're trung to get the meaning straight. Set them out now; write them in below the passage of text, or fit them in (perhaps in the margin) where they come in. Are there any more, perhaps uninteded but unavoidable ones? Get them all states clearly and fairly. Which are the most important ones? Is there one main conclusion? (there usually is.).
-B. To located the stated conclusions, look for indicate words like `therefore`, `because`, `so` and `thus` and for replacement cues such as the locationa d the end of a paragraph.
+A. Some of the unstated conclusions turn up in step 1(E) while you're trying to get the meaning straight. Set them out now; write them in below the passage of text, or fit them in (perhaps in the margin) where they come in. Are there any more, perhaps unintended but unavoidable ones? Get them all states clearly and fairly. Which are the most important ones? Is there one main conclusion? (there usually is.).
+
+B. To located the stated conclusions, look for indicate words like `therefore`, `because`, `so` and `thus` and for replacement cues such as the location d the end of a paragraph.
   * These cues are bu no means always reliable; you also have to depend on your sense of the meaning of the passage as a whole.
+
 C. Notice that here may be several conclusions in the argument, each building on the previous ones. And a passage may also contain several entirely separate arguments.
-D. Within any one argument, try to decide if that argument has a main conclusion (or conclusions) and if the others can be ranked as to their importantce.
+
+D. Within any one argument, try to decide if that argument has a main conclusion (or conclusions) and if the others can be ranked as to their importance.
   * We can call the second group "secondary" conclusions, some of which may still be quite important, others more or less incidental.
 
 ### Step 3. Portrayal of structure
 
-Set ouht the relationships between conclusuins and premises (in the parts of the passage that are arguments). You've already identified the conclusions. Now you just need to ask yourself what assertions are being put forward to support each of these conclusions. **These are the premises**. Typically, there will be other material in the passage that is neither a premise or a conclusion. It may be instructions, rhetoric, repetition, flourish, or other statements. **The following procedure is unnecessary for simple arguments, and it should be applied to very long ones a page or paragraph at a time.**
+Set out the relationships between conclusions and premises (in the parts of the passage that are arguments). You've already identified the conclusions. Now you just need to ask yourself what assertions are being put forward to support each of these conclusions. **These are the premises**. Typically, there will be other material in the passage that is neither a premise or a conclusion. It may be instructions, rhetoric, repetition, flourish, or other statements. **The following procedure is unnecessary for simple arguments, and it should be applied to very long ones a page or paragraph at a time.**
 
 ### Method
 
 A. Number each separate assertion; note that one sentence may contain several assertions.
-  * Put square backets at the beginning and end of each asserts, and number it it in the margin or above the line of type.
+  * Put square brackets at the beginning and end of each asserts, and number it it in the margin or above the line of type.
+
 B. Do not give a number to repetitions of the same assertion.
-C.
-D.
-E.
-F.
-G.
-H.
-I.
+
+C. Do not number irrelevant statements ("asides"). Remember that your judgments or irrelevance or repetitiousness. Remember that your judgement of irrelevance or repetitiousness are crucial to your evaluation of the argument, and you must be ready to defend them.
+
+D. Do give a number to the implicit conclusions you first located in 1E and 2A.
+
+E. Set out the relationships between the relevant assertions in a tree diagram like the one shown here. It is read downward on the page.
+
+![img](assets/argument_analysis_3_e.PNG)
+
+If 1 and 2 are claims put forward to support 3 and are not themselves supported by any other assertion, and if 3 is supposed to support 4, but not vice-versa, the diagram looks like the illustration. If 4 might be an unstated conclusion, you might put it in parentheses, as shown.
+
+F. For a "balance of considerations" argument, where we say that 1, 2, and 3 suggest the conclusion 5, "Despite" 4 (which points the other way), use symbolism as shown in this diagram.
+
+![img](assets/argument_analysis_3_f.PNG)
+
+G. Sometimes, you can set the structure out on a single line, e.g., ( 1 + 2 + 3 + 4) -> 5 or 1 -> 2 -> ( 3 + 4 ). The arrow then stands for "implies". Sometimes the suggestion is made that, for example, ( 1 + 2 ) imply ( 3 + 4 ) and are implied by them then use a double-ended arrow, thus: ( 1 + 2 ) <-> ( 3 + 4 ).
+
+H. Terminology: IF statement 1 implies statement 2, we can also say 2 "follows from" 1, or "is a consequence" of 1, or that we can infer 2 from 1. It is incorrect to say 1 infers 2: statements imply but can't infer; people can do both (but not at the same time).
+
+I. While doing this, begin to look for places where there are significant, unstated assumptions ("missing premises"). You can locate them by adding circles to the tree diagram with letters in them at the appropriate places, thus:
+
+![img](assets/argument_analysis_3_i.PNG)
+
+(A is an assumption that is needed to support the interference from 1 and 2 to 3)
+To formulate them exactly, see the next section.
 
 ### Step 4. Formulation of (unstated) assumptions (the “missing premises “)
 
+The most difficult part of reconstructing an argument is fair and clear formulation of the "missing premises", the unstated assumptions. You must distinguish between:
+
+A. The *Arguer's assumptions*, what he or she consciously assumed or would accept as an assumption if asked.
+
+B. The *minimal assumptions of the argument* whatever is, logically speaking, necessary to make it possible to get from the premises to the conclusion of the arguer.
+
+C. The *optimal assumptions*, usually stronger claims than B which are logically adequate and independently well-supported.
+
 ### Step 5. Criticism of the premises (given and missing) and the inferences
+
+
 
 ### Step 6. Introduction of other relevant arguments
 
+If you stopped after Step 5, you'd have a thorough critique and sometimes that's all that's called for, but you wouldn't know what to think yourself. For to discover that a particular argument has some defects is not to discover that it shouldn't be given some weight, perhaps a good deal. Perhaps, enough to act on. At this point, then, you must step backward and try to get a perspective on the argument. First, ask yourself wether there are arguments on the same issue which point in another direction, perhaps to the opposite conclusion or to a somewhat different conclusion. (In the case of argument from analogy, you may find that the very same analogy can be viewed somewhat differently and taken to support the opposite conclusion.) next, look for the other arguments that support the same conclusion.
+
 ### Step 7. Overall evaluation of this argument in the light of 1 through 6
+
+Go back to your criticisms. How devastating are they? Could they be met by modest modifications or the original material? Even when devastating, do they cover all the original lines or argument? Look at the results of Step 6. They not only should help you decide what you think but they also may help you to see what the original argument was after. Have you overcritizied it?
+Now, make your final judgement on the argument. Grade it, in several dimensions if you like, but then make yourself give an overall grade. It's a cop-out not to. You must decide where it does have force, and how much for you.
 
 ## Resources
 
