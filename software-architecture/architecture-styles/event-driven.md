@@ -199,3 +199,4 @@ Examples:
 * [Building Event-Driven Microservices: Leveraging Organizational Data at Scale](https://www.oreilly.com/library/view/building-event-driven-microservices/9781492057888/)
 * [Fundamentals of Software Architecture](https://fundamentalsofsoftwarearchitecture.com/)
 * [Reactive Manifesto](https://www.reactivemanifesto.org/)
+* [What is Event Modeling](https://eventmodeling.org/posts/what-is-event-modeling/)
