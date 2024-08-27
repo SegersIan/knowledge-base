@@ -1,5 +1,7 @@
 # Communication
 
+> A wealth of information creates a poverty of attention (Hebert Simon, Nobel laureate and PhD in computer science and organization psychology)
+
 > The single biggest problem with communication is the illusion that it has taken place.
 
 > What I need to know is how your work connects to everything else. Can you explain the essence of it in any way I understand? Can you share your work process in layman's terms? Can you explain why it matters? And why you are passionate about it? If you can do this, you will expand my worldview. And you may do something else. You may spark new creativity or inspiration in me., Every of knowledge is different, but they are all connected.
