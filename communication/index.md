@@ -8,6 +8,7 @@
 
 * [Writing](writing.md)
 * [Presenting](presenting.md)
+* [Propaganda](propaganda.md)
 
 ![img](assets/writing_rhytm.png)
 
