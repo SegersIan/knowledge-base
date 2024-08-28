@@ -11,7 +11,19 @@ TED is about sharing ideas in an interconnected world. Ideas worth sharing. Idea
    * The org bore: No one cares about your org unless you work there
    * Inspiration Performance: Only present because of ego and to "inspire", inspiration is a byproduct of a great presentation.
 
+**Did you know about communication: 7% is words, 38% Tone, 55% body**.
+
 ## Talk Tools
+
+## Body Language / Tone
+
+### Personas
+
+You can use this personas to switch between or stick to, they come with their own tone and body language.
+
+* **1 Word At a time**: Say more with less, say a single word and give is space and time.
+* **Preacher**: High energy, you ask engagement of the audience (can I get a hell yeah? Might even push for it.) Exaggerated body language, very energized. You keep building up energy.
+* **Cowboy**: Confident stand and language, stand even on both legs, shoulders up. Calm talk, but a bit cheeky of subtle jokes to avoid becoming arrogant. Needs a gentle play.
 
 ### Connection
 * Make eye contact
