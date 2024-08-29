@@ -15,12 +15,12 @@
 
 ## General
 
-* > Althought writing is most commonly thought of as a way of expressong thoughts that we have already formed, it is also an excellent tool for dfiscovering and clarifying thoughts.
+* > Although writing is most commonly thought of as a way of expressing thoughts that we have already formed, it is also an excellent tool for discovering and clarifying thoughts.
   * Art of thinking, p15
-*  > Most people die vauge about life and death ... We imagine other people know definitly their own minds about things important to them and around them. but it is not so, we live in perpertual vaguengess ...
+*  > Most people die vague about life and death ... We imagine other people know definitely their own minds about things important to them and around them. but it is not so, we live in perpetual vagueness ...
   * Art of thinking, p15
   * Solution: [Freewriting](https://writingprocess.mit.edu/process/step-1-generate-ideas/instructions/freewriting)
-    * It consists of focusong on a problem or issue, letting your mind produce whatever assosciations it will and writing down the resulting ideas, without pausing to evaluate any ideas (lets you shut off ideas prematurely). This writing is not intended to be shared, so there are no rules of composition and such.
+    * It consists of focusing on a problem or issue, letting your mind produce whatever assosciations it will and writing down the resulting ideas, without pausing to evaluate any ideas (lets you shut off ideas prematurely). This writing is not intended to be shared, so there are no rules of composition and such.
 
 
 ## Insights
@@ -50,7 +50,7 @@
 * Knowledge is stored in the human's mind is multidimensional, hierarchical and cross linking. When talking or speaking, we convert that knowledge into a one dimensional stream of words.
    * That's why, when talking/writing it is important to be linear and and cross link where necessary to avoid ambiguity, certain links are not obvious to the receiver.
 * In the book about [Reasoning]() they the following remark which fits in quite nicely
-  * > First, the emphasis on communication, on the crucial importance of the **social activity of reasoning**, means that we can **scarecely afford any jargon** at all.
+  * > First, the emphasis on communication, on the crucial importance of the **social activity of reasoning**, means that we can **scarcely afford any jargon** at all.
 
 ## The Iterative Thought Process
 A self defined process based on my insights on becoming a more clear thinker.
