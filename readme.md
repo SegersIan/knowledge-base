@@ -16,6 +16,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 * [Productivity](productivity/index.md)
 * [Psychology](psychology/index.md)
 * [Reasoning](reasoning/index.md)
+* [Statistics](statistics/index.md)
 
 ## Software Engineering
 
