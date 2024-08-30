@@ -105,6 +105,23 @@ By investigating the rhetoric the writer or the reader can better understand the
 
 * [WAC: Rethoric](https://wac.colostate.edu/repository/teaching/intro/rhetoric/)
 
+## How to: Brief People
+
+Whenever you need to thoroughly brief a group of people on an important matter, consider using a 5-paragraph format.
+
+1. Situation
+   * Is about what position we’re in, and why we set out to do what we want to do. You can break this down into three sub-points, like the customer’s situation, the situation of your own company, any extra help that is available, and the current market.
+2. Objective
+   * Is what we want to achieve.
+3. Plan
+   * Is how we want to achieve it.
+4. Logistics
+   * Is about what budget and resources are available, and how they are used.
+5. Communications
+   * Is about how you’ll be coordinating among yourselves and with others in order to achieve your goal.
+
+**TIP**: Do a follow-up round (hours or days later) to ask for questions, good questions usually don't come up on the spot. *There are always questions*.
+
 ## Resources
 
 * [Art Of Thinking](https://www.amazon.com/Art-Thinking-critical-Creative-Thought/dp/0321953312) by Vincent Ruggiero.
