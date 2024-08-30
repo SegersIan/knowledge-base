@@ -219,6 +219,25 @@ C. The *optimal assumptions*, usually stronger claims than B which are logically
 
 ### Step 5. Criticism of the premises (given and missing) and the inferences
 
+Criticism of expression is already covered in 1(g).
+
+Criticizing an inference from statement 1 to statement 2 means criticizing the claim that 1 supports 2. You do not need to know where 1 is true or not in order to consider whether it supports 2. You just have to ask, if 1 were true, wouldn't 2 then have to be true, or at least very likely be true? 
+
+(Understanding this point is also the key to testing a hypothesis, for when we say, "If Jones did kill Mrs. Robinson, he would have to run a mile in 5 minutes to be in the restaurant by 9:10 PM" we're not saying he did or that he didn't, but we are suggesting that it's reasonable to infer from the claim that he did it to a certain conclusion. By checking on whether he could run this fast, we are testing the hypothesis that Jones was the murderer)
+
+*Criticizing a premise* requires that, if the argument is going to be any good as a way of marshaling support, the forces it calls up had better be strong, i.e., the premises must be reliable. When the premises are technical claims, you aren't expected to comment on them in the course of logical analysis. When they are definitions or analyses subject to logical criticism, or matters of common knowledge, you are expected to asses them.
+
+*Good criticism* of an argument requires that you look at both the reliability of the interference and the reliability if the premises. You might think that there's no point in looking at the interference if the premises are false. But your criticism of the premises may be either in error or fairly easy met by minor modifications; you must guard yourself against this by covering both types of criticism. Good criticism also involves *selective attack*; first attack the main conclusions (via the premises and interferences that bear on them), and spend less time on the others. And attack with your strongest weapons first do not start by making picky points, following the order of the statements in the original. Start in on the key weaknesses: start with your strongest criticism. Strong criticisms are those that could not be met except by extreme modification or complete capitulation.
+
+*Criticism Strategy* involves the key move of "counter exampling". It applies to many types of premise and all types of inference, and it is an exercise in imagination. Here's an outline of the procedure that you can refer back to later. It may hard to follow in this brief summary, but we'll explain it with examples in the next section.
+  * A. Counter example a generalization - "All A's are B's"" or "Any A is B" - you think of of indubitable cases of A that are definitely not B. (It is irrelevant to think of B's tha aren't A's, since the claim wasn't that all B's are A's).
+  * B. Counter example a definition - "A means the same as B" - treat it as a two-way generalization (i.e. "Any A must be by definition be a B" and "Any B must by definition be an A") and look for counter examples in the reals of possibility as well as actually, since a definitional truth must hold whenever the language can be clearly applied, not only where it has been applied.
+  * C. Counter example an inference - Treat it like a one-way generalization. (It will be a definitional generalization in the case of strict deductions, as in most mathematical inferences; a factual generalization in the case of most scientific inferences.) That is, if the statement A is supposed to imply statements B, try to think of cases where A would be true but B would be either definitely false or unlikely.
+  * D. Counter example an interpretation or analysis - treat it as an inference from that which which is interpreted to the interpretation itself, and handle it as in c. (It may be intended as an equivalence, that is, a two-way inference)
+
+#### Remember!
+
+If you have extensively reconstructed an argument by filling in so many missing premises and conclusions, you will have done so partly by asking what it would take to make a good argument. Hence you often won't find much to criticize about in the inferences in the reconstructed argument - your criticism will fall instead on the extra bolstering premises you had to add.
 
 
 ### Step 6. Introduction of other relevant arguments
