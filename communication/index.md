@@ -6,10 +6,12 @@
 
 > What I need to know is how your work connects to everything else. Can you explain the essence of it in any way I understand? Can you share your work process in layman's terms? Can you explain why it matters? And why you are passionate about it? If you can do this, you will expand my worldview. And you may do something else. You may spark new creativity or inspiration in me., Every of knowledge is different, but they are all connected.
 
-* [Writing](writing.md)
+
+* [Change Management](change-management.md)
+* [Modes](modes.md)
 * [Presenting](presenting.md)
 * [Propaganda](propaganda.md)
-* [Modes](modes.md)
+* [Writing](writing.md)
 
 ![img](assets/writing_rhytm.png)
 
