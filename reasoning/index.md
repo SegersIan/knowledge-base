@@ -56,8 +56,18 @@
     * Then read each person's comments individually, note the progression of their thoughts and the degree of logical consistency.
     * Finally read for implications and assimptions (these are ideas that are not stated directly but are nevertheless identifiable by what is stated directly)
 
+# Reasoning Types
 
-# Reasoning
+Reasoning is a cognitive process that involves drawing conclusions, making judgments, or forming
+inferences based on facts or premises. This process has been explored from various perspectives:
+
+* **Symbolic reasoning**: involves the manipulation of symbols that represent ideas or objects and it is often used in mathematics and logic to represent numerical values or logical propositions. 
+* **Causal reasoning**: focuses on discerning the relationship between a cause and its effect, aiming to understand how certain events can impact other. 
+* **Inductive reasoning**: making broad generalizations from specific observations
+* **Deductive reasoning**: applying general principles to specific cases
+* **Abductive reasoning**: forming the best hypothesis based on incomplete information
+
+# Reasoning (Book)
 
 ## Nature of reasoning
 * Reasoning is a skill in using thought and language, and it is profficiency in this skill, not the mere possesion of language, which distinguishes the human species from the others on this planet.
