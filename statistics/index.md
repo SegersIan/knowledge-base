@@ -56,9 +56,47 @@ First they gather detailed information on thousands of people, including how fre
 
 A simplification of a complex data set or array of data. We perform calculations that reduce a complex array of data into a handful of numbers that describe those data. These descriptive statistics give us a manageable and meaningful summary of the underlying phenomenon. But symplification invites abuse.
 
-Examples Descriptive Statistic: 
+Examples Descriptive Statistic:
   * The health of the Belgian middle class
   * Olympic gymnastics performance
+
+## Statistical Measures
+
+### The Mean
+
+What most people understand as "average", although, more specific its the *Arithmetic Mean* that most people assume what is referred to.
+
+## The Median
+What is the middle value? 50% of values are below and 50% of values are above the median.
+
+* The median is the middle value in a dataset when the data points are arranged in ascending or descending order. If there is an even number of observations, the median is the average of the two middle numbers.
+* *The median is useful when the data has outliers or is skewed, as it is not affected by extreme values.*
+
+## The Mode
+For what value is the highest concentration? Let's say, there is no bigger group than the group that earns 5000 EUR.
+
+* The mode is the value that appears most frequently in a dataset. A dataset can have more than one mode (bimodal, multimodal) if multiple values appear with the same highest frequency.
+* *The mode is particularly useful for categorical data where we wish to know which is the most common category.*
+
+## Percentiles
+
+Tells you what percentage of a dataset falls below a certain point.
+
+For example:
+
+If you're in the 90th percentile in a test, that means you scored higher than 90% of the people who took the test.
+Similarly, if a value is at the 25th percentile, it means that 25% of the data points are below that value.
+
+ The 50th percentile is also known as the median, meaning half the data is below it and half is above.
+
+## Standard Deviation
+
+How spread out the values in a dataset are from the mean (average). It measures the dispersion of the values.
+
+* If the standard deviation is small, it means the data points are close to the mean, or the values are clustered tightly around the average.
+  * If the test scores in a class have a small standard deviation, most students scored around the same as the average score.
+* If the standard deviation is large, it means the data points are more spread out, or the values vary widely from the average.
+  * If the standard deviation is large, students' scores vary a lot—some did much better or worse than the average.
 
 ## How to Lie with statistics
 
