@@ -52,8 +52,13 @@ First they gather detailed information on thousands of people, including how fre
   * E.g. Hypothethical finding that people who eat bran muffins have 9% lower incidence of colon cancer, controlling for the other factors that may affect the incidedence of the disease.
 2. Quantify the likelihood that the association (relation) between bran muffings and a lower rate of colong cancer observed is merely a coincidence (a quick in the data for this sample of people), rather than a meaningful insight about the relationship between diet and health.
 
+## Descriptive Statistic (aka Summary Statistic)
 
+A simplification of a complex data set or array of data. We perform calculations that reduce a complex array of data into a handful of numbers that describe those data. These descriptive statistics give us a manageable and meaningful summary of the underlying phenomenon. But symplification invites abuse.
 
+Examples Descriptive Statistic: 
+  * The health of the Belgian middle class
+  * Olympic gymnastics performance
 
 ## How to Lie with statistics
 
