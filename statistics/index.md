@@ -1,5 +1,60 @@
 # Statistics
 
+Statistics (or statisical analysis)   is a lot like good detective work. The data yields clues and patterns that can ultimately lead to meaningful conclusions.
+
+## Why staticis
+
+This allowes to determine answers to questions which are not economical to answer. You can not count every homeless in a country, thats expensive and time consuming. You can take a small **quality sample** (quality is key!) to then interfere or project the probably number.
+
+Even in best of circumstances, statistial analysis rarely unveils "the truth". We are usaully building circumstancial vased based on imperfect data. As a result, there are numerous reasons that intellectually honest people may disagree about statistical results or their impleications.
+
+Statistics can give some insight who the best baseball player is, but that's not perse what makes up being "the best",  cause there is no *objective* definition of what a "the best baseball player" means.
+
+Smart and honest people will often disagree about that data re trying to tell us.
+
+### Why Learn?
+
+* To summerize huge quantities of data.
+* To make better decisions.
+* To answer important social questions.
+* To recognize patterns that can refine how we do everything from selling diapers to catching criminals.
+* To evaluate the effectiveness of policies, programs, drugs, medical procedures, and other innovations.
+* To spot those who use statistics for nefarious ends (and lying).
+
+
+## Basic Experiments
+
+In a good experiment you have "one variable" that differs between your "experiment group" and your "control group". The control group shares everything with the experiment group, except for one variable. For example, the experiment group eats everyday 1 apple, and the other group eats everyday 1 pear.
+
+## Statistical Significance
+
+The analysis has uncovered an association of 2 variables that ia not likely to be product of chance alone. Regresion analysis can for example find a relation between 2 variables and how likely that relationship is by accident or not. If there is a relationship, and it doesn't seem very accidental, it's statistically significant.
+
+## Regression Analysis
+
+The tool to isolate the relationship between to variables, such as smoking and cancer, while holding constant (or "controlling for") the effects of other important variables (such as diet, excercise, weight, ...)
+
+Regression analysis is primarily used to assess the strength and nature of relationships between variables, but it does not directly establish causation. This is also the limitation, we can identify strong relationships, but we cant determine casuality, or in other words "WHY?".
+
+Usually you start with a hyptheses, "I think these 2 variables have a relationship" and then use regression aanlyisis to validagte that hypthese.
+
+### Example
+
+#### The Conclusion
+
+> Eating a bran muffin every day will reduce your chances of getting colon cancer.
+
+#### The Methodology
+
+First they gather detailed information on thousands of people, including how frequently they eat brand muffings and then apply regression analysis:
+
+1. Quantify the association observed between eating bran muffins and contracting colon cancer.
+  * E.g. Hypothethical finding that people who eat bran muffins have 9% lower incidence of colon cancer, controlling for the other factors that may affect the incidedence of the disease.
+2. Quantify the likelihood that the association (relation) between bran muffings and a lower rate of colong cancer observed is merely a coincidence (a quick in the data for this sample of people), rather than a meaningful insight about the relationship between diet and health.
+
+
+
+
 ## How to Lie with statistics
 
 ### The Sample With the Built-In Bias
@@ -96,3 +151,5 @@ Following are some tipes on how to analyze critically any statistics.
 * Framing and misleading representations
   * E.g. a map that colors all stated who have a certain crime rate, big states with low population can easily dominate the whole visualization.
   * E.g. When the scales of a graph are trimmed or tweaked to make the shape look more impressive.
+* A hypthosis as conclusion
+  * One can find a strong relationship in data (e.g. with regresion analysis), but not the causality, so they then might draw up a hypotheses. You might mistake this as the actual "reason", while it's just "a hypothesis" to explain a statistically signifcant relationship.
