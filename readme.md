@@ -14,6 +14,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 * [Communication](communication/index.md)
 * [Facilitation](facilitation/index.md)
 * [Productivity](productivity/index.md)
+* [Project Management](project-management/index.md)
 * [Psychology](psychology/index.md)
 * [Reasoning](reasoning/index.md)
 * [Statistics](statistics/index.md)
