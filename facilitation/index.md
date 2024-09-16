@@ -2,6 +2,9 @@
 
 Facilitation is the process of guiding and managing group activities, discussions, or meetings to ensure effective participation, clear communication, and achievement of objectives. It involves creating an environment that encourages collaboration, creativity, and productivity among participants.
 
+* Facilitation is about helping groups get better results.
+* Groups are often less than the sum of their parts, facilitating aims to reduce that.
+
 ## Training, Mentoring, Group Coaching and Facilitation
 
 They all differ, pick the one applicable to your use case.
