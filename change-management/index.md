@@ -12,6 +12,8 @@
 
 ## [Patterns](patterns.md)
 
+See the list of [Patterns](patterns.md)
+
 ## How Behavior Spreads
 
 *How Behavior Spreads: The Science of Complex Contagions* by Damon Centola delves into how social behaviors, ideas, and practices spread through populations, contrasting traditional views of contagion (like infectious diseases) with the spread of behaviors and innovations. Centola, a sociologist, challenges the dominant model of "simple contagions" in favor of a more nuanced framework, termed "complex contagions." Here are the key findings and lessons from the book:
