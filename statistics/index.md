@@ -98,6 +98,36 @@ How spread out the values in a dataset are from the mean (average). It measures 
 * If the standard deviation is large, it means the data points are more spread out, or the values vary widely from the average.
   * If the standard deviation is large, students' scores vary a lot—some did much better or worse than the average.
 
+
+## P-Valu
+
+### What’s a p-value?
+
+A **p-value** helps you decide if something you’re testing in an experiment is just a coincidence or if it’s likely a real effect. It’s basically a number that tells you how surprising your results are if the thing you’re testing isn’t actually doing anything.
+
+### Imagine this:
+
+Let’s say you’re flipping a coin, and you think the coin might be biased (like maybe it lands on heads more than tails). Normally, a fair coin should land on heads **50% of the time** and tails **50% of the time**, right?
+
+Now, you flip the coin 10 times and get **8 heads**. This seems like a lot of heads, but before saying the coin is unfair, you want to know: “Could this just happen by chance?”
+
+### Here’s where the p-value comes in:
+- The **p-value** is a number that answers the question: **If the coin is really fair (no bias), how likely would it be to get 8 heads (or something even more extreme)?**
+- If the p-value is very small (like 0.01 or 0.001), it means getting 8 heads (or more) by pure chance would be very rare if the coin were truly fair. So you’d suspect the coin might actually be biased.
+- If the p-value is bigger (like 0.3 or 0.5), it means getting 8 heads could easily happen just by chance, and there’s no good reason to think the coin is unfair.
+
+### How do you use it?
+
+Scientists pick a cutoff number (usually **0.05**) to decide:
+- If the **p-value** is **smaller** than 0.05, you say: “This is unlikely to be a coincidence. There might be something real happening here,” and you reject the idea that the coin is fair.
+- If the **p-value** is **bigger** than 0.05, you say: “This could easily be a coincidence,” and you don’t reject the idea that the coin is fair.
+
+### In short:
+- **Small p-value** (like 0.01): Your results are surprising, and something interesting might be going on.
+- **Big p-value** (like 0.3): Your results aren’t surprising, and it could just be random chance.
+
+Hope that makes it clearer! Let me know if you need more examples. :)
+
 ## How to Lie with statistics
 
 ### The Sample With the Built-In Bias
