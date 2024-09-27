@@ -44,3 +44,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 * Research [Docosauris](https://docusaurus.io/)
 * Research [GatsbeJS](https://www.gatsbyjs.com/)
   * How can the GraphQL layer help for living documentation>?
+
+## General Links
+
+* https://intltechventures.blogspot.com/2023/10/2023-10-11-wednesday-todays-mediation.html
