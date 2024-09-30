@@ -637,6 +637,24 @@ Allows to identify different personalities. If you are able to locate/place your
     * Check in question to have everyone focus on the event
     * Have enough wrap-up time
 
+
+## Meeting Formats
+
+### Lean Coffee
+
+1. raw a simple Kanban board with three columns : Todo, In Progress and Done. This board will help the participants visualize the progress during the discussion.
+2. After a quick introduction allow 5 minutes to the participants to individually brainstrom topic ideas. Ask everyone to write a post-it note for each topic they want to discuss.
+3. Everyone takes turn and quicky pitch his ideas: What topics they want to discuss and why. Each topic ideas is added to the TODO column on the board. You have an overview of all the topics the individuals want to talk about.
+4. Each participant is granted two votes. Voting twice for the same item is permitted. Everyone gather around the board and put a dot on their two favorites topics.
+5. Add all votes and priorize/order the topics on the board: the most voted item will be discussed first. If there’s a lot of ideas on the board some items probably did not received any votes: you will not discuss those topics during the session. This is a great way to avoid boring discussion: you only talk about what is interesting to the group.
+6. Once you have a prioritized list of the topics you want to discuss, you can move the top item into the In Progress column.
+7. Set a timer to 5 minutes and you’re now ready to discuss the topic.
+8. Discuss the topic until the time is out !
+9. Have a silent roman vote: thumb up if you want to continue the discussion, thumb down if you want to move to the next topic. If you have a majority of thumbs up : reset the timer and continue the discussion. If you have a majority of thumbs down: move the topic to the Done column and move to the next topic !
+10. At the end of the session take time to elicit key take-aways: what did we learn ? What actions can we take ?* 
+
+[Source](https://medium.com/@Adrien_Liard/agenda-less-yet-effective-meetings-an-illustrated-guide-to-lean-coffee-d54983bc63ea)
+
 ## Personal Ideas
 
 * Use the business idea testing experiments to make a list of potential facilitation events.
@@ -646,6 +664,7 @@ Allows to identify different personalities. If you are able to locate/place your
     > [T]alk is important for sharing, clarifying, and distributing knowledge among peers, while asking questions, hypothesizing, explaining, and formulating ideas together are all important mechanisms during peer discussions. Analytical writing is an important tool for transforming rudimentary ideas into knowledge that is more coherent and structured. Furthermore, talk combined with writing appears to enhance the retention of science learning over time. (566)
 * Can we use [Blooms Taxonomy](https://tips.uark.edu/using-blooms-taxonomy/) for facilitating ?
 * Use the [Coaching Habit](../coaching/index.md) questions as inspiration of what you try to get from an activity (Acitvity Types).
+* For some people, you can use a small kan ban as a visual facilitation tool.
 
 ## Resources
 
