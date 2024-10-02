@@ -19,6 +19,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 * [Psychology](psychology/index.md)
 * [Reasoning](reasoning/index.md)
 * [Statistics](statistics/index.md)
+* [Wisdom](wisdom.md)
 
 ## Software Engineering
 
