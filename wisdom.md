@@ -8,7 +8,7 @@
 
 > Your problem and challenges are not unique - find others that solved it 
 
-> Always asume good intent
+> Always assume good intent
 
 > Just do it, don't ask for permission, people will resist or take things from you away if you're doing a bad job.
 
