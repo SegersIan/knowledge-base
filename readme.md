@@ -49,3 +49,4 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 ## General Links
 
 * https://intltechventures.blogspot.com/2023/10/2023-10-11-wednesday-todays-mediation.html
+* https://hbr.org/2021/04/have-we-taken-agile-too-far
