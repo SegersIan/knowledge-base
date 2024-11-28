@@ -4,6 +4,12 @@
 
 When people say platform, they mean different things. That's why it's wise to first look at the history of platforms, catalog different types of platforms, and highlight their benefits.
 
+### Chapter 1: The history and key properties of platforms
+
+
+
+### Chapter 2: The different types of platforms
+
 ## Part II: A Strategy for platforms
 
 Building platforms requires a sizeable investment and a clear strategy. That strategy must turn the objectives into an actionable path defined by meaningful decisions.
