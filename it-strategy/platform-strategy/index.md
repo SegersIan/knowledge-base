@@ -1,14 +1,67 @@
 # Platform Strategy
 
+* A critical success factor for platforms is defining which aspectsc an be harmonized and which ones must be kept variable.
+* A good platform takes a step in the background of the participant to participant interaction.
+* How users acces your platform is at least as important as what's inside.
+
 ## Part I : Understanding platforms
 
 When people say platform, they mean different things. That's why it's wise to first look at the history of platforms, catalog different types of platforms, and highlight their benefits.
 
-### Chapter 1: The history and key properties of platforms
+### Chapter 1: Key properties of platforms
 
+Properties:
+* Platforms Elevate: A platforms creates an elevated layer that others can stand on.
+* Platforms Enable: Platforms value by allowing participants ot benefit from the presence of others.
+  * E.g buyers/sellers, creators/follows,
+* Platforms Democratize: Platforms make it easiy for participants to join thanks to lower barriers.
+  * E-Commerce platforms allows sellers easier to find markets, pay-what-you-use on cloud
+* Platforms Self-Perpetuate: Platforms enabling exchange between participants (virtual/physical goods)
+  * Network effect: More sellers attracts more buyers which again attracts more sellers
+  * This compounds well with the "Enable" property. Easy entry makes sure nohing stands in the way.
+* Platforms Accelerate: Platforms remove any blockers and heavy lifting, so participant can focus much more on value creating tasks and innovation. Things can go faster. Here is where one can focus their time on differentiating tasks.
+* Platforms Don't Constrain: They don't limit or put unnecessary constrains on the participants.
 
+#### Examples
+
+* Automotive platforms: Same components and chassis used across models, along to create many different models with little redesign.
+* E-commerce platforms: Online marketplaces where sellers and buyers can find each others, removing all the effort to create ways to find and iteract with each other. It connects sellers and buyers directly with each other. An online supermarket not, it's being the in between middleman.
+* Media Platforms: Social media, they make it easy to create and share or follow and interact
+* Cloud platforms: Bit like dcars, all this heavy lifiting engineering components eaily accessible.
+* Business Platforms: Do what cloud platforms did for it. Applications that added capabilities for customization. See CRM, ERP, ...
+  * Go SaaS
+  * Allow for customization
+  * Golden combination
 
 ### Chapter 2: The different types of platforms
+
+![Platform Models](assets/platform_models.jpg)
+
+| Model/Type | Examples | Value Proposition | Interaction | Implementation |
+| ---        | ---      | ---               | ---         | ---            |
+| Marketplace | Airbnb, Ebay, amazon | Facilitate Transactions | Browser, Mobile, App, API | Propriety |
+| Base | Cloud Providers | Rapidly provision IT resources | Console, CLI, API, automation | Proprietary + OSS |
+| Developer | Portals, cloud "wrappers" | Increase speed, reuse, governance | Portal, CLI | Composed from OSS |
+| Business Capability | Allianz, Syncier, About You | Build an open ecosystem | APIs, Custom Integration | Proprietary, on top of base platforms |
+
+Models can be combined.
+
+* **Marketplace**: Platform allows for farmers market model
+  * Participants: Sellers/Buyers
+  * Platform Takes care of: Search, ads, reviews, ranking, fraud and maybe payments.
+  * Platfrom benefits from: Not maintaing inventory and various ways to generate revenue through fees.
+  * Considerations:
+    * The positive feedback cycle between buyers/sellers also posses a chicken-egg problem when launching.
+    * Flexibility in fees help in inventivicing the balance, if there is a lack of sellers, seller fees wont help.
+    * There is a big "Winner takes all" issue
+* **Base**:
+  * Participants: Developers and IT professionals
+  * Aim for feature parity across interaction channels (API, GUI, CLI, ...)
+  * Reduce cognitive load for new platform users (reducing friction for new users).
+  * How users acces your platform is at least as important as what's inside.
+* **Developer**: In-House developer platforms are built by IT Departmens to provide reuse of common IT services, boost productivity and assure compliance with operational guidelines. Usually these are in support of the Software Development Lifecycle.
+  * Sometimes these platforms create to much limitation that it defeats the purpose to be able to innovate.
+* **Business Capability**: What a base platform is in business, delivering typical entire capabilities for business with the freedom to extendm customize and integrate with other systems via APIs.
 
 ## Part II: A Strategy for platforms
 
