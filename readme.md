@@ -27,6 +27,9 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 * [InfoSec](infosec/index.md)
 * [Networking](network/index.md)
 
+* [IT Strategy](it-strategy/index.md)
+  * [> Platform Strategy](it-strategy/platform-strategy/index.md)
+
 * [Software Architecture](software-architecture/index.md)
 * [Software Design](software-design/index.md)
 * [Software Development Process](software-development-process/index.md)
