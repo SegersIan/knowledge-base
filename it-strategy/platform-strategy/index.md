@@ -67,6 +67,41 @@ Models can be combined.
 
 Building platforms requires a sizeable investment and a clear strategy. That strategy must turn the objectives into an actionable path defined by meaningful decisions.
 
+### Chapter 3: Formulating a Strategy
+
+#### What is Strategy
+Strategy is not complex. But it is hard. It's hard because it forces people and organizations to make specific choices abotu their future - something that doesn't happen in most companies. Meaningful strategies must connect dots between long-term vision and short-ter, tactics, between busines and IT, and between quantifiable success metrics and beliefs. A strategy tells HOW to reach a goal, nut just list the goals.
+
+A sound strategy depends on your organization's unique:
+  * Assets: Brand, people, IP, Equipment, Cash, Technology,...
+  * Constraints: Resources, Labor Contacts, Regulatory Environment, ...
+  * Environment: Competitors, market positioning, price pressure, ...
+
+Which also menas you can't copy someone else's strategy.
+
+#### IT Strategy vs Business Strategy
+
+* Historically IT strategy was basically "to accomedate the business" strategy, a one way street
+* Nowadays technology can influence business strategy, we have two way street now
+  * Some business strategies are only viable thanks to advances in technology
+  * Technology allows now to sell extra services or charge "per consumption"
+  * It is technology that enables new business strategy
+
+#### Think in the First Derivative
+Or: Think about how things change over time rather than focusing solely on their current state.
+
+A platform strategy should think in the rate of change.
+
+#### Documenting A Strategy
+
+
+
+### Chapter 4: Becoming a Platform Company
+### Chapter 5: The Platform Paradox
+### Chapter 6: Mappig Platforms
+### Chapter 7: A Simple Framework For Writing IT Strategy
+### Chapter 8: Case Stud - SIMBAS
+
 ## Part III: In-House platforms
 
 Most IT organizations experience platforms when they set out to build one. This part looks beneath the covers of such platform initiatives to highlight important characteristics.
