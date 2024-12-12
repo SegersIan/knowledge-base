@@ -78,6 +78,10 @@ There are other models on [wikipedia](https://en.wikipedia.org/wiki/Change_manag
 
 As this change curve is based on Elisabeth Kübler-Ross's stages of grief model. Which is about the terminal ill accepting their status, instead the one loosing someone. It's also more of a range of types of emotions you can go through, not perse in that exact order.
 
+## Others
+
+![1](assets/how_to_succeed_as_Change_leaderPNG.PNG)
+
 ## Resources
 
 * [More Fearless Change](https://www.goodreads.com/book/show/23287939-more-fearless-change)
