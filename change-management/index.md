@@ -70,6 +70,10 @@ The ADKAR Model is prescriptive and goal-oriented, each milestone must be achiev
 
 There are other models on [wikipedia](https://en.wikipedia.org/wiki/Change_management)
 
+## Reactions in the change curve
+
+![change curve](assets/change-curve.PNG)
+
 ## Resources
 
 * [More Fearless Change](https://www.goodreads.com/book/show/23287939-more-fearless-change)
