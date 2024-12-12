@@ -74,6 +74,10 @@ There are other models on [wikipedia](https://en.wikipedia.org/wiki/Change_manag
 
 ![change curve](assets/change-curve.PNG)
 
+> Kübler-Ross herself acknowledged that the stages were often misunderstood and oversimplified. She emphasized that they were not prescriptive or exhaustive but rather a way to normalize and validate the range of emotions people might feel when confronting profound loss or change.
+
+As this change curve is based on Elisabeth Kübler-Ross's stages of grief model. Which is about the terminal ill accepting their status, instead the one loosing someone. It's also more of a range of types of emotions you can go through, not perse in that exact order.
+
 ## Resources
 
 * [More Fearless Change](https://www.goodreads.com/book/show/23287939-more-fearless-change)
