@@ -58,8 +58,21 @@ See the list of [Patterns](patterns.md)
 
 *How Behavior Spreads* challenges simplistic models of contagion, providing a more comprehensive framework for understanding how ideas, practices, and social movements spread in human societies.
 
+## ADKAR Model
+
+* **Awareness** of the need to change
+* **Desire** to support and take part in the change
+* **Knowledge** of how to change
+* **Ability** to implement the change
+* **Reinforcement** to sustain the change.
+
+The ADKAR Model is prescriptive and goal-oriented, each milestone must be achieved to define success. It uses a 1–5 scale to determine how strongly an individual meets the requirements of each milestone. If a person scores a three or below, that specific step must be addressed before moving forward, Prosci defines this as a barrier point.
+
+There are other models on [wikipedia](https://en.wikipedia.org/wiki/Change_management)
+
 ## Resources
 
 * [More Fearless Change](https://www.goodreads.com/book/show/23287939-more-fearless-change)
 * [Fearless Change - Patterns for Introducing New Ideas](https://www.goodreads.com/book/show/261666.Fearless_Change)
 * [How Behavior Spreads](https://www.goodreads.com/book/show/36854820-how-behavior-spreads)
+* [Change Management - Wiki - More Models](https://en.wikipedia.org/wiki/Change_management)
