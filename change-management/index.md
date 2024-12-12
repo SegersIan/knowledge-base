@@ -81,6 +81,7 @@ As this change curve is based on Elisabeth Kübler-Ross's stages of grief model.
 ## Others
 
 ![1](assets/how_to_succeed_as_Change_leaderPNG.PNG)
+![2](assets/summary.PNG)
 
 ## Resources
 
