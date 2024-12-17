@@ -13,3 +13,6 @@
 > Just do it, don't ask for permission, people will resist or take things from you away if you're doing a bad job.
 
 > Define the role you want, don't fill in that they say.
+
+> A talent for following the ways of yesterday, is not sufficient to improve the world of today
+King Wuling 307 BC
