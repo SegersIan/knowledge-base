@@ -110,6 +110,10 @@ This is a coaching strategy by Micheal Bungay Stanier, based on 7 type's questio
 * Some of these questions could be effective for facilitation activities.
   * As facilitator you are also trying to be distant from the content and more focussed on guiding the thought process.
 
+## Examples
+
+* `What is your number one issue, and how would you fix it? And don’t make comments, just listen.`
+
 ## Resources
 
 * [Book: The coaching Habit](https://www.goodreads.com/book/show/29342515-the-coaching-habit)
