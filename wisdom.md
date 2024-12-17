@@ -16,3 +16,10 @@
 
 > A talent for following the ways of yesterday, is not sufficient to improve the world of today
 King Wuling 307 BC
+
+## Leadership / Influence
+> Usually, you might have good ideas, but listen to everyone first, then “hey, at least 3 of you said we should do x, what do you think?”.
+> You might have planted some ideas before, (read how) but then make sure they feel they were part of the decision. This will give more buy in and conviction.
+> Remember the expensive consultant example. An good consultant just surfaces the ideas of those who are there and know it without taking credit.
+> Do a listening tour
+> This is an example of a leader that pulls, instead of pushing (telling what to do). So pulling doesn’t mean “say what to do and then step along”, no.
