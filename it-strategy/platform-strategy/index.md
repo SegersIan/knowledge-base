@@ -114,7 +114,7 @@ A good strategy consists of:
 
 #### Credible roadmap
 
-Simple linear road maps are unrealistic
+Simple linear road maps are unrealistic, foresee decision points, possible paths to be taken and the data needed to make those decisions.
 
 ![img](assets/strategic_roadmaps.png)
 
