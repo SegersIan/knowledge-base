@@ -94,7 +94,35 @@ A platform strategy should think in the rate of change.
 
 #### Documenting A Strategy
 
+A good strategy consists of:
+* Capturing key decisions
+  * Covered in all the rest
+* **Document them well**
+  * Aim For Emphasis Over Completeness: Defining what's most relevant is a critical step towards devising a strategy.
+    * See forest if you don't concern yourself with each tree, the real high level.
+    * "What is not included" can be very useful chapter.
+    * Remember, [clear writing](../../communication/writing.md)
+  * Use Conceptual Models:
+    * 2x2 matrixes, like SWOT
+    * [See more on wikipedia](https://en.wikipedia.org/wiki/Conceptual_model) 
+    * [Wardley Maps](https://en.wikipedia.org/wiki/Wardley_map)
+  * Show the path and the terrain
+    * A point: Where do you want to go? (+where you are?)
+    * A Path: How will you get there?
+    * A Terrain: What happens when you step of the path?
+      * This shows how you see past happy-day scenarios
 
+#### Credible roadmap
+
+Simple linear road maps are unrealistic
+
+![img](assets/strategic_roadmaps.png)
+
+#### From Strategy to Execution
+...
+
+### Strategy is a Winding Road
+...
 
 ### Chapter 4: Becoming a Platform Company
 ### Chapter 5: The Platform Paradox
