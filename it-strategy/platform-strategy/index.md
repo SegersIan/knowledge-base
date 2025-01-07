@@ -119,10 +119,27 @@ Simple linear road maps are unrealistic, foresee decision points, possible paths
 ![img](assets/strategic_roadmaps.png)
 
 #### From Strategy to Execution
-...
+
+Take a list of all the "benefits" that you aim for and structure in a logical sequence of goals/mechanisms. An example structure that works:
+
+1. **Context**: Explain why you are following a platform strategy. How does it align with the business strategy.
+2. **Objectives**: The business benefits that are intended to be delivered by the strategy. Must be the **TOP Objectives**, not all benefits, less is more here.
+  * E.g. Cost Reduction, faster innovation, ...
+3. **Mechanisms**: Well-known techniques to deliver your objectives. Be very cautious to not just list buzzwords.
+  * E.g. Increase code reuse, enable team autonomy
+4. **Design Decisions**: Specific trade-offs that are made during implementation
+  * E.g. All use the same programming language in return for x, y and Z
+
+| **Level** | **Description** | **Key Activity** | **Example** |
+| --- | --- | --- | --- |
+| Context | Why you are create a strategy | Link to business | Increase Competition |
+| Objective | What you want to achieve | Priorization | Speed up delivery |
+| Mechanism | Common ways to get there | Translate Objectives |
+| Design Decision | Trade-offs you are making | Explain Well | Standard APIs |
 
 ### Strategy is a Winding Road
-...
+
+A strategy is not a detailed plan but an overall direction.
 
 ### Chapter 4: Becoming a Platform Company
 ### Chapter 5: The Platform Paradox
