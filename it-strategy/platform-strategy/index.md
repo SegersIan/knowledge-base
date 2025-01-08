@@ -133,7 +133,7 @@ Take a list of all the "benefits" that you aim for and structure in a logical se
 | **Level** | **Description** | **Key Activity** | **Example** |
 | --- | --- | --- | --- |
 | Context | Why you are create a strategy | Link to business | Increase Competition |
-| Objective | What you want to achieve | Priorization | Speed up delivery |
+| Objective | What you want to achieve | Prioritization | Speed up delivery |
 | Mechanism | Common ways to get there | Translate Objectives |
 | Design Decision | Trade-offs you are making | Explain Well | Standard APIs |
 
@@ -142,8 +142,11 @@ Take a list of all the "benefits" that you aim for and structure in a logical se
 A strategy is not a detailed plan but an overall direction.
 
 ### Chapter 4: Becoming a Platform Company
+
+* Transformation starts with new ways of thinking, followed by new ways of working, which results (hopefully) new end products that disrupt.
+
 ### Chapter 5: The Platform Paradox
-### Chapter 6: Mappig Platforms
+### Chapter 6: Mapping Platforms
 ### Chapter 7: A Simple Framework For Writing IT Strategy
 ### Chapter 8: Case Stud - SIMBAS
 
