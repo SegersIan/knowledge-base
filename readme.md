@@ -37,6 +37,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 
 ## Niche Topics
 
+* [OSINT: Open Source Intelligence](osint/index.md)
 * [Study Notes: Azure](azure/index.md)
 * [(NodeJS) Network and Streams](nodejs-streams-and-networking/index.md)
 * [USB Spec and How it works](usb-spec/index.md)
