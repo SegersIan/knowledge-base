@@ -144,6 +144,28 @@ A strategy is not a detailed plan but an overall direction.
 ### Chapter 4: Becoming a Platform Company
 
 * Transformation starts with new ways of thinking, followed by new ways of working, which results (hopefully) new end products that disrupt.
+* To transform you must  think and work differently.
+* The misunderstanding is that there are only 2 options:
+  * Full harmonization, stifling innovation
+  * Rapid innovation, entropy and chaos
+* These are actually 2 dimensions where we need to find the right balance.
+* **(Proper) Harmonization drives innovation**, cause you can focus on higher level issues instead of lower level. (Like Azure, Low-Code and No-Code does).
+  * It's important that harmonization does not depend on putting constraints.
+  * Harmonize by common APU standards and reuse across diverse languages.
+  * There are ways to provide harmony/reuse, without constraints, by having a reuseable part behind an API, that part is extracted out of what developers else had to do in their own language.
+* **Removing constraints is the key innovation driver**.
+
+| Characteristic | Perceived Opposite | Enabling Mechanism |
+| --- | --- | --- |
+| Standards | Innovation | Platforms, Interface Standards |
+| Speed | Quality | Automation |
+| Cost | Agility | Modularity, Iterations |
+| Economies of Scale | Economies of Speed | Cloud Platforms |
+| Openness | Monetization | Professional open source |
+| Low Risk | Change | Automated Tests, Continuous Delivery |
+| Control | Chaos | Transparency, automated governance |
+| Short-term gain | Long-term gain | Adaptability, low friction |
+
 
 ### Chapter 5: The Platform Paradox
 ### Chapter 6: Mapping Platforms
