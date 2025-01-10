@@ -166,6 +166,10 @@ A strategy is not a detailed plan but an overall direction.
 | Control | Chaos | Transparency, automated governance |
 | Short-term gain | Long-term gain | Adaptability, low friction |
 
+* Alignment of the business and technology models are a force multiplier if well aligned. But misaligned, and all is often doomed. A misalignment between business and technology teams dooms the most promising platform initiatives.
+
+![img1](assets/chapter1_0.jpg)
+![img2](assets/chapter1_1.jpg)
 
 ### Chapter 5: The Platform Paradox
 ### Chapter 6: Mapping Platforms
