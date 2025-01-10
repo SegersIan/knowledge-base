@@ -172,6 +172,27 @@ A strategy is not a detailed plan but an overall direction.
 ![img2](assets/chapter1_1.jpg)
 
 ### Chapter 5: The Platform Paradox
+
+> **The paradox: How we destroy the conflict of standardization vs innovation? How do we solve this?**
+
+![img1](assets/chapter5_0.jpg)
+
+* Platforms break the dichotomy between harmonization and innovation.
+* Cloud platforms are a great example of high harmonization, yet boosting innovation and not constraining.
+* You put certain constraints, so you can remove others.
+  * Example: HTTPS is a standard, which allowed various browsers to be created and interoperate.
+* IT Pyramid Fallacy
+  * Old school way of doing things, anything applying to entire business is shared and more unique things for specific units and geographies are configured. Its flawed as in:
+    * You have to anticipate all users needs, which is impossible and kills innovation.
+    * Even if you do it well, the base layer is a massive effort.
+  * ![img1](assets/chapter5_1.jpg)
+* Platforms Aren't pyramids
+  * Todo...
+  * ![img1](assets/chapter5_2.jpg)
+
+
+
+
 ### Chapter 6: Mapping Platforms
 ### Chapter 7: A Simple Framework For Writing IT Strategy
 ### Chapter 8: Case Stud - SIMBAS
