@@ -11,6 +11,10 @@
 5. Dissementation and Consumption
 6. Repeat
 
+## Subject Intelligence
+
+> Intelligence about a person and direct metadata (address, name, email, accounts, ...)
+
 ## Tools
 
 * [https://fakepersongenerator.com](https://fakepersongenerator.com)
