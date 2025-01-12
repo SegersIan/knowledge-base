@@ -1,7 +1,15 @@
 # OSINT: Open Source Intelligence
 
+## Methodology
 
+### [Intelligence Cycle](https://en.wikipedia.org/wiki/Intelligence_cycle)
 
+1. Planning and Requirements
+2. Collection
+3. Processing and Evaluation
+4. Analysis and Production
+5. Dissementation and Consumption
+6. Repeat
 
 ## Tools
 
