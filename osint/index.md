@@ -28,6 +28,10 @@
 
 * [WayBackMachine](https://web.archive.org/)
 
+### Subject Intelligence
+
+* [https://dehashed.com/](https://dehashed.com/)
+
 ### Others
 
 * [https://fakepersongenerator.com](https://fakepersongenerator.com)
