@@ -19,6 +19,8 @@ King Wuling 307 BC
 
 > “a lie can travel halfway around the world while the truth is still putting on its shoes”
 
+> Easy and Fast is what allows for innovation.
+
 ## Leadership / Influence
 > Usually, you might have good ideas, but listen to everyone first, then “hey, at least 3 of you said we should do x, what do you think?”.
 > You might have planted some ideas before, (read how) but then make sure they feel they were part of the decision. This will give more buy in and conviction.

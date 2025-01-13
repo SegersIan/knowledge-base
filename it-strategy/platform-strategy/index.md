@@ -187,11 +187,33 @@ A strategy is not a detailed plan but an overall direction.
     * Even if you do it well, the base layer is a massive effort.
   * ![img1](assets/chapter5_1.jpg)
 * Platforms Aren't pyramids
-  * Todo...
+  * Platforms don't try to anticipate every use case.
+  * If your users haven't built something that surprised you, you probably didn't built a platform.
   * ![img1](assets/chapter5_2.jpg)
-
-
-
+* The Double Double Pyramid
+  * ![img1](assets/chapter5_3.jpg)
+* How Platforms Break Barriers
+  * Componentization: Allows for recomposition (e.g. standard-sized bricks sped up construction without reducing creative possibilities)
+    * Requires an overarching architecture that defines boundaries and connecting elements. The right boundary matters to make it reusable and recompensable.
+  * Separating commodity from differentiators: Bake widely used functions in common layer and components, which is not an easy task.
+    * Anything widely used (commoditized) goes into base layer, rest (differentiating, value creating) goes on top. The line is hard to draw due to:
+      * Needs vary by user group: Groups see what fits in the platform different
+      * The boundary shifts: IT evolves, so do the needs of a platform (first it was IaaS, then PaaS, then FaaS)
+      * Cohesion over precision: A precise line between Commodity/Differentiators does not always result in good cohesion, users expect cohesion of a platform.
+      * Interaction Matters: How users access the platform is as important as what's inside of it.
+      * Done by commodification of services in a way which relinquishes an amount of control ans is open to extension.
+  * Building Economies of Speed on Economies of Scale: By taking advantage of the scale, speed should also thrive (see how fast you can deploy a webapp on Azure) due to frictionless usage.
+    * Platforms thrive on scale (see cloud)
+    * Freeing users from the scale effects and pain points, allows them to have speed in what they want to do.
+    * Speed is what encourages experiments and innovation.
+    * Easy and Fast is what allows for innovation.
+    * Cloud platforms provide scale-optimized technology as a speed-oriented product.
+    * See [example where lower lays change slower than higher layers](assets/chapter5_4.jpg), like the 19" server rack standard is from 1922, but K8S is from a few years ago or months ago.
+  * Centralizing Decentralization:
+    * Centralize expertise
+    * Decentralize innovation
+    * Done by commodification of services in a way **which relinquishes an amount of control ans is open to extension**.
+    * ![img](assets/chapter5_6.jpg),
 
 ### Chapter 6: Mapping Platforms
 ### Chapter 7: A Simple Framework For Writing IT Strategy
@@ -216,6 +238,10 @@ Platforms have to be rolled out across the organization. They also require delic
 ## Part VII: Organizing for platforms
 
 If you are building platforms, you'll likely need a platform team, which is different from typical application delivery or operation teams. This part describes how to build an manage a platform team.
+
+## Todo
+
+* cover Shared responsibility model (chatper 10 apparently? page 70)
 
 ## Resources
 
