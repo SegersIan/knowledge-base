@@ -231,9 +231,30 @@ A strategy is not a detailed plan but an overall direction.
   5. The Position of the components.
   6. The movement of the components.
 * 2x2 Maps
-  
-* Wardley Mapping
-* Platform Evolution
+  * Simple models provide highest abstraction and are often most useful
+  * Examples contains Context, Orientation, Components, and even movement.
+  * ![img](assets/chapter6_0.PNG)
+* [Wardley Mapping](https://learnwardleymapping.com/)
+  * At intersection of Technical Capability and Business Value.
+  * 2 dimensional
+    * Y-axis: Value Chain (how visible or vicinity is it to the user)
+      * Dependencies between components flow from TOP (visible to user) to BOTTOM (less visible to user)
+      * Relative positioning, so no procession necessary
+    * X-axis: Evolution Stage of the component
+      * Genesis - Newly Discovered
+      * Custom Built - Uncommon, we still learn about
+      * Product - Increasingly common and repeatable
+      * Commodity - Highly Standardized
+  * Components are "Technologies" being plotted.
+  * Movements, components move on 2 mechanisms
+    1. Commoditization: Horizontal move towards commodity. 
+    2. Componentization allows systems to be broken down into identifiable reusable pieces that can move independently towards commoditization.
+  * *Goal: Commoditization to standard components leads to an explosion of innovation for higher-order systems*.
+  * Example
+    * Compute resources: Going from custom built to commodity
+    * Default Stack: LAMP stack also created commodity.
+  * This map allows for working out your IT/Platform Stategy, where you are and where you are going.
+
 
 ### Chapter 7: A Simple Framework For Writing IT Strategy
 ### Chapter 8: Case Stud - SIMBAS
