@@ -1,12 +1,12 @@
 # Wisdom
 
-> Best way to get feedback or an answer, by posting a wrong answer 
+> Best way to get feedback or an answer, by posting a wrong answer
 
 > Comparison is the mental thief of joy
 
 > The best thing you can do with a good reputation is squander it, because you can’t take it with you when you’re dead.
 
-> Your problem and challenges are not unique - find others that solved it 
+> Your problem and challenges are not unique - find others that solved it
 
 > Always assume good intent
 
@@ -16,6 +16,8 @@
 
 > A talent for following the ways of yesterday, is not sufficient to improve the world of today
 King Wuling 307 BC
+
+> “a lie can travel halfway around the world while the truth is still putting on its shoes”
 
 ## Leadership / Influence
 > Usually, you might have good ideas, but listen to everyone first, then “hey, at least 3 of you said we should do x, what do you think?”.
