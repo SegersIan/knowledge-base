@@ -216,6 +216,16 @@ A strategy is not a detailed plan but an overall direction.
     * ![img](assets/chapter5_6.jpg),
 
 ### Chapter 6: Mapping Platforms
+
+(Visual) maps are great to depict strategies and reveal their shortcomings.
+
+* Maps As Visual Models
+* Which Map Is Best?
+* Maps and Movement
+* 2x2 Maps
+* Wardley Mapping
+* Platform Evolution
+
 ### Chapter 7: A Simple Framework For Writing IT Strategy
 ### Chapter 8: Case Stud - SIMBAS
 
