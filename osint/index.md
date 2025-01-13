@@ -17,6 +17,19 @@
 
 ## Tools
 
+### Search
+
+* [Google](www.google.com)
+* [Bing](www.bing.com)
+* [Yandex](www.yandex.ru)
+* [Baidu](https://www.baidu.com/)
+
+### Archives
+
+* [WayBackMachine](https://web.archive.org/)
+
+### Others
+
 * [https://fakepersongenerator.com](https://fakepersongenerator.com)
 * [Shodan.io](https://www.shodan.io/)
 * [Cyberchef (github)](https://github.com/gchq/CyberChef)
