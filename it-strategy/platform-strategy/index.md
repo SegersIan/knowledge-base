@@ -219,10 +219,19 @@ A strategy is not a detailed plan but an overall direction.
 
 (Visual) maps are great to depict strategies and reveal their shortcomings.
 
-* Maps As Visual Models
+* Maps As Visual Models: A good map is easy to understand but are also based in reality.
 * Which Map Is Best?
-* Maps and Movement
+  * Know which question you're trying to answer, before choosing a (visual) model.
+  * Maps can be great to answer questions about IT strategies.
+* 6 Basic Elements of Maps
+  1. Visual representation
+  2. Context (what question are we answering)
+  3. Orientation Anchor (e.g North Compas)
+  4. Components
+  5. The Position of the components.
+  6. The movement of the components.
 * 2x2 Maps
+  
 * Wardley Mapping
 * Platform Evolution
 
