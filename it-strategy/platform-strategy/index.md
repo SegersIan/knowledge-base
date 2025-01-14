@@ -367,6 +367,8 @@ Most IT organizations experience platforms when they set out to build one. This 
     * SaaS is distribution, operational, and pricing model. Platforms are abstractions tha enable teams to build on top of them.
   * ![img](assets/chapter9_4.PNG)
 
+### Chapter 10: IT Platform and IT services are Antonyms
+
 ## Part IV: Designing platforms
 
 Platforms hide complexity, but building one isn't nearly as simple as it looks from the outside. This part employs metaphors to illustrate platform design decisions.
