@@ -309,16 +309,62 @@ Most IT organizations experience platforms when they set out to build one. This 
     * Seems very similar to the McKinsey model.
 * **IT Platform Varieties**
   * **Digital Platforms**:
+    * Goals
+      * Enable new business models
+      * Provide better customer/employee experience
+      * Assure efficient, reliable and data-driven operations
     * ![img](assets/chapter9_0.PNG)
+      * Interaction Platform: Powers websites, mobile apps, and APIs  to connect customers and to partners.
+      * Business Capability Platform: Provides functions to support the business domain (e.g. payment services, e-commerce catalog, ...)
+      * Base/Cloud Platform: All elements for operational IT parts.
+      * Data Analytics Platform: For doing analytics, ML, create new insights, optimize things, get KPIS
+    * Analysis:
+      * Run the risk of being seen as a cure for any and all IT ailments
+      * Long adaption is risky, must be guided by clear road map with intermediate deliverables and value achieved.
   * **Engineering Productivity Platforms/Internal Developer Platforms**
+    * Software delivery tooling determines your organization's rate of change.
+    * Economies of speed, provide tools for faster delivery and change.
+    * Provide necessary components for:
+      * Building
+      * Deploying
+      * Operating
+    * Analysis
+      * Done well, the harmonization can provide higher compliance, security, allowing for speed AND quality.
     * ![img](assets/chapter9_1.PNG)
   * **Data Platforms**:
+    * Goal for being more data-driven.
+    * Analysis
+      * Due to onboarding friction usually, the fail to democratize access to the platform.
+      * Adding a new data source is often labour intensive.
+      * Just centralized data dumps
   * **Data Meshes**:
+    * Attempts to fix the limitations of centralized data systems/platforms by separating the *innovation layer* from the *platform layer*. Again, following economies of speed, built on economies of scale.
+    * 4 Pillars
+      * Decentralize data domain ownership
+      * Data as a product, including ease of use, secure access and trust
+      * Abstract the infra complexity into a common self-service data platform  to reduce friction
+      * Providing federated governance
     * ![img](assets/chapter9_2.PNG)
   * **API Platforms**:
+    * Can utilize open-source service meshes like Istio/Kong. Allowing to get more metrics and control.
+    * Typical capabilities
+      * Proxies to monitor and route service calls (e.g. Envoy Proxy)
+      * API Gateways (auth, quota, throttling, ...)
+      * Self-Service portals for developers
+      * Certificate management for secure communication
+      * Catalog/Registry for API Discovery
+      * Stream or Event handling
+      * Monitoring/Dashboards
     * ![img](assets/chapter9_3.PNG)
   * **Abstraction Layers/Cross-Platform Platforms**:
+    * Just an abstraction layer for portability
+    * Usually strong focus on vendor-locking is not so important.
+    * In general, not really useful.
 * **Platforms and Software as a service**:
+  * Platforms are often offered as SaaS.
+    * Self Service + pricing reduces friction
+    * Not all SaaS are platforms
+    * SaaS is distribution, operational, and pricing model. Platforms are abstractions tha enable teams to build on top of them.
   * ![img](assets/chapter9_4.PNG)
 
 ## Part IV: Designing platforms
