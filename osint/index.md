@@ -77,6 +77,7 @@
 * [Vegvesen - Contains Vehicle Information](https://www.vegvesen.no/)
   * You can check all the cars that someone has owned (require SSN)
   * You can check who (only name) ons a car with a given license plate
+* [https://www.digitalarkivet.no/](https://www.digitalarkivet.no/)
 
 ## Resources
 
