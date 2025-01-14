@@ -282,8 +282,40 @@ Instead of using a rigid template, focus on the following characteristics for wr
 
 Most IT organizations experience platforms when they set out to build one. This part looks beneath the covers of such platform initiatives to highlight important characteristics.
 
-### Chapter 9: In-House IT Platforms
+### Chapter 9: In-House IT Platform
 
+* **Benefits:**
+  * Reduce Cost: By reuse and economies of scale
+  * Increase velocity: Accelerate and speed up new development
+  * Assure Compliance: Scaleable compliance
+  * Improve Transparency: 
+  * Reduce Lock-In: Abstraction Layer
+* **IT Platform Classifications**
+  * By [McKinsey](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-platform-play-how-to-operate-like-a-tech-company)
+    * Customer Journey Platforms:
+      * Reusable elements that define the customer proposition/experience.
+      * Coarse-grained functional components (e.g. Click-And-Collect on eCommerce platformm)
+    * Business Capability Platforms:
+      * Business solutions (e.g. Payment Services, Inventory Management)
+      * These capabilities are intended to be modular and can be wired together
+      * These capabilities support the customer journey
+    * Core IT Platforms:
+      * Provide shared technology on which "customer journeys" and/or "Business Capabilities" run on.
+      * E.g. Cloud Platform, Data Analytics Platform, ...
+  * By [ThoughtWorks](https://www.thoughtworks.com/en-th/insights/blog/platform-tech-strategy-three-layers)
+    * Service Platforms:
+    * Digital Business Platforms:
+    * Foundational Technology Platforms:
+    * Seems very similar to the McKinsey model.
+* **IT Platform Varieties**
+  * **Digital Platforms**:
+    
+  * **Engineering Productivity Platforms/Internal Developer Platforms**
+  * **Data Platforms**:
+  * **Data Meshes**:
+  * **API Platforms**:
+  * **Abstraction Layers/Cross-Platform Platforms**:
+* **Platforms and Software as a service**:
 
 
 ## Part IV: Designing platforms
