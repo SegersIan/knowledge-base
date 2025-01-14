@@ -71,6 +71,8 @@
 * [seeiendom - public-facing portal that combines property information from the Norwegian Mapping Authority, the Cadastre, and the Land Register](https://seeiendom.kartverket.no/)
   * [Boretslag Info](https://www.kartverket.no/eiendom/bestille-fra-grunnboken/grbutskr-bo)
   * You can see when debts where made and the price something was purchased, refinancing is also visible
+  * [Bolig.ai](https://www.bolig.ai/)
+  * [https://www.eiendomspriser.no/](https://www.eiendomspriser.no/)
 * [Domstol - Norwegian court rulings can be made partially available to the public, though privacy restrictions apply and many legal documents are anonymized.](https://www.domstol.no/)
 * [1881.no -  Online directories for phone numbers, addresses, and sometimes additional public info (e.g., businesses and individuals).](https://www.1881.no/)
 * [arkivverket - Repository of historical and archival materials, both for governmental and non-governmental entities.](https://www.arkivverket.no/)
