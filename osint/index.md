@@ -69,6 +69,7 @@
 * [Einnsyn - A centralized service for searching through Norwegian government agencies’ public records (post journals)](https://einnsyn.no/)
 * [Kvartverket - National authority responsible for mapping, property registration, and geographic data.](https://www.kartverket.no/)
 * [seeiendom - public-facing portal that combines property information from the Norwegian Mapping Authority, the Cadastre, and the Land Register](https://seeiendom.kartverket.no/)
+  * [Boretslag Info](https://www.kartverket.no/eiendom/bestille-fra-grunnboken/grbutskr-bo)
   * You can see when debts where made and the price something was purchased, refinancing is also visible
 * [Domstol - Norwegian court rulings can be made partially available to the public, though privacy restrictions apply and many legal documents are anonymized.](https://www.domstol.no/)
 * [1881.no -  Online directories for phone numbers, addresses, and sometimes additional public info (e.g., businesses and individuals).](https://www.1881.no/)
