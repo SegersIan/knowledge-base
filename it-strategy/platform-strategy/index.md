@@ -303,13 +303,13 @@ Most IT organizations experience platforms when they set out to build one. This 
       * Provide shared technology on which "customer journeys" and/or "Business Capabilities" run on.
       * E.g. Cloud Platform, Data Analytics Platform, ...
   * By [ThoughtWorks](https://www.thoughtworks.com/en-th/insights/blog/platform-tech-strategy-three-layers)
-    * Service Platforms:
-    * Digital Business Platforms:
-    * Foundational Technology Platforms:
+    * Service Platforms: Main offering to be used by the customer.
+    * Digital Business Platforms: extend the service platform integrated with partners via APIS.
+    * Foundational Technology Platforms: Similar to Core IT.
     * Seems very similar to the McKinsey model.
 * **IT Platform Varieties**
   * **Digital Platforms**:
-    
+
   * **Engineering Productivity Platforms/Internal Developer Platforms**
   * **Data Platforms**:
   * **Data Meshes**:
