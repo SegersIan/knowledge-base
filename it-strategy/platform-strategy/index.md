@@ -309,14 +309,17 @@ Most IT organizations experience platforms when they set out to build one. This 
     * Seems very similar to the McKinsey model.
 * **IT Platform Varieties**
   * **Digital Platforms**:
-
+    * ![img](assets/chapter9_0.PNG)
   * **Engineering Productivity Platforms/Internal Developer Platforms**
+    * ![img](assets/chapter9_1.PNG)
   * **Data Platforms**:
   * **Data Meshes**:
+    * ![img](assets/chapter9_2.PNG)
   * **API Platforms**:
+    * ![img](assets/chapter9_3.PNG)
   * **Abstraction Layers/Cross-Platform Platforms**:
 * **Platforms and Software as a service**:
-
+  * ![img](assets/chapter9_4.PNG)
 
 ## Part IV: Designing platforms
 
