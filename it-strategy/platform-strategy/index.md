@@ -277,10 +277,14 @@ Instead of using a rigid template, focus on the following characteristics for wr
 * **Decisions**: Must make decisions, else its just a list of wishes.
   * Strategy is a series of meaningful decisions, those that require conscious trade-offs.
   * We forgo X in return for Y.
-  
-## Part III: In-House platforms
+
+## Part III: Building In-House platforms
 
 Most IT organizations experience platforms when they set out to build one. This part looks beneath the covers of such platform initiatives to highlight important characteristics.
+
+### Chapter 9: In-House IT Platforms
+
+
 
 ## Part IV: Designing platforms
 
