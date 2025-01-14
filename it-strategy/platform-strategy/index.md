@@ -253,12 +253,31 @@ A strategy is not a detailed plan but an overall direction.
   * Example
     * Compute resources: Going from custom built to commodity
     * Default Stack: LAMP stack also created commodity.
-  * This map allows for working out your IT/Platform Stategy, where you are and where you are going.
-
+  * This map allows for working out your IT/Platform Strategy, where you are and where you are going.
 
 ### Chapter 7: A Simple Framework For Writing IT Strategy
-### Chapter 8: Case Stud - SIMBAS
 
+Instead of using a rigid template, focus on the following characteristics for writing IT strategy.
+
+* **Alignment**: Must align with a business strategy
+  * Must support the business today and in the future.
+  * Business Strategy <supports> IT Strategy <supports> Platform Strategy, in both directions!
+  * Define metrics which are meaningful to the business (instead of IT vanity metrics)
+    * Business doesn't care how many servers are migrated to the cloud.
+  * Value is the only real progress
+* **Clarity**: Must be easily understood by broad audience
+  * Technique: Conceptual models can gop a long way in clarity.
+  * Technique: Describe strategy in horizontal layers of detail. Going from high level, executive summary to lower details.
+* **Evolution**: Strategies are meant to last, but must evolve based on opportunities, shifting priorities and changing constraints.
+  * A purpose of a strategy is to tell how to cope with uncertainty. That's why its a strategy, not a plan.
+  * A strategy is supposed to absorb changes and evolve over time.
+  * 2 Levels
+    * Evolution of the elements described in the strategy.
+    * Evolution of the strategy itself.
+* **Decisions**: Must make decisions, else its just a list of wishes.
+  * Strategy is a series of meaningful decisions, those that require conscious trade-offs.
+  * We forgo X in return for Y.
+  
 ## Part III: In-House platforms
 
 Most IT organizations experience platforms when they set out to build one. This part looks beneath the covers of such platform initiatives to highlight important characteristics.
