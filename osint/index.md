@@ -23,6 +23,22 @@
 ![img](assets/subject_intelligence_attack_vector_6.jpg)
 ![img](assets/subject_intelligence_attack_vector_7.jpg)
 
+## Social Media Intelligence
+
+> Social Media of a Subject/business
+
+* Note that especially younger generations might have multiple accounts for various audiences (friends, themselves, a business, ....)
+
+```md
+![img](assets/social_media_intelligence_1.heic)
+![img](assets/social_media_intelligence_2.heic)
+![img](assets/social_media_intelligence_3.heic)
+![img](assets/social_media_intelligence_4.heic)
+![img](assets/social_media_intelligence_5.heic)
+![img](assets/social_media_intelligence_6.heic)
+![img](assets/social_media_intelligence_7.heic)
+```
+
 ## Tools
 
 ### Search
@@ -39,6 +55,11 @@
 ### Subject Intelligence
 
 * [https://dehashed.com/](https://dehashed.com/)
+
+### Workflow
+
+* [Browser Extension - Instant Data Scraper](https://chromewebstore.google.com/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiahk)
+  * [Alternatives](https://blog.apify.com/top-instant-data-scrapers/)
 
 ### Others
 
