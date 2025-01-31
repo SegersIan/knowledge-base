@@ -1,4 +1,4 @@
-# OSINT: Open Source Intelligence
+
 
 ## Methodology
 
