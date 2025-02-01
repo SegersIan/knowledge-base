@@ -39,6 +39,25 @@
 ![img](assets/social_media_intelligence_7.heic)
 ```
 
+## Business and Organisational intelligence
+
+Usual data points
+
+* Corporate/business structure disclosures
+  * Parent
+  * Subsidary
+  * Holding companies
+* Contract disclosures
+* Financial Records / annual reports
+* Affiliation and relationship disclosures
+* Procurement / supply chain disclosures
+* Innovative / proprietary technology disclosures
+* Business discretions and lawsuits
+* santions / illegal activity
+* Public disclosures
+* Published material disclosures
+
+
 ## Tools
 
 ### Search
@@ -103,6 +122,7 @@
   * You can see when debts where made and the price something was purchased, refinancing is also visible
   * [Bolig.ai](https://www.bolig.ai/)
   * [https://www.eiendomspriser.no/](https://www.eiendomspriser.no/)
+  * [Budstikka - Property Transers](https://www.budstikka.no/vis/eiendomsoverdragelser)
 * [Domstol - Norwegian court rulings can be made partially available to the public, though privacy restrictions apply and many legal documents are anonymized.](https://www.domstol.no/)
 * [1881.no -  Online directories for phone numbers, addresses, and sometimes additional public info (e.g., businesses and individuals).](https://www.1881.no/)
 * [arkivverket - Repository of historical and archival materials, both for governmental and non-governmental entities.](https://www.arkivverket.no/)
@@ -116,3 +136,4 @@
 
 * [Deep Dive: Exploring the Real-world Value of Open Sourc](https://www.amazon.com/Deep-Dive-Exploring-Real-world-Intelligence/dp/1119933242)
 * [Open Source Intelligence Techniques: Resources for Searching and Analyzing Online Information (9th edition)](https://www.amazon.com/Open-Source-Intelligence-Techniques-Information/dp/B09PHL6Q4G/)
+* [https://www.bellingcat.com](https://www.bellingcat.com)
