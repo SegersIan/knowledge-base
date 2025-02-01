@@ -39,6 +39,8 @@
 ![img](assets/social_media_intelligence_7.heic)
 ```
 
+TODO: Add links (like redit post analyzer etc from the chapter)
+
 ## Business and Organisational intelligence
 
 Usual data points
