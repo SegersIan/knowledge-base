@@ -53,14 +53,15 @@
   * **Malinformation**: Based in reality but is purposfully harmfull. It's is based on reality but shared out of context or intent to cause harm.
     * Example: Political party post fake story of immigrant assaulting a native woman to ignite hated.
 
+![img](assets/social_media_intelligence_1.png)
+
 ```md
-![img](assets/social_media_intelligence_1.heic)
-![img](assets/social_media_intelligence_2.heic)
-![img](assets/social_media_intelligence_3.heic)
-![img](assets/social_media_intelligence_4.heic)
-![img](assets/social_media_intelligence_5.heic)
-![img](assets/social_media_intelligence_6.heic)
-![img](assets/social_media_intelligence_7.heic)
+![img](assets/social_media_intelligence_2.png)
+![img](assets/social_media_intelligence_3.png)
+![img](assets/social_media_intelligence_4.png)
+![img](assets/social_media_intelligence_5.png)
+![img](assets/social_media_intelligence_6.png)
+![img](assets/social_media_intelligence_7.png)
 ```
 
 TODO: Add links (like redit post analyzer etc from the chapter)
