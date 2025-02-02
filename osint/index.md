@@ -29,6 +29,30 @@
 
 * Note that especially younger generations might have multiple accounts for various audiences (friends, themselves, a business, ....)
 
+* [Telegram Stats](https://tgstat.com)
+* [Reddit Post Analyzer 1](https://reditr.com/)
+* [Reddit Post Analyzer 2](https://www.osintcombine.com/free-osint-tools/reddit-post-analyser)
+* [Pro Twitter (Former Tweet Deck)](https://pro.twitter.com/)
+* [Centre For Information REeslience](https://www.info-res.org/)
+* [Snopes: Debunk site](https://www.snopes.com/)
+  * [Snopes Fact Checks](https://www.snopes.com/fact-check/)
+* [Verification Handbook: Guide to verify digital content](https://verificationhandbook.com/)
+* [Spot Bot Like Behaviour on Twitter/x: Bot Sentienel](https://botsentinel.com/)
+* Graph Tools For Analysis
+  * [Neo4j](https://neo4j.com/)
+  * [Gephi](https://gephi.org/)
+* Foto Forensics
+  * [Tool 1](https://fotoforensics.com/)
+  * [Tool 2](https://29a.ch/photo-forensics/#forensic-magnifier)
+* **MIS/DIS/MAL-information**
+  * **Misinfoformation**: Misleading or incorrect information that is not knowlingly deceptive.
+    * Example: Grandma posts article about vitamines curing cancer.
+  * **Misinfoformation**: Misleading or incorrect information that is knowlingly deceptive/deliberate.
+    * Usually entirely fabricated.
+    * Example: Mascot from one team posts false information about competing mascot, about being arrested for assault.
+  * **Malinformation**: Based in reality but is purposfully harmfull. It's is based on reality but shared out of context or intent to cause harm.
+    * Example: Political party post fake story of immigrant assaulting a native woman to ignite hated.
+
 ```md
 ![img](assets/social_media_intelligence_1.heic)
 ![img](assets/social_media_intelligence_2.heic)
@@ -65,6 +89,7 @@ Usual data points
 ### Search
 
 * [Google](www.google.com)
+
 * [Bing](www.bing.com)
 * [Yandex](www.yandex.ru)
 * [Baidu](https://www.baidu.com/)
@@ -139,3 +164,4 @@ Usual data points
 * [Deep Dive: Exploring the Real-world Value of Open Sourc](https://www.amazon.com/Deep-Dive-Exploring-Real-world-Intelligence/dp/1119933242)
 * [Open Source Intelligence Techniques: Resources for Searching and Analyzing Online Information (9th edition)](https://www.amazon.com/Open-Source-Intelligence-Techniques-Information/dp/B09PHL6Q4G/)
 * [https://www.bellingcat.com](https://www.bellingcat.com)
+* [https://benjaminstrick.com/](https://benjaminstrick.com/)
