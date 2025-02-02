@@ -54,15 +54,12 @@
     * Example: Political party post fake story of immigrant assaulting a native woman to ignite hated.
 
 ![img](assets/social_media_intelligence_1.png)
-
-```md
 ![img](assets/social_media_intelligence_2.png)
 ![img](assets/social_media_intelligence_3.png)
 ![img](assets/social_media_intelligence_4.png)
 ![img](assets/social_media_intelligence_5.png)
 ![img](assets/social_media_intelligence_6.png)
 ![img](assets/social_media_intelligence_7.png)
-```
 
 TODO: Add links (like redit post analyzer etc from the chapter)
 
