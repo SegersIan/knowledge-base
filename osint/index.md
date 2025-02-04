@@ -107,6 +107,7 @@ Usual data points
 
 ### Others
 
+* [GeoSpy](https://geospy.ai/)
 * [https://fakepersongenerator.com](https://fakepersongenerator.com)
 * [Shodan.io](https://www.shodan.io/)
 * [Cyberchef (github)](https://github.com/gchq/CyberChef)
