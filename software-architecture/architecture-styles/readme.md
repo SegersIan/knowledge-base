@@ -84,3 +84,11 @@ As we might have expected **IT DEPENDS** which one we choose an various factors 
 * **Monolith vs Distributed**: Will a single set of architectural characteristics suffice ? Monolith will suffice. If different parts of the system needs different architectural characteristics, distributed is most likely the answer.
 * **Where should data live?**: In monolith, all data lives in one or few databases. In distributed, one must determine where data is persisted, and how it will flow. This means you must consider structure and behavior when designing an architecture. Don't be fearful of iterating. We call this also data partitioning.
 * **What communication styles? (Sync vs Async)**: Once data partitioning is determined, what are the communication styles that we prefer? Synchronous communication presents fewer design, implementation, and debugging challenge. ***Default to synchronous when possible and use asynchronous when necessary.***
+
+## Decision Framework Between 2 Styles
+
+Here is an example of a more objective and rational guidance approach to decide between 2 architecture styles.
+
+You can list the key characteristics that we need to decide on. The lower rating would lean towards style 1 and the higher rating to style 2.
+
+![img](assets/decision_framework_between_2_styles.PNG)
