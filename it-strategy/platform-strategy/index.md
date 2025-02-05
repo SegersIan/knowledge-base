@@ -367,7 +367,25 @@ Most IT organizations experience platforms when they set out to build one. This 
     * SaaS is distribution, operational, and pricing model. Platforms are abstractions tha enable teams to build on top of them.
   * ![img](assets/chapter9_4.PNG)
 
-### Chapter 10: IT Platform and IT services are Antonyms
+### Chapter 10: IT Platform and IT services are Opposites
+
+From a static structural model a "platform" and "Infra/Operations" seem the same, but it does not illustrate the interactions between them.
+
+![img1](assets/chapter10_0.jfif)
+
+Like, here the structure looks the same but in the first model, app development "throws their app" over the wall, and Ops people will be paged on issues. So that's not the interaction we're looking for, we're more looking for a DevOps interaction between the app development and the platform. 
+
+![img1](assets/chapter10_1.jfif)
+
+That's why, a structural model might seem the same, but the interactions can be very different.
+
+* Placing operational responsibility with the development team, removes organizational boundary.
+  * Platform developers are responsible for platform operations. They do dev and ops what they own.
+  * App developers are responsible for app operations. They do dev and ops what they own.
+  * The platform does provide the core tools to allow the operational parts being done by the app team.
+* Checklist: To verify which one of the two you are working with
+  ( ... todo)
+
 
 ## Part IV: Designing platforms
 
