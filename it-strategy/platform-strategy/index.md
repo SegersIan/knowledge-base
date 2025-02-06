@@ -386,19 +386,20 @@ That's why, a structural model might seem the same, but the interactions can be 
 
 #### Checklist: To verify which one of the 2 types you are working with
 
-| Characteristic    | Platform           | IT Service      |
-| ---               | ---                | ---             |
-| Main Driver       | Speed              | Reuse           |
-| Value Proposition | Direct             | Indirect        |
-| Scale Effect      | Thrives            | Bottleneck      |
-| Marginal cost     | Low                | Medium/High     |
-| Friction          | Low                | High            |
-| Run as            | Product            | Project         |
-| Evolution         | Continuous         | Sporadic        |
-| Orientation       | Customer Centric   | Process Centric |
-| Responsibility    | Shared             | Separated       |
-| Extensibility     | Open or Semi  Open | Closed          |
-| Adoption          | Voluntary          | Mandated        |
+| Characteristic    | Platform           | IT Service      | Notes |
+| ---               | ---                | ---             | ---   |
+| Main Driver       | Speed              | Reuse           | [Platforms should focus on speed first, efficiency second](https://www.linkedin.com/pulse/platform-lesson-1-platforms-should-focus-speed-efficiency-jan-bosch/) |
+| Value Proposition | Direct             | Indirect        | |
+| Scale Effect      | Thrives            | Bottleneck      | |
+| Marginal cost     | Low                | Medium/High     | |
+| Friction          | Low                | High            | |
+| Self Service      | Yes                | No              | |
+| Run as ...        | Product            | Project         | |
+| Evolution         | Continuous         | Sporadic        | |
+| Orientation       | Customer Centric   | Process Centric | |
+| Responsibility    | Shared             | Separated       | |
+| Extensibility     | Open or Semi  Open | Closed          | |
+| Adoption          | Voluntary          | Mandated        | |
 
 
 
