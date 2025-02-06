@@ -383,8 +383,23 @@ That's why, a structural model might seem the same, but the interactions can be 
   * Platform developers are responsible for platform operations. They do dev and ops what they own.
   * App developers are responsible for app operations. They do dev and ops what they own.
   * The platform does provide the core tools to allow the operational parts being done by the app team.
-* Checklist: To verify which one of the two you are working with
-  ( ... todo)
+
+#### Checklist: To verify which one of the 2 types you are working with
+
+| Characteristic    | Platform           | IT Service      |
+| ---               | ---                | ---             |
+| Main Driver       | Speed              | Reuse           |
+| Value Proposition | Direct             | Indirect        |
+| Scale Effect      | Thrives            | Bottleneck      |
+| Marginal cost     | Low                | Medium/High     |
+| Friction          | Low                | High            |
+| Run as            | Product            | Project         |
+| Evolution         | Continuous         | Sporadic        |
+| Orientation       | Customer Centric   | Process Centric |
+| Responsibility    | Shared             | Separated       |
+| Extensibility     | Open or Semi  Open | Closed          |
+| Adoption          | Voluntary          | Mandated        |
+
 
 
 ## Part IV: Designing platforms
