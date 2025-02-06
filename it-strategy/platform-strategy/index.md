@@ -401,6 +401,28 @@ That's why, a structural model might seem the same, but the interactions can be 
 | Extensibility     | Open or Semi  Open | Closed          | |
 | Adoption          | Voluntary          | Mandated        | |
 
+### Chapter 11: Implementation Matters Using Mechanisms
+
+Just a strategy and objectives won't be a recipe for success, the implementation matters. You must describe how to get from X to Y. This can be done with three distinct layers
+
+1. Describe benefits, the desired properties.
+2. **Mechanisms**, explains the specific technical implementation.
+3. Implementation details, explains what needs to be built.
+
+![img](assets/chapter11_0.jfif)
+
+#### Examples
+
+...todo: details
+
+* Restricted Choice
+* Meaningful Defaults
+* Assumptions/Scope
+* Aggregation
+* Abstractions
+* Automation
+* Functional Addition 
+
 
 
 ## Part IV: Designing platforms
