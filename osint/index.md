@@ -77,6 +77,9 @@ Usual data points
   * Subsidary
   * Holding companies
 * Contract disclosures
+  * Government Contracts > Usually public by law > You can check if a given organizatio had government contracts
+  * Sounds boring, but very juicy details can be found, especially in appendix
+    * Technologies, subcontractors used, blueprints, contacts, building specs,...
 * Financial Records / annual reports
 * Affiliation and relationship disclosures
 * Procurement / supply chain disclosures
