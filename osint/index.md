@@ -25,7 +25,7 @@
 
 ### Tools
 
-* [https://dehashed.com/](https://dehashed.com/)
+* [dehashed.com - data breaches and passwords](https://dehashed.com/)
 
 ## Social Media Intelligence
 
