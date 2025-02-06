@@ -9,6 +9,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 
 ## General
 
+* [AI](ai/readme.md)
 * [Career](career/index.md)
 * [Change Management](change-management/index.md)
 * [Coaching](coaching/index.md)
