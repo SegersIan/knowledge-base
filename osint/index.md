@@ -23,27 +23,16 @@
 ![img](assets/subject_intelligence_attack_vector_6.jpg)
 ![img](assets/subject_intelligence_attack_vector_7.jpg)
 
+### Tools
+
+* [https://dehashed.com/](https://dehashed.com/)
+
 ## Social Media Intelligence
 
 > Social Media of a Subject/business
 
 * Note that especially younger generations might have multiple accounts for various audiences (friends, themselves, a business, ....)
 
-* [Telegram Stats](https://tgstat.com)
-* [Reddit Post Analyzer 1](https://reditr.com/)
-* [Reddit Post Analyzer 2](https://www.osintcombine.com/free-osint-tools/reddit-post-analyser)
-* [Pro Twitter (Former Tweet Deck)](https://pro.twitter.com/)
-* [Centre For Information REeslience](https://www.info-res.org/)
-* [Snopes: Debunk site](https://www.snopes.com/)
-  * [Snopes Fact Checks](https://www.snopes.com/fact-check/)
-* [Verification Handbook: Guide to verify digital content](https://verificationhandbook.com/)
-* [Spot Bot Like Behaviour on Twitter/x: Bot Sentienel](https://botsentinel.com/)
-* Graph Tools For Analysis
-  * [Neo4j](https://neo4j.com/)
-  * [Gephi](https://gephi.org/)
-* Foto Forensics
-  * [Tool 1](https://fotoforensics.com/)
-  * [Tool 2](https://29a.ch/photo-forensics/#forensic-magnifier)
 * **MIS/DIS/MAL-information**
   * **Misinfoformation**: Misleading or incorrect information that is not knowlingly deceptive.
     * Example: Grandma posts article about vitamines curing cancer.
@@ -61,7 +50,23 @@
 ![img](assets/social_media_intelligence_6.png)
 ![img](assets/social_media_intelligence_7.png)
 
-TODO: Add links (like redit post analyzer etc from the chapter)
+### Tools
+
+* [Telegram Stats](https://tgstat.com)
+* [Reddit Post Analyzer 1](https://reditr.com/)
+* [Reddit Post Analyzer 2](https://www.osintcombine.com/free-osint-tools/reddit-post-analyser)
+* [Pro Twitter (Former Tweet Deck)](https://pro.twitter.com/)
+* [Centre For Information REeslience](https://www.info-res.org/)
+* [Snopes: Debunk site](https://www.snopes.com/)
+  * [Snopes Fact Checks](https://www.snopes.com/fact-check/)
+* [Verification Handbook: Guide to verify digital content](https://verificationhandbook.com/)
+* [Spot Bot Like Behaviour on Twitter/x: Bot Sentienel](https://botsentinel.com/)
+* Graph Tools For Analysis
+  * [Neo4j](https://neo4j.com/)
+  * [Gephi](https://gephi.org/)
+* Foto Forensics
+  * [Tool 1](https://fotoforensics.com/)
+  * [Tool 2](https://29a.ch/photo-forensics/#forensic-magnifier)
 
 ## Business and Organisational intelligence
 
@@ -80,9 +85,17 @@ Usual data points
 * santions / illegal activity
 * Public disclosures
 * Published material disclosures
+* Public companies must submit reports, so that helps with public companies
+* Social media and other public info allows to pivot to subject intelligence
 
+### Tools
 
-## Tools
+* [Facebook Ads - See all current or past ads and who paid them](https://www.facebook.com/ads/library/)
+* [Open Corporates](https://opencorporates.com/)
+* [DNB paid alternative to open corporates, but often. Has more data.](https://www.dnb.com/en-us/)
+* [EDGAR =>. All the public SEC data in US](https://www.sec.gov/search-filings)
+
+## Tools - General
 
 ### Search
 
@@ -95,10 +108,8 @@ Usual data points
 ### Archives
 
 * [WayBackMachine](https://web.archive.org/)
-
-### Subject Intelligence
-
-* [https://dehashed.com/](https://dehashed.com/)
+* [Archive.ph](https://archive.ph/)
+* [Auto Archiver - Archive social media and other online content](https://github.com/bellingcat/auto-archiver)
 
 ### Workflow
 
@@ -107,6 +118,7 @@ Usual data points
 
 ### Others
 
+* [Bellingcat Toolkit](https://bellingcat.gitbook.io/toolkit)
 * [GeoSpy](https://geospy.ai/)
 * [https://fakepersongenerator.com](https://fakepersongenerator.com)
 * [Shodan.io](https://www.shodan.io/)
@@ -132,8 +144,9 @@ Usual data points
 * [Https://legal.thomsonreuters.com/en/products/clear-investigation-software](https://legal.thomsonreuters.com/en/products/clear)
 * [Sociallinks.io](https://sociallinks.io/)
 * [TheOrg - Find the org charts of companies](https://theorg.com/org/neptune-software)
+* [Belliongcat Filename Finder - Show original file names on google maps](https://chromewebstore.google.com/detail/bellingcat-filename-finde/fdhodjpkigpaachejkipcghppfnnfdmp)
 
-### Norway
+### Norway Specific
 
 * [PureHelp](https://www.purehelp.no)
 * [Finn](https://finn.no)
