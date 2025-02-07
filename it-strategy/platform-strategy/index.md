@@ -442,22 +442,50 @@ Just a strategy and objectives won't be a recipe for success, the implementation
 ## Chapter 12: Make opinionated platforms, not restrictive ones
 
 
+## Chapter 13
+
+## Chapter 14
+
+## Chapter 15
 
 ## Part IV: Designing platforms
 
 Platforms hide complexity, but building one isn't nearly as simple as it looks from the outside. This part employs metaphors to illustrate platform design decisions.
 
+## Chapter 16
+## Chapter 17
+## Chapter 18
+## Chapter 19
+## Chapter 20
+## Chapter 21
+## Chapter 22
+
 ## Part V: Implementing platforms
 
 This part investigates platform anatomies and propose common platform blueprints.
+
+## Chapter 23
+## Chapter 24
+## Chapter 25
 
 ## Part VI: Growing platforms
 
 Platforms have to be rolled out across the organization. They also require delicate care and feeding over time so that they don't fall victim to excessive entropy or become a bottleneck. This part shows you how to do this successfully.
 
+## Chapter 26
+## Chapter 27
+## Chapter 28
+## Chapter 29
+## Chapter 30
+
 ## Part VII: Organizing for platforms
 
 If you are building platforms, you'll likely need a platform team, which is different from typical application delivery or operation teams. This part describes how to build an manage a platform team.
+
+## Chapter 31
+## Chapter 32
+## Chapter 33
+## Chapter 34
 
 ## Todo
 
