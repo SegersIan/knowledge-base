@@ -1,4 +1,4 @@
-
+# OSINT: Open Source Intelligence
 
 ## Methodology
 
@@ -128,7 +128,27 @@
 * [FOCA](https://github.com/elevenpaths/FOCA) fingerprint site
 * [DNSLytics](Https://Dnslytics.com)
 
-### Transport Intelligence
+## Transport Intelligence
+
+... todo
+
+## Transportation intelligence
+
+... todo
+
+## Critical Infrastructure and Industrial intelligence
+
+... todo
+
+## Financial intelligence
+
+... todo
+
+## Cryptocurrency intelligence
+
+... todo
+
+## Non-Fungible Tokens intelligence
 
 ... todo
 
