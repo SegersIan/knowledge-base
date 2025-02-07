@@ -441,6 +441,10 @@ Just a strategy and objectives won't be a recipe for success, the implementation
 
 ## Chapter 12: Make opinionated platforms, not restrictive ones
 
+![img](assets/chapter12_0.jfif)
+![img](assets/chapter12_1.jfif)
+![img](assets/chapter12_2.jfif)
+![img](assets/chapter12_3.jfif)
 
 ## Chapter 13
 
