@@ -411,17 +411,35 @@ Just a strategy and objectives won't be a recipe for success, the implementation
 
 ![img](assets/chapter11_0.jfif)
 
-#### Examples
-
-...todo: details
+#### Mechanisms
 
 * Restricted Choice
+  * Golden paths are great to reduce complexity and provide governance
+    * Might eliminate useful options and slow down development (e.g. not allowing a public cloud)
+  * Whatever restriction, make sure the platform is an enabler
 * Meaningful Defaults
+  * Softer version of restricting choice
 * Assumptions/Scope
+  * A cloud provider must built for the whole world, an in-house platform for one organization.
+  * You can and must make more assumptions than a cloud provider, which translates again in restricting choice and meaningful defaults.
 * Aggregation
+  * Platform creates uniform access to many elements.
 * Abstractions
+  * See chapter 21 for more depth
 * Automation
+  * Automate friction away.
 * Functional Addition 
+  * Platforms should give extra functions on top of the layer it is built on, filling in gaps.
+
+| Business Objective | Mechanism | Implementation |
+| ---                | ---       | ---            |
+| Minimize Mistakes  | Meaningful defaults | Templates |
+| Increase velocity  | Automation | IaC scripts |
+| Improve products   | Fill product gaps | New components |
+| Enforce compliance | Restrict choice | Wrappers |
+| Reduce lock-in     | Abstraction | Service Layers |
+
+## Chapter 12: Make opinionated platforms, not restrictive ones
 
 
 
