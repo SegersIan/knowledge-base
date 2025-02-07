@@ -132,25 +132,89 @@
 
 ... todo
 
+### Tools
+
 ## Transportation intelligence
 
 ... todo
+
+* [What is SAR](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/sar)
+* [Difference GPS and GNSS](https://www.symmetryelectronics.com/blog/what-is-the-difference-between-gnss-and-gps/)
+* [AIS-VTS](https://gssc.esa.int/navipedia/index.php/AIS-VTS)
+* [Jamming and spoofing GNSS](https://www.maritimeglobalsecurity.org/media/1043/2019-jamming-spoofing-of-gnss.pdf)
+* [JAmming GPS](https://www.bizavadvisor.com/gps-signal-jamming/)
+* [erminology: Parts of ships and equipment aboard ships](https://maritimesa.org/grade-10/terminology-parts-of-ships-and-equipment-aboard-ships/)
+* [Gloassary of Port and Shipping Terms](https://www.ppiaf.org/sites/ppiaf.org/files/documents/toolkits/Portoolkit/Toolkit/pdf/modules/09_TOOLKIT_Glossary.pdf)
+* [Inustrial Control System](https://csrc.nist.gov/glossary/term/industrial_control_system)
+* [THE GUIDELINES ON CYBER SECURITY ONBOARD SHIPS](https://www.ics-shipping.org/wp-content/uploads/2021/02/2021-Cyber-Security-Guidelines.pdf)
+* [Military Aircraft Insignia](https://military-history.fandom.com/wiki/Military_aircraft_insignia)
+* [Visual Aircraft Recognition](https://irp.fas.org/doddir/army/tc3-01-80.pdf)
+* [Drone Survival Guide](http://dronesurvivalguide.org/)
+* [Off the Radar: Private Planes Hidden From Public View](https://www.propublica.org/article/off-the-radar-private-planes-hidden-from-public-view-040810)
+* [What to Know About Air Cargo Handling](https://www.iata.org/en/publications/newsletters/iata-knowledge-hub/what-to-know-about-air-cargo-handling/)
+* [Airports & Operational Technology: 4 Attack Scenarios](https://www.darkreading.com/vulnerabilities-threats/airports-operational-technology-4-attack-scenarios)
+* [How to decode your VIN](https://www.edmunds.com/how-to/how-to-quickly-decode-your-vin.html)
+
+### Tools
+
+* [Shipspotting](https://www.shipspotting.com/)
+* [Windy](https://www.windy.com/)
+* [Landsat](https://landsat.gsfc.nasa.gov/)
+* [earthobservatory](https://earthobservatory.nasa.gov/)
+* [Sentinel Hub EO Browser](https://www.sentinel-hub.com/explore/eobrowser/)
+* [Soar Satelites](https://soar.earth/satellites)
+* [Google Earth](https://earth.google.com/web/)
+* [Marine Traffic](https://www.marinetraffic.com/)
+* [Vesselfinder](https://www.vesselfinder.com/)
+* [National Vulnerability Database](https://nvd.nist.gov/)
+* [ArcGis](https://www.arcgis.com/index.html)
+* [AnyTrip - Live rail map Australia](https://anytrip.com.au/)
+* [OpenRailwayMap](https://openrailwaymap.org/)
+* [Mobility Portal](https://mobility.portal.geops.io/)
+* [Travel Time Map](https://app.traveltime.com/)
+* [Airline Call Signs](https://123atc.com/call-signs)
+* [Plane Spotters](https://www.planespotters.net/)
+* [Flight Radar 24](https://www.flightradar24.com/)
+* [adsbexchange - World's largest source of unfiltered flight data](https://adsbexchange.com/)
+* [Flight Aware](https://www.flightaware.com/)
+* [OpenStreetMap](https://www.openstreetmap.org/#map=5/65.40/17.86)
+* [AirPortia](https://www.airportia.com/)
+* [Federal Aviation Administration (FAA)](https://www.faa.gov/pilots/ladd)
+* [FNS NOTAM Search (FAA)](https://notams.aim.faa.gov/notamSearch/disclaimer.html)
+* [Temporary Flight Restrictions List (FAA)](https://tfr.faa.gov/tfr2/list.html)
+* [Live Air Traffic](https://www.liveatc.net/)
+* [Fire Information For Resource Management System](https://firms.modaps.eosdis.nasa.gov/map/)
+* [Airport SCADA Solutions](https://www.vtscada.com/airport-solutions-overview/)
+* [Model Recognition](https://carnet.ai/)
+* [User submitted license plate database](https://platesmania.com/)
+* [License Plate Lookup](https://www.faxvin.com/license-plate-lookup)
+* [Licensen Plates Of The World](http://worldlicenseplates.com/)
+* [LocaToWeb is a reliable real-time GPS tracker app for Iphone and Android that shares your position to web in real time.](https://locatoweb.com/)
+* [Trucking Database](https://truckingdatabase.com/)]
 
 ## Critical Infrastructure and Industrial intelligence
 
 ... todo
 
+### Tools
+
 ## Financial intelligence
 
 ... todo
+
+### Tools
 
 ## Cryptocurrency intelligence
 
 ... todo
 
+### Tools
+
 ## Non-Fungible Tokens intelligence
 
 ... todo
+
+### Tools
 
 ## Tools - General
 
