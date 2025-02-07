@@ -70,26 +70,47 @@
 
 ## Business and Organisational intelligence
 
-Usual data points
+* Usual data points
+  * Corporate/business structure disclosures
+    * Parent
+    * Subsidary
+    * Holding companies
+  * Contract disclosures
+    * Government Contracts > Usually public by law > You can check if a given organizatio had government contracts
+    * Sounds boring, but very juicy details can be found, especially in appendix
+      * Technologies, subcontractors used, blueprints, contacts, building specs,...
+  * Financial Records / annual reports
+  * Affiliation and relationship disclosures
+  * Procurement / supply chain disclosures
+  * Innovative / proprietary technology disclosures
+  * Business discretions and lawsuits
+  * santions / illegal activity
+  * Public disclosures
+  * Published material disclosures
+  * Public companies must submit reports, so that helps with public companies
+  * Social media and other public info allows to pivot to subject intelligence
+* Recognizing Oranizational Crimes
+  * [Guide 1](https://aml-toolbox.medium.com/finding-shell-companies-an-investigators-guide-258c3f244bfd)
+  * [guide 2](https://www.fraudconferencenews.com/home/2018/6/17/breaking-the-shell)
+* Be informed about sanctions to know if someone is doing shady stuff
+  * [UN Sanctions](https://main.un.org/securitycouncil/en/sanctions/information)
+  * [ParisMou Sanctions](http://parismou.org/Statistics%26Current-Lists/white-grey-and-black-list)
+  * [Financial Action Task Force (FATF) - global money laundering and terrorist financing watchdog](https://www.fatf-gafi.org/)
+* Non profit are not allowed various things, non profits can be often used to attract funds for good things but in practice do other things that benefit private persons for example.
+* Non profits usually have less oversight, that’s why they’re so tempting for fraud.
+* In every country normally non profits have to do some declarations or statements that should be publicly available . Or they might self publish reports to attract trust.
+* Organizations Domain / Site / IP
+  * Look at robots.txt of any site for potential attempted hidden stuff
+  * Search for a domain, you might find what other sites refer to the site, that can uncover stuff.
+  * The content of a site can indicate if the site is fraudulent, just a quick shell, images and text can be analyzed or reverse searched to see if it’s stock or fake, fotoforensics etc…
+    * If content is legit, it can tell alot about partners, customers, org, employees, structure, contacts, social media, …
+  * Website metadata
+  * Find hidden but public data by google dorking : `site: tandbergeiendom.no ext:docx | ext:xlsx | ...`
+  * Use [FOCA](https://github.com/elevenpaths/FOCA) for screening a site
+  * IPs  can show connections or shared infrastructure between seemingly unrelated organizations . Remember, a single hosting can run for various companies sites that are unrelated to, rhey just use the same hosting (e.g wordpress).
 
-* Corporate/business structure disclosures
-  * Parent
-  * Subsidary
-  * Holding companies
-* Contract disclosures
-  * Government Contracts > Usually public by law > You can check if a given organizatio had government contracts
-  * Sounds boring, but very juicy details can be found, especially in appendix
-    * Technologies, subcontractors used, blueprints, contacts, building specs,...
-* Financial Records / annual reports
-* Affiliation and relationship disclosures
-* Procurement / supply chain disclosures
-* Innovative / proprietary technology disclosures
-* Business discretions and lawsuits
-* santions / illegal activity
-* Public disclosures
-* Published material disclosures
-* Public companies must submit reports, so that helps with public companies
-* Social media and other public info allows to pivot to subject intelligence
+
+![img](assets/organizational_intelligence_1.png)
 
 ### Tools
 
@@ -100,10 +121,16 @@ Usual data points
 * [Project On Government Oversight](https://www.pogo.org/)
 * [USASpending.gov - US Federal Produrement data](usaspending.gov)
 * [Open Tender EU](https://opentender.eu/)
+* [LittleSis - Find connections/network between entities and people](https://littlesis.org)
+* [Whoxy.com - WHOIS lookup](Whoxy.com)
+* [Nslookup.io - IP Lookup](Nslookup.io)
+  * The ASN (autonomous system number) is something you can pivot on
+* [FOCA](https://github.com/elevenpaths/FOCA) fingerprint site
+* [DNSLytics](Https://Dnslytics.com)
 
+### Transport Intelligence
 
-
-
+... todo
 
 ## Tools - General
 
