@@ -2,7 +2,7 @@
 
 * A critical success factor for platforms is defining which aspectsc an be harmonized and which ones must be kept variable.
 * A good platform takes a step in the background of the participant to participant interaction.
-* How users acces your platform is at least as important as what's inside.
+* How users access your platform is at least as important as what's inside.
 
 ## Part I : Understanding platforms
 
@@ -32,6 +32,7 @@ Properties:
   * Go SaaS
   * Allow for customization
   * Golden combination
+* Freeway/highway: There is one way to get somewhere really fast, but you're limited on when to get on and off.
 
 ### Chapter 2: The different types of platforms
 
@@ -439,16 +440,58 @@ Just a strategy and objectives won't be a recipe for success, the implementation
 | Enforce compliance | Restrict choice | Wrappers |
 | Reduce lock-in     | Abstraction | Service Layers |
 
-## Chapter 12: Make opinionated platforms, not restrictive ones
+## Chapter 12: Make opinionated platforms, not restrictive ones, what's the difference?
+
+* The best software takes sides, decide on your vision, and run with it. Instead of FULL flexibility. This is valid for products and product design. You are not designing/developing for a broad market, but for a niche, your organization.
+* Opinionated is the strategy that frameworks also choose for expecting higher speed. (e.g. convention over configuration with Ruby On Rails).
+* Having opinions improves the developer experience.
 
 ![img](assets/chapter12_0.jfif)
+
+### 3 Key Properties for opinionated
+
+* **Transparency**: Be transparent about the opinions, don't hide them, make them clear and the chosen/expected trade-off.
+* By taking opinions, we can expect a high return on that.
+* Gentle/forgiving slopes/edges: Developer experience should be still good even when trying to do something outside of the "sweet spot".
+  * Mechanism: "Default overrides" or "Escape hatches" from the golden path
+
+### Multiple Opinionated(s)
+
 ![img](assets/chapter12_1.jfif)
+* There can be multiple opinionated frameworks/platforms based on needs/preferences. 
+* Having only "one opinionated" will work if the return is really high
+
+### Open Source can afford to be opinionated
+
+As they're not have financial goals to have a big reach.
+
+### Platforms have high cohesion 
+
 ![img](assets/chapter12_2.jfif)
 ![img](assets/chapter12_3.jfif)
 
-## Chapter 13
+## Chapter 13: Platform Decisions To Think Off
 
-## Chapter 14
+A trap is during a platform development cycle is making decisions without being aware of it.
+
+![img](assets/chapter13_0.jfif)
+
+* Open/Closed
+  * **Closed**: Limited input from platform users, rare, but can be valid in cases of regulation and certification (e.g. PCI).
+  * **Feature Requests**: Platform team encourage input and feature requests from platform users. A feature request does not necessarily get implemented as requested, platform team must protect the platform.
+  * **Marketplace**: Platform users can't modify the platform but components on top, to be shared with other users.
+  * **Extension API**: Users can develop components that become part of the platform via dedicated extension APIs. (e.g. Kubernetes Operators and Kubernetes API)
+  * **Co-Development**: InnerSourcing by having users be active contributors.
+* Mandatory/Voluntary
+  * Voluntary usually encourages actual good developer experience (free market dynamics), but can be time consuming to promote and adapt.
+* Life expectancy
+  * Communicate expected life expectancy or philosophy.
+* Change Management
+  * Change is necessary, how is this done, how long are older APIs supported? Etc...
+* Preconditions/Assumptions
+  * What skills/culture is expected to be in place for users to adopt the platform
+
+## Chapter 14: Buy or DIY platform?
 
 ## Chapter 15
 
