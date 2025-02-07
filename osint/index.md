@@ -98,6 +98,13 @@ Usual data points
 * [DNB paid alternative to open corporates, but often. Has more data.](https://www.dnb.com/en-us/)
 * [EDGAR =>. All the public SEC data in US](https://www.sec.gov/search-filings)
 * [Project On Government Oversight](https://www.pogo.org/)
+* [USASpending.gov - US Federal Produrement data](usaspending.gov)
+* [Open Tender EU](https://opentender.eu/)
+
+
+
+
+
 ## Tools - General
 
 ### Search
@@ -172,6 +179,8 @@ Usual data points
   * You can check all the cars that someone has owned (require SSN)
   * You can check who (only name) ons a car with a given license plate
 * [https://www.digitalarkivet.no/](https://www.digitalarkivet.no/)
+* [https://www.doffin.no/ - Database for public procurement](https://www.doffin.no/)
+* [Public Tenders Database](https://opentender.eu/no)
 
 ## Resources
 
