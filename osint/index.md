@@ -271,6 +271,7 @@
 * [PureHelp](https://www.purehelp.no)
 * [Finn](https://finn.no)
 * [Skattesjekk.no - Check tax of people](https://www.skattesjekk.no/)
+* [anonymskatt - Check tax of people](https://www.anonymskatt.no/)
 * [Brønnøysundregistrene - Norway’s central register authority. Contains multiple registers such as the Register of Business Enterprises, the Register of Company Accounts, and the Register of Bankruptcy.](https://www.brreg.no/)
 * [Proff - A commercial website using data from the Brønnøysund Register Centre and other sources to present company overviews.](https://www.proff.no/)
   * Maybe you can find here if someone owns or runs a business
