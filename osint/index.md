@@ -284,6 +284,7 @@
   * [Bolig.ai](https://www.bolig.ai/)
   * [https://www.eiendomspriser.no/](https://www.eiendomspriser.no/)
   * [Budstikka - Property Transers](https://www.budstikka.no/vis/eiendomsoverdragelser)
+  * [Eiendom norge](https://eiendomnorge.no/)
 * [Domstol - Norwegian court rulings can be made partially available to the public, though privacy restrictions apply and many legal documents are anonymized.](https://www.domstol.no/)
 * [1881.no -  Online directories for phone numbers, addresses, and sometimes additional public info (e.g., businesses and individuals).](https://www.1881.no/)
 * [arkivverket - Repository of historical and archival materials, both for governmental and non-governmental entities.](https://www.arkivverket.no/)
