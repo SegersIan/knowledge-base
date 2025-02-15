@@ -59,6 +59,7 @@
 * [Centre For Information REeslience](https://www.info-res.org/)
 * [Snopes: Debunk site](https://www.snopes.com/)
   * [Snopes Fact Checks](https://www.snopes.com/fact-check/)
+* [Fact Check.org](https://www.factcheck.org/)
 * [Verification Handbook: Guide to verify digital content](https://verificationhandbook.com/)
 * [Spot Bot Like Behaviour on Twitter/x: Bot Sentienel](https://botsentinel.com/)
 * Graph Tools For Analysis
