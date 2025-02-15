@@ -303,3 +303,4 @@
 * [Open Source Intelligence Techniques: Resources for Searching and Analyzing Online Information (9th edition)](https://www.amazon.com/Open-Source-Intelligence-Techniques-Information/dp/B09PHL6Q4G/)
 * [https://www.bellingcat.com](https://www.bellingcat.com)
 * [https://benjaminstrick.com/](https://benjaminstrick.com/)
+* [Renee Diresta Blog - If you give a mouse a cookie](https://www.reneediresta.com/if-you-give-a-mouse-a-cookie/)
