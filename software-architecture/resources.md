@@ -29,6 +29,7 @@
 * [Serverless and Clean Architecture](https://blog.serverlessadvocate.com/serverless-clean-architecture-code-with-domain-driven-design-852796846d28)
 * [Versioning in Event Driven Architectures (Book)](https://leanpub.com/esversioning/read)
 * [What is Event Modelling](https://eventmodeling.org/posts/what-is-event-modeling/)
+* [Structure Eats Strategy - BAPO Model](https://janbosch.com/blog/index.php/2017/11/25/structure-eats-strategy/)
 
 ## Recommended Books
 
