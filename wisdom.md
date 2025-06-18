@@ -26,6 +26,11 @@ King Wuling 307 BC
 
 > Business plans that describe how you would capture a small slice of a vast market are the first ones to go into the trash bin. Instead, we look for ideas that serve one market better than anyone else in that market.
 
+> The best engineering metrics have 3 features:
+> - there are multiple of them
+> - they're in tension with each other
+> - they measure teams or the organization—not individuals
+
 ## Leadership / Influence
 > Usually, you might have good ideas, but listen to everyone first, then “hey, at least 3 of you said we should do x, what do you think?”.
 > You might have planted some ideas before, (read how) but then make sure they feel they were part of the decision. This will give more buy in and conviction.
