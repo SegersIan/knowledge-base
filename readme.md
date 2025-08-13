@@ -56,3 +56,4 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 * https://intltechventures.blogspot.com/2023/10/2023-10-11-wednesday-todays-mediation.html
 * https://hbr.org/2021/04/have-we-taken-agile-too-far
 * https://localmess.github.io/
+* https://cyata.ai/blog/cracking-the-vault-how-we-found-zero-day-flaws-in-authentication-identity-and-authorization-in-hashicorp-vault/
