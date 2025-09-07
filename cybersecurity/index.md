@@ -1,4 +1,4 @@
-# InfoSec Resources
+# Cybsersecurity Resources
 
 ## Tools
 
@@ -16,7 +16,7 @@
 - https://finchsec.com/courses/wifi-exploitation-101/
 - https://github.com/aircrack-ng/aircrack-ng
 - git@github.com:xwmx/airport.git
-- `netstat` for checking all active ports 
+- `netstat` for checking all active ports
 - Wireshark - Sniff packets in local machine or network
 
 ### Grouped
@@ -107,7 +107,7 @@
 - https://www.tenable.com/products/nessus
 - [Way Back Machine](www.archive.org) - (In history, some interesting formation can be found on company sites or so)
 - [Website watcher](https://www.aignes.com/) - Wath websites and notify if anything changes
-- https://www.shodan.io/ - Find anything connected    
+- https://www.shodan.io/ - Find anything connected
 
 ## Vulnerability Databases
 
@@ -118,4 +118,3 @@
 - www.securitymagazine.com
 - www.trendmicro.com
 - www.darkreading.com
-
