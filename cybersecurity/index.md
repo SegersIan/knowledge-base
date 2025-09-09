@@ -14,6 +14,7 @@
   * **Availability** - Informations and systems are ready to meet the needs of legitimate users at the time those users request them.
 * 1 Additional goal/objective
   * **Nonrepudiation** - Someone who performs some action, cannot later deny having taken that action.
+    * Digital signatures are commonly used
 
 ### Security Incident
 
