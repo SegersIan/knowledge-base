@@ -26,7 +26,7 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 ## Software Engineering
 
 * [Data structures and Algorithms](data-struct-algo/index.md)
-* [Cyvbersecurity](cybersecurity/index.md)
+* [Cybersecurity](cybersecurity/index.md)
 * [Networking](network/index.md)
 
 * [IT Strategy](it-strategy/index.md)
