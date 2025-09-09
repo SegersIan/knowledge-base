@@ -56,6 +56,10 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
   * Detective - Identify security events/issues that already have happened (Intrusion Detection Systems IDS, ...)
   * Corrective - Remeditate a security issue that has happened (restore from backup, ...)
   * Compensating - Mitigates the risk with alternative methods if the original control requirement.
+    * 3 criteria for PCI DSS
+      * Must meet the intent and rigor of the orginal requirement
+      * Must provide similar level of defense as the original
+      * Must be above and beyond other PCI DSS requirements
   * Directive - Inform employees and others what they should do to implement security objectives.
 
 ### Data Protection
