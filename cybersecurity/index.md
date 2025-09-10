@@ -154,3 +154,13 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
     * Hard to adress and mitigate
 
 ### Threat Data & Intelligence
+
+* **Threat Intelligence**: Resources and activities available to learn about changes in the threat environment.
+  * Can be used for predictive risk.
+  * OSINT tools/methods
+  * Vunerability databases
+  * Threat feeds
+  * Indicators of compromise (IoCs) - Like file hashes, signaturesm ,,,
+* **OSINT**
+  * Key is to find up-to-date sources
+  * [Examples](./resources.md#Threat%20Feeds)
