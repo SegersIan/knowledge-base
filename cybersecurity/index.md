@@ -95,6 +95,7 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
 
 ## Threat Landscape
 
+### Threats
 * **Threat Characteristics**
   * Internal vs. External - Within or outside our organization.
   * Level of Sophistication/Capability - from script kiddie to APT (advance persistant threat)
@@ -145,3 +146,5 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
   * Removeable devices-
   * Cloud-
   * Supply Chain-
+
+### Threat Data & Intelligence
