@@ -195,3 +195,6 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
   * Academic Journals and Technical Publications
   * Conferences and meetups
   * Social Media accounts of security professionals.
+
+## Malicious Code
+Todo...
