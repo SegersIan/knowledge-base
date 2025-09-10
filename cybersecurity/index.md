@@ -312,3 +312,11 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
     * Command and control domains, IP addrewss and systems
     * Behavior based identification like creation of services, executables, configuration changes, file access and command invocation
     * Opening ports or creation of reverse proxy tunnels
+
+* Notes
+  * Different vendors might name the same malware different which makes it difficult
+  * Remote access is usually via a backdoor, rootkit
+
+## Social Engineering & Password Attacks
+
+todo...
