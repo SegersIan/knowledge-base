@@ -127,17 +127,19 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
 | Intent/Motivation         | Thrill/status | Ideals | Money | Economic/Espionage/Political | Varied | Economic/Business |
 
 * **Attaker Motivations**
-  * Data exfiltration -
-  * Espionage -
-  * Service disruption -
-  * Blackmail -
-  * Financial Gain -
-  * Ideoligy/Beliefs -
-  * Ethical -
-  * Revenge -
-  * Disruption/chaos -
-  * War -
+  * Data exfiltration - desire to obtain sensitive/IP information.
+  * Espionage - organizations desiring to steal secret information
+  * Service disruption - Seek to stop opperations
+  * Blackmail - Seek to get money or concessions by threating to release secret info or more attacks.
+  * Financial Gain
+  * Ideoligy/Beliefs
+  * Ethical - White hat
+  * Revenge - just to embarrse or damage
+  * Disruption/chaos
+  * War - Manipulate the outcome of an armed conflict
 * **Threat Vectors and Attack Surfaces**
+  * Attack Surface - A llsystem/application/service that could be potentially exploited
+  * Threat Vector - The actual vulnerability chosen from the attack service.
   * Message-Based-
   * Wired networks -
   * Wireless networks-
