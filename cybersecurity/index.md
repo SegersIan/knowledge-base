@@ -290,6 +290,24 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
     * Extrafiltration activity to command and control systems
     * Process banes
     * Known reference URLS
-* **Logic Bombs**
-  *
-* **Rootkits**
+* **Logic Bombs** - Functions or code placed inside other programs that will activate when set conditions
+  * Either by insider or by OSS supply chain hack
+  * Once it triggers, payload executes, so activites/actions happen then.
+  * No IoC as it's in the code
+  * Doesn't care to replicate
+  * *Defenses*
+    * Code reviews & Integrity checks
+    * File integrity
+* **Rootkits** - specificly designed for attackers to get a backdoor to the root of a system
+  * Many have capabilities to hide , they use various layers to make them "not appear to be there".
+  * Persistent, stealth access is the goal
+  * *Defenses*
+    * Clean rebuilt or trustworthy backup
+    * Good security practices, patching, ...
+    * Secure Boot
+    * Remove the HDD and connect to other system without booting from that HDD, now no code will trigger.
+  * *Indicators Of Compromise (IoCs)*
+    * Files hashes and signatures
+    * Command and control domains, IP addrewss and systems
+    * Behavior based identification like creation of services, executables, configuration changes, file access and command invocation
+    * Opening ports or creation of reverse proxy tunnels
