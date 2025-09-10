@@ -139,14 +139,18 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
   * War - Manipulate the outcome of an armed conflict
 * **Threat Vectors and Attack Surfaces**
   * Attack Surface - A llsystem/application/service that could be potentially exploited
-  * Threat Vector - The actual vulnerability chosen from the attack service.
-  * Message-Based-
-  * Wired networks -
-  * Wireless networks-
-  * Systems-
-  * Files & Images-
-  * Removeable devices-
-  * Cloud-
-  * Supply Chain-
+  * Threat Vector - The actual vulnerability chosen from the attack service. The means to obtain that access.
+  * Message-Based - Email is most exploited attack vector.
+    * They only need ONE person to be tricked.
+    * Other channel: SMS, IM, Voice call, ...
+  * Wired networks - physically connecting to the on-prem network, or accessing a device that's connected to it.
+  * Wireless networks - Don't require physical access to the network, bluetooth is also a risk.
+  * Systems - Individual systems
+  * Files & Images - Infected files with malicious code that trigger once openend.
+  * Removeable devices - USB drives, Memory cars, trick anyone to put it in their computor.
+  * Cloud - Default configs, public access, of any cloud service.
+  * Supply Chain - Interfere with the organization's IT supply chain (e.g. infect OSS packages, patched hardware, ...)
+    * Managed Service Providers (MSPs) often have special priviledge access to an organization's network.
+    * Hard to adress and mitigate
 
 ### Threat Data & Intelligence
