@@ -92,3 +92,35 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
 * **Segementation and Isolation**
   * Segmentation - Allows systems only to talk to each other within the same segment or limited access to other segments.
   * Isolation - Enirely isolates a system from talking to others
+
+## Threat Landscape
+
+* **Threat Characteristics**
+  * Internal vs. External - Within or outside our organization.
+  * Level of Sophistication/Capability - from script kiddie to APT (advance persistant threat)
+  * Resources/Funding - from hobbyists to government funded
+  * Intent/Motivation - from "trill" to "warfare", from white to black hat
+    * White Hat - Act with authorization and seek vulnerabilities with the intent of correcting them.
+    * Grey Hat - Act without authorization, but seek to inform targets from found vulnerabilities.
+    * Black hat - Act without authorization, with malicious intent.
+* **Advance Persistent Threat (APT)** - Advanced attacks that persistent for a long time, stalking targets to attach when most strategic.
+* **Shadow IT** - Indivduals/groups use technology/tools that are outside the approved solutions.
+* **Threat Actors**
+  * Unskilled - (Script kiddie), little skill, depend on (automated) tools they downloaded, often don't understand how the tools work.
+    * Do not underestimate this threat and risk
+    * They often randomly take targets, and there are many.
+  * Hactivists - Want to reach an activist goal
+    * Might take greater risk, cause their goal is more important than getting caught. Maybe even martyrdom.
+  * Organized Crime - Primairy goal is to make money
+    * Like to be low profile, not get caught, it takes money to make money
+  * Nation-State Attackhers - Often do APT, it's all about strategic power and influence.
+    * They often search for Zero-Day attacks and exploit them.
+  * Insider Threat - Employer, contractor, vendor or anyone with authorized access attacks the organization.
+  * Competitors - Corporate espionage
+
+| Characteristic            | Unskilled | Hacktivists | Organized Crime | Nation-State | Insider | Competitor |
+| ---                       | ---       | ---         | ---             | ---          | ---     | ---        |
+| Internal/External         | External | External (mostly) | External | External | Internal | Both |
+| Sophistication/Capability | Low | Any Level | Mid to High | High | Any | Any |
+| Resources/Funding         | Few | Any range | Many | Many | Few | Many |
+| Intent/Motivation         | Thrill/status | Ideals | Money | Economic/Espionage/Political | Varied | Economic/Business |
