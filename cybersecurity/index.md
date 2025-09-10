@@ -196,5 +196,26 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
   * Conferences and meetups
   * Social Media accounts of security professionals.
 
-## Malicious Code
-Todo...
+## Malware Types
+*Understand what differentiates them*
+
+* **Ransomware** - Take over computer and demand ransom
+  * Crypto - Encrypts files and holds those hostage until payment made
+  * Threaten to report the user un return for money.
+  * Delivery Methods - Often via phising, Remote Desktop Protocal, etc..
+  * Indicators Of Compromise (IoCs)
+    * Command & Control (C&C) traffic to known malicious IP addresses.
+    * Use of legitmate tools in abnormal ways to retain control of compromised system.
+    * Lateral movement processes that seek to attack/gain info about other systems in same trust boundary.
+    * Encryption of files
+    * Data exfiltration behaviors
+    * Notices to end user of the encryptoion process with demands for ransom
+  * Defense - Effective backup system in another location
+* **Trojans**
+* **Worms**
+* **Spyware**
+* **Bloatware**
+* **Viruses**
+* **Keyloggers**
+* **Logic Bombs**
+* **Rootkits**
