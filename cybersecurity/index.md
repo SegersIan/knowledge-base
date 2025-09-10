@@ -203,18 +203,64 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
   * Crypto - Encrypts files and holds those hostage until payment made
   * Threaten to report the user un return for money.
   * Delivery Methods - Often via phising, Remote Desktop Protocal, etc..
-  * Indicators Of Compromise (IoCs)
+  * *Indicators Of Compromise (IoCs)*
     * Command & Control (C&C) traffic to known malicious IP addresses.
     * Use of legitmate tools in abnormal ways to retain control of compromised system.
     * Lateral movement processes that seek to attack/gain info about other systems in same trust boundary.
     * Encryption of files
     * Data exfiltration behaviors
     * Notices to end user of the encryptoion process with demands for ransom
-  * Defense - Effective backup system in another location
-* **Trojans**
-* **Worms**
-* **Spyware**
-* **Bloatware**
+  * *Defense* - Effective backup system in another location
+* **Trojans** - Software often disguised as legitimate software, require user action
+  * Rely on unexpected victims to run them
+  * Sometimes further content is downloaded to extend the malicious code
+  * Connects to a control server and then waits for instructions, allows for local instructions and such
+  * Example: Triada Trojan which was a enhanced version of Whatsapp
+  * RAT: Remote Access Trojans - give attackers with remote access to systems
+  * *Indicators Of Compromise (IoCs)*
+    * Signatures for specifc applications and downloadable files
+    * Command and control system hostnames and IP addresses
+    * Folders or files created on target devices
+    * Frequently connecting to changing remote unknown hosts
+  * *Defense*
+    * Awareness training
+    * Control software that (can) be installed
+    * Verify hashes
+    * Anti-malware
+    * Endpoint detection and Response (EDR)
+* **Worms** - Spread themselves
+  * Spead via vulnerable services, email attachments, network file share, IoT, phones, ...
+  * They self install
+  * Example: Stuxnet
+  * *Indicators Of Compromise (IoCs)*
+    * Known malicious files
+    * Download of additional components from remote systems
+    * Command and control contact to remote systems
+    * Malicious behaviors using system commadns for injection and other activies
+    * Hands-on-keyboard attacker activity
+  * *Defense*
+    * Pre infection
+      * Network-level controls
+      * Fire-walls
+      * Network segmentation
+    * Post infection
+      * antimalware
+      * EDR
+      * Reset hardware
+* **Spyware** - designed to obtain information about individual/organization/system
+  * Track installed software, browsing behavior, web camers, ... and report back to central server.
+  * Stalkerware -> for monitor partners in relationship
+  * It looks like many other malicious code, so the key is the "INTENT" of it's usage.
+  * *Defense*
+    * Antimalware
+    * User awareness
+    * Control software that (can) be installed
+  * *Indicators Of Compromise (IoCs)*
+    * Remove-access and remote-control-related indicators
+    * Known software file fingerprints
+    * Malicious processes, often disguised as system processes
+    * Injection attack against browsers
+* **Bloatware** -
 * **Viruses**
 * **Keyloggers**
 * **Logic Bombs**
