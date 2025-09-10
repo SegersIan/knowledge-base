@@ -260,8 +260,36 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
     * Known software file fingerprints
     * Malicious processes, often disguised as system processes
     * Injection attack against browsers
-* **Bloatware** -
-* **Viruses**
-* **Keyloggers**
+* **Bloatware** - Preinstalled applications (that you don't want), just unwanted
+  * Usually not intentionally malicious
+  * May call home with information about your system and expose a vulnerbability to be exploited
+  * *Defense*
+    * Uninstall
+    * Clean OS image
+  * No IoCs
+* **Viruses** - self-copy and self-replicate, but *don't* spread via vulnerable services and networks (unlike worms)
+  * Require user action to spread, only runs when infected file is run
+  * Usually have a trigger that decides when a virus will execute and a payload (what it will do)
+  * Fileless virus - Shell code that runs command line and script to run malicious code and it will redo that after reboot, while booted, lives in memory often.
+  * *Defense*
+    * Network controls
+    * Intrusion Prevention Systems (IPS)
+  * *Indicators Of Compromise (IoCs)*
+    * See threat feeds
+    * User awareness
+    * Antimalware
+    * Best: Wipe it, and restart from clean image or safe backip
+* **Keyloggers** - Captures keystrokes from keyboard (and mouse, credit swipes, and any other input)
+  * Goal is for the attack to analyze these inputs
+  * *Defenses*
+    * Usere Awareness
+    * antimalware
+    * Patching and updates
+  * *Indicators Of Compromise (IoCs)*
+    * File hashes and signatures
+    * Extrafiltration activity to command and control systems
+    * Process banes
+    * Known reference URLS
 * **Logic Bombs**
+  *
 * **Rootkits**
