@@ -281,6 +281,7 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
     * Best: Wipe it, and restart from clean image or safe backip
 * **Keyloggers** - Captures keystrokes from keyboard (and mouse, credit swipes, and any other input)
   * Goal is for the attack to analyze these inputs
+  * Exists as Sofware and hardware
   * *Defenses*
     * Usere Awareness
     * antimalware
