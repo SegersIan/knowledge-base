@@ -229,7 +229,7 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
     * Anti-malware
     * Endpoint detection and Response (EDR)
 * **Worms** - Spread themselves
-  * Spead via vulnerable services, email attachments, network file share, IoT, phones, ...
+  * Spread via *vulnerable services*, email attachments, network file share, IoT, phones, ...
   * They self install
   * Example: Stuxnet
   * *Indicators Of Compromise (IoCs)*
