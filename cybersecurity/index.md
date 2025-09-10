@@ -164,3 +164,34 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
 * **OSINT**
   * Key is to find up-to-date sources
   * [Examples](./resources.md#Threat%20Feeds)
+* **Proprietary & Closed-Source Intelligence**
+  * Might provide, better, curated and quality threat feeds
+* **Use multiple feeds** - To cross check if any is slow or not updating
+* **Threat Maps** - Geographic view of threat intelligence, but notoriously unreliable (VPNs, Proxies, ...)
+* **Assessing Threat Intelligence** - regardless the source, assesment is required
+  * Is it timely?
+  * Is this information accurate? - Can you rely on provided information? Often correct?
+  * Is this information relevant? - Might not be relevant to your organization
+  * *Confidence Score* - Filter/assess data based on how much they trust it.
+    * The lower the score, one should be cautious to make important decisions, but not ignore the source
+    * The higher the score, the more trust and cofidence can go in major decisions.
+  * Many threat feeds provice a score. For example:
+    * 90 - 100: Confirmed - multiple sources and direct analysis to confirm its true
+    * 70 - 89: Probable - Depends on logical inference
+    * 50 - 60: Possible - agreed with the analysis but assesment not confirmed
+    * 30 - 49: Doubtful - Possible but not the most likey option, but there is no information that allows to disprove it
+    * 2 - 29: Impropable - Possible but refuted by others
+    * 1 : Discredited - Just plain not true
+* **Threat Indicator Management & Exchange** - standerized communication protocals
+  * Structured Threat Information eXpression (STIX) - XML, a json variation exists
+  * Trusted Automated eXchange of Intelligence Information (TAXII) - communicate on HTTP level.
+  * [See Github](https://oasis-open.github.io/cti-documentation/)
+* **Information Sharing Organizations**
+  * Industry-specific collaborative organizations that facilitate trusted human + machine
+  * Information Sharing and Analys Centers (ISACs) - for intrastructuree owners and operators
+  * [National ISACS](https://www.nationalisacs.org/)
+* **Conducting Your Own Research**.
+  * Vendor security information sites
+  * Academic Journals and Technical Publications
+  * Conferences and meetups
+  * Social Media accounts of security professionals.
