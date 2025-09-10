@@ -124,3 +124,24 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
 | Sophistication/Capability | Low | Any Level | Mid to High | High | Any | Any |
 | Resources/Funding         | Few | Any range | Many | Many | Few | Many |
 | Intent/Motivation         | Thrill/status | Ideals | Money | Economic/Espionage/Political | Varied | Economic/Business |
+
+* **Attaker Motivations**
+  * Data exfiltration -
+  * Espionage -
+  * Service disruption -
+  * Blackmail -
+  * Financial Gain -
+  * Ideoligy/Beliefs -
+  * Ethical -
+  * Revenge -
+  * Disruption/chaos -
+  * War -
+* **Threat Vectors and Attack Surfaces**
+  * Message-Based-
+  * Wired networks -
+  * Wireless networks-
+  * Systems-
+  * Files & Images-
+  * Removeable devices-
+  * Cloud-
+  * Supply Chain-
