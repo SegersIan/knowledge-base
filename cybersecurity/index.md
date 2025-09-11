@@ -397,3 +397,48 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
   * Offline: You have the hashes or offline copy and you can in all peace go at it.
     * For example a precomputed list of hashes (Rainbow table attack)
       * Hash salts and peper is used to counter rainbow table attack
+
+## Security Assesment and Testing
+
+### Vulnerability Management
+
+* **Identify Scan Targets**
+* **Determin Scan Frequency**
+* **Configuring Vulnerability Scans**
+* **Scanner Maintenance**
+* **Vulnerability Scanning Tools**
+* **Reviewing and Interpreting Scan Reports**
+* **Confirmation of Scan Results**
+
+### Vulnberability Classification
+
+* **Patch Management**
+* **Legacy Platforms**
+* **Weak Configurations**
+* **Error Messages**
+* **Insecure Protocals**
+* **Weak Encryption**
+
+### Penetration Testing
+
+* **Adopting the Hacker Mindset**
+* **Reasons for Penetration Testing**
+* **Benefits of Penetration Testing**
+* **Penetration Test Typees**
+* **Rules Of Engagement**
+* **Reconnaissance**
+* **Runnung the test**
+* **Cleaning Up**
+
+### Audits and Assesments
+
+* **Security Tests**
+* **Security Assesments**
+* **Security Audits**
+
+### Vulnerability Life Cycle
+
+* **Vulnerability Identification**
+* **Vulnerability Analysis**
+* **Vulnerability Response and Remediation**
+* **Reporting**
