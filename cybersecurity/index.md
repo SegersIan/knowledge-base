@@ -524,11 +524,40 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 
 ### Penetration Testing
 
-* **Adopting the Hacker Mindset**
+* **Adopting the Hacker Mindset** - Instead of defending against everything, you just need to find one little crack, you only need to win once
+  * Taking an adversary mindset
 * **Reasons for Penetration Testing**
+  * Complentary to all other efforts, and brings another angle.
 * **Benefits of Penetration Testing**
-* **Penetration Test Typees**
-* **Rules Of Engagement**
+  * Benchmark: someone with the skillset of this pen tester can or cannot get in
+  * Get remediation tips and insights
+  * Get step by step insights on how to reproduce vulnerabilities
+  * **Threat Hunting** is also using a hacker mindset, but you don't test against the live system,
+    * They imagine on how a hacker might have getting around a security control, what evidence they might leave behind and then search for proof (IoCs).
+    * THis outputs usually different results.
+    * If they find compromise, go incident handling mode, and create postmortem.
+* **Penetration Test Types**
+  * 4 Categories
+    * Physical - focus on physical security controls
+    * Offensive - By redteam - Pentester acts as attackers to identify and exploit
+    * Defensive - By blueteam - Focus on ability to defend against attacks and assses the effectiveness, so they can simulatee an attack and then see if they're able to respond well.
+    * Integrated - Combines Offensive and Defensive
+ * 3 types of knowledge before starting
+  * White/Clear Box or Known Environment tests - All tech information provided
+    * Less time on discovery, more time for targetted efforts of attack.
+  * Grey Box or partially known Environment tests - A blend
+    * Helps to target a pentesters focus and time but still to a degree mimick the experience for a hacker.
+  * Black Box or unknown Environment tests -
+    * More real life situation that an attacker experiences, so more discovery and more time consuming.
+* **Rules Of Engagement (RoE)**
+  * Timeline - When, how long?
+  * Scop - Inclide/exclude locations, systems, applications, or other potential targets
+  * Data Handling requirements - How to handle an information that got disclosed during the pentest
+  * Target Expected Behavior - What behavior to expect from the target
+  * Commited Resources - Time commitment of certain personal during the testing
+  * Legal concerns
+  * When and how communications happen - regular updates? What if a critical issue is found ? etc...
+  * Permission: Make sure to have a signed permission, your free out of jail card when getting caught or things go south.
 * **Reconnaissance**
 * **Runnung the test**
 * **Cleaning Up**
