@@ -402,14 +402,101 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
 
 ### Vulnerability Management
 
-* **Identify Scan Targets**
-* 
+Definition: Identify, prioritize and remediate vulnerabilities in your environment(s).
 
+* **Identify Scan Targets**
+  * The scope depends, it can be all systems or depending on some critercia:
+    * What is the data classification of the information at-rest/in-transit/in-use by the system?
+    * Is the system publicly exposed?
+    * What services are running on the system?
+    * Is it dev/staging/prod?
+  * Key goal: Build an asset inventory and then decide to which subset the scope reaches.
+  * ASV: Approved Scan Vendor (in case of PCI DSS compliance)
 * **Determin Scan Frequency**
+  * How often should they run?
+  * Influenced by
+    * Risk appetite
+    * Regulatory Requirements - Like PCI DSS or FISMA that dictate a minimum frequency
+    * Technical Constraints - If a test takes 12h, you can only run 2/day.
+    * Business Constraints - Scans might cause disruptions that are not acceptable.
+    * Licensing limitations
+  * TIP: Start Small and increase based on needs, feedback and experience.
+  * Examples: Nesus
 * **Configuring Vulnerability Scans**
+  * *Scan Sensitivity Levels* - Determine the types of check, but could disrupt target environments if too agressive
+    * 1 distinct vulnerability = 1 plugin
+    * 1 plugin family = 1 OS, application, ...
+    * Disabling unnecessary plugins improves speed
+  * *Supplementing Network Scans*
+      * Server-based scanning: Basic test run and probe over the network, testing from a distance - simulates realistically what an attacker sees. (ala Server-based scanning)
+      * Firewalls and other security controls might impact the scan results.
+      * Supplement server-based scans with extra information of the targets/systems
+        * Credentialed Scanning: Scanner can verify first with a system if possible vulnerability is already mitigated (e.g. right patch installed). They only retrieve info, so make sure there is read only access (least privlege) for the used credentials.
+        * Agent-Bases Scanning: Scan configuration, inside-out scan, and report back to scanner.
+          * Some fear the performance/stability impact of such agents, start small to gain trust and confidence
+  * *Scan Perspective*
+    * A perspective: A specific location within the network, so you can run tests from different "perspectives".
+    * Example: One perspective is public internet, Other perspective from the intranet. (PCI DSS requires this)
+    * Might be impacted by
+      * Firewall settongs
+      * Network segmentation
+      * Intrusion detection systems (IDSs)
+      * Intrusion prevention systems (IPSs)
 * **Scanner Maintenance**
+  * Make sure that vulnerability feeds are up-to-date
+* **Scanner software**
+  * Make sure to patch the scanner software itself, for vulnerabilities.
+* **Vulnerability Plug-In Feeds**
+  * Automatically and regularrly auto download new plugs related to new vulnerabilities.
+  * *Security Content Automation Protocol (SCAP)* - by NIST, Standerized way of communicating security-related information
+    * Common Configuration Enumeration (CGE) - discuss system config issues
+    * Common Platform Enumeration (CGE) - describe product names and versions
+    * Common Vulnerabilities and Exposures (CVE) - describe security-related software flaws (before: Common Vulnerability Enumeration)
+    * Common Vulnerability Scoring System (CVSS) - describe severity of CVE's
+    * Common Configuration Checklist Description Format (XCCDF) - describe checklists and reporting results of said checklists
+    * Open Vulnerability and Assesment Language (OVAL) - describe low level testing procedures by said checklists
 * **Vulnerability Scanning Tools**
-* **Reviewing and Interpreting Scan Reports**
+  * *Network Vulnerability scanners* - Tenable's Nessus, Qualy, Rapid7's Nexpose, OpenVAS
+  * *Application Vulnerability Scanners* - Static Testing (the code), Dynamic Testing (runtime), Interactive Testing (combining both)
+  * *Web Application Vulnerability Scanners* - Niko, Arachimi, Acunetix and Zed Attach Proxy (ZAP)
+    * Specialized in WEB applications and their typical vulnerabilities
+      * Cross-Site Scripting (XSS)
+      * Cross-Site Forgery (XSF)
+      * SQL Injection
+      * Etc
+* **Understanding CVSS (v3.1)**
+  * This scored is often used to priorite what to act on first.
+  * from 0 to 10 rating
+    * 0.0 - None
+    * 0.1 -> 3.9 - Low
+    * 4.0 -> 6.9 - Medium
+    * 7.0 -> 8.9 - High
+    * 9.0 -> 10 - Critical
+  * Calculated by
+    * 3 metrics types
+      * First 4 evaluate *the exploitability*
+      * Next 3 evaluates *the impact*
+      * Last 1 evaluates *the scope scope*
+    * 8 distrinct metrics
+      1. Attack Vector (exploitability) - Need to be physcally there or can it be remotly?
+      2. Attack Complexity (exploitability) - Do I need specialized conditions ?
+      3. Privileges Required (exploitability) - What privileges do I need  ?
+      4. User Interaction (exploitability) - is another human required ?
+      5. Confidentiality (impact)
+      6. Integrity (impact)
+      7. Availability (impact)
+      8. Scope
+    * The total score (and other derivates) can be computed, as the individual scores are in the CVSS format.
+    * Example CVSS Vector: `CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N`
+      * CVSS Format `v3.0`
+      * Attack Vector `Network`
+      * Attack Complexity `Low`
+      * Privileges Required `None`
+      * User Interaction `None`
+      * Scope `Unchanged`
+      * Confidentiality `High`
+      * Integrity `None`
+      * Availability `None`
 * **Confirmation of Scan Results**
 
 ### Vulnberability Classification
