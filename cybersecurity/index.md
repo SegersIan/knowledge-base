@@ -562,6 +562,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
   * Even in white box, reconnaissance is done to supplement.
   * Passive reconnaisance - gather info without interacting with the target or organization
   * Active reconnaisance - directly engage, like port scanning etc...
+    * Footprinting: Scanning which servers are used and versions
   * War Driving/Flying - Drive/Fly by office with high-end antennas and attempt to eavesdrop or connect to WIFI.
 * **Running the test** - Key phases
   * Initial Access - when attacker exploits a vulberability to gain access to the organization's network.
