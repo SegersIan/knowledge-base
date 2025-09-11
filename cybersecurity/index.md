@@ -559,8 +559,20 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
   * When and how communications happen - regular updates? What if a critical issue is found ? etc...
   * Permission: Make sure to have a signed permission, your free out of jail card when getting caught or things go south.
 * **Reconnaissance**
-* **Runnung the test**
+  * Even in white box, reconnaissance is done to supplement.
+  * Passive reconnaisance - gather info without interacting with the target or organization
+  * Active reconnaisance - directly engage, like port scanning etc...
+  * War Driving/Flying - Drive/Fly by office with high-end antennas and attempt to eavesdrop or connect to WIFI.
+* **Running the test** - Key phases
+  * Initial Access - when attacker exploits a vulberability to gain access to the organization's network.
+  * Privilege Escalation - using hacking techniques to elevate from initial access.
+  * Pivot/lateral move - hacker gains access to other systems from the initial compromised system
+  * Establish persistance - Installing backdoors  and other techniques that allows to regain access at a later stage.
+  * [Metasploit](https://www.metasploit.com/)
 * **Cleaning Up**
+   * Present results
+   * Cleanup traves of their work
+   * Remove any tools or malware they might have installed
 
 ### Audits and Assesments
 
