@@ -609,7 +609,28 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
       * Maintainted by ISACA which also created CISA (Certified Information Systems Auditor), CISM (Certified Information Security Manager)
 
 ### Vulnerability Life Cycle
+
 * **Vulnerability Identification**
+  * Potential Sources: Vulnerability scans, pentration tests, Responisble disclosure, Audits
 * **Vulnerability Analysis**
+  * Validate if it exists
+  * Prioritize and categorize using CVE and CVSS
+  * Supplement with external analysis
 * **Vulnerability Response and Remediation**
+  * Based on scoring, we can guide which are most in need of remediation
+  * Some examples how Cybersecurity specialists deal with it:
+    * Patching
+    * Network segmentation to decrease the risk
+    * Implement other compensating controls (Firewalls, IPS,...)
+    * Purchase insurance to transfer risk
+    * Formally accept risk
+* **Vulnerability of Remediation**
+  * Test by rescanning or reproducing
+  * Might need to be done by external auditors
 * **Reporting**
+  * Communicate findings, action taken, lessons learned to relevant stakeholders. Make sure decisions makers are informed.
+  * May include:
+    * Identified, analyzed and remediated vulnberabilities with CVE/CVSS
+    * Details on remediation steps
+    * Highlight trends, conclusions, insights
+    * Offer recommendations for improvement
