@@ -403,6 +403,8 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
 ### Vulnerability Management
 
 * **Identify Scan Targets**
+* 
+
 * **Determin Scan Frequency**
 * **Configuring Vulnerability Scans**
 * **Scanner Maintenance**

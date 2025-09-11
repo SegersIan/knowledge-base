@@ -1,5 +1,9 @@
 # OSINT: Open Source Intelligence
 
+## Certifications
+
+* https://www.giac.org/certifications/open-source-intelligence-gosi/
+
 ## Methodology
 
 ### [Intelligence Cycle](https://en.wikipedia.org/wiki/Intelligence_cycle)
