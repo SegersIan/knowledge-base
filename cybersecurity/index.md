@@ -576,12 +576,39 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 
 ### Audits and Assesments
 
-* **Security Tests**
-* **Security Assesments**
-* **Security Audits**
+* **Security Tests** - Verify that a control is functioning properly
+  * Should happen regular
+  * Focus on the key security controls
+  * Asses following factors when scheduling a test
+    * Availability of security testing resources
+    * Criticality of the systems and appliications protected by the tested controls
+    * Sensitivity of information contained on tested systems and applications.
+    * Likelihood of technical failure of the mechanism implementing the control.
+    * Likelihood of a misconfiguratiin on the control that would jeopardize security.
+    * Risk that the system will come under attack
+    * Other changes the technical env that might affect control performance.
+    * Difficulty and time required to perform a control test
+    * Impact of the test on normal business operation
+  * TL;DR; Design your tests rigourisly
+  * **Responsible Disclosure Programs**
+    * Allows security researchers to securily info about vulnerabilities in a product with the vendor.
+    * Bug bounties is a form of this
+* **Security Assesments** - Comprehesive review of the security of a give scope
+  * Perform risk assesment of a said scope
+* **Security Audits** - External/impartial people who test the security controls
+  * Uses similar techniques as security assesments
+  * Results in an attestation (good for certification)
+  * With internal auditing, the auditors have a different line of reporting than the security team.
+  * Requested by the organization itself or its governing body
+  * Service Organized Controls (SOC)
+  * External audits are for attestation
+    * Independent Third Party Audits are a subgroup
+      * Here the request for the audit comes from a regulator, customer or other outside entity.
+  * *Auditing Standards*
+    * Control Objectives for Information and related Technologies (COBIT) - requirements surrounding information systems
+      * Maintainted by ISACA which also created CISA (Certified Information Systems Auditor), CISM (Certified Information Security Manager)
 
 ### Vulnerability Life Cycle
-
 * **Vulnerability Identification**
 * **Vulnerability Analysis**
 * **Vulnerability Response and Remediation**
