@@ -506,14 +506,21 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * Security Information and Event Management (SIEM) - corrolate log files from different sources
     * Configuration Management Systems - provide info on systems and what's installed on them
 
-### Vulnberability Classification
+### Vulnerability Classification
 
-* **Patch Management**
-* **Legacy Platforms**
+* **Patch Management** - Often ignored due to lack of resources or "Fear" of change/instability
+* **Legacy Platforms** - Discontinued products, Often ignored due to lack of resources or "Fear" of change/instability
 * **Weak Configurations**
-* **Error Messages**
-* **Insecure Protocals**
+  * Use of default config (admin/setup page still exposed)
+  * Default credentials or unsecured accounts
+  * Open service ports (but unused)
+  * Permissions that violate the least privilege
+* **Error Messages** - Descriptive error messages, useful to the attacker, especially if debug mode is still on
+* **Insecure Protocols** - Discontinued or old protocol versions
 * **Weak Encryption**
+  * Most important:
+    * The algorithm
+    * The key that goes with it
 
 ### Penetration Testing
 
