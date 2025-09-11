@@ -498,6 +498,13 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
       * Integrity `None`
       * Availability `None`
 * **Confirmation of Scan Results**
+  * When a vulnerability is present: Possitive report
+  * When a vulnerability is not present: Negative report
+  * A positive or negative report can be "false" if an error occurd and the opposite is true
+  * Don't trust only the results, do supplementary research and verifications with sources like
+    * Log files
+    * Security Information and Event Management (SIEM) - corrolate log files from different sources
+    * Configuration Management Systems - provide info on systems and what's installed on them
 
 ### Vulnberability Classification
 
