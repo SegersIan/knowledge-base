@@ -635,3 +635,68 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * Details on remediation steps
     * Highlight trends, conclusions, insights
     * Offer recommendations for improvement
+
+## Application Security
+
+### Software Assurance Best Practices
+
+* **The Software Development Lifecycle**
+* **Software Development Phases**
+* **DevSecOps and DevOps**
+
+### Designing and Coding For Security
+
+* **Secure Coding Practices**
+* **API Security**
+
+### Software Security Testing
+
+* **Analyzing and Testing Code**
+
+### Injection Vulnerabilitiies
+
+* **SQL Injection Attacks**
+* **Code Injection Attacks**
+* **Command Injection Attacks**
+
+### Exploiting Authentication Vulnerabilities
+
+* **Password Authentication**
+* **Sessoom Attacks**
+
+### Exploiting Authorization Vulnerabilities
+
+* **Insecure Direct Object References**
+* **Directory Traversal**
+* **File Inclusion**
+* **Privilege Escalation**
+
+### Exploiting Web Application Vulnerabilities
+
+* **Cross-Site-Scripting XSS**
+* **Request Forgery**
+
+### Application Security Controls
+
+* **Input Validation**
+* **Web Application Firewalls**
+* **Parameterized Queries**
+* **Sandboxing**
+* **Code Security**
+
+
+### Secure Coding Practices
+
+* **Source Handling Comments**
+* **Error Handling**
+* **Hard-Coded Credentials**
+* **Package Monitoring**
+* **Memory Management**
+* **Race Conditions**
+* **Unprotected APIs**
+
+### Automation and Orchestration
+
+* **Use Cases of Autmation and Scripting**
+* **Benefits of Automation and Scripting**
+* **Other Considerations**
