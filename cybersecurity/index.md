@@ -684,7 +684,6 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 * **Sandboxing**
 * **Code Security**
 
-
 ### Secure Coding Practices
 
 * **Source Handling Comments**
