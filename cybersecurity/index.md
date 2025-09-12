@@ -859,13 +859,26 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 
 ### Secure Coding Practices
 
-* **Source Handling Comments**
-* **Error Handling**
+* **Source Handling Comments** - Remove code comments in production code (for the non compiled code, like JS)
+* **Error Handling** - Be cautious that error messages dont give to much detail, no debug mode in prod!
 * **Hard-Coded Credentials**
-* **Package Monitoring**
+  * Well intentioned backdoor - Once the credentials are known, any deployed version is at risk
+  * Non intentioned - API keys etc..
+* **Package Monitoring** - Monitor your dependencies and packages,
 * **Memory Management**
+  * *Resource Exhaustion* - Can make the application crash (e.g. memory leak)
+  * *Pointer Deference* - Memory Pointers, when a pointer points to a memory spot with unkown value it can crash or worst case bypass validation
+  * *Buffer Overflows* - Attack tricks the app to handle more data then it has assigned.
+    * Memory Injection: Goal is to overwrite memory with instructions that might be executed by another process running on the system
 * **Race Conditions**
+  * When Security of the code depends upon a sequence of events within the system
+    * *Time-Of-Check (TOC)* - When a system verifies access permissions or other security controls.
+    * *Time-Of-Use (TOU)* - When the system access the resources or permission that was granted.
+    * *Target of Evaluation (TOE)* - refers to component/system being evaluated or tested for potential vulnerabilities.
+    * *TIme-Of-Check-To-Time-Of-Use* issue is a race condition when the app checks the permission too far ahead of a resource request.
+    * Example: If an attacker logs in and has `admin` rights via a web interface, leaves that session open for a day, but within a hour his `admin` rights are taken away, this change might not be observed yet everywhere, cause a session is open and permissions were already evaluated.
 * **Unprotected APIs**
+  * APIs should be authenticated and make sure that at every endpoint AutH and AuthZ is happening.
 
 ### Automation and Orchestration
 
