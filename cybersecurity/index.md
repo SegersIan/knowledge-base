@@ -4,6 +4,10 @@
 
 * [Resources](resources.md)
 
+## Certificats
+
+![ing](assets/learning_paths.jpeg)
+
 ## General Concepts
 
 ### The 3 Cybersecurity Objectives
