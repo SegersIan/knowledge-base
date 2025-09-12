@@ -820,10 +820,42 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 ### Application Security Controls
 
 * **Input Validation**
-* **Web Application Firewalls**
+  * Protects agains Injection attackes, XSS, XSRF, SSRF and many more.
+  * Best method: Allow Listing
+    * When you expect an age, only allow values between 0 - 125, anything else get rejected.
+    * Remember, always test at least server side.
+  * Next best method: Deny Listing (Cause often describing only what is allow is to wide)
+    * Look and block for SQL code, HTML tags, etc..
+  * Parameter Pollution - a trick attackers try to get around input validatio/filtering
+    * Example `www.example.com/status?account=1&account=1' or 1=1;--`
+      * Here the hope is that validiation only happens on the first specification of the parameter, but not the second.
+      * This behaviour is very tech specific (PHP, ExpressJS, ASP, Python Flask,....) so the hack really depends on the web server stack.
+      * Example : Authentication Bypass - it might take the right passwor for user `guest` but think it was user `admin`
+      ```
+      POST /login
+      user=admin&pass=wrong&user=guest&pass=correct
+      ```
+      * Example : Rate Limiting bypass
+      ```
+      GET /api/data?user_id=victim&user_id=attacker
+      ```
+* **Web Application Firewalls (WAFS)**
+  * A WAF sits in front of the actual web server and acts like a firewall but on application level. It can inspect requests and intercept/filter anything suspicious, which would be another layer of security, hopefully blocking this that the eventual backend is not handling.
+  * Note that the client has a TLS connection to the WAF, so the WAF can inspect all traffic, but then forwads the request as a new TLS connection to the origins server.
 * **Parameterized Queries**
+  * Input is not put directly into the SQL string, but parameterized, this way the entire input data is pure data, not a part of the SQL text. So it's uses as a literal string. Unescapable (is the theory)
 * **Sandboxing**
+  * Run app in a controlled or isolated environment, preventing interaction with surroundings.
 * **Code Security**
+  * Securing the code itself
+  * *Code Signing* - Sign code by devs to confirm authencity (PGP signature for example)
+  * *Code Reuse* - Monitor and mainting even higher standards for reused code (e.g. SDKs)
+  * *Software Diversity* - Watch for single points of failuree
+  * *Code Repositories* - versioning and history is great for audit
+  * *Integrity Measurement* - Make sure that approved code its hash matches to the hash being deployed
+  * *Application Resilience* - through 2 ways
+    * Scalability - designed so extra resources can be added
+    * Elasticty - a step further, it provisions extra resources when it needs it
 
 ### Secure Coding Practices
 
