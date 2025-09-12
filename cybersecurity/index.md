@@ -641,13 +641,33 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 ### Software Assurance Best Practices
 
 * **The Software Development Lifecycle**
-* **Software Development Phases**
+  * Planning > Requirements > Design > Coding > Testing > Training & Transition > Ongoing Ops/maintenance > End Of Life (Decommission)
+  * dev env > for devs
+  * test env > QA/Preprod
+  * staging > tested but awaiting deployment
+  * prod
 * **DevSecOps and DevOps**
+  * Sec becomes a shared responsibility, just like the Ops.
 
 ### Designing and Coding For Security
 
 * **Secure Coding Practices**
+  * Open Worldwide Application Security Project (OWASP) - best resource for secure coding practices.
+  * Top Proactive Security Controls by OWASP
+    * Define Security Requirements
+    * Leverage Security Frameworks
+    * Secure Database Access
+    * Encode an Escape Data
+    * Validate all inputs
+    * Implement DIgital Identity
+    * Enforce Access Controls
+    * Priotect Data Everywhere
+    * Implement Security Logging and Monitoring
+    * Handle all errors and exceptions
+  * [OWASP Proactive Controls](https://top10proactive.owasp.org/)
+  * [OWASP Quick Reference](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
 * **API Security**
+  * [OWASP API Security](https://owasp.org/www-project-api-security/)
 
 ### Software Security Testing
 
