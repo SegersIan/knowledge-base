@@ -671,11 +671,44 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 
 ### Software Security Testing
 
+* [State Of Software Security Report](https://www.veracode.com/resources/analyst-reports/state-of-software-security-2025/)
 * **Analyzing and Testing Code**
+  * Static Code Analysis - reads the actual code to find flaws in it
+  * Dynamic Code Analysis - runs the code to find flaws in it
+  * Fuzzing - send random data to application to see how it handles unexpected data
 
 ### Injection Vulnerabilitiies
 
 * **SQL Injection Attacks**
+  * Happens when User Input is directly used in a SQL Query
+    * Query Used `SELECT * FROM Products WHERE Name LIKE '%user_input_value%'`
+    * User Input `cola'; SELECT * FROM users; --` instead of just `cola`
+    * Results in : `SELECT * FROM Products WHERE Name LIKE 'cola'; SELECT * FROM users; --`, so 2 SQL queries
+    * However, the results might not be returned/visible to the user, solution? *Blind SQL Injection*
+    * **2 Blind SQL Injection Types**
+      * *Blind Content-Based SQL Injection*
+        * First: Validate if SQL Injection is possible
+        * Asume we expect an UserID as User input, and let's assume `123` is a vailid UserID.
+        * Query Used `SELECT * FROM Users WHERE Id = '%user_input_value%'`
+        * Specify `123' OR 1=1` which results in `SELECT * FROM Users WHERE Id = '123' OR 1=1`
+        * This returns multiple rows, did it break anything on the front end? No ? Good ✅
+          * You might not see the multiple rows due to business logic,but it DID EXECUTE properly (you get feedback that the query was valid)
+        * Now specify `123' OR 1=2` which results in `SELECT * FROM Users WHERE Id = '123' OR 1=2`
+        * This returns no row, did it break anything on the front end aside of just saying that there were no results? Yes ? Good ✅
+        * We can now asume that SQL injection is possible.
+        * ***Now you can inject other querys that ALTER data. The baseline feedback if it was succesful or not your query is established in previous steps. Based on the _CONTENT_ you were able to validate if your queries are working***
+      * *Blind Time-Based SQL Injection* - (example in Microsoft SQL)
+        * First: Validate if SQL Injection is possible
+        * Asume we expect an UserID as User input, and let's assume `123` is a vailid UserID.
+        * Specify `123'; WAITFOR DELAY '00:00:15'` which results in `SELECT * FROM Users WHERE Id = '123'; WAITFOR DELAY '00:00:15'`
+        * If the query now takes 15 seconds to execute, we can be quite confident that the SQL injection is possible. ✅.
+        * ⚠️ Now this "timer" trick, can be also used to signal back if something was 'true' (if true, wait 15 seconds, else not).
+          * An example, assuming the password is cleartext
+          ```
+            For each character in the password
+              For each letter in the alphabet
+                if the current character is equal to the current letter, wait 15 seconds before returning results
+          ```
 * **Code Injection Attacks**
 * **Command Injection Attacks**
 
