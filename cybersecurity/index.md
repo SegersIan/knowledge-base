@@ -680,6 +680,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 ### Injection Vulnerabilitiies
 
 * **SQL Injection Attacks**
+  * Is also a class under Code Injection attacks.
   * Happens when User Input is directly used in a SQL Query
     * Query Used `SELECT * FROM Products WHERE Name LIKE '%user_input_value%'`
     * User Input `cola'; SELECT * FROM users; --` instead of just `cola`
@@ -710,12 +711,43 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
                 if the current character is equal to the current letter, wait 15 seconds before returning results
           ```
 * **Code Injection Attacks**
+  * Examples
+    * LDAP Injection Attack - Embed commands in text as part of a LDAP query
+    * XML Injection Attack - Embed code in XML text
+    * DLL Injection Attack - Force an application to load a (malicious) DLL that was not a part of the process.
+    * Cross-Site-Scripting (XSS)
 * **Command Injection Attacks**
+  * When an application executes a command against the OS, there is a potential for exploitation.
+  * Example
+    * You have a webpage to create a user and the end user must specify a username in a form
+    * On creation, the app might run a command to create a folder for that new user `system('mkdir /home/students/<mynewusername>`)
+    * What if the user specifies `mynewusername && rm -rf home`
+    * Now we have piped again additional commands
+    * ⚠️ Note that there is again no feedback/response, but you could try to have a script use a time or a `curl` command to post back the output to a webserver you own.
 
 ### Exploiting Authentication Vulnerabilities
 
 * **Password Authentication**
-* **Sessoom Attacks**
+  * Flaw: Once an attacher knows a password, they can keep using it for access.
+  * Risk: Social Engineering, unencrypted traffic, password dumps from hacked sites, brute force, guessing
+* **Session Attacks**
+  * *Cookie Stealing & Manipulation*
+    * Steal an existing (authentication) session
+    * After auth, the session token is stored in browser cookie for further request auth
+    * How to steal it?
+      * Unencrypted network traffic
+      * Malware in browser
+      * On Path attack - Impersonate target site, forward the actual credentials to target site, return the request to the user with the cookie, but now you also have that cookie. (But you know then the credentials either way?)
+    * Once you have the cookie
+      * Session Replay Attack - The attacker reuses the session of the target
+    * Defenses
+      * Mark Cookie `SECURE` - tells the browser to never send it over unencrypted requests
+    * NTLM pass-the-hash
+      * NTLM hash is the hash function in windows to store user's passwords.
+      * So if you can intercept this hash, instead of the username/password, you can also authenticate in/with windows.
+  * *Unvalidated Redirects*
+    * Example: `example.com/order?redirect_ok=https://evilsite.com` and then the evil site can impersonate and ask to re authenticate again or whaterver
+    * Example: `example.com/login?login_ok=https://evilsite.com`, then after login it might call `https://evilsite.com?csrf_token=<somevalue>` or the `Referer: https://bank.com/transfer?sessionid=abc123&csrf_token=xyz789` header
 
 ### Exploiting Authorization Vulnerabilities
 
