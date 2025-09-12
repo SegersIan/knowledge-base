@@ -807,7 +807,15 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
         document.getElementById('malicious-form').submit();
     </script>
     ```
+    * Defenses: secure tokens, check in reffering url to only accept urls that originate from own domain.
   * **Server-Side Request Forgery SSRF**
+    * Here we want the server/back-end to make an web call to a url.
+    * Let's say you have a web application that takes an URL as input
+    * That URL would be used to fetch remote information, and it would return that in some form.
+    * Imagine for that URL, you specifcy a URL or IP address that would be not publicly available, but only to your back-end server
+    * Example: `GET /preview?url=http://localhost:8080/admin/users`
+    * Example: `GET /preview?url=http://169.254.169.254/latest/meta-data/iam/security-credentials/` on AWS exposes IAM credentials
+    * Example: `GET /preview?url=file:///etc/passwd`
 
 ### Application Security Controls
 
