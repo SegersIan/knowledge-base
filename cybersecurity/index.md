@@ -796,7 +796,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * Example HTMl on the `evil.com` site
     ```html
         <!-- Hidden on evilsite.com -->
-        <form action="https://mybank.com/transfer" method="POST" id="malicious-form">
+        <form action="https://somebank.com/transfer" method="POST" id="malicious-form">
             <input type="hidden" name="to_account" value="999999">
             <input type="hidden" name="amount" value="5000">
             <!-- Note: no CSRF token! -->
