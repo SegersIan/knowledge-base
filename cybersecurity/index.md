@@ -888,6 +888,7 @@ Automation can remove human error and make security easier and more scaleable.
 
 * **Use Cases of Autmation and Scripting**
   * Examples: User provisioning, resource provisioning, guard rails, security groups, ticket creation, escalation, enabled/disabling services and access, CI & testing, Integrations and APIs
+    * Guard Rails: Enforce policy controls and prevent violations of security protocols
 * **Benefits of Automation and Scripting**
   * Less chance for human error
   * Consistency in how things are done
