@@ -882,6 +882,17 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 
 ### Automation and Orchestration
 
+SOAR: Security Orchestration, Automation, and response platforms.
+
+Automation can remove human error and make security easier and more scaleable.
+
 * **Use Cases of Autmation and Scripting**
+  * Examples: User provisioning, resource provisioning, guard rails, security groups, ticket creation, escalation, enabled/disabling services and access, CI & testing, Integrations and APIs
 * **Benefits of Automation and Scripting**
+  * Less chance for human error
+  * Consistency in how things are done
+  * Standerization
+  * Scale in secure manner
+  * Speed up
 * **Other Considerations**
+   * Complexity, Cost, Single point of failure, Technical Debt, Ongoing supportability
