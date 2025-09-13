@@ -1036,3 +1036,38 @@ Automation can remove human error and make security easier and more scaleable.
 * **Virtual Private Networks and Remote Access Network Appliances and Security Tools Deception and Disruption Technology**
 * **Network Security, Services, and Management**
 ### Secure Protocols
+* **Using Secure Protocols**
+* **Secure Protocols**
+### Network Attacks
+* **On-Path Attacks**
+* **Domain Name System Attacks**
+* **Credential Replay Attacks**
+* **Malicious Code**
+* **Distributed Denial-of-Service Attacks**
+
+
+## Wireless and Mobile Security
+### Building Secure Wireless Networks
+* **Connection Methods**
+* **Wireless Network Models**
+* **Attacks Against Wireless Networks and Devices**
+* **Designing a Network**
+* **Controller and Access Point Security**
+* **Wi-Fi Security Standards Wireless Authentication**
+### Managing Secure Mobile Devices
+* **Mobile Device Deployment Methods**
+* **Hardening Mobile Devices Mobile Device Management**
+
+
+## Monitoring and Incident Response
+### Incident Response
+* **The Incident Response Process**
+* **Training**
+* **Threat Hunting**
+* **Understanding Attacks and Incidents**
+### Incident Response Data and Tools
+* **Monitoring Computing Resources**
+* **Security Information and Event Management Systems**
+* **Alerts and Alarms**
+* **Log Aggregation, Correlation, and Analysis Rules**
+* **Benchmarks and Logging Reporting and Archiving**
