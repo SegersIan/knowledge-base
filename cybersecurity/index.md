@@ -1071,3 +1071,41 @@ Automation can remove human error and make security easier and more scaleable.
 * **Alerts and Alarms**
 * **Log Aggregation, Correlation, and Analysis Rules**
 * **Benchmarks and Logging Reporting and Archiving**
+### Mitigation and Recovery
+* **Secure Orchestration, Automation, and Response (SOAR)**
+* **Containment, Mitigation, and Recovery Techniques**
+* **Root Cause Analysis**
+
+## Digital Forensics
+### Digital Forensic Concepts
+* **Legal Holds and e-Discovery**
+### Conducting Digital Forensics
+* **Acquiring Forensic Data**
+* **Acquisition Tools**
+* **Validating Forensic Data Integrity**
+* **Data Recovery**
+* **Forensic Suites and a Forensic Case Example**
+### Reporting
+### Digital Forensics and Intelligence
+
+## Security Governance and Compliance
+
+### Security Governance
+* **Corporate Governance**
+* **Governance, Risk, and Compliance Programs**
+* **Information Security Governance**
+* **Types of Governance Structures**
+
+### Understanding Policy Documents
+* **Policies**
+* **Standards**
+* **Procedures**
+* **Guidelines**
+* **Exceptions and Compensating Controls**
+* **Monitoring and Revision**
+### Change Management
+* **Change Management Processes and Controls**
+* **Version Control**
+* **Documentation**
+### Personnel Management
+* **Least Privilege**
