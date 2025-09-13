@@ -1,6 +1,6 @@
-## Application Security
+# Application Security
 
-### Software Assurance Best Practices
+## Software Assurance Best Practices
 
 * **The Software Development Lifecycle**
   * Planning > Requirements > Design > Coding > Testing > Training & Transition > Ongoing Ops/maintenance > End Of Life (Decommission)
@@ -11,7 +11,7 @@
 * **DevSecOps and DevOps**
   * Sec becomes a shared responsibility, just like the Ops.
 
-### Designing and Coding For Security
+## Designing and Coding For Security
 
 * **Secure Coding Practices**
   * Open Worldwide Application Security Project (OWASP) - best resource for secure coding practices.
@@ -31,7 +31,7 @@
 * **API Security**
   * [OWASP API Security](https://owasp.org/www-project-api-security/)
 
-### Software Security Testing
+## Software Security Testing
 
 * [State Of Software Security Report](https://www.veracode.com/resources/analyst-reports/state-of-software-security-2025/)
 * **Analyzing and Testing Code**
@@ -39,7 +39,7 @@
   * Dynamic Code Analysis - runs the code to find flaws in it
   * Fuzzing - send random data to application to see how it handles unexpected data
 
-### Injection Vulnerabilitiies
+## Injection Vulnerabilitiies
 
 * **SQL Injection Attacks**
   * Is also a class under Code Injection attacks.
@@ -87,7 +87,7 @@
     * Now we have piped again additional commands
     * ⚠️ Note that there is again no feedback/response, but you could try to have a script use a time or a `curl` command to post back the output to a webserver you own.
 
-### Exploiting Authentication Vulnerabilities
+## Exploiting Authentication Vulnerabilities
 
 * **Password Authentication**
   * Flaw: Once an attacher knows a password, they can keep using it for access.
@@ -111,7 +111,7 @@
     * Example: `example.com/order?redirect_ok=https://evilsite.com` and then the evil site can impersonate and ask to re authenticate again or whaterver
     * Example: `example.com/login?login_ok=https://evilsite.com`, then after login it might call `https://evilsite.com?csrf_token=<somevalue>` or the `Referer: https://bank.com/transfer?sessionid=abc123&csrf_token=xyz789` header
 
-### Exploiting Authorization Vulnerabilities
+## Exploiting Authorization Vulnerabilities
 
 * **Insecure Direct Object References**
   * `example.com/orders?id=100` shows your order and you can just do `example.com/orders?id=101` and see anothers order.
@@ -131,7 +131,7 @@
   * Upgrade your user to have more rights or higher group
   * Dirty Cow - Linux vulnerability
 
-### Exploiting Web Application Vulnerabilities
+## Exploiting Web Application Vulnerabilities
 
 * **Cross-Site Scripting XSS** - when an attacker does HTML injection (inject their own HTML into a webpage)
   * **Reflected XSS**
@@ -179,7 +179,7 @@
     * Example: `GET /preview?url=http://169.254.169.254/latest/meta-data/iam/security-credentials/` on AWS exposes IAM credentials
     * Example: `GET /preview?url=file:///etc/passwd`
 
-### Application Security Controls
+## Application Security Controls
 
 * **Input Validation**
   * Protects agains Injection attackes, XSS, XSRF, SSRF and many more.
@@ -219,7 +219,7 @@
     * Scalability - designed so extra resources can be added
     * Elasticty - a step further, it provisions extra resources when it needs it
 
-### Secure Coding Practices
+## Secure Coding Practices
 
 * **Source Handling Comments** - Remove code comments in production code (for the non compiled code, like JS)
 * **Error Handling** - Be cautious that error messages dont give to much detail, no debug mode in prod!
@@ -242,7 +242,7 @@
 * **Unprotected APIs**
   * APIs should be authenticated and make sure that at every endpoint AutH and AuthZ is happening.
 
-### Automation and Orchestration
+## Automation and Orchestration
 
 SOAR: Security Orchestration, Automation, and response platforms.
 

@@ -1,9 +1,9 @@
 # Cybsersecurity
 
-## Certifications
+# Certifications
 
 ![ing](assets/learning_paths.jpeg)
 
-## Links
+# Links
 
 * [Resources](resources.md)

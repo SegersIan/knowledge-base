@@ -1,14 +1,14 @@
-## Identity and Access Management
-### Identity
-### Authentication and Authorization
+# Identity and Access Management
+## Identity
+## Authentication and Authorization
 * **Authentication and Authorization Technologies**
-### Authentication Methods
+## Authentication Methods
 * **Passwords**
 * **Multifactor Authentication**
 * **One-Time Passwords**
 * **Biometrics**
-### Accounts
+## Accounts
 * **Account Types**
 * **Provisioning and Deprovisioning Accounts**
-### Access Control Schemes
+## Access Control Schemes
 * **Filesystem Permissions**

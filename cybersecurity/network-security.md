@@ -1,5 +1,5 @@
-## Network Security
-### Designing Secure Networks
+# Network Security
+## Designing Secure Networks
 * **Infrastructure Considerations**
 * **Network Design Concepts**
 * **Network Segmentation**
@@ -8,10 +8,10 @@
 * **Port Security and Port-Level Protections**
 * **Virtual Private Networks and Remote Access Network Appliances and Security Tools Deception and Disruption Technology**
 * **Network Security, Services, and Management**
-### Secure Protocols
+## Secure Protocols
 * **Using Secure Protocols**
 * **Secure Protocols**
-### Network Attacks
+## Network Attacks
 * **On-Path Attacks**
 * **Domain Name System Attacks**
 * **Credential Replay Attacks**

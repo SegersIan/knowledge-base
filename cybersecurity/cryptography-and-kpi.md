@@ -1,38 +1,38 @@
-## Cryptography and the PKI
-### An Overview of Cryptography
+# Cryptography and the PKI
+## An Overview of Cryptography
 * **Historical Cryptography**
-### Goals of Cryptography
+## Goals of Cryptography
 * **Confidentiality**
 * **Integrity**
 * **Authentication**
 * **Non-repudiation**
-### Cryptographic Concepts**
+## Cryptographic Concepts**
 * **Cryptographic Keys**
 * **Ciphers**
-### Modern Cryptography
+## Modern Cryptography
 * **Cryptographic Secrecy**
 * **Symmetric Key Algorithms**
 * **Asymmetric Key Algorithms**
 * **Hashing Algorithms**
-### Symmetric Cryptography
+## Symmetric Cryptography
 * **Data Encryption Standard**
 * **Advanced Encryption Standard**
 * **Symmetric Key Management**
-### Asymmetric Cryptography
+## Asymmetric Cryptography
 * **RSA**
 * **Elliptic Curve**
-### Hash Functions
+## Hash Functions
 * **SHA**
 * **MD5**
-### Digital Signatures
+## Digital Signatures
 * **HMAC**
-### Public Key Infrastructure
+## Public Key Infrastructure
 * **Certificates**
 * **Certificate Authorities**
 * **Certificate Generation and Destruction**
 * **Certificate Formats**
-### Asymmetric Key Management
-### Cryptographic Attacks
+## Asymmetric Key Management
+## Cryptographic Attacks
 * **Brute Force**
 * **Frequency Analysis**
 * **Known Plain Text**
@@ -41,7 +41,7 @@
 * **Birthday Attack**
 * **Downgrade Attack**
 * **Hashing, Salting, and Key Stretching Exploiting Weak Keys Exploiting Human Error**
-### Emerging Issues in Cryptography
+## Emerging Issues in Cryptography
 * **Tor and the Dark Web**
 * **Blockchain**
 * **Lightweight Cryptography Homomorphic Encryption**

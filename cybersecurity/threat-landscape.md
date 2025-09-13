@@ -1,6 +1,6 @@
-## Threat Landscape
+# Threat Landscape
 
-### Threats
+## Threats
 * **Threat Characteristics**
   * Internal vs. External - Within or outside our organization.
   * Level of Sophistication/Capability - from script kiddie to APT (advance persistant threat)
@@ -58,7 +58,7 @@
     * Managed Service Providers (MSPs) often have special priviledge access to an organization's network.
     * Hard to adress and mitigate
 
-### Threat Data & Intelligence
+## Threat Data & Intelligence
 
 * **Threat Intelligence**: Resources and activities available to learn about changes in the threat environment.
   * Can be used for predictive risk.

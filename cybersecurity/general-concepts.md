@@ -1,6 +1,6 @@
-## General Concepts
+# General Concepts
 
-### The 3 Cybersecurity Objectives
+## The 3 Cybersecurity Objectives
 
 * **CIA** Triad == The 3 Objectives/goals
   * **Confidentiality** - No unauthorized individual is able to access sensitive information.
@@ -10,12 +10,12 @@
   * **Nonrepudiation** - Someone who performs some action, cannot later deny having taken that action.
     * Digital signatures are commonly used
 
-### Security Incident
+## Security Incident
 
 * When there is a breach of any of the CIA Triad goals.
   * Tip: Security therefore is not only about dangerous individuals, but also events like an earthquake.
 
-### The 3 Cybersecurity Threats
+## The 3 Cybersecurity Threats
 
 * **DAD** Triad
   * Disclosure (aka data loss) <-> Confidentiality violation
@@ -23,7 +23,7 @@
   * Alteration <-> Integrity violation
   * Denial <-> Availability violation
 
-### Breach Impact
+## Breach Impact
 
 Types of impact/risks when a security incident happens. Many risks cover multiple types.
 
@@ -33,7 +33,7 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
 * **Operational** - inability to do day-to-day functions, slow down business processes, ...
 * **Compliance** - violating a legal or regulatory requirement (e.g. HIPAA)
 
-### Security Controls
+## Security Controls
 
 * **Control Objectives**: Statements of desired security state (requirements).
 * **Security Controls**: Speciifc measures, the implementation of the objectives/requirements.
@@ -56,7 +56,7 @@ Types of impact/risks when a security incident happens. Many risks cover multipl
       * Must be above and beyond other PCI DSS requirements
   * Directive - Inform employees and others what they should do to implement security objectives.
 
-### Data Protection
+## Data Protection
 
 * 3 States of data
   * Data-at-rest

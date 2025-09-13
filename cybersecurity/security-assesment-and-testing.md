@@ -1,6 +1,6 @@
-## Security Assesment and Testing
+# Security Assesment and Testing
 
-### Vulnerability Management
+## Vulnerability Management
 
 Definition: Identify, prioritize and remediate vulnerabilities in your environment(s).
 
@@ -106,7 +106,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * Security Information and Event Management (SIEM) - corrolate log files from different sources
     * Configuration Management Systems - provide info on systems and what's installed on them
 
-### Vulnerability Classification
+## Vulnerability Classification
 
 * **Patch Management** - Often ignored due to lack of resources or "Fear" of change/instability
 * **Legacy Platforms** - Discontinued products, Often ignored due to lack of resources or "Fear" of change/instability
@@ -122,7 +122,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * The algorithm
     * The key that goes with it
 
-### Penetration Testing
+## Penetration Testing
 
 * **Adopting the Hacker Mindset** - Instead of defending against everything, you just need to find one little crack, you only need to win once
   * Taking an adversary mindset
@@ -175,7 +175,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
    * Cleanup traves of their work
    * Remove any tools or malware they might have installed
 
-### Audits and Assesments
+## Audits and Assesments
 
 * **Security Tests** - Verify that a control is functioning properly
   * Should happen regular
@@ -209,7 +209,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * Control Objectives for Information and related Technologies (COBIT) - requirements surrounding information systems
       * Maintainted by ISACA which also created CISA (Certified Information Systems Auditor), CISM (Certified Information Security Manager)
 
-### Vulnerability Life Cycle
+## Vulnerability Life Cycle
 
 * **Vulnerability Identification**
   * Potential Sources: Vulnerability scans, pentration tests, Responisble disclosure, Audits
