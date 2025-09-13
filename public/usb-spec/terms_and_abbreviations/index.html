@@ -1,0 +1,2763 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Terms and Abbreviations
+  
+  #
+  
+
+I&rsquo;m listing here terms and abbreviations that were relevant for my research. Skipping some more mainstream ones like &ldquo;audio device&rdquo;
+and &ldquo;Big Endian&rdquo;.
+
+  ACK (packet)
+  
+  #
+  
+
+A packet that signals a positive handshake acknowledgement.
+
+  Active Device
+  
+  #
+  
+
+Device that is powered and not in suspend state.
+
+  Asynchronous Data
+  
+  #
+  
+
+Data transferred at irregular intervals with relaxed latency requirements.
+
+  Asynchronous RA
+  
+  #
+  
+
+The incoming and outgoing data rate of the RA process. The rates are in this case independent (notice async), meaning
+there is also no shared master clock.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/usb-spec/terms_and_abbreviations/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="Terms and Abbreviations # I’m listing here terms and abbreviations that were relevant for my research. Skipping some more mainstream ones like “audio device” and “Big Endian”.
+ACK (packet) # A packet that signals a positive handshake acknowledgement.
+Active Device # Device that is powered and not in suspend state.
+Asynchronous Data # Data transferred at irregular intervals with relaxed latency requirements.
+Asynchronous RA # The incoming and outgoing data rate of the RA process. The rates are in this case independent (notice async), meaning there is also no shared master clock.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="usb-spec">
+<title>Terms and Abbreviations | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/usb-spec/terms_and_abbreviations/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-usb-spec book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle"  />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle"  />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle"  />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle" checked />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="active">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Terms and Abbreviations</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ack-packet">ACK (packet)</a></li>
+        <li><a href="#active-device">Active Device</a></li>
+        <li><a href="#asynchronous-data">Asynchronous Data</a></li>
+        <li><a href="#asynchronous-ra">Asynchronous RA</a></li>
+        <li><a href="#asynchronous-src">Asynchronous SRC</a></li>
+        <li><a href="#babble">Babble</a></li>
+        <li><a href="#bit-stuffing">Bit Stuffing</a></li>
+        <li><a href="#bs">b/s</a></li>
+        <li><a href="#bs-1">B/s</a></li>
+        <li><a href="#buffer">Buffer</a></li>
+        <li><a href="#bulk-transfer">Bulk Transfer</a></li>
+        <li><a href="#bus-enumeration">Bus Enumeration</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#characteristics">Characteristics</a></li>
+        <li><a href="#client">Client</a></li>
+        <li><a href="#configuring-software">Configuring Software</a></li>
+        <li><a href="#control-endpoint">Control Endpoint</a></li>
+        <li><a href="#control-pipe">Control Pipe</a></li>
+        <li><a href="#control-transfer">Control Transfer</a></li>
+        <li><a href="#crc-cyclic-redundancy-check">CRC (Cyclic Redundancy Check)</a></li>
+        <li><a href="#cti">CTI</a></li>
+        <li><a href="#default-address">Default Address</a></li>
+        <li><a href="#default-pipe">Default pipe</a></li>
+        <li><a href="#device-address">Device Address</a></li>
+        <li><a href="#device-endpoint">Device Endpoint</a></li>
+        <li><a href="#device-resources">Device Resources</a></li>
+        <li><a href="#device-software">Device Software</a></li>
+        <li><a href="#downstream">Downstream</a></li>
+        <li><a href="#driver">Driver</a></li>
+        <li><a href="#dword-double-word">DWORD (Double Word)</a></li>
+        <li><a href="#dynamic-insertion-and-removal">Dynamic Insertion And Removal</a></li>
+        <li><a href="#end-user">End User</a></li>
+        <li><a href="#endpoint">Endpoint</a></li>
+        <li><a href="#endpoint-address">Endpoint Address</a></li>
+        <li><a href="#endpoint-direction">Endpoint Direction</a></li>
+        <li><a href="#endpoint-number">Endpoint Number</a></li>
+        <li><a href="#eof-end-of-microframe">EOF (End-of-(micro)Frame)</a></li>
+        <li><a href="#eop-end-of-packet">EOP (End-of-Packet)</a></li>
+        <li><a href="#frame">Frame</a></li>
+        <li><a href="#frame-pattern">Frame Pattern</a></li>
+        <li><a href="#fs">Fs</a></li>
+        <li><a href="#full-duplex">Full-duplex</a></li>
+        <li><a href="#function">Function</a></li>
+        <li><a href="#handshake-packet">Handshake Packet</a></li>
+        <li><a href="#host">Host</a></li>
+        <li><a href="#host-controller">Host Controller</a></li>
+        <li><a href="#host-controller-hcd">Host Controller (HCD)</a></li>
+        <li><a href="#interrupt-request-irq">Interrupt Request (IRQ)</a></li>
+        <li><a href="#interrupt-transfer">Interrupt Transfer</a></li>
+        <li><a href="#io-request-packet-irp">I/O Request Packet (IRP)</a></li>
+        <li><a href="#isochronous-data">Isochronous Data</a></li>
+        <li><a href="#isochronous-device">Isochronous Device</a></li>
+        <li><a href="#jitter">Jitter</a></li>
+        <li><a href="#message-pipe">Message Pipe</a></li>
+        <li><a href="#microframe">Microframe</a></li>
+        <li><a href="#nak">NAK</a></li>
+        <li><a href="#object">Object</a></li>
+        <li><a href="#packet">Packet</a></li>
+        <li><a href="#packet-id-pid">Packet ID (PID)</a></li>
+        <li><a href="#phase">Phase</a></li>
+        <li><a href="#pipe">Pipe</a></li>
+        <li><a href="#polling">Polling</a></li>
+        <li><a href="#power-on-reset-por">Power on Reset (POR)</a></li>
+        <li><a href="#port">Port</a></li>
+        <li><a href="#rate-adaption-ra">Rate Adaption (RA)</a></li>
+        <li><a href="#request">Request</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#sof-start-of-frame">SOF (Start Of Frame)</a></li>
+        <li><a href="#sop-start-of-packet">SOP (Start of Packet)</a></li>
+        <li><a href="#src-sample-rate-conversion">SRC (Sample Rate Conversion)</a></li>
+        <li><a href="#tdm-time-division-multiplexing">TDM (Time Division Multiplexing)</a></li>
+        <li><a href="#tdr-time-domain-reflectometer">TDR (Time Domain Reflectometer)</a></li>
+        <li><a href="#token-packet">Token Packet</a></li>
+        <li><a href="#transfer">Transfer</a></li>
+        <li><a href="#transfer-type">Transfer Type</a></li>
+        <li><a href="#usb-if">USB-IF</a></li>
+        <li><a href="#virtual-device">Virtual Device</a></li>
+        <li><a href="#word">Word</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="terms-and-abbreviations">
+  Terms and Abbreviations
+  
+  <a class="anchor" href="#terms-and-abbreviations">#</a>
+  
+</h1>
+<p>I&rsquo;m listing here terms and abbreviations that were relevant for my research. Skipping some more mainstream ones like &ldquo;audio device&rdquo;
+and &ldquo;Big Endian&rdquo;.</p>
+<h3 id="ack-packet">
+  ACK (packet)
+  
+  <a class="anchor" href="#ack-packet">#</a>
+  
+</h3>
+<p>A packet that signals a positive handshake acknowledgement.</p>
+<h3 id="active-device">
+  Active Device
+  
+  <a class="anchor" href="#active-device">#</a>
+  
+</h3>
+<p>Device that is <strong>powered</strong> and not in <strong>suspend</strong> state.</p>
+<h3 id="asynchronous-data">
+  Asynchronous Data
+  
+  <a class="anchor" href="#asynchronous-data">#</a>
+  
+</h3>
+<p>Data transferred at irregular intervals with relaxed latency requirements.</p>
+<h3 id="asynchronous-ra">
+  Asynchronous RA
+  
+  <a class="anchor" href="#asynchronous-ra">#</a>
+  
+</h3>
+<p>The incoming and outgoing <strong>data rate</strong> of the RA process. The rates are in this case independent (notice async), meaning
+there is also no shared master clock.</p>
+<h3 id="asynchronous-src">
+  Asynchronous SRC
+  
+  <a class="anchor" href="#asynchronous-src">#</a>
+  
+</h3>
+<p>The incoming and outgoing <strong>sample rate</strong> of the SRC process.</p>
+<h3 id="babble">
+  Babble
+  
+  <a class="anchor" href="#babble">#</a>
+  
+</h3>
+<p>Unexpected bus activity that persists beyond a specified point in a (micro)frame.</p>
+<h3 id="bit-stuffing">
+  Bit Stuffing
+  
+  <a class="anchor" href="#bit-stuffing">#</a>
+  
+</h3>
+<p>Insertion of <code>0</code> bits into a data stream to cause electrical transition on the data wires.</p>
+<h3 id="bs">
+  b/s
+  
+  <a class="anchor" href="#bs">#</a>
+  
+</h3>
+<p>Bits/second</p>
+<h3 id="bs-1">
+  B/s
+  
+  <a class="anchor" href="#bs-1">#</a>
+  
+</h3>
+<p>Bytes/second</p>
+<h3 id="buffer">
+  Buffer
+  
+  <a class="anchor" href="#buffer">#</a>
+  
+</h3>
+<p>Storage used to compensate for a difference in data rates or time of occurrence of events, when transmitting data from
+on device to another.</p>
+<h3 id="bulk-transfer">
+  Bulk Transfer
+  
+  <a class="anchor" href="#bulk-transfer">#</a>
+  
+</h3>
+<p><strong>One of the 4 USB transfer types</strong>. Non-periodic, large busty communication typically used for a transfer that can use any
+available bandwidth and can also be delayed until bandwith is available.</p>
+<h3 id="bus-enumeration">
+  Bus Enumeration
+  
+  <a class="anchor" href="#bus-enumeration">#</a>
+  
+</h3>
+<p>Detecting and identifying USB devices.</p>
+<h3 id="capabilities">
+  Capabilities
+  
+  <a class="anchor" href="#capabilities">#</a>
+  
+</h3>
+<p>Those attributes of a USB device that are administrated by the host.</p>
+<h3 id="characteristics">
+  Characteristics
+  
+  <a class="anchor" href="#characteristics">#</a>
+  
+</h3>
+<p>Those qualities of a USB device that are unchangeable; for example, the device class is a device characteristics.</p>
+<h3 id="client">
+  Client
+  
+  <a class="anchor" href="#client">#</a>
+  
+</h3>
+<p>Software resident on the host that interacts with the <strong>USB System Software</strong> to arrange data transfer between a function
+and the host. The client is often the data provider and consumer for transferred data.</p>
+<h3 id="configuring-software">
+  Configuring Software
+  
+  <a class="anchor" href="#configuring-software">#</a>
+  
+</h3>
+<p>Software resident on the host software that is responsible for configuring a USB device. This may be a system configurator
+or specific to the device.</p>
+<h3 id="control-endpoint">
+  Control Endpoint
+  
+  <a class="anchor" href="#control-endpoint">#</a>
+  
+</h3>
+<p>A pair of device endpoints with the same endpoint number that are used by a <strong>control pipe</strong>. Control endpoints transfer data
+in both directions and, therefore, use both endpoint directions of a device and endpoint number combination.
+Thus, each control endpoint consumes two endpoint addresses. See also <a href="#device-endpoint">Device Endpoint</a></p>
+<h3 id="control-pipe">
+  Control Pipe
+  
+  <a class="anchor" href="#control-pipe">#</a>
+  
+</h3>
+<p>Same as a message pipe.</p>
+<h3 id="control-transfer">
+  Control Transfer
+  
+  <a class="anchor" href="#control-transfer">#</a>
+  
+</h3>
+<p><strong>One of the 4 USB transfer types</strong>. Control transfers support configuration/command/status type communications
+between client and function.</p>
+<h3 id="crc-cyclic-redundancy-check">
+  CRC (Cyclic Redundancy Check)
+  
+  <a class="anchor" href="#crc-cyclic-redundancy-check">#</a>
+  
+</h3>
+<p>A check performed on data to see if an error has occured in transmitting, reading or writing the data. The CRC
+is typically stored or transmitted with the checked data. This helps to determine if an error occured.</p>
+<h3 id="cti">
+  CTI
+  
+  <a class="anchor" href="#cti">#</a>
+  
+</h3>
+<p>Computer Telephony Integration</p>
+<h3 id="default-address">
+  Default Address
+  
+  <a class="anchor" href="#default-address">#</a>
+  
+</h3>
+<p>An address defined by the USB Spec and used by the USB device when it is first powered or reset. Default is <code>0x00</code>.</p>
+<h3 id="default-pipe">
+  Default pipe
+  
+  <a class="anchor" href="#default-pipe">#</a>
+  
+</h3>
+<p>Message pipe created by the USB System Software to pass control and status information between the host and a USB device&rsquo;s
+<em>endpoint zero</em>.</p>
+<h3 id="device-address">
+  Device Address
+  
+  <a class="anchor" href="#device-address">#</a>
+  
+</h3>
+<p>Seven-bit value representing the address of a device on USB. Default is <code>0x00</code>. Addresses are uniquely assigned by
+USB System Software.</p>
+<h3 id="device-endpoint">
+  Device Endpoint
+  
+  <a class="anchor" href="#device-endpoint">#</a>
+  
+</h3>
+<p>A uniquely addressable portion of a USB device that is the source or sink of information in a communication flow
+between the host and device. See also <a href="#control-endpoint">Control Endpoint</a></p>
+<h3 id="device-resources">
+  Device Resources
+  
+  <a class="anchor" href="#device-resources">#</a>
+  
+</h3>
+<p>Resources provided by USB devices, such as buffer space and endpoints. See also Host Resources and Universal Serial Bus Resources.</p>
+<h3 id="device-software">
+  Device Software
+  
+  <a class="anchor" href="#device-software">#</a>
+  
+</h3>
+<p>Software responsible for using a USB device. May ir may bit also be responsible for configuring the device to use.</p>
+<h3 id="downstream">
+  Downstream
+  
+  <a class="anchor" href="#downstream">#</a>
+  
+</h3>
+<p>Direction of flow from the host or away from the host</p>
+<h3 id="driver">
+  Driver
+  
+  <a class="anchor" href="#driver">#</a>
+  
+</h3>
+<ul>
+<li>When reffering hardware - An I/O pad that drives an external load.</li>
+<li>When referring software - A program responsible for interfacing to a hardware device (a device driver).</li>
+</ul>
+<h3 id="dword-double-word">
+  DWORD (Double Word)
+  
+  <a class="anchor" href="#dword-double-word">#</a>
+  
+</h3>
+<p>A data element that is two words. (e.g. four bytes or 32 bits when the word size is 2 bytes)</p>
+<h3 id="dynamic-insertion-and-removal">
+  Dynamic Insertion And Removal
+  
+  <a class="anchor" href="#dynamic-insertion-and-removal">#</a>
+  
+</h3>
+<p>The ability to attach and remove devices while the host is in operation.</p>
+<h3 id="end-user">
+  End User
+  
+  <a class="anchor" href="#end-user">#</a>
+  
+</h3>
+<p>The user of a host.</p>
+<h3 id="endpoint">
+  Endpoint
+  
+  <a class="anchor" href="#endpoint">#</a>
+  
+</h3>
+<p><a href="#device-endpoint">Same as Device endpoint</a></p>
+<h3 id="endpoint-address">
+  Endpoint Address
+  
+  <a class="anchor" href="#endpoint-address">#</a>
+  
+</h3>
+<p>The combination of an endpoint number and an endpoint direction on a USB device. Each endpoint address supports data transfer
+in one direction. Basically there will be two addresses at least for a USB device. Each one address has then a bit that
+dictates the direction.</p>
+<h3 id="endpoint-direction">
+  Endpoint Direction
+  
+  <a class="anchor" href="#endpoint-direction">#</a>
+  
+</h3>
+<p>The direction of data transfer on the USB. This can be:</p>
+<ul>
+<li><strong>IN</strong> - transfer to the host</li>
+<li><strong>OUT</strong> - Transfers out from the host</li>
+</ul>
+<h3 id="endpoint-number">
+  Endpoint Number
+  
+  <a class="anchor" href="#endpoint-number">#</a>
+  
+</h3>
+<p>A four bit value between <code>0x0</code> and <code>0xF</code>, inclusive, associated with an endpoint on a USB device.</p>
+<h3 id="eof-end-of-microframe">
+  EOF (End-of-(micro)Frame)
+  
+  <a class="anchor" href="#eof-end-of-microframe">#</a>
+  
+</h3>
+<p>Self explaining</p>
+<h3 id="eop-end-of-packet">
+  EOP (End-of-Packet)
+  
+  <a class="anchor" href="#eop-end-of-packet">#</a>
+  
+</h3>
+<p>Self explaining</p>
+<h3 id="frame">
+  Frame
+  
+  <a class="anchor" href="#frame">#</a>
+  
+</h3>
+<p>a 1 ms time based established on full/low -speed buses.</p>
+<h3 id="frame-pattern">
+  Frame Pattern
+  
+  <a class="anchor" href="#frame-pattern">#</a>
+  
+</h3>
+<p>A sequence of frames that exhibit a repeating pattern in the number of samples transmitted per frame.</p>
+<h3 id="fs">
+  Fs
+  
+  <a class="anchor" href="#fs">#</a>
+  
+</h3>
+<p>Sample rate</p>
+<h3 id="full-duplex">
+  Full-duplex
+  
+  <a class="anchor" href="#full-duplex">#</a>
+  
+</h3>
+<p>Simultaneously data transmission in both directions.</p>
+<h3 id="function">
+  Function
+  
+  <a class="anchor" href="#function">#</a>
+  
+</h3>
+<p>A USB device that provides a capability to the host (like mic, speakers).</p>
+<h3 id="handshake-packet">
+  Handshake Packet
+  
+  <a class="anchor" href="#handshake-packet">#</a>
+  
+</h3>
+<p>A packet that acknowledges or rejects a specific condition.</p>
+<h3 id="host">
+  Host
+  
+  <a class="anchor" href="#host">#</a>
+  
+</h3>
+<p>Host computer systm where the USB Host controller is installed.</p>
+<h3 id="host-controller">
+  Host Controller
+  
+  <a class="anchor" href="#host-controller">#</a>
+  
+</h3>
+<p>Host&rsquo;s USB interface.</p>
+<h3 id="host-controller-hcd">
+  Host Controller (HCD)
+  
+  <a class="anchor" href="#host-controller-hcd">#</a>
+  
+</h3>
+<p>USB Software layer that abstracts the Host Controller Hardware.</p>
+<h3 id="interrupt-request-irq">
+  Interrupt Request (IRQ)
+  
+  <a class="anchor" href="#interrupt-request-irq">#</a>
+  
+</h3>
+<p>Signal to request attention from the host.</p>
+<h3 id="interrupt-transfer">
+  Interrupt Transfer
+  
+  <a class="anchor" href="#interrupt-transfer">#</a>
+  
+</h3>
+<p><strong>One of the 4 USB transfer types</strong>. Small data, non-periodic, low-frequency and bounded-latency.</p>
+<h3 id="io-request-packet-irp">
+  I/O Request Packet (IRP)
+  
+  <a class="anchor" href="#io-request-packet-irp">#</a>
+  
+</h3>
+<p>An identifiable request by a software client to move data between itself and an endpoint of a device in appropriate direction.</p>
+<h3 id="isochronous-data">
+  Isochronous Data
+  
+  <a class="anchor" href="#isochronous-data">#</a>
+  
+</h3>
+<p>Stream of data whose timing is implied by its delivery rate.</p>
+<h3 id="isochronous-device">
+  Isochronous Device
+  
+  <a class="anchor" href="#isochronous-device">#</a>
+  
+</h3>
+<p>An entity with Isochronous endpoints.</p>
+<h3 id="jitter">
+  Jitter
+  
+  <a class="anchor" href="#jitter">#</a>
+  
+</h3>
+<p>Lack of synchronization.</p>
+<h3 id="message-pipe">
+  Message Pipe
+  
+  <a class="anchor" href="#message-pipe">#</a>
+  
+</h3>
+<p>Bi-directional pipe that transfers data using a request/data/status paradigm.</p>
+<h3 id="microframe">
+  Microframe
+  
+  <a class="anchor" href="#microframe">#</a>
+  
+</h3>
+<p>A 125 microseconds time base on high speed buses</p>
+<h3 id="nak">
+  NAK
+  
+  <a class="anchor" href="#nak">#</a>
+  
+</h3>
+<p>Rejecting handshake package</p>
+<h3 id="object">
+  Object
+  
+  <a class="anchor" href="#object">#</a>
+  
+</h3>
+<p>Host software or data structure representing a USB entity.</p>
+<h3 id="packet">
+  Packet
+  
+  <a class="anchor" href="#packet">#</a>
+  
+</h3>
+<p>A bundle of data organized in a group of transmission. Packets typically contain three elements:</p>
+<ul>
+<li>Control information (source, destination and length)</li>
+<li>Data to be transferred</li>
+<li>Error detection and correction bits</li>
+</ul>
+<h3 id="packet-id-pid">
+  Packet ID (PID)
+  
+  <a class="anchor" href="#packet-id-pid">#</a>
+  
+</h3>
+<p>A field in packet that indicates the type of packet. By inference it indicates the format of the packet and the
+type of error detection.</p>
+<h3 id="phase">
+  Phase
+  
+  <a class="anchor" href="#phase">#</a>
+  
+</h3>
+<p>A token, data or handshake packet. A transaction has 3 phases.</p>
+<h3 id="pipe">
+  Pipe
+  
+  <a class="anchor" href="#pipe">#</a>
+  
+</h3>
+<p>Abstraction of the association between an endpoint of the device and the software on the host. A pipe has several
+attributes. So we have stream pipe&rsquo;s and message pipes.</p>
+<h3 id="polling">
+  Polling
+  
+  <a class="anchor" href="#polling">#</a>
+  
+</h3>
+<p>Asking (multiple) devices if they have any data to trasmit.</p>
+<h3 id="power-on-reset-por">
+  Power on Reset (POR)
+  
+  <a class="anchor" href="#power-on-reset-por">#</a>
+  
+</h3>
+<p>Restoring a storage device, register or memory to a predetemrined state when power is applied.</p>
+<h3 id="port">
+  Port
+  
+  <a class="anchor" href="#port">#</a>
+  
+</h3>
+<p>Point of access to or from a system or circuit.</p>
+<h3 id="rate-adaption-ra">
+  Rate Adaption (RA)
+  
+  <a class="anchor" href="#rate-adaption-ra">#</a>
+  
+</h3>
+<p>Adapting the rate of a data stream with certain loss of quality.</p>
+<h3 id="request">
+  Request
+  
+  <a class="anchor" href="#request">#</a>
+  
+</h3>
+<p>A request made to a USB device contained within the data portion of a SETUP packet.</p>
+<h3 id="service">
+  Service
+  
+  <a class="anchor" href="#service">#</a>
+  
+</h3>
+<p>A procedure provided by a System Programming Interface (ISP)</p>
+<h3 id="sof-start-of-frame">
+  SOF (Start Of Frame)
+  
+  <a class="anchor" href="#sof-start-of-frame">#</a>
+  
+</h3>
+<h3 id="sop-start-of-packet">
+  SOP (Start of Packet)
+  
+  <a class="anchor" href="#sop-start-of-packet">#</a>
+  
+</h3>
+<h3 id="src-sample-rate-conversion">
+  SRC (Sample Rate Conversion)
+  
+  <a class="anchor" href="#src-sample-rate-conversion">#</a>
+  
+</h3>
+<h3 id="tdm-time-division-multiplexing">
+  TDM (Time Division Multiplexing)
+  
+  <a class="anchor" href="#tdm-time-division-multiplexing">#</a>
+  
+</h3>
+<h3 id="tdr-time-domain-reflectometer">
+  TDR (Time Domain Reflectometer)
+  
+  <a class="anchor" href="#tdr-time-domain-reflectometer">#</a>
+  
+</h3>
+<h3 id="token-packet">
+  Token Packet
+  
+  <a class="anchor" href="#token-packet">#</a>
+  
+</h3>
+<p>A type of paket that identifies what transaction is to be performed on the bus.</p>
+<h3 id="transfer">
+  Transfer
+  
+  <a class="anchor" href="#transfer">#</a>
+  
+</h3>
+<p>One ore more transactions to move information.</p>
+<h3 id="transfer-type">
+  Transfer Type
+  
+  <a class="anchor" href="#transfer-type">#</a>
+  
+</h3>
+<p>Determines the characteristics of the data flow. Types</p>
+<ul>
+<li>Control</li>
+<li>Inerrupt</li>
+<li>Bulk</li>
+<li>Ischronous</li>
+</ul>
+<h3 id="usb-if">
+  USB-IF
+  
+  <a class="anchor" href="#usb-if">#</a>
+  
+</h3>
+<p>USB Implementers Forum</p>
+<h3 id="virtual-device">
+  Virtual Device
+  
+  <a class="anchor" href="#virtual-device">#</a>
+  
+</h3>
+<p>A device that i represented by a software interface layer.</p>
+<h3 id="word">
+  Word
+  
+  <a class="anchor" href="#word">#</a>
+  
+</h3>
+<p>2 bytes.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/usb-spec/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="USB Spec" />
+        <span>USB Spec</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/wisdom/" class="flex align-center">
+        <span>Wisdom</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Wisdom" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ack-packet">ACK (packet)</a></li>
+        <li><a href="#active-device">Active Device</a></li>
+        <li><a href="#asynchronous-data">Asynchronous Data</a></li>
+        <li><a href="#asynchronous-ra">Asynchronous RA</a></li>
+        <li><a href="#asynchronous-src">Asynchronous SRC</a></li>
+        <li><a href="#babble">Babble</a></li>
+        <li><a href="#bit-stuffing">Bit Stuffing</a></li>
+        <li><a href="#bs">b/s</a></li>
+        <li><a href="#bs-1">B/s</a></li>
+        <li><a href="#buffer">Buffer</a></li>
+        <li><a href="#bulk-transfer">Bulk Transfer</a></li>
+        <li><a href="#bus-enumeration">Bus Enumeration</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#characteristics">Characteristics</a></li>
+        <li><a href="#client">Client</a></li>
+        <li><a href="#configuring-software">Configuring Software</a></li>
+        <li><a href="#control-endpoint">Control Endpoint</a></li>
+        <li><a href="#control-pipe">Control Pipe</a></li>
+        <li><a href="#control-transfer">Control Transfer</a></li>
+        <li><a href="#crc-cyclic-redundancy-check">CRC (Cyclic Redundancy Check)</a></li>
+        <li><a href="#cti">CTI</a></li>
+        <li><a href="#default-address">Default Address</a></li>
+        <li><a href="#default-pipe">Default pipe</a></li>
+        <li><a href="#device-address">Device Address</a></li>
+        <li><a href="#device-endpoint">Device Endpoint</a></li>
+        <li><a href="#device-resources">Device Resources</a></li>
+        <li><a href="#device-software">Device Software</a></li>
+        <li><a href="#downstream">Downstream</a></li>
+        <li><a href="#driver">Driver</a></li>
+        <li><a href="#dword-double-word">DWORD (Double Word)</a></li>
+        <li><a href="#dynamic-insertion-and-removal">Dynamic Insertion And Removal</a></li>
+        <li><a href="#end-user">End User</a></li>
+        <li><a href="#endpoint">Endpoint</a></li>
+        <li><a href="#endpoint-address">Endpoint Address</a></li>
+        <li><a href="#endpoint-direction">Endpoint Direction</a></li>
+        <li><a href="#endpoint-number">Endpoint Number</a></li>
+        <li><a href="#eof-end-of-microframe">EOF (End-of-(micro)Frame)</a></li>
+        <li><a href="#eop-end-of-packet">EOP (End-of-Packet)</a></li>
+        <li><a href="#frame">Frame</a></li>
+        <li><a href="#frame-pattern">Frame Pattern</a></li>
+        <li><a href="#fs">Fs</a></li>
+        <li><a href="#full-duplex">Full-duplex</a></li>
+        <li><a href="#function">Function</a></li>
+        <li><a href="#handshake-packet">Handshake Packet</a></li>
+        <li><a href="#host">Host</a></li>
+        <li><a href="#host-controller">Host Controller</a></li>
+        <li><a href="#host-controller-hcd">Host Controller (HCD)</a></li>
+        <li><a href="#interrupt-request-irq">Interrupt Request (IRQ)</a></li>
+        <li><a href="#interrupt-transfer">Interrupt Transfer</a></li>
+        <li><a href="#io-request-packet-irp">I/O Request Packet (IRP)</a></li>
+        <li><a href="#isochronous-data">Isochronous Data</a></li>
+        <li><a href="#isochronous-device">Isochronous Device</a></li>
+        <li><a href="#jitter">Jitter</a></li>
+        <li><a href="#message-pipe">Message Pipe</a></li>
+        <li><a href="#microframe">Microframe</a></li>
+        <li><a href="#nak">NAK</a></li>
+        <li><a href="#object">Object</a></li>
+        <li><a href="#packet">Packet</a></li>
+        <li><a href="#packet-id-pid">Packet ID (PID)</a></li>
+        <li><a href="#phase">Phase</a></li>
+        <li><a href="#pipe">Pipe</a></li>
+        <li><a href="#polling">Polling</a></li>
+        <li><a href="#power-on-reset-por">Power on Reset (POR)</a></li>
+        <li><a href="#port">Port</a></li>
+        <li><a href="#rate-adaption-ra">Rate Adaption (RA)</a></li>
+        <li><a href="#request">Request</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#sof-start-of-frame">SOF (Start Of Frame)</a></li>
+        <li><a href="#sop-start-of-packet">SOP (Start of Packet)</a></li>
+        <li><a href="#src-sample-rate-conversion">SRC (Sample Rate Conversion)</a></li>
+        <li><a href="#tdm-time-division-multiplexing">TDM (Time Division Multiplexing)</a></li>
+        <li><a href="#tdr-time-domain-reflectometer">TDR (Time Domain Reflectometer)</a></li>
+        <li><a href="#token-packet">Token Packet</a></li>
+        <li><a href="#transfer">Transfer</a></li>
+        <li><a href="#transfer-type">Transfer Type</a></li>
+        <li><a href="#usb-if">USB-IF</a></li>
+        <li><a href="#virtual-device">Virtual Device</a></li>
+        <li><a href="#word">Word</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

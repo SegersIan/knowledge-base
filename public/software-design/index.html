@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Design Patterns
+  
+  #
+  
+
+Design patterns are battle proven (most of them) solutions to common problems that developers face on daily base. Knowing many help you solve problems in a clean, efficient way. The solutions might be a big complex when you look at the code for the first time and you are not familiar with given pattern. Knowing multiple patterns help you recognize applied patterns, think more abstract about your code and solve your problems in a clean and efficient way.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/software-design/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="Design Patterns # Design patterns are battle proven (most of them) solutions to common problems that developers face on daily base. Knowing many help you solve problems in a clean, efficient way. The solutions might be a big complex when you look at the code for the first time and you are not familiar with given pattern. Knowing multiple patterns help you recognize applied patterns, think more abstract about your code and solve your problems in a clean and efficient way.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+<title>Software Design | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/software-design/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/software-design/index.xml" title="Knowledgebase" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-software-design book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle"  />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle"  />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle"  />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle" checked />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto active">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Software Design</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#criticism">Criticism</a></li>
+    <li><a href="#general-principles">General principles</a></li>
+    <li><a href="#patterns">Patterns</a>
+      <ul>
+        <li><a href="#creational-patterns">Creational patterns</a></li>
+        <li><a href="#structural-patterns">Structural patterns</a></li>
+        <li><a href="#behavioral-patterns">Behavioral patterns</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="design-patterns">
+  Design Patterns
+  
+  <a class="anchor" href="#design-patterns">#</a>
+  
+</h1>
+<p>Design patterns are battle proven (most of them) solutions to common problems that developers face on daily base. Knowing many help you solve problems in a clean, efficient way. The solutions might be a big complex when you look at the code for the first time and you are not familiar with given pattern. Knowing multiple patterns help you recognize applied patterns, think more abstract about your code and solve your problems in a clean and efficient way.</p>
+<p>Opposed of design patterns, there are also antipatterns. Meaning, known patterns that are applied but are known to be a bad practice. Knowning these helps you identify issues in the code and keeps you from implementing a bad solution to your problem.</p>
+<p>Our design patterns can be grouped in groups that target a certain set of problems. The main types of patterns are:</p>
+<ul>
+<li>Creational patterns</li>
+<li>Structural patterns</li>
+<li>Behavioral patterns</li>
+</ul>
+<p>Patterns can be applicable on small units of code or also on architectural level. This does not always work out for every pattern, but often there might be derived patterns for architectural level from their code unit equivalents.</p>
+<h2 id="criticism">
+  Criticism
+  
+  <a class="anchor" href="#criticism">#</a>
+  
+</h2>
+<p>There has been a lot of criticism about (various) design patterns that they encourage wrong solutions. It goes without a saying that patterns are rather guidelines and a source to challenge your solutions on a more abstract level. Design patterns are not the holy gray but knowing some will help you shape your own opinion and skills to solve problems more efficiently and better abstract thinking. More can be found <a href="https://sourcemaking.com/design_patterns">here</a>.</p>
+<h2 id="general-principles">
+  General principles
+  
+  <a class="anchor" href="#general-principles">#</a>
+  
+</h2>
+<ul>
+<li>In many sitations the use of the <code>new</code> keyword for creating an object is abstracted away to a single function that &ldquo;creates&rdquo; instances. The idea is the code should be unaware of which concrete class should be used. This would result in a single place in the code base to change the concrete class being used in the entire solution. (e.g. I have a <code>IDataStore</code> interface, and I have a <code>MongoDB</code> implementation and a <code>MySQL</code> implementation, if we want to be able to change the implementation easily, then we should preferably only change one line of code instead of all the instantiation statements)</li>
+<li>Patterns can be complementary, so you could use several different patterns on solving the same problem.</li>
+</ul>
+<h2 id="patterns">
+  Patterns
+  
+  <a class="anchor" href="#patterns">#</a>
+  
+</h2>
+<h3 id="creational-patterns">
+  Creational patterns
+  
+  <a class="anchor" href="#creational-patterns">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <p>In software engineering, creational design patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form of object creation could result in design problems or added complexity to the design. Creational design patterns solve this problem by somehow controlling this object creation.</p>
+</blockquote><h4 id="abstract-factory">
+  Abstract Factory
+  
+  <a class="anchor" href="#abstract-factory">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Group factory functions semantically together that instantiates concrete classes that are closely related to each other.</p>
+</blockquote><p>When we like to avoid using the <code>new</code> keyword where possible, the abstract factory, unlike just a regular factory, the abstract factory instantiates the concete classes which are related to each other.</p>
+<p>Let&rsquo;s say we have the classes CPU and GPU, which we would like to fetch from our OS. As our application is (presumed in this example) OS agnostic, the concrete class with logic on how to interact with the CPU and GPU would differ based on the underlying OS.</p>
+<p>The idea is to have a factory (e.g. HardWareInterfaceFactory) that can create the proper CPU and GPU concrete classes depending on the OS that the application is running.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#75715e">// Abstract classes</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CPU</span> {...}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GPU</span> {...}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// CPU concrete classes</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MacOsCPU</span> : CPU{...};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WindowsOSCPU</span> : CPU{...}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// GPU concrete classes</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MacOsGPU</span> : GPU{...};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WindowsOSGPU</span> : GPU {...}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// OS specific abstract factories</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MacOsHardWareInterface</span> : HardWareInterfaceFactory {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> CPU createCpu()  { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> MacOsCPU() };
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> CPU createGpu()  { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> MacOsCPU() };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WindowsHardWareInterface</span> : HardWareInterfaceFactory {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> CPU createCpu()  { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> WindowsOSCPU() };
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> CPU createGpu()  { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> WindowsOSGPU() };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Generic abstract factory that brings all factories together</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HardWareInterfaceFactory</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// This returns the proper instance for given OS</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> HardWareInterfaceFactory getFactoryForOs(os){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(os == <span style="color:#960050;background-color:#1e0010">&#39;</span>macos<span style="color:#960050;background-color:#1e0010">&#39;</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> MacOsHardWareInterface();
+</span></span><span style="display:flex;"><span>        }<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(os == <span style="color:#960050;background-color:#1e0010">&#39;</span>windows<span style="color:#960050;background-color:#1e0010">&#39;</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> WindowsHardWareInterface();
+</span></span><span style="display:flex;"><span>        }<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Exception(<span style="color:#960050;background-color:#1e0010">&#39;</span>OS not supported<span style="color:#960050;background-color:#1e0010">&#39;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Here we define the function signature that each HardWareInterface should have.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">abstract</span> CPU createCpu();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">abstract</span> GPU createGpu();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// usage</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> factory = HardWareInterfaceFactory.getFactoryForOs(<span style="color:#e6db74">&#34;windows&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> cpu = factory.createCpu();
+</span></span><span style="display:flex;"><span>... happy instantiation ...
+</span></span></code></pre></div><h4 id="builder">
+  Builder
+  
+  <a class="anchor" href="#builder">#</a>
+  
+</h4>
+<p>When you have a certain process, that always executes the same steps, but each step might need another input depending what you try to achieve, the builder pattern is a good approach. We create an abstract class that will be the &ldquo;builder&rdquo; and dictates which steps should be executed. Then you can use concrete builders that know what inputs are required for a given desired output.</p>
+<p>This works well when you have a well &ldquo;defined&rdquo; business process but takes different inputs depending on what deriative it is from the business process. Like you have the &ldquo;purchase&rdquo; busines process. One can happen in the brick and mortar shop and on the online shop. The business process will be the same, but you might get inputs in a different way.</p>
+<p>Let&rsquo;s say we have query builder for MongoDB and MySQL.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#75715e">// The query is an output that we desire from our builder, ALWAYS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">query</span> { <span style="color:#66d9ef">public</span> String queryString {<span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>} }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// We define here what steps it requires to build a query.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AbstractQueryBuilder</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> setCollectionName(<span style="color:#66d9ef">string</span> collectionName);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> setId(<span style="color:#66d9ef">string</span> id);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">string</span> getQuery();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Now we can make a builder for SQL</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SQLQueryBuilder</span> : AbstractQueryBuilder{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Query query = <span style="color:#66d9ef">new</span> Query();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> setCollectionName(<span style="color:#66d9ef">string</span> collectionName){
+</span></span><span style="display:flex;"><span>        query.queryString += <span style="color:#960050;background-color:#1e0010">&#39;</span> FROM <span style="color:#960050;background-color:#1e0010">&#39;</span> + collectionName;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> setId(<span style="color:#66d9ef">string</span> id){
+</span></span><span style="display:flex;"><span>        query.queryString = <span style="color:#960050;background-color:#1e0010">&#39;</span>SELECT<span style="color:#960050;background-color:#1e0010">&#39;</span> + id + query.queryString;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Now we can make a builder for MongoDb</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MongoDBQueryBuilder</span> : AbstractQueryBuilder{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Query query = <span style="color:#66d9ef">new</span> Query();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> setCollectionName(<span style="color:#66d9ef">string</span> collectionName){
+</span></span><span style="display:flex;"><span>        query.queryString += <span style="color:#960050;background-color:#1e0010">&#39;</span>.collection(<span style="color:#960050;background-color:#1e0010">&#39;</span> + collectionName + <span style="color:#e6db74">&#39;)&#39;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> setId(<span style="color:#66d9ef">string</span> id){
+</span></span><span style="display:flex;"><span>        query.queryString = <span style="color:#960050;background-color:#1e0010">&#39;</span>.findOne({ id: <span style="color:#960050;background-color:#1e0010">&#39;</span> + id + <span style="color:#960050;background-color:#1e0010">&#39;</span>})<span style="color:#960050;background-color:#1e0010">&#39;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Now we have the director of the process</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DataFetcher</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> AbstractQueryBuilder queryBuilder;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span>(AbstractQueryBuilder queryBuilder){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.queryBuilder = queryBuilder;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Data fetch(<span style="color:#66d9ef">string</span> id, <span style="color:#66d9ef">string</span> collectionName){
+</span></span><span style="display:flex;"><span>        queryBuilder.setId(id);
+</span></span><span style="display:flex;"><span>        queryBuilder.setCollectionName(collectionName);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// execute query from queryBuilder.query</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> data;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Using it</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> dataFetcher = <span style="color:#66d9ef">new</span> DataFetcher(<span style="color:#66d9ef">new</span> SQLQueryBuilder());
+</span></span><span style="display:flex;"><span>dataFetcher.fetch(<span style="color:#e6db74">&#34;100&#34;</span>, <span style="color:#e6db74">&#34;users&#34;</span>);
+</span></span></code></pre></div><p><a href="https://sourcemaking.com/design_patterns/builder/java/2">Other example</a></p>
+<h4 id="factory-method">
+  Factory Method
+  
+  <a class="anchor" href="#factory-method">#</a>
+  
+</h4>
+<p>The classic example of where we want to hide the <code>new</code> keyword and decide dynamically or only in one place which concrete class we might want to return for further usage.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IDbStore</span> {};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MongoDb</span> : IDbStore {};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MySQL</span> : IDbStore {};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DBStoreFactory</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">public</span> IDbStore getDbStore(){
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Return based on a config or some business logic the MongoDb or SQL instance.</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="object-pool">
+  Object pool
+  
+  <a class="anchor" href="#object-pool">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Object pooling can offer a significant performance boost; it is most effective in situations where the cost of initializing a class instance is high, the rate of instantiation of a class is high, and the number of instantiations in use at any one time is low. (aka resource pools).</p>
+</blockquote><p>So if initializing a class is expensive, happens a lot but don&rsquo;t use many instances at the same time, we want to reuse instances.</p>
+<p>A good example would be a DB Connection Pool. There are a few connections in the pool, to create a connection, is IO expensive. We might wanna fetch data all over the application, but we might not be using the connections so much all the time, so we create a pool of connections, so we can pick up an unused connection when a data fetch is required.</p>
+<p>Usually there will be a max pool size. The pool is responsible to orchestrate the lock/acquiring of a pool object and releasing it for reuse.</p>
+<h4 id="singleton">
+  Singleton
+  
+  <a class="anchor" href="#singleton">#</a>
+  
+</h4>
+<p>There is only one instance allowed to be used. So you create a function that returns always the same instance, and initializes one of it was not initialized before.</p>
+<p>This initialization can be done at startup or lazy wise, only untill the first instance is requested.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#75715e">// Lazy</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> MyClass myInstance;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> MyClass(){
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// PRIVATE CONSTRUCTOR</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> getInstance(){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(myInstance == <span style="color:#66d9ef">null</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">this</span>.myInstance = <span style="color:#66d9ef">new</span> MyClass();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.myInstance ;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Important to take in mind when multithreading is happening, in that case you should add the extra safeguarding code to be thread safe.</p>
+<h3 id="structural-patterns">
+  Structural patterns
+  
+  <a class="anchor" href="#structural-patterns">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <p>In Software Engineering, Structural Design Patterns are Design Patterns that ease the design by identifying a simple way to realize relationships between entities.</p>
+</blockquote><h4 id="adapter">
+  Adapter
+  
+  <a class="anchor" href="#adapter">#</a>
+  
+</h4>
+<p>The adapter is basically a wrapper so it &ldquo;connects&rdquo; nicely between two parts that else mismatch. A typical example is when you use a 3th party library in your solution, but how it works and the view of the world differes from yours and your code. So if you have a GitApiClient module published by Git, you would want it to wrap it so it behaves and interacts how you would want it to interact in your application. So you create a wrapper around it so it has the API that you desire and that is adapted to your code base.</p>
+<h4 id="bridge">
+  Bridge
+  
+  <a class="anchor" href="#bridge">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Decouple an abstraction from its implementation so that the two can vary independently.</p>
+</blockquote><p>We would use this pattern to solve a hectic hierarchical iheritance issue.</p>
+<p>Let&rsquo;s say we have a <code>Logger</code>. And we want to have two types of loggers, a <code>BatchLogger</code> and a <code>SimpleLogger</code>. The <code>SimpleLogger</code> writes out a log entry to the <code>STDOUT</code> when it&rsquo;s called. The <code>BatchLogger</code> accumulates a min amount of log entries before it writes it away to the <code>STDOUT</code>.</p>
+<p>We would just create a <code>ILogger</code> interface and then the <code>SimpleLogger</code> and <code>BatchLogger</code> implementation.</p>
+<p>But now we want to be able to log not only to <code>STDOUT</code> but alternatively to a API endpoint instead. Now we would have to create an API and <code>STDOUT</code> version of each logger. Resulting in <code>ApiBatchLogger</code>,<code>StdOutBatchLogger</code>, <code>ApiSimpleLogger</code> and <code>StdOutSimpleLogger</code>. Notice how this hierarchy becomes a mess and deep. We create more inheritance just because we have code that doesn&rsquo;t move in parallel and rather orthogonally.</p>
+<p>How do we solve this? This reminds us a bit of <code>preffer composition over inheritance</code> idea. Let&rsquo;s rewrite our code.</p>
+<p>We move the <code>log to ...</code> logic out of the hierarchy and move it to something separate. Let&rsquo;s call it a <code>LogGateway</code> interface. Now we can have the <code>SimpleLogger</code> and <code>BatchLogger</code> take a <code>LogGateway</code> interfaces as reference. Now we end up with <code>SimpleLogger</code>, <code>BatchLogger</code>, <code>ApiLogGateway</code>, and <code>StdOutLogGateway</code>. Now we don&rsquo;t need to implement a new logger based on the fact if it&rsquo;s <code>simple</code> or <code>batch</code> AND for each given gateway we wanne use to write the logs to. Rearranging our inheritance so that we don&rsquo;t end up with deep inheritance hierarchies and we can rather take the benefit of composition.</p>
+<h4 id="decorator">
+  Decorator
+  
+  <a class="anchor" href="#decorator">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Attach additional responsibilities to an object dynamically.</p>
+</blockquote><p>You wrap the call to a function but then decorate it with extra behaviour.
+So you can add &ldquo;optional&rdquo; decorators that will execute additional logic on top of the share logic.</p>
+<p>This can be done dynamically at runtime.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#75715e">// 1. &#34;lowest common denominator&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Widget</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. &#34;Core&#34; class with &#34;is a&#34; relationship</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TextField</span> <span style="color:#66d9ef">implements</span> Widget {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> width, height;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">TextField</span>(<span style="color:#66d9ef">int</span> width, <span style="color:#66d9ef">int</span> height) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> width;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> height;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;TextField: &#34;</span> <span style="color:#f92672">+</span> width <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">+</span> height);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. Second level base class with &#34;isa&#34; relationship</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Decorator</span> <span style="color:#66d9ef">implements</span> Widget {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 4. &#34;has a&#34; relationship</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Widget widget;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Decorator</span>(Widget widget) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">widget</span> <span style="color:#f92672">=</span> widget;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 5. Delegation</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>        widget.<span style="color:#a6e22e">draw</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 6. Optional embellishment</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BorderDecorator</span> <span style="color:#66d9ef">extends</span> Decorator {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">BorderDecorator</span>(Widget widget) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>(widget);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 7. Delegate to base class and add extra stuff</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">draw</span>();
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;  BorderDecorator&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 6. Optional embellishment</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ScrollDecorator</span> <span style="color:#66d9ef">extends</span> Decorator {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ScrollDecorator</span>(Widget widget) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>(widget);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">draw</span>(); <span style="color:#75715e">// 7. Delegate to base class and add extra stuff</span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;  ScrollDecorator&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DecoratorDemo</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 8. Client has the responsibility to compose desired configurations</span>
+</span></span><span style="display:flex;"><span>        Widget widget <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BorderDecorator(<span style="color:#66d9ef">new</span> BorderDecorator(<span style="color:#66d9ef">new</span> ScrollDecorator(<span style="color:#66d9ef">new</span> TextField(80, 24))));
+</span></span><span style="display:flex;"><span>        widget.<span style="color:#a6e22e">draw</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Outputs</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>TextField: 80, 24
+</span></span><span style="display:flex;"><span>   ScrollDecorator <span style="color:#75715e">// Aditional logic executed beside the original core one</span>
+</span></span><span style="display:flex;"><span>   BorderDecorator <span style="color:#75715e">// Aditional logic executed beside the original core one</span>
+</span></span><span style="display:flex;"><span>   BorderDecorator <span style="color:#75715e">// Aditional logic executed beside the original core one</span>
+</span></span></code></pre></div><p>So we dynmically added extra code to be excuted on top of the core functionality.</p>
+<h4 id="facade">
+  Facade
+  
+  <a class="anchor" href="#facade">#</a>
+  
+</h4>
+<p>A facade is just a layer that hides all the sub systems or components being called. A good example of that is when you create a library which has internally differen util classes and services. But then you create on &ldquo;facace&rdquo; that will expose the methods that only need to be exposed to the user of this library, while internally the methods are spread into smaller sub components.</p>
+<p>This way you encapsulate the internal workings and structure of the library.</p>
+<h4 id="flyweight">
+  Flyweight
+  
+  <a class="anchor" href="#flyweight">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>The Flyweight uses sharing to support large numbers of objects efficiently. Modern web browsers use this technique to prevent loading same images twice. When browser loads a web page, it traverse through all images on that page. Browser loads all new images from Internet and places them the internal cache. For already loaded images, a flyweight object is created, which has some unique data like position within the page, but everything else is referenced to the cached one.</p>
+</blockquote><h4 id="proxy">
+  Proxy
+  
+  <a class="anchor" href="#proxy">#</a>
+  
+</h4>
+<p>Like all proxies, you pust sugorate in between so you can add additional logic and take control, so the real target object is protected from additional complexity. Perfect also to create aspects and such.</p>
+<h3 id="behavioral-patterns">
+  Behavioral patterns
+  
+  <a class="anchor" href="#behavioral-patterns">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <p>In software engineering, behavioral design patterns are design patterns that identify common communication patterns between objects and realize these patterns. By doing so, these patterns increase flexibility in carrying out this communication</p>
+</blockquote><h4 id="chain-of-responsibility">
+  Chain of responsibility
+  
+  <a class="anchor" href="#chain-of-responsibility">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>The pattern chains the receiving objects together, and then passes any request messages from object to object until it reaches an object capable of handling the message. The number and type of handler objects isn&rsquo;t known a priori, they can be configured dynamically. The chaining mechanism uses recursive composition to allow an unlimited number of handlers to be linked.</p>
+</blockquote><p><img src="assets/Chain_of_responsibility_01.png" alt="image" /></p>
+<p>Chain of Responsibility simplifies object interconnections. Instead of senders and receivers maintaining references to all candidate receivers, each sender keeps a single reference to the head of the chain, and each receiver keeps a single reference to its immediate successor in the chain.</p>
+<p><img src="assets/Chain_of_responsibility_02.png" alt="image" /></p>
+<h4 id="command">
+  Command
+  
+  <a class="anchor" href="#command">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Encapsulate a request as an object, thereby letting you parametrize clients with different requests, queue or log requests, and support undoable operations.</p>
+</blockquote><p>Basically put all the data required to run a command in an object. Pass this on so dynamically a proper command handler can execute the command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ICommand</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> execute();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> queue = <span style="color:#66d9ef">new</span> List&lt;ICommands&gt;{...};
+</span></span><span style="display:flex;"><span>queue.execute();
+</span></span></code></pre></div><h4 id="iterator">
+  Iterator
+  
+  <a class="anchor" href="#iterator">#</a>
+  
+</h4>
+<p>Hide the underlying logic and complecity for getting the next value.</p>
+<h4 id="mediator">
+  Mediator
+  
+  <a class="anchor" href="#mediator">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Design an intermediary to decouple many peers. Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.</p>
+</blockquote>
+<blockquote class='book-hint '>
+  <p>Partitioning a system into many objects generally enhances reusability, but proliferating interconnections between those objects tend to reduce it again. The mediator object: encapsulates all interconnections, acts as the hub of communication, is responsible for controlling and coordinating the interactions of its clients, and promotes loose coupling by keeping objects from referring to each other explicitly.</p>
+</blockquote><p>Goal is to remove direct/explicit relations between different objects types.</p>
+
+<blockquote class='book-hint '>
+  <p>The Mediator defines an object that controls how a set of objects interact. Loose coupling between colleague objects is achieved by having colleagues communicate with the Mediator, rather than with each other. The control tower at a controlled airport demonstrates this pattern very well. The pilots of the planes approaching or departing the terminal area communicate with the tower rather than explicitly communicating with one another. The constraints on who can take off or land are enforced by the tower. It is important to note that the tower does not control the whole flight. It exists only to enforce constraints in the terminal area.</p>
+</blockquote><p><img src="assets/Mediator_example.png" alt="mediator" /></p>
+<h4 id="memento">
+  Memento
+  
+  <a class="anchor" href="#memento">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Without violating encapsulation, capture and externalize an object&rsquo;s internal state so that the object can be returned to this state later.</p>
+</blockquote><p>Basically we want to be able to do <code>undo</code> or <code>rollback</code>. So we keep snapshots/deltas of the changes we make so we can return a specific state later.</p>
+<p>It&rsquo;s like the following</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TheWorld</span> {
+</span></span><span style="display:flex;"><span>    setSnapshot();
+</span></span><span style="display:flex;"><span>    createSnapShot();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TheWorldMoment</span>{
+</span></span><span style="display:flex;"><span>    getState();
+</span></span><span style="display:flex;"><span>    setState();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> world = <span style="color:#66d9ef">new</span> TheWorld();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Do changes ...</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> snapshot1 = world.createSnapShot();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Do changes ...</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> snapshot2 = world.createSnapShot();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Restore to state since we took snapshot 1</span>
+</span></span><span style="display:flex;"><span>world.setSnapshot(snapshot1);
+</span></span></code></pre></div><h4 id="null-object">
+  Null Object
+  
+  <a class="anchor" href="#null-object">#</a>
+  
+</h4>
+<p>The null object pattern is perfect to get rid of all this defensive coding with <code>if returnValue == null</code> and such.</p>
+<p>Instead of returning a <code>null</code> from a (e.g. factory) function, you can return an object that implements certain interface or abstract class, but does nothing. So basically doing a silent &ldquo;no-operation&rdquo; or anything similar like that.</p>
+
+<blockquote class='book-hint '>
+  <p>It is sometimes thought that Null Objects are over simple and &ldquo;stupid&rdquo; but in truth a Null Object always knows exactly what needs to be done without interacting with any other objects. So in truth it is very &ldquo;smart.&rdquo;</p>
+</blockquote><ul>
+<li>The Null Object class is often implemented as a Singleton to save memory as it&rsquo;s stateless anyway.</li>
+</ul>
+<h4 id="observer">
+  Observer
+  
+  <a class="anchor" href="#observer">#</a>
+  
+</h4>
+<p>Idea is that you have a <code>Observable</code> with zero, one or more <code>Observers</code>. If the state changes in the <code>Observable</code>, it will notify all <code>Observers</code>. Usually with this pattern the <code>Observable</code> keeps a list/references of all <code>Observers</code>, so this is create a thight coupling of awareness, consider a pub/sub mechanism if you want to create a more loosely coupled approach where the observers and obserables are unaware of each other.</p>
+<h4 id="state">
+  State
+  
+  <a class="anchor" href="#state">#</a>
+  
+</h4>
+<p>Intersting, so instead of changing behaviour purely based on changing state in an object, we will create an abstract class, and each subclass will represent an allowed state. (Use polymoprhism instead of ENUMS/Constants). This is one way !</p>
+<p>Everytime you have a finite state machine, evaluate this pattern. The State pattern does not specify where the state transitions will be defined. The choices are two: the &ldquo;context&rdquo; object, or each individual State derived class. The advantage of the latter option is ease of adding new State derived classes. The disadvantage is each State derived class has knowledge of (coupling to) its siblings, which introduces dependencies between subclasses.</p>
+<p><img src="assets/State1.png" alt="state" /></p>
+<ul>
+<li>State objects are often Singletons.</li>
+<li>Flyweight explains when and how State objects can be shared.</li>
+</ul>
+<h4 id="strategy">
+  Strategy
+  
+  <a class="anchor" href="#strategy">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from the clients that use it.</p>
+</blockquote><p>This is perfect when you have algorithms that work perfect for a specific size of data set. This is basicaly the core Open/Closed principle of the SOLID. Define one Interface/Abstract class, and have different implementations that have a different strategy.</p>
+<p><img src="assets/Strategy1.png" alt="state" /></p>
+<h4 id="template-method">
+  Template method
+  
+  <a class="anchor" href="#template-method">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Define the skeleton of an algorithm in an operation, deferring some steps to client subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm&rsquo;s structure.</p>
+</blockquote>
+<blockquote class='book-hint '>
+  <p>Base class declares algorithm &lsquo;placeholders&rsquo;, and derived classes implement the placeholders.</p>
+</blockquote><p>This use used more than you think. Think of VueJS where you have &ldquo;hooks&rdquo;. There is a strict process, but you can overwrite or append within a specific atomic step.</p>
+<p>This is typicall to have a root class <code>BusinessProcess</code>, which has methods <code>stepA()</code>, <code>stepB()</code>, and `stepC() and then you can subclass it and optionally choose with step you want to override with your own logic.</p>
+<p>Another example is : Kind of basic inheritance.</p>
+
+<blockquote class='book-hint '>
+  <p>&ldquo;the Hollywood principle&rdquo; - &ldquo;don&rsquo;t call us, we&rsquo;ll call you&rdquo;.</p>
+</blockquote><p><img src="assets/Template_method_example.png" alt="Template" /></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/software-architecture/topics/threat-modeling/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Threat Modeling" />
+        <span>Threat Modeling</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/software-development-process/" class="flex align-center">
+        <span>Software Development Process</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Software Development Process" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#criticism">Criticism</a></li>
+    <li><a href="#general-principles">General principles</a></li>
+    <li><a href="#patterns">Patterns</a>
+      <ul>
+        <li><a href="#creational-patterns">Creational patterns</a></li>
+        <li><a href="#structural-patterns">Structural patterns</a></li>
+        <li><a href="#behavioral-patterns">Behavioral patterns</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

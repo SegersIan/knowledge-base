@@ -1,0 +1,2228 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Modules
+  
+  #
+  
+
+Different platforms offer different reuse mechanisms for code, but all support some way of grouping related code together in modules. This concept of modules is proven slippery to define. Therefore, we will use a definition from the Fundamentals of Software Architecture - Chapter 3 book.
+Modularity is an organizing principle. IF an architect designs a system without paying attention to how the pieces wire together, a myriad of difficulties might be presented. Good modularity exemplifies the definition of an implicit architectural characteristic. No project features a requirement that asks the architect to ensure good modular distinction and communication, yet sustainable code bases require order and consistency.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/software-architecture/topics/modules/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="Modules # Different platforms offer different reuse mechanisms for code, but all support some way of grouping related code together in modules. This concept of modules is proven slippery to define. Therefore, we will use a definition from the Fundamentals of Software Architecture - Chapter 3 book.
+Modularity is an organizing principle. IF an architect designs a system without paying attention to how the pieces wire together, a myriad of difficulties might be presented. Good modularity exemplifies the definition of an implicit architectural characteristic. No project features a requirement that asks the architect to ensure good modular distinction and communication, yet sustainable code bases require order and consistency.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="software-architecture">
+<title>Modules | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/software-architecture/topics/modules/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-software-architecture book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle"  />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle"  />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle" checked />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="active">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Modules</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition">Definition</a></li>
+    <li><a href="#measuring">Measuring</a>
+      <ul>
+        <li><a href="#note">NOTE!</a></li>
+        <li><a href="#cohesion">Cohesion</a></li>
+        <li><a href="#coupling">Coupling</a></li>
+        <li><a href="#connascence">Connascence</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusions">Conclusions</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="modules">
+  Modules
+  
+  <a class="anchor" href="#modules">#</a>
+  
+</h1>
+<p>Different platforms offer different reuse mechanisms for code, but all support some way of grouping related code together in <em>modules</em>. This concept of <em>modules</em> is proven slippery to define. Therefore, we will use a definition from the <a href="https://fundamentalsofsoftwarearchitecture.com/">Fundamentals of Software Architecture</a> - Chapter 3 book.</p>
+<p>Modularity is an organizing principle. IF an architect designs a system without paying attention to how the pieces wire together, a myriad of difficulties might be presented. Good modularity exemplifies the definition of an implicit architectural characteristic. No project features a requirement that asks the architect to ensure good modular distinction and communication, yet sustainable code bases require order and consistency.</p>
+<h2 id="definition">
+  Definition
+  
+  <a class="anchor" href="#definition">#</a>
+  
+</h2>
+<p>Modularity describes a logical grouping of related code, which could be a group of classes in a OO language or functions in a functional language. This grouping does&rsquo;t imply a physical separation, merely a logical one.</p>
+<p>When it comes to restructuring the architecture, the coupling encouraged by louse partitioning becomes an impediment to breaking the monolith apart. Thus, it is useful to talk about modularity as a concept separate from the physical separation forced or implied by a particular platform. <strong>Components</strong> <em>are the physical manifestation of modules</em>. Note that component can contain one ore more modules.</p>
+<h2 id="measuring">
+  Measuring
+  
+  <a class="anchor" href="#measuring">#</a>
+  
+</h2>
+<p>Given its importance, there are a variety of language-agnostic metrics to help measure modularity. There are 3 key concepts: <em>cohesion, coupling, and connascence</em>.</p>
+<h3 id="note">
+  NOTE!
+  
+  <a class="anchor" href="#note">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <p>This measuring techniques come from the structured programming field. Some of it might also apply to OO and Functional paradigms, however, these metrics are originally targeting structured code bases.</p>
+</blockquote><h3 id="cohesion">
+  Cohesion
+  
+  <a class="anchor" href="#cohesion">#</a>
+  
+</h3>
+<p>Refers to what extent the parts of a module should be contained within the same module. Measuring how relates parts are to each other. Ideally a cohesive module is one where all the parts should be packaged together. Attempting to divide a cohesive module would only result in increased coupling, and decreased readability.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29">Types of Cohesion</a> - From best to worst:
+<ul>
+<li><em>Functional Cohesion</em></li>
+<li><em>Sequential Cohesion</em></li>
+<li><em>Communication Cohesion</em></li>
+<li><em>Procedural Cohesion</em></li>
+<li><em>Temporal Cohesion</em></li>
+<li><em>Logical Cohesion</em></li>
+<li><em>Coincidental Cohesion</em></li>
+</ul>
+</li>
+<li>The <a href="https://en.wikipedia.org/wiki/Programming_complexity">Chidamber and Kemerer Object-oriented metrics suite</a> are a well known set of metrics that allows to measure the &ldquo;Lack of Cohesion&rdquo;, also known as the LCOM (Lack of Cohesion of Methods) formula.
+<ul>
+<li>LCOM: The sum of sets ofg methods not shared via sharing fields.</li>
+<li>Useful to analyze code base in order to move from one architectural style to another.</li>
+<li>Only measures <em>structural</em> lack of cohesion; not to determine logically if particular pieces fit together. It tells us <strong>HOW</strong> but not <strong>WHY</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="coupling">
+  Coupling
+  
+  <a class="anchor" href="#coupling">#</a>
+  
+</h3>
+<p>A basic measuring method would be by just measuring afferent and efferent coupling:</p>
+<ul>
+<li><em>Afferent</em> Coupling: Incoming connections/dependencies to a code artifact. (ingress/incoming)</li>
+<li><em>Efferent</em> Coupling: Outgoing connections/dependencies to a code artifact. (egress/outgoing)</li>
+</ul>
+<p>The following approach allows for a deeper evaluation than the basic afferent/efferent measurements.</p>
+<ul>
+<li><strong>Abstractness</strong>: The ratio of abstract artifacts (abstract classes, interfaces, &hellip;) to concrete artifacts (implementation).</li>
+<li><strong>Instability</strong>: The ratio of efferent coupling to the cum of both efferent and afferent coupling.
+<ul>
+<li>Determines the volatility of a code base. A code base that has high instability breaks more easily because of the high coupling. If a class calls to many other classes to delegate work, the calling class shows high sensitivity to breakage if one or more of the called methods change.</li>
+</ul>
+</li>
+<li><strong>Distance from Main Sequence</strong>: <code>Distance = | Abstractness + Instability - 1 |</code>
+<ul>
+<li>This is a derived metric from Abstractness and Instability.</li>
+<li>This metric imagines an ideal relationship between abstractness and instability; classes that fall near this idealized line exhibit a health mixture of these two competing concepts.</li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_0303.png">Diagram</a></li>
+<li>There are <a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_0303.png">2 zones</a> where a code artifact can fall
+<ul>
+<li><em>Zone of uselessness</em>: Code that is too abstract becomes difficult to use.</li>
+<li><em>Zone of pain</em>: Code with too much implementation and not enough abstraction becomes brittle and hard to maintain.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="connascence">
+  Connascence
+  
+  <a class="anchor" href="#connascence">#</a>
+  
+</h3>
+<p>A refinement of the afferent/efferent measures towards OO.</p>
+
+<blockquote class='book-hint '>
+  <p>Two components are connascence if a change in one would require the other to be modified in order to maintain the overall correctness of the system.</p>
+</blockquote><h4 id="static-connascence">
+  Static Connascence
+  
+  <a class="anchor" href="#static-connascence">#</a>
+  
+</h4>
+<p>This is analyzed at build/source code level.</p>
+<p>Source-code-level coupling, the degree to which something is coupled, either afferent or efferent:</p>
+<ul>
+<li><strong>Connascence of Name (CoN)</strong>: Multiple components must agree on the <em>name of an entity</em>.
+<ul>
+<li>Example: <code>createUser()</code> and then <code>updatePerson()</code> when it&rsquo;s about the same entity.</li>
+</ul>
+</li>
+<li><strong>Connascence of Type (CoT)</strong>: Multiple components must agree on the <em>type of an entity</em>.
+<ul>
+<li>Example: Using the same language type for the same entity.</li>
+</ul>
+</li>
+<li><strong>Connascence of Meaning (CoM) or Connascence of Convention (CoC)</strong>: Multiple components must agree on the <em>meaning of particular values</em>.
+<ul>
+<li>Example: <code>int TRUE = 1; int FALSE = 0</code>,  imagine someone changing that around.</li>
+</ul>
+</li>
+<li><strong>Connascence of Position (CoP)</strong>: Multiple entities must agree on the <em>order of values</em>.
+<ul>
+<li>Example: <code>createUser(string name, string surname) vs updateUser(string surname, string name)</code></li>
+</ul>
+</li>
+<li><strong>Connascence of Algorithm (CoA)</strong>: Multiple components must agree on a <em>particular algorithm</em>.
+<ul>
+<li>Example: If a certain hashing algorithm is chosen, 2 related components must use the same.</li>
+</ul>
+</li>
+</ul>
+<h4 id="dynamic-connascence">
+  Dynamic Connascence
+  
+  <a class="anchor" href="#dynamic-connascence">#</a>
+  
+</h4>
+<p>This is analyzed at runtime.</p>
+<ul>
+<li><strong>Connascence of Execution (CoE)</strong>: The order of execution of multiple components is important.
+<ul>
+<li>Example: You must call code in certain precedence/order to work. You can&rsquo;t do <code>article.publish()</code> while <code>article.setTile()</code> should be called first.</li>
+</ul>
+</li>
+<li><strong>Connascence of Timing (CoT)</strong>: The timing of the execution of multiple components is important.
+<ul>
+<li>Example: Race condition challenges</li>
+</ul>
+</li>
+<li><strong>Connascence of Values (CoV)</strong>: Occurs when several values relate on one another and must change together.
+<ul>
+<li>Example: You can not change any of the coordinates of a <code>square</code> data structure without changing the other coordinates to adhere to the requirements of a square (each side must be equal, corners 90 degrees, etc&hellip;).</li>
+<li>You can see how this can relate to &ldquo;transactions&rdquo; and especially in &ldquo;distributed&rdquo; systems. All values must change or not at all, in an (if possible) atomic approach. You try to keep redundant data in sync sort to say.</li>
+<li><strong>CoV is about agreeing on a value. If any part of the system decides to change the value, all other parts must be updated to stay consistent.</strong></li>
+</ul>
+</li>
+<li><strong>Connascence of Identity (CoI)</strong>: Occurs when several values relate on one another and must change together.
+<ul>
+<li>Example: Sounds similar to CoV, but there is a difference. This is about the &ldquo;SAME IDENTITY&rdquo; that multiple components refer to.</li>
+<li><strong>CoI is about agreeing on a specific instance. It&rsquo;s not about the value itself but about the specific identity or reference to an object/resource.</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="connascence-properties">
+  Connascence Properties
+  
+  <a class="anchor" href="#connascence-properties">#</a>
+  
+</h4>
+<p>Connascence is an analysis tool for architects and developers, some properties of Connascence help developers use it wisely.</p>
+<ul>
+<li><strong>Strength</strong>: The ease which one can refactor that type of coupling. One can improve the coupling characteristics of the code by refactoring towards better types of connascence.
+<ul>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_0305.png">See strength Diagram</a> that is an excellent refactoring guide. The strongest (dynamic)Connascence types are at the bottom, and you want to start your refactoring focus there and then work your way up to the more weaker ones (Static).</li>
+</ul>
+</li>
+<li><strong>Locality</strong>: Proximity between the modules. Proximal code (in same module) typically has more and higher forms of connascence than more separated code (different modules).
+<ul>
+<li>One must consider <strong>strength</strong> and <strong>locality</strong> together. Strong forms of connascence in the same module are less troublesome than between separate modules.</li>
+</ul>
+</li>
+<li><strong>Degree</strong>: Size of impact, does it impact a few or many classes? A strong connascence is ok if the degree/impact is low. Like not having many components, but code bases grow&hellip;</li>
+</ul>
+<h4 id="how-to-use-connascence-to-improve-modularity">
+  How to use connascence to improve modularity
+  
+  <a class="anchor" href="#how-to-use-connascence-to-improve-modularity">#</a>
+  
+</h4>
+<ol>
+<li>Minimize overall connascence by breaking the system unto encapsulated elements.</li>
+<li>Minimize any remaining connascence that crosses encapsulation boundaries.</li>
+<li>Maximize the connascence within encapsulation boundaries.</li>
+</ol>
+<h2 id="conclusions">
+  Conclusions
+  
+  <a class="anchor" href="#conclusions">#</a>
+  
+</h2>
+<ul>
+<li>Coupling originates mostly from structured programming, connascence goes deeper and questions <em>how</em> things are coupled together. Naturally there <a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_0305.png">is some overlap here</a>.</li>
+<li>As architect you care more on <em><strong>HOW</strong></em> things modules are coupled, not the degree.</li>
+<li>These metrics were designed in a time when distributed architectures were not mainstream yet, so they work well for code bases, but there are challenges on a higher level.</li>
+<li>See <a href="./architecture-characteristics/readme.md">Architectural Characteristics</a> on how to thing more about connascence on higher architectural level.</li>
+</ul>
+<h2 id="resources">
+  Resources
+  
+  <a class="anchor" href="#resources">#</a>
+  
+</h2>
+<ul>
+<li><a href="https://www.amazon.com/dp/0134494164">Clean Architecture</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/">Fundamentals of Software Architecture</a> - Chapter 3</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/software-architecture/topics/make-effective-teams/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Make Effective Teams" />
+        <span>Make Effective Teams</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="flex align-center">
+        <span>Negotiation and Leadership Skills</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Negotiation and Leadership Skills" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#definition">Definition</a></li>
+    <li><a href="#measuring">Measuring</a>
+      <ul>
+        <li><a href="#note">NOTE!</a></li>
+        <li><a href="#cohesion">Cohesion</a></li>
+        <li><a href="#coupling">Coupling</a></li>
+        <li><a href="#connascence">Connascence</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusions">Conclusions</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,2416 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="&laquo; Back To Overview
+
+  Architecture Style: Event-Driven
+  
+  #
+  
+
+
+
+  Description
+  
+  #
+  
+
+Made up of decoupled event processing components that asynchronously receive and process events.
+This architectural style can be used standalone or embedded with other architectural styles.
+
+
+  There is a difference between the architectural style of pure &ldquo;Event-Driven&rdquo; and events and event sourcing in general. Therefore, for more information specific to events and not the specific architectural style. See Integration Architecture &gt; events.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/software-architecture/architecture-styles/event-driven/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="« Back To Overview
+Architecture Style: Event-Driven # Description # Made up of decoupled event processing components that asynchronously receive and process events. This architectural style can be used standalone or embedded with other architectural styles.
+There is a difference between the architectural style of pure “Event-Driven” and events and event sourcing in general. Therefore, for more information specific to events and not the specific architectural style. See Integration Architecture &gt; events.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="software-architecture">
+<title>Event Driven | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/software-architecture/architecture-styles/event-driven/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-software-architecture book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle"  />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle"  />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle" checked />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="active">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Event Driven</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#description">Description</a>
+      <ul>
+        <li><a href="#request-based--event-based">Request-Based &amp; Event-Based</a></li>
+        <li><a href="#topologies">Topologies</a></li>
+      </ul>
+    </li>
+    <li><a href="#when-not-to-use">When (NOT) To Use</a></li>
+    <li><a href="#considerations">Considerations</a>
+      <ul>
+        <li><a href="#async-error-handling">Async Error Handling</a></li>
+        <li><a href="#preventing-data-loss">Preventing Data Loss</a></li>
+        <li><a href="#broadcast-capabilities">Broadcast Capabilities</a></li>
+        <li><a href="#request-reply">Request-Reply</a></li>
+        <li><a href="#hybrid-event-driven-architectures">Hybrid Event-Driven Architectures</a></li>
+      </ul>
+    </li>
+    <li><a href="#versioning">Versioning</a></li>
+    <li><a href="#characteristics">Characteristics</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p><a href="./readme.md">&laquo; Back To Overview</a></p>
+<h1 id="architecture-style-event-driven">
+  Architecture Style: Event-Driven
+  
+  <a class="anchor" href="#architecture-style-event-driven">#</a>
+  
+</h1>
+<p><img src="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1401.png" alt="Event-Driven Architecture Style Image" /></p>
+<h2 id="description">
+  Description
+  
+  <a class="anchor" href="#description">#</a>
+  
+</h2>
+<p>Made up of decoupled event processing components that asynchronously receive and process events.
+This architectural style can be used standalone or embedded with other architectural styles.</p>
+
+<blockquote class='book-hint '>
+  <p>There is a difference between the architectural style of pure &ldquo;Event-Driven&rdquo; and events and event sourcing in general. Therefore, for more information specific to events and not the specific architectural style. See <a href="../integration-architecture/events/readme.md">Integration Architecture &gt; events</a>.</p>
+</blockquote><h3 id="request-based--event-based">
+  Request-Based &amp; Event-Based
+  
+  <a class="anchor" href="#request-based--event-based">#</a>
+  
+</h3>
+<p>Majority of processes in any architectural style are request-driven, using the request-based model.
+In the event-based model, systems <strong>react</strong> to an event that happens. We are inverting the responsibility for systems to act accordingly.</p>
+<p>If we think about it, the event-model is all around us in nature and physics. When you throw a ball against the wall, the ball moves through the air as reaction to the event of force being exercised on the ball.
+We could mistake the idea that we &ldquo;tell the ball&rdquo; what to do, but rather through our understanding of physics (or experience) we know that the ball will respond with flying through the air, if we put pressure on it.
+Actually, in nature there is little that is genuinely &ldquo;request-based&rdquo;, even a &ldquo;response&rdquo; is a reaction to an event that indicated a &ldquo;request&rdquo;. The philosophical part aside, the request-based model demands a synchronous interaction, event-based is intentionally asynchronous.</p>
+<h3 id="topologies">
+  Topologies
+  
+  <a class="anchor" href="#topologies">#</a>
+  
+</h3>
+<p>Most common topologies are <strong>Broker</strong> and <strong>Mediator</strong> topology. They architecture characteristics and implementation strategy differs between these topologies, therefore it is important to understand the difference between them.</p>
+<h4 id="broker-topology-choreography-pattern">
+  Broker Topology (Choreography Pattern)
+  
+  <a class="anchor" href="#broker-topology-choreography-pattern">#</a>
+  
+</h4>
+<p>This is also known as <strong>The Choreography Pattern</strong>.</p>
+
+<blockquote class='book-hint '>
+  <p>Used when you require a high degree of responsiveness and dynamic control over the processing of an event.</p>
+</blockquote><p>This topology has no central event mediator,  messages flow across the event processor components in a chain-like broadcasting fashion. Works great when you have relative simple event processing flow that doesn&rsquo;t require event orchestration and coordination There are <a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1403.png"><strong>4 primary architecture components</strong></a>:</p>
+<ul>
+<li><strong>Initiating Event</strong>: Event that starts the entire flow. This event gets send to the Event Broker.
+<ul>
+<li>Example: An order was placed advertised with &ldquo;PlaceOrder&rdquo; event.</li>
+</ul>
+</li>
+<li><strong>Event Broker</strong>: Receives events and forwards these events based on if any Event Processors are listening and interested for the given even (e,g. through pub/sub).
+<ul>
+<li>Example: &ldquo;OrderPlaced&rdquo; event forwarded to &ldquo;OrderPlacement&rdquo;</li>
+<li>Technology examples: RabbitMQ, ActiveMQ, HornetQ</li>
+</ul>
+</li>
+<li><strong>Event Processor</strong>: Accepts an incoming event that it cares about and performs actions/business logic specific to that event. Once the processing is done, the results/output/actions are advertised asynchronously with a Processing Event. Event processors are highly decoupled and independent of each other.
+<ul>
+<li>Example: &ldquo;OrderPlacement&rdquo; processes PlaceOrder event into an order.</li>
+</ul>
+</li>
+<li><strong>Processing Event</strong>:
+<ul>
+<li>Example: &ldquo;order-created&rdquo;</li>
+</ul>
+</li>
+</ul>
+
+<blockquote class='book-hint '>
+  <p>Event Processors advertise to the rest of the system the results of their processing as Processing events.</p>
+</blockquote><p><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1404.png">See Example Flow Diagram</a></p>
+<h5 id="challenges">
+  Challenges
+  
+  <a class="anchor" href="#challenges">#</a>
+  
+</h5>
+<ul>
+<li>No control over the overall workflow associated with the initiating event. Everything is dynamic, based on various conditions, no one in the system really knows when the entire Business activity has been completed or not.</li>
+<li>Error Handling is hard, there is no implicit monitoring if a business activity has failed, or if a failure has occurred. Other event processes or not aware of a crash in a certain part of the system.</li>
+<li>The ability to restart a business transaction (recoverability) is also something not supported with this topology. Requiring often manual intervention.</li>
+</ul>
+<h4 id="mediator-topology-orchestration-pattern">
+  Mediator Topology (Orchestration Pattern)
+  
+  <a class="anchor" href="#mediator-topology-orchestration-pattern">#</a>
+  
+</h4>
+<p>This is also known as <strong>The Orchestration Pattern</strong>.</p>
+
+<blockquote class='book-hint '>
+  <p>Used when you require control over the workflow of an event process. Partially addresses the shortcomings of the broker topology.</p>
+</blockquote><p>There are <a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1405.png"><strong>5 primary architecture components</strong></a>:</p>
+<ul>
+<li><strong>Initiating Event</strong>: Event that starts the entire flow. This is sent to an event queue.</li>
+<li><strong>Event Queue</strong>: This queue keeps track of all the initiating events. Ready for the Event Mediator to consume.</li>
+<li><strong>Event Mediator</strong>: The central component in this topology/pattern. This accepts events from the initial event queue. The event mediator <strong>only knows the steps involved in processing the event and therefore generates corresponding processing events that are sent to dedicated event channels.</strong></li>
+<li><strong>Event Channels</strong>: Dedicated event channels (usually queues) in a point-to-point fashion between the event mediator and the event processors.</li>
+<li><strong>Event Processors</strong>: Event processor listens to dedicated event channels, processes the event, and usually will respond back to the mediator to inform failure/success.</li>
+</ul>
+
+<blockquote class='book-hint '>
+  <p>Event Processors <strong>do not</strong> advertise to the rest of the system, and only communicates back to the event mediator. Therefore &ldquo;events&rdquo; in this topology are more like &ldquo;commands&rdquo;.</p>
+</blockquote><p>It is common that there are multiple event mediators, each event mediator scoped to a specific domain, business process, or other logical grouping.</p>
+<h5 id="event-mediator-types">
+  Event Mediator Types
+  
+  <a class="anchor" href="#event-mediator-types">#</a>
+  
+</h5>
+<p><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1406.png">Mediator Delegation Model</a>: One advice is to use a simple event mediator, and based on the contents of the event, it might forward this to a more complex event mediator if warranted. Therefore one must understand well the types of events being processed to choose the right type of event mediator.</p>
+<ul>
+<li>Simple Event Mediator: Simple error handling + orchestration: Apache Camel, Mule ESB, Spring Integration, or self written</li>
+<li>Hard Event Mediator: Complex conditional processing and multiple dynamic paths with complex error handling: Apache ODE, Oracle BPEL (Business Process Execution Language)</li>
+<li>Complex Event Mediator: Long running transactions that required manual (human) interaction: BPM (Business Process Management) engine such as jBPM</li>
+</ul>
+<p><strong>Examples</strong></p>
+<ul>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1407.png">Example of combined mediators types: Overview</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1408.png">Example of combined mediators types: Step 1</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1409.png">Example of combined mediators types: Step 2</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1410.png">Example of combined mediators types: Step 3</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1411.png">Example of combined mediators types: Step 4</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1412.png">Example of combined mediators types: Step 5</a></li>
+</ul>
+<h5 id="challenges-1">
+  Challenges
+  
+  <a class="anchor" href="#challenges-1">#</a>
+  
+</h5>
+<ul>
+<li>It is very difficult to declaratively model the dynamic processing that occurs within a complex event flow. THerefore many workflows within the mediator only handle the general processing, <strong>a hybrid model combining mediator and broker topology is used to address the dynamic nature</strong> of complex event processing.</li>
+<li>Event processors can easily be scaled, the event meditator less so, occasionally causing bottleneck problems.</li>
+<li>Event processors care not as highly decoupled compared to the broker topology.</li>
+<li>Performance is not as good due to the mediator controlling nature.</li>
+</ul>
+<h4 id="comparison">
+  Comparison
+  
+  <a class="anchor" href="#comparison">#</a>
+  
+</h4>
+<p>Trade off between workflow control and error handling capability versus high performance and scalability. Performance and scalability are good in general for event-driven architecture, the broker topology does is slightly better than the mediator topology.</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>Broker/Choreography</th>
+          <th>Mediator/Orchestration</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Advantages</strong></td>
+          <td>Highly decoupled events processors<!-- raw HTML omitted -->High scalability<!-- raw HTML omitted -->High Responsiveness<!-- raw HTML omitted -->High Performance<!-- raw HTML omitted -->High fault tolerance</td>
+          <td>Workflow control<!-- raw HTML omitted -->Error handling<!-- raw HTML omitted -->Recoverability<!-- raw HTML omitted -->Restart capabilities<!-- raw HTML omitted -->Better data consistency</td>
+      </tr>
+      <tr>
+          <td><strong>Disadvantages</strong></td>
+          <td>Workflow control<!-- raw HTML omitted -->Error handling<!-- raw HTML omitted -->Recoverability<!-- raw HTML omitted -->Restart capabilities<!-- raw HTML omitted -->Data inconsistency</td>
+          <td>More coupling of event processors<!-- raw HTML omitted -->Lower Scalability<!-- raw HTML omitted -->Lower performance<!-- raw HTML omitted -->Lower fault tolerance<!-- raw HTML omitted -->Modeling complex workflows</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="when-not-to-use">
+  When (NOT) To Use
+  
+  <a class="anchor" href="#when-not-to-use">#</a>
+  
+</h2>
+<p>A key question that emerges is using &ldquo;event-driven&rdquo; versus &ldquo;request-reply&rdquo; based models.</p>
+<ul>
+<li>
+<p>Event-Driven: Recommended for flexible, action-based events that require high levels of responsiveness and scale, with complex and dynamic user processing.</p>
+</li>
+<li>
+<p>Request-Based: Recommended for well-structured, data-driven (e.g. fetch user profile) requests when certainty and control over the workflow is needed.</p>
+</li>
+<li>
+<p>Advantages over request-based</p>
+<ul>
+<li>Better response to dynamic user content</li>
+<li>Better scalability and elasticity</li>
+<li>Better agility and change management</li>
+<li>Better adaptability and extensibility</li>
+<li>Better responsiveness and performance</li>
+<li>Better real-time decision making</li>
+<li>Better reaction of situational awareness</li>
+</ul>
+</li>
+<li>
+<p>Trade-offs</p>
+<ul>
+<li>Only supports eventual consistency</li>
+<li>Less control over processing flow</li>
+<li>Less certainty over outcome of event flow</li>
+<li>Difficult to test and debugs</li>
+</ul>
+</li>
+</ul>
+<h2 id="considerations">
+  Considerations
+  
+  <a class="anchor" href="#considerations">#</a>
+  
+</h2>
+<p>Changes to a particular domain usually impact many event processors, mediators, and other messaging artifacts, hence why event-driven architecture is not domain partitioned.</p>
+<h3 id="async-error-handling">
+  Async Error Handling
+  
+  <a class="anchor" href="#async-error-handling">#</a>
+  
+</h3>
+<p>A key characteristic is the asynchronous nature of event-driven architectures. With a simple &ldquo;acknowledgement&rdquo; one can create a responsive experience to the end user without having to fix the performant nature if it was request-based. Working asynchronous does come with a challenge, which is <strong>error handling</strong>. Error handling in an async environment is more challenging thant with request-based. Cause if an error happens, how do you get back to the end user to inform them and take proper action?</p>
+<p><strong><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1414.png">The Workflow Event Pattern</a></strong> (see <a href="https://www.reactiveprinciples.org/">Reactive Architecture</a>) is one way to address error handling in asynchronous setting which addresses <em>resiliency</em> and <em>responsiveness</em> concerns. It works like the following:</p>
+<ul>
+<li>An Event Product sends an initiating event to the Event channel.</li>
+<li>Initiating event is accepted by the Event Consumer.</li>
+<li>The Event Consumer spots an error/issue/excepton with the event and forwards without thinking much about it to the event channel that directs events to the workflow processor.</li>
+<li>THe Workflow processor can accept the faulty event and then use either some logic/AI to modify the event and sends it back to the original event channel for re-processing.</li>
+<li>Alternatively the Workflow processor can send the event to a dashboard operated by end user or internal user for manual review/modifications. Once modified, the event can be channeled back to the original event channel for re-processing.</li>
+<li><strong>IMPORTANT</strong>: This pattern will result in some out-of-order events. Take necessary design/implementation considerations to deal with this. See <a href="https://www.oreilly.com/library/view/building-event-driven-microservices/9781492057888/">Building Event-Driven Microservices: Chapter 6 Deterministic Streeam Processing</a></li>
+</ul>
+<h3 id="preventing-data-loss">
+  Preventing Data Loss
+  
+  <a class="anchor" href="#preventing-data-loss">#</a>
+  
+</h3>
+<p>Data loss is when a message is dropped or never makes it to its final destination. In a <a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1416.png">typical scenario</a> there are 3 areas of potential data loss.</p>
+<ul>
+<li>Issue 1: An Event Processor fails to get a message to the queue/event channel.
+<ul>
+<li>Solution: Use <em>persistent message queues</em> and <em>synchronous send</em>. Also known as guaranteed delivery.</li>
+</ul>
+</li>
+<li>Issue 2: An Event Processor de-queues the next message and crashes before processing it.
+<ul>
+<li>Solution: Use <em>client acknowledgement mode</em> instead of <em>auto acknowledge mode</em> which dictates that the client must first acknowledge that it was received before dropping the message.</li>
+</ul>
+</li>
+<li>Issue 3: An Event Processor is unable to persist some data related to a message to a database.
+<ul>
+<li>Solution: Use ACID properties for DB communication and <em>Last Participant Support (LPS)</em> for removing the message from the persisted queue by acknowledging that the processing has been completed.</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1417.png">Solution Diagram</a></p>
+<h3 id="broadcast-capabilities">
+  Broadcast Capabilities
+  
+  <a class="anchor" href="#broadcast-capabilities">#</a>
+  
+</h3>
+<p>Another unique characteristic of event-driven architecture style is the ability to broadcast knowledge/events/messages without the need to know who is listening which is great for decoupling.</p>
+<p><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1418.png">Solution Diagram</a></p>
+<h3 id="request-reply">
+  Request-Reply
+  
+  <a class="anchor" href="#request-reply">#</a>
+  
+</h3>
+<p>Sometimes synchronous communication is required which requires request-reply patterns. This is accomplished with <em>request-reply messaging (aka psydosynchronous communication)</em>. Note that there 2 popular ways to implement this by using <em><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1420.png">Correlation ID</a></em> or <em><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1421.png">temporary queues</a></em>.</p>
+<p><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1419.png">Solution Diagram</a></p>
+<h3 id="hybrid-event-driven-architectures">
+  Hybrid Event-Driven Architectures
+  
+  <a class="anchor" href="#hybrid-event-driven-architectures">#</a>
+  
+</h3>
+<p>Event-driven architectural style can be used in conjunction with other architectural styles. Adding event-driven to any architectural style helps remove bottlenecks, provides a back pressure point in the event requests getting backed up, and provides a level of user responsiveness not found in other architectural styles.</p>
+<p>Examples:</p>
+<ul>
+<li>Event-Driven + Microservices
+<ul>
+<li>Leverages Event-Driven for data pumps, async data sending, programmatic scalability</li>
+</ul>
+</li>
+<li>Event-Driven + Space-Based
+<ul>
+<li>
+<ul>
+<li>Leverages Event-Driven for data pumps, async data sending, programmatic scalability (processing units)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Event-Driven + Microkernel</li>
+<li>Event-Driven + Pipeline</li>
+</ul>
+<h2 id="versioning">
+  Versioning
+  
+  <a class="anchor" href="#versioning">#</a>
+  
+</h2>
+<p><a href="../topics/events/versioning.md">See Versioning</a></p>
+<h2 id="characteristics">
+  Characteristics
+  
+  <a class="anchor" href="#characteristics">#</a>
+  
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Characteristic</th>
+          <th>Rating</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Partitioning Type</td>
+          <td>Technical</td>
+      </tr>
+      <tr>
+          <td>Number of quanta</td>
+          <td>1 to many</td>
+      </tr>
+      <tr>
+          <td>Deployability</td>
+          <td>⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Elasticity</td>
+          <td>⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Evolutionary</td>
+          <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Fault Tolerance</td>
+          <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Modularity</td>
+          <td>⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Overall cost</td>
+          <td>⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Performance</td>
+          <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Reliability</td>
+          <td>⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Scalability</td>
+          <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Simplicity</td>
+          <td>⭐</td>
+      </tr>
+      <tr>
+          <td>Testability</td>
+          <td>⭐⭐</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="resources">
+  Resources
+  
+  <a class="anchor" href="#resources">#</a>
+  
+</h2>
+<ul>
+<li><a href="https://www.oreilly.com/library/view/building-event-driven-microservices/9781492057888/">Building Event-Driven Microservices: Leveraging Organizational Data at Scale</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/">Fundamentals of Software Architecture</a></li>
+<li><a href="https://www.reactivemanifesto.org/">Reactive Manifesto</a></li>
+<li><a href="https://eventmodeling.org/posts/what-is-event-modeling/">What is Event Modeling</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/software-architecture/architecture-styles/ball-of-mud/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Ball of Mud" />
+        <span>Ball of Mud</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/software-architecture/architecture-styles/layered/" class="flex align-center">
+        <span>Layered</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Layered" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#description">Description</a>
+      <ul>
+        <li><a href="#request-based--event-based">Request-Based &amp; Event-Based</a></li>
+        <li><a href="#topologies">Topologies</a></li>
+      </ul>
+    </li>
+    <li><a href="#when-not-to-use">When (NOT) To Use</a></li>
+    <li><a href="#considerations">Considerations</a>
+      <ul>
+        <li><a href="#async-error-handling">Async Error Handling</a></li>
+        <li><a href="#preventing-data-loss">Preventing Data Loss</a></li>
+        <li><a href="#broadcast-capabilities">Broadcast Capabilities</a></li>
+        <li><a href="#request-reply">Request-Reply</a></li>
+        <li><a href="#hybrid-event-driven-architectures">Hybrid Event-Driven Architectures</a></li>
+      </ul>
+    </li>
+    <li><a href="#versioning">Versioning</a></li>
+    <li><a href="#characteristics">Characteristics</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

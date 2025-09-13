@@ -1,0 +1,20 @@
+baseURL: https://kb.segersian.com/
+languageCode: en-us
+title: Knowledgebase
+theme: hugo-book
+
+menu:
+  after:
+    - name: "Github - Site"
+      url: "https://github.com/SegersIan/knowledge-base"
+      weight: 10
+    - name: "Github - Profile"
+      url: "https://github.com/SegersIan"
+      weight: 20
+bookCollapseSection: true
+
+params:
+  BookTheme: "auto"
+  BookSection: /
+  BookMenuBundle: true
+  BookCollapseSection: true

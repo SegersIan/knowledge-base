@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="&laquo; Back To Overview
+
+  Architecture Style: Microservices
+  
+  #
+  
+
+
+
+  Description
+  
+  #
+  
+
+Was named and use popularized by a blog post from Martin Fowler and James Lewis. The microservices style is heavily inspired on Domain-Driven-Design (DDD). The concept of Bounded Context (from DDD) was a decisive inspiration, which represents a decoupling style. The goal of microservices is high decoupling, physically modeling the logical notion of bounded context.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/software-architecture/architecture-styles/microservices/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="« Back To Overview
+Architecture Style: Microservices # Description # Was named and use popularized by a blog post from Martin Fowler and James Lewis. The microservices style is heavily inspired on Domain-Driven-Design (DDD). The concept of Bounded Context (from DDD) was a decisive inspiration, which represents a decoupling style. The goal of microservices is high decoupling, physically modeling the logical notion of bounded context.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="software-architecture">
+<title>Microservices | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/software-architecture/architecture-styles/microservices/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-software-architecture book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle"  />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle"  />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle" checked />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="active">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Microservices</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#description">Description</a>
+      <ul>
+        <li><a href="#topology">Topology</a></li>
+        <li><a href="#distributed">Distributed</a></li>
+        <li><a href="#granularity">Granularity</a></li>
+        <li><a href="#data-isolation">Data Isolation</a></li>
+        <li><a href="#api-layer">API Layer</a></li>
+        <li><a href="#operational-reuse">Operational Reuse</a></li>
+        <li><a href="#frontends">Frontends</a></li>
+        <li><a href="#communication">Communication</a></li>
+      </ul>
+    </li>
+    <li><a href="#nuggets-of-wisdom">Nuggets Of Wisdom</a></li>
+    <li><a href="#when-to-use">When To Use</a></li>
+    <li><a href="#when-not-to-use">When NOT To Use</a></li>
+    <li><a href="#considerations">Considerations</a></li>
+    <li><a href="#characteristics">Characteristics</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p><a href="./readme.md">&laquo; Back To Overview</a></p>
+<h1 id="architecture-style-microservices">
+  Architecture Style: Microservices
+  
+  <a class="anchor" href="#architecture-style-microservices">#</a>
+  
+</h1>
+<p><img src="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1701.png" alt="Microservices Architecture Style Image" /></p>
+<h2 id="description">
+  Description
+  
+  <a class="anchor" href="#description">#</a>
+  
+</h2>
+<p>Was named and use popularized by <a href="https://martinfowler.com/articles/microservices.html">a blog post from Martin Fowler and James Lewis</a>. The microservices style is heavily inspired on Domain-Driven-Design (DDD). The concept of <strong>Bounded Context</strong> (from DDD) was a decisive inspiration, which represents a decoupling style. The goal of microservices is high decoupling, physically modeling the logical notion of bounded context.</p>
+<p><strong>The driving philosophy of microservices is the notion of bounded context: each service models a domain or a workflow.</strong></p>
+<h3 id="topology">
+  Topology
+  
+  <a class="anchor" href="#topology">#</a>
+  
+</h3>
+<p>We create single-purpose services that implement a bounded context. Each service is expected to include all necessary parts to operate independently, including databases and other dependent components.</p>
+<h3 id="distributed">
+  Distributed
+  
+  <a class="anchor" href="#distributed">#</a>
+  
+</h3>
+<ul>
+<li>Each service runs its own process, originally implying its own hardware. Virtualization, Containers and infrastructure automation made it possible to separate these much further compared to a single application server (e.g Websphere, Tomcat, &hellip;) that struggles with multi-tenancy concerns for bigger organizations, like improper isolation between shared applications. Each services having its own process solves the issues introduced by shared application servers.</li>
+<li>Microservice style would not have been realistic without trust in OSS (low cost), introduction of virtualization, containers and infrastructure automation tools.</li>
+</ul>
+<h3 id="granularity">
+  Granularity
+  
+  <a class="anchor" href="#granularity">#</a>
+  
+</h3>
+<ul>
+<li>Finding the correct granularity for services is a core challenge. Making them too small, results often in communication (coupling) with many other services to do useful work. Some developers might take the term &ldquo;microservices&rdquo; as a commandment. As Martin Fowler said &ldquo;<strong>The term microservice is a label, not a description</strong>&rdquo;.</li>
+<li><strong>Guidelines</strong> to help find appropriate boundaries:
+<ul>
+<li><strong>Purpose</strong>: Ideally each microservice should be extremely functionally cohesive, contributing one significant behavior on behalf of the overall application.</li>
+<li><strong>Transactions</strong>: Bounded contexts are business workflows, and often the entities that need to cooperate in a transaction show architects a good service boundary. Transactions cause problems in distributed architectures, so if you can design your system to avoid transactions across services, you&rsquo;ll generate better designs.</li>
+<li><strong>Choreography</strong>: If you build services with excellent domain isolation, yet require extensive communication to function, consider bundling these services back int a larger service to avoid the communication overhead. This keeps microservices from becoming unnecessary small.</li>
+<li><strong>Data Isolation</strong>: See <a href="####-Data-Isolation">&ldquo;Data Isolation&rdquo;</a>.</li>
+</ul>
+</li>
+<li><strong>Iteration is key</strong>, iteration is the only way to ensure good service design. Refine!</li>
+</ul>
+<h3 id="data-isolation">
+  Data Isolation
+  
+  <a class="anchor" href="#data-isolation">#</a>
+  
+</h3>
+<ul>
+<li>Bounded contexts drive isolation, including the data. Microservices kills any coupling via shared databases or shared schemas used for integration.</li>
+<li>Don&rsquo;t model based on the &ldquo;Entity&rdquo;, known as the &ldquo;Entity Trap&rdquo;, but I personally like to name it entity-driven-design.</li>
+<li>There are no various sources, each with their source of truth of a certain domain. In microservices, joining data of their respective source of truths is challenging, as all the data might not live in the same bounded context. Solve this either via
+<ul>
+<li>Communicating with various bounded contexts to retrieve the data.</li>
+<li>Data replication or caching to distribute information.</li>
+</ul>
+</li>
+<li>This isolation can create headaches to aggregate information, but the trade off is freedom in being able to chose the right tool, based on type of storage and related factors (Document database, Graph Database, &hellip;) while other teams are not affected.</li>
+</ul>
+<h3 id="api-layer">
+  API Layer
+  
+  <a class="anchor" href="#api-layer">#</a>
+  
+</h3>
+<ul>
+<li>The API layer is optional, but sits between the Consumers of the system, which is a good location for lots of operational logic/tasks.</li>
+<li>The API layer should not be used for mediator/orchestration, that belongs in the bounded context! Mediators is &ldquo;technical&rdquo; partitioning, remember, it&rsquo;s all about bounded contexts here.</li>
+</ul>
+<h3 id="operational-reuse">
+  Operational Reuse
+  
+  <a class="anchor" href="#operational-reuse">#</a>
+  
+</h3>
+<p>Microservices prefer duplication over reuse, to avoid coupling. However, some parts, like operational components (e.g. monitoring, logging, circuit breakers,&hellip;) could really benefit from coupling. Even when using distinct bounded contexts, there will be similarities, especially from operational aspect.</p>
+<p>The <strong>Sidecar Pattern</strong> offers a solution to this problem. Reusable components can be located in this sidecar and independently maintained by other teams (e.g. Infrastructure Teams). This pattern is very popular in <strong>service mesh</strong>. This patterns creates a consistent operational interface across all microservices. This is a part of thinking about creating a &ldquo;platform&rdquo;.</p>
+<p><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1702.png">Sidecar Diagram</a></p>
+<h3 id="frontends">
+  Frontends
+  
+  <a class="anchor" href="#frontends">#</a>
+  
+</h3>
+<p>It is common to see a single (monolithic) user interface that talks to a microservice architecture. However, ideally the frontend is follows also the same design philosophy of microservices and we would expect to see micro frontends. Micro frontends exist, however due to practicalities and the novelty of the concept it is not so mainstream. However, we do expect further adoption.</p>
+<ul>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1705.png">Monolithic Frontend Diagram</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1706.png">Micro Frontend Diagram</a></li>
+</ul>
+<h3 id="communication">
+  Communication
+  
+  <a class="anchor" href="#communication">#</a>
+  
+</h3>
+<p>Finding the correct communication channel helps keeping services decoupled, yet coordinated in a useful way.</p>
+<ul>
+<li><strong>Synchronous</strong>: Caller waits for the response from the callee. Microservices typically uses <strong>protocol-aware heterogeneous interoperability</strong>:
+<ul>
+<li><em>Protocol Aware</em>: There is no centralized integration hub to avoid strong coupling, but standardize how which protocols are used.</li>
+<li><em>Heterogenous</em>: Every service can be in an entire different technology, so the protocol must support polyglot environments.</li>
+<li><em>Interoperability</em>: Services calling one another.</li>
+</ul>
+</li>
+<li><strong>Asynchronous</strong>: Caller doesn&rsquo;t wait for the response from the callee, but might come back at a later point. Common to use messaging and events. Event-driven architecture style is very often combined with microservices style to accommodate asynchronous communication.</li>
+</ul>
+<h4 id="choreography-and-orchestration">
+  Choreography and Orchestration
+  
+  <a class="anchor" href="#choreography-and-orchestration">#</a>
+  
+</h4>
+<ul>
+<li>Since we can use the event-driven style in conjunction with the microservices style, we can use the Broker/Choreography pattern as natural fit, cause of it&rsquo;s highly decoupled nature. Allowing for decoupling between services.</li>
+<li>When there is a need for mediator/orchestration pattern, you can create a microservice with the sole responsibility to act as a mediator for the given bounded context. To be clear, you should not make a &ldquo;mediator&rdquo; microservices that is reused as &ldquo;the mediator microservice&rdquo; for any need for a mediator.</li>
+<li>Note that in microservices we can have <strong>choreography</strong> and <strong>orchestration</strong> using request-based and event-based communication. But many of the same principles, challenges, and benefits for each pattern apply for request-based and event-based implementations. Examples being  error handling, workflow control, visibility, testing and recoverability.</li>
+</ul>
+<p>Diagrams:</p>
+<ul>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1707.png">Choreography Simple Example</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1709.png">Choreography Complex Example</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1708.png">Orchestration Simple Example</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_1710.png">Orchestration Complex Example</a></li>
+</ul>
+<h4 id="transactions-and-sages">
+  Transactions and sages
+  
+  <a class="anchor" href="#transactions-and-sages">#</a>
+  
+</h4>
+<p>Don&rsquo;t do transactions in microservices, fix granularity instead! See the <a href="####-Granularity">&ldquo;Granularity&rdquo;</a>.
+However, exceptions do exist, when they do, <strong>patterns exists with serious trade-offs</strong>.</p>
+<p>A popular distributed transactional pattern in microservices is the <strong>saga pattern</strong>. In this pattern a service acts a service using the mediator/orchestration pattern. The drawback on this is, when a single step in the transaction fails, all previous steps must be informed to cancel the step or execute a compensating action.</p>
+<p>This style of transactional coordination is called <strong>Compensating Transaction Framework</strong>. The complexity of this and all challenges to implement this (especially undo actions) makes it less than desirable. Where possible, try to avoid cross service transactions all together and rethink your bounded contexts.</p>
+<p>Diagrams:</p>
+<ul>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_17011.png">Saga Default</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/images/book/fosa_12.png">Saga Compensating Transactions</a></li>
+</ul>
+<h2 id="nuggets-of-wisdom">
+  Nuggets Of Wisdom
+  
+  <a class="anchor" href="#nuggets-of-wisdom">#</a>
+  
+</h2>
+
+<blockquote class='book-hint '>
+  <p>The best way to think about microservices is not by defining the size, but rather by determining the purpose.</p>
+</blockquote><ul>
+<li>Source: <a href="https://learning.oreilly.com/library/view/strategic-monoliths-and/9780137355600/">Strategic Monoliths and Microservices - Driving Innovation Using Purposeful Architecture</a></li>
+</ul>
+<h2 id="when-to-use">
+  When To Use
+  
+  <a class="anchor" href="#when-to-use">#</a>
+  
+</h2>
+<ul>
+<li>When you desired high decoupling, so teams can move independently, at their own pace.</li>
+<li>Works well for really large organizations, where it is important to scale, make it reliable, but maintain speed of delivery.</li>
+</ul>
+<h2 id="when-not-to-use">
+  When NOT To Use
+  
+  <a class="anchor" href="#when-not-to-use">#</a>
+  
+</h2>
+<ul>
+<li>When cost is a serious concern for skills, engineers, and infrastructure.</li>
+<li>When performance is key.</li>
+</ul>
+<h2 id="considerations">
+  Considerations
+  
+  <a class="anchor" href="#considerations">#</a>
+  
+</h2>
+<ul>
+<li>Performance is often a negative side effect of the distributed nature. Network calls take longer, security verification at multiple points.</li>
+<li>Use of transactions across service boundaries is advised against. Determining the granularity of services is the key to success.</li>
+<li>New developments in automation and operations constantly reduce the overall cost for operating and hosting a microservice architecture. However, for smaller engineering teams usually is not reasonable.</li>
+</ul>
+<h2 id="characteristics">
+  Characteristics
+  
+  <a class="anchor" href="#characteristics">#</a>
+  
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Characteristic</th>
+          <th>Rating</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Partitioning Type</td>
+          <td>Domain</td>
+      </tr>
+      <tr>
+          <td>Number of quanta</td>
+          <td>One to many</td>
+      </tr>
+      <tr>
+          <td>Deployability</td>
+          <td>⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Elasticity</td>
+          <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Evolutionary</td>
+          <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Fault Tolerance</td>
+          <td>⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Modularity</td>
+          <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Overall cost</td>
+          <td>⭐</td>
+      </tr>
+      <tr>
+          <td>Performance</td>
+          <td>⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Reliability</td>
+          <td>⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Scalability</td>
+          <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Simplicity</td>
+          <td>⭐</td>
+      </tr>
+      <tr>
+          <td>Testability</td>
+          <td>⭐⭐⭐⭐</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="resources">
+  Resources
+  
+  <a class="anchor" href="#resources">#</a>
+  
+</h2>
+<ul>
+<li><a href="https://www.linkedin.com/pulse/how-choose-microservices-boundaries-denis-baltor/">How To Choose Microservice boundaries</a></li>
+<li><a href="https://martinfowler.com/microservices/">Martin Fowler on Microservices</a></li>
+<li><a href="https://fundamentalsofsoftwarearchitecture.com/">Fundamentals of Software Architecture</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/software-architecture/architecture-styles/microkernel/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Microkernel" />
+        <span>Microkernel</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="flex align-center">
+        <span>Orchestration Driven Service Oriented</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Orchestration Driven Service Oriented" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#description">Description</a>
+      <ul>
+        <li><a href="#topology">Topology</a></li>
+        <li><a href="#distributed">Distributed</a></li>
+        <li><a href="#granularity">Granularity</a></li>
+        <li><a href="#data-isolation">Data Isolation</a></li>
+        <li><a href="#api-layer">API Layer</a></li>
+        <li><a href="#operational-reuse">Operational Reuse</a></li>
+        <li><a href="#frontends">Frontends</a></li>
+        <li><a href="#communication">Communication</a></li>
+      </ul>
+    </li>
+    <li><a href="#nuggets-of-wisdom">Nuggets Of Wisdom</a></li>
+    <li><a href="#when-to-use">When To Use</a></li>
+    <li><a href="#when-not-to-use">When NOT To Use</a></li>
+    <li><a href="#considerations">Considerations</a></li>
+    <li><a href="#characteristics">Characteristics</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

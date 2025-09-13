@@ -1,0 +1,3009 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Streams and Networking
+  
+  #
+  
+
+These are notes based on the Frontend Masters course by James Holiday (aka Substack).
+Link here
+
+  Networking, servers, and clients
+  
+  #
+  
+
+
+  Networking and Packets
+  
+  #
+  
+
+
+
+Servers and clients
+
+Any networked computer can be a server
+Aby networked computer can be a client
+These are roles rather.
+
+
+
+A payload is often broken up in multiple packets. Which you can receive out of order.
+
+
+TCP vs UDP">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/nodejs-streams-and-networking/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="Streams and Networking # These are notes based on the Frontend Masters course by James Holiday (aka Substack). Link here
+Networking, servers, and clients # Networking and Packets # Servers and clients
+Any networked computer can be a server Aby networked computer can be a client These are roles rather. A payload is often broken up in multiple packets. Which you can receive out of order.
+TCP vs UDP">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+<title>Nodejs Streams and Networking | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/nodejs-streams-and-networking/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/nodejs-streams-and-networking/index.xml" title="Knowledgebase" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-nodejs-streams-and-networking book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle"  />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle"  />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle" checked />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto active">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle"  />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Nodejs Streams and Networking</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#networking-servers-and-clients">Networking, servers, and clients</a>
+      <ul>
+        <li><a href="#networking-and-packets">Networking and Packets</a></li>
+        <li><a href="#protocols-and-ports">Protocols and Ports</a></li>
+        <li><a href="#servers-and-clients">Servers and Clients</a></li>
+        <li><a href="#netcat">Netcat</a></li>
+        <li><a href="#http-and-headers">HTTP and Headers</a></li>
+        <li><a href="#http-post">HTTP Post</a></li>
+        <li><a href="#curl">Curl</a></li>
+        <li><a href="#smtp">SMTP</a></li>
+        <li><a href="#irc">IRC</a></li>
+        <li><a href="#binary-protocols-and-inspecting-protocols">Binary Protocols and Inspecting Protocols</a></li>
+      </ul>
+    </li>
+    <li><a href="#streams">Streams</a>
+      <ul>
+        <li><a href="#simple-example">Simple example</a></li>
+        <li><a href="#transform-data-example">Transform data Example</a></li>
+        <li><a href="#read-from-a-file">Read from a file</a></li>
+        <li><a href="#with-node-core">With Node Core</a></li>
+        <li><a href="#bit-on-package-through2">Bit on package through2</a></li>
+        <li><a href="#concat-stream">Concat stream</a></li>
+        <li><a href="#example-of-basic-http-server-with-concat-stream">Example of basic HTTP Server with concat stream</a></li>
+      </ul>
+    </li>
+    <li><a href="#stream-types">Stream Types</a>
+      <ul>
+        <li><a href="#simple-vpn-with-password">Simple VPN with password</a></li>
+        <li><a href="#object-streams">Object Streams</a></li>
+      </ul>
+    </li>
+    <li><a href="#core-streams">Core Streams</a>
+      <ul>
+        <li><a href="#apis">APIs</a></li>
+        <li><a href="#child-process-also-uses-streams">Child Process also uses streams</a></li>
+        <li><a href="#http-core-streams">HTTP core streams</a></li>
+        <li><a href="#crypto-streams">Crypto Streams</a></li>
+        <li><a href="#zlib-core-streams">Zlib core streams</a></li>
+        <li><a href="#split2-use-case">Split2 use case</a></li>
+      </ul>
+    </li>
+    <li><a href="#web-socket">Web Socket</a>
+      <ul>
+        <li><a href="#websocket-streams">Websocket streams</a></li>
+        <li><a href="#websocket-node-client">Websocket Node Client</a></li>
+      </ul>
+    </li>
+    <li><a href="#stream-modules">Stream Modules</a>
+      <ul>
+        <li><a href="#collect-stream">Collect Stream</a></li>
+        <li><a href="#from2">from2</a></li>
+        <li><a href="#to2">to2</a></li>
+        <li><a href="#duplexify">Duplexify</a></li>
+        <li><a href="#errors">Errors</a></li>
+        <li><a href="#pump">Pump</a></li>
+        <li><a href="#pumpify">Pumpify</a></li>
+        <li><a href="#end-of-stream">End-of-stream</a></li>
+      </ul>
+    </li>
+    <li><a href="#remote-procedure-call-and-multiplex">Remote Procedure Call and Multiplex</a>
+      <ul>
+        <li><a href="#rpc-stream">RPC-Stream</a></li>
+        <li><a href="#multiplex">Multiplex</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="streams-and-networking">
+  Streams and Networking
+  
+  <a class="anchor" href="#streams-and-networking">#</a>
+  
+</h1>
+<p>These are notes based on the Frontend Masters course by James Holiday (aka Substack).
+Link <a href="https://frontendmasters.com/courses/networking-streams/">here</a></p>
+<h2 id="networking-servers-and-clients">
+  Networking, servers, and clients
+  
+  <a class="anchor" href="#networking-servers-and-clients">#</a>
+  
+</h2>
+<h3 id="networking-and-packets">
+  Networking and Packets
+  
+  <a class="anchor" href="#networking-and-packets">#</a>
+  
+</h3>
+<ul>
+<li>
+<p>Servers and clients</p>
+<ul>
+<li>Any networked computer can be a server</li>
+<li>Aby networked computer can be a client
+These are roles rather.</li>
+</ul>
+</li>
+<li>
+<p>A payload is often broken up in multiple packets. Which you can receive out of order.</p>
+</li>
+<li>
+<p>TCP vs UDP</p>
+<ul>
+<li>TCP : Reliable transport; If no ACK (acknowledged) came from the other end, we RESENT it.</li>
+<li>UDP : Unreliable transport; Fire and forget, there is no confirmation from the other end if a packet was received.
+<ul>
+<li>Use case : Streaming audio/video (some use TCP now), games</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="protocols-and-ports">
+  Protocols and Ports
+  
+  <a class="anchor" href="#protocols-and-ports">#</a>
+  
+</h3>
+<p>Language that computes programs speak to each other, examples of protocols:</p>
+<ul>
+<li>HTTP - Browse web pages (port 80)</li>
+<li>HTTPS - Browse web pages with encryption (port 443)</li>
+<li>SMPT - Send an receive emails (port 25)</li>
+<li>IMAP, POP3 - Load emails from an inbox</li>
+<li>IRC - Chat (port 6667)</li>
+<li>FTP - File transfer (port 21 for control)</li>
+<li>SSH - Remote shell over an encrypted connection (port 22)</li>
+<li>SSL - Low-level secure data transfer (used by HTTPS)</li>
+</ul>
+<p>Most services have (often) one or many default ports. A computer can have many services, ports differentiate
+between the services on a system. (range 1 - 65535). We can have a service listen to any port, but we have custom,
+default assignments.</p>
+<ul>
+<li>mysql - 3306</li>
+<li>postgresl - 5432</li>
+<li>couchdb - 5984</li>
+</ul>
+<p>By default, systems can only listen to ports below 1024 as the root user.</p>
+<h3 id="servers-and-clients">
+  Servers and Clients
+  
+  <a class="anchor" href="#servers-and-clients">#</a>
+  
+</h3>
+<ul>
+<li>A server means you are listening for incoming connections.</li>
+<li>Clients initiate the connections and connects to servers.</li>
+<li>P2P : This is a third role, aside of client and server. Here clients establish connections directly with other clients.
+There are no fixes servers.
+<ul>
+<li>Example is webrtc : Usually use for video and audio chat. Else you get latency if it all goes through a centralized server.</li>
+</ul>
+</li>
+</ul>
+<h3 id="netcat">
+  Netcat
+  
+  <a class="anchor" href="#netcat">#</a>
+  
+</h3>
+<ul>
+<li>Plain text server</li>
+<li>start server: <code>nc -l 5000</code></li>
+<li>start client: <code>nc localhost 5000</code></li>
+<li>Happy chatting</li>
+</ul>
+<h3 id="http-and-headers">
+  HTTP and Headers
+  
+  <a class="anchor" href="#http-and-headers">#</a>
+  
+</h3>
+<ul>
+<li>HTTP : Hyper Text Transfer Protocol, how web servers and web browsers communicate.</li>
+<li>HTTP requests begin with a VERB
+<ul>
+<li>GET - Fetch document</li>
+<li>POST - Submit a form</li>
+<li>HEAD - Fetch metadata about a document</li>
+<li>PUT - Upload a file</li>
+</ul>
+</li>
+<li>Headers
+<ul>
+<li>Key value <code>key: value</code>, colon separated, space not mandatory</li>
+<li>Example of creating a HTTP conform message
+<pre tabindex="0"><code>    $ nc google.com
+    GET / HTTP/1.0
+    HOST: google.com   --&gt; A server might serve multiple domains, or LB.
+</code></pre></li>
+</ul>
+</li>
+<li>The format is a bit like this plain text snippet, notice the 2 returns before the body starts:
+<pre tabindex="0"><code>    VERB PATH HTTPVERSION
+    HEADERS ...
+
+    BODY ...
+</code></pre>and the response like
+<pre tabindex="0"><code>    HTTPVERSION STATUSCODE STATUSMESSAGE
+    HEADERS ...
+
+    BODY ...
+</code></pre></li>
+</ul>
+<h3 id="http-post">
+  HTTP Post
+  
+  <a class="anchor" href="#http-post">#</a>
+  
+</h3>
+<p>Taken the following response</p>
+<pre tabindex="0"><code>    HTTP/1.1 200 OK
+    Date: Mon, 12 Jan 2015 06:37:51 GMT
+    Connection: keep-alive
+    Transfer-Encoding: chunked &lt;- Gonna send body in chunks, send links for chunks. Server doesn&#39;t know in advance how long the response will be.
+    
+    3  &lt;-- Hex value of the cuncked part
+    oi &lt;-- payload
+    4  &lt;-- Hex value of the cuncked part
+    ok &lt;-- payload
+    
+    0 &lt;-- End, finished
+</code></pre><h3 id="curl">
+  Curl
+  
+  <a class="anchor" href="#curl">#</a>
+  
+</h3>
+<pre tabindex="0"><code>    $ curl -s http://substack.net        &lt;-- Do GET and print body
+    $ curl -i http://substack.net        &lt;-- Print body and headers
+    $ curl -I http://substack.net        &lt;-- Print only headers
+    # -s gets rid of progress output
+    # Use -X ti set the HTTP VERB and -d for form paramters
+    $ curl -X POST http://substack.net       
+    $ curl -X POST http://substack.net -d title=whatever -d date=10000
+    # You can set headers with the -H flag
+    $ curl http://substack.net -H &#39;Content-Type: application/json&#39;
+    
+</code></pre><h3 id="smtp">
+  SMTP
+  
+  <a class="anchor" href="#smtp">#</a>
+  
+</h3>
+<ul>
+<li>Similar to HTTP as it has status codes and such.</li>
+<li>Like HTTP, you have a first block with &ldquo;headers&rdquo;, so all the metadata, from, to , subject, and then there is a body
+What we&rsquo;re actually sending. Body is ended with a line with only a <code>.</code> and new line.</li>
+</ul>
+<h3 id="irc">
+  IRC
+  
+  <a class="anchor" href="#irc">#</a>
+  
+</h3>
+<p>Another text based protocol. So HTTP, SMTP and IRC are all plain text protocols that just follow a certain text layout
+and a port to listen on.</p>
+<ul>
+<li>IRC commands
+<ul>
+<li>nick - identify as a user</li>
+<li>user - also identify as user</li>
+<li>join - join a channel</li>
+<li>privemsg - send a message to a channel</li>
+</ul>
+</li>
+</ul>
+<h3 id="binary-protocols-and-inspecting-protocols">
+  Binary Protocols and Inspecting Protocols
+  
+  <a class="anchor" href="#binary-protocols-and-inspecting-protocols">#</a>
+  
+</h3>
+<ul>
+<li>
+<p>Test based protocols are easy to inspect with a sniffer and such</p>
+</li>
+<li>
+<p>With Binary protocols you can&rsquo;t messages plain text sadly. We need to write programs that unpack the incoming bytes,
+and pack the outgoing bytes according to given specification.</p>
+</li>
+<li>
+<p>Examples of binary</p>
+<ul>
+<li>ssh (except from initial greeting)</li>
+</ul>
+</li>
+<li>
+<p>Inspecting protocols</p>
+<ul>
+<li>For in/out local eth/wifi card
+<ul>
+<li>Wireshark for GUI</li>
+<li>tcpdump for CLI
+<ul>
+<li><code>$ sudo tcpdump -X    --&gt; start listening</code>;</li>
+<li><code>$ sudo tcpdump -A    --&gt; start listening with other formatting</code>;</li>
+<li><code>$ sudo tcpdump 'tcp port 80' '-X     -&gt; string contains a query/filter</code>;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="streams">
+  Streams
+  
+  <a class="anchor" href="#streams">#</a>
+  
+</h2>
+<p>Node.js has a handy interface for shuffling data around called streams.</p>
+<p><strong>Stream Origins</strong></p>
+
+<blockquote class='book-hint '>
+  <p>We should have some ways of connecting programs like garden hose screw in another segment when it becomes
+necessary to massage data in another way. This is the way of IO also.
+Doug McIlroy, October 11, 1964</p>
+</blockquote><p>Thinks also of how we pipe in *nix systems between programs.</p>
+<p><strong>Why Streeams?</strong></p>
+<ul>
+<li>We can compose streaming abstractions</li>
+<li>We can operate on data chunk by chunk</li>
+</ul>
+<p><strong>Composition</strong></p>
+<p>Just like how in unix we can pipe commands together, we can pipe streams together</p>
+<pre tabindex="0"><code>    $ cat file &gt; jq -name &#39;.age&#39;&gt; ...
+</code></pre><h3 id="simple-example">
+  Simple example
+  
+  <a class="anchor" href="#simple-example">#</a>
+  
+</h3>
+<p>a nodejs equivalent what <code>$ cat</code> does.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createReadStream</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">argv</span>[<span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>);
+</span></span></code></pre></div><h3 id="transform-data-example">
+  Transform data Example
+  
+  <a class="anchor" href="#transform-data-example">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">through</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;through2&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createReadStream</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">argv</span>[<span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">through</span>(<span style="color:#a6e22e">toUpper</span>))
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">toUpper</span>(<span style="color:#a6e22e">buf</span>, <span style="color:#a6e22e">enc</span>, <span style="color:#a6e22e">next</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// buf is a binary description of the data
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// Output should be a buffer or string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">next</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">toUpperCase</span>())
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="read-from-a-file">
+  Read from a file
+  
+  <a class="anchor" href="#read-from-a-file">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">through</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;through2&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">through</span>(<span style="color:#a6e22e">toUpper</span>))
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">toUpper</span>(<span style="color:#a6e22e">buf</span>, <span style="color:#a6e22e">enc</span>, <span style="color:#a6e22e">next</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// buf is a binary description of the data
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// Output should be a buffer or string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">next</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">toUpperCase</span>())
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="with-node-core">
+  With Node Core
+  
+  <a class="anchor" href="#with-node-core">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">Transform</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;stream&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">toUpper</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Transform</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">transform</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">buf</span>, <span style="color:#a6e22e">enc</span>, <span style="color:#a6e22e">next</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">next</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">toUpperCase</span>())
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ... and other hooks
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">toUpper</span>)
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>);
+</span></span><span style="display:flex;"><span>  
+</span></span></code></pre></div><p><code>flush</code> is what happens when a stream finishes.</p>
+<h3 id="bit-on-package-through2">
+  Bit on package through2
+  
+  <a class="anchor" href="#bit-on-package-through2">#</a>
+  
+</h3>
+<p>With through there are 2 parameters: <code>write</code> and <code>end</code>.
+Both are optional.</p>
+<p><code>through(write, end)</code></p>
+<ul>
+<li><code>function write (bug, enc, next) {}</code></li>
+<li><code>function end () {}</code></li>
+</ul>
+<p>Call <code>next()</code> when you&rsquo;re ready for the next chunk.
+If you don&rsquo;t call <code>next()</code>, your stream will hang!</p>
+<p>Call <code>this.push(VALUE)</code> inside the callback to put VALUE into the stream&rsquo;s output.</p>
+<p>Use a <code>VALUE</code> of <code>NULL</code> to end the stream. This can happen when you need to buffer a certain amount of bytes before you
+can do something. If you need 100 Byte, you keep doing <code>this.push(VALUE)</code> on each chunk received and just call <code>next()</code>
+until your buffer size is big enough and take proper actions.</p>
+<h3 id="concat-stream">
+  Concat stream
+  
+  <a class="anchor" href="#concat-stream">#</a>
+  
+</h3>
+<p><code>npm install concat-stream</code></p>
+<p>Concat-steam buffers up all the data in the stream:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">concat</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;concat-stream&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">concat</span>(<span style="color:#66d9ef">function</span>( <span style="color:#a6e22e">body</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">length</span>);
+</span></span><span style="display:flex;"><span>    }))
+</span></span></code></pre></div><p>You can only write to a concat-stream, You can&rsquo;t read from a concat-stream. Keep in mind that all data will be
+in memory.</p>
+<p><strong>GOOD TO KNOW</strong> : When you are listening to a STDIN, it will keep taking input till it receives a <code>CTRL + D</code>.</p>
+<h3 id="example-of-basic-http-server-with-concat-stream">
+  Example of basic HTTP Server with concat stream
+  
+  <a class="anchor" href="#example-of-basic-http-server-with-concat-stream">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">concat</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;concat-stream&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">through</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;through2&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">http</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;http&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">qs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;querystring&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SIZE_LIMIT</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">req</span>
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">counter</span>())
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">concat</span>({<span style="color:#a6e22e">encoding</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;string&#39;</span>}, <span style="color:#a6e22e">onBody</span>));
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">counter</span>() {
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">size</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">through</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">buf</span>, <span style="color:#a6e22e">enc</span>, <span style="color:#a6e22e">next</span>) {
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">size</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">size</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">SIZE_LIMIT</span>) {
+</span></span><span style="display:flex;"><span>                 <span style="color:#a6e22e">next</span>(<span style="color:#66d9ef">null</span>, <span style="color:#66d9ef">null</span>);
+</span></span><span style="display:flex;"><span>             }<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>                 <span style="color:#a6e22e">next</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">buf</span>);
+</span></span><span style="display:flex;"><span>             }
+</span></span><span style="display:flex;"><span>           })
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onBody</span> (<span style="color:#a6e22e">body</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">params</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">qs</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">body</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">params</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#e6db74">&#39;ok
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">5000</span>);
+</span></span></code></pre></div><h2 id="stream-types">
+  Stream Types
+  
+  <a class="anchor" href="#stream-types">#</a>
+  
+</h2>
+<ul>
+<li><strong>Readable streams</strong> - Produces data : You can pipe  FROM it
+<ul>
+<li><code>readable.pipe(A)</code></li>
+<li>Key Methods (on each stream you can write to: writeable, transform and duplex)
+<ul>
+<li><code>.write(buf)</code></li>
+<li><code>.end()</code></li>
+<li><code>.end(buf)</code></li>
+<li><code>.on('finish', function () {})</code></li>
+<li><code>(...).pipe(stream)</code></li>
+</ul>
+</li>
+<li>Example</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">w</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createWriteStream</span>(<span style="color:#e6db74">&#39;cool.txt&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">once</span>(<span style="color:#e6db74">&#39;finished&#39;</span>, <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;FINISHED&#39;</span>);
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">write</span>(<span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">Hi</span>
+</span></span></code></pre></div></li>
+</ul>
+<p>&lsquo;);
+w.write(&lsquo;Wow
+&lsquo;);
+w.end();</p>
+<pre tabindex="0"><code>
+* **Writeable streams** - Consumes data: you can pipe TO it
+* `A.pipe(writeable)`
+* Key Methods
+  * `stream.pipe(..)`
+  * `stream.once(&#39;end, function () {})`
+  * `stream.read()`
+  * `stream.on(&#39;readable, function () {})`
+* Example
+```js
+  const fs = require(&#39;fs&#39;);
+  const r = fs.createReadStream(process.argv[2]);
+  r.pipe(process.stdout);
+</code></pre><ul>
+<li>
+<p>Modes, streams can be in paused or flowing mode. By default all readable are in paused mode.</p>
+<ul>
+<li>Default with automatic back pressure</li>
+<li>Data is consumes as soon chunks are available (no back pressure)</li>
+</ul>
+</li>
+<li>
+<p><strong>Transform streams</strong> - Consumes data, producing transformed data</p>
+<ul>
+<li><code>A.pipe(transform).pipe(B)</code></li>
+<li>Readable + writeable stream where <code>input =&gt; transform =&gt; output</code>.</li>
+<li>Key Methods : All the readable AND writeable methods.</li>
+</ul>
+</li>
+<li>
+<p><strong>Duplex streams</strong> - Consumes data separately from producing data. (e.g a bidirectional network stream)</p>
+<ul>
+<li><code>A.pipe(duplex).pipe(A)</code> -&gt; <code>A</code> and <code>duplex</code> are both gonna be a duplex</li>
+<li>Readable + writeable stream where input is decoupled from output. Like a telephone!</li>
+<li>Key Methods : All the readable AND writeable methods.</li>
+<li>bidirectional connections basically.</li>
+<li>A duplex stream can pipe in itself. Because read/write is decoupled. Imagine you have one pipe with just two (I and O) lines in it.
+And you just connect them.</li>
+<li>Example: Echo Server</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">net</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;net&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">createServer</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">stream</span>) {
+</span></span><span style="display:flex;"><span>     <span style="color:#a6e22e">stream</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">stream</span>); <span style="color:#75715e">// This does not create an infinite loop, just a echo server
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }).<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">5000</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>  ▶ nc localhost <span style="color:#ae81ff">5000</span>
+</span></span><span style="display:flex;"><span>  hi
+</span></span><span style="display:flex;"><span>  hi
+</span></span><span style="display:flex;"><span>  there
+</span></span><span style="display:flex;"><span>  there
+</span></span></code></pre></div><ul>
+<li>Ammend Example: Proxy</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">net</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;net&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">createServer</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">stream</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">stream</span>
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">connect</span>(<span style="color:#ae81ff">5000</span>, <span style="color:#e6db74">&#39;localhost&#39;</span>))
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">stream</span>)
+</span></span><span style="display:flex;"><span>  }).<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">5001</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>  ▶ nc localhost <span style="color:#ae81ff">5000</span>
+</span></span><span style="display:flex;"><span>  hi
+</span></span><span style="display:flex;"><span>  hi
+</span></span><span style="display:flex;"><span>  there
+</span></span><span style="display:flex;"><span>  there
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="simple-vpn-with-password">
+  Simple VPN with password
+  
+  <a class="anchor" href="#simple-vpn-with-password">#</a>
+  
+</h3>
+<p><strong>echo.js</strong></p>
+<ul>
+<li>Just output what comes in.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">net</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;net&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">createServer</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">stream</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">stream</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">stream</span>)
+</span></span><span style="display:flex;"><span>    }).<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">5000</span>)
+</span></span></code></pre></div><p><strong>vpn.js</strong></p>
+<ul>
+<li>Connects to the echo server.</li>
+<li>Takes incoming connections</li>
+<li>Decrypts incoming connection</li>
+<li>Sends it plain text to the echo server</li>
+<li>Get&rsquo;s the plain text response from the echo server</li>
+<li>Encrypts the plain test response</li>
+<li>Returns the encrypted response</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">net</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;net&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">crypto</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;crypto&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pump</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;pump&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pw</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;abc123&#39;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">createServer</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">stream</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">pump</span>(
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">stream</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createDecipher</span>(<span style="color:#e6db74">&#39;aes192&#39;</span>,<span style="color:#a6e22e">pw</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">connect</span>(<span style="color:#ae81ff">5000</span>,<span style="color:#e6db74">&#39;localhost&#39;</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createCipher</span>(<span style="color:#e6db74">&#39;aes192&#39;</span>,<span style="color:#a6e22e">pw</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">stream</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">err</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      )
+</span></span><span style="display:flex;"><span>    }).<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">5005</span>)
+</span></span></code></pre></div><p><strong>vpn-client.js</strong></p>
+<ul>
+<li>Connect to stdin</li>
+<li>(Might continue only once a buffer is full)</li>
+<li>Encrypt the plain text from the std in</li>
+<li>Send encrypted request it to the vpn server</li>
+<li>Decrypts the response that came back from the vpn server</li>
+<li>Writes the decrypted response as the plain text to the stdout</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">net</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;net&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">crypto</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;crypto&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pw</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;abc123&#39;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">stream</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">connect</span>(<span style="color:#ae81ff">5005</span>,<span style="color:#e6db74">&#39;localhost&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createCipher</span>(<span style="color:#e6db74">&#39;aes192&#39;</span>,<span style="color:#a6e22e">pw</span>))
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">stream</span>)
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createDecipher</span>(<span style="color:#e6db74">&#39;aes192&#39;</span>,<span style="color:#a6e22e">pw</span>))
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>)
+</span></span></code></pre></div><h3 id="object-streams">
+  Object Streams
+  
+  <a class="anchor" href="#object-streams">#</a>
+  
+</h3>
+<p>Normally you can only read and write buffers and strings with streams. However, if you initialize a stream in <code>objectMode</code>,
+you can use any kind of object (except for <code>null</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#75715e">// This can be also done with native modules
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">through</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;through2&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">tr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">through</span>.<span style="color:#a6e22e">obj</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">reow</span>, <span style="color:#a6e22e">enc</span>, <span style="color:#a6e22e">next</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">next</span>(<span style="color:#66d9ef">null</span>, (<span style="color:#a6e22e">row</span>.<span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tr</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tr</span>.<span style="color:#a6e22e">write</span>({<span style="color:#a6e22e">n</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>})
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tr</span>.<span style="color:#a6e22e">write</span>({<span style="color:#a6e22e">n</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>})
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tr</span>.<span style="color:#a6e22e">write</span>({<span style="color:#a6e22e">n</span> <span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>})
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tr</span>.<span style="color:#a6e22e">end</span>();
+</span></span></code></pre></div><p>When piping a object stream, the consuming stream should also be able to do <code>objectMode</code>.</p>
+<h2 id="core-streams">
+  Core Streams
+  
+  <a class="anchor" href="#core-streams">#</a>
+  
+</h2>
+<h3 id="apis">
+  APIs
+  
+  <a class="anchor" href="#apis">#</a>
+  
+</h3>
+<p>Many of the APIs in node core provide stream interfaces:</p>
+<ul>
+<li><code>fs.createReadStream()</code></li>
+<li><code>fs.createWriteStream()</code></li>
+<li><code>process.stdin</code>, <code>process.stdout</code></li>
+<li><code>ps.stdin</code>, <code>ps.stdout</code>, <code>ps.stderr</code></li>
+<li><code>next.connect()</code>, <code>tls.connect()</code></li>
+<li><code>net.createServer(function(stream) {})</code></li>
+<li><code>tls.createServer(otps, function(stream) {})</code></li>
+</ul>
+<h3 id="child-process-also-uses-streams">
+  Child Process also uses streams
+  
+  <a class="anchor" href="#child-process-also-uses-streams">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">spawn</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;child_process&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ps</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">spawn</span>(<span style="color:#e6db74">&#39;grep&#39;</span>, [<span style="color:#e6db74">&#39;potato&#39;</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ps</span>.<span style="color:#a6e22e">stdout</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>); <span style="color:#75715e">// We pipe the output of the child process to our stdout
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">ps</span>.<span style="color:#a6e22e">stdin</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;cheese
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ps</span>.<span style="color:#a6e22e">stdin</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;potato
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ps</span>.<span style="color:#a6e22e">stdin</span>.<span style="color:#a6e22e">end</span>();
+</span></span></code></pre></div><h3 id="http-core-streams">
+  HTTP core streams
+  
+  <a class="anchor" href="#http-core-streams">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#75715e">// We receive a request
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// req: readable, res:writeable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>((<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; ({}))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// We make a request
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// req: writeable, res:readable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">req</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">request</span>((<span style="color:#a6e22e">res</span>) =&gt; ({}))
+</span></span></code></pre></div><h3 id="crypto-streams">
+  Crypto Streams
+  
+  <a class="anchor" href="#crypto-streams">#</a>
+  
+</h3>
+<ul>
+<li><code>crypto.createCipher(algo, password)</code> - transform stream to encrypt</li>
+<li><code>crypto.createDecipher(algo, password)</code> - transform stream to decrypt</li>
+<li><code>crypto.createCipheriv(algo, key, iv)</code> - transform stream to encrypt with iv</li>
+<li><code>crypto.createDecipheriv(algo, key, iv)</code> - transform stream to decrypt with iv</li>
+<li><code>crypto.createHash(algo)</code> - transform stream to output cryptographic hash</li>
+<li><code>crypto.createHash(algo, key)</code> - transform stream to output HMAC digest</li>
+<li><code>crypto.createSign(algo)</code> - Writeable stream to sign messages</li>
+<li><code>crypto.createVerify(algo)</code> - Writeable stream to verify signatures</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">createHash</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;crypto&#39;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">createHash</span>(<span style="color:#e6db74">&#39;sha512&#39;</span>, { <span style="color:#a6e22e">encoding</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;hex&#39;</span> }))
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>);
+</span></span></code></pre></div><p>Don&rsquo;t forget, when you run this, to use <code>CTRL + D</code> to get the hash. It basically says, pull my shit.</p>
+<h3 id="zlib-core-streams">
+  Zlib core streams
+  
+  <a class="anchor" href="#zlib-core-streams">#</a>
+  
+</h3>
+<ul>
+<li><code>zlib.createGzip(opts)</code> - transform stream to compress with gzip</li>
+<li><code>zlib.createGunzip(opts)</code> - transform stream to uncompress with gzip</li>
+<li><code>zlib.createDeflate(opts)</code> - transform stream to compress with deflate</li>
+<li><code>zlib.createInflate(opts)</code> - transform stream to uncompress with deflate</li>
+<li><code>zlib.createDeflateRaw(opts)</code> - transform stream to compress with raw deflate</li>
+<li><code>zlib.createInflateRaw(opts)</code> - transform stream to uncompress with raw deflate</li>
+<li><code>zlib.createUnzip(opts)</code> - transform stream to uncompress gzip and deflate</li>
+</ul>
+<h3 id="split2-use-case">
+  Split2 use case
+  
+  <a class="anchor" href="#split2-use-case">#</a>
+  
+</h3>
+<p>Split input on newlines</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">split</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;split2&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">through</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;through2&#39;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">split</span>()) <span style="color:#75715e">// This splits on new lines
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">through</span>(<span style="color:#a6e22e">write</span>, <span style="color:#a6e22e">end</span>)); <span style="color:#75715e">// Now we increase the count per chunk (each being a new line) and log total count
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">write</span>(<span style="color:#a6e22e">next</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">next</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">end</span>() {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">count</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="web-socket">
+  Web Socket
+  
+  <a class="anchor" href="#web-socket">#</a>
+  
+</h2>
+<h3 id="websocket-streams">
+  Websocket streams
+  
+  <a class="anchor" href="#websocket-streams">#</a>
+  
+</h3>
+<p>Streaming websockets in node and the browser.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">http</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;http&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ecstatic</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;ecstatic&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">through</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;through2&#39;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">createServer</span>(<span style="color:#a6e22e">ecstatic</span>(<span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/public&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">3000</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">wsock</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;websocket-stream&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wsock</span>.<span style="color:#a6e22e">createServer</span>({<span style="color:#a6e22e">server</span>}, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">stream</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// stream is a duplex stream
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">stream</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">loud</span>()).<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">stream</span>);
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loud</span> () {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">through</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">bug</span>, <span style="color:#a6e22e">enc</span>, <span style="color:#a6e22e">next</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">next</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">toString</span>().<span style="color:#a6e22e">toUpperCase</span>());
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="websocket-node-client">
+  Websocket Node Client
+  
+  <a class="anchor" href="#websocket-node-client">#</a>
+  
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">wsock</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;websocket-stream&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">stream</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">wsock</span>(<span style="color:#e6db74">&#39;ws://localhost:500&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">stream</span>).<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>);
+</span></span></code></pre></div><h2 id="stream-modules">
+  Stream Modules
+  
+  <a class="anchor" href="#stream-modules">#</a>
+  
+</h2>
+<h3 id="collect-stream">
+  Collect Stream
+  
+  <a class="anchor" href="#collect-stream">#</a>
+  
+</h3>
+<p>Collect a stream&rsquo;s output into a single buffer. Useful for unit tests.
+For object streams, collect output into an array of objects.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">collect</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;collect-stream&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">split</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;split2&#39;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">split</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">collect</span>(<span style="color:#a6e22e">sp</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">rows</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">err</span>) <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">err</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">rows</span>)
+</span></span><span style="display:flex;"><span>    })
+</span></span></code></pre></div><h3 id="from2">
+  from2
+  
+  <a class="anchor" href="#from2">#</a>
+  
+</h3>
+<p>Create a readable stream with a pull function.
+Reminds me a bit of a generator. (Enumeration)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">from</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;from2&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">messages</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;hello&#39;</span>, <span style="color:#e6db74">&#39;world
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;</span>, <span style="color:#66d9ef">null</span>];
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">from</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">size</span>, <span style="color:#a6e22e">next</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">next</span>(<span style="color:#66d9ef">null</span>, <span style="color:#a6e22e">messages</span>.<span style="color:#a6e22e">shift</span>())
+</span></span><span style="display:flex;"><span>    }).<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>);
+</span></span></code></pre></div><h3 id="to2">
+  to2
+  
+  <a class="anchor" href="#to2">#</a>
+  
+</h3>
+<p>Create a writable stream with a write and flush function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">to</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;to2&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">split</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;split2&#39;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">split</span>())
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">to</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">buf</span>, <span style="color:#a6e22e">next</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">length</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">next</span>();
+</span></span><span style="display:flex;"><span>        }))
+</span></span></code></pre></div><h3 id="duplexify">
+  Duplexify
+  
+  <a class="anchor" href="#duplexify">#</a>
+  
+</h3>
+<p>A logger example</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">duplexify</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;duplexify&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mkdirp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;mkdirp&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">duplexify</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">mkdirp</span>(<span style="color:#e6db74">&#39;logs&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">w</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createWriteStream</span>(<span style="color:#e6db74">&#39;logs/&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.log&#39;</span>);
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">setWriteable</span>(<span style="color:#a6e22e">w</span>);
+</span></span><span style="display:flex;"><span>        })
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>   
+</span></span></code></pre></div><p>Usage example</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#a6e22e">cont</span> <span style="color:#a6e22e">log</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./logger.js&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">stream</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;myname&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">stream</span>.<span style="color:#a6e22e">write</span>(Date.<span style="color:#a6e22e">now</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">stream</span>.<span style="color:#a6e22e">end</span>();
+</span></span></code></pre></div><h3 id="errors">
+  Errors
+  
+  <a class="anchor" href="#errors">#</a>
+  
+</h3>
+<p>Streams are also even emitters. So errors can be caught with error listeners.</p>
+<h3 id="pump">
+  Pump
+  
+  <a class="anchor" href="#pump">#</a>
+  
+</h3>
+<p>Pump can pipe streams on each other, but gently handles errors.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pump</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;pump&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">pump</span>(<span style="color:#a6e22e">stream1</span>, <span style="color:#a6e22e">stream2</span>, <span style="color:#a6e22e">stream3</span>, <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onError</span>() {});
+</span></span></code></pre></div><h3 id="pumpify">
+  Pumpify
+  
+  <a class="anchor" href="#pumpify">#</a>
+  
+</h3>
+<p>Unlike pump, you get back a stream you can write to and from.</p>
+<h3 id="end-of-stream">
+  End-of-stream
+  
+  <a class="anchor" href="#end-of-stream">#</a>
+  
+</h3>
+<p>Reliably detect when a stream is finished. This package is aware of all the obscure ways streams can end.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">onend</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;end-of-stream&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">net</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;net&#39;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">net</span>.<span style="color:#a6e22e">createServer</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">stream</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">iv</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">stream</span>.<span style="color:#a6e22e">write</span>(Date.<span style="color:#a6e22e">now</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;</span>);
+</span></span><span style="display:flex;"><span>      }, <span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">onend</span>(<span style="color:#a6e22e">stream</span>, <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onEndedOrErrorsOut</span>(){
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">clearInterval</span>(<span style="color:#a6e22e">iv</span>);
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">server</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">5000</span>);
+</span></span></code></pre></div><h2 id="remote-procedure-call-and-multiplex">
+  Remote Procedure Call and Multiplex
+  
+  <a class="anchor" href="#remote-procedure-call-and-multiplex">#</a>
+  
+</h2>
+<h3 id="rpc-stream">
+  RPC-Stream
+  
+  <a class="anchor" href="#rpc-stream">#</a>
+  
+</h3>
+<p>Call methods defined by a remote endpoint.</p>
+<h3 id="multiplex">
+  Multiplex
+  
+  <a class="anchor" href="#multiplex">#</a>
+  
+</h3>
+<p>Pack multiple streams into a single stream.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/network/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Network" />
+        <span>Network</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/osint/" class="flex align-center">
+        <span>Osint</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Osint" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#networking-servers-and-clients">Networking, servers, and clients</a>
+      <ul>
+        <li><a href="#networking-and-packets">Networking and Packets</a></li>
+        <li><a href="#protocols-and-ports">Protocols and Ports</a></li>
+        <li><a href="#servers-and-clients">Servers and Clients</a></li>
+        <li><a href="#netcat">Netcat</a></li>
+        <li><a href="#http-and-headers">HTTP and Headers</a></li>
+        <li><a href="#http-post">HTTP Post</a></li>
+        <li><a href="#curl">Curl</a></li>
+        <li><a href="#smtp">SMTP</a></li>
+        <li><a href="#irc">IRC</a></li>
+        <li><a href="#binary-protocols-and-inspecting-protocols">Binary Protocols and Inspecting Protocols</a></li>
+      </ul>
+    </li>
+    <li><a href="#streams">Streams</a>
+      <ul>
+        <li><a href="#simple-example">Simple example</a></li>
+        <li><a href="#transform-data-example">Transform data Example</a></li>
+        <li><a href="#read-from-a-file">Read from a file</a></li>
+        <li><a href="#with-node-core">With Node Core</a></li>
+        <li><a href="#bit-on-package-through2">Bit on package through2</a></li>
+        <li><a href="#concat-stream">Concat stream</a></li>
+        <li><a href="#example-of-basic-http-server-with-concat-stream">Example of basic HTTP Server with concat stream</a></li>
+      </ul>
+    </li>
+    <li><a href="#stream-types">Stream Types</a>
+      <ul>
+        <li><a href="#simple-vpn-with-password">Simple VPN with password</a></li>
+        <li><a href="#object-streams">Object Streams</a></li>
+      </ul>
+    </li>
+    <li><a href="#core-streams">Core Streams</a>
+      <ul>
+        <li><a href="#apis">APIs</a></li>
+        <li><a href="#child-process-also-uses-streams">Child Process also uses streams</a></li>
+        <li><a href="#http-core-streams">HTTP core streams</a></li>
+        <li><a href="#crypto-streams">Crypto Streams</a></li>
+        <li><a href="#zlib-core-streams">Zlib core streams</a></li>
+        <li><a href="#split2-use-case">Split2 use case</a></li>
+      </ul>
+    </li>
+    <li><a href="#web-socket">Web Socket</a>
+      <ul>
+        <li><a href="#websocket-streams">Websocket streams</a></li>
+        <li><a href="#websocket-node-client">Websocket Node Client</a></li>
+      </ul>
+    </li>
+    <li><a href="#stream-modules">Stream Modules</a>
+      <ul>
+        <li><a href="#collect-stream">Collect Stream</a></li>
+        <li><a href="#from2">from2</a></li>
+        <li><a href="#to2">to2</a></li>
+        <li><a href="#duplexify">Duplexify</a></li>
+        <li><a href="#errors">Errors</a></li>
+        <li><a href="#pump">Pump</a></li>
+        <li><a href="#pumpify">Pumpify</a></li>
+        <li><a href="#end-of-stream">End-of-stream</a></li>
+      </ul>
+    </li>
+    <li><a href="#remote-procedure-call-and-multiplex">Remote Procedure Call and Multiplex</a>
+      <ul>
+        <li><a href="#rpc-stream">RPC-Stream</a></li>
+        <li><a href="#multiplex">Multiplex</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4506 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  AZ 300 Microsoft Azure Architect Technologies Notes
+  
+  #
+  
+
+
+  Azure Fundamentals
+  
+  #
+  
+
+
+AWS tp Azure Service Comparison
+Azure Architecture Center
+
+
+  Some comparisons
+  
+  #
+  
+
+
+
+Blob storage does the same as AWS S3 and EBS
+
+
+Table storage - Key/value like DynamoDB
+
+
+Queue Storage - Messeging for workflow and communication between components of the cloud services
+
+
+File Storage - Similar to EFS
+
+
+Load balancer - Similar as AWS Classic Load Balancer (level 4)">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/azure/az-300/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="AZ 300 Microsoft Azure Architect Technologies Notes # Azure Fundamentals # AWS tp Azure Service Comparison Azure Architecture Center Some comparisons # Blob storage does the same as AWS S3 and EBS
+Table storage - Key/value like DynamoDB
+Queue Storage - Messeging for workflow and communication between components of the cloud services
+File Storage - Similar to EFS
+Load balancer - Similar as AWS Classic Load Balancer (level 4)">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="azure">
+<title>Az 300 | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/azure/az-300/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-azure book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle" checked />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="active">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle"  />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle"  />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Az 300</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#azure-fundamentals">Azure Fundamentals</a>
+      <ul>
+        <li><a href="#some-comparisons">Some comparisons</a></li>
+        <li><a href="#accounts-and-subscriptions-overview">Accounts and Subscriptions Overview</a></li>
+        <li><a href="#quotas-cost-analysis-and-tagging-demonstration">Quotas Cost Analysis and Tagging Demonstration</a></li>
+        <li><a href="#billing-alerts">Billing Alerts</a></li>
+        <li><a href="#policies">Policies</a></li>
+        <li><a href="#resource-groups-and-tagging">Resource Groups and Tagging</a></li>
+        <li><a href="#moving-resources-between-resource-groups">Moving Resources Between Resource groups</a></li>
+        <li><a href="#azure-monitoring-overview">Azure Monitoring Overview</a></li>
+        <li><a href="#log-analytics-key-features">Log Analytics Key Features</a></li>
+        <li><a href="#create-and-configure-storage-accounts">Create and Configure Storage Accounts</a></li>
+      </ul>
+    </li>
+    <li><a href="#virtual-machines">Virtual Machines</a></li>
+    <li><a href="#networking">Networking</a></li>
+    <li><a href="#managing-and-securing-identities">Managing and Securing Identities</a></li>
+    <li><a href="#governance-and-rbac-controls">Governance and RBAC Controls</a></li>
+    <li><a href="#create-and-deploy-apps">Create and Deploy Apps</a>
+      <ul>
+        <li><a href="#app-services-overview">App Services Overview</a></li>
+      </ul>
+    </li>
+    <li><a href="#serverless-computing">Serverless Computing</a></li>
+    <li><a href="#design-and-develop-apps-that-run-in-containers">Design and Develop Apps that run in Containers</a></li>
+    <li><a href="#server-migrations">Server Migrations</a>
+      <ul>
+        <li><a href="#azure-migrate">Azure Migrate</a></li>
+        <li><a href="#azure-site-recovery-asr">Azure Site Recovery (ASR)</a></li>
+      </ul>
+    </li>
+    <li><a href="#automation">Automation</a>
+      <ul>
+        <li><a href="#vm-custom-images">VM Custom Images</a></li>
+        <li><a href="#dsc-overview">DSC Overview</a></li>
+        <li><a href="#custom-script-extension">Custom Script Extension</a></li>
+        <li><a href="#powershell-vm-commands">PowerShell VM Commands</a></li>
+        <li><a href="#arm-templates">ARM Templates</a></li>
+        <li><a href="#arm-linking-templates">ARM Linking Templates</a></li>
+        <li><a href="#azure-runbooks">Azure Runbooks</a></li>
+        <li><a href="#azure-automation-dsc">Azure Automation DSC</a></li>
+      </ul>
+    </li>
+    <li><a href="#azure-files">Azure Files</a></li>
+    <li><a href="#azure-file-sync">Azure File Sync</a></li>
+    <li><a href="#self-study-notes">Self study notes</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="az-300-microsoft-azure-architect-technologies-notes">
+  AZ 300 Microsoft Azure Architect Technologies Notes
+  
+  <a class="anchor" href="#az-300-microsoft-azure-architect-technologies-notes">#</a>
+  
+</h1>
+<h2 id="azure-fundamentals">
+  Azure Fundamentals
+  
+  <a class="anchor" href="#azure-fundamentals">#</a>
+  
+</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/architecture/aws-professional/services">AWS tp Azure Service Comparison</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/architecture/">Azure Architecture Center</a></li>
+</ul>
+<h3 id="some-comparisons">
+  Some comparisons
+  
+  <a class="anchor" href="#some-comparisons">#</a>
+  
+</h3>
+<ul>
+<li>
+<p>Blob storage does the same as AWS S3 and EBS</p>
+</li>
+<li>
+<p>Table storage - Key/value like DynamoDB</p>
+</li>
+<li>
+<p>Queue Storage - Messeging for workflow and communication between components of the cloud services</p>
+</li>
+<li>
+<p>File Storage - Similar to EFS</p>
+</li>
+<li>
+<p>Load balancer - Similar as AWS Classic Load Balancer (level 4)</p>
+</li>
+<li>
+<p>Application Gateway - AWS Application load balancer (application level, level 7)</p>
+</li>
+<li>
+<p>Traffic manager - DNS level traffic routing for load balancing and fail over cross geo.</p>
+</li>
+<li>
+<p>SES - In Azure use of 3th party solutions like sendgrid</p>
+</li>
+<li>
+<p>SQS - Queue Storage in Azure</p>
+</li>
+<li>
+<p>AWS Auto Scaling - VM Scale Sets</p>
+</li>
+<li>
+<p>Dynamo DB - Azure Cosmos</p>
+</li>
+<li>
+<p>ElastiCache - Azure Cache for Redis</p>
+</li>
+<li>
+<p>CloufFormation - Azure Resource Manager/VM extensions and Azure Automation + templates</p>
+</li>
+<li>
+<p>Trusted Advisor - Azure Advisor (analysis of cloud resource configuration and security for optimum config)</p>
+</li>
+<li>
+<p>AWS Management Console - Azure Portal</p>
+</li>
+<li>
+<p>SQS - Azure Queue Storage for between services, and Service Buss ofr Pub/Sub messaging self implemented</p>
+</li>
+<li>
+<p>SNS - Even Grid</p>
+</li>
+<li>
+<p>AWS Organizations - Management Groups + Azure Policy</p>
+</li>
+<li>
+<p>AWS SHield - Azure DDOS protection Service</p>
+</li>
+<li>
+<p>S3 - Azure Blob Storage</p>
+</li>
+<li>
+<p>EFS (Elastic File System) - Azure files</p>
+</li>
+<li>
+<p>S3 IA - Azure Storage Cool Tier</p>
+</li>
+<li>
+<p>S3 Glacier - Azure storage Archive Access Tier</p>
+</li>
+<li>
+<p>AWS Backup - Azure Backup</p>
+</li>
+<li>
+<p>Elastic Beanstalk - App Service (PAAS)</p>
+</li>
+<li>
+<p>API Gateway - API Management</p>
+</li>
+<li>
+<p>CloudFront - Azure Content Delivery Network</p>
+</li>
+<li>
+<p>Notice that many resources (like a User Define Route) can be stored in specific locations, research if you can
+widely mix and match these regarding the subnets, VNets, Resource Groups&hellip;</p>
+</li>
+</ul>
+<p><img src="assets/cloud_0.png" alt="cloud_0" />
+<img src="assets/cloud_12.png" alt="cloud_12" /></p>
+<h3 id="accounts-and-subscriptions-overview">
+  Accounts and Subscriptions Overview
+  
+  <a class="anchor" href="#accounts-and-subscriptions-overview">#</a>
+  
+</h3>
+<p><img src="assets/cloud_1.png" alt="cloud_1" /></p>
+<ul>
+<li>Recently added &ldquo;management groups&rdquo;
+<img src="assets/cloud_2.png" alt="cloud_2" />
+<img src="assets/cloud_3.png" alt="cloud_3" />
+<img src="assets/cloud_4.png" alt="cloud_4" />
+<img src="assets/cloud_5.png" alt="cloud_5" /></li>
+</ul>
+<h3 id="quotas-cost-analysis-and-tagging-demonstration">
+  Quotas Cost Analysis and Tagging Demonstration
+  
+  <a class="anchor" href="#quotas-cost-analysis-and-tagging-demonstration">#</a>
+  
+</h3>
+<ul>
+<li>Like AWS, there is TAG concept, which helps you to tag resources for billing and other purposes. So a tagging strategy is very useful.</li>
+<li>You get a lot of soft limits for quotas, and with a ticket you can increase it, just like AWS.
+<ul>
+<li>Limits for vCPU&rsquo;s, VM&rsquo;s &hellip;</li>
+</ul>
+</li>
+</ul>
+<h3 id="billing-alerts">
+  Billing Alerts
+  
+  <a class="anchor" href="#billing-alerts">#</a>
+  
+</h3>
+<h3 id="policies">
+  Policies
+  
+  <a class="anchor" href="#policies">#</a>
+  
+</h3>
+<p>You can assign policies, (also with JSON), so that any a suscription for example, can only
+deploy certain type of virtual machines.</p>
+<p>So we want maybe to set such &ldquo;Allowed virtual Machine SKUs&rdquo; for services.</p>
+<p>Policies can be assigned to multiple subscriptions by using management groups.</p>
+<h3 id="resource-groups-and-tagging">
+  Resource Groups and Tagging
+  
+  <a class="anchor" href="#resource-groups-and-tagging">#</a>
+  
+</h3>
+<p>Resource groups are an arbitrary grouping of related resources. You can put resources from another
+region (aside of the one defined in the resource group). But the meta data of the resource group will be stored
+in the defined region.</p>
+<p>Tips for tagging</p>
+<ul>
+<li>Cost center (who Pays)</li>
+<li>Business Owner</li>
+<li>Maintenance window</li>
+</ul>
+<p>We can also do IAM and policies on a resource group basis.</p>
+<p>You can check all the deploys that happened in a Resource Group.</p>
+<p>A resource group has its own view, you can do deployments, policies, iam, cost, automation scripts, metrics, &hellip;</p>
+<p>A resource group is always assigned to a subscription.</p>
+<h3 id="moving-resources-between-resource-groups">
+  Moving Resources Between Resource groups
+  
+  <a class="anchor" href="#moving-resources-between-resource-groups">#</a>
+  
+</h3>
+<p>You can move resources from one resource group to another.</p>
+<p>Metrics from monitoring are stored in a &ldquo;Diagnostics Storage Account&rdquo;.</p>
+<p>Somre resources cannot be moved, like alerts and (at the moment) managed disks.</p>
+<h3 id="azure-monitoring-overview">
+  Azure Monitoring Overview
+  
+  <a class="anchor" href="#azure-monitoring-overview">#</a>
+  
+</h3>
+<p><img src="assets/cloud_6.png" alt="cloud_6" /></p>
+<p>You can create metric filters and then pin them to your dashboard.</p>
+<p>When creating an alert, you choose the target resource(s), then what condition to trigger it, then the action group
+which is to notify a team via mail, text, trigger webhooks, runbooks, functions, or many others.</p>
+<p>A runbook is basically certain actions you dfine (like scale up) or such. This can be triggered manually or automatically.</p>
+<p>Azure by default monitors the host level metrics (from the hypervisor) like CPU usage and such,
+this is different from the guest level metrics, being the usage of certain services or programs in your OS.
+For this you need to install an agent on your guest OS which runs on your virtual machine.</p>
+<p>You can enable guest level metrics collection in the VM &gt; Monitoring &gt; Diagnostic Settings &gt; Enable guest level monitoring.</p>
+<p>ITSM (IT Service Management)</p>
+<h3 id="log-analytics-key-features">
+  Log Analytics Key Features
+  
+  <a class="anchor" href="#log-analytics-key-features">#</a>
+  
+</h3>
+<p>Log Analytics is the layer that is used to gather all logs and then other services can query this layer.
+The log analytics takes care of auto storing, creating tables and everything necessary to persist data.</p>
+<p>Data Sources (for logs)</p>
+<ul>
+<li>source : Event Type : desc</li>
+<li>Custom Logs : <!-- raw HTML omitted -->_CL : Text files from the gues level agents</li>
+<li>Windows Event Logs : Event : Collected form the event logon windows computers</li>
+<li>Windows Performance Counters : Perf : Perf from windows machines</li>
+<li>Linux Performance Counters : Perf : Per from linux machines</li>
+<li>IIS Logs : W3CIISLog : IIS logs in W3C format</li>
+<li>Syslog : Syslog : Syslog events on Windows or Linux machines</li>
+</ul>
+<p>other ones are like Azure Activity Log and Storage account logs.</p>
+<p>Search query fundamentals</p>
+<ul>
+<li>Start with the source table (e.g Event)</li>
+<li>Follow on with a series of operators (which VM)</li>
+<li>Separate out additonal operations by using pipe <code>|</code></li>
+<li>Join other tables and workspaces using &ldquo;union&rdquo;</li>
+</ul>
+<p>You are charged for the service &ldquo;Log Analytics&rdquo;</p>
+<p>Seems that resource groups are often mandatory in many setups.</p>
+<p>You pay for Log Anayltics per GB</p>
+<p>So you create a Log Analytics workspace, here you pay per GB, you can then attach data sources, like VMs to it.</p>
+<p>You can then query in the workspace, somehow you can also query accross multiple workspaces.</p>
+<p>Log analytics stores in a region its data.</p>
+<p>Again IAM is applicable to such a workspace.</p>
+<p>With the query language, you start with a source, then you always do PIPING to the next thing, like:</p>
+<pre tabindex="0"><code>    Perf 
+    | where TimeGenerated &gt; ago(1h) 
+    | where CounterName == @&#34;% Processor Time&#34;
+    | summarize avg(CounterValue) by Computer, (bin(TimeGenerated, 1m))
+    | render timechart
+</code></pre><p>Reminds a bit of F# syntax</p>
+<p>From a query you can create an alert rule.</p>
+<h3 id="create-and-configure-storage-accounts">
+  Create and Configure Storage Accounts
+  
+  <a class="anchor" href="#create-and-configure-storage-accounts">#</a>
+  
+</h3>
+<p>Like S3, storage accounts are assigned some public URL, therefore it needs to be universily unique,</p>
+<pre tabindex="0"><code>    https://&lt;your-storage-account-name&gt;.&lt;type&gt;.core.windows.net/&lt;container&gt;/filename.extension
+</code></pre><p>Types</p>
+<ul>
+<li>
+<p>General Purpose v1 (GPV1)</p>
+</li>
+<li>
+<p>General Purpose v2 (GPV2) - Main choice (merged GPV1 and Blob account)</p>
+</li>
+<li>
+<p>Blob account</p>
+</li>
+<li>
+<p>Block Blob</p>
+<ul>
+<li>Ideal for storing text or binary files, a singlicke block blob can contain up to 50K blocks of up to 100MB each, max 4.75TB</li>
+<li>Append blobs are optimized for append operations (e.g. logging)</li>
+</ul>
+</li>
+<li>
+<p>Page Blob</p>
+<ul>
+<li>Efficient for read/write operations</li>
+<li>used by Azure VM&rsquo;s</li>
+<li>Up to 8 TB in size.</li>
+</ul>
+</li>
+<li>
+<p>Storage Tiers</p>
+<ul>
+<li>Hot (high storage costs, low access costs)</li>
+<li>Cold (lower storage costs, higher access cost, intended for data that will remain cool for 30 days or more)</li>
+<li>Archive (Lowest storage, highest access cost, when a blob is in archive storage it is offline and cannot be read)</li>
+</ul>
+</li>
+<li>
+<p>Choosing between Blobs, Files and Disks</p>
+<ul>
+<li>Blobs : Access app data from anywhere, large amount of objects to store images, video</li>
+<li>Files : Access files across multiple machines, jumpbox scenarioas for shared development scenarios</li>
+<li>Disks : Do not need to access data outside of the VM, Disk expansion for application installations</li>
+</ul>
+</li>
+</ul>
+<p>Storage accounts must have unique names across Azure (like a bucket on AWS).</p>
+<ul>
+<li>Replication
+<ul>
+<li>Locally redundant Storage (LRS) - 3 copies in the same zone</li>
+<li>Zone redundant Storage (ZRS) - 3 copies across different zones but same region</li>
+<li>Geo redundant Storage (GRS) (Cross zone) - 6 copies accross multiple regions</li>
+<li>Read Access Geo Rendundant Storage (RA-GRS) - replicate to another region for reading</li>
+</ul>
+</li>
+</ul>
+<p>A storage account can be allowed to a single VPC or to all of your VPCs.</p>
+<p>The Secure transfer flag enforces access to be over HTTPS and other equivalents depending the type of access.</p>
+<p>You can use <strong>Azure Storage Explorer</strong> for managing files, uploading, viewing, get urls, and such.
+You also have azcopy CLI to copy from and to a storage account.</p>
+<p><strong>Managing Access: Container permissions</strong></p>
+<ul>
+<li>Public Access level : By default disabled for obvious reasons
+<ul>
+<li>Levels:
+<ul>
+<li>Private</li>
+<li>Blob (anonymous read access for blobs only)</li>
+<li>Container (anonymous read access for containers and blobs), public access to the entire container</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>We can have more granular access management</p>
+<ul>
+<li>Shared Access Signature
+<ul>
+<li>Is is a query string that we add on to the url of the storage resources</li>
+<li>string informs Azure what access should be granted (basically signed urls)</li>
+<li>Utilized a hash based message auth (again, typical signed url)</li>
+<li>The SAS can be used as
+<ul>
+<li>Account SAS Tokens
+<ul>
+<li>Granted at the account level to grant permissions to services within the account. (Service to Service communication)</li>
+</ul>
+</li>
+<li>Service SAS Tokens
+<ul>
+<li>Grants access to a specific service within a storage account</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Breakdown</p>
+<pre tabindex="0"><code>    https://&lt;your-storage-account-name&gt;.&lt;type&gt;.core.windows.net/&lt;container&gt;/filename.extension
+    ?sv=2017-7-29  # Storage service version
+    &amp;ss=bfqt       # Signed services (Blob, File, queue, Table)
+    &amp;srt=sco       # Signed Resource Types (Service, Container, Object)
+    &amp;sp=rwdlacup   # Signed Permission (Read, Write, Delete, List, Add, Create, Update, Process) (process is queue messages)
+    &amp;se=UTCTIMESTR # Signed Expiry
+    &amp;st=UTCTIMESTR # Signed Expiry &amp; Start
+    &amp;spr=https     # Signed Protocol
+    &amp;sig=...       # Signature hash
+</code></pre><p>You can create a Access Policy that a SAS refers to. Since the SAS refers to an policy, you can change the policy itself
+dynamically.</p>
+<p><strong>Encryption Keys and Key Vault</strong></p>
+<p><img src="assets/cloud_7.png" alt="cloud_7" /></p>
+<p>HSM : Hardware Security Modules</p>
+<p>SSE : Service Encryption</p>
+<p><strong>Custom Domains</strong></p>
+<p>e.g. have <a href="http://acloud.guru">http://acloud.guru</a> instead of <a href="http://account.blob.core.windows.net">http://account.blob.core.windows.net</a> *can also points directly a specific container)</p>
+<p>It&rsquo;s all DNS anyway!</p>
+<p>2 ways to do this</p>
+<ul>
+<li>Create a CNAME record with your DNS provider that points from
+<ul>
+<li>Your Domain (eg <a href="https://www.yourdomain.com">www.yourdomain.com</a> to youraccount.blob.core.windows.net) - Simple but results in brief downtime as Azure verifies the registration of your domain</li>
+<li>&ldquo;asverify&rdquo; subdomain (verify.yourdomain.com to asverify.youraccount.blob.core.windows.net)
+<ul>
+<li>When step complete, create CNAME record that points to youraccount.blob.core.windows.net</li>
+<li>No downtime</li>
+<li>This is the indirect CNAME validation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Azure Import/export Use Cases</strong></p>
+<ul>
+<li>
+<p>Data Migration to the cloud (large amounts of data to azure)</p>
+</li>
+<li>
+<p>Content Distribution (sending data to customer sites)</p>
+</li>
+<li>
+<p>Backup (backup on premise data)</p>
+</li>
+<li>
+<p>Data Recovery (send data from data center to on premise data centers)</p>
+</li>
+<li>
+<p>Import/export service</p>
+<ul>
+<li>Access via Azure Portal</li>
+<li>Used to track data import (upload) jobs</li>
+<li>Used to track data export (download) jobs</li>
+</ul>
+</li>
+<li>
+<p>CLI for</p>
+<ul>
+<li>Prep disk drives that are shipped</li>
+<li>Copying data to your drive</li>
+<li>Encrypts data with BitLocker</li>
+<li>Generates drive journal files</li>
+<li>Determine number of drives</li>
+</ul>
+</li>
+<li>
+<p>Use V1 for blob and V2 for files</p>
+</li>
+<li>
+<p>Disk Drives</p>
+<ul>
+<li>HDD</li>
+<li>SSD</li>
+<li>Import jobs: You ship drives containing your data</li>
+<li>Export Jobs: You ship empty drives</li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/cloud_8.png" alt="cloud_8" /></p>
+<p><strong>Business Continuity Strategies</strong></p>
+<ul>
+<li>
+<p>High Availability (Run another instance of apps in case of catastrophic failure) (proactive)</p>
+</li>
+<li>
+<p>Disaster Recovery (Run apps in secondary datacenter if a failure occurs) (reactive)</p>
+</li>
+<li>
+<p>Backup (Restore your data)</p>
+</li>
+<li>
+<p>Azure Backup</p>
+<ul>
+<li>Backup solution purpose builft for Cloud</li>
+<li>Unlimited Scaling</li>
+<li>Unlimited Data Transfer</li>
+<li>Multiple Storage Options (LRS/GRS)</li>
+<li>Long Term Retention</li>
+<li>Application-Consistent Backups</li>
+<li>Data Encryption</li>
+</ul>
+</li>
+<li>
+<p>Azure Backup Components (read about them in the docs!)</p>
+<ul>
+<li>Azure Backup (MARS) Agent</li>
+<li>System Center DPM (Data Protection Manager)</li>
+<li>Azure Backup Server</li>
+<li>Azure IaaS VM Backup</li>
+</ul>
+</li>
+<li>
+<p>Other Recovery Options (more manual)</p>
+<ul>
+<li>Snapshot recovery
+<ul>
+<li>Blob snapshots taken of VM page blob</li>
+<li>Snapshots can be copied into the same or different regions</li>
+<li>VMs get created from snapshot</li>
+<li>Application consistent if VM was shutdown, otherwise crash-consistent</li>
+</ul>
+</li>
+<li>Geo Replication
+<ul>
+<li>Uses Azure storage GRS</li>
+<li>Data is replicated to a paired region far away from the primary copy</li>
+<li>Data recovery in the event of an outage or entire region unavailable</li>
+<li>RA-GRS option available as well</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="virtual-machines">
+  Virtual Machines
+  
+  <a class="anchor" href="#virtual-machines">#</a>
+  
+</h2>
+<ul>
+<li>
+<p>Azure uses hypervisor for the VM</p>
+</li>
+<li>
+<p>Billed per second</p>
+</li>
+<li>
+<p>AWS EBS === Azure Storage for VM Disks</p>
+</li>
+<li>
+<p>Types</p>
+<ul>
+<li>A - Basic : Basic version of the A series for testing and development.</li>
+<li>A - Standard : General-purpose VMs</li>
+<li>B - Burstable : Burstable instances that can burst to the full capacity of the CPU when needed. (typicall webservers, check sth with cpu credits)</li>
+<li>D - General Purpose : Built for enterprise applications. DS instances offer <strong>premium storage</strong>.</li>
+<li>E - Memory optimized : High memory-to-cpu core ratio. Es instances offer <strong>premium storage</strong>.</li>
+<li>F - CPU Optimized : High CPU core-to-memory ratio. FS instances <strong>offer premium storage</strong>.</li>
+<li>G - Godzilla : Very large instances ideal for large databases and big data use cases.</li>
+<li>H - High performance compute : Aimed at very high-end computational needs such as molecular modelling and other scientific applications.</li>
+<li>L - Storage optimized : Offer higher disk throughput and IO.</li>
+<li>M - Large memory : Another large-scale memory option that allows for up to 3.5 TB of ram.</li>
+<li>N - GPU Enabled : has GPU</li>
+<li>SAP HANA : Specialized instances built and certificied for running SAP HANA.</li>
+<li>Could be that a policy or subscription does not allow you to use certain types</li>
+</ul>
+</li>
+<li>
+<p>Specializations</p>
+<ul>
+<li>S : Premium Storage options (eg. DSv2)</li>
+<li>M : Larger memory (eg. A2m_v2)</li>
+<li>R : Supports remote direct memory access (RDMA) (eg. H16mr)</li>
+</ul>
+</li>
+<li>
+<p>Azure Compute Inits (ACUs)</p>
+<ul>
+<li>Way to compare CPU performance between different types/size of VM</li>
+<li>Microsoft created performance benchmark.</li>
+<li>Eg. A VM with ACU of 200 has twice the performance of a VM with an ACU of 100.</li>
+</ul>
+</li>
+<li>
+<p>Supported workloads</p>
+<ul>
+<li>Windows Server Support
+<ul>
+<li>Pre-windows 2008 R2
+<ul>
+<li>Supported</li>
+<li>Must bring own image</li>
+<li>No marketplace support</li>
+<li>Need to have your own custom support agreement (CSA)</li>
+</ul>
+</li>
+<li>Windows Server 2008 R2
+<ul>
+<li>Supported</li>
+<li>Specific support matrix for server roles.</li>
+</ul>
+</li>
+<li>Windows Server 2012 : Supported, datacenter version in marketplace</li>
+<li>Windows Server 2016 : Supported, datacenter and nano versions in marketplace.</li>
+<li>Desktop OS : PRo and Enterprise in marketplace</li>
+<li>Read <a href="https://support.microsoft.com/en-us/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines">Article</a> !!</li>
+</ul>
+</li>
+<li>Linux Server Support
+<ul>
+<li>CentOS</li>
+<li>CoreOS</li>
+<li>Debian</li>
+<li>Oracle Linux</li>
+<li>Red Hat Enterprise Linux</li>
+<li>SUSE Linux Enterprise</li>
+<li>OpenSUSE</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/endorsed-distros">More Info</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>There are regional limitations on VM types based on region</p>
+</li>
+<li>
+<p>Region sets relate to deployment (eg EAST US and WEST US). They would always first patch the one region, once done, the other, never at the same time.</p>
+<ul>
+<li>Important to take in account to avoid at all cost</li>
+</ul>
+</li>
+<li>
+<p>There is a list of restricted usernames for your VMs</p>
+<ul>
+<li>Eg. Administrator, admin, user, user, test, david, gues, root, server, sql, john, backup, console, &hellip; and more</li>
+</ul>
+</li>
+<li>
+<p>Setting up a VM</p>
+<ul>
+<li>Windows OS always requires username/pass, while linux, you can also choose a SSH key</li>
+<li>Availability Options
+<ul>
+<li>No redundancy</li>
+<li>Availability set : Same data center, but 2 VMs in separate racks and power supply and separate networking</li>
+<li>Availability zone : In separate data centers</li>
+<li>Azyre Hybrid : Benefit to use on premise windows server license and run windows VM at reduced cost. (but need Software Assurance or sth)</li>
+</ul>
+</li>
+<li>Disks
+<ul>
+<li>By default a VM has a OS and temporary (ephemeral?) disk for short term storage.</li>
+<li>Additional data disks can be added</li>
+<li>When adding data disk, you can use a Snapshot or storage blob as source</li>
+<li>By default disks are managed (see advance section)</li>
+</ul>
+</li>
+<li>Networking
+<ul>
+<li>PublicIP can be assigned but you can choose not too</li>
+<li>Sugnet is mandatory and the VPC (or rather Virtual Network)</li>
+<li>NIC : Network Interface Card</li>
+<li>NIC Network security group (TODO read more !)
+<ul>
+<li>Ideally one Network Security Group assigned per Subnet (is the general advice)</li>
+</ul>
+</li>
+<li>Accelerator netorking is only on specific VM types and OS&rsquo;s (bypassed a certain virtualization layer)</li>
+<li>YOu can always put immediatly a VM in a pool behind a load balancer</li>
+</ul>
+</li>
+<li>Management
+<ul>
+<li>System assigned managed identity : This is like a AWS Role, so other azure services can authenticate</li>
+<li>You can enable built in backup</li>
+</ul>
+</li>
+<li>Tags obviously</li>
+<li>At the end you can download the template for later automation</li>
+<li>During deployment you can check the inputs/outputs and the template</li>
+</ul>
+</li>
+<li>
+<p>VM</p>
+<ul>
+<li>Connect over RDP with Windows</li>
+<li>SSH for linux</li>
+<li>CLI with powershell WinRM
+<ul>
+<li>Create a key vault</li>
+<li>Create a self-signed certificate</li>
+<li>Upload certificate to the Key vault.</li>
+<li>Get the url for your certificate from the key vault</li>
+<li>Reference your self-signed certificate when you create the VM</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>VM Storage</p>
+<ul>
+<li>Disks can be encrypted (in-rest)</li>
+<li>YOu can always attach disks once running (don&rsquo;t forget to mount it in the guest OS)</li>
+<li>Types
+<ul>
+<li>Standard HDD
+<ul>
+<li>Traditional HDD</li>
+<li>Most cost effective</li>
+<li>Throughput based on VM</li>
+<li>IOPS based on VM</li>
+</ul>
+</li>
+<li>Standard SSD
+<ul>
+<li>SSD</li>
+<li>Recommended for most</li>
+<li>Max throughput 500MB/S per disk</li>
+<li>Max IOPS 2000 IOPS per disk</li>
+</ul>
+</li>
+<li>Premium SSD
+<ul>
+<li>SSD</li>
+<li>Higher performance, lowest latency</li>
+<li>Max 750 MB/s per disk</li>
+<li>Max IOPS 7500 IOPS per disk</li>
+</ul>
+</li>
+<li>Ultra SSD - in preview</li>
+</ul>
+</li>
+<li>Managed Disk - Standard sizes
+<ul>
+<li>the size impacts the throughput and IOPS, therefore an estimated performance is shown when choosing size</li>
+<li>S4 - 32 GB</li>
+<li>S6 - 64 GB</li>
+<li>S10 - 128 GB</li>
+<li>S20 - 512GB</li>
+<li>And many more&hellip;</li>
+<li>! IOPs and throughput are not provisioned and depend ong the performance of the VM.</li>
+</ul>
+</li>
+<li>VM LIMITS
+<ul>
+<li>Make sure that your VM can handle your bandwith, because the VM itself can be the weakest link in the chain of
+throughput and IOPS. (VM can be limited itself technically or by design)</li>
+</ul>
+</li>
+<li>Managed vs Unmanaged Disks
+<ul>
+<li>Unmanaged Disk (DIY)
+<ul>
+<li>DIY - Manage storage account</li>
+<li>Managment overhead (20000 IOPS per storage account limit)</li>
+<li>Supports all replication modes (LRS, ZRS, GRS RA-GRS)</li>
+</ul>
+</li>
+<li>Managed Disk
+<ul>
+<li>Simple (don&rsquo;t worry about the storage account)</li>
+<li>Lower management overhead as Azure manages the storage accounts</li>
+<li>Only LRS replication mode (currently) - but you can have backup to ZRS, GRS or RA-GRS.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Disk Caching
+<ul>
+<li>Method for improving performance of a Virtual HD (VHD)</li>
+<li>Utilizes local RAM and SSD drives on underlying VM host (the actual barebone)</li>
+<li>Available on standard and premium disk</li>
+<li>Types
+<ul>
+<li>Read-Only Caching : Improve latency and potentially gain higher IOPS per disk</li>
+<li>Read-Write Caching : Ensure you have a proper way to write data from cache to persistent disks</li>
+</ul>
+</li>
+<li>Default/allowed settings
+<ul>
+<li>OS - Default &ldquo;Read-Write&rdquo; - Allowed &ldquo;Read-Only or Read-Write&rdquo;</li>
+<li>Data - Default &ldquo;None&rdquo; - Allowed &ldquo;None, Read-Only, or Read-Write&rdquo;</li>
+</ul>
+</li>
+<li>At this time you can change only the disk caching via Powershell, not via Portal</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/cloud_9.png" alt="Cloud_9" /></p>
+<ul>
+<li>
+<p>Azure VM Networking</p>
+<ul>
+<li>One NIC can be attached to a VPC and subnet, attached/detacched as needed</li>
+<li>Network security groups can be attached to a NIC or to a subnet</li>
+<li>You can customize the DNS for a NIC, but by default it inherits from the Virtual Network</li>
+<li>I think the Network Security Group is equivalent to NACL</li>
+</ul>
+</li>
+<li>
+<p>Availability Sets</p>
+<ul>
+<li>TODO : Compare the limitations of VPC/SUBNET limitations with the Virtual Network/SUBNET limitations regarding regions and zones.</li>
+<li>TODO : Read more on this availability sets VS AWS</li>
+<li>Availability sets can be directly mapped to a backend pool of a Load Balancer</li>
+<li>Potential for VM Impact
+<ul>
+<li>Planned Maintenance</li>
+<li>Unplanned Hardware maintenance</li>
+<li>Unexpected Downtime</li>
+</ul>
+</li>
+<li>With Availability sets
+<ul>
+<li>Group two or more machines in a set</li>
+<li>Separated based on fault Domains and Update Domains</li>
+</ul>
+</li>
+<li>An availability set can have up to 3 Fault domains. Each fault domain is a different rack with own power and networking connectivity.
+<ul>
+<li>This is for teach, downtime</li>
+</ul>
+</li>
+<li>Update domains is to make sure when they patch stuff, they never patch the same update domains at the same time.</li>
+<li>One availability set per TIER ? (WEB/APP/DATA) - YES</li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/cloud_10.png" alt="Cloud_10" />
+<img src="assets/cloud_11.png" alt="Cloud_11" /></p>
+<ul>
+<li>Scale Sets
+<ul>
+<li>Horizontal scaling</li>
+<li>Virtual Machine Scale Sets (VMSS)</li>
+<li>This can be auto scaling or fixed scale or schedule</li>
+<li>Auto scaling can be on simple metrics like CPU Usage, but also in application metrics</li>
+</ul>
+</li>
+</ul>
+<h2 id="networking">
+  Networking
+  
+  <a class="anchor" href="#networking">#</a>
+  
+</h2>
+<p><img src="assets/cloud_12.png" alt="cloud_12" />
+<img src="assets/cloud_13.png" alt="cloud_12" />
+<img src="assets/cloud_14.png" alt="cloud_12" /></p>
+<ul>
+<li>
+<p>Vnet : Virtual Network</p>
+</li>
+<li>
+<p>NSG : Network Security Group on a Subnet (similar to NACL)</p>
+</li>
+<li>
+<p>Revise subnetting/masking again (10.0.0.0/24) CIDR</p>
+</li>
+<li>
+<p>When creating a subnet, you don&rsquo;t assign a Zone, unlike in AWS, in AWS a subnet resides explicitly in a ZOne</p>
+</li>
+<li>
+<p>Some addresses in a subnet are always reserved by Azure</p>
+</li>
+<li>
+<p>You need to know Powershell commands for the exam 😞</p>
+</li>
+<li>
+<p>DHCP only allocates IP address to a resources until its created</p>
+</li>
+<li>
+<p>IP address only deallocated after deletion of resource</p>
+</li>
+<li>
+<p>Static addresses are the equivalent DHCP reservation</p>
+</li>
+<li>
+<p>Address prefix comes from Vnet/subnet definitions</p>
+</li>
+<li>
+<p>Azure reserves the first 3 and last IP from the pool, so the first Ip address is <code>.4</code>, because 1,2 and 3 are reserved. Meaning 5 reserved in total. as 0 is always your loopback interface</p>
+</li>
+<li>
+<p>All resources in a VNEt can communicate with the internet by default</p>
+</li>
+<li>
+<p>Private IP is SNAT (Source Network Address Translater) to a public IP selected by Azure.</p>
+</li>
+<li>
+<p>Outbound connectivity can be restricted via routes (Routing table) or <strong>traffic filtering</strong> (Network Security Groups).</p>
+</li>
+<li>
+<p>Inbound connectivty without SNAT requires public IP</p>
+</li>
+<li>
+<p>DNS</p>
+<ul>
+<li>Azure provided DNS for basic networking (between services and such)</li>
+<li>Customer DNS Server (self hosted DNS server)</li>
+<li>Recommendations
+<ul>
+<li>Azure Provided DNS
+<ul>
+<li>Name resolution between role instances or VMs in the same VNET</li>
+</ul>
+</li>
+<li>Customer-managed DNS Server
+<ul>
+<li>Name resolution between role instances or VNs in different VNET</li>
+<li>Resolution of on-premises computes and service names from role instances or VMs in Azure</li>
+<li>Resolution of Azure hostnames from on-premises computers</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>All VMs in a Vnet must be restarted to utalize updated DNS server settings (configured on bootup)
+<ul>
+<li>You can also configure a DNS individually on a VM by editing the NIC settings</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Remember you can configure on the NIC to disabled/enabled/reassign public IP and set a fixed private IP address</p>
+</li>
+<li>
+<p>Routing</p>
+<ul>
+<li>Every subnet has a route table, with min routes:
+<ul>
+<li>Local Vnet : Route for local addresses (no next-hop value)</li>
+<li>On-Premises : Route for defined on-premises address space (VNet gateway is next-hop address)</li>
+<li>Internet : Rotue for all traffic destined to the internet (Internet Gateway is the next-hop address)</li>
+<li>Default routing in a subnet
+<ul>
+<li><img src="assets/cloud_15.png" alt="cloud_15" /></li>
+<li>S2S : Site to Site</li>
+<li>BGP : Border Gateway Protocol (exchange routing among autonomous sustems on the internet)</li>
+</ul>
+</li>
+<li>We can create User Defined Routes (UDR)
+<ul>
+<li>Find it under &ldquo;Route Tables&rdquo;</li>
+<li>When creating one, you</li>
+</ul>
+</li>
+<li>VNET peering to connect different VNETS with each others</li>
+<li>Daisy chaining does not work. so if you peer A &gt; B &gt; C, A and C can&rsquo;t see each other.</li>
+</ul>
+</li>
+<li>Demo
+<ul>
+<li>TODO try those User Defined Routes, you define one, then you associate it to a subnet</li>
+<li>You can&rsquo;t pair VNETS with overlapping CIDR</li>
+<li>Allow forwarded traffic : Allow traffic that did not originate from within A to be forward to B (when A -&gt; B peer)
+<ul>
+<li>You can configure this indivudally in each direction</li>
+</ul>
+</li>
+<li>Allow gateway transit : Vnet uses VPm gateway in peered Vnet, only one VNET can have a VPN gateway configured then</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Network Secruity Groups (NSGs)</p>
+<ul>
+<li>Network filter</li>
+<li>Allows or restricts traffic to resources in your VNET</li>
+<li>Inbound en outbound rules</li>
+<li>Stateless</li>
+<li>Can be associated to Subnet or NIC (on Subnet level, this rule is applied to ALL resources in the subnet)</li>
+<li>Properties</li>
+<li>Name</li>
+<li>Protocol</li>
+<li>Destination and source port range</li>
+<li>Destination and source address range</li>
+<li>Direction (in or outbound)</li>
+<li>Priority (range 100 - 4096) (the lower, the higher the priority)</li>
+<li>Access (Allow/Deny)</li>
+<li>Default (Service) tags
+<ul>
+<li>System provided to identity groups of IP addresses</li>
+<li>Vnet</li>
+<li>Azure Load Balancer</li>
+<li>Internet</li>
+</ul>
+</li>
+<li>there are always default rules created</li>
+<li>An NIC can only have one NSG</li>
+</ul>
+</li>
+<li>
+<p>Hybrid Connectivity</p>
+<ul>
+<li>Options
+<ul>
+<li>Site to Site (S2S) -&gt; Via VPN
+<ul>
+<li>Vnet &gt; VPN Gateway &gt; One ore more VPN Tunnel &gt; One or more On premise (multi site for more than one)</li>
+<li>S2S VPN is over <strong>IPsec/IKE</strong> (ikeEv1 or IKEv2)</li>
+<li>Required VPN device in enterprise datacenter with public IP address</li>
+<li>Must <strong>not</strong> be located behind NAT</li>
+<li>Can be used for cross-premises and hybrid configs</li>
+</ul>
+</li>
+<li>Point-to-site -&gt; P2S
+<ul>
+<li>Connect clients to the Vnet directly</li>
+<li>Vnet -&gt; VPN Gateways -&gt; One or more <strong>P2S SSTP tunnels</strong> to one or more clients</li>
+<li>Secure connectiom from invididual computer</li>
+<li>No need for a VPN device or public IP</li>
+<li>OS support Windows 7, 8, 8.1, 10 and Wondows Server 2008 R2 and up</li>
+<li>Throughput up to 100 Mbps</li>
+<li>Doesn&rsquo;t scale easily, only usefull for a few workstations</li>
+</ul>
+</li>
+<li><img src="assets/cloud_16.png" alt="cloud_16" /></li>
+<li><img src="assets/cloud_17.png" alt="cloud_17" /></li>
+<li>ExpressRoute -&gt; Direct connection
+<ul>
+<li>Customers Network -&gt; Partner Edge -&gt; Express Route Circuit (primary and secondary connection) -&gt; Microsoft Edge -&gt; Internal forwarding to microsoft peerinf for Office 265 or Dynamics or else to Azure private peering to VNETS</li>
+<li><img src="assets/cloud_18.png" alt="cloud_18" /></li>
+<li><img src="assets/cloud_19.png" alt="cloud_19" /></li>
+<li>Requires /30 routes or sth</li>
+<li>Benefits
+<ul>
+<li>Layer 3 Connectivity</li>
+<li>Connectivity in all regions</li>
+<li>Global connectivity</li>
+<li>DYnamic Ruting</li>
+<li>Built-In Redundancy</li>
+</ul>
+</li>
+<li>Unlimited vs Metered</li>
+<li>Unlimited
+<ul>
+<li>Speed 50 Mbps - 10 Gbps</li>
+<li>Unlimited inbound data</li>
+<li>Unlimited outbound data</li>
+<li>Higher monthly fee</li>
+</ul>
+</li>
+<li>Metered
+<ul>
+<li>Speed 50 Mbps - 10 Gbps</li>
+<li>Unlimited Inbound data transfer</li>
+<li>Outbound data transfer charged at a predetermined rate per GB</li>
+<li>Lower monthly fee</li>
+</ul>
+</li>
+<li>Considerations</li>
+<li>Understand the models
+<ul>
+<li>Unlimited vs Metered Data</li>
+<li>Understand what model you are using today to accelerate adoption</li>
+<li>Understand the differences in available port speeds, locations and approach</li>
+<li>Understand the limits that drive additional circuits</li>
+</ul>
+</li>
+<li>Understand the providers
+<ul>
+<li>Each offer a different experience based on ecosystem and capabilities</li>
+<li>Some provide complete solutions and management</li>
+</ul>
+</li>
+<li>Understand the costs
+<ul>
+<li>Connection costs can be broken out by the service connection costs (Azure) and the authorized carrier costs (telco partner)</li>
+<li>Unlike other Azure services, look beyond the Azure pricing calculator</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Network Watcher</p>
+<ul>
+<li>TODO : Play with it</li>
+<li>Extension you have to install</li>
+<li>Gues OS level agent that monitors the network of your VMs</li>
+<li>You can then see the topology graphically of the entire network and all network related stuff</li>
+<li>You can monitor the connection between two VMs (or other stuff?)</li>
+<li>Network Performance monitor</li>
+<li>Very detailed stuff</li>
+<li>Network Diagnostics</li>
+<li>IP Flow verify : Check if a package is allowed or denied from a VM (+ debug the Security Rules)</li>
+<li>Security Group View : Choose a NIC and you can see all the rules for that NIC and break it down where the rules come from</li>
+<li>Next Hop : You can check from a VM and target an IP address and see what the next hop would be (again debugging the routing tables)</li>
+<li>Package capture&hellip;</li>
+<li>VPN debug &hellip;</li>
+</ul>
+</li>
+<li>
+<p>Load Balancing</p>
+<ul>
+<li>Load Balancer (layer 4, transport layer)
+<ul>
+<li>Basic and Standard SKUs</li>
+<li>Service monitoring (probe instances which are unhealthy)</li>
+<li>Automatic reconfiguration (for when scaling)</li>
+<li>Hash Based Distribution + provides stickyness, so keep accessing same backend service</li>
+<li>Internal and Public Options</li>
+<li>Any application protocols</li>
+</ul>
+</li>
+<li>Application Gateway (layer 7, application layer), works also as reverse proxy
+<ul>
+<li>Cookie bases session affinity (user can remain same user session)</li>
+<li>Stanard Tier (traditional) or WAF Tier</li>
+<li>Can have multiple instances</li>
+<li>SSL offload (ssl is broken)</li>
+<li>End to End SSL (re encrypts)</li>
+<li>Web Application Firewall (protects agains SQL injection and typical attacks), you can then add rules obviously</li>
+<li>URL Based content routing</li>
+<li>Requires its own subnet</li>
+<li>HTTP, HTTPS and Websockets application protocols</li>
+<li>What is this SKU related to the Application Gateway?</li>
+<li>Connection draining - Don&rsquo;t stop in flight reqiests/connections before a backend servers is removed from a backend pool</li>
+<li>Cookie based affinity - send requests with same cookie to same backend server</li>
+<li>Can only assign a private IP address to it if its the only App Gateway in related Vnet</li>
+<li>Sizes
+<ul>
+<li>Page Response 6K - Small (7.5 Mbps) - Medium (13 Mbps) - Large (50 Mbps)</li>
+<li>Page Response 100K - Small (35 Mbps) - Medium (100 Mbps) - Large (200 Mbps)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Traffic Manager - Global, zo DNS level</li>
+<li><img src="assets/cloud_20.png" alt="cloud_20" /></li>
+</ul>
+</li>
+</ul>
+<h2 id="managing-and-securing-identities">
+  Managing and Securing Identities
+  
+  <a class="anchor" href="#managing-and-securing-identities">#</a>
+  
+</h2>
+<ul>
+<li>
+<p>Domain Services Overview</p>
+<ul>
+<li>3 Major Options for Auth in AD
+<ul>
+<li><strong>Azure AD (AAD)</strong> -&gt; Primary mechanism
+<ul>
+<li>Modern AD service directly build for the cloud</li>
+<li>Often the same as 265 directory service</li>
+<li>Can sync with in premises directory service</li>
+<li>A &ldquo;tenant&rdquo; in AD is like a brand new AD isolated from others</li>
+<li>Features
+<ul>
+<li>Enterprise Identity Solution</li>
+<li>Single Sign-On (you can reuse the same cookie sort to say, so you don&rsquo;t need to keep relogging in for each app)</li>
+<li>MFA</li>
+<li>Self Service (empower users to do complete password resets, request access, &hellip;.)</li>
+</ul>
+</li>
+<li>Creating a new directory (TODO: Does that equal creating a new tenant?)
+<ul>
+<li>Must be UUID name, as this gets a public subdomain for <code>*.onmicrosoft.com</code></li>
+<li>A subscription can only be owned within one &ldquo;directory/tenant&rdquo;, so users from different directories cannot have access to the exact same subscription.</li>
+<li>When creating a new user, a password is created you can check, but they will be prompter to change it after login</li>
+<li>new users will get an email like <code>&lt;freetochoose&gt;@direcotryname.onmicrosoft.com</code></li>
+<li>Guest users are supported</li>
+<li>Via the IAM of an object (like a subscription), you can assign a role so that a User, group or service principal can access that subscription/object.</li>
+</ul>
+</li>
+<li>Tiers
+<ul>
+<li>Free
+<ul>
+<li>500K Object Limit</li>
+<li>10 Apps/user</li>
+<li>Basic Reports</li>
+<li>No SLA/group based access/password self service/branding</li>
+<li>Limited MFA</li>
+</ul>
+</li>
+<li>Basic
+<ul>
+<li>10 Apps/User</li>
+<li>Basic Reports</li>
+<li>Limited MFA</li>
+</ul>
+</li>
+<li>Premium P1</li>
+<li>Premium P2
+<ul>
+<li>Privileged Identity Management -&gt; Temporary switch to higher access role when necessary and then degrade again, so like temp root access</li>
+</ul>
+</li>
+<li>Office 365 Apps (thats not one you choose)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Active Directory Domain Services (ADDS)</strong> -&gt; On premise solution, prob self hosted
+<ul>
+<li>Windows server with Activey Directory Domain Services role installed on it</li>
+<li>Legacy Active Directory since Windows 2000</li>
+<li>Traditional Kerbos and LDAP functionality</li>
+<li>Deployed on Windows OS usually on VMs</li>
+</ul>
+</li>
+<li><strong>Azure Active Directory Domain Services (AADDS)</strong> -&gt; Manager service
+<ul>
+<li>Provides managed Active Directory Domain Services (instead of self hosted)</li>
+<li>Allows you to consume domain services without the need to patch and maintain domain controllers on IaaS</li>
+<li>Domain Join, Group Policy, LDAP, Kerberos, NTLM; all supported</li>
+<li>Perfect for unexperienced devs with AD</li>
+<li>Need to create a dedicated subnet for this? - No, it is just recommended. To separate the IP space related to AADDS.</li>
+<li>You will need to update DNS settings for your VNet that runs AADDS</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Azure AD Overview</p>
+<ul>
+<li>TODO <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis">Read Article</a></li>
+<li><img src="assets/cloud_21.png" alt="Cloud_21" /></li>
+</ul>
+</li>
+<li>
+<p>Azure AD Connect (Connects a Azure AD (cloud) and ADDS (On Premise))</p>
+<ul>
+<li>Components
+<ul>
+<li>Synchronization Services (create users and keep in sync and such)
+<ul>
+<li>Filtering : Limit which objects are synced to Azure AD
+<ul>
+<li>Default filtering : All users, contacts, groups and windows 10 users are synced</li>
+<li>Password Hash Sync : Syncs password hash of your on premise AD to the Azure AD</li>
+<li>Password writeback : Change/reset password in the cloud and write back to the on premise AD</li>
+<li>Device writeback : Allow register devices back to on premise AD</li>
+<li>Prevent accidental deletes : (by default on)</li>
+<li>Automatic upgrade : (default on for express) auto update/patch the version</li>
+</ul>
+</li>
+<li>Password Sync Options
+<ul>
+<li>Password Sync : Ensures user passwords ar the same in both directories (ADDS and Azure AD)</li>
+<li>Passthrough authentication : When user logs in, request is forwarded to ADDS. So Azure AD just acts as a proxy. Single Source</li>
+<li>AD FS - AD Federation services server to fully federate accross AD DS and Azure AD along with other services.
+<ul>
+<li>Identity Federation : Linking identity across different identity systems. (related to SSO)
+<ul>
+<li>Technologies used : SAML, OAuth, OpenID, JWT, Windows Identity Foundation</li>
+<li>Examples : Being able to login with Google Account to other services, same with FB, Microsoft, Github, &hellip;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Active Directory Federation Services (optional)</li>
+<li>Health Monitoring
+<ul>
+<li>Agent that you have to install on your ADDS</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Signel Sign On : Using password sync or passthrough authentication (not Federation)
+<ul>
+<li>Requires Company device with modern browser</li>
+<li>User not required to authenticate with Azure AD if they are logged on with their AD DS credentials</li>
+</ul>
+</li>
+<li>MFA
+<ul>
+<li>Sth you know (password)</li>
+<li>Sth you have (phone)</li>
+<li>Sth you are (Biometrics)</li>
+<li>Methods
+<ul>
+<li>Phone call</li>
+<li>Text Message</li>
+<li>Mobile App notification</li>
+<li>Mobile app verification code (code generator like Google Authenticator)</li>
+<li>3th party tokens</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Azure AD B2C</p>
+<ul>
+<li>Allow people ot login with LinkedIn/Facebook/&hellip;</li>
+<li>Cloud Identity Solutions for Web And Mobile Apps</li>
+<li>Highly scalable to hundres of millions of identities</li>
+<li>Enables authentication for:
+<ul>
+<li>Social Accounts</li>
+<li>Enterprise Acccounts</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Azure AD B2B</p>
+<ul>
+<li>Allowes you to collaborate with partners outside of your organization</li>
+<li>Users receive an email with a confirmation link upon invitation</li>
+<li>Imported users are &ldquo;Azure AD External User Objects&rdquo;</li>
+<li>Access to shared apps, resources, documents, &hellip;</li>
+<li>Partners access with their own credentials</li>
+<li>Enterprise-level security</li>
+</ul>
+</li>
+<li>
+<p>Privileged Identity Managment (PIM)</p>
+</li>
+<li>
+<p>What ?</p>
+<ul>
+<li>A user with some admin rights.</li>
+<li>Put some control around these privileged users</li>
+<li>Visibility into users with privileged access
+<ul>
+<li>Azure Resources</li>
+<li>Azure AD</li>
+</ul>
+</li>
+<li>On Demand administrative access</li>
+<li>View administrator history</li>
+<li>Setup alerts</li>
+<li>Require approvals (via workflows)</li>
+</ul>
+</li>
+<li>
+<p>PIM Process</p>
+<ul>
+<li>User, with not too much access (but should sometimes)</li>
+<li>When they need this elevated access</li>
+<li>They go through activation process (customizable)
+<ul>
+<li>Additional Auth</li>
+<li>Approval workflow (sent to a manager or sth)</li>
+<li>Can put time restriction on it</li>
+</ul>
+</li>
+<li>Now you have an activated user, ready to work.</li>
+</ul>
+</li>
+<li>
+<p>Requirements</p>
+<ul>
+<li>Azure AD P2 License</li>
+</ul>
+</li>
+<li>
+<p>PIM Roles</p>
+<ul>
+<li>Privileged Role Admin : Can manage role assignments and all aspects of PIM</li>
+<li>Security Administrator : Can read security information and reports, manage config in Azure Ad and Office 365</li>
+<li>Need to be global admin to setup PIM, this user is assigned both of the above roles.</li>
+<li>Only Privileged Role Admin can mange Azure AD directory role assignments of users.</li>
+</ul>
+</li>
+<li>
+<p>Assigned roles</p>
+<ul>
+<li>Directory
+<ul>
+<li>Azure AD roles</li>
+<li>Can be &ldquo;eligble&rdquo; or &ldquo;permanent&rdquo;</li>
+<li>E.g. Global Admin</li>
+</ul>
+</li>
+<li>Resource
+<ul>
+<li>Azure RBAC</li>
+<li>Built or custom roles</li>
+<li>E.g. Subscription admin</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>RBAC : Role Based Access Control</p>
+</li>
+<li>
+<p>TODO : Real difference between Azure AD and AADDS</p>
+</li>
+</ul>
+<h2 id="governance-and-rbac-controls">
+  Governance and RBAC Controls
+  
+  <a class="anchor" href="#governance-and-rbac-controls">#</a>
+  
+</h2>
+<ul>
+<li>
+<p>Role Based Access Control (RBAC)</p>
+<ul>
+<li>Azure RBAC Built in roles
+<ul>
+<li>Owner : Full access to all resources, including the right to delegate access to others.</li>
+<li>Contributor : Can create and manage all types of Azure resources, but cannot grant access to others.</li>
+<li>Reader : Can view existing Azure resources, but cannot performan any actions against them</li>
+<li>Other Roles (some examples)
+<ul>
+<li>API Management Service Contributor - Can manage API management service and the APIS</li>
+<li>API Management Service Operator Role - Can manage API management service, not not the APIS themselves.</li>
+<li>API Management Service Reader Role - Read-only access to API management service and the APIS.</li>
+<li>Application Insights Component Contributor - Can manage Application Insights components</li>
+<li>Automation Operator - Able to start, stop, suspend and resume hobs</li>
+<li>Backup Contributor - Can manage backup in Recovery Serices vault</li>
+<li>Backup Operator - Can manage backup except moving backup in Reovery services vault</li>
+<li>Backup reader - Can view all the backup management services</li>
+</ul>
+</li>
+<li>Roles include various actions</li>
+<li>Action defines what type of operations you can perform on a given resource type
+<ul>
+<li>Write enables POST, PUT, PATCH, DELETE</li>
+<li>Read enables GET</li>
+<li>Use PowerShell to get latest roles <code>Get-AzureRMRoleDefinition</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>RBAC Custom Roles
+<ul>
+<li>Create if none of built in works for you</li>
+<li>Each tenant can have 2000 roles</li>
+<li>Use &ldquo;Actions&rdquo; and &ldquo;NonActions&rdquo;</li>
+<li>Assignable scopes
+<ul>
+<li>Subscriptions</li>
+<li>Resource Groups</li>
+<li>Individual Resources</li>
+</ul>
+</li>
+<li>Example</li>
+</ul>
+<pre tabindex="0"><code>    {
+      &#34;name&#34; : &#34;my-role-name&#34;,
+      &#34;Description&#34; : &#34;My Description&#34;,
+      &#34;Actions&#34;: [
+        &#34;Microsoft.Storage./*/read&#34;,
+        &#34;Microsoft.Compute/VirtualMachines/start/action&#34;
+      ],
+      &#34;NotActions&#34; : [],
+      &#34;AssignableScopes&#34;: [&#34;my-subscription&#34;]
+    }
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>User rights</p>
+<ul>
+<li>Resulting rights are the union of a user and the roles.</li>
+</ul>
+</li>
+<li>
+<p>Azure Policies</p>
+<ul>
+<li>Enforce governance</li>
+<li>Built in or custom code</li>
+<li>Assigned to subscriptions or resource groups (not specific resources)</li>
+<li>Create a policy and then assign it</li>
+<li>So this is an alternative approach from RBAC ?
+<ul>
+<li>Seems to be some logical/coded limitations, like don&rsquo;t allow regions to be deployed in, as you can&rsquo;t do that with a role</li>
+</ul>
+</li>
+<li>Example</li>
+</ul>
+<pre tabindex="0"><code>  {
+      &#34;if&#34;: {
+          &#34;not&#34;: {
+              &#34;field&#34; : &#34;location&#34;,
+              &#34;in&#34; : &#34;[parameters(&#39;listOfAllowedLocations&#39;&#39;)]&#34;
+          }
+      },
+      &#34;then&#34;: {
+          &#34;effect&#34; : &#34;Deny&#34;
+      }
+  }
+</code></pre></li>
+<li>
+<p>Azure Resource Locks</p>
+<ul>
+<li>Mechanism for locking down resources you want to ensure to have an extra layer of protection before they can be deleted.</li>
+<li>2 options
+<ul>
+<li>CanNotDelete : Authorized users can read and modify but not delete the resource</li>
+<li>ReadOnly : Authorized users can read the resource but cannot update or delete</li>
+</ul>
+</li>
+<li>can be done on Subscription, resource group or specific resource</li>
+</ul>
+</li>
+</ul>
+<h2 id="create-and-deploy-apps">
+  Create and Deploy Apps
+  
+  <a class="anchor" href="#create-and-deploy-apps">#</a>
+  
+</h2>
+<h3 id="app-services-overview">
+  App Services Overview
+  
+  <a class="anchor" href="#app-services-overview">#</a>
+  
+</h3>
+<ul>
+<li>
+<p>PaaS for apps</p>
+</li>
+<li>
+<p>Types</p>
+<ul>
+<li>Web Apps
+<ul>
+<li>Build and host apps with various languages</li>
+<li>Auto scale</li>
+<li>HA</li>
+<li>DevOps features</li>
+</ul>
+</li>
+<li>Mobile Apps
+<ul>
+<li>Build mobile device backend</li>
+<li>HA</li>
+<li>High Scalabale</li>
+<li>Build native apps for iOs, Android, Windows, Cross platform</li>
+<li>Shares same APp service deployment ro reduce run rates</li>
+</ul>
+</li>
+<li>Logic Apps
+<ul>
+<li>Automate business processes and workflows</li>
+<li>Use the orchestration engine to build a solution</li>
+<li>Examples
+<ul>
+<li>Every time your app calls an API do some task</li>
+<li>Routinely ingest data from a storage blob or external Saas Service</li>
+<li>Regulary check Tweets or #Slack messages from a specific account</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>API App
+<ul>
+<li>Allow us to easily create, consume and call APIS</li>
+<li>Option to use APIs you create</li>
+<li>Could also be from external API services</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Security Features</p>
+<ul>
+<li>Features run on isolated VN</li>
+<li>ISO, SOC, and PCI Compliant</li>
+<li>Fully integrated Azure AD</li>
+<li>Managed Service Identity</li>
+<li>Support custom domains, SSL/TLS, including custom certificates using wildcards or subject alternate name</li>
+<li>Supports multiple auth protocols: OAuth, OpenId, and Microsoft AD</li>
+<li>Integrates with WAF</li>
+</ul>
+</li>
+<li>
+<p>DevOps Features</p>
+<ul>
+<li>CI/CD Support</li>
+<li>IDE Tool integration</li>
+<li>Deployment Slots - Stage environemnt for example and flip it to prod</li>
+</ul>
+</li>
+<li>
+<p>App Service Plans Overview</p>
+<ul>
+<li>First define the following
+<ul>
+<li>Subscription the plan belongs to</li>
+<li>Location (region)</li>
+<li>Pricing Tier (Free, Shared, Basic, Standard Premium, Isolated)</li>
+<li>Instance size (small, Medium, Large)</li>
+</ul>
+</li>
+<li>Then configure settings
+<ul>
+<li>Scale count</li>
+<li>Scale rules - Allow auto sclae if plan allows it</li>
+<li>Scale up - Increase resources associated with the App Service Plan (auto switch the plan that you defined at start)
+<ul>
+<li>So scale rules to scale the pricing plan</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>App Service Plan Pricing Tiers</p>
+<ul>
+<li>Free (shared compute resources - runs on same VM as some other apps, so even other customers)</li>
+<li>Shared (shared compute resources - runs on same VM as some other apps, so even other customers)</li>
+<li>Basic (dedicated compute resources)</li>
+<li>Standard (dedicated compute resources)</li>
+<li>Premium (dedicated compute resources)</li>
+<li>Isolated (dedicated compute resources) - Dedicated VMs on Deciated network, max scale and isolation</li>
+<li>Comes with SLA&rsquo;s</li>
+<li>A plan might have a limited amount of
+<ul>
+<li>Apps (free 10, Shared 100, after, unlimited)</li>
+<li>Max Instances (0, from basic 3 to more)</li>
+<li>SLA (free and shared have none, others 99.95%)</li>
+<li>Functions only starting basic</li>
+<li>Auto scale only starting with basic</li>
+</ul>
+</li>
+<li>Guideliness
+<ul>
+<li>Create a plan for a specific applications</li>
+<li>Deploy app servies to support the application</li>
+<li>Do not use a single plan for every web app</li>
+<li>Combine app services vs mass VM creation</li>
+<li>Combine other services in the same resource group</li>
+</ul>
+</li>
+<li>A plan is something you deploy first before deploying apps on it</li>
+</ul>
+</li>
+<li>
+<p>App Service Environments (ASEs)</p>
+<ul>
+<li>Fully isolated environment</li>
+<li>For high performing apps - high CPU and/or memory</li>
+<li>Individual or multiple services plans</li>
+<li>2 ways to deploy: Internal (internal load balancer, so internal access) or External (internet facing)</li>
+<li>Create in a subnet of a Vnet , which acieves isolation</li>
+<li>May you take a few hours to spin up</li>
+</ul>
+</li>
+<li>
+<p>Management Tools</p>
+<ul>
+<li>Management Portal</li>
+<li>Kudu</li>
+<li>Visual Studio</li>
+<li>PowerShell</li>
+<li>CLI</li>
+</ul>
+</li>
+<li>
+<p>App Service Plan Metrics</p>
+<ul>
+<li>CPU % : Avg CPU used across all instances of the plan</li>
+<li>Memory % : Avg memory used across all instances of the plan</li>
+<li>Data In : Av income bandwith used across all instances of the plan</li>
+<li>Data Out : Av outgoing bandwith used across all instances of the plan</li>
+<li>Disk Queue Length : Avg of both read and write requests that were queued on storage.
+<ul>
+<li>High disk queue indicates of an app that might slow down due to excessive disk I/O</li>
+</ul>
+</li>
+<li>HTTP Queue Length : Avg of HTTP requests that sit in queue before being fulfilled.
+<ul>
+<li>High queue is symptom of a plan under heavy load</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Free and Shared App Quotes</p>
+<ul>
+<li>CPU (short) - CPU allowed for this app in a 5min interval. Resets every 5 min.</li>
+<li>CPU (day) - CPU allowed for this app in a day. Resets at mignight UTC</li>
+<li>Memory - Total memory allowed for this app</li>
+<li>Bandwith - Total bandwith allowed for this app in a day. Resets at mignight UTC</li>
+<li>Filesystem - Total amount of storage allowed</li>
+</ul>
+</li>
+<li>
+<p>Results of exceeding quote</p>
+<ul>
+<li>CPU - App stopped until quote resets. During this time, all requests get a 403</li>
+<li>Memory - App restarts</li>
+<li>Bandwith - App stoped until quote rests. During this time, all requests get a 403</li>
+<li>Filesystem - Write operations will faill (including logs)</li>
+</ul>
+</li>
+<li>
+<p>Azure Web App Diagnostic Logs</p>
+<ul>
+<li>
+<p>Web Server</p>
+<ul>
+<li>Web Server logging (requests)</li>
+<li>Detailed Error Message</li>
+<li>Failed Request Tracing (detailed info regarding failed requests)</li>
+</ul>
+</li>
+<li>
+<p>Application</p>
+<ul>
+<li>levels Error, Warning, Information, Verbose</li>
+</ul>
+</li>
+<li>
+<p>Logs and locations</p>
+<ul>
+<li>Type : Application Logs - <code>Application/</code></li>
+<li>Failed Request Traces - <code>W3SVC###########/</code></li>
+<li>Detailed Error Logs - <code>DetailedErrors/</code></li>
+<li>Web Server Logs - <code>http/RawLogs</code></li>
+<li>Deployment Logs - <code>/Git</code></li>
+</ul>
+</li>
+<li>
+<p>Creating Alerts in Application Insights, metric types</p>
+<ul>
+<li>Metric - A metric crosses a threshold for a period of time</li>
+<li>Web Tests - A site is not available or responding slowly</li>
+<li>Proactive diagnostics - Triggered when something out of the ordinary occurs</li>
+</ul>
+</li>
+<li>
+<p>KUDU - Fast analytics on fast data</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Application Settings</p>
+<ul>
+<li>Setting - summary - Default - other options</li>
+<li><code>.NET</code> - .NET version - v4.5 - v3.5</li>
+<li><code>PHP</code> - version - v5.5 - OFF, v5.6, v5.7, v7.0, v7.1</li>
+<li><code>JAVA</code> - version, web container option to choose Tomacat or Jetty - OFF - Java 7, 8</li>
+<li><code>PYTHON</code> - python version - OFF - v2.7, v3.4</li>
+<li>Platform - 32 or 64bit mode (free and shared only have 32bit) - 32bit - 32bit</li>
+<li>Web Sockets - enable websockets - OFF - ON</li>
+<li>Always On - Unload on Idle (only basic and standard?) - OFF - ON</li>
+<li>Auto-Swao - Swap slot into prod when code pushed to it - ON - OFF</li>
+<li>Connection Strings
+<ul>
+<li>Configure db connectiong strings per slot</li>
+<li>Variable instead of configuration file</li>
+<li>Secure as it&rsquo;s not stored in a file</li>
+<li>Prefixes
+<ul>
+<li><code>SQLCONNSTR_</code></li>
+<li><code>MYSQLCONNSTR_</code></li>
+<li><code>SQLAZURECONNSTR_</code></li>
+<li><code>CUSTOMCONNSTR_</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Handler Mappings
+<ul>
+<li>Define for a file extension, which script process to execute them.</li>
+</ul>
+</li>
+<li>Virtual Applications and Directories
+<ul>
+<li>Create subdirectories with specialized sub apps</li>
+<li>Virtual Directory (URL path) &gt; Physical Path &gt; Application or not</li>
+</ul>
+</li>
+<li>Custom Domains obviously</li>
+</ul>
+</li>
+<li>
+<p>Deployment slots</p>
+<ul>
+<li>Allow you to deploy in on production slots</li>
+<li>Applies to WebApps, API and Mobile Apps (not logic apps of whatever!)</li>
+<li>Reduces risk and increase speed</li>
+<li>Are live running apps</li>
+<li>Staging slot can be seamlessly be swapped to prod</li>
+<li>Seamlessly reverse back to staging if needed</li>
+<li>Swapped vs Not Swapped Settings
+<ul>
+<li>Swapped (what is being swapped)
+<ul>
+<li>General Settings (framework version ,32/64 bit, &hellip;)</li>
+<li>App settings (can be configured to stick to a slot)</li>
+<li>Connection Strings (can be configured to stick to a slot)</li>
+<li>Handler mappings</li>
+<li>Monitoring and diagnostic settings</li>
+<li>WebJobs content</li>
+</ul>
+</li>
+<li>What is not swapped
+<ul>
+<li>Publishing endpoints</li>
+<li>Custom domain names</li>
+<li>SSL certificates and bindings</li>
+<li>Scale settings</li>
+<li>Webjobs schedulers</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>When you swap
+<ul>
+<li>You basically staging and production, it swaps the apps (Prod becomes the staging one, and the staging one becomes the prod one)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="serverless-computing">
+  Serverless Computing
+  
+  <a class="anchor" href="#serverless-computing">#</a>
+  
+</h2>
+<ul>
+<li>What is Serverless ?
+<ul>
+<li>Only pay what you use, flexible to scale, stitch stuff together, fully managed</li>
+</ul>
+</li>
+<li>Types
+<ul>
+<li>Azure Functions
+<ul>
+<li>Languages : C#, F#, Java and JavaScript</li>
+<li>Pay per use pricing
+<ul>
+<li>Consumption Plan</li>
+<li>App Service Plan (Run on the same plan as other services, not sure how that works)</li>
+</ul>
+</li>
+<li>Integrated Security with OAuth providers</li>
+<li>Code in the portal or deploy via DevOps tools</li>
+<li>Function App
+<ul>
+<li>Requires global unique name again</li>
+<li>Choose OS (JUST WHY ? ITS SERVERLESS)</li>
+<li>With Linux version you can publish code or docker image</li>
+<li>needs a storage account where you will save it</li>
+<li>A function app is a grouping of multiple functions</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Logic Apps (if this then that, workflow/steps like in AWS)
+<ul>
+<li>Workflow engine</li>
+<li>Used to orchestrate and stitch together functions and services (Just like regular orchestration tools)</li>
+<li>Visualize, Design, Build, Automate</li>
+<li>Triggers -&gt; Actions
+<ul>
+<li>You have an event that happens, which fires of an action</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Even Grid
+<ul>
+<li>First you create a &ldquo;topic&rdquo;, so you can then tell which services subscribe to the topic, so pub/sub</li>
+<li>This is where you assign subscribers</li>
+</ul>
+</li>
+<li>Event Hub
+<ul>
+<li>Push a LOT of events, high performance (can use Kafka), more for streaming for IoT ?</li>
+<li>TODO Read a bit more about it ?</li>
+<li>You can stream the audit log of AD to a Event Hub</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="design-and-develop-apps-that-run-in-containers">
+  Design and Develop Apps that run in Containers
+  
+  <a class="anchor" href="#design-and-develop-apps-that-run-in-containers">#</a>
+  
+</h2>
+<ul>
+<li>Install Docker Demo : Whatevs</li>
+<li>Prepare App for AKS Demo</li>
+<li>Checkout the Azure examples github repo yml files and try to deploy one <a href="https://github.com/Azure-Samples/">Link</a></li>
+</ul>
+<h2 id="server-migrations">
+  Server Migrations
+  
+  <a class="anchor" href="#server-migrations">#</a>
+  
+</h2>
+<h3 id="azure-migrate">
+  Azure Migrate
+  
+  <a class="anchor" href="#azure-migrate">#</a>
+  
+</h3>
+<p><img src="assets/cloud_22.png" alt="cloud_22" /></p>
+<ul>
+<li>
+<p>Migrate On Premise to Azure Cloud</p>
+</li>
+<li>
+<p>Assesses Azure Readiness</p>
+<ul>
+<li>Are my machines capable of running on Azure?</li>
+<li>Are there specific compatibility issues that need to be addressed?</li>
+</ul>
+</li>
+<li>
+<p>Sizing</p>
+<ul>
+<li>Get approximate sizing recommendation based on historic performance (So it would check if you 8core was over provisioned)</li>
+</ul>
+</li>
+<li>
+<p>Cost estimation</p>
+<ul>
+<li>Based on the sizes selected</li>
+</ul>
+</li>
+<li>
+<p>Dependency Mapping</p>
+<ul>
+<li>Visualize dependencies in order to plan <strong>waves</strong> of workloads for migration appropiately
+<ul>
+<li>Waves, because you won&rsquo;t deploy it all at once</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>vCenter is your VM server managment from VMWare</p>
+</li>
+<li>
+<p>How it works</p>
+<ul>
+<li>You download the appliance and install it on your on premise solution (vCenter)
+<ul>
+<li>For now &ldquo;One-time discovery&rdquo;, in preview is &ldquo;continious discovery&rdquo;</li>
+<li>This collector is downloaded as OVF template (.ova file), about 10-11Gb</li>
+<li>The collector will run as a VM in your vCenter server</li>
+<li>Go to VMWare sphere Web Client</li>
+<li>Actions &gt; Deploy OVF template</li>
+<li>Select local file that you downloaded &gt; next</li>
+<li>Choose a folder where you wanna put it, give a name</li>
+<li>Select a resource, so the VMWare host that will run it in your cluster, or just the cluster (auto assign)</li>
+<li>Review</li>
+<li>Where to place it on storage (thin - dynamic allocation, thick preallocate)</li>
+<li>Choose Network and finish</li>
+<li>RDP in that collector VM, on <code>localhost</code> you can do finalize the setup with a ProjectId and Project Key from the Migrate project</li>
+</ul>
+</li>
+<li>Start the discovery, all required raw metadata is sent to a &ldquo;collector VM&rdquo;</li>
+<li>All that raw date is processed by Azure migrate Service</li>
+<li>After processing, results are shown in Azure migrate Portal where you can create an assessment based on that</li>
+</ul>
+</li>
+<li>
+<p>Limitations :</p>
+<ul>
+<li>VMware assesment only (for Hyper-V use ASR deployment planner)</li>
+<li>Up to 1500 VMs in a single discovery and project.</li>
+<li>For larger environments, split the discovery into multiple assesments. You can execute up to 20 projects per subscription.</li>
+<li>Project can only be created in the US regions. Metadata is stored in West Central or East US.</li>
+</ul>
+</li>
+<li>
+<p>What does into an Assessment?</p>
+<ul>
+<li>Target Location : Target region</li>
+<li>Storage Type : Determines whether to use Standard or Premium disks.
+<ul>
+<li>For performance-based sizing, the disk sizing recommendation is done based on the performance data of the VMs.</li>
+</ul>
+</li>
+<li>Sizing Criterion : Based on performance history or as is on premises VMs</li>
+<li>Azure Hybrid Benefit : Determine if you have licensing that you can utilize for Azure Hybrid Benefit</li>
+<li>Reserved Instances : Whether to utilize reserved instances to further reduce costs.</li>
+<li>VM Uptime : The duration for which VMs will run in Azure. (should run always or just specific times)</li>
+<li>Pricing Tier : Pricing tier of VMs</li>
+<li>Performance History : By default, evaluates the performance history for the last day with 95% precentile value of the on premise machines.</li>
+<li>VM Series : Choose VM series types you want to include</li>
+<li>Comfort Factor
+<ul>
+<li>Azure Migrate considers a buffer (comfort factor) during assessment. The buffer is applied on top of machine utilization data for VMs (CPU, memory, disk and network).
+The comfort factor accounts for issues such as seasonal usage, short performance history, and likely increases in the future usage.
+E.g. a 10core VM with 20% utilization normally results in a 2core VM. However, with a comfort factor of 2.0x the result is a 4core VM instead. <strong>The default comfort setting is 1.3x</strong></li>
+<li>It will always round up to the next VM type. For example if you have 2.3core or 3core, it rounds up to 4core.</li>
+</ul>
+</li>
+<li>Port requirements
+<ul>
+<li>Collector &gt; Azure Migrate Service : 443</li>
+<li>Collector &gt; vCenter Server : 443 (can be changed)</li>
+<li>On Premise VM &gt; Log Analytics Workspace : 443</li>
+</ul>
+</li>
+<li>You can create multiple assessments</li>
+<li><strong>When creating an assessment, you can go to assesment properties, that&rsquo;s where you can set all afforementioned assessment details</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="azure-site-recovery-asr">
+  Azure Site Recovery (ASR)
+  
+  <a class="anchor" href="#azure-site-recovery-asr">#</a>
+  
+</h3>
+<ul>
+<li>
+<p>Quick recap on Business Continuity Strategies</p>
+<ul>
+<li>HA - Run instances on different places - Proactive</li>
+<li>Disaster Reovery (run apps in secondary datacenter IF error occurs) - reactive</li>
+<li>Backup - Restore data</li>
+</ul>
+</li>
+<li>
+<p>Overview</p>
+<ul>
+<li>On-premises to Azure Recovery : On-Premise VMware and Hyper-V to Azure replication</li>
+<li>Azure to Azure Recovery : Recover workloads from Primary region in a Secondary targer region (in case a region fails)</li>
+<li>Automation and Orchestration : Setup recovery plans to customer which services are restored, as well any subsequent scripts
+<ul>
+<li>Rich integration into Azure automation for additional automation requirements</li>
+</ul>
+</li>
+<li>RTO and RPO Targets : Continious replication for Azure from VMWare and Hyper V
+<ul>
+<li>Replication frequency
+<ul>
+<li>30 sec</li>
+<li>5 min</li>
+<li>15 min</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>VMware to Azure Recovery</li>
+<li>ASR Process
+<ul>
+<li>Converts VM (vmd file) to VHD</li>
+<li>Upload to Azure</li>
+<li>Migration completed from recovery vault</li>
+</ul>
+</li>
+<li>VMWare migration
+<ul>
+<li>Prepare Azure
+<ul>
+<li>Verify Account Permissions
+<ul>
+<li>Can you create a VM in selected Resource Group</li>
+<li>Can you create a VM in selected Network</li>
+<li>Can you write to the selected Storage account
+<ul>
+<li>Recommended to use a Generap Purpose v1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Create Storage Account</li>
+<li>Create Recovery Services Vault</li>
+<li>Setup an azure network</li>
+</ul>
+</li>
+<li>Prepare VMWare
+<ul>
+<li>VMware permissions</li>
+<li>Prepare an account for Mobility service installation</li>
+<li>Verify compatibility</li>
+<li>Prepare connectivity to Azure VMs (VPN ? Jumpbox ? &hellip;)</li>
+</ul>
+</li>
+<li>Setup Recovery
+<ul>
+<li>You install like before with a ova file a VM that will run the on premise logic.</li>
+<li>Once installed, RDP in it and follow the setup
+<ul>
+<li>Login to azure, choose subscription, reovery services vault, &hellip;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>RPO : Recovery Point Objective (max amount of time you might have lost)</li>
+<li>TODO : Check out what the recovery options are</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="automation">
+  Automation
+  
+  <a class="anchor" href="#automation">#</a>
+  
+</h2>
+<h3 id="vm-custom-images">
+  VM Custom Images
+  
+  <a class="anchor" href="#vm-custom-images">#</a>
+  
+</h3>
+<ul>
+<li>
+<p>Custom Images</p>
+<ul>
+<li>DIY Image</li>
+<li>Windows - Sysprep</li>
+<li>Linux - sudo waagent / deprovision + user</li>
+<li>Generalize in Azure</li>
+<li>Create Image</li>
+</ul>
+</li>
+<li>
+<p>Marketplace Images</p>
+<ul>
+<li>Provided for you in the Azure Marketplace</li>
+<li>Properties
+<ul>
+<li>Publisher</li>
+<li>Offer</li>
+<li>SKU (Stock Keeping Unit)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Create Custom Image (windows example)</p>
+<ul>
+<li>Start <code>c:/Windows/System32/Sysprep.sysprep.exe</code></li>
+<li>&ldquo;Enter System Out-of-Box Experience (OOBE)&rdquo;</li>
+<li>[] Generalize checkbox -&gt; if not checked, any VM created of this image won&rsquo;t start</li>
+<li>Shutdown options : Reboot</li>
+</ul>
+</li>
+<li>
+<p>When you &ldquo;capture&rdquo; and image of a VM (at least with linux), you&rsquo;re not able to use this VM anymore.</p>
+</li>
+<li>
+<p>From that Image you can build directly a VM</p>
+</li>
+</ul>
+<h3 id="dsc-overview">
+  DSC Overview
+  
+  <a class="anchor" href="#dsc-overview">#</a>
+  
+</h3>
+<ul>
+<li>
+<p>Introduction to Configuration Management</p>
+<ul>
+<li>Enterprise level configuration management for multiple nodes
+<ul>
+<li>Puppet</li>
+<li>Chef</li>
+</ul>
+</li>
+<li>Smaller size
+<ul>
+<li>PowerShell (of f*cking bash?)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>PowerShell DSC : Desired State Configuration</p>
+<ul>
+<li>Specify configuration of a machine decleratively (like a docker-compose.yml-ish)</li>
+<li>Specific for Windows machines again</li>
+<li>Key Components
+<ul>
+<li>Configurations -&gt; Declaritive powershell scripts that define the instances of the resources</li>
+<li>Resources -&gt; The resource itself (contain the code to keep a resource in a specific state, so the adapter for the specific resource)</li>
+<li>Logical Configuration Manager (The engine that tries to keep the state, like k8s engine)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Example Command</p>
+<ul>
+<li><code>&gt; Publish-AzureRmVNDscConfiguration -ConfigurationPath &lt;your-declarative-powershellfile&gt; -OutputArchivePath somefile.zip</code></li>
+<li>Here you publish the declartive part into some zip file with all desires files?? I guess ? (like IIS and.NET ?)</li>
+<li>To use this now,
+<ul>
+<li>Go to a VM</li>
+<li>Settings &gt; Extensions</li>
+<li>Add -&gt; Powershell DSC</li>
+<li>Select here the published archive from the first command</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/cloud_23.png" alt="Cloud_23" /></p>
+<h3 id="custom-script-extension">
+  Custom Script Extension
+  
+  <a class="anchor" href="#custom-script-extension">#</a>
+  
+</h3>
+<ul>
+<li>Execute VM Tasks without logging into the VM</li>
+<li>Upload via Portal or download scripts from Azure Blob storage or GitHub</li>
+<li>These are scripts that run POST configiration. It can download the scripts from Blob Storage and then run them for further setup.</li>
+<li>Can be automated using PowerShell</li>
+<li>Benefits
+<ul>
+<li>No local or domain credentials needed to login to Azure VM</li>
+<li>VM does not need an accessibly IP to internet</li>
+<li>Simple to implement</li>
+</ul>
+</li>
+<li>Drawbacks
+<ul>
+<li>Must be enabled for each VM you want to run your script on.</li>
+<li>VMs will need internet access if using GitHib or Blob storage for scripts.</li>
+<li>Relatively Slow</li>
+</ul>
+</li>
+</ul>
+<h3 id="powershell-vm-commands">
+  PowerShell VM Commands
+  
+  <a class="anchor" href="#powershell-vm-commands">#</a>
+  
+</h3>
+<ul>
+<li>New Resource Group :</li>
+</ul>
+<p><code>NewAzureRmResourceGroup -Name &lt;myResourceGroup&gt; -Location &lt;EastUS&gt;</code></p>
+<ul>
+<li>New Virtual Machine :</li>
+</ul>
+<pre tabindex="0"><code>New-AzureRmVM \
+    -ResourceGroupName &#34;&lt;...&gt;&#34;
+    -Name &#34;&lt;...&gt;&#34;
+    -Location &#34;&lt;...&gt;&#34;
+    -VirtualNetworkName &#34;&lt;...&gt;&#34;
+    -SubnetName &#34;&lt;...&gt;&#34;
+    -SecurityGroupName &#34;&lt;...&gt;&#34;
+    -PublicIpAddressName &#34;&lt;...&gt;&#34;
+    -OpenPorts &#34;&lt;...&gt;&#34;
+</code></pre><ul>
+<li>Create VM Configuration :</li>
+</ul>
+<p><code>NewAzureRmVMConfig -VMName &lt;...&gt;</code></p>
+<ul>
+<li>Start and Stop VMs</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>    Start-AzureRmVM
+</span></span><span style="display:flex;"><span>    Stop-AzureRmVM
+</span></span></code></pre></div><p><a href="https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-quick-create-vm-windows-powershell">More&hellip; TRY THIS</a></p>
+<h3 id="arm-templates">
+  ARM Templates
+  
+  <a class="anchor" href="#arm-templates">#</a>
+  
+</h3>
+<ul>
+<li>
+<p>Apply infrastructure as code</p>
+</li>
+<li>
+<p>Declare Azure Resources in JSON (cloudformation in AWS)</p>
+</li>
+<li>
+<p>Download templates from Azure Portal</p>
+</li>
+<li>
+<p>AUthor new templates</p>
+</li>
+<li>
+<p>Use quickstart templates</p>
+<ul>
+<li>Found on azure docs and githib</li>
+</ul>
+</li>
+<li>
+<p>File Types</p>
+<ul>
+<li>ARM Template file (JSON)</li>
+<li>ARM Template Parameter File (separate your parameters optional)</li>
+<li>Deployment Scripts</li>
+</ul>
+</li>
+<li>
+<p>ARM Template Constructs</p>
+<ul>
+<li>Parameters : Define the inputs to pass in ARM during deploying</li>
+<li>Variables (for reusing) :</li>
+<li>Resources : Define the resources to deploy or updated</li>
+<li>Outputs : Values tha are returned after the ARM deployment is complete (e.g. output public IP address)</li>
+<li>Notice that you saw these things during the deploy of a VM</li>
+</ul>
+</li>
+</ul>
+<pre tabindex="0"><code>{
+  &#34;$schema&#34;: &#34;...&#34;,
+  &#34;contentVersion&#34;: &#34;1.0.0.0&#34;,
+  &#34;parameters&#34; : {
+    &#34;skuName&#34; : {
+      &#34;type&#34; : &#34;string&#34;
+    }
+  },
+  &#34;variables&#34; : {},
+  &#34;resources&#34; : [],
+  &#34;outputs&#34; : {}
+}
+</code></pre><h3 id="arm-linking-templates">
+  ARM Linking Templates
+  
+  <a class="anchor" href="#arm-linking-templates">#</a>
+  
+</h3>
+<ul>
+<li>
+<p>You can link templates for reusability and flexibility.</p>
+</li>
+<li>
+<p>Main Template</p>
+<ul>
+<li>Optional Resource Template</li>
+<li>Shared Resource template</li>
+<li>Member Resource temlate</li>
+</ul>
+</li>
+<li>
+<p>Methods</p>
+<ul>
+<li>Inline : Create entire ARM template in body of existing template
+<ul>
+<li><img src="assets/cloud_24.png" alt="img" /></li>
+</ul>
+</li>
+<li>External : Link to an external template with an <code>INLINE</code> or <code>EXTERNAL</code> parameter set.
+<ul>
+<li><img src="assets/cloud_25.png" alt="img" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Key ARM Functions</p>
+<ul>
+<li><code>Copy</code> - Declare resource and copy it</li>
+<li><code>copyIndex()</code> - Copy f</li>
+<li><code>dependsOn</code> - Variable depends on another</li>
+<li>example <code>&quot;name&quot; : &quot;[concact(copyIndex(), 'storage, uniqueString(resourceGroup(),id))]&quot;</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="todo--learn-some-arm-code-for-templates">
+  TODO ! Learn some ARM code for templates
+  
+  <a class="anchor" href="#todo--learn-some-arm-code-for-templates">#</a>
+  
+</h4>
+<h4 id="think-which-part-of-the-azure-automation-makes-sense-to-start-p9-on-windows-server">
+  Think which part of the Azure automation makes sense to &ldquo;start P9 on windows server&rdquo;
+  
+  <a class="anchor" href="#think-which-part-of-the-azure-automation-makes-sense-to-start-p9-on-windows-server">#</a>
+  
+</h4>
+<h3 id="azure-runbooks">
+  Azure Runbooks
+  
+  <a class="anchor" href="#azure-runbooks">#</a>
+  
+</h3>
+<ul>
+<li>
+<p>Automated workflows (various tasks) that you do often</p>
+<ul>
+<li>Create a Automation account</li>
+<li>Fill out</li>
+</ul>
+</li>
+<li>
+<p>Runbook can bound to webhook or schedule easily</p>
+</li>
+</ul>
+<h3 id="azure-automation-dsc">
+  Azure Automation DSC
+  
+  <a class="anchor" href="#azure-automation-dsc">#</a>
+  
+</h3>
+<ul>
+<li>You can define, then compile a DSC, then apply it to multiple VMs and immediatly see if all of those VMs are Compliant or not</li>
+</ul>
+<h2 id="azure-files">
+  Azure Files
+  
+  <a class="anchor" href="#azure-files">#</a>
+  
+</h2>
+<ul>
+<li>Go to a storage account (or create)</li>
+<li>Click on &ldquo;files&rdquo; in file servcie</li>
+<li>Create a file share &gt; Name and Quota</li>
+</ul>
+<p>Remember, this is like EFS on AWS. So you can attach such file share to different VMs and any other</p>
+<h2 id="azure-file-sync">
+  Azure File Sync
+  
+  <a class="anchor" href="#azure-file-sync">#</a>
+  
+</h2>
+<ul>
+<li>How to cache some files when using Azure files, which is a centralized file service.</li>
+<li>Service/app you install on a Windows Server VM on premise</li>
+<li>This turns your VM as a cache of Azure FIle share in your premise</li>
+</ul>
+
+<blockquote class='book-hint '>
+  <p>Use Azure File Sync to centralize your organization&rsquo;s file shares in Azure Files, while keeping the flexibility, performance, and compatibility of an on-premises file server. Azure File Sync transforms Windows Server into a quick cache of your Azure file share. You can use any protocol that&rsquo;s available on Windows Server to access your data locally, including SMB, NFS, and FTPS. You can have as many caches as you need across the world.</p>
+</blockquote><ul>
+<li>Prereq :
+<ul>
+<li>Azure File Share in same region where to deploy Azure File Sync</li>
+<li>Windows Server instance (on prem)</li>
+<li>Powershell</li>
+</ul>
+</li>
+</ul>
+<h2 id="self-study-notes">
+  Self study notes
+  
+  <a class="anchor" href="#self-study-notes">#</a>
+  
+</h2>
+<ul>
+<li>Directory + global subscription : Set for the portal which directory/subscription to only show</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/azure/az-300-notes/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Az 300 Notes" />
+        <span>Az 300 Notes</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/business/" class="flex align-center">
+        <span>Business</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Business" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#azure-fundamentals">Azure Fundamentals</a>
+      <ul>
+        <li><a href="#some-comparisons">Some comparisons</a></li>
+        <li><a href="#accounts-and-subscriptions-overview">Accounts and Subscriptions Overview</a></li>
+        <li><a href="#quotas-cost-analysis-and-tagging-demonstration">Quotas Cost Analysis and Tagging Demonstration</a></li>
+        <li><a href="#billing-alerts">Billing Alerts</a></li>
+        <li><a href="#policies">Policies</a></li>
+        <li><a href="#resource-groups-and-tagging">Resource Groups and Tagging</a></li>
+        <li><a href="#moving-resources-between-resource-groups">Moving Resources Between Resource groups</a></li>
+        <li><a href="#azure-monitoring-overview">Azure Monitoring Overview</a></li>
+        <li><a href="#log-analytics-key-features">Log Analytics Key Features</a></li>
+        <li><a href="#create-and-configure-storage-accounts">Create and Configure Storage Accounts</a></li>
+      </ul>
+    </li>
+    <li><a href="#virtual-machines">Virtual Machines</a></li>
+    <li><a href="#networking">Networking</a></li>
+    <li><a href="#managing-and-securing-identities">Managing and Securing Identities</a></li>
+    <li><a href="#governance-and-rbac-controls">Governance and RBAC Controls</a></li>
+    <li><a href="#create-and-deploy-apps">Create and Deploy Apps</a>
+      <ul>
+        <li><a href="#app-services-overview">App Services Overview</a></li>
+      </ul>
+    </li>
+    <li><a href="#serverless-computing">Serverless Computing</a></li>
+    <li><a href="#design-and-develop-apps-that-run-in-containers">Design and Develop Apps that run in Containers</a></li>
+    <li><a href="#server-migrations">Server Migrations</a>
+      <ul>
+        <li><a href="#azure-migrate">Azure Migrate</a></li>
+        <li><a href="#azure-site-recovery-asr">Azure Site Recovery (ASR)</a></li>
+      </ul>
+    </li>
+    <li><a href="#automation">Automation</a>
+      <ul>
+        <li><a href="#vm-custom-images">VM Custom Images</a></li>
+        <li><a href="#dsc-overview">DSC Overview</a></li>
+        <li><a href="#custom-script-extension">Custom Script Extension</a></li>
+        <li><a href="#powershell-vm-commands">PowerShell VM Commands</a></li>
+        <li><a href="#arm-templates">ARM Templates</a></li>
+        <li><a href="#arm-linking-templates">ARM Linking Templates</a></li>
+        <li><a href="#azure-runbooks">Azure Runbooks</a></li>
+        <li><a href="#azure-automation-dsc">Azure Automation DSC</a></li>
+      </ul>
+    </li>
+    <li><a href="#azure-files">Azure Files</a></li>
+    <li><a href="#azure-file-sync">Azure File Sync</a></li>
+    <li><a href="#self-study-notes">Self study notes</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

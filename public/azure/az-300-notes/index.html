@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  AZ-300 Study Notes
+  
+  #
+  
+
+
+  Various
+  
+  #
+  
+
+
+Global filter for subscription and (active) directory
+Every single resource specifies a region to be stored
+Azure hides more the concepts of zone&rsquo;s (as in HA Zone)
+Zone&rsquo;s are more explicit in &ldquo;availability sets&rdquo;
+Resource Groups are mandatory
+
+
+  Zones, Regions and High Availability
+  
+  #
+  
+
+Primary Source
+
+
+Business Continuity is the business word for HA and Recovery.
+
+
+A zone can be one ore more data centers still.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/azure/az-300-notes/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="AZ-300 Study Notes # Various # Global filter for subscription and (active) directory Every single resource specifies a region to be stored Azure hides more the concepts of zone’s (as in HA Zone) Zone’s are more explicit in “availability sets” Resource Groups are mandatory Zones, Regions and High Availability # Primary Source
+Business Continuity is the business word for HA and Recovery.
+A zone can be one ore more data centers still.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="azure">
+<title>Az 300 Notes | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/azure/az-300-notes/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-azure book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle" checked />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="active">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle"  />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle"  />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Az 300 Notes</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#various">Various</a></li>
+    <li><a href="#zones-regions-and-high-availability">Zones, Regions and High Availability</a></li>
+    <li><a href="#networking">Networking</a></li>
+    <li><a href="#virtual-machines">Virtual Machines</a></li>
+    <li><a href="#azure-resource-manager-templates">Azure Resource Manager Templates</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="az-300-study-notes">
+  AZ-300 Study Notes
+  
+  <a class="anchor" href="#az-300-study-notes">#</a>
+  
+</h1>
+<h2 id="various">
+  Various
+  
+  <a class="anchor" href="#various">#</a>
+  
+</h2>
+<ul>
+<li>Global filter for subscription and (active) directory</li>
+<li>Every single resource specifies a region to be stored</li>
+<li>Azure hides more the concepts of zone&rsquo;s (as in HA Zone)</li>
+<li>Zone&rsquo;s are more explicit in &ldquo;availability sets&rdquo;</li>
+<li>Resource Groups are mandatory</li>
+</ul>
+<h2 id="zones-regions-and-high-availability">
+  Zones, Regions and High Availability
+  
+  <a class="anchor" href="#zones-regions-and-high-availability">#</a>
+  
+</h2>
+<p>Primary <a href="https://docs.microsoft.com/en-us/azure/availability-zones/az-overview">Source</a></p>
+<ul>
+<li>
+<p>Business Continuity is the business word for HA and Recovery.</p>
+</li>
+<li>
+<p>A zone can be one ore <strong>more</strong> data centers still.</p>
+</li>
+<li>
+<p>Each region has <strong>a min of 3</strong> zones.</p>
+</li>
+<li>
+<p>Availability Sets</p>
+<ul>
+<li>A group with 2+ VMs in the same Data Center.</li>
+<li>Parameters
+<ul>
+<li>Fault Domain : Each fault domain has own hardware network switch and power source.</li>
+<li>Update Domains : All VMs in same update domain restart together during planned maintenance.</li>
+</ul>
+</li>
+<li>So the Fault Domain is a hardware logical grouping, while the update domain is a software logical grouping.</li>
+<li>Can&rsquo;t add existing VMs to an availability set</li>
+<li>This is all within one</li>
+<li>99.95% SLA</li>
+<li><strong>Protect from hardware failures and maintenance within data centers</strong></li>
+<li>Usually a set per tier</li>
+<li>When you create a VM you can assign it to an Availability Set Resource</li>
+</ul>
+</li>
+<li>
+<p>Availability Zones</p>
+<ul>
+<li>VMs are in different physical locations within a Region. (cross Zone)</li>
+<li>99.99% SLA</li>
+<li>2 Categories
+<ul>
+<li><strong>Zonal Services</strong> : Add a resource to a specific zone (VMs, Disks, Ips&hellip;)</li>
+<li><strong>Zone-redundant services</strong> : Atu replication accross zones (e.g. for SQL DB)</li>
+</ul>
+</li>
+<li>Don&rsquo;t support all VM sizes.</li>
+<li><strong>Protect from enitre data center failure (so a zone that goes down)</strong></li>
+<li>When you create a VM you can assign it to an Availability Zone number</li>
+</ul>
+</li>
+<li>
+<p>An Availability zone in an Azure region is a combination of a fault domain and an update domain.</p>
+<ul>
+<li>Meaning, the fault domain and update domains are 100% isolated between zones. You can&rsquo;t have 2 VMs in different zones being on a same fault and/or update domain.</li>
+</ul>
+</li>
+<li>
+<p>Disaster recovery approaches:</p>
+<ul>
+<li>Sync replication of apps and data using : <strong>Availability Zones</strong></li>
+<li>Async replication of apps and data using : <strong>Region Pairs</strong>
+<ul>
+<li>Cross region</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Azure Management services are resilient from region-level failures.</p>
+</li>
+</ul>
+<h2 id="networking">
+  Networking
+  
+  <a class="anchor" href="#networking">#</a>
+  
+</h2>
+<ul>
+<li>
+<p>Virtual Network (aka VNet)</p>
+</li>
+<li>
+<p>Subnet</p>
+<ul>
+<li>Can be designated/delegated to be used by a dedicated Azure Service (Like workspaces/volumes/&hellip;)</li>
+</ul>
+</li>
+<li>
+<p>A VM connects through a NIC which is assigned to the VM and connected to a subnet</p>
+</li>
+<li>
+<p>Azure provides implicitly a Internet Gateway, you don&rsquo;t need to provision one like in AWS.</p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-outbound-connections">Outbound connections for VMs</a></p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview">Virtual Network Service Endpoints</a> : Extend private address space and identity over a direct connection to Azure services.</p>
+<ul>
+<li>Allow a direct network connection to your other Azure resources/services without leaving Azure backbone network.</li>
+<li>Not available to all Azure services, but some examples : Storage, DB&rsquo;s, Key Vault, Event relates services and App service.</li>
+<li>More secure than to have VM call a Azure service and hopping over the public internet</li>
+<li>Optimal Routing because of not making the internet hop</li>
+<li>Less IP management (like NAT&rsquo;s etc)</li>
+<li>Azure service resources secured to Vnets are NOT reachable from on-premise. Because everything goes through Azure backbone network, so no public IPs as there is not internet hop.
+<ul>
+<li>To allow this,  <strong>allow public IPs</strong> or use <strong>ExpressRoute</strong></li>
+</ul>
+</li>
+<li>Can be connected to a specific subnet (so only the App tier can access service x)</li>
+</ul>
+</li>
+<li>
+<p>Better to define a username/password for a vm in a private tier, else the jump box needs to be configured with a *.pem file for <code>ssh</code></p>
+</li>
+<li>
+<p>Network Security Group has stateless rules.</p>
+</li>
+<li>
+<p><a href="https://www.kainos.com/microsoft-azure-nsgs-asgs-simplified/">Network Security Group vs. Application Security Group</a></p>
+<ul>
+<li><strong>(NSG) Network Security Group</strong> is the Azure Resource that you will use to enforce and control the network traffic with
+<ul>
+<li>Applied to a subnet <strong>or</strong> a virtual machine</li>
+<li>Has default rules</li>
+</ul>
+</li>
+<li><strong>(ASG) Application Security Group</strong> is an object reference within a Network Security Group.
+<ul>
+<li>Used within a Network Security Group</li>
+<li>Apply a rule to specific workload or group of VMs</li>
+<li>Such a rule has a &ldquo;network object&rdquo; and a explicit IP address</li>
+<li>Seems that they are statefull, like the Security Group in AWS</li>
+<li>No default rules</li>
+<li>No rule order</li>
+<li>Examples
+<ul>
+<li>Allow internet traffic (source internet) to destination Web tier (DMZ-ASG), ports 80 and 443</li>
+<li>Allow DMZ traffic (source DMZ-ASG) to destination App tier (APP-ASG), ports xxx</li>
+<li>&hellip;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>For a LB, you define independently a &ldquo;Health Probe&rdquo; which you can then refer to in a routing rule or other.</p>
+</li>
+</ul>
+<h2 id="virtual-machines">
+  Virtual Machines
+  
+  <a class="anchor" href="#virtual-machines">#</a>
+  
+</h2>
+<ul>
+<li>
+<p>System assigned managed identity : Like assigning a role in AWS, so a VM can access services without auth in code.</p>
+</li>
+<li>
+<p><code>Cloud init</code> : Script that runs when it boots <strong>the first time</strong>.</p>
+</li>
+<li>
+<p>You cannot put a VM in a Vnet which is located in another region.</p>
+</li>
+<li>
+<p>A VM can change it&rsquo;s size after having been created</p>
+</li>
+<li>
+<p>You can give a VM a public IP and then only allow SSH access if you don&rsquo;t want to use a jump box.</p>
+</li>
+<li>
+<p>When putting VM&rsquo;s in a backend pool of a LB, and you want to SSH into it, create an Inbound NAT rule + double check inbound NSG.</p>
+</li>
+<li>
+<p>TODO : Multiple data disks, why ? (maybe one OS disk and one attached for temporary data storage, so when does that clear ? After reboot ?)</p>
+</li>
+</ul>
+<h2 id="azure-resource-manager-templates">
+  Azure Resource Manager Templates
+  
+  <a class="anchor" href="#azure-resource-manager-templates">#</a>
+  
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;$schema&#34;</span>: <span style="color:#e6db74">&#34;https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;contentVersion&#34;</span>: <span style="color:#e6db74">&#34;1.0.0.0&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;parameters&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;projectName&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;metadata&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Specifies a name for generating resource names.&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;location&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;defaultValue&#34;</span>: <span style="color:#e6db74">&#34;[resourceGroup().location]&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;metadata&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Specifies the location for all resources.&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;adminUsername&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;metadata&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Specifies a username for the Virtual Machine.&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;adminPublicKey&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;metadata&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Specifies the SSH rsa public key file as a string. Use \&#34;ssh-keygen -t rsa -b 2048\&#34; to generate your SSH key pairs.&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;variables&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;vNetName&#34;</span>: <span style="color:#e6db74">&#34;[concat(parameters(&#39;projectName&#39;), &#39;-vnet&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;vNetAddressPrefixes&#34;</span>: <span style="color:#e6db74">&#34;10.0.0.0/16&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;vNetSubnetName&#34;</span>: <span style="color:#e6db74">&#34;default&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;vNetSubnetAddressPrefix&#34;</span>: <span style="color:#e6db74">&#34;10.0.0.0/24&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;vmName&#34;</span>: <span style="color:#e6db74">&#34;[concat(parameters(&#39;projectName&#39;), &#39;-vm&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;publicIPAddressName&#34;</span>: <span style="color:#e6db74">&#34;[concat(parameters(&#39;projectName&#39;), &#39;-ip&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;networkInterfaceName&#34;</span>: <span style="color:#e6db74">&#34;[concat(parameters(&#39;projectName&#39;), &#39;-nic&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;networkSecurityGroupName&#34;</span>: <span style="color:#e6db74">&#34;[concat(parameters(&#39;projectName&#39;), &#39;-nsg&#39;)]&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;resources&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;Microsoft.Network/networkSecurityGroups&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiVersion&#34;</span>: <span style="color:#e6db74">&#34;2018-11-01&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;[variables(&#39;networkSecurityGroupName&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;location&#34;</span>: <span style="color:#e6db74">&#34;[parameters(&#39;location&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;securityRules&#34;</span>: [
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;ssh_rule&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Locks inbound down to ssh default port 22.&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;protocol&#34;</span>: <span style="color:#e6db74">&#34;Tcp&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;sourcePortRange&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;destinationPortRange&#34;</span>: <span style="color:#e6db74">&#34;22&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;sourceAddressPrefix&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;destinationAddressPrefix&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;access&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;priority&#34;</span>: <span style="color:#ae81ff">123</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;direction&#34;</span>: <span style="color:#e6db74">&#34;Inbound&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;Microsoft.Network/publicIPAddresses&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiVersion&#34;</span>: <span style="color:#e6db74">&#34;2018-11-01&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;[variables(&#39;publicIPAddressName&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;location&#34;</span>: <span style="color:#e6db74">&#34;[parameters(&#39;location&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;publicIPAllocationMethod&#34;</span>: <span style="color:#e6db74">&#34;Dynamic&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;sku&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Basic&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;Microsoft.Network/virtualNetworks&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiVersion&#34;</span>: <span style="color:#e6db74">&#34;2018-11-01&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;[variables(&#39;vNetName&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;location&#34;</span>: <span style="color:#e6db74">&#34;[parameters(&#39;location&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;addressSpace&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;addressPrefixes&#34;</span>: [
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;[variables(&#39;vNetAddressPrefixes&#39;)]&#34;</span>
+</span></span><span style="display:flex;"><span>          ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;subnets&#34;</span>: [
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;[variables(&#39;vNetSubnetName&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;addressPrefix&#34;</span>: <span style="color:#e6db74">&#34;[variables(&#39;vNetSubnetAddressPrefix&#39;)]&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;Microsoft.Network/networkInterfaces&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiVersion&#34;</span>: <span style="color:#e6db74">&#34;2018-11-01&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;[variables(&#39;networkInterfaceName&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;location&#34;</span>: <span style="color:#e6db74">&#34;[parameters(&#39;location&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;dependsOn&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;[resourceId(&#39;Microsoft.Network/publicIPAddresses&#39;, variables(&#39;publicIPAddressName&#39;))]&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;[resourceId(&#39;Microsoft.Network/virtualNetworks&#39;, variables(&#39;vNetName&#39;))]&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;[resourceId(&#39;Microsoft.Network/networkSecurityGroups&#39;, variables(&#39;networkSecurityGroupName&#39;))]&#34;</span>
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;ipConfigurations&#34;</span>: [
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;ipconfig1&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;privateIPAllocationMethod&#34;</span>: <span style="color:#e6db74">&#34;Dynamic&#34;</span>,
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;publicIPAddress&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;[resourceId(&#39;Microsoft.Network/publicIPAddresses&#39;, variables(&#39;publicIPAddressName&#39;))]&#34;</span>
+</span></span><span style="display:flex;"><span>              },
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;subnet&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;[resourceId(&#39;Microsoft.Network/virtualNetworks/subnets&#39;, variables(&#39;vNetName&#39;), variables(&#39;vNetSubnetName&#39;))]&#34;</span>
+</span></span><span style="display:flex;"><span>              }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;Microsoft.Compute/virtualMachines&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;apiVersion&#34;</span>: <span style="color:#e6db74">&#34;2018-10-01&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;[variables(&#39;vmName&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;location&#34;</span>: <span style="color:#e6db74">&#34;[parameters(&#39;location&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;dependsOn&#34;</span>: [
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;[resourceId(&#39;Microsoft.Network/networkInterfaces&#39;, variables(&#39;networkInterfaceName&#39;))]&#34;</span>
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;hardwareProfile&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;vmSize&#34;</span>: <span style="color:#e6db74">&#34;Standard_D2s_v3&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;osProfile&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;computerName&#34;</span>: <span style="color:#e6db74">&#34;[variables(&#39;vmName&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;adminUsername&#34;</span>: <span style="color:#e6db74">&#34;[parameters(&#39;adminUsername&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;linuxConfiguration&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;disablePasswordAuthentication&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ssh&#34;</span>: {
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;publicKeys&#34;</span>: [
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">&#34;path&#34;</span>: <span style="color:#e6db74">&#34;[concat(&#39;/home/&#39;, parameters(&#39;adminUsername&#39;), &#39;/.ssh/authorized_keys&#39;)]&#34;</span>,
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">&#34;keyData&#34;</span>: <span style="color:#e6db74">&#34;[parameters(&#39;adminPublicKey&#39;)]&#34;</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>              ]
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;storageProfile&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;imageReference&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;publisher&#34;</span>: <span style="color:#e6db74">&#34;Canonical&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;offer&#34;</span>: <span style="color:#e6db74">&#34;UbuntuServer&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;sku&#34;</span>: <span style="color:#e6db74">&#34;18.04-LTS&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;latest&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;osDisk&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;createOption&#34;</span>: <span style="color:#e6db74">&#34;fromImage&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;networkProfile&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;networkInterfaces&#34;</span>: [
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;[resourceId(&#39;Microsoft.Network/networkInterfaces&#39;, variables(&#39;networkInterfaceName&#39;))]&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          ]
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;outputs&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;adminUsername&#34;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;[parameters(&#39;adminUsername&#39;)]&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/azure/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Azure" />
+        <span>Azure</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/azure/az-300/" class="flex align-center">
+        <span>Az 300</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Az 300" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#various">Various</a></li>
+    <li><a href="#zones-regions-and-high-availability">Zones, Regions and High Availability</a></li>
+    <li><a href="#networking">Networking</a></li>
+    <li><a href="#virtual-machines">Virtual Machines</a></li>
+    <li><a href="#azure-resource-manager-templates">Azure Resource Manager Templates</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

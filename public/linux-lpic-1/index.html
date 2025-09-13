@@ -1,0 +1,2650 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  LPIC-1
+  
+  #
+  
+
+
+  About Linux
+  
+  #
+  
+
+
+
+Components of Linux
+
+Boot Loader
+
+Software manages boot process till the OS starts to load
+
+
+The Kernel
+
+Core of OS, manages OS, CPU and peripherals
+
+
+Daemons
+
+Processes lurking in the background that start during booth or after login (e.g. time)
+
+
+Shell
+Graphical Server
+
+Subsystem to display graphic
+AKA x-server
+
+
+Desktop Environment
+
+Actual GUI for the user
+
+
+Applications
+
+
+
+Why Linux ?
+
+Free
+Stable
+Secure
+Open Source
+
+Free to run the program for any purpose.
+Free to study how the program works
+Free to change how the program works
+Free to redistribute copies
+
+
+
+
+
+Distributions">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/linux-lpic-1/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="LPIC-1 # About Linux # Components of Linux
+Boot Loader Software manages boot process till the OS starts to load The Kernel Core of OS, manages OS, CPU and peripherals Daemons Processes lurking in the background that start during booth or after login (e.g. time) Shell Graphical Server Subsystem to display graphic AKA x-server Desktop Environment Actual GUI for the user Applications Why Linux ?
+Free Stable Secure Open Source Free to run the program for any purpose. Free to study how the program works Free to change how the program works Free to redistribute copies Distributions">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+<title>Linux Lpic 1 | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/linux-lpic-1/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/linux-lpic-1/index.xml" title="Knowledgebase" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-linux-lpic-1 book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle"  />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle"  />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle" checked />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto active">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle"  />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Linux Lpic 1</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-linux">About Linux</a></li>
+    <li><a href="#system-architecture">System Architecture</a></li>
+    <li><a href="#linux-installation-and-package-management">Linux Installation and Package Management</a></li>
+    <li><a href="#gnu-and-unix-commands">GNU and Unix Commands</a></li>
+    <li><a href="#devices-filesystems-and-filesystem-hierarchy">Devices, filesystems and filesystem hierarchy</a></li>
+    <li><a href="#shells-scripting-and-data-management">Shells, scripting and data management</a></li>
+    <li><a href="#user-interface-and-desktop">User Interface and Desktop</a></li>
+    <li><a href="#manage-user-and-group-accounts-and-related-system-files">Manage user and group accounts and related system files</a></li>
+    <li><a href="#essential-system-services">Essential System Services</a></li>
+    <li><a href="#networking-fundamentals">Networking fundamentals</a></li>
+    <li><a href="#security">Security</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="lpic-1">
+  LPIC-1
+  
+  <a class="anchor" href="#lpic-1">#</a>
+  
+</h1>
+<h2 id="about-linux">
+  About Linux
+  
+  <a class="anchor" href="#about-linux">#</a>
+  
+</h2>
+<ul>
+<li>
+<p>Components of Linux</p>
+<ul>
+<li>Boot Loader
+<ul>
+<li>Software manages boot process till the OS starts to load</li>
+</ul>
+</li>
+<li>The Kernel
+<ul>
+<li>Core of OS, manages OS, CPU and peripherals</li>
+</ul>
+</li>
+<li>Daemons
+<ul>
+<li>Processes lurking in the background that start during booth or after login (e.g. time)</li>
+</ul>
+</li>
+<li>Shell</li>
+<li>Graphical Server
+<ul>
+<li>Subsystem to display graphic</li>
+<li>AKA x-server</li>
+</ul>
+</li>
+<li>Desktop Environment
+<ul>
+<li>Actual GUI for the user</li>
+</ul>
+</li>
+<li>Applications</li>
+</ul>
+</li>
+<li>
+<p>Why Linux ?</p>
+<ul>
+<li>Free</li>
+<li>Stable</li>
+<li>Secure</li>
+<li>Open Source
+<ul>
+<li>Free to run the program for any purpose.</li>
+<li>Free to study how the program works</li>
+<li>Free to change how the program works</li>
+<li>Free to redistribute copies</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Distributions</p>
+<ul>
+<li>What is a distribution ?
+<ul>
+<li>Collection of software</li>
+<li>Package management system</li>
+<li>Helps you install, upgrade and remove software</li>
+<li>Keeps your server up to date</li>
+</ul>
+</li>
+<li>Popular Examples
+<ul>
+<li>Red Hat
+<ul>
+<li>CentOS (based on red hat)</li>
+<li>Fedora</li>
+</ul>
+</li>
+<li>Debian
+<ul>
+<li>Ubuntu</li>
+<li>Mint</li>
+</ul>
+</li>
+<li>SuSE</li>
+<li>Gentee</li>
+<li>Arch</li>
+<li>&hellip;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>VirtualBox Bridged Networking</p>
+<ul>
+<li>If you do this, instead of NAT, you can SSH into the box instead of using the VirtualBox UI</li>
+</ul>
+</li>
+</ul>
+<h2 id="system-architecture">
+  System Architecture
+  
+  <a class="anchor" href="#system-architecture">#</a>
+  
+</h2>
+<ul>
+<li>
+<p>Boot the system</p>
+<ul>
+<li>UEFI is the new version of BIOS
+<ul>
+<li>BIOS booting
+<ul>
+<li>-&gt; BIOS boot from particular disk</li>
+<li>-&gt; This disk has a MBR (Master Boot Record), which stores the  Boot Loader</li>
+<li>-&gt; The boot loader knows where the kernel is on disk and boot the OS</li>
+</ul>
+</li>
+<li>UEFI
+<ul>
+<li>UEFI Boot Loader (which lives on your disk) (is not in the MBR)</li>
+<li>This boot loader calls the kernel, which boots the OS</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>MBR : Information in the first sector of a disk that tells where and how the OS is.</li>
+<li>GRUB (Grand Unified Bootloader) : Boot loader package that supports multiple OS&rsquo;s on a ps
+<ul>
+<li>You can modify the settings during bootup and make them persist by directly modifying the config files used by the GRUB</li>
+<li>For Ubuntu in VirtualBox, tap <code>esc</code> during bootup</li>
+</ul>
+</li>
+<li>Kernel is lowest level of replacable software to your hardware</li>
+<li>Once the Kernel has attached the root file system, it will run a program called <code>init</code></li>
+<li><code>init</code> is always the first process ran by a linux system, therefor, it gets always a PID of <code>1</code>
+<ul>
+<li>There are a few different <code>init</code> programs that exist
+<ul>
+<li><code>sysvinit</code> : Which based on <code>sysv</code>, oldest and first</li>
+<li><code>systemd</code> : Low memory boot process, mainstream, almost used everywhere now</li>
+<li><code>upstart</code> : Created by Ubuntu, but they switched to <code>systemd</code> in the end.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>quiet</code> for kernel param is <code>supress most boot messages</code>. So less verbosity for bootup</li>
+</ul>
+</li>
+<li>
+<p>Determine and configure hardware settings</p>
+<ul>
+<li><code>udev</code> : Device manager for your kernel
+<ul>
+<li>Gives low level access to the linux device tree</li>
+<li>Handles user space events (happens when hardware is removed or added to the system)
+<ul>
+<li>Eg. Loading firmware</li>
+</ul>
+</li>
+<li>Provided by temporary filesystem (<code>tmpfs</code>)
+<ul>
+<li>This is how <code>udev</code> provides access, which is mounted to <code>/dev</code> on startup</li>
+</ul>
+</li>
+<li><code>/etc/udev/rules.d</code> : Folder for custom rules for the device manager <code>udev</code>.
+<ul>
+<li>You can create rules for what should happen/ran when something is plugged in or unplugged</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>dbus</code>
+<ul>
+<li>Inter-process communication mechanism</li>
+<li>Framework that allows processes to talk to each other</li>
+<li>Secure</li>
+<li>Reliable</li>
+<li>Provides high level OOP interface</li>
+</ul>
+</li>
+<li><code>sysfs</code>
+<ul>
+<li>Virtual filesystem</li>
+<li>Presents information about various kernel subsystems
+<ul>
+<li>Hardware devices</li>
+<li>Drivers</li>
+</ul>
+</li>
+<li>Mounted to <code>/sys</code></li>
+</ul>
+</li>
+<li><code>procfs</code>
+<ul>
+<li>Similar to <code>sysfs</code></li>
+<li>Presents information about various processes</li>
+<li>Presents information about system information</li>
+<li>mounted to <code>/proc</code>
+<ul>
+<li>Can be used to interface with the kernel</li>
+<li>Change parameters on the fly</li>
+</ul>
+</li>
+<li>Each running process will have a directory in <code>/proc/&lt;PID&gt;</code> + various other stuff
+<ul>
+<li>eg. <code>/proc/cmdline</code> -&gt; Kernel name from bootup</li>
+<li>eg. <code>/proc/version</code> -&gt; Kernel version</li>
+<li>eg. <code>/proc/cpuinfo</code> -&gt; CPU info</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>lsmod</code>
+<ul>
+<li>List all Kernel modules in use and by which modules</li>
+</ul>
+</li>
+<li><code>modprobe</code>
+<ul>
+<li>Add or remove loadable kernel modules to/from the kernel</li>
+<li><code>udev</code> relies upon <code>modprob</code> to load drivers for automatically detected hardware</li>
+</ul>
+</li>
+<li><code>rmmod</code>
+<ul>
+<li>Remove kernel module (prob need root for that)</li>
+</ul>
+</li>
+<li><code>lspci</code>
+<ul>
+<li>Shows all PCI connected devices to the system</li>
+<li>Show Device IRQ settings</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Runlevels and boot targets</p>
+<ul>
+<li>Run Level : Number between 0 &lt;-&gt; 6 (max 9), determines which scripts/programs are run
+<ul>
+<li>Levels :
+<ul>
+<li><code>0</code> - Halt or shut down system</li>
+<li><code>1</code> - Single user mode</li>
+<li><code>2</code> - Multi user mode without networking</li>
+<li><code>3</code> - Normal boot (multi user mode + networking)</li>
+<li><code>4</code> - Unused/customizable</li>
+<li><code>5</code> - Run level 3 + GUI display manager (if installed, so the graph env)</li>
+<li><code>6</code> - Reboot</li>
+</ul>
+</li>
+<li>Based on the run level, more or less scripts will be ran which are located in different places (e.g. <code>Systemd</code> or <code>sysv</code>)
+<ul>
+<li><code>inittab</code> (came with <code>sysv</code>)</li>
+<li>Ubuntu : <code>/etc/rc0.d</code> &hellip; <code>/etc/rc6.d</code> folders with scripts that are ran based on correlating run level. <code>rcS.d</code> us ran for any run level.
+<ul>
+<li>This is still there for compatibility reasons</li>
+</ul>
+</li>
+<li><code>systemd</code> run levels :
+<ul>
+<li>Also has scripts</li>
+<li>System scripts <code>/etc/systemd/system</code></li>
+<li>Package Scripts <code>/usr/lib/systemd/system</code></li>
+<li><code>/etc/systemd/system</code> takes precedence over <code>/usr/lib/systemd/systen</code></li>
+<li>Uses <strong>targets</strong> (similar-ish to the other run level style)
+<ul>
+<li>Run Level - Systemd Target</li>
+<li><code>0</code> - runlevel0.target, poweroff.target</li>
+<li><code>1</code> - runlevel1.target, rescue.target</li>
+<li><code>2,4</code> - runlevel2.target, runlevel4.target, multi-user.target</li>
+<li><code>3</code> - runlevel3.target, multi-user.target</li>
+<li><code>5</code> - runlevel5.target, graphical.target</li>
+<li><code>6</code> - runlevel6.target, reboot.target</li>
+<li><code>emergency</code> - emergency.target</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>with <code>init</code>/<code>telinit</code> you can tell what level to run</li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/linux_01.png" alt="linux_01" /></p>
+<ul>
+<li>
+<p><code>systemctl</code></p>
+<ul>
+<li>How you drive/control <code>systemd</code></li>
+<li>How you start, stop, restart applications (just like <code>kubectl</code>)</li>
+<li>E.g.
+<ul>
+<li>Status sound card : <code>sudo systemctl status sound.target</code></li>
+<li>stop sound card : <code>sudo systemctl stop sound.target</code></li>
+<li>Status sound card : <code>sudo systemctl status sound.target</code></li>
+<li>start sound card : <code>sudo systemctl start sound.target</code></li>
+<li>Status sound card : <code>sudo systemctl status sound.target</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Commands</p>
+<ul>
+<li><code>ps</code> : List active processes</li>
+<li><code>ps aux | head</code> : Shows the top processes where you will seee <code>/sbin/init</code></li>
+<li><code>dmesg</code> : Kernel messages logged from the last bootup</li>
+<li><code>head</code> : take first <code>n</code> lines</li>
+<li><code>tail</code> : take last <code>n</code> lines</li>
+<li><code>less</code> : page through a long result</li>
+<li><code>man</code> : manual</li>
+<li><code>sudo wall</code> : Send a message to anyone logged in/has open shell (like announce a reboot)</li>
+<li><code>which</code> : Where is an app running from?</li>
+</ul>
+</li>
+</ul>
+<h2 id="linux-installation-and-package-management">
+  Linux Installation and Package Management
+  
+  <a class="anchor" href="#linux-installation-and-package-management">#</a>
+  
+</h2>
+<ul>
+<li>
+<p>Design hard disk layout</p>
+<ul>
+<li><code>/</code> : root</li>
+<li><code>/usr</code> : user binaries installed</li>
+<li><code>/home</code> :</li>
+<li><code>/boot</code> : All related to booting</li>
+<li><code>/var</code> : Variable data (e.g. system logs &hellip;)</li>
+<li><code>/tmp</code> : Everyone on the system can write to</li>
+</ul>
+</li>
+<li>
+<p>Partitions</p>
+<ul>
+<li>Divide storage in multiple pieces</li>
+<li>Allows dual booting</li>
+<li>Separation of files</li>
+<li>Data organization</li>
+<li>System protection</li>
+<li>e.g. Separate partition for each user to separate and safeguard</li>
+<li>When you create a partition you need to <strong>mount</strong> them to directories.</li>
+<li>Every path in linux can be <strong>mounted to</strong>
+<ul>
+<li>We can mount to :
+<ul>
+<li><code>/home</code></li>
+<li><code>/var</code></li>
+<li><code>/tmp</code></li>
+<li><code>/home/nick/blah/</code></li>
+</ul>
+</li>
+<li>Remember like with Docker. You can have a folder <code>/home/ian/dbdata</code> with data in it.
+<ul>
+<li>When you mount a partition to <code>/home/ian/dbdata</code>, the data in there will be hidden and overtaken with this mounted partition (like a volume with docker)</li>
+<li>Once you unmoun the partition from that folder, the original data is again visible and accessible.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Swap</p>
+<ul>
+<li>Swap is a partition, used in case the RAM is full, Swap is used</li>
+<li>Unused pages fo the RAM will be saved in the SWAP partition</li>
+</ul>
+</li>
+<li>
+<p>LVM</p>
+<ul>
+<li>Logical Volume Manager</li>
+<li>(like Disk Manager windows, on steroids)</li>
+<li>Allows to split disks into pools (Pools are also known as PE, Physical Extends)</li>
+<li>Create partitions from pools</li>
+<li>Can grow or shrink partitions</li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/linux_02.png" alt="linux_02" /></p>
+<ul>
+<li>
+<p>Install a boot manager</p>
+<ul>
+<li>
+<p>Boot Loader</p>
+<ul>
+<li>Boots a linux system</li>
+<li>Runs before the OS</li>
+<li>Can be configured from the operating system</li>
+<li>common boot loaders :
+<ul>
+<li>LILO</li>
+<li>GRUB Legacy</li>
+<li>GRUB2</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Configuring the <code>/boot/grub/grub.cfg</code> results in editing your boot loader logic</p>
+</li>
+<li>
+<p>Although the above is the auto generated result of <code>/etc/grub.d</code> and <code>/etc/default/grub</code> using <code>grub-mkconfig</code></p>
+</li>
+<li>
+<p><code>grub-probe</code></p>
+</li>
+<li>
+<p><code>grub-install</code> : To install grub to the MBR of the specified disk (in case that didn&rsquo;t happen yet)</p>
+</li>
+<li>
+<p>Revise</p>
+<ul>
+<li>update <code>sudo vi /etc/default/grub</code> file</li>
+<li>run <code>sudo update-grub</code></li>
+<li>restart to see changes in action</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Manage Shared Libraries</p>
+<ul>
+<li>Libraries : So typical libs/packages that bash scripts or actual code can use</li>
+<li>Key properties
+<ul>
+<li>Shared</li>
+<li>Reusable</li>
+</ul>
+</li>
+<li>Linking
+<ul>
+<li>When your application wants to use these libraries, they should be linked to them
+<ul>
+<li>Static Linking : Library is included in the application (each app has its own copy)</li>
+<li>Dynamic Linking : Different applications using the exact same copy of the library
+<ul>
+<li>Update libraries in a single place</li>
+<li><code>/etc/ld.so.conf</code> lists the locations of the shared libraries on your system.</li>
+<li><code>include</code> statements means it was split into other linked files</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>ldd</code> :  ldd prints the shared objects (shared libraries) required by each program or shared object specified on the command line.
+<ul>
+<li>e.g. <code>ldd /bin/ls</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Use debian package manager</p>
+<ul>
+<li><code>dpkg</code> : Debian Package Manager
+<ul>
+<li>install/upgrade/remove software</li>
+<li>low level tool</li>
+<li>(Does not automatically installes dependencies)</li>
+</ul>
+</li>
+<li><code>apt</code>
+<ul>
+<li>Advanced packaging tool</li>
+<li>high level tool</li>
+<li>install/upgrade/remove software</li>
+<li>handles upgrading of entire system</li>
+<li>Handle all package dependencies automatically</li>
+<li>Uses online repositories</li>
+</ul>
+</li>
+<li><code>/etc/apt/sources.list</code> is the list for mirrors of <code>apt</code> and specifics on which repos per mirror to use
+<ul>
+<li><code>main</code> : Officially supported software</li>
+<li><code>restricted</code> : supported software (not free under completely free license)</li>
+<li><code>xenial</code> : current version</li>
+<li><code>universe</code> : community maintained software</li>
+<li><code>multiverse</code> : Not free software</li>
+</ul>
+</li>
+<li><code>apt-get update</code> : update local package lists</li>
+<li><code>apt-get install &lt;name&gt;</code> : Install software</li>
+<li><code>apt-get remove &lt;name&gt;</code> : Uninstall software
+<ul>
+<li>! does not remove remaining config files, use <code>dpkg --purge &lt;name&gt;</code> for cleanup</li>
+</ul>
+</li>
+<li><code>apt-cache depends &lt;name&gt;</code> : Show what a app depends on</li>
+<li><code>apt-cache search &lt;name&gt;</code> : Search for packages with a particular name</li>
+<li><code>apt-get upgrade</code> : Upgrade all current installed packages (respecting semver)</li>
+<li><code>apt-get dist-upgrade</code> : upgrade everything and remove anything unused</li>
+</ul>
+</li>
+<li>
+<p><code>wget</code> Download a file to current location</p>
+</li>
+<li>
+<p>Use RPM and YUM package manager</p>
+<ul>
+<li>RPM
+<ul>
+<li>RedHat Package Manager</li>
+<li>rpm command</li>
+<li>Low level tools</li>
+<li>install/upgrade/remove software</li>
+</ul>
+</li>
+<li>YUM
+<ul>
+<li>Yellowdog update/modifier</li>
+<li>replaced YUP (yellowdog updater)</li>
+<li>Utilites online repositories</li>
+<li>manages dependencies</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Quiz</p>
+<ul>
+<li>How do you temporarily add a directory to your shared library path? - <code>LD_LIBRARY_PATH</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="gnu-and-unix-commands">
+  GNU and Unix Commands
+  
+  <a class="anchor" href="#gnu-and-unix-commands">#</a>
+  
+</h2>
+<h2 id="devices-filesystems-and-filesystem-hierarchy">
+  Devices, filesystems and filesystem hierarchy
+  
+  <a class="anchor" href="#devices-filesystems-and-filesystem-hierarchy">#</a>
+  
+</h2>
+<h2 id="shells-scripting-and-data-management">
+  Shells, scripting and data management
+  
+  <a class="anchor" href="#shells-scripting-and-data-management">#</a>
+  
+</h2>
+<h2 id="user-interface-and-desktop">
+  User Interface and Desktop
+  
+  <a class="anchor" href="#user-interface-and-desktop">#</a>
+  
+</h2>
+<h2 id="manage-user-and-group-accounts-and-related-system-files">
+  Manage user and group accounts and related system files
+  
+  <a class="anchor" href="#manage-user-and-group-accounts-and-related-system-files">#</a>
+  
+</h2>
+<h2 id="essential-system-services">
+  Essential System Services
+  
+  <a class="anchor" href="#essential-system-services">#</a>
+  
+</h2>
+<h2 id="networking-fundamentals">
+  Networking fundamentals
+  
+  <a class="anchor" href="#networking-fundamentals">#</a>
+  
+</h2>
+<h2 id="security">
+  Security
+  
+  <a class="anchor" href="#security">#</a>
+  
+</h2>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/it-strategy/platform-strategy/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Platform Strategy" />
+        <span>Platform Strategy</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/network/" class="flex align-center">
+        <span>Network</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Network" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-linux">About Linux</a></li>
+    <li><a href="#system-architecture">System Architecture</a></li>
+    <li><a href="#linux-installation-and-package-management">Linux Installation and Package Management</a></li>
+    <li><a href="#gnu-and-unix-commands">GNU and Unix Commands</a></li>
+    <li><a href="#devices-filesystems-and-filesystem-hierarchy">Devices, filesystems and filesystem hierarchy</a></li>
+    <li><a href="#shells-scripting-and-data-management">Shells, scripting and data management</a></li>
+    <li><a href="#user-interface-and-desktop">User Interface and Desktop</a></li>
+    <li><a href="#manage-user-and-group-accounts-and-related-system-files">Manage user and group accounts and related system files</a></li>
+    <li><a href="#essential-system-services">Essential System Services</a></li>
+    <li><a href="#networking-fundamentals">Networking fundamentals</a></li>
+    <li><a href="#security">Security</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

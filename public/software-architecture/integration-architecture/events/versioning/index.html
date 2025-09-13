@@ -1,0 +1,2456 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Event Versioning
+  
+  #
+  
+
+
+  Why?
+  
+  #
+  
+
+To avoid big bang releases.
+
+  Rules
+  
+  #
+  
+
+
+A new version of an event must be convertible from the old version of the event. If not, it is not a new version of the event but rather a new event.d)
+
+Any version of any event should be convertible from any version of a given event. If you find yourself trying to figure out how to convert your old event (Evil Kinevil jumping over a school bus on a motorcycle) to your new version of the event (a monkey eating a banana) and you can’t, this is because you have a new event and not a new version of it.
+Following this rule you can always upcast.
+
+
+At any given point in time, you must only handle the version of the event you understand and ignore all others (to allow for Double Writes, so old and new version is published).
+
+For most systems, a simple human-readable format such as json is fine for handling messages. Most production systems use mapping with either XML or json. Mapping with weak-schema will also remove many of the versioning problems associated with type-based strong schema discussed in the previous chapter.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/software-architecture/integration-architecture/events/versioning/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="Event Versioning # Why? # To avoid big bang releases.
+Rules # A new version of an event must be convertible from the old version of the event. If not, it is not a new version of the event but rather a new event.d) Any version of any event should be convertible from any version of a given event. If you find yourself trying to figure out how to convert your old event (Evil Kinevil jumping over a school bus on a motorcycle) to your new version of the event (a monkey eating a banana) and you can’t, this is because you have a new event and not a new version of it. Following this rule you can always upcast. At any given point in time, you must only handle the version of the event you understand and ignore all others (to allow for Double Writes, so old and new version is published). For most systems, a simple human-readable format such as json is fine for handling messages. Most production systems use mapping with either XML or json. Mapping with weak-schema will also remove many of the versioning problems associated with type-based strong schema discussed in the previous chapter.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="software-architecture">
+<title>Versioning | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/software-architecture/integration-architecture/events/versioning/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-software-architecture book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle"  />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle"  />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle" checked />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="active">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Versioning</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#why">Why?</a></li>
+    <li><a href="#rules">Rules</a></li>
+    <li><a href="#general-tips">General Tips</a></li>
+    <li><a href="#mapping-events-between-versions">Mapping Events Between Versions</a></li>
+    <li><a href="#versioning-approaches">Versioning Approaches</a>
+      <ul>
+        <li><a href="#1-strong-schema---basic-type-based-versioning">1. Strong Schema - Basic Type Based Versioning</a></li>
+        <li><a href="#2-weak-schema---mapping">2. Weak Schema - Mapping</a></li>
+        <li><a href="#3-weak-schema---wrapper">3. Weak Schema - Wrapper</a></li>
+        <li><a href="#4-negotiation">4. Negotiation</a></li>
+        <li><a href="#5-copy-and-replace">5. Copy And Replace</a></li>
+      </ul>
+    </li>
+    <li><a href="#general-concerns">General Concerns</a>
+      <ul>
+        <li><a href="#versioning-of-behavior">Versioning Of Behavior</a></li>
+        <li><a href="#exterior-calls">Exterior Calls</a></li>
+        <li><a href="#changing-semantic-meaning">Changing Semantic Meaning</a></li>
+        <li><a href="#snapshots">Snapshots</a></li>
+        <li><a href="#avoid-and">Avoid &ldquo;and&rdquo;</a></li>
+      </ul>
+    </li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="event-versioning">
+  Event Versioning
+  
+  <a class="anchor" href="#event-versioning">#</a>
+  
+</h1>
+<h2 id="why">
+  Why?
+  
+  <a class="anchor" href="#why">#</a>
+  
+</h2>
+<p>To avoid big bang releases.</p>
+<h2 id="rules">
+  Rules
+  
+  <a class="anchor" href="#rules">#</a>
+  
+</h2>
+<ul>
+<li>A new version of an event must be convertible from the old version of the event. If not, it is not a new version of the event but rather a new event.d)
+<ul>
+<li>Any version of any event should be convertible from any version of a given event. If you find yourself trying to figure out how to convert your old event (Evil Kinevil jumping over a school bus on a motorcycle) to your new version of the event (a monkey eating a banana) and you can’t, this is because you have a new event and not a new version of it.</li>
+<li>Following this rule you can always upcast.</li>
+</ul>
+</li>
+<li>At any given point in time, you must only handle the version of the event you understand and ignore all others (to allow for Double Writes, so old and new version is published).</li>
+</ul>
+<p>For most systems, a simple human-readable format such as json is fine for handling messages. Most production systems use mapping with either XML or json. Mapping with weak-schema will also remove many of the versioning problems associated with type-based strong schema discussed in the previous chapter.</p>
+<p>There are scenarios where, either for performance reasons or in order to enable data to “pass through” without being understood, a wrapper may be a better solution than a mapping, but it will require more code. This methodology is, however, more common with messages, where an enrichment process is occurring, such as in a document-based system.</p>
+<p>Overall though, there are very few reasons why it may be considered for the type-based mechanism. Once brought out of your immediate system and put into a serialized form, the type system does very little. The upcasting system is often difficult to maintain amongst consumers; even with a centralized schema repository, it requires another service. In most scenarios where messages are being passed to/from disparate services, late-binding tends to be a better option.</p>
+<h2 id="general-tips">
+  General Tips
+  
+  <a class="anchor" href="#general-tips">#</a>
+  
+</h2>
+<ul>
+<li>Only having additive changes as opposed to destructive ones.</li>
+</ul>
+<h2 id="mapping-events-between-versions">
+  Mapping Events Between Versions
+  
+  <a class="anchor" href="#mapping-events-between-versions">#</a>
+  
+</h2>
+<p>You can do the mapping logic of an event between versions (e.g. OrderPlaced v1 and v2) on one of these two layers in your stack:</p>
+<ul>
+<li><strong>Data Layer</strong>: You take an event stream and migrate/copy all this events into a new event stream with a new format. During this process, one can join/split streams and such if desired. This is like a traditional data migration of a database, without editing the table in place, but rather creating a new table where you copy the new version into. In the Application Layer the schema of the event has to be updated to reflect the schema of the new stream.</li>
+<li><strong>Application Layer</strong>: You don&rsquo;t change the original events but deal with versioning at run-time on application level.</li>
+</ul>
+<h2 id="versioning-approaches">
+  Versioning Approaches
+  
+  <a class="anchor" href="#versioning-approaches">#</a>
+  
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Layer</th>
+          <th>Communication Direction</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1</td>
+          <td>Strong Schema - Basic Type Based Versioning</td>
+          <td>Application</td>
+          <td>Uni-directional</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Weak Schema - Mapping</td>
+          <td>Application</td>
+          <td>Uni-directional</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>Weak Schema - Wrapper</td>
+          <td>Application</td>
+          <td>Uni-directional</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>Negotiation</td>
+          <td>Application</td>
+          <td>Bi-directional</td>
+      </tr>
+      <tr>
+          <td>5</td>
+          <td>Copy and Replace</td>
+          <td>Data</td>
+          <td>Not Applicable</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="1-strong-schema---basic-type-based-versioning">
+  1. Strong Schema - Basic Type Based Versioning
+  
+  <a class="anchor" href="#1-strong-schema---basic-type-based-versioning">#</a>
+  
+</h3>
+<h4 id="description">
+  Description
+  
+  <a class="anchor" href="#description">#</a>
+  
+</h4>
+<ul>
+<li>Assumes your serializer has no support for versioning.</li>
+<li>Explicit versions of a data schema are defined (e.g. v1, v2, &hellip;)</li>
+<li>Data schema is expected to match 1:1 with the serialized type (e.g. WalletCreatedEvent).</li>
+<li>Multiple versions of a single schema are possible, but a type per version is required (e.g. WalletCreatedEvent_v1 and WalletCreatedEvent_v2).</li>
+<li>A new version of an event must be convertible from the old version of the event. If not, it is not a new version of the event but rather a new event.</li>
+<li>Upcasting logic : The logic to convert from an old to a new version is upcasting logic.</li>
+<li>The Ports/Adapters architecture allows you to decouple the version specific type (e.g. WalletCreatedEvent_v1) from your core business logic. Isolating your core from version changes. Alternatively you only pass the latest version (e.g. WalletCreatedEvent_latest), cause any old version should be able to be converted to the latest version.</li>
+<li>Double Publish: Avoid the issues that arise from having old consumers that do not understand the new version of the event. The idea is to have the new version of the producer write both the _v1 and the _v2 versions of the event when it writes. Downstream consumers can decide to ignore the newer version.</li>
+</ul>
+<h4 id="pro">
+  Pro
+  
+  <a class="anchor" href="#pro">#</a>
+  
+</h4>
+<ul>
+<li>todo&hellip;</li>
+</ul>
+<h4 id="con">
+  Con
+  
+  <a class="anchor" href="#con">#</a>
+  
+</h4>
+<ul>
+<li>If versions are not managed, it can become a mess (e.g. WalletCreatedEvent_v1 &hellip; WalletCreatedEvent_v17) - method explosion in the upcasting logic.</li>
+<li>Serialize an Enum with a value that is not supported yet in the local strong schema requires dedicated logic.</li>
+<li>All consumers must be updated to understand the schema before a producer is updated.</li>
+<li>Upcasting is difficult to maintain.</li>
+</ul>
+<h3 id="2-weak-schema---mapping">
+  2. Weak Schema - Mapping
+  
+  <a class="anchor" href="#2-weak-schema---mapping">#</a>
+  
+</h3>
+<h4 id="description-1">
+  Description
+  
+  <a class="anchor" href="#description-1">#</a>
+  
+</h4>
+<ul>
+<li>Probably the better &ldquo;Default&rdquo; option.</li>
+<li>Assumes your serializer can have support for versioning.</li>
+<li>More rules that must be followed (than Strong Schema), it also offers more flexibility, providing the rules are followed.</li>
+<li>When mapping, you look at the json and at the instance:
+<ul>
+<li>Exists on json and instance -&gt; value from json</li>
+<li>Exists on json but not on instance -&gt; NOP/Ignore</li>
+<li>Exists on instance but not in json -&gt; default value</li>
+</ul>
+</li>
+<li>Only the current version of a data schema is defined (so no WalletCreatedEvent_v1 &hellip; WalletCreatedEvent_v17, just WalletCreatedEvent).
+<ul>
+<li>That current version and the latest version are the same here, however that might not be reality.</li>
+</ul>
+</li>
+<li>Data schema is <strong>not</strong> expected to match 1:1 with the serialized type (e.g. WalletCreatedEvent).</li>
+<li>Rule: You are no allowed to rename an attribute, unless you provide the old and name attribute with exact same value, but that translates in extra complexity, and is frankly, just annoying.</li>
+<li>Validation: You might need validation logic that validates if (after mapping) the mandatory fields are present/set and if to apply the correct defaults for absent fields.</li>
+</ul>
+<h4 id="pro-1">
+  Pro
+  
+  <a class="anchor" href="#pro-1">#</a>
+  
+</h4>
+<ul>
+<li>Relatively easy to implement with a &ldquo;custom&rdquo; JSON parser, default values, and/or a fluent API.</li>
+</ul>
+<h4 id="con-1">
+  Con
+  
+  <a class="anchor" href="#con-1">#</a>
+  
+</h4>
+<ul>
+<li>Serialize an Enum with a value that is not supported yet in the local strong schema requires dedicated logic.</li>
+</ul>
+<h3 id="3-weak-schema---wrapper">
+  3. Weak Schema - Wrapper
+  
+  <a class="anchor" href="#3-weak-schema---wrapper">#</a>
+  
+</h3>
+<pre tabindex="0"><code>public class WalletCreatedEvent {
+    private JObject _json;
+
+    public WalletCreatedEvent(string json){
+        _json = JObject.parse(json);
+    }
+
+    public Guid Id { 
+        get {return Guid.Parse(_json[&#34;id&#34;]);}
+        set {_json[&#34;id&#34;] = value.ToString();}
+    }
+
+    public string Name { 
+        get {return _json[&#34;name&#34;];}
+        set {_json[&#34;name&#34;] = value;}
+    }   
+}
+</code></pre><h4 id="description-2">
+  Description
+  
+  <a class="anchor" href="#description-2">#</a>
+  
+</h4>
+<ul>
+<li>Assumes your serializer can have support for versioning.</li>
+<li>More rules that must be followed (than Strong Schema), it also offers more flexibility, providing the rules are followed.</li>
+<li>In essence, you create a wrapper around the generic JSON object (e.g. JObject) with your Getters/Setters that either read/write the value from the JSON object at access time. In these Getter methods, logic can be placed for default values for missing fields.</li>
+<li>Only the current version of a data schema is defined (so no WalletCreatedEvent_v1 &hellip; WalletCreatedEvent_v17, just WalletCreatedEvent).
+<ul>
+<li>That current version and the latest version are the same here, however that might not be reality.</li>
+</ul>
+</li>
+<li>Data schema is <strong>not</strong> expected to match 1:1 with the serialized type (e.g. WalletCreatedEvent).</li>
+<li>Rule: You are no allowed to rename an attribute, unless you provide the old and name attribute with exact same value, but that translates in extra complexity, and is frankly, just annoying.</li>
+</ul>
+<h4 id="pro-2">
+  Pro
+  
+  <a class="anchor" href="#pro-2">#</a>
+  
+</h4>
+<ul>
+<li>Can serialize an Enum with a value that is not supported yet in the local strong schema.</li>
+<li>You can &ldquo;pass through&rdquo; the original JSON/XML and pass it on for serialization, this way, the entire original structure is kept that was not used by the internal model of that event in your service.
+<ul>
+<li>Common for document-based systems.</li>
+</ul>
+</li>
+</ul>
+<h4 id="con-2">
+  Con
+  
+  <a class="anchor" href="#con-2">#</a>
+  
+</h4>
+<ul>
+<li>More work than Weak Schema - Mapper or Strong Schema.</li>
+<li>The internal implementation of the wrapper might warrant memory efficient implementation in high-performance systems (e.g. <code>JObject.Parse()</code> might not be most memory efficient)</li>
+<li>Some formats (e.g flatbutters) might only allow you to evolve a schema by appending to the end of the schema. (Such formats might be enforced by the need for efficient implementation).</li>
+</ul>
+<h3 id="4-negotiation">
+  4. Negotiation
+  
+  <a class="anchor" href="#4-negotiation">#</a>
+  
+</h3>
+<h4 id="description-3">
+  Description
+  
+  <a class="anchor" href="#description-3">#</a>
+  
+</h4>
+<ul>
+<li>Assumes Bi-Directional communications.</li>
+<li>We assume Atom Feeds as an example of this approach.</li>
+<li>Consumer can <em>negotiate</em> the format of the message which the message arrives in.</li>
+<li>Most common transport layer of such negotiation is HTTP.</li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc4287">Atom Feeds</a> are a good example of this.</li>
+<li>In a request a header can be used as <code>Accept: &lt;some format&gt;+&lt;some version of the format&gt;</code> (e.g. <code>Accept: WalletCreated_JSON+v2</code>).</li>
+<li>An atom feed response returns <code>uri's</code> which allows you to page through all events of a given stream. URIs will have the right parameters in the url regarding paging (e.g. <code>/stream/page_1</code>).</li>
+<li>TIP: You can implement this entire pattern on top of other transports, even message queues. The key is that the payload is not send via the main feed, but an URI/accessor instead.
+<ul>
+<li>e.g.</li>
+</ul>
+<pre tabindex="0"><code>WalletCreatedEvent{
+    id: &#39;&lt;some-message-id&gt;&#39;,
+    type: &#39;WalletCreatedEvent&#39;,
+    uri: &#39;/messages/&lt;some-message-id&gt;&#39;
+}
+</code></pre><ul>
+<li>This allows for doing a GET request with content negotiation to the resource in desired format and version.</li>
+<li>alternatively the message already exposed negotiation:</li>
+</ul>
+<pre tabindex="0"><code>WalletCreatedEvent{
+    id: &#39;&lt;some-message-id&gt;&#39;,
+    type: &#39;WalletCreatedEvent&#39;,
+    uri_json: &#39;/messages/json/&lt;some-message-id&gt;&#39;,
+    uri_xml: &#39;/messages/xml/&lt;some-message-id&gt;&#39;
+}
+</code></pre><ul>
+<li>An announcement message is sent over the queue or previously over the Atom feed. Upon receipt of the announcement, the client must then fetch the message in the format they prefer. While quite flexible, this method is less than optimal in terms of performance, as it requires a request per message.</li>
+<li>For scaling, there are methods for a consumer to pre register what content-types it is open to support, so not every request there is a content negotiation.</li>
+<li>The producer will have to have downcast and/or upcast logic for the consumers and their requested type.
+<ul>
+<li>Limit the amount of supported versions to avoid version conversation code to blow up.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="pro-3">
+  Pro
+  
+  <a class="anchor" href="#pro-3">#</a>
+  
+</h4>
+<ul>
+<li>The producer instead of all the consumers, must &ldquo;know all formats and versions&rdquo;. The Consumers only their requested format and version of choice.</li>
+<li>Many of the URIs can be cached, allowing for easy scalability, cause there might be many consumers calling the producer.</li>
+</ul>
+<h4 id="con-3">
+  Con
+  
+  <a class="anchor" href="#con-3">#</a>
+  
+</h4>
+<ul>
+<li>More complex and effort.</li>
+<li>Requires some extra effort to optimize at high performance systems (e.g. negotiate in advance), but can work!</li>
+</ul>
+<h3 id="5-copy-and-replace">
+  5. Copy And Replace
+  
+  <a class="anchor" href="#5-copy-and-replace">#</a>
+  
+</h3>
+<p>&hellip; todo</p>
+<h4 id="description-4">
+  Description
+  
+  <a class="anchor" href="#description-4">#</a>
+  
+</h4>
+<h4 id="pro-4">
+  Pro
+  
+  <a class="anchor" href="#pro-4">#</a>
+  
+</h4>
+<h4 id="con-4">
+  Con
+  
+  <a class="anchor" href="#con-4">#</a>
+  
+</h4>
+<h2 id="general-concerns">
+  General Concerns
+  
+  <a class="anchor" href="#general-concerns">#</a>
+  
+</h2>
+<h3 id="versioning-of-behavior">
+  Versioning Of Behavior
+  
+  <a class="anchor" href="#versioning-of-behavior">#</a>
+  
+</h3>
+<p>If you find yourself putting branching logic or calculation logic in a projection, especially if it is based on time, you are probably missing logic in the creation of that event. A good example is the calculation of an invoice with Tax. The tax value might change over time. Make sure the event lists the tax value that was used, cause this value might change over time in the code. It may be worth including a description field even if only a string that describes the type of calculation made.</p>
+<h3 id="exterior-calls">
+  Exterior Calls
+  
+  <a class="anchor" href="#exterior-calls">#</a>
+  
+</h3>
+<p>Exterior calls are seldom idempotent. Try  to model the event post external call to contain all the information necessary so that downstream wise, you can replay with the result of the exterior call (e.g. PaymentSucceededEvent). Note that some information is just not allowed to be stored (credit card details).</p>
+<p>A related problem to this happens when projections start doing lookups to other projections. If you find a projection making calls to external services or to other projections it will be a problem to replay later. As example there could be a customer table managed by a CustomerProjection and an orders table managed by an OrdersProjection. Instead of having the OrdersProjection listen to customer events the decision was made to have it lookup in the CustomerProjection what the current Customer Name is to copy into the orders table. This can save time and duplication in the OrdersProjection code.</p>
+<h3 id="changing-semantic-meaning">
+  Changing Semantic Meaning
+  
+  <a class="anchor" href="#changing-semantic-meaning">#</a>
+  
+</h3>
+<p>One important aspect of versioning is that semantic meaning cannot change between versions of software. There is no good way for a downstream consumer to understand a semantic meaning change. An example would be that the value for the <code>temperature</code> field went from Celsius to Fahrenheit.</p>
+<h3 id="snapshots">
+  Snapshots
+  
+  <a class="anchor" href="#snapshots">#</a>
+  
+</h3>
+<p>If you make snapshots for read efficiency, consider to still keep the original events, in case snapshots need to be regenerated or evolve over time.</p>
+<p>In general, you can delete the old snapshots and then regenerate all snapshots based on updated logic/domain. If you need it side by side (an old an new version of a snapshot), regenerate the new snapshots and make sure you can handle both snapshot models in production. At a later stage the older snapshot model can be deprecated.</p>
+<h3 id="avoid-and">
+  Avoid &ldquo;and&rdquo;
+  
+  <a class="anchor" href="#avoid-and">#</a>
+  
+</h3>
+<p>If an event has &ldquo;and&rdquo; in the name (e.g. <code>TicketPaidForAndIssued</code>) consider to split into separate events. There is no need for a 1:1 relationship to &ldquo;event received &gt; process &gt; output single event&rdquo;. Sometimes there are no output events necessary or multiple might.</p>
+<h2 id="resources">
+  Resources
+  
+  <a class="anchor" href="#resources">#</a>
+  
+</h2>
+<ul>
+<li><a href="https://leanpub.com/esversioning/read">Versioning in an Event Sourced System - Gregory Young</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/software-architecture/integration-architecture/events/readme/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Readme" />
+        <span>Readme</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/software-architecture/integration-architecture/readme/" class="flex align-center">
+        <span>Readme</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Readme" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#why">Why?</a></li>
+    <li><a href="#rules">Rules</a></li>
+    <li><a href="#general-tips">General Tips</a></li>
+    <li><a href="#mapping-events-between-versions">Mapping Events Between Versions</a></li>
+    <li><a href="#versioning-approaches">Versioning Approaches</a>
+      <ul>
+        <li><a href="#1-strong-schema---basic-type-based-versioning">1. Strong Schema - Basic Type Based Versioning</a></li>
+        <li><a href="#2-weak-schema---mapping">2. Weak Schema - Mapping</a></li>
+        <li><a href="#3-weak-schema---wrapper">3. Weak Schema - Wrapper</a></li>
+        <li><a href="#4-negotiation">4. Negotiation</a></li>
+        <li><a href="#5-copy-and-replace">5. Copy And Replace</a></li>
+      </ul>
+    </li>
+    <li><a href="#general-concerns">General Concerns</a>
+      <ul>
+        <li><a href="#versioning-of-behavior">Versioning Of Behavior</a></li>
+        <li><a href="#exterior-calls">Exterior Calls</a></li>
+        <li><a href="#changing-semantic-meaning">Changing Semantic Meaning</a></li>
+        <li><a href="#snapshots">Snapshots</a></li>
+        <li><a href="#avoid-and">Avoid &ldquo;and&rdquo;</a></li>
+      </ul>
+    </li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

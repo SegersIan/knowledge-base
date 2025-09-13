@@ -1,0 +1,2332 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Team Topologies
+  
+  #
+  
+
+Although Team Topologies is strictly not about architecture, it has a huge impact and connection on how we structure team ownership and our architecture according to Conways law. Therefore, I felt this made sense to cover in the Architecture Handbook.
+
+
+  What is Team Topologies?
+  
+  #
+  
+
+
+
+  An adaptive model to organization design.
+&ldquo;Team Topologies&rdquo; is a book that provides a framework for organizing and optimizing software development teams within an organization. The book emphasizes the importance of adapting team structures and interactions to the specific context of the organization and its technological landscape. This is all based on the Reverse Conway Maneuver. By embracing Conways Law, this framework tries to help create efficient teams that will also result in your desired architecture. As always, frameworks come with their fair share of criticism, but it doesn&rsquo;t make it worth covering and using as input in your decision process.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/software-architecture/topics/team-topologies/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="Team Topologies # Although Team Topologies is strictly not about architecture, it has a huge impact and connection on how we structure team ownership and our architecture according to Conways law. Therefore, I felt this made sense to cover in the Architecture Handbook. What is Team Topologies? # An adaptive model to organization design.
+“Team Topologies” is a book that provides a framework for organizing and optimizing software development teams within an organization. The book emphasizes the importance of adapting team structures and interactions to the specific context of the organization and its technological landscape. This is all based on the Reverse Conway Maneuver. By embracing Conways Law, this framework tries to help create efficient teams that will also result in your desired architecture. As always, frameworks come with their fair share of criticism, but it doesn’t make it worth covering and using as input in your decision process.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="software-architecture">
+<title>Team Topologies | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/software-architecture/topics/team-topologies/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-software-architecture book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle"  />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle"  />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle" checked />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="active">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Team Topologies</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-team-topologies">What is Team Topologies?</a></li>
+    <li><a href="#why-team-topologies">Why Team Topologies?</a></li>
+    <li><a href="#key-concepts">Key Concepts</a>
+      <ul>
+        <li><a href="#conway-law">Conway Law</a></li>
+        <li><a href="#flow-of-change">Flow Of Change</a></li>
+        <li><a href="#team-types">Team Types</a></li>
+        <li><a href="#interaction-modes">Interaction Modes</a></li>
+      </ul>
+    </li>
+    <li><a href="#relation-to-systems-thinking">Relation To Systems Thinking</a></li>
+    <li><a href="#conways-law--reverse-conway-maneuver">Conway&rsquo;s Law &amp; Reverse Conway Maneuver</a>
+      <ul>
+        <li><a href="#the-issue-with-traditional-top-down-approach-to-team-organization-org-charts">The Issue with Traditional, top-down approach to team organization (Org Charts)</a></li>
+        <li><a href="#conways-law-and-why-it-matters">Conway&rsquo;s Law and Why It Matters</a></li>
+        <li><a href="#team-first-thinking">Team-First Thinking</a></li>
+      </ul>
+    </li>
+    <li><a href="#team-patterns">Team Patterns</a>
+      <ul>
+        <li><a href="#static-team-topologies">Static Team Topologies</a></li>
+        <li><a href="#the-4-fundamental-team-topologies">The 4 Fundamental Team Topologies</a></li>
+        <li><a href="#choose-team-first-boundaries">Choose Team-First Boundaries</a></li>
+      </ul>
+    </li>
+    <li><a href="#evolving-the-organization-design">Evolving The Organization Design</a>
+      <ul>
+        <li><a href="#team-interaction-modes">Team Interaction Modes</a></li>
+        <li><a href="#evolve-team-structures-with-organizational-sensing">Evolve Team Structures With Organizational Sensing</a></li>
+        <li><a href="#conclusion-the-next-generation-digital-operating-model">Conclusion: The Next-Generation Digital Operating Model</a></li>
+      </ul>
+    </li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="team-topologies">
+  Team Topologies
+  
+  <a class="anchor" href="#team-topologies">#</a>
+  
+</h1>
+<pre><code>Although Team Topologies is strictly not about architecture, it has a huge impact and connection on how we structure team ownership and our architecture according to Conways law. Therefore, I felt this made sense to cover in the Architecture Handbook.
+</code></pre>
+<h2 id="what-is-team-topologies">
+  What is Team Topologies?
+  
+  <a class="anchor" href="#what-is-team-topologies">#</a>
+  
+</h2>
+
+<blockquote class='book-hint '>
+  <p>An <em>adaptive model</em> to organization design.</p>
+</blockquote><p>&ldquo;Team Topologies&rdquo; is a <a href="https://teamtopologies.com/book">book</a> that provides a framework for organizing and optimizing software development teams within an organization. The book emphasizes the importance of adapting team structures and interactions to the specific context of the organization and its technological landscape. This is all based on the <a href="https://martinfowler.com/bliki/ConwaysLaw.html">Reverse Conway Maneuver</a>. By embracing Conways Law, this framework tries to help create efficient teams that will also result in your desired architecture. As always, frameworks come with their fair share of criticism, but it doesn&rsquo;t make it worth covering and using as input in your decision process.</p>
+
+<blockquote class='book-hint '>
+  <p>Team topologies is a framework that gives you the tools, concepts, and patterns that help you reason and navigate the challenges of organizational design, with Conway&rsquo;s law in view.</p>
+</blockquote><h2 id="why-team-topologies">
+  Why Team Topologies?
+  
+  <a class="anchor" href="#why-team-topologies">#</a>
+  
+</h2>
+
+<blockquote class='book-hint '>
+  <p>Organization not only need to strive for autonomous teams, they also need to continuously think about and evolve themselves in order to deliver value quickly to the customers.</p>
+</blockquote><h2 id="key-concepts">
+  Key Concepts
+  
+  <a class="anchor" href="#key-concepts">#</a>
+  
+</h2>
+<p>These concepts are used as building blocks on how to reason and think of structuring teams ownership and responsibilities.</p>
+<h3 id="conway-law">
+  Conway Law
+  
+  <a class="anchor" href="#conway-law">#</a>
+  
+</h3>
+<p>Taking <a href="conways-law.md">Conways Law</a> in consideration, we can use this to our advantage to create teams that result in the architecture/system that we want, while making the teams also more efficient.</p>
+<h3 id="flow-of-change">
+  Flow Of Change
+  
+  <a class="anchor" href="#flow-of-change">#</a>
+  
+</h3>
+<p>Refers to how changes in software and systems are managed and how they flow through an organization&rsquo;s structure of teams.</p>
+<p><a href="../attachments/img_team_topologies_flow_of_change.png">Image: Visual Representation</a></p>
+<h3 id="team-types">
+  Team Types
+  
+  <a class="anchor" href="#team-types">#</a>
+  
+</h3>
+<ul>
+<li><strong>Stream-aligned team</strong> aligned to a flow of work from (usually) a segment of the business domain. These are “You Built It, You Run It” teams. No hand-offs to other teams for any purpose.
+<ul>
+<li><em>Primary team type</em></li>
+</ul>
+</li>
+<li><strong>Enabling team</strong> helps a Stream-aligned team to overcome obstacles. Also detects missing capabilities.
+<ul>
+<li><em>Reduce load for stream-aligned teams, by acting as service providers (e.g learn new things while retaining focus).</em></li>
+</ul>
+</li>
+<li><strong>Complicated Subsystem team</strong> where significant mathematics/calculation/technical expertise is needed.
+<ul>
+<li><em>Reduce load for stream-aligned teams, where stream-aligned teams are the internal customer of the subsystem.</em></li>
+</ul>
+</li>
+<li><strong>Platform team</strong> a grouping of other team types that provide a compelling internal product to accelerate delivery by Stream-aligned teams.
+<ul>
+<li><em>Reduce load for stream-aligned teams, where stream-aligned teams are the internal customer of the platform.</em></li>
+</ul>
+</li>
+</ul>
+
+<blockquote class='book-hint '>
+  <p>The goal of the these team types, is to manage cognitive load for teams by defining clear responsibilities and boundaries.</p>
+</blockquote><p><a href="../attachments/img_team_topologies_team_types.png">Image: Visual Representation</a></p>
+<h3 id="interaction-modes">
+  Interaction Modes
+  
+  <a class="anchor" href="#interaction-modes">#</a>
+  
+</h3>
+<p>There are only three ways in which team should interact:</p>
+<ul>
+<li><strong>Collaboration</strong>: working together for a defined period of time to discover new things (APIs, practices, technologies, etc.)</li>
+<li><strong>X-as-a-Service</strong>: one team provides and one team consumes something “as a Service”</li>
+<li><strong>Facilitation</strong>: one team helps and mentors another team</li>
+</ul>
+<p><a href="../attachments/img_team_topologies_interaction_modes.png">Image: Visual Representation</a></p>
+<h2 id="relation-to-systems-thinking">
+  Relation To Systems Thinking
+  
+  <a class="anchor" href="#relation-to-systems-thinking">#</a>
+  
+</h2>
+<p>Notice that we recognize the key parts of any generic &ldquo;system&rdquo; from <a href="./systems-thinking.md">Systems Thinking</a>.</p>
+<ul>
+<li><strong>The Organization</strong>: The top level system we view.</li>
+<li><strong>Team Types</strong>: Are the &ldquo;Components&rdquo; or &ldquo;Elements&rdquo; that our system is made of up and what their boundaries are.</li>
+<li><strong>Interaction Modes</strong>: How Components/Elements of a system are interconnected with each other.</li>
+</ul>
+<h2 id="conways-law--reverse-conway-maneuver">
+  Conway&rsquo;s Law &amp; Reverse Conway Maneuver
+  
+  <a class="anchor" href="#conways-law--reverse-conway-maneuver">#</a>
+  
+</h2>
+<p><em>Part I (Teams as the means of Delivery) of the <a href="https://teamtopologies.com/book">Team Topologies Book</a></em></p>
+<h3 id="the-issue-with-traditional-top-down-approach-to-team-organization-org-charts">
+  The Issue with Traditional, top-down approach to team organization (Org Charts)
+  
+  <a class="anchor" href="#the-issue-with-traditional-top-down-approach-to-team-organization-org-charts">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <ol>
+<li>Conway&rsquo;s law suggest major gains from designing software architecture and team interactions together, since they are similar forces.</li>
+<li>Team Topologies clarifies team purpose and responsibilities, increasing the effectiveness of their interrelationships.</li>
+<li>Team Topologies takes a humanistic approach to building software systems while setting up the organizations for strategic adaptability.</li>
+</ol>
+</blockquote><h3 id="conways-law-and-why-it-matters">
+  Conway&rsquo;s Law and Why It Matters
+  
+  <a class="anchor" href="#conways-law-and-why-it-matters">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <ol>
+<li>Organizations are constrained to produce designs that reflect communication paths.</li>
+<li>The design of the organization constrains the &ldquo;solution search space&rdquo; limiting possible software designs.</li>
+<li>Requiring everyone to communicate with everyone else is a recipe for a mess.</li>
+<li><strong>Choose Software Architectures that encourage team-scoped flow.</strong></li>
+<li>Limiting communication paths to well-defined team interactions produces modular, decoupled systems.</li>
+</ol>
+</blockquote><h3 id="team-first-thinking">
+  Team-First Thinking
+  
+  <a class="anchor" href="#team-first-thinking">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <ol>
+<li>The team is the most effective means of software delivery, not individuals.</li>
+<li>Limit the size of multi-team groupings within the organization based on dunbars number.</li>
+<li>Restrict team responsibilities to match te maximum team cognitive load.</li>
+<li>Establish clear boundaries of responsibilities for teams.</li>
+<li>Change the team working environment to help teams succeed.</li>
+</ol>
+</blockquote><h2 id="team-patterns">
+  Team Patterns
+  
+  <a class="anchor" href="#team-patterns">#</a>
+  
+</h2>
+<p><em>Part II (Team Topologies that work for flow) of the <a href="https://teamtopologies.com/book">Team Topologies Book</a></em></p>
+<h3 id="static-team-topologies">
+  Static Team Topologies
+  
+  <a class="anchor" href="#static-team-topologies">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <ol>
+<li>Ad hoc or constant changing team design slows down software delivery.</li>
+<li>There is no single definitive team topology but several inadequate topologies for any one organization.</li>
+<li>Technical and cultural maturity, org scale, and engineering discipline are critical aspects when considering which topology to adopt.</li>
+<li>In particular, the feature-team/product-team is powerful but only works with a supportive surrounding environment.</li>
+<li>Splitting a team&rsquo;s responsibilities can break down silos and empower other teams.</li>
+</ol>
+</blockquote><h3 id="the-4-fundamental-team-topologies">
+  The 4 Fundamental Team Topologies
+  
+  <a class="anchor" href="#the-4-fundamental-team-topologies">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <ol>
+<li>The 4 fundamental team topologies simplify modern software team interactions.</li>
+<li>Mapping common industry team types to the fundamental topologies sets up organizations for success, removing gray areas of ownership and overloaded/underloaded teams.</li>
+<li>The main topology is (business domain) stream-aligned; all other topologies support this type.</li>
+<li>The other topologies are enabling, complicated-subsystems, and platform.</li>
+<li>The topologies are often &ldquo;fractal&rdquo; (self-similar) at large scale: teams of teams.</li>
+</ol>
+</blockquote><h3 id="choose-team-first-boundaries">
+  Choose Team-First Boundaries
+  
+  <a class="anchor" href="#choose-team-first-boundaries">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <ol>
+<li>Choose software boundaries using the team-first approach.</li>
+<li>Beware of hidden monoliths and coupling in the software-delivery chain.</li>
+<li>Use software boundaries defined by business-domain bounded contexts.</li>
+<li>Consider alternative software boundaries when necessary and suitable.</li>
+</ol>
+</blockquote><h2 id="evolving-the-organization-design">
+  Evolving The Organization Design
+  
+  <a class="anchor" href="#evolving-the-organization-design">#</a>
+  
+</h2>
+<p><em>Part III (Evolving team interactions for innovation and rapid delivery) of the <a href="https://teamtopologies.com/book">Team Topologies Book</a></em></p>
+<h3 id="team-interaction-modes">
+  Team Interaction Modes
+  
+  <a class="anchor" href="#team-interaction-modes">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <ol>
+<li>Choose specific team interaction modes to enhance software delivery.</li>
+<li>Choose between 3 interaction modes - collaboration, X-as-a-Service, and facilitating - to help teams provide and evolve services to other teams.</li>
+<li>Collaboration can be a powerful driver for innovation but can also reduce flow.</li>
+<li>X-as-a-Service can help other teams deliver quickly but only if the boundary is suitable.</li>
+<li>Facilitating helps to avoid cross-team challenges and detects problems.</li>
+</ol>
+</blockquote><h3 id="evolve-team-structures-with-organizational-sensing">
+  Evolve Team Structures With Organizational Sensing
+  
+  <a class="anchor" href="#evolve-team-structures-with-organizational-sensing">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <ol>
+<li>Use different team topologies simultaneously for strategic advantage.</li>
+<li>Change team topologies and interactions to accelerate adoption of new approaches.</li>
+<li>Differentiate between explore, exploit, sustain, retire phases using team topologies.</li>
+<li>Expect multiple, simultaneous team topologies to meet different needs.</li>
+<li>Recognize triggers or organizational change.</li>
+<li>Treat operations as high-fidelity sensory input for self-steering.</li>
+</ol>
+</blockquote><h3 id="conclusion-the-next-generation-digital-operating-model">
+  Conclusion: The Next-Generation Digital Operating Model
+  
+  <a class="anchor" href="#conclusion-the-next-generation-digital-operating-model">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <ol>
+<li>Combine a team-first approach with Conway&rsquo;s law, the 4 fundamental topologies, team interaction modes, topology evolution, and organizational sensing.</li>
+<li>Get Started: begin with the team, identify streams, identify the thinnest viable platform, identify capability gaps, and practice team interactions.</li>
+</ol>
+</blockquote><h2 id="resources">
+  Resources
+  
+  <a class="anchor" href="#resources">#</a>
+  
+</h2>
+<ul>
+<li><a href="https://teamtopologies.com/book">Team Topologies Book</a></li>
+<li><a href="https://teamtopologies.com/">Team Topologies Website</a></li>
+<li><a href="https://youtu.be/Lfzph_5wb9c?si=01k_bK6HJD7qMYfP">Talk - Architect for FLow  - DDD &amp; Team Topologies</a> by <a href="https://www.susannekaiser.net/">Susanne Kaiser</a></li>
+<li><a href="https://hbr.org/2007/11/a-leaders-framework-for-decision-making">Business Harvard - A Leader’s Framework for Decision Making</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/software-architecture/topics/systems-thinking/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Systems Thinking" />
+        <span>Systems Thinking</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/software-architecture/topics/threat-modeling/" class="flex align-center">
+        <span>Threat Modeling</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Threat Modeling" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-team-topologies">What is Team Topologies?</a></li>
+    <li><a href="#why-team-topologies">Why Team Topologies?</a></li>
+    <li><a href="#key-concepts">Key Concepts</a>
+      <ul>
+        <li><a href="#conway-law">Conway Law</a></li>
+        <li><a href="#flow-of-change">Flow Of Change</a></li>
+        <li><a href="#team-types">Team Types</a></li>
+        <li><a href="#interaction-modes">Interaction Modes</a></li>
+      </ul>
+    </li>
+    <li><a href="#relation-to-systems-thinking">Relation To Systems Thinking</a></li>
+    <li><a href="#conways-law--reverse-conway-maneuver">Conway&rsquo;s Law &amp; Reverse Conway Maneuver</a>
+      <ul>
+        <li><a href="#the-issue-with-traditional-top-down-approach-to-team-organization-org-charts">The Issue with Traditional, top-down approach to team organization (Org Charts)</a></li>
+        <li><a href="#conways-law-and-why-it-matters">Conway&rsquo;s Law and Why It Matters</a></li>
+        <li><a href="#team-first-thinking">Team-First Thinking</a></li>
+      </ul>
+    </li>
+    <li><a href="#team-patterns">Team Patterns</a>
+      <ul>
+        <li><a href="#static-team-topologies">Static Team Topologies</a></li>
+        <li><a href="#the-4-fundamental-team-topologies">The 4 Fundamental Team Topologies</a></li>
+        <li><a href="#choose-team-first-boundaries">Choose Team-First Boundaries</a></li>
+      </ul>
+    </li>
+    <li><a href="#evolving-the-organization-design">Evolving The Organization Design</a>
+      <ul>
+        <li><a href="#team-interaction-modes">Team Interaction Modes</a></li>
+        <li><a href="#evolve-team-structures-with-organizational-sensing">Evolve Team Structures With Organizational Sensing</a></li>
+        <li><a href="#conclusion-the-next-generation-digital-operating-model">Conclusion: The Next-Generation Digital Operating Model</a></li>
+      </ul>
+    </li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

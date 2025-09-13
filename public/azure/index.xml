@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Knowledgebase</title>
+    <link>http://localhost:1313/azure/</link>
+    <description>Recent content on Knowledgebase</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/azure/az-300-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/azure/az-300-notes/</guid>
+      <description>&lt;h1 id=&#34;az-300-study-notes&#34;&gt;&#xA;  AZ-300 Study Notes&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#az-300-study-notes&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;various&#34;&gt;&#xA;  Various&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#various&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Global filter for subscription and (active) directory&lt;/li&gt;&#xA;&lt;li&gt;Every single resource specifies a region to be stored&lt;/li&gt;&#xA;&lt;li&gt;Azure hides more the concepts of zone&amp;rsquo;s (as in HA Zone)&lt;/li&gt;&#xA;&lt;li&gt;Zone&amp;rsquo;s are more explicit in &amp;ldquo;availability sets&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;Resource Groups are mandatory&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;zones-regions-and-high-availability&#34;&gt;&#xA;  Zones, Regions and High Availability&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#zones-regions-and-high-availability&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Primary &lt;a href=&#34;https://docs.microsoft.com/en-us/azure/availability-zones/az-overview&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Business Continuity is the business word for HA and Recovery.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;A zone can be one ore &lt;strong&gt;more&lt;/strong&gt; data centers still.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/azure/az-300/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/azure/az-300/</guid>
+      <description>&lt;h1 id=&#34;az-300-microsoft-azure-architect-technologies-notes&#34;&gt;&#xA;  AZ 300 Microsoft Azure Architect Technologies Notes&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#az-300-microsoft-azure-architect-technologies-notes&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;azure-fundamentals&#34;&gt;&#xA;  Azure Fundamentals&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#azure-fundamentals&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/azure/architecture/aws-professional/services&#34;&gt;AWS tp Azure Service Comparison&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/en-us/azure/architecture/&#34;&gt;Azure Architecture Center&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;some-comparisons&#34;&gt;&#xA;  Some comparisons&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#some-comparisons&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Blob storage does the same as AWS S3 and EBS&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Table storage - Key/value like DynamoDB&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Queue Storage - Messeging for workflow and communication between components of the cloud services&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;File Storage - Similar to EFS&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Load balancer - Similar as AWS Classic Load Balancer (level 4)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

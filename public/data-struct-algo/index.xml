@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Knowledgebase</title>
+    <link>http://localhost:1313/data-struct-algo/</link>
+    <description>Recent content on Knowledgebase</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/data-struct-algo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/algorithms/binary-search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/algorithms/binary-search/</guid>
+      <description>&lt;h1 id=&#34;binary-search&#34;&gt;&#xA;  Binary Search&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#binary-search&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Often in combination with an ordered array.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Start with the middle element, is the searched value greater or less? Based on that we can eliminate 50% of elements. Then we move again to the middle of the remaining half. Etc&amp;hellip;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/algorithms/bubble-sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/algorithms/bubble-sort/</guid>
+      <description>&lt;h1 id=&#34;bubble-sort&#34;&gt;&#xA;  Bubble Sort&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#bubble-sort&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Algorithm&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Set pointers to first two cells&lt;/li&gt;&#xA;&lt;li&gt;Compare, swap if second cell&amp;rsquo;s value is smaller than the first cells&amp;rsquo; value&lt;/li&gt;&#xA;&lt;li&gt;Move the pointers one cell to the right and repeat process till end of array.&lt;/li&gt;&#xA;&lt;li&gt;At end of going through the array, remember to ignore next passthrough the last item as we&amp;rsquo;re positive it&amp;rsquo;s the highest value&lt;/li&gt;&#xA;&lt;li&gt;Now we start with the pointers to first two cells, and repeast the process, only we stop earlier as we know on each passthrough the last items are ordered.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;After every passthrough we can safely asume the last item is the highest item is at the end.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/algorithms/graph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/algorithms/graph/</guid>
+      <description>&lt;h1 id=&#34;graph-algorithms&#34;&gt;&#xA;  Graph Algorithms&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#graph-algorithms&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;breadth-frst-search&#34;&gt;&#xA;  Breadth-frst search&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#breadth-frst-search&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;We use a queue as to keep track of which vertices to process next.&lt;/li&gt;&#xA;&lt;li&gt;When we start the search, our queue consists of only our start vertex we want to start searching from.&lt;/li&gt;&#xA;&lt;li&gt;Visit each vertex adjacent to the current vertex. If it has not yet been visited, mark as visited, and att it to the queue.&lt;/li&gt;&#xA;&lt;li&gt;If the current vertex has no unvisited vertices adjacent to it, remove the next vertex from the queue and make it the current vertex.&lt;/li&gt;&#xA;&lt;li&gt;If there are no more unvisited vertices adjacent to the current vertex, and there are no more vertices in the queue, the algorithm is complete.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;dijkstra&#34;&gt;&#xA;  Dijkstra&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#dijkstra&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Used for solving the shortes path problem with weighted graphs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/algorithms/insertion-sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/algorithms/insertion-sort/</guid>
+      <description>&lt;h1 id=&#34;insertion-sort&#34;&gt;&#xA;  Insertion Sort&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#insertion-sort&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Algorithm&#xA;&lt;ul&gt;&#xA;&lt;li&gt;In the first passthrough, we temporarily remove the value at index 1 and store in a temporary variable. This will leave a gap at that index, since it contains no value. In subsequent passthroughs we remove the values at the subsequent indexes.&lt;/li&gt;&#xA;&lt;li&gt;We then begin a shifting phase, where we take each value to the left of the gap, and compare it to the value in the temporary variable. If the valie to the left of the gap is greater than the temporary variable, we shift it to the right, AS we shift values to the right, inherently, the gap moves leftwares. As soon as we encounter a value that is lower than the temporarily removed value, or we reach the left of the array, this shifting phase is over.&lt;/li&gt;&#xA;&lt;li&gt;We hten insert the temporary removed value in the current gap.&lt;/li&gt;&#xA;&lt;li&gt;We repeat steps 1 through 3 untill the array is fully sorted.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;A beter analogy is:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/algorithms/linear-search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/algorithms/linear-search/</guid>
+      <description>&lt;h1 id=&#34;linear-search&#34;&gt;&#xA;  Linear Search&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#linear-search&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;log(N), just check every value till found.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/algorithms/quick-sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/algorithms/quick-sort/</guid>
+      <description>&lt;h1 id=&#34;quick-sort&#34;&gt;&#xA;  Quick Sort&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#quick-sort&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Recursive algorithm&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;We use partitioning, which means to take a random value form the array, this will be called the &lt;code&gt;pivot&lt;/code&gt;. So we take this pivot and make sure every number that is less than the pivot ens up on the left, and every number larger ends up on the right of the pivot.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;So first to partition the list:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The left pointer continiously moves one cell to the right until it reaches a value that is greater than or equal to the pivot and then stops.&lt;/li&gt;&#xA;&lt;li&gt;Then the right pointer continiously moves one cell to the left until it reaches a value that is less than or equal to the pivot and then stops.&lt;/li&gt;&#xA;&lt;li&gt;We swap the values that the left and right pointers are pointing to.&lt;/li&gt;&#xA;&lt;li&gt;We continue this process until the pointers are pointing to the very same value or the left pointer has moved to the right of the right pointer.&lt;/li&gt;&#xA;&lt;li&gt;Finally, we swap the pivot with the value that the left pointer is currently pointing to.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now we now that all the values on the left of the pivot or smaller and all the values of the pivot larger.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/algorithms/selection-sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/algorithms/selection-sort/</guid>
+      <description>&lt;h1 id=&#34;selection-sort&#34;&gt;&#xA;  Selection Sort&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#selection-sort&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Algorithm&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Point to the first cell.&lt;/li&gt;&#xA;&lt;li&gt;Search through all the following items which one has the lowest value.&lt;/li&gt;&#xA;&lt;li&gt;After having search through all the following items, swap the values from the pointed cell with the lowest value.&lt;/li&gt;&#xA;&lt;li&gt;Move the pointer to the next cell on the right, start over again, (new passthrough starts)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Efficiency is O(N2 / 2), but as we ignore constants O(N2), so same as the bubble sort in worth case.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/big-o/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/big-o/</guid>
+      <description>&lt;h1 id=&#34;the-big-o-notation&#34;&gt;&#xA;  The Big O Notation&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#the-big-o-notation&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;The big O notation is used to express &lt;strong&gt;time complexity&lt;/strong&gt;, the time it takes to execute, time being expressed as the amount of steps required relative to the size of the data set it works on. This is usefull to objectivly quantify how good an algorithm is in regarding to the max CPU capacity.&lt;/p&gt;&#xA;&lt;p&gt;We can use the Big O notation also for the &lt;strong&gt;space complexity&lt;/strong&gt;, the amount of memory is required to execute the algorithm relative to the size of your data set. This is particularly usefull when you are constraint to the amount of memory on your machine.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/data-structures/array/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/data-structures/array/</guid>
+      <description>&lt;h1 id=&#34;array&#34;&gt;&#xA;  Array&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#array&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;An array has often a fixed size.&lt;/li&gt;&#xA;&lt;li&gt;Each element in the array has a fixed size, there accessing is constant &lt;code&gt;O(1)&lt;/code&gt; as we can take the offset memory location and jump straight to the requested item do &lt;code&gt;offset memory location + (requested index * element memory size)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;An array is always continious, meaning, if we delete an item, we have to shift all elements after the removed element one memory block. So we have a nice continous array again without empty memory locations. This means adding an element at the beginning of an array means we have to move all elements in the array one memory location further. For this reason adding and deleting can be O(N) in the worst case.&lt;/li&gt;&#xA;&lt;li&gt;Searching requires us in the worst case scenario to check every element of the arraym, therefore O(N) for searching.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;../assets/big-o-2.png&#34; alt=&#34;big-0-2&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/data-structures/binary-tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/data-structures/binary-tree/</guid>
+      <description>&lt;h1 id=&#34;binary-tree&#34;&gt;&#xA;  Binary Tree&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#binary-tree&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Part of the node based structures group&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;We have again nodes, each node can have 3 elements, the first is a pointer to another node, the second is the value of the node and the thirs is also a pointer to another node.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The node that is not referenced by any other node but refernces to other nodes is the root node.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Follows the following rules&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/data-structures/doubly-linked-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/data-structures/doubly-linked-list/</guid>
+      <description>&lt;h1 id=&#34;doubly-linked-list&#34;&gt;&#xA;  Doubly Linked List&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#doubly-linked-list&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Part of the node based structures group&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Items in a doubly linked list means, each element of the list exists out of three parts. The first part contains a pointer to the previous item of the list, the second part contains the value and the third part contains the pointer to the next item. If there is no next or previous item, the pointers to these locations will contain a nil.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/data-structures/hash-table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/data-structures/hash-table/</guid>
+      <description>&lt;h1 id=&#34;hash-table&#34;&gt;&#xA;  Hash Table&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#hash-table&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Used for fast reading&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Also known as associative arrays&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Use a deterministic hash function&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Under the good a hash stores data in a bunch of cells in a row, similar to an array.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;When a key is provided, this key is hashed, this hash will return a memory location within the row of cells.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Collisions can happen with the hash function, a classic solutions is &amp;ldquo;separate chainging&amp;rdquo;. What we do is instead of placing a value in the cell, we puts a reference to an array in it. That array will hold a subarray for each element. So once it founds a hash location with an array, it will do a sequential lookup within that array. e.g. &lt;code&gt;[[key1, value1],[key2, value2]]&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/data-structures/queue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/data-structures/queue/</guid>
+      <description>&lt;h1 id=&#34;queue&#34;&gt;&#xA;  Queue&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#queue&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A queue the same as an array memory wise, being a continious list in memory.&lt;/li&gt;&#xA;&lt;li&gt;A queue however limits us, that we can only delete at the beginning of the array and insert at the end of the array. Therefore, inserts are constant O(1) as we can only insert at the end, but a deletion is always O(N) as we have to move all items in the array one location as we can only delete the first item.&lt;/li&gt;&#xA;&lt;li&gt;Reading and searching remain O(N)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Note that we can replace the underlying array structure with linked lists to improve efficiency.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/data-structures/singly-linked-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/data-structures/singly-linked-list/</guid>
+      <description>&lt;h1 id=&#34;singly-linked-list&#34;&gt;&#xA;  Singly Linked List&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#singly-linked-list&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Part of the node based structures group&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Items in a singly linked list means, each element of the list exists out of two parts. The value and the address location of the next item in the list. If there is no next item in the list, the pointer to the next item will have a nil to indicate the end of the list.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The memory doesn&amp;rsquo;t have to find one continous block of memory.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/data-structures/stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/data-structures/stack/</guid>
+      <description>&lt;h1 id=&#34;stack&#34;&gt;&#xA;  Stack&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#stack&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A stack the same as an array memory wise, being a continious list in memory.&lt;/li&gt;&#xA;&lt;li&gt;A stack however limits us, that we are only allowed to insert and delete at the end of our array. So we cannot add or remove in the middle or to the beginning of the array, which makes our insertions and deletions fast. As we can always immediatly jump to the end of the array and there are no trailing elements that need to be moved around to respect the continuity of our array. Therefore inserts and deletions are constant O(1).&lt;/li&gt;&#xA;&lt;li&gt;Searching and access remain O(N) as it&amp;rsquo;s still is an continious list of elements in memory.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Note that we can replace the underlying array structure with linked lists to improve efficiency.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/data-struct-algo/np-completeness/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data-struct-algo/np-completeness/</guid>
+      <description>&lt;h1 id=&#34;np-completeness&#34;&gt;&#xA;  NP Completeness&#xA;  &#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#np-completeness&#34;&gt;#&lt;/a&gt;&#xA;  &#xA;&lt;/h1&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,2446 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Clean Architecture
+  
+  #
+  
+
+
+  General Overview
+  
+  #
+  
+
+Clean architecture was created by Robert C. Martin. The general idea is that any type of architecture should respect the rights direction of the dependencies, see the Dependency Rule.
+The core, the entities is the purest part of the system with 0 impurity. The more we move to outer layers, the more impure the layers become, note that functional programming languages tend to encourage this idea.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/software-architecture/topics/clean-architecture/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="Clean Architecture # General Overview # Clean architecture was created by Robert C. Martin. The general idea is that any type of architecture should respect the rights direction of the dependencies, see the Dependency Rule.
+The core, the entities is the purest part of the system with 0 impurity. The more we move to outer layers, the more impure the layers become, note that functional programming languages tend to encourage this idea.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="software-architecture">
+<title>Clean Architecture | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/software-architecture/topics/clean-architecture/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-software-architecture book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle"  />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle"  />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle" checked />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="active">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Clean Architecture</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#general-overview">General Overview</a>
+      <ul>
+        <li><a href="#dependency-rule">Dependency Rule</a></li>
+        <li><a href="#entities">Entities</a></li>
+        <li><a href="#use-cases">Use Cases</a></li>
+        <li><a href="#interface-adapters">Interface Adapters</a></li>
+        <li><a href="#frameworks-and-drivers">Frameworks and Drivers</a></li>
+      </ul>
+    </li>
+    <li><a href="#what-is-architecture">What is architecture?</a></li>
+    <li><a href="#key-notes">Key notes</a></li>
+    <li><a href="#solid">SOLID</a>
+      <ul>
+        <li><a href="#srp-single-responsible-principle">SRP: Single Responsible Principle</a></li>
+        <li><a href="#ocp-open-closed-principle">OCP: Open Closed Principle</a></li>
+        <li><a href="#lsp-liskov-substitution-principle">LSP: Liskov Substitution Principle</a></li>
+        <li><a href="#isp-interface-segregation-principle">ISP: Interface Segregation Principle</a></li>
+        <li><a href="#dip-dependency-inversion-principle">DIP: Dependency Inversion Principle</a></li>
+      </ul>
+    </li>
+    <li><a href="#component-principles">Component Principles</a>
+      <ul>
+        <li><a href="#component-cohesion">Component Cohesion</a></li>
+        <li><a href="#component-coupling">Component Coupling</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="clean-architecture">
+  Clean Architecture
+  
+  <a class="anchor" href="#clean-architecture">#</a>
+  
+</h1>
+<h2 id="general-overview">
+  General Overview
+  
+  <a class="anchor" href="#general-overview">#</a>
+  
+</h2>
+<p>Clean architecture was created by Robert C. Martin. The general idea is that any type of architecture should respect the rights direction of the dependencies, see the Dependency Rule.</p>
+<p>The core, the entities is the purest part of the system with 0 impurity. The more we move to outer layers, the more impure the layers become, note that functional programming languages tend to encourage this idea.</p>
+<p>For more on how functional programming encourages clean architectures styles, watch the talk from <a href="https://youtu.be/US8QG9I1XW0">Mark Seemann &ldquo;Functional Architecture - The Pits of Success&rdquo;</a> on YouTube.</p>
+<p>Notice that most of the rules of the architecture emerge from the SOLID principles, translated in their module level equivalents. More on that later.</p>
+<p><img src="../attachments/architecture_overview.png" alt="alt text" /></p>
+<h3 id="dependency-rule">
+  Dependency Rule
+  
+  <a class="anchor" href="#dependency-rule">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <p>Source code dependencies must point only inward, toward higher level policies.</p>
+</blockquote><p>Meaning, the inner modules must be be unaware and not depend on outer layers of the architecture. The outer layers must &ldquo;plug in&rdquo; into the inner layers. So think, plugin approach. By respecting these rules, any changes on the outer layers have 0 impact on inner layers.</p>
+<p>Using the Dependency Inversion principle helps to achieve this. E.g. if a use cases must call an external service, it should use an interface. The outer layer that access the external service should then implement this interface. Notice that this enforces the outer layer to depend on the inner layer, not the other way around. The inner layers are more abstract, the more you move outwards, things become more concrete and &ldquo;implementation details&rdquo;.</p>
+<p>Moving data across the layers should be only simple data structures, known as DTOs.</p>
+<h3 id="entities">
+  Entities
+  
+  <a class="anchor" href="#entities">#</a>
+  
+</h3>
+<p>This encapsulates enterprise wide business rules. This can be objects with methods, set of data structures and functions. Here we want all the high level rules set in stone so to say. Operational changes for example should have 0 impact on the entities.</p>
+<h3 id="use-cases">
+  Use Cases
+  
+  <a class="anchor" href="#use-cases">#</a>
+  
+</h3>
+<p>This layer contains application-specific business rules. Here we implement all the use cases of the system. Notice the location on the overview, that the Use Case layer orchestrates the flow from and to the entities layer, using the business rules to achieve the goals of use cases.</p>
+<p>Changes to the UI/DB and any common frameworks should have also 0 impact on this layer.</p>
+<p>Here we implement the actual use cases of the system., so what the application actually tries to do, achieve, automate, reach.</p>
+<p>Use cases can have a sort of &ldquo;business logic&rdquo; but that&rsquo;s decided for the application, so the application is to expected to adhere to some rules, but the core business rules have nothing to do with this.</p>
+<p>e.g. Show first screen x before continuing with step y. This has nothing to do with the core business logic and rules. Or you can not create the loan till all personal data is verified. This is what we mean with &ldquo;application specific&rdquo;. This describes how a automated system is used.</p>
+<h3 id="interface-adapters">
+  Interface Adapters
+  
+  <a class="anchor" href="#interface-adapters">#</a>
+  
+</h3>
+<p>Set of adapters that converts data from the format most convenient for the use cases to the most convenient data format for some external part, like the DB and the web. The MVC architecture of a GUI would go here.</p>
+<p>e.g. Presenters, views, controllers and Models.</p>
+<p>The awareness of what database is uses should end in this layer and not go to any deeper circle.</p>
+<p>When using other external services, again, here the transformation/mapping takes place.</p>
+<h3 id="frameworks-and-drivers">
+  Frameworks and Drivers
+  
+  <a class="anchor" href="#frameworks-and-drivers">#</a>
+  
+</h3>
+<p>This is more glue code, as we use here often external libraries or services. We convert data from some external form to the internal form used by the use cases and entities.</p>
+<h2 id="what-is-architecture">
+  What is architecture?
+  
+  <a class="anchor" href="#what-is-architecture">#</a>
+  
+</h2>
+<ul>
+<li>The strategy behind the facilitation is to leave as many options open as possible, for as long as possible.</li>
+<li>Must support
+<ul>
+<li>Use cases and operation of the system</li>
+<li>Maintenance of the system</li>
+<li>Development of the system</li>
+<li>Deployment of the system</li>
+</ul>
+</li>
+<li>Art of drawing the right boundaries/lines</li>
+<li>Minimize the human resources required to build and maintain the system.</li>
+</ul>
+<h2 id="key-notes">
+  Key notes
+  
+  <a class="anchor" href="#key-notes">#</a>
+  
+</h2>
+<ul>
+<li>Database is a detail -&gt; Is a plugin</li>
+<li>Web is a detail -&gt; Is a plugin</li>
+<li>Framework is a detail -&gt; Is a plugin</li>
+</ul>
+<h2 id="solid">
+  SOLID
+  
+  <a class="anchor" href="#solid">#</a>
+  
+</h2>
+<p>Starting from the SOLID principles, we can deduct rules, slightly redefined to apply on module level instead of lower level code. Understand that the clean architecture is largely bases on the SOLID principles and their module level equivalents that grew out of them.</p>
+<h3 id="srp-single-responsible-principle">
+  SRP: Single Responsible Principle
+  
+  <a class="anchor" href="#srp-single-responsible-principle">#</a>
+  
+</h3>
+<p>This principle is often misunderstood, originally defined as:</p>
+
+<blockquote class='book-hint '>
+  <p>A module should have one, and only one, reason to change.</p>
+</blockquote><p>But more appropiate would be:</p>
+
+<blockquote class='book-hint '>
+  <p>A module should be responsible to one, and only one actor.</p>
+</blockquote><p>This makes more sense as software changes to a specific actor (a group of users that act), these actors are the reason to change.</p>
+<p>A <em>module</em> in this definition can be a source file, but depending on the language this can be a loose definition, so let&rsquo;s call it rather a cohesive set of functions and data structures.</p>
+
+<blockquote class='book-hint '>
+  <p>Separate the code that different actors depend on.</p>
+</blockquote><h4 id="example">
+  Example
+  
+  <a class="anchor" href="#example">#</a>
+  
+</h4>
+<p>You have a <code>Employee</code> class with te functions <code>calculatePay()</code>, <code>reportHours()</code> and <code>save()</code>. This is a violation, why? The <code>calculatePay()</code> function would be used by the accountant department or the CFO. This is one actor. The <code>reportHours()</code> are relevant for HR department or the COO, this is <strong>another</strong> actor than the previous. So this class now serves different types of actors.</p>
+<p>Imagine that because of overtime, the CFO wants to change the algorithm on how to calculate the pay, but for the COO, they just want the same type of hours being reported. Here you might make changes that affect another actor&rsquo;s flow, who doesn&rsquo;t want that change. The code should be able to evolve orthogonal for the different actor types.</p>
+
+<blockquote class='book-hint '>
+  <p>Separate the code that different actors depend on.</p>
+</blockquote><p>Solution? Move the functions in separate classes and isolate the Employee data. So you end up with a <code>PayCalculator</code>, <code>HourReporter</code> and <code>EmployeeSaver</code> class alongside the <code>Employee</code> class.</p>
+<p>With a simple facade you can still bring all these functions in a simple class that provides all the functionality, like a <code>EmployeeFacade</code>.</p>
+<h3 id="ocp-open-closed-principle">
+  OCP: Open Closed Principle
+  
+  <a class="anchor" href="#ocp-open-closed-principle">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <p>A software artifact should be open for extension, but closed for modification.</p>
+</blockquote><p>Architects separate functionality based on how, why and when something changes, then organize that separated functionality in a hierarchy of components. Higher level components in that hierarchy are protected from the changes made to lower-level components.</p>
+<p>This principle is mainly to protect changes in one component to another component. This is done by arranging components in a dependency hierarchy that protects higher-level components form changes in lower level components.</p>
+<h3 id="lsp-liskov-substitution-principle">
+  LSP: Liskov Substitution Principle
+  
+  <a class="anchor" href="#lsp-liskov-substitution-principle">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <p>What is wanted here is something like the following substitution property: if for each object o1 of type S there is an object 02 of type T such that for all programs P defined in terms of T, the behavior of P is unchanged when o1 is substituted for o2 then S is a subtype of T.
+This rule is a good guide in asserting if the inheritance makes sense between two types. This principle easily translates to an architectural level.</p>
+</blockquote><p>Imagine calling 4 different API&rsquo;s that should follow a spec, but one doesn&rsquo;t. Now you have to create special code for the exceptions, clearly, there is not simple substitution possible.</p>
+<h4 id="example-good">
+  Example: Good
+  
+  <a class="anchor" href="#example-good">#</a>
+  
+</h4>
+<p>We have an interface <code>License</code> and we have then two classes <code>Personal License</code> and <code>Business License</code>. They both can implement the <code>calculateFee()</code> function without weird unexpected side effects.</p>
+<h4 id="example-bad">
+  Example: Bad
+  
+  <a class="anchor" href="#example-bad">#</a>
+  
+</h4>
+<p>We have a class <code>Rectangle</code> with <code>setHeight</code> and <code>setWidth</code>, a <code>Square</code> should not inherit/subclass the rectangle. Because there you should have a function <code>setSide()</code>. Now the user needs to be aware that:</p>
+<pre tabindex="0"><code>Rectange r = ...
+r.setWidth(5);
+r.setHeight(2);
+assert(r.area() == 10); // This will fail, and come as a surprise
+</code></pre><p>the <code>Square</code> is not a suitable subtype of <code>Rectangle</code> in this solution.</p>
+<h3 id="isp-interface-segregation-principle">
+  ISP: Interface Segregation Principle
+  
+  <a class="anchor" href="#isp-interface-segregation-principle">#</a>
+  
+</h3>
+<p>The ISP is a bit of a language depending principle, dynamic typed languages might not suffer as much of the violations of this principle.</p>
+<p>The idea is not to pollute an interface with too many responsibilities which are not cohesive or relevant to each other. You might force certain code and modules to be too much aware or create unnecessary dependencies because of a polluted interact. You might have to depend on more than you need, meaning, unnecessary dependencies.</p>
+<p>This might cause unnecessary recompilations.</p>
+<h3 id="dip-dependency-inversion-principle">
+  DIP: Dependency Inversion Principle
+  
+  <a class="anchor" href="#dip-dependency-inversion-principle">#</a>
+  
+</h3>
+
+<blockquote class='book-hint '>
+  <p>The most flexible systems are those in which source code dependencies refer only to abstractions, not to concretions.</p>
+</blockquote><p>In a statically typed language this means <code>use</code>, <code>import</code> and <code>include</code> statements should refer only to source modules containing <code>interacts</code>, <code>abstract classes</code> or other kind of abstract declaration.</p>
+<p>In dynamic languages, same applies, only it is harder to define what is &ldquo;abstract&rdquo;.</p>
+<p>Note that <code>String</code> is a concrete dependency, but has a very low volatile characteristic, so this should be a safe dependency, unlike other more volatile elements. Usually these are systems we are actively developing or external services.</p>
+<p>As it is often the implementation that changes a lot and not the interface, the interfaces are less volatile than the concrete implementations.</p>
+<ul>
+<li>Don&rsquo;t refer to volatile concrete classes.</li>
+<li>Don&rsquo;t derive from volatile concrete classes.</li>
+<li>Don&rsquo;t override concrete functions.</li>
+<li>Never mention the name of anything concrete and volatile.</li>
+</ul>
+<p>Remember: Concrete implementations require more dependencies.</p>
+<p>A good solution is <code>Abstract Factories</code>, factories that create instances of a service for example.</p>
+<p>Usually DIP violations can not be entirely removed, but should be limited.</p>
+<h2 id="component-principles">
+  Component Principles
+  
+  <a class="anchor" href="#component-principles">#</a>
+  
+</h2>
+<h3 id="component-cohesion">
+  Component Cohesion
+  
+  <a class="anchor" href="#component-cohesion">#</a>
+  
+</h3>
+<p>Principles for which classes belong in which components.</p>
+<h4 id="rep-the-reuserelease-equivalence-principle">
+  REP: The Reuse/Release Equivalence Principle
+  
+  <a class="anchor" href="#rep-the-reuserelease-equivalence-principle">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>The granule of reuse os the granule of release.</p>
+</blockquote><ul>
+<li>Use a release process with release numbers, else reuse is impossible.</li>
+<li>Classes and modules that are grouped together should be releasable together.</li>
+</ul>
+<p>Consider googling more on this principle.</p>
+<h4 id="ccp-the-common-closure-principle">
+  CCP: The Common Closure Principle
+  
+  <a class="anchor" href="#ccp-the-common-closure-principle">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Gather into components those classes that change for the same reasons and at the same time. Separate into different components those classes that change at different times and for different reasons.</p>
+</blockquote>
+<blockquote class='book-hint '>
+  <p>Gather together those things that change at the same times and for the same reasons. Separate those things that change at different times or for different reasons.</p>
+</blockquote><p>This is <strong>SRP (Single Responsibility Principe) for components</strong>.</p>
+<ul>
+<li>Most applications, maintainability is more important than reusability.</li>
+<li>Remember, don&rsquo;t overdo DRY.</li>
+<li>Place code together that can&rsquo;t move orthogonally from each other and always moves in parallel.</li>
+<li>Also associates with the <strong>OCP (Open Closed Principle)</strong>.</li>
+</ul>
+<h4 id="crp-the-common-reuse-principle">
+  CRP: The Common Reuse Principle
+  
+  <a class="anchor" href="#crp-the-common-reuse-principle">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Don&rsquo;t force users of a component to depend on things they don&rsquo;t need.</p>
+</blockquote>
+<blockquote class='book-hint '>
+  <p>Don&rsquo;t depend on things you don&rsquo;t need.</p>
+</blockquote><p>When one component uses another, a dependency is created between the components. Perhaps the using components uses only one class within the used component, but that still doesn&rsquo;t weaken the dependency. The using components still depends on the used component.</p>
+<p>Because of the dependency, every time the used component is changed, the using component will likely need corresponding changes. Even if no changes are necessary to the using component, you still might need to recompile, revalidate an redeploy.</p>
+<p><strong>This principle tells us more about which classes shouldn&rsquo;t be together than which classes should be together</strong>.</p>
+<p>This is <strong>ISP (Interface Segregation Principle) for components</strong>.</p>
+<h4 id="finding-the-balance">
+  Finding the balance
+  
+  <a class="anchor" href="#finding-the-balance">#</a>
+  
+</h4>
+<p>So we have the following principles for component cohesion:</p>
+<ul>
+<li>REP: The Reuse/Release Equivalence Principle (Tends to make components larger)</li>
+<li>CCP: The Common Closure Principle (Tends to make components larger)</li>
+<li>CRP: The Common Reuse Principle (Tends to make component smaller)</li>
+</ul>
+<p>And they tend to find with each other. A good architect finds a position in that tension triangle that meets the <em>current</em> concerns of the development team, but is also aware that those concerns will change over time. For example, early in the development of a project, the CCP is much more important than the REP, because developability is more important than reuse.</p>
+<p>Generally projects tend to start on the right hand side of the triangle. As it matures, and other projects begin to draw from it, it will slide over to the left.</p>
+<p><img src="../attachments/component_cohesion.jpg" alt="alt text" /></p>
+<h3 id="component-coupling">
+  Component Coupling
+  
+  <a class="anchor" href="#component-coupling">#</a>
+  
+</h3>
+<p>Deals with relationships between components. Same as cohesion, there will be tension between developability and logical design.</p>
+<h4 id="adp-acyclic-dependencies-principle">
+  ADP: Acyclic Dependencies Principle
+  
+  <a class="anchor" href="#adp-acyclic-dependencies-principle">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Allow no cycles in the component dependency graph.</p>
+</blockquote><p>Solution is often to partition the development environment in releasable components. Use semver to release these components, so other developers can that depend on them can choose when to upgrade.</p>
+
+<blockquote class='book-hint '>
+  <p>There can be no cycles.</p>
+</blockquote><p>Solutions</p>
+<ul>
+<li>Apply the DIP (Dependency Inversion Principle)</li>
+<li>Create a new component that depends on the two components that have a cyclic dependency.</li>
+</ul>
+<h4 id="top-down-design">
+  Top-Down Design
+  
+  <a class="anchor" href="#top-down-design">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>The component structure cannot be designed from the top down.</p>
+</blockquote><h4 id="stable-dependencies-principle">
+  Stable Dependencies Principle
+  
+  <a class="anchor" href="#stable-dependencies-principle">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>Depend in the direction of stability.</p>
+</blockquote><p>Some components are expected to be volatile, while others aren&rsquo;t. This is important to take in consideration to see which components will depend on other components.</p>
+<p><em>Stability has nothing directly to do with frequency of change. Rather to the amount of work required to make a change.</em></p>
+<p>How does that happen, by having many other components depend on it. If you have a component <code>x</code> that has 3 other components depend on it, it has three good reasons not to change. As <code>x</code> is <em>responsible</em> for those 3 components. But if component <code>x</code> depends on nothing, it&rsquo;s considered a <code>independent</code> component.</p>
+<p>When we have a component <code>y</code> that depends on 3 separate components. So <code>y</code> is dependent, but also <em>irresponsible</em>, as it&rsquo;s not responsible for any other components that depend on it. This is also considered a unstable component.</p>
+
+<blockquote class='book-hint '>
+  <p>The metric I of a component should be larger than the I metrics of the components it depends on. That is, I metrics should decrease  in the direction of dependency.</p>
+</blockquote><p>Often, we can fix violations on the rule with the DIP. In Static languages you might end up with abstract components, where there are only abstractions.</p>
+<p><strong>Stability Metrics</strong></p>
+<p>How can we quantify the stability of a component?</p>
+<p>One way way is to count the # of dependencies that enter and leave the component. This will give us a <strong>positional stability</strong>.</p>
+<ul>
+<li>Fan-in: Incoming dependencies.</li>
+<li>Fan-out: Outgoing dependencies.</li>
+<li>I: <code>Instability = Fan-Out / Fan-In</code>.
+<ul>
+<li>I = 1 : Max instability</li>
+<li>I = 0 : Max stability</li>
+</ul>
+</li>
+</ul>
+<p>Note that &ldquo;dependencies&rdquo; are counted by the amount of classes are depended on. If a component <code>x</code> depends on <code>2</code> classes in component <code>y</code>, this means the fan-in is <code>2</code> between the two components, not <code>1</code>.</p>
+<h4 id="sap-stable-abstractions-principle">
+  SAP: Stable Abstractions Principle
+  
+  <a class="anchor" href="#sap-stable-abstractions-principle">#</a>
+  
+</h4>
+
+<blockquote class='book-hint '>
+  <p>A component should be as abstract as it is stable.</p>
+</blockquote><p>Some software should not change very often. This represents high-level architecture and policy decisions. We don&rsquo;t want these business and architectural decisions to be volatile (notice Entities in the center). So these components should be <code>I = 0</code>, meaning stable. Unstable components <code>I = 1</code> should contain only software that is volatile (in outer layers).</p>
+<p>This is <strong>OCP (Open Closed Principle) for components</strong>.</p>
+
+<blockquote class='book-hint '>
+  <p>On the one hand, a stable component should also be abstract so that its stability does not prevent it from being extended. On the other hand, an unstable component should be concrete since its instability allows the code within to be easily changed.</p>
+</blockquote><p>If a component is to be stable, it should consist of interfaces and abstract classes so that it can be extended.</p>
+
+<blockquote class='book-hint '>
+  <p>The (SAP) Stable Abstraction Principle  and the (SDP) Stable Dependency Principe combined amount to the (DIP) Dependency Inversion Principe for components. Stable Dependency Principle (SDP) says that dependencies should run in the direction of stability, and the Stable Abstractions Principe (SAP) says that stability implies abstraction. Thus dependencies run in the direction of abstraction.</p>
+</blockquote><p>The combination of SAP and SDP allows a component to be partially abstract and partially stable.</p>
+<p><strong>Measuring Abstraction</strong></p>
+<p><code>A</code> metric quantifies the abstractness of a component.</p>
+<ul>
+<li>Nc: The number or classes in the component (concrete code).</li>
+<li>Na: The number of abstract classes or Interfaces in the component.</li>
+<li>A: <code>Abstractness = Na / Nc</code>
+<ul>
+<li><code>A = 1</code> : Max abstractness.</li>
+<li><code>A = 0</code> : Max concreteness.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Relation Abstraction (A) and Instability (I)</strong></p>
+<p><img src="../attachments/abstract_instability.jpg" alt="alt text" /></p>
+<p>The zones of exclusion:</p>
+<ul>
+<li><strong>The Zone of Pain</strong> : Highly stable and concrete. Cannot be extend because there is not abstraction, and hard to change because it is stable. So read, a lot of concrete code that is depended on.</li>
+<li><strong>The Zone of Uselessness</strong> : Means it&rsquo;s max abstract, but no one depends on it, making it useless.</li>
+</ul>
+
+<blockquote class='book-hint '>
+  <p>Some entities in fact fail in the Zone of Pain. Like database schema. They are volatile, extremely concrete and highly depended on. This is why the interface between OO and databases is difficult to manage and why schema updates are generally painful. Another example is <code>String</code>, this is very stable, but no abstractions. But as it&rsquo;s so commonly used, we can consider it nonvolatile. Nonvolatile components in the zone of pain are harmless. One could consider the level of volatility to be a Z axis.</p>
+</blockquote><p>Ideally we try to have our components on the <strong>Main Sequence</strong> which have ideal balance. Most desirable tho is to be on a endpoint of the main sequence.</p>
+<p><strong>Distance from the Main Sequence</strong></p>
+<p>This helps us measure how far a component is from the ideal. We do this to calculate the distance <code>D</code> from the main sequence.</p>
+<p><code>D = |A + I - 1|</code></p>
+<ul>
+<li><code>D = 0</code> on the Main Sequence</li>
+<li><code>D = 1</code> furthest away from the Main Sequence.</li>
+<li>Any <code>D &gt; 0.1</code> is worth finding out why it&rsquo;s so far from the main sequence.</li>
+</ul>
+<h4 id="conclusion">
+  Conclusion
+  
+  <a class="anchor" href="#conclusion">#</a>
+  
+</h4>
+<p>The metrics <code>A</code>, <code>I</code> and <code>D</code> are good guidelines to measure how well we comply with the Component coupling principles, but a metric is not a god. This is an arbitrary stand, they are imperfect, but they can be useful.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/software-architecture/topics/best-practices/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Best Practices" />
+        <span>Best Practices</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/software-architecture/topics/components/" class="flex align-center">
+        <span>Components</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Components" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#general-overview">General Overview</a>
+      <ul>
+        <li><a href="#dependency-rule">Dependency Rule</a></li>
+        <li><a href="#entities">Entities</a></li>
+        <li><a href="#use-cases">Use Cases</a></li>
+        <li><a href="#interface-adapters">Interface Adapters</a></li>
+        <li><a href="#frameworks-and-drivers">Frameworks and Drivers</a></li>
+      </ul>
+    </li>
+    <li><a href="#what-is-architecture">What is architecture?</a></li>
+    <li><a href="#key-notes">Key notes</a></li>
+    <li><a href="#solid">SOLID</a>
+      <ul>
+        <li><a href="#srp-single-responsible-principle">SRP: Single Responsible Principle</a></li>
+        <li><a href="#ocp-open-closed-principle">OCP: Open Closed Principle</a></li>
+        <li><a href="#lsp-liskov-substitution-principle">LSP: Liskov Substitution Principle</a></li>
+        <li><a href="#isp-interface-segregation-principle">ISP: Interface Segregation Principle</a></li>
+        <li><a href="#dip-dependency-inversion-principle">DIP: Dependency Inversion Principle</a></li>
+      </ul>
+    </li>
+    <li><a href="#component-principles">Component Principles</a>
+      <ul>
+        <li><a href="#component-cohesion">Component Cohesion</a></li>
+        <li><a href="#component-coupling">Component Coupling</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

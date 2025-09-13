@@ -1,0 +1,2872 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Security Assesment and Testing
+  
+  #
+  
+
+
+  Vulnerability Management
+  
+  #
+  
+
+Definition: Identify, prioritize and remediate vulnerabilities in your environment(s).
+
+Identify Scan Targets
+
+The scope depends, it can be all systems or depending on some critercia:
+
+What is the data classification of the information at-rest/in-transit/in-use by the system?
+Is the system publicly exposed?
+What services are running on the system?
+Is it dev/staging/prod?
+
+
+Key goal: Build an asset inventory and then decide to which subset the scope reaches.
+ASV: Approved Scan Vendor (in case of PCI DSS compliance)
+
+
+Determin Scan Frequency
+
+How often should they run?
+Influenced by
+
+Risk appetite
+Regulatory Requirements - Like PCI DSS or FISMA that dictate a minimum frequency
+Technical Constraints - If a test takes 12h, you can only run 2/day.
+Business Constraints - Scans might cause disruptions that are not acceptable.
+Licensing limitations
+
+
+TIP: Start Small and increase based on needs, feedback and experience.
+Examples: Nesus
+
+
+Configuring Vulnerability Scans
+
+Scan Sensitivity Levels - Determine the types of check, but could disrupt target environments if too agressive
+
+1 distinct vulnerability = 1 plugin
+1 plugin family = 1 OS, application, &hellip;
+Disabling unnecessary plugins improves speed
+
+
+Supplementing Network Scans
+
+Server-based scanning: Basic test run and probe over the network, testing from a distance - simulates realistically what an attacker sees. (ala Server-based scanning)
+Firewalls and other security controls might impact the scan results.
+Supplement server-based scans with extra information of the targets/systems
+
+Credentialed Scanning: Scanner can verify first with a system if possible vulnerability is already mitigated (e.g. right patch installed). They only retrieve info, so make sure there is read only access (least privlege) for the used credentials.
+Agent-Bases Scanning: Scan configuration, inside-out scan, and report back to scanner.
+
+Some fear the performance/stability impact of such agents, start small to gain trust and confidence
+
+
+
+
+
+
+Scan Perspective
+
+A perspective: A specific location within the network, so you can run tests from different &ldquo;perspectives&rdquo;.
+Example: One perspective is public internet, Other perspective from the intranet. (PCI DSS requires this)
+Might be impacted by
+
+Firewall settongs
+Network segmentation
+Intrusion detection systems (IDSs)
+Intrusion prevention systems (IPSs)
+
+
+
+
+
+
+Scanner Maintenance
+
+Make sure that vulnerability feeds are up-to-date
+
+
+Scanner software
+
+Make sure to patch the scanner software itself, for vulnerabilities.
+
+
+Vulnerability Plug-In Feeds
+
+Automatically and regularrly auto download new plugs related to new vulnerabilities.
+Security Content Automation Protocol (SCAP) - by NIST, Standerized way of communicating security-related information
+
+Common Configuration Enumeration (CGE) - discuss system config issues
+Common Platform Enumeration (CGE) - describe product names and versions
+Common Vulnerabilities and Exposures (CVE) - describe security-related software flaws (before: Common Vulnerability Enumeration)
+Common Vulnerability Scoring System (CVSS) - describe severity of CVE&rsquo;s
+Common Configuration Checklist Description Format (XCCDF) - describe checklists and reporting results of said checklists
+Open Vulnerability and Assesment Language (OVAL) - describe low level testing procedures by said checklists
+
+
+
+
+Vulnerability Scanning Tools
+
+Network Vulnerability scanners - Tenable&rsquo;s Nessus, Qualy, Rapid7&rsquo;s Nexpose, OpenVAS
+Application Vulnerability Scanners - Static Testing (the code), Dynamic Testing (runtime), Interactive Testing (combining both)
+Web Application Vulnerability Scanners - Niko, Arachimi, Acunetix and Zed Attach Proxy (ZAP)
+
+Specialized in WEB applications and their typical vulnerabilities
+
+Cross-Site Scripting (XSS)
+Cross-Site Forgery (XSF)
+SQL Injection
+Etc
+
+
+
+
+
+
+Understanding CVSS (v3.1)
+
+This scored is often used to priorite what to act on first.
+from 0 to 10 rating
+
+0.0 - None
+0.1 -&gt; 3.9 - Low
+4.0 -&gt; 6.9 - Medium
+7.0 -&gt; 8.9 - High
+9.0 -&gt; 10 - Critical
+
+
+Calculated by
+
+3 metrics types
+
+First 4 evaluate the exploitability
+Next 3 evaluates the impact
+Last 1 evaluates the scope scope
+
+
+8 distrinct metrics
+
+Attack Vector (exploitability) - Need to be physcally there or can it be remotly?
+Attack Complexity (exploitability) - Do I need specialized conditions ?
+Privileges Required (exploitability) - What privileges do I need  ?
+User Interaction (exploitability) - is another human required ?
+Confidentiality (impact)
+Integrity (impact)
+Availability (impact)
+Scope
+
+
+The total score (and other derivates) can be computed, as the individual scores are in the CVSS format.
+Example CVSS Vector: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+
+CVSS Format v3.0
+Attack Vector Network
+Attack Complexity Low
+Privileges Required None
+User Interaction None
+Scope Unchanged
+Confidentiality High
+Integrity None
+Availability None
+
+
+
+
+
+
+Confirmation of Scan Results
+
+When a vulnerability is present: Possitive report
+When a vulnerability is not present: Negative report
+A positive or negative report can be &ldquo;false&rdquo; if an error occurd and the opposite is true
+Don&rsquo;t trust only the results, do supplementary research and verifications with sources like
+
+Log files
+Security Information and Event Management (SIEM) - corrolate log files from different sources
+Configuration Management Systems - provide info on systems and what&rsquo;s installed on them
+
+
+
+
+
+
+  Vulnerability Classification
+  
+  #
+  
+
+
+Patch Management - Often ignored due to lack of resources or &ldquo;Fear&rdquo; of change/instability
+Legacy Platforms - Discontinued products, Often ignored due to lack of resources or &ldquo;Fear&rdquo; of change/instability
+Weak Configurations
+
+Use of default config (admin/setup page still exposed)
+Default credentials or unsecured accounts
+Open service ports (but unused)
+Permissions that violate the least privilege
+
+
+Error Messages - Descriptive error messages, useful to the attacker, especially if debug mode is still on
+Insecure Protocols - Discontinued or old protocol versions
+Weak Encryption
+
+Most important:
+
+The algorithm
+The key that goes with it
+
+
+
+
+
+
+  Penetration Testing
+  
+  #
+  
+
+
+Adopting the Hacker Mindset - Instead of defending against everything, you just need to find one little crack, you only need to win once
+
+Taking an adversary mindset
+
+
+Reasons for Penetration Testing
+
+Complentary to all other efforts, and brings another angle.
+
+
+Benefits of Penetration Testing
+
+Benchmark: someone with the skillset of this pen tester can or cannot get in
+Get remediation tips and insights
+Get step by step insights on how to reproduce vulnerabilities
+Threat Hunting is also using a hacker mindset, but you don&rsquo;t test against the live system,
+
+They imagine on how a hacker might have getting around a security control, what evidence they might leave behind and then search for proof (IoCs).
+THis outputs usually different results.
+If they find compromise, go incident handling mode, and create postmortem.
+
+
+
+
+Penetration Test Types
+
+4 Categories
+
+Physical - focus on physical security controls
+Offensive - By redteam - Pentester acts as attackers to identify and exploit
+Defensive - By blueteam - Focus on ability to defend against attacks and assses the effectiveness, so they can simulatee an attack and then see if they&rsquo;re able to respond well.
+Integrated - Combines Offensive and Defensive
+
+
+
+
+3 types of knowledge before starting
+White/Clear Box or Known Environment tests - All tech information provided
+
+Less time on discovery, more time for targetted efforts of attack.
+
+
+Grey Box or partially known Environment tests - A blend
+
+Helps to target a pentesters focus and time but still to a degree mimick the experience for a hacker.
+
+
+Black Box or unknown Environment tests -
+
+More real life situation that an attacker experiences, so more discovery and more time consuming.
+
+
+Rules Of Engagement (RoE)
+
+Timeline - When, how long?
+Scop - Inclide/exclude locations, systems, applications, or other potential targets
+Data Handling requirements - How to handle an information that got disclosed during the pentest
+Target Expected Behavior - What behavior to expect from the target
+Commited Resources - Time commitment of certain personal during the testing
+Legal concerns
+When and how communications happen - regular updates? What if a critical issue is found ? etc&hellip;
+Permission: Make sure to have a signed permission, your free out of jail card when getting caught or things go south.
+
+
+Reconnaissance
+
+Even in white box, reconnaissance is done to supplement.
+Passive reconnaisance - gather info without interacting with the target or organization
+Active reconnaisance - directly engage, like port scanning etc&hellip;
+
+Footprinting: Scanning which servers are used and versions
+
+
+War Driving/Flying - Drive/Fly by office with high-end antennas and attempt to eavesdrop or connect to WIFI.
+
+
+Running the test - Key phases
+
+Initial Access - when attacker exploits a vulberability to gain access to the organization&rsquo;s network.
+Privilege Escalation - using hacking techniques to elevate from initial access.
+Pivot/lateral move - hacker gains access to other systems from the initial compromised system
+Establish persistance - Installing backdoors  and other techniques that allows to regain access at a later stage.
+Metasploit
+
+
+Cleaning Up
+
+Present results
+Cleanup traves of their work
+Remove any tools or malware they might have installed
+
+
+
+
+  Audits and Assesments
+  
+  #
+  
+
+
+Security Tests - Verify that a control is functioning properly
+
+Should happen regular
+Focus on the key security controls
+Asses following factors when scheduling a test
+
+Availability of security testing resources
+Criticality of the systems and appliications protected by the tested controls
+Sensitivity of information contained on tested systems and applications.
+Likelihood of technical failure of the mechanism implementing the control.
+Likelihood of a misconfiguratiin on the control that would jeopardize security.
+Risk that the system will come under attack
+Other changes the technical env that might affect control performance.
+Difficulty and time required to perform a control test
+Impact of the test on normal business operation
+
+
+TL;DR; Design your tests rigourisly
+Responsible Disclosure Programs
+
+Allows security researchers to securily info about vulnerabilities in a product with the vendor.
+Bug bounties is a form of this
+
+
+
+
+Security Assesments - Comprehesive review of the security of a give scope
+
+Perform risk assesment of a said scope
+
+
+Security Audits - External/impartial people who test the security controls
+
+Uses similar techniques as security assesments
+Results in an attestation (good for certification)
+With internal auditing, the auditors have a different line of reporting than the security team.
+Requested by the organization itself or its governing body
+Service Organized Controls (SOC)
+External audits are for attestation
+
+Independent Third Party Audits are a subgroup
+
+Here the request for the audit comes from a regulator, customer or other outside entity.
+
+
+
+
+Auditing Standards
+
+Control Objectives for Information and related Technologies (COBIT) - requirements surrounding information systems
+
+Maintainted by ISACA which also created CISA (Certified Information Systems Auditor), CISM (Certified Information Security Manager)
+
+
+
+
+
+
+
+
+  Vulnerability Life Cycle
+  
+  #
+  
+
+
+Vulnerability Identification
+
+Potential Sources: Vulnerability scans, pentration tests, Responisble disclosure, Audits
+
+
+Vulnerability Analysis
+
+Validate if it exists
+Prioritize and categorize using CVE and CVSS
+Supplement with external analysis
+
+
+Vulnerability Response and Remediation
+
+Based on scoring, we can guide which are most in need of remediation
+Some examples how Cybersecurity specialists deal with it:
+
+Patching
+Network segmentation to decrease the risk
+Implement other compensating controls (Firewalls, IPS,&hellip;)
+Purchase insurance to transfer risk
+Formally accept risk
+
+
+
+
+Vulnerability of Remediation
+
+Test by rescanning or reproducing
+Might need to be done by external auditors
+
+
+Reporting
+
+Communicate findings, action taken, lessons learned to relevant stakeholders. Make sure decisions makers are informed.
+May include:
+
+Identified, analyzed and remediated vulnberabilities with CVE/CVSS
+Details on remediation steps
+Highlight trends, conclusions, insights
+Offer recommendations for improvement
+
+
+
+
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/cybersecurity/security-assesment-and-testing/">
+  <meta property="og:site_name" content="Knowledgebase">
+  <meta property="og:title" content="Knowledgebase">
+  <meta property="og:description" content="Security Assesment and Testing # Vulnerability Management # Definition: Identify, prioritize and remediate vulnerabilities in your environment(s).
+Identify Scan Targets The scope depends, it can be all systems or depending on some critercia: What is the data classification of the information at-rest/in-transit/in-use by the system? Is the system publicly exposed? What services are running on the system? Is it dev/staging/prod? Key goal: Build an asset inventory and then decide to which subset the scope reaches. ASV: Approved Scan Vendor (in case of PCI DSS compliance) Determin Scan Frequency How often should they run? Influenced by Risk appetite Regulatory Requirements - Like PCI DSS or FISMA that dictate a minimum frequency Technical Constraints - If a test takes 12h, you can only run 2/day. Business Constraints - Scans might cause disruptions that are not acceptable. Licensing limitations TIP: Start Small and increase based on needs, feedback and experience. Examples: Nesus Configuring Vulnerability Scans Scan Sensitivity Levels - Determine the types of check, but could disrupt target environments if too agressive 1 distinct vulnerability = 1 plugin 1 plugin family = 1 OS, application, … Disabling unnecessary plugins improves speed Supplementing Network Scans Server-based scanning: Basic test run and probe over the network, testing from a distance - simulates realistically what an attacker sees. (ala Server-based scanning) Firewalls and other security controls might impact the scan results. Supplement server-based scans with extra information of the targets/systems Credentialed Scanning: Scanner can verify first with a system if possible vulnerability is already mitigated (e.g. right patch installed). They only retrieve info, so make sure there is read only access (least privlege) for the used credentials. Agent-Bases Scanning: Scan configuration, inside-out scan, and report back to scanner. Some fear the performance/stability impact of such agents, start small to gain trust and confidence Scan Perspective A perspective: A specific location within the network, so you can run tests from different “perspectives”. Example: One perspective is public internet, Other perspective from the intranet. (PCI DSS requires this) Might be impacted by Firewall settongs Network segmentation Intrusion detection systems (IDSs) Intrusion prevention systems (IPSs) Scanner Maintenance Make sure that vulnerability feeds are up-to-date Scanner software Make sure to patch the scanner software itself, for vulnerabilities. Vulnerability Plug-In Feeds Automatically and regularrly auto download new plugs related to new vulnerabilities. Security Content Automation Protocol (SCAP) - by NIST, Standerized way of communicating security-related information Common Configuration Enumeration (CGE) - discuss system config issues Common Platform Enumeration (CGE) - describe product names and versions Common Vulnerabilities and Exposures (CVE) - describe security-related software flaws (before: Common Vulnerability Enumeration) Common Vulnerability Scoring System (CVSS) - describe severity of CVE’s Common Configuration Checklist Description Format (XCCDF) - describe checklists and reporting results of said checklists Open Vulnerability and Assesment Language (OVAL) - describe low level testing procedures by said checklists Vulnerability Scanning Tools Network Vulnerability scanners - Tenable’s Nessus, Qualy, Rapid7’s Nexpose, OpenVAS Application Vulnerability Scanners - Static Testing (the code), Dynamic Testing (runtime), Interactive Testing (combining both) Web Application Vulnerability Scanners - Niko, Arachimi, Acunetix and Zed Attach Proxy (ZAP) Specialized in WEB applications and their typical vulnerabilities Cross-Site Scripting (XSS) Cross-Site Forgery (XSF) SQL Injection Etc Understanding CVSS (v3.1) This scored is often used to priorite what to act on first. from 0 to 10 rating 0.0 - None 0.1 -&gt; 3.9 - Low 4.0 -&gt; 6.9 - Medium 7.0 -&gt; 8.9 - High 9.0 -&gt; 10 - Critical Calculated by 3 metrics types First 4 evaluate the exploitability Next 3 evaluates the impact Last 1 evaluates the scope scope 8 distrinct metrics Attack Vector (exploitability) - Need to be physcally there or can it be remotly? Attack Complexity (exploitability) - Do I need specialized conditions ? Privileges Required (exploitability) - What privileges do I need ? User Interaction (exploitability) - is another human required ? Confidentiality (impact) Integrity (impact) Availability (impact) Scope The total score (and other derivates) can be computed, as the individual scores are in the CVSS format. Example CVSS Vector: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N CVSS Format v3.0 Attack Vector Network Attack Complexity Low Privileges Required None User Interaction None Scope Unchanged Confidentiality High Integrity None Availability None Confirmation of Scan Results When a vulnerability is present: Possitive report When a vulnerability is not present: Negative report A positive or negative report can be “false” if an error occurd and the opposite is true Don’t trust only the results, do supplementary research and verifications with sources like Log files Security Information and Event Management (SIEM) - corrolate log files from different sources Configuration Management Systems - provide info on systems and what’s installed on them Vulnerability Classification # Patch Management - Often ignored due to lack of resources or “Fear” of change/instability Legacy Platforms - Discontinued products, Often ignored due to lack of resources or “Fear” of change/instability Weak Configurations Use of default config (admin/setup page still exposed) Default credentials or unsecured accounts Open service ports (but unused) Permissions that violate the least privilege Error Messages - Descriptive error messages, useful to the attacker, especially if debug mode is still on Insecure Protocols - Discontinued or old protocol versions Weak Encryption Most important: The algorithm The key that goes with it Penetration Testing # Adopting the Hacker Mindset - Instead of defending against everything, you just need to find one little crack, you only need to win once Taking an adversary mindset Reasons for Penetration Testing Complentary to all other efforts, and brings another angle. Benefits of Penetration Testing Benchmark: someone with the skillset of this pen tester can or cannot get in Get remediation tips and insights Get step by step insights on how to reproduce vulnerabilities Threat Hunting is also using a hacker mindset, but you don’t test against the live system, They imagine on how a hacker might have getting around a security control, what evidence they might leave behind and then search for proof (IoCs). THis outputs usually different results. If they find compromise, go incident handling mode, and create postmortem. Penetration Test Types 4 Categories Physical - focus on physical security controls Offensive - By redteam - Pentester acts as attackers to identify and exploit Defensive - By blueteam - Focus on ability to defend against attacks and assses the effectiveness, so they can simulatee an attack and then see if they’re able to respond well. Integrated - Combines Offensive and Defensive 3 types of knowledge before starting White/Clear Box or Known Environment tests - All tech information provided Less time on discovery, more time for targetted efforts of attack. Grey Box or partially known Environment tests - A blend Helps to target a pentesters focus and time but still to a degree mimick the experience for a hacker. Black Box or unknown Environment tests - More real life situation that an attacker experiences, so more discovery and more time consuming. Rules Of Engagement (RoE) Timeline - When, how long? Scop - Inclide/exclude locations, systems, applications, or other potential targets Data Handling requirements - How to handle an information that got disclosed during the pentest Target Expected Behavior - What behavior to expect from the target Commited Resources - Time commitment of certain personal during the testing Legal concerns When and how communications happen - regular updates? What if a critical issue is found ? etc… Permission: Make sure to have a signed permission, your free out of jail card when getting caught or things go south. Reconnaissance Even in white box, reconnaissance is done to supplement. Passive reconnaisance - gather info without interacting with the target or organization Active reconnaisance - directly engage, like port scanning etc… Footprinting: Scanning which servers are used and versions War Driving/Flying - Drive/Fly by office with high-end antennas and attempt to eavesdrop or connect to WIFI. Running the test - Key phases Initial Access - when attacker exploits a vulberability to gain access to the organization’s network. Privilege Escalation - using hacking techniques to elevate from initial access. Pivot/lateral move - hacker gains access to other systems from the initial compromised system Establish persistance - Installing backdoors and other techniques that allows to regain access at a later stage. Metasploit Cleaning Up Present results Cleanup traves of their work Remove any tools or malware they might have installed Audits and Assesments # Security Tests - Verify that a control is functioning properly Should happen regular Focus on the key security controls Asses following factors when scheduling a test Availability of security testing resources Criticality of the systems and appliications protected by the tested controls Sensitivity of information contained on tested systems and applications. Likelihood of technical failure of the mechanism implementing the control. Likelihood of a misconfiguratiin on the control that would jeopardize security. Risk that the system will come under attack Other changes the technical env that might affect control performance. Difficulty and time required to perform a control test Impact of the test on normal business operation TL;DR; Design your tests rigourisly Responsible Disclosure Programs Allows security researchers to securily info about vulnerabilities in a product with the vendor. Bug bounties is a form of this Security Assesments - Comprehesive review of the security of a give scope Perform risk assesment of a said scope Security Audits - External/impartial people who test the security controls Uses similar techniques as security assesments Results in an attestation (good for certification) With internal auditing, the auditors have a different line of reporting than the security team. Requested by the organization itself or its governing body Service Organized Controls (SOC) External audits are for attestation Independent Third Party Audits are a subgroup Here the request for the audit comes from a regulator, customer or other outside entity. Auditing Standards Control Objectives for Information and related Technologies (COBIT) - requirements surrounding information systems Maintainted by ISACA which also created CISA (Certified Information Systems Auditor), CISM (Certified Information Security Manager) Vulnerability Life Cycle # Vulnerability Identification Potential Sources: Vulnerability scans, pentration tests, Responisble disclosure, Audits Vulnerability Analysis Validate if it exists Prioritize and categorize using CVE and CVSS Supplement with external analysis Vulnerability Response and Remediation Based on scoring, we can guide which are most in need of remediation Some examples how Cybersecurity specialists deal with it: Patching Network segmentation to decrease the risk Implement other compensating controls (Firewalls, IPS,…) Purchase insurance to transfer risk Formally accept risk Vulnerability of Remediation Test by rescanning or reproducing Might need to be done by external auditors Reporting Communicate findings, action taken, lessons learned to relevant stakeholders. Make sure decisions makers are informed. May include: Identified, analyzed and remediated vulnberabilities with CVE/CVSS Details on remediation steps Highlight trends, conclusions, insights Offer recommendations for improvement">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="cybersecurity">
+<title>Security Assesment and Testing | Knowledgebase</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/cybersecurity/security-assesment-and-testing/">
+<link rel="stylesheet" href="/book.min.866fe3b5cf39ea9e02248ffa9697b15426d589b2a9d1a1c5445b50cf172c641d.css" integrity="sha256-hm/jtc856p4CJI/6lpexVCbVibKp0aHFRFtQzxcsZB0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.26972e289cf0c4087788158e310ef918185c87f0191b6e85abd5c6be7f9a2edd.js" integrity="sha256-JpcuKJzwxAh3iBWOMQ75GBhch/AZG26Fq9XGvn&#43;aLt0=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-cybersecurity book-layout-">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Knowledgebase</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e5f62e7c7cdb1036e45df02260144099" class="toggle"  />
+    <label for="section-e5f62e7c7cdb1036e45df02260144099" class="flex">
+      <a href="/azure/" class="flex-auto ">Azure</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300-notes/" class="">Az 300 Notes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/azure/az-300/" class="">Az 300</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3ffbfdbde140576d9f074ff50396f562" class="toggle"  />
+    <label for="section-3ffbfdbde140576d9f074ff50396f562" class="flex">
+      <a href="/business/" class="flex-auto ">Business</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3c8647f839e999b7a6298918f774b8cd" class="toggle"  />
+    <label for="section-3c8647f839e999b7a6298918f774b8cd" class="flex">
+      <a href="/career/" class="flex-auto ">Career</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="toggle"  />
+    <label for="section-26cea5b7eeb0c8a351c3f47bd5d16991" class="flex">
+      <a href="/change-management/" class="flex-auto ">Change Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/change-management/patterns/" class="">Patterns</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a078b2e564583a7361772de72985e006" class="toggle"  />
+    <label for="section-a078b2e564583a7361772de72985e006" class="flex">
+      <a href="/coaching/" class="flex-auto ">Coaching</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="toggle"  />
+    <label for="section-4dfc82ddbe95cc08d0f882cda0d7d567" class="flex">
+      <a href="/communication/" class="flex-auto ">Communication</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/change-management/" class="">Change Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/modes/" class="">Modes</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/presenting/" class="">Presenting</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/propaganda/" class="">Propaganda</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/communication/writing/" class="">Writing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-be39247e81b1efaad9c6a55873f1c90e" class="toggle" checked />
+    <label for="section-be39247e81b1efaad9c6a55873f1c90e" class="flex">
+      <a href="/cybersecurity/" class="flex-auto ">Cybersecurity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/application-security/" class="">Application Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cloud-and-virtualization-security/" class="">Cloud and Virtualization Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/cryptography-and-kpi/" class="">Cryptography and Kpi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/digital-forensics/" class="">Digital Forensics</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/endpoint-security/" class="">Endpoint Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/general-concepts/" class="">General Concepts</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/identity-and-access-management/" class="">Identity and Access Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/malware-types/" class="">Malware Types</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/monitoring-and-incident-response/" class="">Monitoring and Incident Response</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/network-security/" class="">Network Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/password-attacks/" class="">Password Attacks</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/privacy/" class="">Privacy</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resilience-and-physical-security/" class="">Resilience and Physical Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/risk-management/" class="">Risk Management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-assesment-and-testing/" class="active">Security Assesment and Testing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/security-governance-and-compliance/" class="">Security Governance and Compliance</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/social-engineering/" class="">Social Engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/threat-landscape/" class="">Threat Landscape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/cybersecurity/wireless-and-mobile-security/" class="">Wireless and Mobile Security</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-81aaadc4a6f20468960704bb65527a83" class="toggle"  />
+    <label for="section-81aaadc4a6f20468960704bb65527a83" class="flex">
+      <a href="/data-struct-algo/" class="flex-auto ">Data Struct Algo</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/binary-search/" class="">Binary Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/bubble-sort/" class="">Bubble Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/graph/" class="">Graph</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/insertion-sort/" class="">Insertion Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/linear-search/" class="">Linear Search</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/quick-sort/" class="">Quick Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/algorithms/selection-sort/" class="">Selection Sort</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/big-o/" class="">Big O</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/array/" class="">Array</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/binary-tree/" class="">Binary Tree</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/doubly-linked-list/" class="">Doubly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/hash-table/" class="">Hash Table</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/queue/" class="">Queue</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/singly-linked-list/" class="">Singly Linked List</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/data-structures/stack/" class="">Stack</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/data-struct-algo/np-completeness/" class="">Np Completeness</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fcae99f4a8081f912981f762656a25ff" class="toggle"  />
+    <label for="section-fcae99f4a8081f912981f762656a25ff" class="flex">
+      <a href="/facilitation/" class="flex-auto ">Facilitation</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e5944f94d761042e0ce48d8bafd1fe7" class="toggle"  />
+    <label for="section-9e5944f94d761042e0ce48d8bafd1fe7" class="flex">
+      <a href="/it-strategy/" class="flex-auto ">It Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4675e4e30643ddab2c70afb6a2ca02cd" class="toggle"  />
+    <label for="section-4675e4e30643ddab2c70afb6a2ca02cd" class="flex">
+      <a href="/it-strategy/platform-strategy/" class="flex-auto ">Platform Strategy</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c047fd11269da2900c28f007bda5710a" class="toggle"  />
+    <label for="section-c047fd11269da2900c28f007bda5710a" class="flex">
+      <a href="/linux-lpic-1/" class="flex-auto ">Linux Lpic 1</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52ffa23bb23b30d5ed484dfdc90b025b" class="toggle"  />
+    <label for="section-52ffa23bb23b30d5ed484dfdc90b025b" class="flex">
+      <a href="/network/" class="flex-auto ">Network</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-176491d6c50133f2ea87ec589d93b052" class="toggle"  />
+    <label for="section-176491d6c50133f2ea87ec589d93b052" class="flex">
+      <a href="/nodejs-streams-and-networking/" class="flex-auto ">Nodejs Streams and Networking</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-48b0ad26c635429f5ec6d8e1af19804e" class="toggle"  />
+    <label for="section-48b0ad26c635429f5ec6d8e1af19804e" class="flex">
+      <a href="/osint/" class="flex-auto ">Osint</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-df27f5a34fae3862434b3bd6fdc7d575" class="toggle"  />
+    <label for="section-df27f5a34fae3862434b3bd6fdc7d575" class="flex">
+      <a href="/productivity/" class="flex-auto ">Productivity</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a57856b2920a2fb9388743881d6f6077" class="toggle"  />
+    <label for="section-a57856b2920a2fb9388743881d6f6077" class="flex">
+      <a href="/project-management/" class="flex-auto ">Project Management</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5814dfcac8f9100c4091e4248b532eda" class="toggle"  />
+    <label for="section-5814dfcac8f9100c4091e4248b532eda" class="flex">
+      <a href="/psychology/" class="flex-auto ">Psychology</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5fbfe8b07d702e3dd1510f4f3100c046" class="toggle"  />
+    <label for="section-5fbfe8b07d702e3dd1510f4f3100c046" class="flex">
+      <a href="/reasoning/" class="flex-auto ">Reasoning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-caff6580ca16ac21759b6786a0c456d8" class="toggle"  />
+    <label for="section-caff6580ca16ac21759b6786a0c456d8" class="flex">
+      <a href="/software-architecture/" class="flex-auto ">Software Architecture</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/application-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-characteristics/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/ball-of-mud/" class="">Ball of Mud</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/event-driven/" class="">Event Driven</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/layered/" class="">Layered</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microkernel/" class="">Microkernel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/microservices/" class="">Microservices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/orchestration-driven-service-oriented/" class="">Orchestration Driven Service Oriented</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/pipeline/" class="">Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/service-based/" class="">Service Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/architecture-styles/space-based/" class="">Space Based</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/blog-ideas/" class="">Blog Ideas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/data-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/events/versioning/" class="">Versioning</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/integration-architecture/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/nuggets-of-wisdom/" class="">Nuggets of Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/thought-leaders/" class="">Thought Leaders</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/todo/" class="">Todo</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/anti-patterns/" class="">Anti Patterns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architectural-thinking/" class="">Architectural Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-decisions/" class="">Architecture Decisions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/architecture-risk/" class="">Architecture Risk</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/best-practices/" class="">Best Practices</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/clean-architecture/" class="">Clean Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/components/" class="">Components</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/conway-law/" class="">Conway Law</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/design-principles/" class="">Design Principles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/diagrams-and-presentations/" class="">Diagrams and Presentations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/domain-driven-design/" class="">Domain Driven Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/evolutionary-architecture/" class="">Evolutionary Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/feature-toggles/" class="">Feature Toggles</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/how-to-do/" class="">How to Do</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/laws-of-software-architecture/" class="">Laws of Software Architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/make-effective-teams/" class="">Make Effective Teams</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/modules/" class="">Modules</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/negotiation-and-leadership-skills/" class="">Negotiation and Leadership Skills</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/software-architect-role/" class="">Software Architect Role</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/systems-thinking/" class="">Systems Thinking</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/team-topologies/" class="">Team Topologies</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-architecture/topics/threat-modeling/" class="">Threat Modeling</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ddaebde9223642f47760ee015a7ddd45" class="toggle"  />
+    <label for="section-ddaebde9223642f47760ee015a7ddd45" class="flex">
+      <a href="/software-design/" class="flex-auto ">Software Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a60f54537a5317a75e05ed7401bead6e" class="toggle"  />
+    <label for="section-a60f54537a5317a75e05ed7401bead6e" class="flex">
+      <a href="/software-development-process/" class="flex-auto ">Software Development Process</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/software-development-process/internal-open-source/" class="">Internal Open Source</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ecb6eb749f789ef8ddd00db573f4f2af" class="toggle"  />
+    <label for="section-ecb6eb749f789ef8ddd00db573f4f2af" class="flex">
+      <a href="/software-testing/" class="flex-auto ">Software Testing</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-bc3d82c57976f22f86a1648d7874403c" class="toggle"  />
+    <label for="section-bc3d82c57976f22f86a1648d7874403c" class="flex">
+      <a href="/statistics/" class="flex-auto ">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-66ae6fa4b7048361c96c02dfd54f33e8" class="toggle"  />
+    <label for="section-66ae6fa4b7048361c96c02dfd54f33e8" class="flex">
+      <a href="/usb-spec/" class="flex-auto ">USB Spec</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/usb-spec/terms_and_abbreviations/" class="">Terms and Abbreviations</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/wisdom/" class="">Wisdom</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Ais</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/ai/readme/" class="">Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan/knowledge-base"  target="_blank" rel="noopener">
+        Github - Site
+      </a>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/SegersIan"  target="_blank" rel="noopener">
+        Github - Profile
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Security Assesment and Testing</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#vulnerability-management">Vulnerability Management</a></li>
+    <li><a href="#vulnerability-classification">Vulnerability Classification</a></li>
+    <li><a href="#penetration-testing">Penetration Testing</a></li>
+    <li><a href="#audits-and-assesments">Audits and Assesments</a></li>
+    <li><a href="#vulnerability-life-cycle">Vulnerability Life Cycle</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="security-assesment-and-testing">
+  Security Assesment and Testing
+  
+  <a class="anchor" href="#security-assesment-and-testing">#</a>
+  
+</h1>
+<h2 id="vulnerability-management">
+  Vulnerability Management
+  
+  <a class="anchor" href="#vulnerability-management">#</a>
+  
+</h2>
+<p>Definition: Identify, prioritize and remediate vulnerabilities in your environment(s).</p>
+<ul>
+<li><strong>Identify Scan Targets</strong>
+<ul>
+<li>The scope depends, it can be all systems or depending on some critercia:
+<ul>
+<li>What is the data classification of the information at-rest/in-transit/in-use by the system?</li>
+<li>Is the system publicly exposed?</li>
+<li>What services are running on the system?</li>
+<li>Is it dev/staging/prod?</li>
+</ul>
+</li>
+<li>Key goal: Build an asset inventory and then decide to which subset the scope reaches.</li>
+<li>ASV: Approved Scan Vendor (in case of PCI DSS compliance)</li>
+</ul>
+</li>
+<li><strong>Determin Scan Frequency</strong>
+<ul>
+<li>How often should they run?</li>
+<li>Influenced by
+<ul>
+<li>Risk appetite</li>
+<li>Regulatory Requirements - Like PCI DSS or FISMA that dictate a minimum frequency</li>
+<li>Technical Constraints - If a test takes 12h, you can only run 2/day.</li>
+<li>Business Constraints - Scans might cause disruptions that are not acceptable.</li>
+<li>Licensing limitations</li>
+</ul>
+</li>
+<li>TIP: Start Small and increase based on needs, feedback and experience.</li>
+<li>Examples: Nesus</li>
+</ul>
+</li>
+<li><strong>Configuring Vulnerability Scans</strong>
+<ul>
+<li><em>Scan Sensitivity Levels</em> - Determine the types of check, but could disrupt target environments if too agressive
+<ul>
+<li>1 distinct vulnerability = 1 plugin</li>
+<li>1 plugin family = 1 OS, application, &hellip;</li>
+<li>Disabling unnecessary plugins improves speed</li>
+</ul>
+</li>
+<li><em>Supplementing Network Scans</em>
+<ul>
+<li>Server-based scanning: Basic test run and probe over the network, testing from a distance - simulates realistically what an attacker sees. (ala Server-based scanning)</li>
+<li>Firewalls and other security controls might impact the scan results.</li>
+<li>Supplement server-based scans with extra information of the targets/systems
+<ul>
+<li>Credentialed Scanning: Scanner can verify first with a system if possible vulnerability is already mitigated (e.g. right patch installed). They only retrieve info, so make sure there is read only access (least privlege) for the used credentials.</li>
+<li>Agent-Bases Scanning: Scan configuration, inside-out scan, and report back to scanner.
+<ul>
+<li>Some fear the performance/stability impact of such agents, start small to gain trust and confidence</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Scan Perspective</em>
+<ul>
+<li>A perspective: A specific location within the network, so you can run tests from different &ldquo;perspectives&rdquo;.</li>
+<li>Example: One perspective is public internet, Other perspective from the intranet. (PCI DSS requires this)</li>
+<li>Might be impacted by
+<ul>
+<li>Firewall settongs</li>
+<li>Network segmentation</li>
+<li>Intrusion detection systems (IDSs)</li>
+<li>Intrusion prevention systems (IPSs)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Scanner Maintenance</strong>
+<ul>
+<li>Make sure that vulnerability feeds are up-to-date</li>
+</ul>
+</li>
+<li><strong>Scanner software</strong>
+<ul>
+<li>Make sure to patch the scanner software itself, for vulnerabilities.</li>
+</ul>
+</li>
+<li><strong>Vulnerability Plug-In Feeds</strong>
+<ul>
+<li>Automatically and regularrly auto download new plugs related to new vulnerabilities.</li>
+<li><em>Security Content Automation Protocol (SCAP)</em> - by NIST, Standerized way of communicating security-related information
+<ul>
+<li>Common Configuration Enumeration (CGE) - discuss system config issues</li>
+<li>Common Platform Enumeration (CGE) - describe product names and versions</li>
+<li>Common Vulnerabilities and Exposures (CVE) - describe security-related software flaws (before: Common Vulnerability Enumeration)</li>
+<li>Common Vulnerability Scoring System (CVSS) - describe severity of CVE&rsquo;s</li>
+<li>Common Configuration Checklist Description Format (XCCDF) - describe checklists and reporting results of said checklists</li>
+<li>Open Vulnerability and Assesment Language (OVAL) - describe low level testing procedures by said checklists</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Vulnerability Scanning Tools</strong>
+<ul>
+<li><em>Network Vulnerability scanners</em> - Tenable&rsquo;s Nessus, Qualy, Rapid7&rsquo;s Nexpose, OpenVAS</li>
+<li><em>Application Vulnerability Scanners</em> - Static Testing (the code), Dynamic Testing (runtime), Interactive Testing (combining both)</li>
+<li><em>Web Application Vulnerability Scanners</em> - Niko, Arachimi, Acunetix and Zed Attach Proxy (ZAP)
+<ul>
+<li>Specialized in WEB applications and their typical vulnerabilities
+<ul>
+<li>Cross-Site Scripting (XSS)</li>
+<li>Cross-Site Forgery (XSF)</li>
+<li>SQL Injection</li>
+<li>Etc</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Understanding CVSS (v3.1)</strong>
+<ul>
+<li>This scored is often used to priorite what to act on first.</li>
+<li>from 0 to 10 rating
+<ul>
+<li>0.0 - None</li>
+<li>0.1 -&gt; 3.9 - Low</li>
+<li>4.0 -&gt; 6.9 - Medium</li>
+<li>7.0 -&gt; 8.9 - High</li>
+<li>9.0 -&gt; 10 - Critical</li>
+</ul>
+</li>
+<li>Calculated by
+<ul>
+<li>3 metrics types
+<ul>
+<li>First 4 evaluate <em>the exploitability</em></li>
+<li>Next 3 evaluates <em>the impact</em></li>
+<li>Last 1 evaluates <em>the scope scope</em></li>
+</ul>
+</li>
+<li>8 distrinct metrics
+<ol>
+<li>Attack Vector (exploitability) - Need to be physcally there or can it be remotly?</li>
+<li>Attack Complexity (exploitability) - Do I need specialized conditions ?</li>
+<li>Privileges Required (exploitability) - What privileges do I need  ?</li>
+<li>User Interaction (exploitability) - is another human required ?</li>
+<li>Confidentiality (impact)</li>
+<li>Integrity (impact)</li>
+<li>Availability (impact)</li>
+<li>Scope</li>
+</ol>
+</li>
+<li>The total score (and other derivates) can be computed, as the individual scores are in the CVSS format.</li>
+<li>Example CVSS Vector: <code>CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N</code>
+<ul>
+<li>CVSS Format <code>v3.0</code></li>
+<li>Attack Vector <code>Network</code></li>
+<li>Attack Complexity <code>Low</code></li>
+<li>Privileges Required <code>None</code></li>
+<li>User Interaction <code>None</code></li>
+<li>Scope <code>Unchanged</code></li>
+<li>Confidentiality <code>High</code></li>
+<li>Integrity <code>None</code></li>
+<li>Availability <code>None</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Confirmation of Scan Results</strong>
+<ul>
+<li>When a vulnerability is present: Possitive report</li>
+<li>When a vulnerability is not present: Negative report</li>
+<li>A positive or negative report can be &ldquo;false&rdquo; if an error occurd and the opposite is true</li>
+<li>Don&rsquo;t trust only the results, do supplementary research and verifications with sources like
+<ul>
+<li>Log files</li>
+<li>Security Information and Event Management (SIEM) - corrolate log files from different sources</li>
+<li>Configuration Management Systems - provide info on systems and what&rsquo;s installed on them</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="vulnerability-classification">
+  Vulnerability Classification
+  
+  <a class="anchor" href="#vulnerability-classification">#</a>
+  
+</h2>
+<ul>
+<li><strong>Patch Management</strong> - Often ignored due to lack of resources or &ldquo;Fear&rdquo; of change/instability</li>
+<li><strong>Legacy Platforms</strong> - Discontinued products, Often ignored due to lack of resources or &ldquo;Fear&rdquo; of change/instability</li>
+<li><strong>Weak Configurations</strong>
+<ul>
+<li>Use of default config (admin/setup page still exposed)</li>
+<li>Default credentials or unsecured accounts</li>
+<li>Open service ports (but unused)</li>
+<li>Permissions that violate the least privilege</li>
+</ul>
+</li>
+<li><strong>Error Messages</strong> - Descriptive error messages, useful to the attacker, especially if debug mode is still on</li>
+<li><strong>Insecure Protocols</strong> - Discontinued or old protocol versions</li>
+<li><strong>Weak Encryption</strong>
+<ul>
+<li>Most important:
+<ul>
+<li>The algorithm</li>
+<li>The key that goes with it</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="penetration-testing">
+  Penetration Testing
+  
+  <a class="anchor" href="#penetration-testing">#</a>
+  
+</h2>
+<ul>
+<li><strong>Adopting the Hacker Mindset</strong> - Instead of defending against everything, you just need to find one little crack, you only need to win once
+<ul>
+<li>Taking an adversary mindset</li>
+</ul>
+</li>
+<li><strong>Reasons for Penetration Testing</strong>
+<ul>
+<li>Complentary to all other efforts, and brings another angle.</li>
+</ul>
+</li>
+<li><strong>Benefits of Penetration Testing</strong>
+<ul>
+<li>Benchmark: someone with the skillset of this pen tester can or cannot get in</li>
+<li>Get remediation tips and insights</li>
+<li>Get step by step insights on how to reproduce vulnerabilities</li>
+<li><strong>Threat Hunting</strong> is also using a hacker mindset, but you don&rsquo;t test against the live system,
+<ul>
+<li>They imagine on how a hacker might have getting around a security control, what evidence they might leave behind and then search for proof (IoCs).</li>
+<li>THis outputs usually different results.</li>
+<li>If they find compromise, go incident handling mode, and create postmortem.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Penetration Test Types</strong>
+<ul>
+<li>4 Categories
+<ul>
+<li>Physical - focus on physical security controls</li>
+<li>Offensive - By redteam - Pentester acts as attackers to identify and exploit</li>
+<li>Defensive - By blueteam - Focus on ability to defend against attacks and assses the effectiveness, so they can simulatee an attack and then see if they&rsquo;re able to respond well.</li>
+<li>Integrated - Combines Offensive and Defensive</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3 types of knowledge before starting</li>
+<li>White/Clear Box or Known Environment tests - All tech information provided
+<ul>
+<li>Less time on discovery, more time for targetted efforts of attack.</li>
+</ul>
+</li>
+<li>Grey Box or partially known Environment tests - A blend
+<ul>
+<li>Helps to target a pentesters focus and time but still to a degree mimick the experience for a hacker.</li>
+</ul>
+</li>
+<li>Black Box or unknown Environment tests -
+<ul>
+<li>More real life situation that an attacker experiences, so more discovery and more time consuming.</li>
+</ul>
+</li>
+<li><strong>Rules Of Engagement (RoE)</strong>
+<ul>
+<li>Timeline - When, how long?</li>
+<li>Scop - Inclide/exclude locations, systems, applications, or other potential targets</li>
+<li>Data Handling requirements - How to handle an information that got disclosed during the pentest</li>
+<li>Target Expected Behavior - What behavior to expect from the target</li>
+<li>Commited Resources - Time commitment of certain personal during the testing</li>
+<li>Legal concerns</li>
+<li>When and how communications happen - regular updates? What if a critical issue is found ? etc&hellip;</li>
+<li>Permission: Make sure to have a signed permission, your free out of jail card when getting caught or things go south.</li>
+</ul>
+</li>
+<li><strong>Reconnaissance</strong>
+<ul>
+<li>Even in white box, reconnaissance is done to supplement.</li>
+<li>Passive reconnaisance - gather info without interacting with the target or organization</li>
+<li>Active reconnaisance - directly engage, like port scanning etc&hellip;
+<ul>
+<li>Footprinting: Scanning which servers are used and versions</li>
+</ul>
+</li>
+<li>War Driving/Flying - Drive/Fly by office with high-end antennas and attempt to eavesdrop or connect to WIFI.</li>
+</ul>
+</li>
+<li><strong>Running the test</strong> - Key phases
+<ul>
+<li>Initial Access - when attacker exploits a vulberability to gain access to the organization&rsquo;s network.</li>
+<li>Privilege Escalation - using hacking techniques to elevate from initial access.</li>
+<li>Pivot/lateral move - hacker gains access to other systems from the initial compromised system</li>
+<li>Establish persistance - Installing backdoors  and other techniques that allows to regain access at a later stage.</li>
+<li><a href="https://www.metasploit.com/">Metasploit</a></li>
+</ul>
+</li>
+<li><strong>Cleaning Up</strong>
+<ul>
+<li>Present results</li>
+<li>Cleanup traves of their work</li>
+<li>Remove any tools or malware they might have installed</li>
+</ul>
+</li>
+</ul>
+<h2 id="audits-and-assesments">
+  Audits and Assesments
+  
+  <a class="anchor" href="#audits-and-assesments">#</a>
+  
+</h2>
+<ul>
+<li><strong>Security Tests</strong> - Verify that a control is functioning properly
+<ul>
+<li>Should happen regular</li>
+<li>Focus on the key security controls</li>
+<li>Asses following factors when scheduling a test
+<ul>
+<li>Availability of security testing resources</li>
+<li>Criticality of the systems and appliications protected by the tested controls</li>
+<li>Sensitivity of information contained on tested systems and applications.</li>
+<li>Likelihood of technical failure of the mechanism implementing the control.</li>
+<li>Likelihood of a misconfiguratiin on the control that would jeopardize security.</li>
+<li>Risk that the system will come under attack</li>
+<li>Other changes the technical env that might affect control performance.</li>
+<li>Difficulty and time required to perform a control test</li>
+<li>Impact of the test on normal business operation</li>
+</ul>
+</li>
+<li>TL;DR; Design your tests rigourisly</li>
+<li><strong>Responsible Disclosure Programs</strong>
+<ul>
+<li>Allows security researchers to securily info about vulnerabilities in a product with the vendor.</li>
+<li>Bug bounties is a form of this</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Security Assesments</strong> - Comprehesive review of the security of a give scope
+<ul>
+<li>Perform risk assesment of a said scope</li>
+</ul>
+</li>
+<li><strong>Security Audits</strong> - External/impartial people who test the security controls
+<ul>
+<li>Uses similar techniques as security assesments</li>
+<li>Results in an attestation (good for certification)</li>
+<li>With internal auditing, the auditors have a different line of reporting than the security team.</li>
+<li>Requested by the organization itself or its governing body</li>
+<li>Service Organized Controls (SOC)</li>
+<li>External audits are for attestation
+<ul>
+<li>Independent Third Party Audits are a subgroup
+<ul>
+<li>Here the request for the audit comes from a regulator, customer or other outside entity.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Auditing Standards</em>
+<ul>
+<li>Control Objectives for Information and related Technologies (COBIT) - requirements surrounding information systems
+<ul>
+<li>Maintainted by ISACA which also created CISA (Certified Information Systems Auditor), CISM (Certified Information Security Manager)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="vulnerability-life-cycle">
+  Vulnerability Life Cycle
+  
+  <a class="anchor" href="#vulnerability-life-cycle">#</a>
+  
+</h2>
+<ul>
+<li><strong>Vulnerability Identification</strong>
+<ul>
+<li>Potential Sources: Vulnerability scans, pentration tests, Responisble disclosure, Audits</li>
+</ul>
+</li>
+<li><strong>Vulnerability Analysis</strong>
+<ul>
+<li>Validate if it exists</li>
+<li>Prioritize and categorize using CVE and CVSS</li>
+<li>Supplement with external analysis</li>
+</ul>
+</li>
+<li><strong>Vulnerability Response and Remediation</strong>
+<ul>
+<li>Based on scoring, we can guide which are most in need of remediation</li>
+<li>Some examples how Cybersecurity specialists deal with it:
+<ul>
+<li>Patching</li>
+<li>Network segmentation to decrease the risk</li>
+<li>Implement other compensating controls (Firewalls, IPS,&hellip;)</li>
+<li>Purchase insurance to transfer risk</li>
+<li>Formally accept risk</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Vulnerability of Remediation</strong>
+<ul>
+<li>Test by rescanning or reproducing</li>
+<li>Might need to be done by external auditors</li>
+</ul>
+</li>
+<li><strong>Reporting</strong>
+<ul>
+<li>Communicate findings, action taken, lessons learned to relevant stakeholders. Make sure decisions makers are informed.</li>
+<li>May include:
+<ul>
+<li>Identified, analyzed and remediated vulnberabilities with CVE/CVSS</li>
+<li>Details on remediation steps</li>
+<li>Highlight trends, conclusions, insights</li>
+<li>Offer recommendations for improvement</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/cybersecurity/risk-management/" class="flex align-center">
+        <img src="/svg/backward.svg" class="book-icon" alt="Previous" title="Risk Management" />
+        <span>Risk Management</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/cybersecurity/security-governance-and-compliance/" class="flex align-center">
+        <span>Security Governance and Compliance</span>
+        <img src="/svg/forward.svg" class="book-icon" alt="Next" title="Security Governance and Compliance" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#vulnerability-management">Vulnerability Management</a></li>
+    <li><a href="#vulnerability-classification">Vulnerability Classification</a></li>
+    <li><a href="#penetration-testing">Penetration Testing</a></li>
+    <li><a href="#audits-and-assesments">Audits and Assesments</a></li>
+    <li><a href="#vulnerability-life-cycle">Vulnerability Life Cycle</a></li>
+  </ul>
+</nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
