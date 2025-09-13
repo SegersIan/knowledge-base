@@ -1002,3 +1002,37 @@ Automation can remove human error and make security easier and more scaleable.
 * **Cloud Access Security Brokers**
 * **Resource Policies**
 * **Secrets Management**
+
+## Endpoint Security
+### Operating System Vulnerabilities
+### Hardware Vulnerabilities
+### Protecting Endpoints
+* **Preserving Boot Integrity**
+* **Endpoint Security Tools**
+### Hardening Techniques
+* **Hardening**
+* **Service Hardening**
+* **Network Hardening**
+* **Default Passwords**
+* **Removing Unnecessary Software**
+### Operating System Hardening
+* **Configuration, Standards, and Schemas**
+* **Encryption**
+### Securing Embedded and Specialized Systems
+* **Embedded Systems**
+* **SCADA and ICS**
+* **Securing the Internet of Things Communication Considerations**
+* **Security Constraints of Embedded Systems**
+### Asset Management
+
+## Network Security
+### Designing Secure Networks
+* **Infrastructure Considerations**
+* **Network Design Concepts**
+* **Network Segmentation**
+* **Zero Trust**
+* **Network Access Control**
+* **Port Security and Port-Level Protections**
+* **Virtual Private Networks and Remote Access Network Appliances and Security Tools Deception and Disruption Technology**
+* **Network Security, Services, and Management**
+### Secure Protocols
