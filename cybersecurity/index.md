@@ -1135,7 +1135,6 @@ Automation can remove human error and make security easier and more scaleable.
 * **User Training**
 * **Ongoing Awareness Efforts**
 
-
 ## Risk Management and Privacy
 ### Analyzing Risk
 * **Risk Identification**
@@ -1149,3 +1148,14 @@ Automation can remove human error and make security easier and more scaleable.
 ### Risk Tracking
 * **Risk Register**
 * **Risk Reporting**
+
+### Disaster Recovery Planning
+* **Disaster Types**
+* **Business Impact Analysis**
+### Privacy
+* **Data Inventory**
+* **Information Classification**
+* **Data Roles and Responsibilities**
+* **Information Life Cycle**
+* **Privacy Enhancing Technologies**
+* **Privacy and Data Breach Notification**
