@@ -1,48 +1,48 @@
 # Cryptography and the PKI
 ## An Overview of Cryptography
-* **Historical Cryptography**
+### Historical Cryptography
 ## Goals of Cryptography
-* **Confidentiality**
-* **Integrity**
-* **Authentication**
-* **Non-repudiation**
-## Cryptographic Concepts**
-* **Cryptographic Keys**
-* **Ciphers**
+### Confidentiality
+### Integrity
+### Authentication
+### Non-repudiation
+## Cryptographic Concepts
+### Cryptographic Keys
+### Ciphers
 ## Modern Cryptography
-* **Cryptographic Secrecy**
-* **Symmetric Key Algorithms**
-* **Asymmetric Key Algorithms**
-* **Hashing Algorithms**
+### Cryptographic Secrecy
+### Symmetric Key Algorithms
+### Asymmetric Key Algorithms
+### Hashing Algorithms
 ## Symmetric Cryptography
-* **Data Encryption Standard**
-* **Advanced Encryption Standard**
-* **Symmetric Key Management**
+### Data Encryption Standard
+### Advanced Encryption Standard
+### Symmetric Key Management
 ## Asymmetric Cryptography
-* **RSA**
-* **Elliptic Curve**
+### RSA
+### Elliptic Curve
 ## Hash Functions
-* **SHA**
-* **MD5**
+### SHA
+### MD5
 ## Digital Signatures
-* **HMAC**
+### HMAC
 ## Public Key Infrastructure
-* **Certificates**
-* **Certificate Authorities**
-* **Certificate Generation and Destruction**
-* **Certificate Formats**
+### Certificates
+### Certificate Authorities
+### Certificate Generation and Destruction
+### Certificate Formats
 ## Asymmetric Key Management
 ## Cryptographic Attacks
-* **Brute Force**
-* **Frequency Analysis**
-* **Known Plain Text**
-* **Chosen Plain Text**
-* **Related Key Attack**
-* **Birthday Attack**
-* **Downgrade Attack**
-* **Hashing, Salting, and Key Stretching Exploiting Weak Keys Exploiting Human Error**
+### Brute Force
+### Frequency Analysis
+### Known Plain Text
+### Chosen Plain Text
+### Related Key Attack
+### Birthday Attack
+### Downgrade Attack
+### Hashing, Salting, and Key Stretching Exploiting Weak Keys Exploiting Human Error
 ## Emerging Issues in Cryptography
-* **Tor and the Dark Web**
-* **Blockchain**
-* **Lightweight Cryptography Homomorphic Encryption**
-* **Quantum Computing**
+### Tor and the Dark Web
+### Blockchain
+### Lightweight Cryptography Homomorphic Encryption
+### Quantum Computing

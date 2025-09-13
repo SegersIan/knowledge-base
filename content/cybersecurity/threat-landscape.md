@@ -1,7 +1,7 @@
 # Threat Landscape
 
 ## Threats
-* **Threat Characteristics**
+### Threat Characteristics
   * Internal vs. External - Within or outside our organization.
   * Level of Sophistication/Capability - from script kiddie to APT (advance persistant threat)
   * Resources/Funding - from hobbyists to government funded
@@ -9,9 +9,9 @@
     * White Hat - Act with authorization and seek vulnerabilities with the intent of correcting them.
     * Grey Hat - Act without authorization, but seek to inform targets from found vulnerabilities.
     * Black hat - Act without authorization, with malicious intent.
-* **Advance Persistent Threat (APT)** - Advanced attacks that persistent for a long time, stalking targets to attach when most strategic.
-* **Shadow IT** - Indivduals/groups use technology/tools that are outside the approved solutions.
-* **Threat Actors**
+### Advance Persistent Threat (APT) - Advanced attacks that persistent for a long time, stalking targets to attach when most strategic.
+### Shadow IT - Indivduals/groups use technology/tools that are outside the approved solutions.
+### Threat Actors
   * Unskilled - (Script kiddie), little skill, depend on (automated) tools they downloaded, often don't understand how the tools work.
     * Do not underestimate this threat and risk
     * They often randomly take targets, and there are many.
@@ -31,7 +31,7 @@
 | Resources/Funding         | Few | Any range | Many | Many | Few | Many |
 | Intent/Motivation         | Thrill/status | Ideals | Money | Economic/Espionage/Political | Varied | Economic/Business |
 
-* **Attaker Motivations**
+### Attaker Motivations
   * Data exfiltration - desire to obtain sensitive/IP information.
   * Espionage - organizations desiring to steal secret information
   * Service disruption - Seek to stop opperations
@@ -42,7 +42,7 @@
   * Revenge - just to embarrse or damage
   * Disruption/chaos
   * War - Manipulate the outcome of an armed conflict
-* **Threat Vectors and Attack Surfaces**
+### Threat Vectors and Attack Surfaces
   * Attack Surface - A llsystem/application/service that could be potentially exploited
   * Threat Vector - The actual vulnerability chosen from the attack service. The means to obtain that access.
   * Message-Based - Email is most exploited attack vector.
@@ -60,20 +60,20 @@
 
 ## Threat Data & Intelligence
 
-* **Threat Intelligence**: Resources and activities available to learn about changes in the threat environment.
+### Threat Intelligence: Resources and activities available to learn about changes in the threat environment.
   * Can be used for predictive risk.
   * OSINT tools/methods
   * Vunerability databases
   * Threat feeds
   * Indicators of compromise (IoCs) - Like file hashes, signaturesm ,,,
-* **OSINT**
+### OSINT
   * Key is to find up-to-date sources
   * [Examples](./resources.md#Threat%20Feeds)
-* **Proprietary & Closed-Source Intelligence**
+### Proprietary & Closed-Source Intelligence
   * Might provide, better, curated and quality threat feeds
-* **Use multiple feeds** - To cross check if any is slow or not updating
-* **Threat Maps** - Geographic view of threat intelligence, but notoriously unreliable (VPNs, Proxies, ...)
-* **Assessing Threat Intelligence** - regardless the source, assesment is required
+### Use multiple feeds - To cross check if any is slow or not updating
+### Threat Maps - Geographic view of threat intelligence, but notoriously unreliable (VPNs, Proxies, ...)
+### Assessing Threat Intelligence - regardless the source, assesment is required
   * Is it timely?
   * Is this information accurate? - Can you rely on provided information? Often correct?
   * Is this information relevant? - Might not be relevant to your organization
@@ -87,15 +87,15 @@
     * 30 - 49: Doubtful - Possible but not the most likey option, but there is no information that allows to disprove it
     * 2 - 29: Impropable - Possible but refuted by others
     * 1 : Discredited - Just plain not true
-* **Threat Indicator Management & Exchange** - standerized communication protocals
+### Threat Indicator Management & Exchange - standerized communication protocals
   * Structured Threat Information eXpression (STIX) - XML, a json variation exists
   * Trusted Automated eXchange of Intelligence Information (TAXII) - communicate on HTTP level.
   * [See Github](https://oasis-open.github.io/cti-documentation/)
-* **Information Sharing Organizations**
+### Information Sharing Organizations
   * Industry-specific collaborative organizations that facilitate trusted human + machine
   * Information Sharing and Analys Centers (ISACs) - for intrastructuree owners and operators
   * [National ISACS](https://www.nationalisacs.org/)
-* **Conducting Your Own Research**.
+### Conducting Your Own Research.
   * Vendor security information sites
   * Academic Journals and Technical Publications
   * Conferences and meetups

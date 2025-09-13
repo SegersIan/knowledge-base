@@ -4,7 +4,7 @@
 
 Definition: Identify, prioritize and remediate vulnerabilities in your environment(s).
 
-* **Identify Scan Targets**
+### Identify Scan Targets
   * The scope depends, it can be all systems or depending on some critercia:
     * What is the data classification of the information at-rest/in-transit/in-use by the system?
     * Is the system publicly exposed?
@@ -12,7 +12,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * Is it dev/staging/prod?
   * Key goal: Build an asset inventory and then decide to which subset the scope reaches.
   * ASV: Approved Scan Vendor (in case of PCI DSS compliance)
-* **Determin Scan Frequency**
+### Determin Scan Frequency
   * How often should they run?
   * Influenced by
     * Risk appetite
@@ -22,7 +22,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * Licensing limitations
   * TIP: Start Small and increase based on needs, feedback and experience.
   * Examples: Nesus
-* **Configuring Vulnerability Scans**
+### Configuring Vulnerability Scans
   * *Scan Sensitivity Levels* - Determine the types of check, but could disrupt target environments if too agressive
     * 1 distinct vulnerability = 1 plugin
     * 1 plugin family = 1 OS, application, ...
@@ -42,11 +42,11 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
       * Network segmentation
       * Intrusion detection systems (IDSs)
       * Intrusion prevention systems (IPSs)
-* **Scanner Maintenance**
+### Scanner Maintenance
   * Make sure that vulnerability feeds are up-to-date
-* **Scanner software**
+### Scanner software
   * Make sure to patch the scanner software itself, for vulnerabilities.
-* **Vulnerability Plug-In Feeds**
+### Vulnerability Plug-In Feeds
   * Automatically and regularrly auto download new plugs related to new vulnerabilities.
   * *Security Content Automation Protocol (SCAP)* - by NIST, Standerized way of communicating security-related information
     * Common Configuration Enumeration (CGE) - discuss system config issues
@@ -55,7 +55,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * Common Vulnerability Scoring System (CVSS) - describe severity of CVE's
     * Common Configuration Checklist Description Format (XCCDF) - describe checklists and reporting results of said checklists
     * Open Vulnerability and Assesment Language (OVAL) - describe low level testing procedures by said checklists
-* **Vulnerability Scanning Tools**
+### Vulnerability Scanning Tools
   * *Network Vulnerability scanners* - Tenable's Nessus, Qualy, Rapid7's Nexpose, OpenVAS
   * *Application Vulnerability Scanners* - Static Testing (the code), Dynamic Testing (runtime), Interactive Testing (combining both)
   * *Web Application Vulnerability Scanners* - Niko, Arachimi, Acunetix and Zed Attach Proxy (ZAP)
@@ -64,7 +64,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
       * Cross-Site Forgery (XSF)
       * SQL Injection
       * Etc
-* **Understanding CVSS (v3.1)**
+### Understanding CVSS (v3.1)
   * This scored is often used to priorite what to act on first.
   * from 0 to 10 rating
     * 0.0 - None
@@ -97,7 +97,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
       * Confidentiality `High`
       * Integrity `None`
       * Availability `None`
-* **Confirmation of Scan Results**
+### Confirmation of Scan Results
   * When a vulnerability is present: Possitive report
   * When a vulnerability is not present: Negative report
   * A positive or negative report can be "false" if an error occurd and the opposite is true
@@ -108,35 +108,35 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 
 ## Vulnerability Classification
 
-* **Patch Management** - Often ignored due to lack of resources or "Fear" of change/instability
-* **Legacy Platforms** - Discontinued products, Often ignored due to lack of resources or "Fear" of change/instability
-* **Weak Configurations**
+### Patch Management - Often ignored due to lack of resources or "Fear" of change/instability
+### Legacy Platforms - Discontinued products, Often ignored due to lack of resources or "Fear" of change/instability
+### Weak Configurations
   * Use of default config (admin/setup page still exposed)
   * Default credentials or unsecured accounts
   * Open service ports (but unused)
   * Permissions that violate the least privilege
-* **Error Messages** - Descriptive error messages, useful to the attacker, especially if debug mode is still on
-* **Insecure Protocols** - Discontinued or old protocol versions
-* **Weak Encryption**
+### Error Messages - Descriptive error messages, useful to the attacker, especially if debug mode is still on
+### Insecure Protocols - Discontinued or old protocol versions
+### Weak Encryption
   * Most important:
     * The algorithm
     * The key that goes with it
 
 ## Penetration Testing
 
-* **Adopting the Hacker Mindset** - Instead of defending against everything, you just need to find one little crack, you only need to win once
+### Adopting the Hacker Mindset - Instead of defending against everything, you just need to find one little crack, you only need to win once
   * Taking an adversary mindset
-* **Reasons for Penetration Testing**
+### Reasons for Penetration Testing
   * Complentary to all other efforts, and brings another angle.
-* **Benefits of Penetration Testing**
+### Benefits of Penetration Testing
   * Benchmark: someone with the skillset of this pen tester can or cannot get in
   * Get remediation tips and insights
   * Get step by step insights on how to reproduce vulnerabilities
-  * **Threat Hunting** is also using a hacker mindset, but you don't test against the live system,
+  ### Threat Hunting is also using a hacker mindset, but you don't test against the live system,
     * They imagine on how a hacker might have getting around a security control, what evidence they might leave behind and then search for proof (IoCs).
     * THis outputs usually different results.
     * If they find compromise, go incident handling mode, and create postmortem.
-* **Penetration Test Types**
+### Penetration Test Types
   * 4 Categories
     * Physical - focus on physical security controls
     * Offensive - By redteam - Pentester acts as attackers to identify and exploit
@@ -149,7 +149,7 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * Helps to target a pentesters focus and time but still to a degree mimick the experience for a hacker.
   * Black Box or unknown Environment tests -
     * More real life situation that an attacker experiences, so more discovery and more time consuming.
-* **Rules Of Engagement (RoE)**
+### Rules Of Engagement (RoE)
   * Timeline - When, how long?
   * Scop - Inclide/exclude locations, systems, applications, or other potential targets
   * Data Handling requirements - How to handle an information that got disclosed during the pentest
@@ -158,26 +158,26 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
   * Legal concerns
   * When and how communications happen - regular updates? What if a critical issue is found ? etc...
   * Permission: Make sure to have a signed permission, your free out of jail card when getting caught or things go south.
-* **Reconnaissance**
+### Reconnaissance
   * Even in white box, reconnaissance is done to supplement.
   * Passive reconnaisance - gather info without interacting with the target or organization
   * Active reconnaisance - directly engage, like port scanning etc...
     * Footprinting: Scanning which servers are used and versions
   * War Driving/Flying - Drive/Fly by office with high-end antennas and attempt to eavesdrop or connect to WIFI.
-* **Running the test** - Key phases
+### Running the test - Key phases
   * Initial Access - when attacker exploits a vulberability to gain access to the organization's network.
   * Privilege Escalation - using hacking techniques to elevate from initial access.
   * Pivot/lateral move - hacker gains access to other systems from the initial compromised system
   * Establish persistance - Installing backdoors  and other techniques that allows to regain access at a later stage.
   * [Metasploit](https://www.metasploit.com/)
-* **Cleaning Up**
+### Cleaning Up
    * Present results
    * Cleanup traves of their work
    * Remove any tools or malware they might have installed
 
 ## Audits and Assesments
 
-* **Security Tests** - Verify that a control is functioning properly
+### Security Tests - Verify that a control is functioning properly
   * Should happen regular
   * Focus on the key security controls
   * Asses following factors when scheduling a test
@@ -191,12 +191,12 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * Difficulty and time required to perform a control test
     * Impact of the test on normal business operation
   * TL;DR; Design your tests rigourisly
-  * **Responsible Disclosure Programs**
+  ### Responsible Disclosure Programs
     * Allows security researchers to securily info about vulnerabilities in a product with the vendor.
     * Bug bounties is a form of this
-* **Security Assesments** - Comprehesive review of the security of a give scope
+### Security Assesments - Comprehesive review of the security of a give scope
   * Perform risk assesment of a said scope
-* **Security Audits** - External/impartial people who test the security controls
+### Security Audits - External/impartial people who test the security controls
   * Uses similar techniques as security assesments
   * Results in an attestation (good for certification)
   * With internal auditing, the auditors have a different line of reporting than the security team.
@@ -211,13 +211,13 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 
 ## Vulnerability Life Cycle
 
-* **Vulnerability Identification**
+### Vulnerability Identification
   * Potential Sources: Vulnerability scans, pentration tests, Responisble disclosure, Audits
-* **Vulnerability Analysis**
+### Vulnerability Analysis
   * Validate if it exists
   * Prioritize and categorize using CVE and CVSS
   * Supplement with external analysis
-* **Vulnerability Response and Remediation**
+### Vulnerability Response and Remediation
   * Based on scoring, we can guide which are most in need of remediation
   * Some examples how Cybersecurity specialists deal with it:
     * Patching
@@ -225,10 +225,10 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
     * Implement other compensating controls (Firewalls, IPS,...)
     * Purchase insurance to transfer risk
     * Formally accept risk
-* **Vulnerability of Remediation**
+### Vulnerability of Remediation
   * Test by rescanning or reproducing
   * Might need to be done by external auditors
-* **Reporting**
+### Reporting
   * Communicate findings, action taken, lessons learned to relevant stakeholders. Make sure decisions makers are informed.
   * May include:
     * Identified, analyzed and remediated vulnberabilities with CVE/CVSS

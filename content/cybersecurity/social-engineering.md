@@ -1,7 +1,7 @@
 # Social Engineering
 
 * Human side of cybersecurity
-* **Social Engineering**
+### Social Engineering
   * And phising often preceed password attacks.
   * Using the "Human Threat vector"
   * Goal: Influence target(s) to take actions that they else would not
@@ -15,7 +15,7 @@
     * *Urgence* - Sense or urgency to take the chance away for the target to evaluate the situation
   * Often a combination of principles are used.
   * Understand the target, how humans react, how stress reactions can be leveraged to meet a goal.
-* **Social Engineering Techniques**
+### Social Engineering Techniques
   * *Phising* - Fraudelent acquisition of information
     * Spear phising - targetting a specific individual/group
     * Whaling - aimed at senior people (CEO, CTO, ...)
@@ -28,16 +28,16 @@
   * *Misinformation & Disinformation* - Online influencer campaigns
     * Social media, email, online mediums
     * Types (MDM)
-      * **M**isinformation - Not True, *without* malicious intent
+      ### Misinformation - Not True, *without* malicious intent
         * I believe it's true, but its wrong
-      * **D**isinformation - Not True, *with* malicious intent
-      * **M**alinformation - based on reaility, but consciously removed context and using exaggeration *with* malicious intent
+      ### Disinformation - Not True, *with* malicious intent
+      ### Malinformation - based on reaility, but consciously removed context and using exaggeration *with* malicious intent
     * CISA recommends "TRUST" oricess to counter mis/disinformation
-      * **T**ell your story
-      * **R**eady your team
-      * **U**nderstand and assess MDM.
-      * **S**trategize response.
-      * **T**rack outocomes.
+      ### Tell your story
+      ### Ready your team
+      ### Understand and assess MDM.
+      ### Strategize response.
+      ### Track outocomes.
       * Defense: asses info environment, identify vulnerabilities, proactive communication, develop incident response plan.
   * *Impersonation* - Attack pretends to be someone else
     * Might use identity graud
