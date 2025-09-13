@@ -964,3 +964,41 @@ Automation can remove human error and make security easier and more scaleable.
 * **Account Types**
 * **Provisioning and Deprovisioning Accounts**
 ### Access Control Schemes
+* **Filesystem Permissions**
+
+## Resilience and Physical Security
+### Resilience and Recovery in Security Architectures
+* **Architectural Considerations and Security**
+* **Storage Resiliency**
+### Response and Recovery Controls
+* **Capacity Planning for Resilience and Recovery**
+* **Testing Resilience and Recovery Controls and Designs**
+### Physical Security Controls
+* **Site Security**
+* **Detecting Physical Attacks**
+
+## Cloud and Virtualization Security
+### Exploring the Cloud
+* **Benefits of the Cloud**
+* **Cloud Roles**
+* **Cloud Service Models**
+* **Cloud Deployment Models**
+* **Private Cloud**
+* **Shared Responsibility Model**
+* **Cloud Standards and Guidelines**
+### Virtualization
+* **Hypervisors**
+### Cloud Infrastructure Components
+* **Cloud Compute Resources**
+* **Cloud Storage Resources**
+* **Cloud Networking**
+### Cloud Security Issues
+* **Availability**
+* **Data Sovereignty**
+* **Virtualization Security**
+* **Application Security**
+* **Governance and Auditing of Third-Party Vendors**
+### Hardening Cloud Infrastructure
+* **Cloud Access Security Brokers**
+* **Resource Policies**
+* **Secrets Management**
