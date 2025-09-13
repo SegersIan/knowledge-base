@@ -1109,3 +1109,43 @@ Automation can remove human error and make security easier and more scaleable.
 * **Documentation**
 ### Personnel Management
 * **Least Privilege**
+* **Separation of Duties**
+* **Job Rotation and Mandatory Vacations**
+* **Clean Desk Space**
+* **Onboarding and Offboarding**
+* **Nondisclosure Agreements**
+* **Social Media**
+### Third-Party Risk Management
+* **Vendor Selection**
+* **Vendor Assessment**
+* **Vendor Agreements**
+* **Vendor Monitoring**
+* **Winding Down Vendor Relationships**
+### Complying with Laws and Regulations
+* **Common Compliance Requirements**
+* **Compliance Reporting**
+* **Consequences of Noncompliance**
+* **Compliance Monitoring**
+### Adopting Standard Frameworks
+* **NIST Cybersecurity Framework**
+* **NIST Risk Management Framework**
+* **ISO Standards**
+* **Benchmarks and Secure Configuration Guides
+### Security Awareness and Training
+* **User Training**
+* **Ongoing Awareness Efforts**
+
+
+## Risk Management and Privacy
+### Analyzing Risk
+* **Risk Identification**
+* **Risk Assessment**
+* **Risk Analysis**
+### Managing Risk
+* **Risk Mitigation**
+* **Risk Avoidance**
+* **Risk Transference**
+* **Risk Acceptance**
+### Risk Tracking
+* **Risk Register**
+* **Risk Reporting**
