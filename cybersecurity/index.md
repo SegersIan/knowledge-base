@@ -901,3 +901,66 @@ Automation can remove human error and make security easier and more scaleable.
   * Speed up
 * **Other Considerations**
    * Complexity, Cost, Single point of failure, Technical Debt, Ongoing supportability
+
+## Cryptography and the PKI
+### An Overview of Cryptography
+* **Historical Cryptography**
+### Goals of Cryptography
+* **Confidentiality**
+* **Integrity**
+* **Authentication**
+* **Non-repudiation**
+### Cryptographic Concepts**
+* **Cryptographic Keys**
+* **Ciphers**
+### Modern Cryptography
+* **Cryptographic Secrecy**
+* **Symmetric Key Algorithms**
+* **Asymmetric Key Algorithms**
+* **Hashing Algorithms**
+### Symmetric Cryptography
+* **Data Encryption Standard**
+* **Advanced Encryption Standard**
+* **Symmetric Key Management**
+### Asymmetric Cryptography
+* **RSA**
+* **Elliptic Curve**
+### Hash Functions
+* **SHA**
+* **MD5**
+### Digital Signatures
+* **HMAC**
+### Public Key Infrastructure
+* **Certificates**
+* **Certificate Authorities**
+* **Certificate Generation and Destruction**
+* **Certificate Formats**
+### Asymmetric Key Management
+### Cryptographic Attacks
+* **Brute Force**
+* **Frequency Analysis**
+* **Known Plain Text**
+* **Chosen Plain Text**
+* **Related Key Attack**
+* **Birthday Attack**
+* **Downgrade Attack**
+* **Hashing, Salting, and Key Stretching Exploiting Weak Keys Exploiting Human Error**
+### Emerging Issues in Cryptography
+* **Tor and the Dark Web**
+* **Blockchain**
+* **Lightweight Cryptography Homomorphic Encryption**
+* **Quantum Computing**
+
+## Identity and Access Management
+### Identity
+### Authentication and Authorization
+* **Authentication and Authorization Technologies**
+### Authentication Methods
+* **Passwords**
+* **Multifactor Authentication**
+* **One-Time Passwords**
+* **Biometrics**
+### Accounts
+* **Account Types**
+* **Provisioning and Deprovisioning Accounts**
+### Access Control Schemes
