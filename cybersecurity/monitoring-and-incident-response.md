@@ -1,6 +1,3 @@
-
-
-
 # Monitoring and Incident Response
 ## Incident Response
 * **The Incident Response Process**

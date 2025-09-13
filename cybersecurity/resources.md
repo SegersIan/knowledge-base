@@ -1,10 +1,10 @@
 # Cybsersecurity Resources
 
-# Sites
+## Sites
 
 * http://socinvestigation.com/
 
-# Threat Feeds
+## Threat Feeds
 
 * Senki - `senki.org/operators-security-toolkit/open-source-threat-intelligence-feeds`
 * Open Threat Exchange - `cybersecurity.att.com/open-threat-xchange`
@@ -20,9 +20,9 @@
 * Virusshare - `virusshare.com`
   * ...
 
-# Tools
+## Tools
 
-## General
+### General
 
 - https://www.metasploit.com/
 - https://www.zaproxy.org/
@@ -40,7 +40,7 @@
 - Wireshark - Sniff packets in local machine or network
 
 
-## Grouped
+### Grouped
 
 1. Vulnerability Assessment and Management:
    a. **Nessus**: A vulnerability scanner that identifies potential weaknesses in networks, systems, and applications.
@@ -98,27 +98,27 @@
 - https://github.com/laramies/theharvester
 - https://github.com/xmendez/wfuzz
 
-# Web Mirroring / Website footprinting
+## Web Mirroring / Website footprinting
 
 - [HTTrack](www.httrack.com)
 - [Black Widow](https://softbytelabs.com/wp/)
 - [WebRippter](https://webripper.software.informer.com/download/ (Not OFFICIAL DOWNLOAD)
 - [Backstreet Browser](http://www.spadixbd.com/)
 - [Use WGET](https://bash-prompt.net/guides/wget-mirror-website/)
-# Podcasts
+## Podcasts
 
 - https://darknetdiaries.com/
 
-# Learn
+## Learn
 
 - https://www.hackthebox.com/
 - https://www.itpro.tv/
 
-# Social Engineering
+## Social Engineering
 
 - [SEF: Social Engineering Franework BOOK](https://subscription.packtpub.com/book/security/9781788837927/1/ch01lvl1sec04/the-social-engineering-framework)
 - https://www.maltego.com/downloads/
-# Others
+## Others
 
 - https://cloudsecurityalliance.org/
 - https://radar.cncf.io/2021-09-devsecops
@@ -130,7 +130,7 @@
 - [Website watcher](https://www.aignes.com/) - Wath websites and notify if anything changes
 - https://www.shodan.io/ - Find anything connected
 
-# Vulnerability Databases
+## Vulnerability Databases
 
 - technet.microsoft.com
 - www.securityfocus.com

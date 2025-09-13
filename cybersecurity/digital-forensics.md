@@ -1,6 +1,3 @@
-
-
-
 # Digital Forensics
 ## Digital Forensic Concepts
 * **Legal Holds and e-Discovery**
