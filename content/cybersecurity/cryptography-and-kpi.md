@@ -397,8 +397,15 @@ There are 4 fundamental goals of cryptography
   * **Personal Information Exchange (PFX)** - Windows systems binary format
     * Extensions used `*.pfx` or `*.p12`
   * **P7B** - ASCII format for windows systems
-  
+
 ## Asymmetric Key Management
+* Choose key length based on your performance considerations
+* Make sure your key has *sufficient entropy* so, that it is random enough (recall Cloudflare lava lamps)
+* Retire keys when they have served their lie
+* Rotate frequency
+* Backup your key
+* Hardware Security Modules (HSM) are ffective in managing keys
+  * E.g. YubiKey, ...
 
 ## Cryptographic Attacks
 ### Brute Force
