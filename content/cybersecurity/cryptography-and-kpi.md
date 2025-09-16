@@ -242,7 +242,44 @@ There are 4 fundamental goals of cryptography
 * Researchers have found collision risk, so **don't use it for message integrity**
 
 ## Digital Signatures
+
+* **Goals**
+  * Assures the receiver, that the message truly came from the claimed sender.
+  * Assures the receiver, that the messages was not altered.
+* **Combined**
+  * Goal 1: Public Key Cryptography
+  * Goal 2: Hash Functions
+* **How It Works**
+  * 1. Alice `hashes` the `plaintext` and gets a `message digest` (e.g. SHA3-512)
+  * 2. Alice `encrypts` the `message digest` with her `own private key` this result is the `digital signature`.
+  * 3. Alice `appends` the `digital signature` to the `plaintext`.
+  * 4. Alice `sends` the `appended plaintext` to BOB
+  * Now bob needs to reverse that:
+  * 1. Bob `decrypts` the `digital signature` with `Alice's public key` and has the `message digest`
+  * 2. Bob now recalculated the `message digest` from the `plaintext`
+  * 3. Bob now compares the `self calculated message digest` with the provided one.
+    * Bob has verified now that Alice has sent this message, as claimed.
+    * Bob has verified now that the messages was not altered.
+  * **NOTE** there was no Privacy/confidentiallity, to do that:
+    * Alices should `encrypt` the `appended plaintext` with `Bob's public key`, so at the end you encrypt the whole package. Else the original message is visible + the signature.
+* **Example Use Cases**
+  * Authenticate code that's distributed
+  * Sent messages
+  * ...
+
 ### HMAC
+
+## Which Key Should I Usse
+
+* **When sending messages**
+  * You `send and encrypt` - use `receivers public key` (cause there is only one specific individual that should be able to read it)
+  * you `receive and decrypt` - use `own private key`
+* **When digitally signing**
+  * You `send and sign` - use `own private key` (cause now the receiver could be ANYONE, not a specific person, so better to share your public key so anyone can verify.)
+  * You `receive and verify` - use `senders public key`.
+
+* **Hash-Based Message Authentication Dode**
+* **Provides integrity check, but not non-repudiation**
 
 ## Public Key Infrastructure
 ### Certificates
