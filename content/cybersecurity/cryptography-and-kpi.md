@@ -11,9 +11,41 @@
   * Can be also used for watermarking
   * [OpenStego](https://www.openstego.com/)
 
-### Historical Cryptography
 ## Goals of Cryptography
+There are 4 fundamental goals of cryptography
+
 ### Confidentiality
+* Most cited goal of cryptography
+* Ensure data is private when
+  * At-Rest
+    * Susceptible to theft of physical drives
+    * Options:
+      * **Encrypting Data on Disk**
+        * *Full-disk encryption (FDE)* - All data is automatically encrypted
+          * Protects against physical theft
+          * Does not work once the system us booted, so at run time it doesn't do much.
+        * *Partition encryption* - Same as FDE but targets a partition
+          * Good for dual boot systems with senstive data.
+        * *File-Level encryption* - On file level, bit less secure (as secure and non secure files can coexist)
+        * *Volume encryption* - A "volume" like a set of files/folders
+          * Middle ground between Partition and File encryption.
+      * **Encrypting Database Data**
+        * Database-level encryption - protect from access by unauthorized individuals
+          * *Transparent Data Encryption (TDE)*  - Encrypt eentire database
+          * *Column-Level Encryption (CLE)* - Encrypt specific columns within tables
+        * Record-level encryption - Encrypts specific record
+          * Where a table is shared between different users with other level of permission.
+  * In-Transit (aka "data on the wire")
+    * Susceptible to eavesdropping
+    * TLS is most mainstream
+  * In-use
+    * Susceptible to aunauthorized processes
+* 2 Types
+  * Symmetric cryptosystems - One shared key for all users of the system
+  * Assemtric cryptosystems - public/private keys for each user of the system
+* Obfuscation - Related but not the same
+  * Used to make it intentionally difficult for humans to understand how code works. Typical for IP.
+
 ### Integrity
 ### Authentication
 ### Non-repudiation
