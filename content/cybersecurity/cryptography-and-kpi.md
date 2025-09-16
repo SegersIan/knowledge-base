@@ -329,7 +329,33 @@ There are 4 fundamental goals of cryptography
       * ...
 
 ### Certificate Authorities (CA)
+
+* Neutral organizations that act as a "notary" for digital services.
+* To get a certificate you have to identify with these notaries
+* Examples: IdenTrust, Amazon Web Services, DigiCert Group, GlobalSign, Let's Encrypt, GoDaddy
+* Anyone can start an CA, if you don't know the CA, don't trust anything they issue.
+* Browsers come preloaded with ahh the major CA's their root certificats.
+* **Registration Authorities** - Assist CA's with virifying user's identities before they get a certificate issued. Basically an identity verification authority/service/
+* **Root Certificate** - The core/top level certificate of a CA, which is usally **kept offline** (if this is compromised, all the children are)
+* **Intermediate Certicificate** - **kept online** to serve as the online CA and to issue certificates routinely.
+* **Certificate Chaining** - Certificates create certificates for others, and those others could then create certificates from there, creating a trust chain of certificates.
+  * A browser should validate all certicicates in the chain.
+* **CA's dont need to be third party** - You can be a CA for your own organization and use it to create certificates across your oganization, it will only not be trusted by externals that visit your site, but for that you can use a third party one. This saves money and time.
+
 ### Certificate Generation and Destruction
+
+* **Enrollment**
+  * Prove your Identity to CA - Appear in person, organizational documentation, etc..
+  * `Certificate Signiung Request (CSR)` which is your raw public key.
+  * The CA creates a X.509 certificate and signs it with CA's private key.
+  * Distribute your certificate
+  * Based on the identity verification it can issue different certicite types:
+    * **Dommain Validation (DV)** - Yes, the subject has control over the domain
+    * **Extended Validation (EX)** - Yes, the subjet is a legitimate business
+* **Verification**
+
+* **Revocation**
+
 ### Certificate Formats
 
 ## Asymmetric Key Management
