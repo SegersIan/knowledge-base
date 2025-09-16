@@ -114,8 +114,10 @@ There are 4 fundamental goals of cryptography
 * Also Known as:
   * **Secret Key Cryptography**
   * **Private Key Cryptography** - but confuses with Public/Private key pairs.
+* Out-band-exchange
 * Shared secret between all participants
-* Pro: It's fast! So it works well in hardware implementations
+* Pro: It's fast! So it works well in hardware implementations and "large data transfes*
+  * This is why TLS communication first goes through assymetric to then create a symmetric session token.
 * Con
   * **Key Exchange is a major problem** - How to securily shared this in advance?
     * Some secure online channel
@@ -126,8 +128,32 @@ There are 4 fundamental goals of cryptography
 
 ### Asymmetric Key Algorithms
 
+* Also Known as:
+  * **Public Key Algorithms**
+* In-band-exchange
+* If the public key encrypts, only the private key can decrypt
+* If the private key encrypts, only the public key can decrypt
+* Can also support digital signature technologies
+* Pro:
+  * **Key Exchange is simple** - you can share your public key over a insecure schannel
+  * **Scales well**
+    * Adding one user requires generating only one new public/private key pair.
+  * **Little to regenerations**
+    * Users can be removed by a simple key recovation system.
+    * When a private key is compromised, only that key needs to be regenerated.
+  * **Multi-Purpose**
+    * Confidentiality
+    * Integrity
+    * Authentication
+    * Non-Repudiation
+  * **No preexisting communication links needs to exist**
+* Con
+  * It is slow (slower than symmetric)
 
 ### Hashing Algorithms
+
+* Message digestg - summary of a message in hash.
+* **Collisions** - When 2 different inputs results in identical hash
 
 ## Symmetric Cryptography
 ### Data Encryption Standard
