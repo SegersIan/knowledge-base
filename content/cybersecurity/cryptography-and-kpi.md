@@ -285,8 +285,7 @@ There are 4 fundamental goals of cryptography
     * Only need to know message integrity (hash) and that it comes from Client X => `Message + secret`
     * Typical 1-1 communication, no 3th party of many people who will access this, compared to a digitally signed binary.
 
-
-## Which Key Should I Usse
+## Which Key Should I Use
 
 * **When sending messages**
   * You `send and encrypt` - use `receivers public key` (cause there is only one specific individual that should be able to read it)
@@ -295,7 +294,15 @@ There are 4 fundamental goals of cryptography
   * You `send and sign` - use `own private key` (cause now the receiver could be ANYONE, not a specific person, so better to share your public key so anyone can verify.)
   * You `receive and verify` - use `senders public key`.
 
-## Public Key Infrastructure
+## Public Key Infrastructure (PKI)
+
+* **A hierarchy of trust relationships.**
+* **Combines** almost all cryptography elements.
+  * Assymetric cryptography
+  * Symmetric cryptography
+  * Hashing
+  * Digital Certificates (~ Digitan Signatures-ish)
+
 ### Certificates
 ### Certificate Authorities
 ### Certificate Generation and Destruction
