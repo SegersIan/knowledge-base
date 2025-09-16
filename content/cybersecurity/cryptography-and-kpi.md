@@ -172,6 +172,23 @@ There are 4 fundamental goals of cryptography
 
 ### Symmetric Key Management
 
+* Security practices to protect keys.
+* **Creation and Distribution** - How do we exchange these keys securely ?
+  * _*Offline Distribution*_ - Via a hardware format (paper, ubikeys, ...), but that's sensitive to many risks
+  * _*Public Key Encryption*_ - Like TLS, do first public/key handshake, agree a key and then proceed with a symmetric key (e.g. a session token for TLS). Come with some benefits to also authenticate and so before exchanging the key.
+  * _*Diffie-Hellman*_ - When hardware is not possible and PKI is missing.
+    * Allows two parties to establish a shared secret over an insecure channel
+    * Foundation for many secure protocols
+    * Uses asymmetric crypto principles but creates symmetric keys
+    * more info see page `210` of the CompTia Security+ study book.
+* **Storage and Desctruction**
+  * Never store en cryption key on same system where the encrypted data resides
+  * _*SPlit Knowledge*_ 2 people with each half of the key
+    * When one leaves, do regeneration
+* **Key Escrow and Recovery**
+  * What if the key is forgotten/lost or the one who encrypted it leaves?
+  * **Key Escrow** - A third party store a protected copy of these keys and follow a _key recovery_ policy to request a lost key.
+
 ## Asymmetric Cryptography
 ### RSA
 ### Elliptic Curve
