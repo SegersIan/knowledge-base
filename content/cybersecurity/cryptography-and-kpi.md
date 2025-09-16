@@ -190,8 +190,17 @@ There are 4 fundamental goals of cryptography
   * **Key Escrow** - A third party store a protected copy of these keys and follow a _key recovery_ policy to request a lost key.
 
 ## Asymmetric Cryptography
+
+**Key length** is very different based on cryptosystem. A 1024bit RSA is equally safes as a 160-bit ECC.
+
 ### RSA
-### Elliptic Curve
+* Created in 1977 by Ronald **R**ivest, Adi **S**hamir, and Leanord **A**dleman.
+* Initially proprietary, today public domain
+* Based on factoring large prime numbers
+
+### Elliptic Curve Cryptography (ECC)
+* Created 1985 by Neal Koblits and Victor Miller
+* It's harder to break, so you don't need such a long key length to get the same effect as with RSA.
 
 ## Hash Functions
 ### SHA
