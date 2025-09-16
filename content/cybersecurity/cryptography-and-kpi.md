@@ -353,10 +353,40 @@ There are 4 fundamental goals of cryptography
     * **Dommain Validation (DV)** - Yes, the subject has control over the domain
     * **Extended Validation (EX)** - Yes, the subjet is a legitimate business
 * **Verification**
-
+  * First you verify a certificate with the public key of the CA.
+  * Then you check if the certificate is not on **Certificate Revocation List (CRL)** or **Online Certificate Status Protocol (OCSP)**
+  * Now we can assume it's *authentic* if it checks
+    * Digital Signature of CA is authentic
+    * You trust the CA
+    * Certificate not liste on CRL or OSCP
+    * Certificate contains the data you're trusting.
+      * Example: If certifcate only contains the email of a user but not the full name, you cab only trust the email.
+  * **Certificate Pinning** - Hard-coding which specific certificate (or CA) your application will trust, rather than trusting the entire OS certificate store.
 * **Revocation**
+  * Request Grace Period - Max response time to which a CA will peform a revocation.
+  * Certicicate Practice Statement (CPS) - The detailed operational manual that describes exactly how a Certificate Authority runs its business.
+  * Reasons
+    * Certificate was compromised (private key leaked)
+    * Certificate erroneously issued
+    * Details of certificate changed
+    * Security association changed (user left the organization)
+  * Techniques
+    * **Certificate Revocation List (CRL)** - Maintained by the CAs
+      * Contains all serial numbers of issued and also revoked with the date and time of revocation.
+      * Requires to be downloaded/cross-checked periodically, causes latency
+    * **Online Certificate Status Protocol (OCSP)**
+      * Fast/realtime
+      * When you get a certificate, send an OCSP request to the CA's OCSP server and you get "good", "revoked" or "unknown" status.
+      * Huge burden on OCSP servers
+    * **Certificate Stapling**
+      * Extension to OCSP
+      * The server sends it's certificate with the "Stapled" OCSP response
+      * Browser can then verify the stappled OCSP response
+      * A timestamp is included, to make sure the OCSP response is recent enough
+      * This mostly helps if you have many concurrent users, so then there is only one OCSP request for all those users for a given time interval.
 
 ### Certificate Formats
+
 
 ## Asymmetric Key Management
 
