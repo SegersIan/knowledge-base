@@ -1,5 +1,16 @@
 # Cryptography and the PKI
+
 ## An Overview of Cryptography
+
+* Plain text - The actual text
+* Ciphertext - The encoded version of your text
+* Cipher - The method/technique to obfuscate/encode the text.
+* Cryptology -  The overarching science, and cryptography is its key component for creating secure systems
+* Steganography - Hide messages in plane sight using cryptograhic techiques in anohter file
+  * Images, text, audio, video, etc...
+  * Can be also used for watermarking
+  * [OpenStego](https://www.openstego.com/)
+
 ### Historical Cryptography
 ## Goals of Cryptography
 ### Confidentiality
