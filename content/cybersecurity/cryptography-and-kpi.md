@@ -304,7 +304,31 @@ There are 4 fundamental goals of cryptography
   * Digital Certificates (~ Digitan Signatures-ish)
 
 ### Certificates
-### Certificate Authorities
+
+* **Assurance that people you are communicating with are trulu who they claim to be** - Authentication
+  * ***endoresed*** copies of an indivuals ***public key*** (We endorse this public key can be trust and is of person x)
+  * Done by verifying that a certificate was signed by a Trusted Certificate Authority (CA), they know the public key is legitimate.
+    * Cause the public key is good for someone to send a private message to that one person, but therefore we don't know if that person is who they claim to be (authentication).
+* **X.509** is a container/format standard for certificates
+  * Attributes
+    * `X.509` version
+    * `Serial Number` from the certificate creator
+    * `Signature Algorithm Identifier` what algorithm was used to sign the signature (so others can verify)
+    * `Subjects Issuer Name` of the CA that issues this certificate.
+    * `Validity Period` specifying a start and end date.
+    * `Common Name (CN)` that states the certificate owner (e.g. `ian.com` or `blog.ian.com`)
+      * wildcards for first level subdomains `e.g. *.ian.com`
+    * \[Optional\] `Subject Alternative Names (SANS)` that specify additional items (IP Addresses, domain names, ...)
+    * `Subjects Public Key` the actual public key
+  * Version 3
+    * Supports extensions/customized variables containing data (metadata) from the CA
+    * Examples
+      * A signing key used by CA for the certificate
+      * Email Addresses
+      * Use signature only for signing, to encryption
+      * ...
+
+### Certificate Authorities (CA)
 ### Certificate Generation and Destruction
 ### Certificate Formats
 
