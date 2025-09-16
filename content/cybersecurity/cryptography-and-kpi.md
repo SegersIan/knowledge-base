@@ -203,8 +203,43 @@ There are 4 fundamental goals of cryptography
 * It's harder to break, so you don't need such a long key length to get the same effect as with RSA.
 
 ## Hash Functions
+* A hash can be called `message digest` can be used for
+  * hash, hash value, hash total, CRC, fingerprint, checkstum, digital ID.
+* Recalculating the hash and compare original message/provided hash.
+  * Even the smallest difference results in a very different hash
+* Digital Signature algorithm
+* **5 Requirements**
+  * Accept an input of any length
+  * Produce an output of fixed length, unrelated to the input.
+  * Relatively easy to compute
+  * One way, can't be reversed
+  * Collision Free
+
 ### SHA
+
+* By NIST
+* AKA Secure Hash Standard (SHS), AKA FIPS 180.
+* **Secure Hashing Algorithm**
+  * Successors: SHA-1, SHA-2, SHA-3
+* SHA-1
+  * Input of very high upper bound limit (like 2 000 000 terabyte)
+  * Produces 160bit digest
+  * Processes in 512 bit blocks, if a block can't be filled it's padded woth extra data.
+  * SHA-1 has shown **weaknessess**, therefore SHA-2
+* SHA-2
+  * Generally secure, still similar SHA-1 weakness, so ideally SHA-3 to be used
+  * 4 Variants
+    * SHA-256 - 256 bit message digest - 512 bit block size
+    * SHA-224 - 224 bit message digest - 512 bit block size - Truncated version of SHA-256
+    * SHA-512 - 512 bit message digest - 1024 bit block size
+    * SHA-384 - 284 bit message digest - 1024 bit block size - Truncated version of SHA-512
+    * SHA-<digest_size> is general pattern
+
 ### MD5
+
+* 128 bit message digest - 512 bit block size
+* four distinct rounds of computatioin to product the message digest
+* Researchers have found collision risk, so **don't use it for message integrity**
 
 ## Digital Signatures
 ### HMAC
