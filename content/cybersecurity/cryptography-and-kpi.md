@@ -155,9 +155,21 @@ There are 4 fundamental goals of cryptography
 * Message digestg - summary of a message in hash.
 * **Collisions** - When 2 different inputs results in identical hash
 
-## Symmetric Cryptography
-### Data Encryption Standard
-### Advanced Encryption Standard
+## Common Symmetric Cryptography Systems
+
+### Data Encryption Standard (DES)
+* From US Government (1977) - Not secure anymore
+* 3DES used the algorithm with 3 different keys - Still considered insecure and expired
+
+### Advanced Encryption Standard (AES)
+* By NIST (National Institute of Standards and Technology)
+* Rijndael Block cipher
+* Key Strengths:
+  * 128 bits - 10 rounds of encryption
+  * 192 bits - 12 rounds of encryption
+  * 256 bits - 14 rounds of encryption
+* Block Size: 128 bit
+
 ### Symmetric Key Management
 
 ## Asymmetric Cryptography
