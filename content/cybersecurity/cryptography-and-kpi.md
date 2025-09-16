@@ -2,9 +2,6 @@
 
 ## An Overview of Cryptography
 
-* Plain text - The actual text
-* Ciphertext - The encoded version of your text
-* Cipher - The method/technique to obfuscate/encode the text.
 * Cryptology -  The overarching science, and cryptography is its key component for creating secure systems
 * Steganography - Hide messages in plane sight using cryptograhic techiques in anohter file
   * Images, text, audio, video, etc...
@@ -71,8 +68,37 @@ There are 4 fundamental goals of cryptography
 * Can only be done with assymetric encryption.
 
 ## Cryptographic Concepts
+
+* **Cryptology** - 2 fields
+  * **Cryptography** - Art of creating and implementing secret codes and ciphers.
+  * **Cryptoanalysis** - The art of defeating codes and ciphers.
+
+* **Plain text (P)** - The actual text
+* **Ciphertext (C)** - The encoded version of your text
+* **Algorithm** - The method/technique to obfuscate/encode the text.
+* **Cipher** - The more specific implementation of the algoritm, li ke RSA with 2048-bit keys.
+* **Cipher Suit** - A set of ciphers that a system (e.g. a browser, server, OS) supports.
+* **Key (K)** - The key to encode/decode between the Ciphertext (C) and Plant Text (P) using a given Cipher.
+  * Sometimes refered to as `cryptovariables`.
+
+* **Kerckhoff's Principle** - A cryptographic system should be secured even if everything about the system, except the key, is public knowledge
+  * Allows algorithms known and public - allowing for public scruteny and testing.
+  * If you don't follow it, Kerckhoff argues you do `Security through Obscurity`
+  * Note: Bit off an OSS argument.
+
 ### Cryptographic Keys
+
+* **Key Space** - The range of values that are valid for a key for a given algorithm. (e.g. 0 - 100)
+  * Usually the upperbound is a 2^N value, cause the lower boundary are all binary `0` and lower boundary are all `1` for that given key space (e.g. 128 bit).
+
 ### Ciphers
+
+* Categories:
+  * **Block Ciphers** - Chunks the message in fixed size blocks (e.g. 8 bytes) and applied the cipher to that block.
+    * TLS is a good example, you will chunck a message in small blocks to send over the internet, so you cipher per block.
+  * **Stream Ciphers** - Operate on a one character or bit of message at a time.
+    * You can use this as a block cipher, by just waiting for a buffer of fixed block size to fill up before you then "flush" it.
+
 ## Modern Cryptography
 ### Cryptographic Secrecy
 ### Symmetric Key Algorithms
