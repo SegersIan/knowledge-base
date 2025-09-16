@@ -53,11 +53,23 @@ There are 4 fundamental goals of cryptography
   * Digital Signatures (Symmetric and Assymetric)
     * Symmetric (HMAC - Hash-based Message Authentication Code) -> Your input to the hash is the plaintext + a shared secret, so the received can recalculate the hash, as they have the same secret.
     * Assymetric
-      * You sign with a private key, and the receiver verifies with a public key
+      * You sign with a private key, and the receiver verifies with a public key, but also used for **authentication**. 2-in-1.
   * Hash Functions - But anyone can recalculate the hash, in case the hash function and input params are known
 
 ### Authentication
+
+* Verifies the claimed identity between users.
+  * Proof who you are, but not used to state if you did something or not.
+  * With a password you can claim it was stolen, but it wasn't.
+
 ### Non-repudiation
+
+* The receiver can verify that a message was sent by the actuel sender, not someone impersonating.
+  * Sender signs with private key
+  * Receiver validates with public key
+* _Prevents the sender from claiming they never sent the message (repudiating)._
+* Can only be done with assymetric encryption.
+
 ## Cryptographic Concepts
 ### Cryptographic Keys
 ### Ciphers
