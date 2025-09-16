@@ -115,7 +115,7 @@ There are 4 fundamental goals of cryptography
   * **Secret Key Cryptography**
   * **Private Key Cryptography** - but confuses with Public/Private key pairs.
 * Shared secret between all participants
-* Pro: It's fast!
+* Pro: It's fast! So it works well in hardware implementations
 * Con
   * **Key Exchange is a major problem** - How to securily shared this in advance?
     * Some secure online channel
@@ -125,6 +125,8 @@ There are 4 fundamental goals of cryptography
   * **Keys regenerate often** - When someone should be excluded from communication, the key needs to be regenerated and redistributed again.
 
 ### Asymmetric Key Algorithms
+
+
 ### Hashing Algorithms
 
 ## Symmetric Cryptography
