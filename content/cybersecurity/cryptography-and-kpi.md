@@ -387,7 +387,17 @@ There are 4 fundamental goals of cryptography
 
 ### Certificate Formats
 
-
+* X.509 says what data should be in it (attributes), but the formats specify how this is stored.
+* **Formats**
+  * **Distinguished Encoding Rules (DER)** - most commong binary format
+    * Extensions used: `*.der`, `*.crt` or `*.cer`
+  * **Privact Enhanced Email (PEM)** - ASCII text version of the DER format
+    * Extensions used `*.pem` or `*.crt`
+    * (you might need to inspect the `*.crt` file if its text or binary)
+  * **Personal Information Exchange (PFX)** - Windows systems binary format
+    * Extensions used `*.pfx` or `*.p12`
+  * **P7B** - ASCII format for windows systems
+  
 ## Asymmetric Key Management
 
 ## Cryptographic Attacks
