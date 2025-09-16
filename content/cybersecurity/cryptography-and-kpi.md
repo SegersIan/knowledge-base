@@ -47,6 +47,15 @@ There are 4 fundamental goals of cryptography
   * Used to make it intentionally difficult for humans to understand how code works. Typical for IP.
 
 ### Integrity
+
+* Protect against intentional (editted) and unintentional (bit rot) alterations
+* Examples
+  * Digital Signatures (Symmetric and Assymetric)
+    * Symmetric (HMAC - Hash-based Message Authentication Code) -> Your input to the hash is the plaintext + a shared secret, so the received can recalculate the hash, as they have the same secret.
+    * Assymetric
+      * You sign with a private key, and the receiver verifies with a public key
+  * Hash Functions - But anyone can recalculate the hash, in case the hash function and input params are known
+
 ### Authentication
 ### Non-repudiation
 ## Cryptographic Concepts
