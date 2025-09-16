@@ -111,6 +111,7 @@ There are 4 fundamental goals of cryptography
 
 ### Symmetric Key Algorithms
 
+* Generally use shorter keys than assymetric keys
 * Also Known as:
   * **Secret Key Cryptography**
   * **Private Key Cryptography** - but confuses with Public/Private key pairs.
@@ -127,7 +128,7 @@ There are 4 fundamental goals of cryptography
   * **Keys regenerate often** - When someone should be excluded from communication, the key needs to be regenerated and redistributed again.
 
 ### Asymmetric Key Algorithms
-
+* Generally use longer keys than symmetric keys
 * Also Known as:
   * **Public Key Algorithms**
 * In-band-exchange
