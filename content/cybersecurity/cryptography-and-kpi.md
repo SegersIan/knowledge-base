@@ -409,16 +409,68 @@ There are 4 fundamental goals of cryptography
 
 ## Cryptographic Attacks
 ### Brute Force
+* Try every possible key
+* Likely to work but takes a brutol long time, based omn key length
 ### Frequency Analysis
+* Cryptanalyst that look for patterns in the encrypted data
+  * single charachters in a sentence are often `a` or `i`
+* The code itself is not being broken
+* Does not work on modern algorithms
 ### Known Plain Text
+* Attacker has a set of plaintexts with their corresponding Ciphertexts.
+* Attacker knows some plaintext AND its corresponding ciphertext - But can't choose what that plaintext is.
+* With moderm ciphers, impossible (amount of combinations), but worked for enigma machine.
 ### Chosen Plain Text
+* Attacker can actively choose specific plaintext to encrypt
+* Not easy, but not impossible.
+* Example: Differential cryptanalysis
+* Compared to the Known Plain Text, you have access to a machine/device/system to encrypt, so you can try different inputs and learn from it, with Known Plain text you DON't have access to it, so you're stuck with limited info and data.
 ### Related Key Attack
+* Chosen Plain Text attack, but the attacker can do this with 2 different keys, giving more data and correlation.
 ### Birthday Attack
+* Attack on Hash functions
+* **Birthday Theorem**
+  How many people do you need to have in a room to have a strong likelihood that two would have the exact sane birthday (excluding year, so month and day)?
+* 367 people would make it certain, but the key is *strong likelihood*, so you only need 23 acually
+* You're not looking for anyone to match your birthday, but just that any two kids match, which is more likely.
+* You can find much faster a hash collision of you search for **ANY collision** instead of **A collision with your value**.
+* in Short: you try to find any collisions, but with a strategy so you can find "usefull data" that can be actually used.
+
 ### Downgrade Attack
+* Used gainst secure communications such as TLDS.
+* Get the user/system to shift to less secure cryptographic modes or less secure version that's easier to break.
+
 ### Hashing, Salting, and Key Stretching Exploiting Weak Keys Exploiting Human Error
+* **Rainbow table attacks** - Recall the precimputed hashes to reverse
+* **Salting** - adding extra random, secret data to the input.
+* **Key Stretching** - Create strong encryption keys from passwords
+  * Password-Based Key Derivation Function v2 (PBKDF2) - Thousands of iteationsof salting and hashing to generate encryption keys.
+### Exploiting Weak Keys
+* Good cryptographic algorithm, but implemented in a weak manner,
+  * Wired Equivalent Privacy (WEP) had this issue, do not use
+### Exploiting Human Error
+* By accident sending in the clear a message or email
+* A message is prefixed with a header that gives so much metadata about the message, that the cryptanalist can use that for breaking. (e.g. charcter count, length, ...)
+* Weak or deprecated algorithms
 
 ## Emerging Issues in Cryptography
 ### Tor and the Dark Web
+* AKA The Onion Router
+* Anonymous routing traffic across internet
+* Relies on **Perfect forward secrecry**
+* Layers of encryption and nodes.
+* Can browse the standard internet and hosting/access dark web sites.
+* not sure why an emerging issue?
 ### Blockchain
-### Lightweight Cryptography Homomorphic Encryption
+* Open Public Ledger
+* not sure why an emerging issue?
+### Lightweight Cryptography
+* Some low power deviced, embedded devices, IoT, smartcards, Satelites have limited power and energy.
+* Specialized hardware can limited used energy
+* Also when latency must be criticly low - probably like real time systems?
+### Homomorphic Encryption
+* Allows calculations and operations on encrypted data, so the data doesn't need decryption to "use" to a degree.
+* not sure why an emerging issue?
 ### Quantum Computing
+* When it becomes more pratical, it can defeat cryptographic algorithms dat depend on facvotring large prime numbers.
+* But can be also used for stronger encryptoon.
