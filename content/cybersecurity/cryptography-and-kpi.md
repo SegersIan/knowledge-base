@@ -269,6 +269,23 @@ There are 4 fundamental goals of cryptography
 
 ### HMAC
 
+* **Hash-Based Message Authentication Code**
+* **Provides integrity check, but not non-repudiation**
+  * I know the message was not altered, cause in transit, the one who would alter it, doesn't have the secret to make sure the right hash value would be calcualted.
+* **Formula**
+  * Any hashing function
+  * A private key
+  * The `plaintext` + `private key` results in a `message digest` that can be only recalculated by anyone having the same `private key`.
+* **Good for**
+  * Speed & efficiency
+* **Examples**
+  * API Authentication:
+    * The API Key (secret) is shared between the client and API.
+    * Many messages/API calls are sent.
+    * Only need to know message integrity (hash) and that it comes from Client X => `Message + secret`
+    * Typical 1-1 communication, no 3th party of many people who will access this, compared to a digitally signed binary.
+
+
 ## Which Key Should I Usse
 
 * **When sending messages**
@@ -277,9 +294,6 @@ There are 4 fundamental goals of cryptography
 * **When digitally signing**
   * You `send and sign` - use `own private key` (cause now the receiver could be ANYONE, not a specific person, so better to share your public key so anyone can verify.)
   * You `receive and verify` - use `senders public key`.
-
-* **Hash-Based Message Authentication Dode**
-* **Provides integrity check, but not non-repudiation**
 
 ## Public Key Infrastructure
 ### Certificates
