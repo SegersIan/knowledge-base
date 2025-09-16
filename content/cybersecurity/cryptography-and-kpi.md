@@ -100,28 +100,57 @@ There are 4 fundamental goals of cryptography
     * You can use this as a block cipher, by just waiting for a buffer of fixed block size to fill up before you then "flush" it.
 
 ## Modern Cryptography
+
+* The longer a key, the harder (more compute power) it is to break it.
+* The key length should always be longer than what is possible to break/calculate, this changes over time.
+
 ### Cryptographic Secrecy
+
+* **Secret ciphers** - Don't make sense, better to have public scruteny
+* **Columnar Transposition** - Has too many weaknesses and is therefore not used in modern secure communication.
+
 ### Symmetric Key Algorithms
+
+* Also Known as:
+  * **Secret Key Cryptography**
+  * **Private Key Cryptography** - but confuses with Public/Private key pairs.
+* Shared secret between all participants
+* Pro: It's fast!
+* Con
+  * **Key Exchange is a major problem** - How to securily shared this in advance?
+    * Some secure online channel
+    * Some offline, out-of-band exchange
+  * **Does not implement non-repudiation**
+  * **Not scalable** - Cause you need to provide this key to every new user. so it's a key exchange scaling problem.
+  * **Keys regenerate often** - When someone should be excluded from communication, the key needs to be regenerated and redistributed again.
+
 ### Asymmetric Key Algorithms
 ### Hashing Algorithms
+
 ## Symmetric Cryptography
 ### Data Encryption Standard
 ### Advanced Encryption Standard
 ### Symmetric Key Management
+
 ## Asymmetric Cryptography
 ### RSA
 ### Elliptic Curve
+
 ## Hash Functions
 ### SHA
 ### MD5
+
 ## Digital Signatures
 ### HMAC
+
 ## Public Key Infrastructure
 ### Certificates
 ### Certificate Authorities
 ### Certificate Generation and Destruction
 ### Certificate Formats
+
 ## Asymmetric Key Management
+
 ## Cryptographic Attacks
 ### Brute Force
 ### Frequency Analysis
@@ -131,6 +160,7 @@ There are 4 fundamental goals of cryptography
 ### Birthday Attack
 ### Downgrade Attack
 ### Hashing, Salting, and Key Stretching Exploiting Weak Keys Exploiting Human Error
+
 ## Emerging Issues in Cryptography
 ### Tor and the Dark Web
 ### Blockchain
