@@ -183,13 +183,15 @@
 * **Privileged Access Managment (PAM)**
   * `Just-In-time (JIT) permissions` - Granted and revoked onloy when needed. Helps creeps but also oppertunity for one to impersonate and take advantage + audit.
   * `Password Vaulting` - Like JIT, but allow to accces privileged acces without needing t know the password.
+    * Used so that passwords are availbe during outages and emergencies
   * `Ephemeral Accounts` - Temporary accounts with limited lifespan, set short lifespan and proper deprovisioning
 
 ## Access Control Schemes
 Determine which users, services, and programs can access various files or other objects.
 
-* **Mandatory Access Control (MAC)** - OS controls access rules, not users/admins
+* **Mandatory Access Control (MAC)** - OS controls access rules (by os admin), not by users themselves,
   * Rare
+  * Like I can make a file but I cant even tell that others can read it, that's evne above my paygrade.
 * **Discretionary Access Control (DAC)** - Assigns owners for objects like files and directories
   * Most common to PC file permissions
   * Owner can delegate permissions
