@@ -186,4 +186,23 @@
   * `Ephemeral Accounts` - Temporary accounts with limited lifespan, set short lifespan and proper deprovisioning
 
 ## Access Control Schemes
+Determine which users, services, and programs can access various files or other objects.
+
+* **Mandatory Access Control (MAC)** - OS controls access rules, not users/admins
+  * Rare
+* **Discretionary Access Control (DAC)** - Assigns owners for objects like files and directories
+  * Most common to PC file permissions
+  * Owner can delegate permissions
+* **Role-Based Access Control (RBAC)** - Roles that are matched with privileges
+  * 3 primairy rules
+    * Role Assignment - user can only use permissions that match the role
+    * Role Authorization - user's role must be authorized for the user
+    * Permission Authorization - user can use only permissions that their role is allowed
+* **Rule-Based Access Control (RBAC/RuBAC)** - applies set of rules or Access Control Lists (ACLs)
+  * Example: Firwall (the rule is accessed when the access is requested)
+* **Attribute-Based Access Control (ABAC)** - replies on policies that take attribites of the user in consideration
+  * Complex to handle but are also very flexible
+* **Time-of-day restrictions** - limit when you can do stuff
+* **Least privilege** - give only the minimum of permissions necessary
+
 ### Filesystem Permissions
