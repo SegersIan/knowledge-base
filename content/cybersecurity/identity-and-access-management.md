@@ -159,9 +159,31 @@
   * Receiver Operating Characteristic (ROC) - Plot FRR and FAR out on a graph and find the sweet spot to minimze both errors that's acceptble.
   * Imposter Presentation Match Rate (IAPMR) - how often an attack will succeed?
 * **Backup Systems** - are necessary, cause there are often exceptions, like people who can't use fingeprints due to handling chemicals or such.
+
 ## Accounts
+* **Contains the information, rights and permissions about a user.**
+
 ### Account Types
+* **Basic Types**
+  * **User Accounts** - for typical user
+  * **Privileged or Adminstrative accounts** - root account (linux) or defaul admin account (windows)
+  * **Shared and generic accounts or credentials** - often prohibited, but it happenbs
+  * **Guest accounts** - Temporary users with limited priveleges and limited information about them
+  * **Service accounts** - Service/Systems that don't require interactive authentication
 ### Provisioning and Deprovisioning Accounts
+* **Provisioning**
+  * Can do `identity proofing` to make sure who you are
+  * Add account to groups with right permissions
+  * Start with least privilege
+  * Permission assignment and management is critical and hard.
+  * *Permission Creep* as people grow and change roles they accumulate many permissions
+* **Deprovisioning**
+  * Avoid dormant or old accounts to be available to hackers or angry former employees.
+  * Deletion is better than disabling accounts (in case that...) cause it is safer.
+* **Privileged Access Managment (PAM)**
+  * `Just-In-time (JIT) permissions` - Granted and revoked onloy when needed. Helps creeps but also oppertunity for one to impersonate and take advantage + audit.
+  * `Password Vaulting` - Like JIT, but allow to accces privileged acces without needing t know the password.
+  * `Ephemeral Accounts` - Temporary accounts with limited lifespan, set short lifespan and proper deprovisioning
 
 ## Access Control Schemes
 ### Filesystem Permissions
