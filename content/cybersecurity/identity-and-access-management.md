@@ -90,12 +90,75 @@
   * Sometimes the SP would assign authorization rules/roles based on Identity related attibutes (like organizational unit).
   * But still, this is configured and set on the SP side.
 * OpenID and SAML are often used to implement the entire Federation process.
-## Authentication Methods
-### Passwords
-### Multifactor Authentication
-### One-Time Passwords
-### Biometrics
 
+## Authentication Methods
+* First you `claim` an `identity` by username, certificate, ...
+* Then you `prove` that the `identity` belongs to you via an `authentication method` as described next.x
+
+### Passwords
+* **Best practices**
+  * Show password to prevent typos, password managers, store secrets with salts and secure hashing methods, locking after multiple attempts and MFA
+* **Guideliness** - [NIST 800-63](https://pages.nist.gov/800-63-3/)
+  * Reduce password complexity requirements and instead emphasize length.
+  * Not require special characters
+  * Allow ASCII and Unicode
+  * Allow pasting into passwords fields (for password managers)
+  * Monitor new passwords to ensure that easily compromised ones are not used
+  * Eleminate Password Hints
+* **Recomendations**
+  * Length is the best defense against brute force
+  * Complexity - prevent repeated characters and common words
+  * Reuse limitations
+  * Expiration dates to force renewal
+  * Age limitations - Sometimes people keep resetting till the "reuse" limitation is circumvented.
+* **Password Managers**
+  * Good stuff
+  * [Lastpass Breach Recommendation](https://blog.lastpass.com/posts/security-incident-update-recommended-actions)
+* **Passwordless**
+  * Instead depending on `what you know` primarily, it focuses on `what you have` (security tokens, certificates,...)
+  * An option: `hardware security key` (like UbiKey)
+    * Protocols: FIDO, Universal 2nd Factor (U2F), ..
+    * FIDO: Open Authentication Standard supporting W3C Web Authentication and Client to Authenticator Protocol (CTAP)
+  * Goal is to remove friction
+
+### Multifactor Authentication (MFA)
+* **4 different types of factors**, MFA uses at least 2
+  * Something you *know* - password, PIN, questio
+  * Something you *have* - hardware device
+  * Something you *are* - physical characteristic of the individua;
+  * Some**where** you *are* - location
+
+### One-Time Passwords (OTP)
+* A common implementation for MFA
+* A password that can be only used once
+* *Primary models*
+  * **Time**-Based One-Time Passwords (TOTP) - Generates passwords that are x-seconds valid.
+  * **HMAC**-Based One-Time Passwords (HOTP) - Uses a `seed value` and `moving factor` (the counter)
+    * so there is a whole sequence that comes from it, everytime the "generate code" is pressed, so the backend can replay that untill give code is found.
+* SMS is often also used, but (note by me), that's just an implementation of TOTP often.
+* **Attacking**
+  * Hard for now, but
+  * Via SMS can be redirect using cloned SIM, or if phone is part of VoIP, compromise VOIP system and redirect the SMS factor, or real time acces to the OTP generator.
+    * Some ovelhm user with reqeated requests so the user just provdes the latest code out of trustration. So you bully the user in providing it without they really understand it's an attack (at that point).
+
+### Biometrics
+* **Something you are**
+* **Most Common**
+  * Fingerprints via optical/ultrasonigc or capacitiv scanners
+  * Retina scanning
+  * Iris recognition - can be done fron bigger instance than retina
+  * Facial recognition
+  * Voice recognition
+  * Vein recognition - no touch necessary
+  * Gait analysis, measures how a person walks
+* **Technologies assed on 4 measures**
+  * Type I errors - False Rejection Rate (FRR) - False Negatives (the actual measure was presented but the system rejected)
+    * FIDO suggests 3%
+  * Type II errors - False Acceptance Rate (FAR) 0 False Positives (the wrong measure was presented bu the system accepted)
+    * Fido suggest 0.01%
+  * Receiver Operating Characteristic (ROC) - Plot FRR and FAR out on a graph and find the sweet spot to minimze both errors that's acceptble.
+  * Imposter Presentation Match Rate (IAPMR) - how often an attack will succeed?
+* **Backup Systems** - are necessary, cause there are often exceptions, like people who can't use fingeprints due to handling chemicals or such.
 ## Accounts
 ### Account Types
 ### Provisioning and Deprovisioning Accounts
