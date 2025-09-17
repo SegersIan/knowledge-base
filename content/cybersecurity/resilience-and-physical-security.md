@@ -54,7 +54,24 @@
   * Not perfect, as this would also need a backup if you would use this
 * **Recovery Point Objective (PRO)** how much loss is acceptable
 * **Recovery Time Objective (RTO)** how long a recovery can take before causing issues
-
+* **Full Backup:** = Data-focused
+  - **What**: Complete copy of all data, you bakcup files and folders (no OS, Apps, settings)
+  - **When**: Scheduled intervals (weekly/monthly)
+  - **Restore**: Single restore operation
+  - **Use case**: Disaster recovery, compliance, archival
+* **Snapshot:** = State-focused
+  - **What**: Point-in-time view of data state
+  - **How**: Usually copy-on-write (shares unchanged blocks) - IT TRACKS Changes
+  - **Speed**: Near-instantaneous
+  - **Use case**: Quick rollbacks, testing, before major changes
+* **Image:** = System-focused
+  - **What**: Exact bit-for-bit copy of entire system/disk (including OS, Apps, settings, AND Data)
+  - **Includes**: OS, applications, data, boot sectors - everything
+  - **Use case**: System cloning, bare-metal recovery, VM deployment
+* When to use:
+  * Snapshot: Before deployments, quick dev/test environments
+  * Image: Server provisioning, disaster recovery baseline
+  * Full backup: Regulatory compliance, long-term data protection
 
 | Mode | Desc | Pro | Con | conclusion |
 | --- | --- | --- | --- | --- |
@@ -62,6 +79,12 @@
 | RAID 1 - Mirroring | Data duplicated to another drive(s) | Good I/O + availability | Needs double the storage |  |
 | RAID 5 - Striping + parity | Data across all disks + 1 disk for parity/checksums | Fast reads, slow writes, can rebuild as long only one disk fails | Only handles one disk failure at a time. Rebuilding impacts performance | If you expect many reads, but not many writes |
 | RAID 10 - Mirroring + parity | At least 4 drives, with adding in pairs. Data mirrored and then striped | PRO and CONs of Raid 0 and Raid 1 | PRO and CONs of Raid 0 and Raid 1 | |
+
+| Type | Speed | Storage | Granularity | Primary Use |
+|------|-------|---------|-------------|-------------|
+| **Full Backup** | Slow | High | File-level | Long-term protection |
+| **Snapshot** | Fast | Efficient | Block-level | Quick recovery/testing |
+| **Image** | Medium | High | System-level | Complete system restore |
 
 ## Response and Recovery Controls
 ### Capacity Planning for Resilience and Recovery
