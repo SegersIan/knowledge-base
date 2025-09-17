@@ -206,3 +206,30 @@ Determine which users, services, and programs can access various files or other 
 * **Least privilege** - give only the minimum of permissions necessary
 
 ### Filesystem Permissions
+* **Scopes**: `users`, `groups`
+* **Actions**: `reading`, `writing`, and `executing`
+* **Linux Filesystem** : `<file/directory> <user><group><others>`
+  * `<file/directory>` either `d` for directory or `-` for file
+  * `<user><group><others>` permissions for each group with `r` read, `w` write, and `x` for execute.
+  * Examples:
+    * Everyone has all permissions on folder `drwxrwxrwx`
+    * Everyone has all permissions on file `-rwxrwxrwx`
+    * Everyone has read permissions on file `.r--r--r--`
+    * Everyone has read and execute permissions on file `.r-xr-xr-x`
+    * Only my user can read and execute permissions on file `.r-x------`
+  * Numeric expression
+    * `0` > `---`
+    * `1` > `--x`
+    * `2` > `-w-`
+    * `3` > `-wx`
+    * `4` > `r--`
+    * `5` > `r-x`
+    * `6` > `rw-`
+    * `7` > `rwx`
+* **Windows Filesystem** :
+  * Permissions:
+    * `Full Control` (linux `rwx`)
+    * `Modify` (linux `rw-`)
+    * `Read & Execute` (linux `r-x`)
+    * `Read` (linux `r--`)
+    * `Write` (linux `-w-`)
