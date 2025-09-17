@@ -38,6 +38,23 @@
     * Data striped (spread across disks)
     * Data mirrored (complete duplicated)
     * And technology to make sure data is not corrupted or lost (parity)
+* **Backups**
+  * Full - entire full snapshopt everytime - lots of disk, but fast recovery
+  * Incremental
+    * Backs up changes since the last backup (regardless of type)
+    * less space and faster, but slow recovery
+  * Differential - deltas between backups
+    * Backs up changes since the last full backup
+    * faster recovery, but slower backup
+  * Most efficient, differential backups, with a periodic new full backup
+* **Replication**
+  * Constant streaming changes
+* **Journaling**
+  * Create a log of changes that can be replayed, allows to restore to point in time
+  * Not perfect, as this would also need a backup if you would use this
+* **Recovery Point Objective (PRO)** how much loss is acceptable
+* **Recovery Time Objective (RTO)** how long a recovery can take before causing issues
+
 
 | Mode | Desc | Pro | Con | conclusion |
 | --- | --- | --- | --- | --- |
