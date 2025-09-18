@@ -62,7 +62,21 @@ Your security responsibilities fall in the "customer responsibilites", the vendo
 * **Fog Computing** - Local gateway devices close to the sensors that does the preprocessing before sending it to the central server/cloud.
 
 ## Virtualization
+Is made possible by hypervisors, virtual machines don't know they're in a virtual environment.
+
 ### Hypervisors
+
+* Hypervisior is a special OS that mediates access to underlying hardware resources.
+* Primary responsibility : Enforce vertical isolation between the VMs.
+  * Gives the VM the illusion that its a single independent physical device.
+  * VM's are not able to access/information/resources assigned to another VM.
+* Types
+  * **Type I Hypervisor AKA Bare-metal hypervisor** - Operate directly on underlying hardware
+    * Most efficient and default for datacenter virtualization
+    * THIS IS the OS
+  * **Type II Hypervisors** - Run as an application on top of an OS (e.g. Parrallels, VirtualBox)
+    * THIS IS AN APP installed on another OS
+    * More for personal computers, hobby, but less efficient.
 
 ## Cloud Infrastructure Components
 ### Cloud Compute Resources
