@@ -154,5 +154,18 @@
   * Expensive
 
 #### Video Surveilance, Cameras and sensors
+* **Motion Recognition Cameras** - activate when motion occurs.
+  * Good for when motion is infrequent
+  * Comes with a buffer of a few seconds before motion was picked up
+  * Might lack the video when no motion was "Sensed" but maybe there was, depending on the sensor.
+* **Object Recognition Cameras** - Can detect cetain objects and if there are moving
+* **Dazzle paint** - used to confuse cameras
+* **Closed-Circuit TV (CCTV)** - shows live on screens what they see, and *can* additionly record, but not necessarily.
+* **Sensors** another way to provide security
+  * Infrared - trigger when changes happen in infrared space, very inexpensive.
+  * Pressure - Good to trigger if an object is moved.
+  * Microwave - More expensive, more reach, but more error prone. They take a baseline of the room and can then detect if changes happened from the baseline.
+  * Ultrasonic - uncommon, but trigger on certain vibrations, good for proximity detection.
+
 
 ### Detecting Physical Attacks
