@@ -58,7 +58,8 @@ Your security responsibilities fall in the "customer responsibilites", the vendo
 * **Cloud Security Alliance (CSA)** - industry organization focused on best practices in cloud security.
     * [CSA Site](https://exams.cloudsecurityalliance.org/en)
     * Designed the [Cloud Controls Matrix (CCM)](https://cloudsecurityalliance.org/research/cloud-controls-matrix) to help understand the right use of cloud security controls and map those to various regulatory standards.
-
+* **Edge Computing** - Push some of the (pre-)processing to the edge/sensors before shipping it back to the central server/cloud.
+* **Fog Computing** - Local gateway devices close to the sensors that does the preprocessing before sending it to the central server/cloud.
 
 ## Virtualization
 ### Hypervisors
