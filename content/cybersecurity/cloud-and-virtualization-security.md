@@ -80,8 +80,39 @@ Is made possible by hypervisors, virtual machines don't know they're in a virtua
 
 ## Cloud Infrastructure Components
 ### Cloud Compute Resources
+* **Virtual Machines** - OS level virtualization
+  * Specify assigned hardware, OS, pay on consumption, SSH/RDP for access.
+* **Containers** - Application level virtualization
+  * Same security concerns as VMs, isolation of access and resources
+
 ### Cloud Storage Resources
+* **Block Storage** - for VMS
+  * Preallocated, so you pay for that.
+  * Most expensive
+* **Object Storage** - S3
+  * You pay for how much actually used
+  * Cheaper
+* **Security Considerations**
+  * *Set permissions Properly*
+  * *Consider high availability and durability*
+  * *Use encryption to protect sensitive data*
+
 ### Cloud Networking
+
+* **Software defined networking (SDN)**
+* **Software defined visibility (SDV)** offer insights into the traffix of the virtual networks
+* **Security Groups** -
+  * kind of the Firewall feature
+  * work at network and transport layer
+  * WAF works on higher levels (application layer for example)
+  * Usually no cost
+* **Virtual Private Cloud (VPC/VNET)**
+  * Segmentation - Different security levels on differenet subnets.
+    * Similar grouped systems can talk to each other, others not.
+    * On hardware level they would use VLAN (Virtual LAN) instead of virtual subnets.
+  * VPC endpoints - CSP backbone that allows to connect VPC with each other
+  * Cloud transit gateways is to connect a VPC with your on-prem network directly and securily
+    * Requires physical actions and efforts.
 
 ## Cloud Security Issues
 ### Availability
