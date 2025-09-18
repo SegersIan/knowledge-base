@@ -10,6 +10,7 @@ bookCollapseSection: true
 ## Links
 
 * [Resources](resources.md)
+* [Hack The Box Labs](https://www.hackthebox.com/hacker/hacking-labs)
 
 ## Info Graphs
 
