@@ -122,4 +122,37 @@
 
 ## Physical Security Controls
 ### Site Security
+* **Site security Plan** - Risk assesment of a site and them decide what to implemment, mitigate, transfer...  resulting in an action plan for the site. A site security plan.
+* **Industrial Camouflage** - nondescript location, without a name on it, so it doesn't have Amazon call center in big on it.
+  * It's security through obscurity, but its a little help, security in layers right?
+* **Fences** - Often first line defence
+  * Works as detterent, to scare off but to also actually fence off.
+* **Bollards** - posts/obstacles that prevent vechicle access
+* **Lighting** - Discourage intruders and make staff veel safe by not having dark/shadow pplaces
+* **ANTI - Drones or Unmanned Areal Vechicles (UAV) systems**
+  * Attacks by drones: Capture image/video, cut wire, block video
+  * Anti-drone detections: wireless signals, EM emission, heat production (infrared), accoustic (listen for drone sounds), optical (just see a drone), ...
+  * Defense against drones: Kinetic systems to shoot drones down, jamming signals, ...
+  * Be careful to take drones down, cause it might cause in expensive fines (e.g. it was just a casual neighbour)
+* **Access Badges** - Can be for authN, authZ, etc, often
+  * Social Engineering often used for trying to copy a badge
+* **Vestibule** - is like a buffer zone between lower and higher security zones
+  * Let someone first enter this vestibule zone after verification
+  * Once we know the person is alone in the vestibule, close the door
+  * Now open the door to the higher secure facility
+  * Against anyone piggybagging entrance (like keeping the door open)
+* **Others**
+  * Alarms - Some pentesters make alarms go off often, so when the actual intrusion happens, no one is looking up.
+  * Locks - locks keep honest people honest, but can always be bypassed
+#### Guards'
+* Where human interaction is neccesary or helpful
+* Offer detective and responsive capabilities
+* An alert guard can significantly make it more difficult to get in with fake signatures, ids, ...
+* But also prone to
+  * Social ENgineering
+  * Human mistakes
+  * Expensive
+
+#### Video Surveilance, Cameras and sensors
+
 ### Detecting Physical Attacks
