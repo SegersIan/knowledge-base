@@ -51,6 +51,15 @@ Your security responsibilities fall in the "customer responsibilites", the vendo
 
 ### Cloud Standards and Guidelines
 
+![img](assets/cloud_reference_architecture.png)
+
+* [NIST Cloud Computing Reference Architecture](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication500-292.pdf)
+  * This shared understanding helps to also talk about cybersecurity.
+* **Cloud Security Alliance (CSA)** - industry organization focused on best practices in cloud security.
+    * [CSA Site](https://exams.cloudsecurityalliance.org/en)
+    * Designed the [Cloud Controls Matrix (CCM)](https://cloudsecurityalliance.org/research/cloud-controls-matrix) to help understand the right use of cloud security controls and map those to various regulatory standards.
+
+
 ## Virtualization
 ### Hypervisors
 
