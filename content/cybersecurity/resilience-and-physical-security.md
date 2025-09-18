@@ -167,5 +167,9 @@
   * Microwave - More expensive, more reach, but more error prone. They take a baseline of the room and can then detect if changes happened from the baseline.
   * Ultrasonic - uncommon, but trigger on certain vibrations, good for proximity detection.
 
-
 ### Detecting Physical Attacks
+Often require in person observation or cameras rather than automation.
+
+* **Brute-Force** - using physical brute force, break down doors, cut off locks, etc...
+* **Radio Frequencey Identification (RFID)** - By cloning a RFID tag (badge), can easily go unnoticed.
+* **Environmental Attacks** - attack heating, cooling system, activating sprinkler system, etc... Often detected as issues, not as attacks.
