@@ -47,11 +47,11 @@ Note: The intelligence community uses "Private Public" cloud. The infrastructure
 
 ### Shared Responsibility Model
 Your security responsibilities fall in the "customer responsibilites", the vendor area secuirty is for, the vendo
-![ing](assets/cloud_responsibility_matrix.jpg)
+![ing](../assets/cloud_responsibility_matrix.jpg)
 
 ### Cloud Standards and Guidelines
 
-![img](assets/cloud_reference_architecture.png)
+![img](../assets/cloud_reference_architecture.png)
 
 * [NIST Cloud Computing Reference Architecture](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication500-292.pdf)
   * This shared understanding helps to also talk about cybersecurity.
