@@ -87,8 +87,38 @@
 | **Image** | Medium | High | System-level | Complete system restore |
 
 ## Response and Recovery Controls
+* **Nonpersistence** - Controls to make a system go to it's original state
+  * Snapshot
+  * Go back to last known configuration
+  * Systems reset after reboot
+* **Live boot media** - Boot from USB stick a portable OS to go in and fix stuff (or forensics too)
+* **Site resilience** (part of Site COnsiderations)
+  * **Hot Sites** Have everything to run, and often run fulltime (taking a portion of the traffic)
+    * Most expensive
+    * Quickest Recovery
+  * **Warm Sites** Live data not in place, but all infrastructure to jump in quickly
+    * Medium expensive
+    * Medium recovery speed
+  * **Cold Sites** All infra and newtwork is there, but not systems/data
+    * Cheapest
+    * Longest recovery
+
 ### Capacity Planning for Resilience and Recovery
+
+* **People** - have enough staff, can't upscale quickly, 3th parties can fill in that void when necessary
+* **Technology** - that are present and how they can scale
+* **Infrastructure** - that can handle all these different loads
+
 ### Testing Resilience and Recovery Controls and Designs
+
+* **Tabletop excercises** - use discussion between relevant personel beeded for the plan to be validated
+  * Least disruptive
+  * Low quality feedback
+* **Simulation excercises** - Drills & practice that personel simmulate in case of an actual event
+* **Parallel processing excercises** - Move processing/traffic partially to hot or alternate site to validate if everything works
+* **Failover excercises** - Do full switch to another side/faillover
+  * Potentialy most disruptive
+  * Highest quality feedback
 
 ## Physical Security Controls
 ### Site Security
