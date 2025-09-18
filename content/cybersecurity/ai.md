@@ -1,3 +1,6 @@
+---
+title: "AI"
+---
 # AI
 
 ## Sources
