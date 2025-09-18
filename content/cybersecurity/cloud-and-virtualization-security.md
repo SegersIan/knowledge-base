@@ -116,12 +116,47 @@ Is made possible by hypervisors, virtual machines don't know they're in a virtua
 
 ## Cloud Security Issues
 ### Availability
+* Baselevel services don't always provide High Availability, you need to configure/architect accordingly.
 ### Data Sovereignty
+* Data is subject to legal restrictions of any jurisdiction where it is collected, stored or processed.
+* you might be subject to laws that you don't have much to do with, just cause your data is hosted there.
+* Encrypt data, to keep control of your data, even when it goes over different jurisdictions, but understand what your situation is.
 ### Virtualization Security
+* **Virtual Machine Escape Vulnerabilities** - most serious, it breaks the isolation between VMs in data and/or resource access.
+* **Virtual Machine Sprawl** - When user creates IaaS VM and forgets about it and it accrues cost and security issues
+* **Resource Reuse** When hardware resources assigned to one customer is reassigned to another, and there was no proper cleanup, like old data still there.
 ### Application Security
+* See [Application Security](application-security)
+* **API Injection Technology** - inspect API requests for security issues (e.g. WAF)
+* **Secure Web Gateways (SGWs)** - monitors egress web requests and evaluates agains security policies.
+  * in other words, an egress firewall/WAF
+  * mostly work on application layer
+  * Some do Network and transport layer
 ### Governance and Auditing of Third-Party Vendors
+Auditiability of a CSP is important.
 
 ## Hardening Cloud Infrastructure
-### Cloud Access Security Brokers
+* Cloud native controls
+  * Have direct integrations and are more cost effective
+* 3th party solutions
+  * more costly, but integrate with various CSPs
+* or combined
+
+### Cloud Access Security Brokers (CASBs)
+Software tools that serve as intemediaries between cloud service users and cloud service providers.
+This allows for monitoring user activity and enforce policy requirements, 2 different approaches:
+
+* **Inline CASB solutions** - physically/logically reside in connectio path between the user and service.
+  * Requires configurtion of network and/or endpoints.
+  * Allows to see and block requests before they arrive at cloud service.
+* **API-Based CASB solutions** - Interacts directly with CSP's API
+  * No real changes/reconfigurtion to be done
+  * Unable to block requests
+  * More limited to monitoring and reporting
+  * Fixs policy violations after the fact.
+
 ### Resource Policies
+Policies to limit actions or users can make. (eg. you can only deploy in region x)
+
 ### Secrets Management
+Offer **Hardware Security Modules (HSM)** for internal key usage but also for customers. Keys are generated and never exposed externally.
