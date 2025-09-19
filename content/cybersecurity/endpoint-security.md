@@ -172,9 +172,21 @@ It's a long list! Just remember to use tools to automate this.
     * [Mandatory Access Control](<identity-and-access-management#Access Control Schemes>)
   * See also [AppArmor](https://apparmor.net/) for security hardening
 ### Configuration, Standards, and Schemas
-
+* Configuration management is probbably the most scalable to do hardening.
+  * Make good baselines
+  * Monitors for changes
+  * Enforces configuration
+  * Phases
+    * Establish baseline - Use CIS benchmarks for example
+    * Deploying - deploy this baseline configuration throug automation or manual
+    * Maintain - Updated based on needs and feedback, ideally with again a centralized tool.
 * **Patching and Patch Management**
+  * Ideally patch, but patching can cause also issues just a reminder.
+    * Example: Delay patches for just a few days to see if any reports happened
+    * Example: Gradual roll out
+  * When using enterprise software, you should be able to plan, monitor, report, measuree and block updates
 ### Encryption
+* **Self Encrypting Drive** - The encryption is in the hardware itself, so even transaprent to the OS and other components.
 
 ## Securing Embedded and Specialized Systems
 ### Embedded Systems
