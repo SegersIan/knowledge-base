@@ -229,3 +229,14 @@ Industrial and manufacturing systems
 * **Conclusion** - Because of these limitations, embedded devices ay rely on implicit trust. The person/handler/operator that can physically access it is implicityl trusted. So here you can see the risk and vulnerabilities.
 
 ## Asset Management
+Also know as `enumeration` of assets. You want a list of all assets bought, who owns it, we uses it, metadata it, lifespan, etc.. Helps to know if something is lost or stolen.
+
+* **Decommisioning**
+  * Remove/deal with sensitive data (e.g wipe disk)
+  * Deggausers are used to wipe magnetic drives quickly.
+  * [DBAN](https://dban.org/) to safe wipe disks
+  * Or you can just discard the private key of an encrypted drive
+  * Or just destroy instread of wipe, it's brute force but is efficient
+
+* **Retention**
+ * Sometimes data needs to be retained, for legal reasons (e.g. invoices etc...), make sure to backup that data.
