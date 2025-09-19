@@ -149,7 +149,29 @@ Changing the settings to increase its overall level fo security and reduce its v
 * Kill bloatware
 
 ## Operating System Hardening
+Again, check [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks) for hardening.
+CIS Benchmark example for Windows
+```
+* Set password history to 24 or more
+* Max password age to 1 year or les, but not 0.
+* Min password length 0f 12
+* Require password complexity
+* Disable password storage with reversible encryption
+```
+It's a long list! Just remember to use tools to automate this.
+
+* **Hardening the windows registry**
+  * Configure the permission for the registry
+  * Block remore registry access
+* **Windows Group Policy and Hardening**
+  * Group Policy Objects allow to stricten permissions to key thigs (min password, guest account enablement)
+* **Hardening Linux: Security Enhanced Linux (SELinux)**
+  * Security module om top of existing linux distrubtions
+  * [Wiki](https://en.wikipedia.org/wiki/Security-Enhanced_Linux)
+  * Capabilities like:
+    * [Mandatory Access Control](<identity-and-access-management#Access Control Schemes>)
 ### Configuration, Standards, and Schemas
+* **Patching and Patch Management**
 ### Encryption
 
 ## Securing Embedded and Specialized Systems
