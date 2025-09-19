@@ -127,7 +127,9 @@ Changing the settings to increase its overall level fo security and reduce its v
   * Port scanners are usually used to seek for first vulnerabilities
   * Rule of thumb: Only ports and services that must be available to provide necessary services should be open. Those that are open should be limited to the networks and services that use them.
 * Most common
+  * 21/TCP - FTP
   * 22/TCP - SSH (Linux)
+  * 23/TCP - Telnet 
   * 53/TCP and UDP - DNS (Linux & Windows)
   * 80/TCP - HTTP (Linux & Windows)
   * 125-129/TCP and UDP - NetBIOS (Linux & Windows)
