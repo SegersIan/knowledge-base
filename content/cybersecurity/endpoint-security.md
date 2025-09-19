@@ -73,6 +73,46 @@ Note: Often hard to deal directly with, so compensating controls are key.
 
 ### Endpoint Security Tools
 
+* **Antivirus and Antimalware** - Still useful
+  * Detection methods
+    * *Signature-Based* Hash/patterns recogintion of known virus/malware (IoC)
+    * *Heuristic or Behavior-based* looks for similar behavior as known malware's behavior
+    * *AI/ML* Use large datasets to build signature and behavior based signatures.
+    * *Sandboxing* Let run malicious code run in a sandbox and analyze it.
+      * Sandboxing having an isolated environment.
+      * Some malware tries to identify if they're in a sandbox, so they don't behave as usual.
+      * [Cuckoo Sandbox GitHub](https://github.com/cuckoosandbox) and [Docs](https://cuckoo.readthedocs.io/en/latest/introduction/what/) which is an automated malware analysis tool.
+  * Last line of defence on an endpoint, so strongly recommended, but not sufficient.
+  * When consider using it... ask:
+    * **What are threats are you likely to face?** in some organizations it's mostly workstations and email, so have antimalware that focuses on those areas.
+    * **Integration with other security tools** do you need monitoring/reporting of malware solutions into another tool?
+    * **Detection capabilities you use** and how likely will you catch stuff? Using more than one antimalware technology might further decrease risk.
+* **Allow/White Lists and Deny/Black/Block Lists**
+  * Control what software can be installed
+  * Allow lists good for highest secure environments
+  * Deny lists good when there should be more flexibility for unknown software.
+  * Maintaining the lists is time consuming.
+* **(Endpoint Detection and Response (EDR)**
+  * Offer monitoring of Endpoints using an agent/client
+    * Focus on: Network monitor and log analysis => To Correlate/analyze events
+    * Able to search and explore all collected data for investigations + detection of suspicious data.
+    * Search for anomalies and IoCs
+    * Magic is in the detection and reporting.
+  * XDR (THe extended version of EDR) - takes broader perspective
+    * Ingest from a broader perspect logs and such to aim the same goals as EDR.
+* **Data Loss Prevention (DLP)**
+  * Protect against intentional and accidental data loss/exfiltration.
+  * Feature: Able to classify data - data labeling, tagging, soyou know what to treat different or apply policies.
+  * Feature: Encrypt data when sent outside certain trust boundry - or use other techniques like tokenization, etc...
+  * Feature: Map organizational data and apply policies
+* **Network Defenses**
+  * **Host-Based Firewall** are firewalls installed or part of the host. Don't allow analyzing traffic.
+  * **Host-based Intrusion Prevention System (HIPS)** - Analyzes traffic before it "enters" the host.
+    * This can decide on its own logic to block traffic (unlike the firwall that has fixed clear rules), so comes with caution!
+      * Example: A new OS update caused a new behavior, but the HIPS itself was not not updated yet to know about this new update's behavior, BLOCK.
+  * **Host-based Intrusion Detection System** - Can only detect, but not take action.
+    * Ideal to combine with the Host-Based firewall, so you have fixed clear rules, but you can also analyze the traffic, without unpredictable behavior.
+
 
 ## Hardening Techniques
 ### Hardening
