@@ -190,8 +190,42 @@ It's a long list! Just remember to use tools to automate this.
 
 ## Securing Embedded and Specialized Systems
 ### Embedded Systems
+* Use often **Real Time Operating System (OS)**.
+  * Where data is more important than interrupts.
+* **Assess an embedded system**
+  * Identify maufacturer and docs
+  * How does it interface with the world?
+  * Does it have a network connection? DO usually network hardening
+  * How is it updated?
+  * Document what to do if there is an issue or compromise
+  * Document findings
+* **Controller Area Network (CAN)** used in cars to communicate between all controllers and sensors
+
 ### SCADA and ICS
-### Securing the Internet of Things Communication Considerations
+Industrial and manufacturing systems
+* **Industrial Controls Systems (ICS)**
+* **Supervisory Control and Data Acquisition (SCADA)**
+* These systems often use general purpose computers as control/monitor and then sensors and controllers for others. It's a mix off all. These non general purpose systems unfortunatly are often not designed for security, so it can be risky sometimes to make them "secure".
+### Securing the Internet of Things
+* Often poor security practices and weak default settings
+* Short suppot lifespans
+* Vendor data-handling often immature
+### Communication Considerations
+* In some environments cullar networks are used instead of traditional network/wifi
+  * Here the devices must be configured so the cullar network does not pose a risk.
+  * They basically connect directly to public internet.
+* **Protect SIM cards physically** is key, else someone can change it and do shady things.
+* **Embedded systems may use radio frequency protocols** like [Zigbee](https://en.wikipedia.org/wiki/Zigbee)
+  * A Wireless Personal Area network (WPAN)
+  * Used in home automation
+  * Often limited security
+  * They can't connect to traditional network, so no chance to patch/update...
+
 ### Security Constraints of Embedded Systems
+* **Very Low compute power** - Might not be able to do cryptographic processing or run security tools on the system.
+* **MAyu not connect to network** - So inable to monitor/patch/access.
+* **Security can be undesirable sometimes** - Authentication might be undeseriabe due to safety or usability.
+* **Replacing can be expensive**- the embedded system might be affordible, but it's part of a bigger system.
+* **Conclusion** - Because of these limitations, embedded devices ay rely on implicit trust. The person/handler/operator that can physically access it is implicityl trusted. So here you can see the risk and vulnerabilities.
 
 ## Asset Management
