@@ -41,7 +41,7 @@ Note: Often hard to deal directly with, so compensating controls are key.
         * Signature Databases are validate with platform public key (platform = the motherboard, installed on manufacturing)
           * The `platform private key` is at the manufacturer, for signing the database updates (not actual firmware/updates).
         * If a violation is found, attempt to restore to original trusted firmware, so you depend on the logic/decision of the boot process on how to deal with an untrusted signature.
-      * ![img](../assets/endpoint_security_uefi_secure_boot_process)
+      * ![img](../assets/endpoint_security_uefi_secure_boot_process.jpg)
     * 2. **Measured Boot** - Boot proceses that measure each component
       * UEFI measures (hashes) each component as it loads
       * Stores measurements in TPM (Trusted Plaform Module) Platform Configuration Registers (PCRs)
