@@ -96,30 +96,7 @@
 * Then you `prove` that the `identity` belongs to you via an `authentication method` as described next.x
 
 ### Passwords
-* **Best practices**
-  * Show password to prevent typos, password managers, store secrets with salts and secure hashing methods, locking after multiple attempts and MFA
-* **Guideliness** - [NIST 800-63](https://pages.nist.gov/800-63-3/)
-  * Reduce password complexity requirements and instead emphasize length.
-  * Not require special characters
-  * Allow ASCII and Unicode
-  * Allow pasting into passwords fields (for password managers)
-  * Monitor new passwords to ensure that easily compromised ones are not used
-  * Eleminate Password Hints
-* **Recomendations**
-  * Length is the best defense against brute force
-  * Complexity - prevent repeated characters and common words
-  * Reuse limitations
-  * Expiration dates to force renewal
-  * Age limitations - Sometimes people keep resetting till the "reuse" limitation is circumvented.
-* **Password Managers**
-  * Good stuff
-  * [Lastpass Breach Recommendation](https://blog.lastpass.com/posts/security-incident-update-recommended-actions)
-* **Passwordless**
-  * Instead depending on `what you know` primarily, it focuses on `what you have` (security tokens, certificates,...)
-  * An option: `hardware security key` (like UbiKey)
-    * Protocols: FIDO, Universal 2nd Factor (U2F), ..
-    * FIDO: Open Authentication Standard supporting W3C Web Authentication and Client to Authenticator Protocol (CTAP)
-  * Goal is to remove friction
+See [Passwords](passwords#Advice)
 
 ### Multifactor Authentication (MFA)
 * **4 different types of factors**, MFA uses at least 2

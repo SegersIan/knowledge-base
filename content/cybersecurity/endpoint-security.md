@@ -113,12 +113,37 @@ Note: Often hard to deal directly with, so compensating controls are key.
   * **Host-based Intrusion Detection System** - Can only detect, but not take action.
     * Ideal to combine with the Host-Based firewall, so you have fixed clear rules, but you can also analyze the traffic, without unpredictable behavior.
 
-
 ## Hardening Techniques
 ### Hardening
+Changing the settings to increase its overall level fo security and reduce its vulnerability.
+
+* **Hardening guidelines** for various OS, software, ...
+  * [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks)
+  * [NIST Repositoryu](http://ncp.nist.gov/repository)
+
 ### Service Hardening
+* **Reduce number of `open ports` and `protocols`**
+  * If a port is closed, its hard to exploit remotly
+  * Port scanners are usually used to seek for first vulnerabilities
+  * Rule of thumb: Only ports and services that must be available to provide necessary services should be open. Those that are open should be limited to the networks and services that use them.
+* Most common
+  * 22/TCP - SSH (Linux)
+  * 53/TCP and UDP - DNS (Linux & Windows)
+  * 80/TCP - HTTP (Linux & Windows)
+  * 125-129/TCP and UDP - NetBIOS (Linux & Windows)
+  * 389/TCP and UDP - LDAP  (Linux & Windows)
+  * 443/TCP - HTTPS (Linux & Windows)
+  * 3389TCP and UDP - RDP (Windows)
+* **Block ports AND STOP services**
+  * Stop SSH `systemd` or RDP `services.msc` services.
+
 ### Network Hardening
+* Use **VLAN** or **subnets** (VPCs) to segment the network. Create trust boundries.
+  * Example: Use guest networks
+
 ### Default Passwords
+* Set these, [good passwords]()
+
 ### Removing Unnecessary Software
 
 ## Operating System Hardening
