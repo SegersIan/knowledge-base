@@ -170,7 +170,9 @@ It's a long list! Just remember to use tools to automate this.
   * [Wiki](https://en.wikipedia.org/wiki/Security-Enhanced_Linux)
   * Capabilities like:
     * [Mandatory Access Control](<identity-and-access-management#Access Control Schemes>)
+  * See also [AppArmor](https://apparmor.net/) for security hardening
 ### Configuration, Standards, and Schemas
+
 * **Patching and Patch Management**
 ### Encryption
 
