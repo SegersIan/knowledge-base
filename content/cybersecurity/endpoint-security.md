@@ -142,9 +142,11 @@ Changing the settings to increase its overall level fo security and reduce its v
   * Example: Use guest networks
 
 ### Default Passwords
-* Set these, [good passwords]()
+* [Password Advice](passwords#Advice)
 
 ### Removing Unnecessary Software
+* Less patching, maintenance, no risk of them running by accident
+* Kill bloatware
 
 ## Operating System Hardening
 ### Configuration, Standards, and Schemas

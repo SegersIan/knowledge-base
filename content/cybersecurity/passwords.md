@@ -26,6 +26,9 @@
     * FIDO: Open Authentication Standard supporting W3C Web Authentication and Client to Authenticator Protocol (CTAP)
   * Goal is to remove friction
 
+## Default Passwords
+* [Online Database](https://cirt.net/passwords/)
+
 ## Password Attacks
 ### Brute-Force - Iterate through passwords until they find one that works
 * This can include using lists with generic commonly used passwords or tailored to the target
