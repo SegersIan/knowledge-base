@@ -62,6 +62,7 @@ Security Control *Types*
 * Data-at-rest
 * Data-in-transit
 * Data-in-use
+
 ### Data Loss Pevention (DLP)
 * Information handling policies and procedures to prevent data loss and theft.
 * 2 Environments
@@ -86,3 +87,6 @@ Security Control *Types*
 ### Segementation and Isolation
 * Segmentation - Allows systems only to talk to each other within the same segment or limited access to other segments.
 * Isolation - Enirely isolates a system from talking to others
+
+## Defense-in-depth
+Multiple overlapping security layers/controls so that if one fails, others still protect you.
