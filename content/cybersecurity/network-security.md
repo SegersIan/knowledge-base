@@ -1,7 +1,7 @@
 # Network Security
 
 ## Network Basics
-* [See Here](../network)
+* [Network Basics & ISO Model](../computer-networks)
 
 ## Designing Secure Networks
 
