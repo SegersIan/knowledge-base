@@ -1,7 +1,7 @@
 # Network Security
 
 ## Designing Secure Networks
-* Different security controls usually operate on a distinct [ISO Model Layer](<../../computer-networks#The 7 Layers>)
+* Different security controls usually operate on a distinct [ISO Model Layer](<../../computer-networks#the-7-layers>)
   * Most popular: Application Layer (7); Transport Layer (4) ; and Network Layer (3)
 
 ### Infrastructure Considerations
