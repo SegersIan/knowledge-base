@@ -90,3 +90,7 @@ Security Control *Types*
 
 ## Defense-in-depth
 Multiple overlapping security layers/controls so that if one fails, others still protect you.
+
+## Zero Trust
+
+  Nobody is trusted, regardless of wheter theey are internal or an external person or system.

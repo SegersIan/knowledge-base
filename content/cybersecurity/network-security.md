@@ -53,7 +53,21 @@
   * **Cloud Access Security Brokers (CASB)** - policy enforcement point between service providers and service customers to allow organizations to enforce their policies for cloud resources.
 
 ### Network Segmentation
-* **TODO**
+* **VLAN** is oneof the many technologies to implement segmentation.
+  * Sets up a broadcast domain that is segmented at Data Link Layer (Layer 2).
+  * Netowkrk devices enforce these packet forward based on the VLAN "tag".
+  * The tag is assigned by the network devices as they receive traffic from an endpoint, the endpoint itself doesn't tag the data.
+* **Segementation Designs**
+  * Demilitarizewd Zones (DMZ)/Screened Subnets - Exposed to less trusted areas (public internet)
+    * Mostly used for public facing devices. But internally in networks this could also be necessary.
+  * Intranets - Like only for employees
+  * Extranets - For external access
+* **North-South Traffic**
+  * Traffic between internal systems and the outside world (clients, internet, external networks).
+  * Think: in/out of the datacenter or cloud.
+* **East-West Traffic** - traffic flow in datacenter
+  * Traffic within a datacenter, cloud, or enterprise network, i.e., between internal systems.
+  * Think: side-to-side, lateral movement inside the environment.
 
 ### Zero Trust
 * **TODO**
