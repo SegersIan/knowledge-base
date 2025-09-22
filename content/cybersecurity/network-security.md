@@ -244,7 +244,13 @@
     * Works only on level 7 (application) and does even stuff like XSS/SQL injection and other scanning, so this is more specialized for distinct application. So firewall + IPS without other fancies.
   * **Screened Subnets**
     * So firewwalls allow creation of screend subnets. For example `public internet <-> Firewall <-> DMZ`, the firewall made this seperation possible.
-* **Access Control Lists**
+  * Example Rules `ALLOW TCP port ANY from 10.0.10.0/24 to 10.1.1.68/32 to TCP port 80`
+* **Access Control Lists (ACLs)**
+  * Simple rules: Often close to firewall rules, applied by any network device.
+  * Advanced rules: Advanced ACLS, time-based, dynamic, or other ACLs including conditionals.
+  * Example Cisco Rules `access-list 100 permit tcp any host 10.10.10.1 eq http`
+  * Often used in cloud a security groups and stuff.
+
 
 ### Deception and Disruption Technology
 * **TODO**
