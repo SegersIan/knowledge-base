@@ -270,7 +270,14 @@
 * See [HoneyNet Project](https://www.honeynet.org/)
 
 ### Network Security, Services, and Management
-* **TODO**
+* **Out-Of-Band Management**
+* **DNS**
+* **Email Security**
+* **Secure Socket Layer (SSL)/Transport Layer Security(TLS)**
+* **SNMP**
+* **Monitoring Servicees & Systems**
+* **File Integrity Monitors**
+* **Hardening Network Devices**
 
 ## Secure Protocols
 ### Using Secure Protocols
