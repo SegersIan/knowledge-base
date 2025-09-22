@@ -311,12 +311,74 @@
 * **Hardening Network Devices**
   * Same as endpoint hardening, follow Center for Internet Security (CIS) benchmarks for hardening guides.
   * Protect the management console - use isolated vlan/network/jump server or VPMN.
+
 ## Secure Protocols
 ### Using Secure Protocols
-* **TODO**
+* **Scenario: ** Video/Voice/Videoconferencing (initially HTTP, SIP, RTP)
+  * *Secure Protocol(s)/Alternatives:* HTTPS, Session Initiation Protocol over TLS (SIPS), Secure Real Time Transport Protocol (SRTP)
+* **Scenario: ** Network Time Prococol (NTP)
+  * *Secure Protocol(s)/Alternatives:* NTS (relies on TLS), does not protect the data, but provides authN and integrity reinsurrance. Not widely adopted tho.
+* **Scenario: ** Email Web traffic
+  * *Secure Protocol(s)/Alternatives:* HTTPS, IMAPS, DMARK, DKIM, SPF
+* **Scenario: ** FTP
+  * *Secure Protocol(s)/Alternatives:* HTTP, SFTP or FTPS
+* **Scenario: ** LDAP
+  * *Secure Protocol(s)/Alternatives:*: LDAPS
+* **Scenario: ** Remote Access (Tetlnet)
+  * *Secure Protocol(s)/Alternatives:* SSH, RDS, HTTPS
+* **Scenario: **  Routing and switching protcol security - Border Gateway Protocol (BGP)
+  * *Secure Protocol(s)/Alternatives:* No secure alternative
+* **Scenario: ** Domain Name Resolution (DNS)
+  * *Secure Protocol(s)/Alternatives:* DNSSEC and DNS Reputation lists
+* **Scenario: ** Network Addres allocation (DHCP)
+  * *Secure Protocol(s)/Alternatives:* no alternative, relie on detection and response instead of detterent
+* **Scenario: ** Subscription Servicees and cloud toold (HTTPS)
+  * *Secure Protocol(s)/Alternatives:* N/A
 
 ### Secure Protocols
-* **TODO**
+> Note: Understand when you would recommend:
+>   - To switch to the secure protocol
+>   - If both protocols might coexist
+>   - Other factors to take in account when implementing
+
+| Unsecure protocol | Original port   | Secure protocol option(s) | Secure port   | Notes |
+|-------------------|-----------------|---------------------------|---------------| --- |
+| DNS   | UDP/TCP 53      | DNSSEC   | UDP/TCP 53                                       | |
+| FTP   | TCP 21 (and 20) | FTPS     | TCP 21 (explicit mode) / TCP 990 (implicit mode) |  Using TLS |
+| FTP   | TCP 21 (and 20) | SFTP     | TCP 22 (SSH)                                     | Using SSH |
+| HTTP  | TCP 80          | HTTPS    | TCP 443                                          | Using TLS |
+| IMAP  | TCP 143         | IMAPS    | TCP 993                                          | Using TLS, Fetching emails from server, stay in sync. |
+| LDAP  | UDP/TCP 389     | LDAPS    | TCP 636                                          | Using TLS |
+| POP3  | TCP 110         | POPS     | TCP 995 — Secure POP3                            | Using TLS, Fetching emails and delete on server |
+| RTP   | UDP 16384–32767 | SRTP     | UDP 5004                                        | Real Time Protocol |
+| SNMP  | UDP 161 and 162 | SNMPv3   | UDP 161 and 162                                 | Simple Network Management Protocol |
+| Telnet | TCP 23          | SSH      | TCP 22                                         | Remote Access |
+| SMPT   | TCP 25          | SMTPS over TLS | TCP 465                                  | Sending of emails |
+* `DNSSEC` uses digital signatures for authentication and integrity.
+* `SNMPv3` improves with authentication, integrity validation and encruptions.
+  * You can still run this on a lower security level, if you don't use `authPriv`, then it's insecure, even `v3`
+* `ssh` is also used as tunneling protoctol or `sftp`.
+  * If you don't use a password for the `ssh keys`, it's still less ecure.
+* `SRPT` uses encryption and authentication
+  * pairs with `Secure Real Time Control Protocol (SRTCP)` that monitors the `QoS`
+* `LDAPS` is a TLS version of LDAP.
+
+* **Email Related Protocols**
+  * `Secure Multipurpose Internet Mail Extension (S/MIME)` allowsto encrypt and sign `mime` data, the format for email attachments.
+    * Integrity, non-repudiation, confideniality, Authentication
+    * used less frequently cause you need certificate for each user from own KPI or CA.
+  * SMPT has no Secure option
+* **File Transfer Protocols**
+  * `FTPS` => `FTP` over `HTTPS` => as it uses might require extra ports.
+  * `SFTP` => `FTP` over `SSH` => as it re-uses the SSH port, its often easer to set up
+* **Internet Protocol Security (IPSec)** used to encrypt and authenticate IP traffic
+  * More than jus a single protocol
+  * *Authentication Header (AH)*: hashing + shared key to ensure integrity and authentication (like HMAC)
+  * *Encapsualting Security Payload (ESP)* like with VPNs:
+    * `tunnel` mode: integrity + authentication for entire packet (headers + payload).
+    * `transport` mode: integrity + authentication for payload alone.
+  *  *Security Associations (SA)*: Provide parameters for AH and ESP to operate
+  * [IPSec wiki](https://en.wikipedia.org/wiki/IPsec)
 
 ## Network Attacks
 ### On-Path Attacks
