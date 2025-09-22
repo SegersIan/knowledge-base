@@ -93,8 +93,25 @@
     * *Subjects and systems* - users/systems that seek access
     * *Policy Enforcement Points* - Where its enforced
 
-### Network Access Control
-* **TODO**
+### Network Access Control (NAC)
+> Is a system/device/endpoint alllwed to connect to given network?
+
+* Implementation types
+  * Agent
+    * Agent based: Installed agent on endpoint to perform security checks.
+      * Can go very deep based on OS, version, patches, detailed endpoint intelligence.
+      * More control but more effort to install/maintain
+    * Agentless
+      * less control but easier/cheaper
+  * Admission Checks
+    * preadmission - before connecting
+    * postadmission - after connecting
+* If violations happen, endpoint can be put in quarantine so it can be fixed.
+* **802.1X** - authN standard for endpoints on WIRED & WIRELESS networks.
+  * `Supplicant` - the subject
+  * Post authentication/connecting, then segmentation happens if applied.
+  * [See also](<identity-and-access-management#Authentication and Authorization Technologies>)
+
 
 ### Port Security and Port-Level Protections
 * **TODO**
