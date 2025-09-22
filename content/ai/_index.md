@@ -6,6 +6,10 @@ title: "AI"
 
 ## Tools
 
+## Varia
+
+* [Defalte LLMS Sets](https://www.scalarlm.com/blog/llm-deflate-extracting-llms-into-datasets/)
+
 ### General Models
 
 * [ChatGPT](https://chatgpt.com/)

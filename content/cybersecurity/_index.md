@@ -5,7 +5,14 @@ bookCollapseSection: true
 
 ## Certifications
 
+## Vulnerability Case Studies
 
+* [XML Injection with SVG](https://www.cloudflare.com/en-gb/threat-intelligence/research/report/svgs-the-hackers-canvas/)
+  * [More](https://cloudmersive.com/article/Understanding-SVG-Files-and-the-Dangers-of-XML-Exploits)
+* NPM Malware
+  * [NPM Malware Reportimg](https://docs.npmjs.com/reporting-malware-in-an-npm-package)
+  * [Signapure reporting](https://www.csa.gov.sg/alerts-and-advisories/advisories/ad-2025-019)
+  * [More](https://www.wiz.io/blog/shai-hulud-npm-supply-chain-attack)
 
 ## Links
 
