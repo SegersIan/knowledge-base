@@ -70,7 +70,8 @@
   * Think: side-to-side, lateral movement inside the environment.
 
 ### Zero Trust
-* **TODO**
+* See also [General Concepts](<general-concepts#Zero Trust>)
+![img](assets/zero_trust_architecture.png)
 
 ### Network Access Control
 * **TODO**
