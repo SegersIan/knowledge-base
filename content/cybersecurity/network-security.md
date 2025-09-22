@@ -43,7 +43,7 @@
   * Often on Layer 2,3 and sometimes 4.
 * **Software-Defined Wide Area Network (SD-WAN)**
   * Used more for availability, connecting various internet providers in a transparent way.
-* **Scure Access Service Edge (SASE)**
+* **Secure Access Service Edge (SASE)**
   * Pronounced "Sassy"
   * Combines: **VLAN**, **SDN-WAN**, **firewalls**, **Cloud Access Security Brokers (CASB)**
   * USed to
