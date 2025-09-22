@@ -251,9 +251,23 @@
   * Example Cisco Rules `access-list 100 permit tcp any host 10.10.10.1 eq http`
   * Often used in cloud a security groups and stuff.
 
-
 ### Deception and Disruption Technology
-* **TODO**
+* **Goal**: Capture info about attackers + techniques they're using => So you can disrupt ongoing attacks.
+* **Major Types**
+  * *Honeypots* - Intentionally configured to appear vulnerable, but heavily instrumented and monitored systems, documenting everything an attacker does while keeping copies of every file and command used.
+    * **GOAL: Adversial Research**
+  * *Honeynets* - A group of honey pots to be even more tempting and more details on an attacker.
+    * Gives more insight on network attacks.
+    * **GOAL: Adversial Research**
+  * *Honeyfile* - Intentionally attractive file (With unique detectible data, fingerprinted), for if the attacker succeeds.
+    * **GOAL: Intrusion Detection**
+    * If you notice this data leaving the network or is found later outside the network, you know you've been breached.
+    * Have a DLP detect it would be awesone.
+  * *Honeytokens* - Intentionally attractive data but specificllay to allow for tracking data.
+    * **GOAL: Intrusion Detection**
+    * E.g. entries in database, files, directorictes,...
+    * IDS, IPS, DLP or other systems then watch for those data.
+* See [HoneyNet Project](https://www.honeynet.org/)
 
 ### Network Security, Services, and Management
 * **TODO**
