@@ -314,25 +314,25 @@
 
 ## Secure Protocols
 ### Using Secure Protocols
-* **Scenario: ** Video/Voice/Videoconferencing (initially HTTP, SIP, RTP)
+* **Scenario:** Video/Voice/Videoconferencing (initially HTTP, SIP, RTP)
   * *Secure Protocol(s)/Alternatives:* HTTPS, Session Initiation Protocol over TLS (SIPS), Secure Real Time Transport Protocol (SRTP)
-* **Scenario: ** Network Time Prococol (NTP)
+* **Scenario** Network Time Prococol (NTP)
   * *Secure Protocol(s)/Alternatives:* NTS (relies on TLS), does not protect the data, but provides authN and integrity reinsurrance. Not widely adopted tho.
-* **Scenario: ** Email Web traffic
+* **Scenario** Email Web traffic
   * *Secure Protocol(s)/Alternatives:* HTTPS, IMAPS, DMARK, DKIM, SPF
-* **Scenario: ** FTP
+* **Scenario** FTP
   * *Secure Protocol(s)/Alternatives:* HTTP, SFTP or FTPS
-* **Scenario: ** LDAP
+* **Scenario** LDAP
   * *Secure Protocol(s)/Alternatives:*: LDAPS
-* **Scenario: ** Remote Access (Tetlnet)
+* **Scenario:** Remote Access (Tetlnet)
   * *Secure Protocol(s)/Alternatives:* SSH, RDS, HTTPS
-* **Scenario: **  Routing and switching protcol security - Border Gateway Protocol (BGP)
+* **Scenario:**  Routing and switching protcol security - Border Gateway Protocol (BGP)
   * *Secure Protocol(s)/Alternatives:* No secure alternative
-* **Scenario: ** Domain Name Resolution (DNS)
+* **Scenario:** Domain Name Resolution (DNS)
   * *Secure Protocol(s)/Alternatives:* DNSSEC and DNS Reputation lists
-* **Scenario: ** Network Addres allocation (DHCP)
+* **Scenario:** Network Addres allocation (DHCP)
   * *Secure Protocol(s)/Alternatives:* no alternative, relie on detection and response instead of detterent
-* **Scenario: ** Subscription Servicees and cloud toold (HTTPS)
+* **Scenario:** Subscription Servicees and cloud toold (HTTPS)
   * *Secure Protocol(s)/Alternatives:* N/A
 
 ### Secure Protocols
