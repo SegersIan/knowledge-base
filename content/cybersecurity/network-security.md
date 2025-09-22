@@ -80,14 +80,18 @@
   * *Policy Enforcement Points*: Where enforcement happens
     * Commonly deployed as a local agent
   * *Control Plane*
-    * *Adaptive Identity*
-    * *Threat Scope Reduction*
-    * *Policy-Driven Access Control*
-    * *Policy Administrator*
+    * *Adaptive Identity/Authentication* - use context-based authN
+      * based on: location subject, device of subject, does device meet security, ...
+      * Can request additional validation for AuthN if necesary
+    * *Threat Scope Reduction (limited blast radius)*
+      * `least privilege` + `identity based network segmentation`
+        * meaning, based on your identity, the scope for network segmentation is set for the subject.
+    * *Policy-Driven Access Control* - the policy check
+    * *Policy Administrator* - who enforces
   * *Data Plane*
-    * *Implicit trust zones*
-    * *Subjects and systems*
-    * *Policy Enforcement Points*
+    * *Implicit trust zones*  - where can subject move once authenticated
+    * *Subjects and systems* - users/systems that seek access
+    * *Policy Enforcement Points* - Where its enforced
 
 ### Network Access Control
 * **TODO**
