@@ -140,8 +140,36 @@
       * If DHCP message resonse to "offer an IP address" does not come from the same port as it was requested
         * Why did you come from the left door? I send my request through the right door.
 
-### Virtual Private Networks and Remote Access
-* **TODO**
+### Virtual Private Networks (VPNs) and Remote Access
+> Allows to act as 2 endpoints are on the same network over a public network.
+
+* **Important**: A VPN tunnel is not by definition encrypted!
+* **The Major VPN technologies**
+  * *IPSec VPNs*
+    * Mostly for
+      * `site-to-site` connections
+      * Need to transport more than just web/app traffic.
+    * level 3 (network layer)
+    * Require a client
+    * 2 Modes
+      * `tunnel` - Entire packets of data sent over the connection are protected.
+        * Network devices route based on original IP addresses
+      * `transport` - IP header is unprotected, but IP payload is encrypted.
+        * Network devices route based on tunnel endpoint IP addresses
+        * Important if you still need routing/network visibility (That's why `site-to-site` works great)
+  * *SSL VPNs**
+    * Actually uses TLS obviously
+    * Either
+      * Portal-Based approach : Users acces via web page and access services through the connection
+      * `tunnel` mode like IPSec.: Entirely encrypted data, but don't require the client!
+    * Don't requirce a client.
+    * Allows to segment application access, so more granualar access without too much complexity.
+* **Deciding VPN Type**
+  * Do you need
+    * `site-to-site` (always-on)
+    * `remote access` (as-needed) - for traveling/remote employees
+* **Tunneling**
+
 
 ### Network Appliances and Security Tools
 * **TODO**
