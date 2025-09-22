@@ -70,17 +70,24 @@
   * Think: side-to-side, lateral movement inside the environment.
 
 ### Zero Trust
+* Never trust, always verify.
 * See also [General Concepts](<general-concepts#Zero Trust>)
 * ![img](assets/zero_trust_architecture.png)
-  * [Source - NIST Zero Trust Architecture](https://csrc.nist.gov/pubs/sp/800/207/final)
+  * [Source - NIST Zero Trust Architecture (NIST SP 800-207)](https://csrc.nist.gov/pubs/sp/800/207/final)
   * *Subjct*: The actors
   * *Policy Engines*: Are the decision/rule engines"
   * *Policy Administrators*: Enforce the decisions
   * *Policy Enforcement Points*: Where enforcement happens
     * Commonly deployed as a local agent
   * *Control Plane*
-    * 
-  * *Data Plane* 
+    * *Adaptive Identity*
+    * *Threat Scope Reduction*
+    * *Policy-Driven Access Control*
+    * *Policy Administrator*
+  * *Data Plane*
+    * *Implicit trust zones*
+    * *Subjects and systems*
+    * *Policy Enforcement Points*
 
 ### Network Access Control
 * **TODO**
