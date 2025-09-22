@@ -115,9 +115,38 @@
     * So even when you connect physically to a port, a `supplicant` has to be provided and a AuthN process must find place.
 
 ### Port Security and Port-Level Protections
+> Again, we are reffering here to the physical ports.
+* **Port Security** - Allow list `mac addresses` for a specific port (or max amount of mac addresses)
+  * Prevents MAC spoofing, content-addresable memory (CAM) table overfflows, plug in extra network devices
+* **Content-addresable memory (CAM) table**
+  * Maps `mac` addresses to `ip` addreses.
+  * Poisining the **CAM** could allow attackers to "escape" certain limitations.
+  * **CAM Table Overflow Attack**
+    * Overflow the CAM table (usually fixed size) by spamming thousands of frames with random different mac addresses
+    * Once full, no new mac addresses can b learned, so it falls back to HUB (broadcast anything you get)
+    * Result: Attack reveives now all traffic on their port
+* **Mac Spoofing** might not be hard, port security can still be that extra layer of challenge.
+* **Port-Level Protections**
+  * **General Concepts**
+      * *Bridge Protocol Data Unit (BPDU)* - Messages to coordinate the Spanning Tree.
+      * *Spanning Tree* - Loop-free path layout that Spanning Tree Protocol (STP) creates across your switched network.
+  * **Protections***
+    * *Loop Prevention* - Detect and stop loops (e.g. connect 2 ports on the same switch)
+      * Spanning Tree Protocol (STP) is used for this, using BPDUs.
+    * *Broadcast storm prevention* - Prevent broadcast packets from being amplified and traverse the network.
+    * *DPU Guard* - Block ports from sending BPDU messages that shouldn't. Usually ports with endpoints connecting to them.
+    * *Dynamic Host Configuration Protocol (DHCP) SNOOPING* - Prevent rogue/random DHCP servers of handing out IP addresses.
+      * If DHCP message is not from a "trust list" and/or "expected mac list", drop the message.
+      * If DHCP message resonse to "offer an IP address" does not come from the same port as it was requested
+        * Why did you come from the left door? I send my request through the right door.
+
+### Virtual Private Networks and Remote Access
 * **TODO**
 
-### Virtual Private Networks and Remote Access Network Appliances and Security Tools Deception and Disruption Technology
+### Network Appliances and Security Tools
+* **TODO**
+
+### Deception and Disruption Technology
 * **TODO**
 
 ### Network Security, Services, and Management
