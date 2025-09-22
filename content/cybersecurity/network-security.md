@@ -111,7 +111,8 @@
   * `Supplicant` - the subject
   * Post authentication/connecting, then segmentation happens if applied.
   * [See also](<identity-and-access-management#Authentication and Authorization Technologies>)
-
+  * Also used for `port-authentication`, being the `physical port`.
+    * So even when you connect physically to a port, a `supplicant` has to be provided and a AuthN process must find place.
 
 ### Port Security and Port-Level Protections
 * **TODO**
