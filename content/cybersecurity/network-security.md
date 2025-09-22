@@ -270,15 +270,47 @@
 * See [HoneyNet Project](https://www.honeynet.org/)
 
 ### Network Security, Services, and Management
-* **Out-Of-Band Management**
-* **DNS**
+* **Out-Of-Band Management** - another way of accessing the admin interface
+  * Physical seperate port or vlan for the admin pannel of some device.
+  * Physical access itself is also option, but often far less realistic for frequent access.
+* **DNS** - Can be poisoned, so attacker can "impersonate"
+  * **DNSSEC**
+    * Provides authentication of DNS data
+  * *Proper configuration*
+    * Disable zone transfers
+    * DNS logging
+    * Requests to malicious DNS domains blocked
+  * *DNS Filtering* blocks mailicious domians
+    * Often fed through threat, reputation and deeny lists feeds.
 * **Email Security**
+  * *Domain Keys Identified Maiul (DKIM)* - Public DNS record lists Public Key which van be used to verify all the emails from a given domain. All those email bodies and headers are signed with corrolated Private Key.
+    * TL;DR; Signing of emails
+    * This helps those reveive your emails.
+  * *Sender Policy Framework (SPF)* - List all the allowed senders/servers where emails can be sent from
+    * Can be your on premise email servers and then the 3th party service that you want to sent emails on your behalf
+    * TL;DR; Is the sender allowed to send for given domain?
+    * This helps those reveive your emails.
+  * *Domain Based Message Authentication Reporting and Conformance (DMARC)* - If not authentic, what do I do ?
+    * TL;DR; Gives hints/tips/directions on what to do when DKIM/SPF fails.
+    * This helps those reveive your emails.
+  * *Email Security Gateways (SEG)* - filter inbound/outbound emails
+    * Phising protection, email protection, URL analysis, threat feed integration and all the checking of DKIM, SPF and DMARC above.
 * **Secure Socket Layer (SSL)/Transport Layer Security(TLS)**
-* **SNMP**
-* **Monitoring Servicees & Systems**
-* **File Integrity Monitors**
+  * *TLS* used ephemeral keys, so a key per session.
+    * First there is a `diffie-helman` key exchange which estabilished then a connection specific "session key".
+* **Simple Network Mangement Protocol (SNMP)** monitor and manage network devices.
+  * [Detailed Description](https://www.manageengine.com/network-monitoring/what-is-snmp.html)
+  * When a deviced (configured to use SNMP) has a failure or error, it sends a `snmp trap` message to the centralized `snmp` managwer.
+  * events like `coldStart`, `warmStart`, `linkDown`, `linkUp`, `authenticationFailure`, and `egpNeighborLoss`.
+* **Monitoring Servicers & Systems** - health checks in essence
+  * Is a port responding?
+  * Is the service on the port responding correctly?
+* **File Integrity Monitors** monitor important files against changess (e.g config files)
+  * Example: Tripwire
+  * Createe signagtures/fingerprints of files and then watches for any changes.
 * **Hardening Network Devices**
-
+  * Same as endpoint hardening, follow Center for Internet Security (CIS) benchmarks for hardening guides.
+  * Protect the management console - use isolated vlan/network/jump server or VPMN.
 ## Secure Protocols
 ### Using Secure Protocols
 * **TODO**
@@ -301,3 +333,42 @@
 
 ### Distributed Denial-of-Service Attacks
 * **TODO**
+
+## Others
+
+### IPv6
+* **Basic format:**
+  * 128-bit addresses (vs IPv4's 32-bit)
+  * Hexadecimal notation: 2001:db8::1
+  * Address shortening: :: represents consecutive zeros
+* **Security implications:**
+  * Larger attack surface: Huge address space makes scanning harder but networks more complex
+  * Dual-stack risks: Running IPv4 and IPv6 simultaneously creates more attack vectors
+  * Tunneling protocols: 6to4, Teredo can bypass security controls
+  * ICMPv6: More critical than ICMPv4 - blocking it breaks IPv6 functionality
+
+### Quality Of Service (QoS)
+- **Prioritizes network traffic** based on importance/type
+- **Bandwidth allocation** and **latency management**
+- **Traffic shaping** - controls data flow rates
+
+**Security implications (the important part):**
+  **QoS bypasses:**
+  - **Attackers can mark traffic** as high priority to bypass security controls
+  - **DDoS amplification**: Flood high-priority queues to impact critical services
+  - **Covert channels**: Hide data in QoS headers/markings
+
+  **Network security integration:**
+  - **Firewall QoS rules** - ensure security traffic gets priority
+  - **VPN QoS**: Critical security traffic shouldn't be deprioritized
+  - **Security tool performance**: IDS/IPS need adequate bandwidth allocation
+
+  **Basic mechanisms (just awareness level):**
+  - **DSCP marking**: How traffic gets tagged for priority
+  - **Traffic classes**: Voice, video, data, background
+  - **Bandwidth guarantee vs limiting**
+
+**Real-world security context:**
+- **VoIP security**: Voice traffic prioritization can impact security monitoring
+- **Critical system access**: Ensure management traffic has QoS priority
+- **Incident response**: Security tools need guaranteed bandwidth during attacks
