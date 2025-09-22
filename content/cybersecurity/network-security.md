@@ -43,6 +43,19 @@
   * Often on Layer 2,3 and sometimes 4.
 * **Software-Defined Wide Area Network (SD-WAN)**
   * Used more for availability, connecting various internet providers in a transparent way.
+  * Replacement for Multiprotocol Label Switching (MPLS)
+  * **SD-WAN and MPLS are alternative WAN technologies that often compete or complement each other:*
+  *  **Key Relationship:**
+    * **MPLS = Traditional approach:**
+      - **Hardware-centric**: Dedicated circuits, fixed paths
+      - **Service provider managed**: Limited customer control
+      - **Expensive**: Premium pricing for guaranteed performance
+      - **Predictable**: Consistent performance, SLAs
+    * **SD-WAN = Modern approach:**
+      - **Software-defined**: Centralized policy management
+      - **Internet-based**: Uses broadband, LTE, etc. (cheaper links)
+      - **Customer controlled**: Dynamic path selection, policies
+      - **Flexible**: Adapts to real-time network conditions
 * **Secure Access Service Edge (SASE)**
   * Pronounced "Sassy"
   * Combines: **VLAN**, **SDN-WAN**, **firewalls**, **Cloud Access Security Brokers (CASB)**
