@@ -93,7 +93,8 @@ Multiple overlapping security layers/controls so that if one fails, others still
 
 ## Zero Trust
 
-  Nobody is trusted, regardless of wheter theey are internal or an external person or system.
+> Nobody is trusted, regardless of wheter theey are internal or an external person or system.
+> Never trust, always verify.
 
 There is no trust boundary and no network edge. Each action is  validated when requested as part of a continious authentication process and access is only allowed after policies are cheked, including elements like idenity, permissions, system configuration and securty status, threat intelligence data review and security posture.
 

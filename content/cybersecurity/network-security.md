@@ -71,7 +71,16 @@
 
 ### Zero Trust
 * See also [General Concepts](<general-concepts#Zero Trust>)
-![img](assets/zero_trust_architecture.png)
+* ![img](assets/zero_trust_architecture.png)
+  * [Source - NIST Zero Trust Architecture](https://csrc.nist.gov/pubs/sp/800/207/final)
+  * *Subjct*: The actors
+  * *Policy Engines*: Are the decision/rule engines"
+  * *Policy Administrators*: Enforce the decisions
+  * *Policy Enforcement Points*: Where enforcement happens
+    * Commonly deployed as a local agent
+  * *Control Plane*
+    * 
+  * *Data Plane* 
 
 ### Network Access Control
 * **TODO**
