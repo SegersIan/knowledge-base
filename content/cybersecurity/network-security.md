@@ -421,8 +421,32 @@
 * [See Malware Types](malware-types)
 * See IoC's per type.
 
-### Distributed Denial-of-Service Attacks
-* **TODO**
+### Distributed Denial-of-Service (DDoS) Attacks
+
+* **Network DDoS** - Most common form of DDoS
+  * Often uses botnets to conduct these attacks or commercial services for testing purposes.
+  * *Protection(s)*
+    * ISP might provide protection service.
+    * Your network border security devices.
+  * *Categories of DDoS techniques*
+    * `Volume-Based` - Just sheer volume of traffic
+      * Some use *amplification techiques* that leverage flaws/features in protocols to generate more traffic than the attack sends.
+        * `UDP Floods` - UDP doesn't use 3way handshake like TCP, so the host will just try to process it. UDP is also not rate limited.
+          * Can be detected with IDS and IPS, or with a packet analyzer manually.
+        * `ICMP Floods` - Sends many `ping` messages, ICMP is ratelimited in modern systems
+            * Many OS/Systems/network devices disable `ping/icmp` support by default.
+      * `Amplified Denial-of-service attack` - Use protocols that allow a small query to return large sets of data (e.g. DNS, NTP, SNMP, ...)
+        * Again, if you spoof the sender address (change it to your target), all these DNS resuls will be sent to the target.
+      * `Reflected Denial-of-service attack` this is more specificly about the spoofing, so the sender spoofs the sender IP to the target's IP, which makes it also hard to dstop and track down.
+      * Could be still same size requests.
+    * `Protocol-Based`
+      * TCP Based - they do use a 3 way handshake, process being `SYN > SYN/ACK > ACK`.
+        * `SYN flood` sends `SYN` messages to server, server respond with `SYN/ACK` but then the attacker never responds with the final `ACK`  so the server meanwhile keeps waiting and blocking resources, hoping to receive the `ACK`, eventually timing out. But this allows for many of these handshakes to open up but not close, causing a lot fo resources on the server side.
+        * MOST COMMON
+      * Older
+        * `Ping of Death` - Ping packet too large to handle
+        * `Smurf attacks` - Send a spoofed ping packet, and systems would respond back to this spoofed target address, overwelhmin it.
+        * `Xmas/Christmas tree attack` - Packets with  all their TCP flags on
 
 ## Others
 
