@@ -169,10 +169,82 @@
     * `site-to-site` (always-on)
     * `remote access` (as-needed) - for traveling/remote employees
 * **Tunneling**
-
+  * *Split-Tunnel* - Only send traffic intended for the secure other side of the tunnel.
+    * Example: Public internet via usual connetion, but intranet storage via Tunnel.
+  * *Full-Tunnel*  - Send all network traffic through VPN tunnel
+    * Example: When you are in a coffeeshop and you can't trust even the local network, you might then want to direct ALL traffic through the tunnel.
 
 ### Network Appliances and Security Tools
-* **TODO**
+* **Jump Servers/Boxes** - Securely operate in security zones with different security levels.
+  * Lives in the target security level
+  * Accessed often via SSH, RDP, ...
+  * Should be configured for a secure audit trail, with the audit trail living also somewhere else securely.
+* **Load Balancing**
+  * *Modes*
+      * `Active/Active` distribute equally across backend systems
+      * `Acive/Passive` bring backup backend systems online when an active system fails.
+  * *Algorithms*
+    * `round robin`
+    * `Least connection` - send to backend with least connections
+    * `agent based` - based on reporting of agents installed on the backend systems.
+    * `Source IP hashing` - randomized algorithm using the IP address of the coient
+    * `weighed least connection` -  `least connection` + `weights` to influence prefereence
+    * `fixed weights` - just fixed weights set per backend system.
+    * `weighted response times` - backend's response time + `weights` to influence prefereence
+  * *Sticky Sessions* - Let a client stick to a distinct backend for entire session,
+  * *Network Level*
+    * Layer 4: Transport level based load balancing - Is dummer
+      * Less overhead, but limited to protocol, port, IP address, etc...
+    * Layer 7: Application level load balancing - Can do smart stuff based on request level (e.g. inspect headers)
+      * more overhead, cpu, etc... has performance penalty
+
+* **Proxy Servers**
+  * Forward requests
+  * Due to centraliztions of forwarding requests, you can take actions on these request or responses.
+  * Actions
+    * Filter
+    * modify
+    * cache
+    * Restrictions
+  * *Forward Proxy* between clients and servers
+    * Forward requests to servers.
+    * This hides original IP, so this is how you can get around geoblocking for example or other blocking based on source IP.
+  * *Reverse Proxy* between servers and clients
+    * Can act as load balancer and cache for static content.
+    * Features are quite broad
+* **WebFilters**
+  * aka **Content Filters**
+  * Centralized proxies or agent based tools to allow/block traffic based on consent rules.
+    * Content categorization allows for having various categories with different rules.
+* **Data Protection**
+  * Use Data Loss Protection (DLP) to avoid exfiltration points.
+    * Can send notifications, block traffic, encrypt data, ...
+* **Intrusion Detection (IDSs) and Intrustion Prevention Systems (IPSs)**
+  * To either detect and/or block threats.
+  * Methods
+    * `Signature-Based` detection rely on known Hash/signatures of threats
+    * `Anomaly-Bases` detection rely on having a baseline and then spot anomalies.
+  * An IPS in passive mode, just monitors and takes no action, acting as a IDS essentially.
+  * `Active/Inline` mode - All traffic flows THROUGH the IDS/IPS
+    * Network dependency: If IDS fails, network traffic stops, although SOME have a `fail open` possibility.
+  * `Passive/Tap` mode - IDS/IPS receives COPY of network traffic
+    * No network impact: If IDS fails, network traffic continues normally
+* **Firewalls**
+  * *Next-Generation Firewalls (NGFW)* can interact on level 4 (transport) and level 7 (application) of the network layers.
+    * Can be called `all-in-one` network security devices.
+      * Can do IDS/IPS, deep inspectiom, antivirus/malware detections, overlap a bit with UTM, but typically faster cause it's still a bit more focussed.
+      * More configuration and expertise required.
+  * *Uniform Threat Management (UTM)* - firwall, IDS/IPS, antimalwaree, URL + Email filtering, DLP, VPN, Security and analytics capabilities. EVERYHTING.
+    * "Out of the box"
+    * Deployed at network boundires.
+  * `Stateless` - Just apply the filter rules, very basic.
+  * `Statefull` - They keep the state of flow, so they can make more overarching decisions.
+    * Example: They can "recognize" a message that's an agress response from a previously approved ingress request.
+  * *Web Application Firewals (WAF)*
+    * Works only on level 7 (application) and does even stuff like XSS/SQL injection and other scanning, so this is more specialized for distinct application. So firewall + IPS without other fancies.
+  * **Screened Subnets**
+    * So firewwalls allow creation of screend subnets. For example `public internet <-> Firewall <-> DMZ`, the firewall made this seperation possible.
+* **Access Control Lists**
 
 ### Deception and Disruption Technology
 * **TODO**
