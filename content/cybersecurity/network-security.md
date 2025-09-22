@@ -400,13 +400,26 @@
   * Trojan can access bypass TLS encryption, it just needs to intercept requests/responsed before encrypting or after decrypting, so it can be modified, or injected with content [see injection attacks](<application-security#Code Injection Attacks>)
 
 ### Domain Name System Attacks
-* **TODO**
+* **Domain Hijacking** - Stealing the domain, so they can be pointed to malicious systems
+  * By Social Engineering
+  * Technical Means
+  * People forgetting to renew
+* **DNS Poisining**
+  * Method 1: On-Path attack where attacker supplies a altered DNS query with a destination to a malicious system.\
+  * Method 2: Poison thee DNS cache on a system (like the local OS/Browser cache)
+* **URL Redirection**
+  * Popular Method: Insert alternate IP in hosts file.
+    * Can be scanned and checked for changes by antimalware tools.
+* **Domain Reputation** can be also used to our benefit.
 
 ### Credential Replay Attacks
-* **TODO**
+* Requires attacker to capture valid networkd data and re-send or delay.
+* Usuallt on-path
+* IoC: Modified gatwats or routes
 
 ### Malicious Code
-* **TODO**
+* [See Malware Types](malware-types)
+* See IoC's per type.
 
 ### Distributed Denial-of-Service Attacks
 * **TODO**
