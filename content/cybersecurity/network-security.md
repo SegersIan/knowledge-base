@@ -382,7 +382,22 @@
 
 ## Network Attacks
 ### On-Path Attacks
-* **TODO**
+* aka **Man-In-The-middle**
+* Attacker forces traffic to go through him, allowing for eavesdropping and/or altering the communication.
+* **SSL Stripping** for when someone is "on-path"
+  * How its done
+    1. Victim types: https://bank.com
+    2. Attacker intercepts, serves HTTP version of login page (forces downgrade)
+    3. Victim submits credentials over HTTP (thinking it's secure)
+    4. Attacker captures plaintext credentials
+    5. Attacker forwards request over HTTPS to real bank.com
+    6. Attacker relays response back to victim (still over HTTP)
+  * Protection: `HTTP Strict Tansport Security (HSTS)` - forces browsers to connect only via HTTPS using TLS
+    * IMPORTANT: Only works after the user has visited the site AT LEAST ONCE (where the attack can already happen).
+    * Browsers and plugins can "force" any request to go over https, even if http was requested. (HTTPS Anywhere).
+    * Certificate pinning
+* **Browser-based on-path attack** Relies on Trojan in the user's browser.
+  * Trojan can access bypass TLS encryption, it just needs to intercept requests/responsed before encrypting or after decrypting, so it can be modified, or injected with content [see injection attacks](<application-security#Code Injection Attacks>)
 
 ### Domain Name System Attacks
 * **TODO**
