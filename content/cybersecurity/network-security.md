@@ -21,15 +21,36 @@
   * `passive` not powered (removes los off power failure mode)
 
 ### Network Design Concepts
-* **Physical Isolation**
+* **Physical Isolation** - requires physical presence to move data between air-gapped systems.
   * aka **Air-Gapped**`
-* **Logical Segmentation**
-* **High Availability**
-* **Implementing Secure Protocols**
-* **Reputation Services**
-* **Software-Defined Networking (SDN)**
-* **SD-WAN**
+  * Known hack: Malware that copied itself to USB sticks.
+* **Logical Segmentation** - Virtual/software level isolation of networks
+  * Often on Layer 2,3
+  * aka VLANs, Subnets, ...
+  * Packets move with VLAN tags.
+  * Attacks focust on devices/systems that seperate/enforce this.
+* **High Availability (HA)** to handle the `Availability` goal
+* **Implementing Secure Protocols** - ensure that services/communication is secure
+  * E.g. HTTPS over HTTP; SSH over Telnet
+  * Mind the Protocol versions! (downgrade attacks)
+  * Using an alternate port NOT a security control (Just obscurity)
+* **Reputation Services** - feeds that track IP addresses, domains, and hosts known to engage in malicious activity.
+  * Often combined with threat feeds.
+* **Software-Defined Networking (SDN)** software-based network configuration.
+  * Relies on controllers that managed network devices and configurations.
+  * Flexibile, can be changed based on metrics/insights.
+  * You can configure security zones and such (like security groups in AWS).
+  * Often on Layer 2,3 and sometimes 4.
+* **Software-Defined Wide Area Network (SD-WAN)**
+  * Used more for availability, connecting various internet providers in a transparent way.
 * **Scure Access Service Edge (SASE)**
+  * Pronounced "Sassy"
+  * Combines: **VLAN**, **SDN-WAN**, **firewalls**, **Cloud Access Security Brokers (CASB)**
+  * USed to
+    * make endpoints secure.
+    * in-transit data is secure
+    * policy-based security enforcement
+  * **Cloud Access Security Brokers (CASB)** - policy enforcement point between service providers and service customers to allow organizations to enforce their policies for cloud resources.
 
 ### Network Segmentation
 * **TODO**
