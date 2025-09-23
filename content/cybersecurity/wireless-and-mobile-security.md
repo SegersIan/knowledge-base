@@ -191,6 +191,9 @@
 * **Opertunistic Wireless Encryption (OWE)** to provide encypted WIFI on ope networks when possible.
 
 ### Wireless Authentication
+* *Open Networks* - Often us portals to login. Doesn't offer protection unless someone uses https.
+* *Preshared keys* - allows encrypted traffic but not unique identifiedf.
+* *Enterprise* - Relies on [RADUIS](<identity-and-access-management#Remote Authentication Dial-In User Service (RADIUS)>) and Estensive Authentication Protocol (EAP) for authN.
 * **Wireless Authentication Protocols**
 
 ## Managing Secure Mobile Devices

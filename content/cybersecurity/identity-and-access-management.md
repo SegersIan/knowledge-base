@@ -22,14 +22,14 @@
 * Authorization - AuthZ - Verfies what you have access to.
 
 ### Authentication and Authorization Technologies
-* **Extensible Authentication Protocol (EAP)**
+#### Extensible Authentication Protocol (EAP)
   * Authentication framework for Wifi.
   * Implementations EAP-TLS, LEAP, EAP-TTLS...
-* **Challenge Handshake Authentication Protocol (CHAP)**
+#### Challenge Handshake Authentication Protocol (CHAP)
   * Authentication framework
   * Encrypted challenge + 3-way handshake
   * ![img](assets/identity_and_access_mgmt_chap.jpg)
-* **802.1XX**
+#### 802.1XX
   * Authentication framework
   * IEEE standard for devices that want to connect to network
     * Network Access Control (NAC)
@@ -38,18 +38,18 @@
     * Controllers connect to authentication server, typically via RADIUS
     * RADIUS might use LDAP or Active Directory as data source for Identity information.
   * ![img](assets/identity_and_access_mgmt_8021x.jpg)
-* **Remote Authentication Dial-In User Service (RADIUS)**
+#### Remote Authentication Dial-In User Service (RADIUS)
   * Most common authentication, authorization and accounting (AAA) system for network devices.
     * Accounting refers to resource utilization like time, bandwith or CPU
   * Operates over UDP and TCP as client-server model.
   * How It Works
     * RADIUS sends passwords obfuscated by shared secret + MD5 hash.
     * Traffic between RADIUS Network Server and RADUI server encrypted in IPSec tunnels usaully.
-* **Terminal Access Controller Acees Control Systgem Plus (TACACS+)**
+#### Terminal Access Controller Acees Control Systgem Plus (TACACS+)
   * Proviedes AAA services
   * By Cisco
   * Operates over TCP
-* **Kerberos**
+#### Kerberos
   * Authentication Protocol
   * Between trusted hosts across an untrusted network (e.g. the internet)
   * Uses authentication to shield its authentication traffiix
