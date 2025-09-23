@@ -72,8 +72,14 @@
   * Destruct/damage tag so they can't be read
   * Reprograming of tags
   * Tags can be cloned, modified or spoofed, or readers can be impersonated.
-#### GPS
-* **GPS**
+#### Global Position System (GPS)
+* *Operating Scope* : very wide range
+* *Only sends signals* - you receive `location` and `time` signals, but you don't connect to have a casual dialog.
+* *Attack Vectors*
+  * Signal can be jammed
+  * Signal can be spoofed
+* *Goal* : Geolocation
+* GPS often combined with other location centric data (wifi names, bluetooth, ...) to have an accurate location of a device.
 #### NFC
 * **NFC**
 #### Infrared
