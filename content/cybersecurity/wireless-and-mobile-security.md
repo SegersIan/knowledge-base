@@ -100,10 +100,11 @@
 * **broadcast** - sends out on many nodes (like GPS), no return path
 
 ### Attacks Against Wireless Networks and Devices
-* **EvilTwins and Rogue Access Points**
-* **Bluetooth Attacks**
-* **RF and Protocol Attacks**
-* **Sideload and Jailbreaks**
+
+#### EvilTwins and Rogue Access Points
+#### Bluetooth Attacks
+#### RF and Protocol Attacks
+#### Sideload and Jailbreaks
 
 ### Designing a Network
 * **TODO**
