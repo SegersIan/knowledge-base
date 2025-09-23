@@ -213,3 +213,7 @@ Determine which users, services, and programs can access various files or other 
     * `Read & Execute` (linux `r-x`)
     * `Read` (linux `r--`)
     * `Write` (linux `-w-`)
+
+## Resources
+
+![img](assets/iam_vs_pam.jpeg)

@@ -3,15 +3,31 @@
 ## Incident Response (IR)
 
 ### The Incident Response Process/Cycle
+
+> The process is not linear, you might go back and forth based on findings and learnings.
+
 * 1. **Preparation** - build tools, processes, and procedures to respond to an incident.
   * Includes: Build team, train, conduct exercises, document, configure tools.
 * 2. **Detection** Reviewing events to identify incidents
-  * Pay attention to [IoCs](<malware-types#indicators-of-compromise-iocs>)
-* 3. **Analysis**
-* 4. **Containment**
-* 5. **Eradication**
-* 6. **Recovery**
-* **Back to 1** - so repeat
+  * [IoCs](<malware-types#indicators-of-compromise-iocs>), loge analysis and security monitoring + awareness and reporting program for staf.
+* 3. **Analysis** - An event is indentified, identify other related events and their targer/impact.
+* 4. **Containment**  - Contain the incident from furher escalation
+  * Not always clear what to do, quarantine (move a system to an isolated network) is an method,
+* 5. **Eradication** - Remove the artificats related to the incident
+  * Restore systems, rebuild systems, restore backups, and verify its clean
+* 6. **Recovery** - Restore back to normal
+  * Move a system out of quarantine, go back online, fixes to remediate the chance of immediatly reoccring
+  * Make sure to update a backlog for improvememts based on past incidents.
+* 7. \[Optional\] **Post Mortem** - Lessons learned, reflect.
+* **Back to 1** - so repeat, as you can now prepare again better
+
+#### Prepering for Incident Response
+
+* Building the **Incident Response Team**
+  * Includes a member of management/organizational leadership.
+    * Takes decisions
+     
+
 ### Training
 ### Threat Hunting
 ### Understanding Attacks and Incidents
