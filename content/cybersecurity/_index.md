@@ -35,3 +35,4 @@ bookCollapseSection: true
   * [YARD Stick One](https://www.antratek.com/yard-stick-one)
   * There are extended versions:
     * [PortaPack](https://lab401.com/products/portapack-h4m) (Shipped in EU!)
+* [Flipper Zero](https://lab401.com/collections/flipper-zero/products/flipper-zero)

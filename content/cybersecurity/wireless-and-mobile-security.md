@@ -80,10 +80,18 @@
   * Signal can be spoofed
 * *Goal* : Geolocation
 * GPS often combined with other location centric data (wifi names, bluetooth, ...) to have an accurate location of a device.
-#### NFC
-* **NFC**
+#### Near Field Communication (NFC)
+* *Operating Scope* : near/touch range (~10 cm)
+* *Device-2-device* communication
+* *Low bandiwth*
+* *Attack Vectors*
+  * When in close proximity: Intercept NFC traffic, replay attacks and spoof attacks.
+  * NFC decices must not respond to queries unless desired. That's why paying with APple Pay, you need to "trigger your card" first before you can pay.
+
 #### Infrared
-* **Infrared**
+* *Device-2-device* communication, but networks are technically possible
+* *Attack Vectors*
+  * Can be caputed by anything in line of sight.
 
 ### Wireless Network Models
 * **TODO**
