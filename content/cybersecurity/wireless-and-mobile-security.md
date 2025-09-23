@@ -102,9 +102,52 @@
 ### Attacks Against Wireless Networks and Devices
 
 #### EvilTwins and Rogue Access Points
+
+* **EvilTwin** is an Access Point (AP) setup to "appear" as a legitimate trusted network.
+  * Specific type of rogue AP that impersonates a legitimate network
+  * Emits the same `SSID` as the network it tries to impersonate.
+  * The EvilTwin can be placed closer to a dvice or be stronger than the legititime network.
+    * (Other techniques exists also)
+  * The goal is that target is tricked into connecting to the EvilTwin AP instead of the legitimate AP.
+  * The attacker provides internet to the target to not give any impressions something is wrong.
+  * Meanwhile, the attacker is on-path and can do lots of typical on-path type of attacks.
+      *e.g. False login screens, false websites, ...
+* **Rogue Acces Points** are APs added to your network intentionally or unintentionally.
+  * The broader category of an **EvilTwin*.
+  * Any unauthorized access point (umbrella term)
+  * Other examples:
+    * Honey Pot AP: "Free_WiFi", so there is no attempt to impersonation for example.
+  * *Defenses*
+    * Auto detection of new AP in vicinity.
+    * Wireless IDS can spot unknown AP and identify if they're connected to your network.
+
 #### Bluetooth Attacks
+* **Bluejacking** - Send unsolicited messages to Bluetooth enabled devices.
+* **Bluesnarfing** - Unauthorized acces to a Bluetooth device.
+  * Aims to gather information like contact lists or other senstive information from a device.
+* **Bluetooth Impersonation Attacks (IBA)**
+  * Takes advantage of bluetooth specification weakness
+* *Defeneses* - not many
+  * Often easible guissable PINs (e.g. `0000`) an then establish long teem kwy for connecting.
+  * Use non standard pins
+  * Patch your hardware
+
 #### RF and Protocol Attacks
+> When you want a system to disconnect from a wireless network or conduct an evil twin attack can use either:
+> - Disassociation
+> - Jamming
+
+* **Disassociation** - Many attacks work better if they can be there when a device connects to a wireless network.
+  * Therefore, making a device disconnect/dissaociate momentarily allows the attacker to capture the WIFI connection traffic or to insert an EvilTwin.
+  * *How?*
+    * Send a `deuauthentication frame` to the AP with a spoofed mac address from the victim. This causes the AP to disconnect the device and require it to reconnect/reauthenticate.
+    * WPA2: management frames often not encrypted, so possible
+    * WPA3: management frames encrypted, so impossible
+* **Jamming** block all traffix in a range/frequency aka wireless inteference.
+
 #### Sideload and Jailbreaks
+* **Sideloading** Transfer files to mobile devices, often via USB/MicroSD to install apps from outside the store. This is not always necessarily malicious. Could be to get around geoblocks in app stores.
+* **Jailbreaks** do privilege escalation in the OS of the device.
 
 ### Designing a Network
 * **TODO**
