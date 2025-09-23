@@ -75,6 +75,11 @@ Makes sense to `Incident Response Policies` that are used to guide the incident 
 
 ### Understanding Attacks and Incidents
 
+* **Attack Frameworks** are used to understand adversaries, document techniques and categorize tactis in a shared language and terminology.
+* **MITRE ATT&CK** is such a attack framework
+  * `Adversarial Tactis, Techniques, and Common Knowledge knowledgebase of adversary tactics and techniques`
+  * [FInd there the knowledgebase](https://attack.mitre.org/)
+  * This knowledgebase can be also used for Threat Modeling.
 ## Incident Response Data and Tools
 ### Monitoring Computing Resources
 ### Security Information and Event Management Systems
