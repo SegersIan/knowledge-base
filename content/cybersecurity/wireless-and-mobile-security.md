@@ -94,7 +94,10 @@
   * Can be caputed by anything in line of sight.
 
 ### Wireless Network Models
-* **TODO**
+* **point-top-point** (decentralized) like device to device, direct connection.
+* **point-top-multipoint** (centralized) like an accesspoint/router using the `infrastructure` mode, central hub
+* **mesh** - Multiple interconnected paths between many devices
+* **broadcast** - sends out on many nodes (like GPS), no return path
 
 ### Attacks Against Wireless Networks and Devices
 * **EvilTwins and Rogue Access Points**
