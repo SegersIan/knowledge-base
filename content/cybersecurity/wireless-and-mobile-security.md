@@ -1,4 +1,4 @@
-# Wireless and Mobile Security
+https://www.cisecurity.org/benchmark/apple_ios Wireless and Mobile Security
 > Have distinct challenges compared to wired networks.
 > They broadcast their signals and are often available from outside the area that an organization contols.
 
@@ -247,7 +247,11 @@
 * **Ccntainerization** - split devices bbetween work and personal-use environments without mixing data/access.
 
 ### Hardening Mobile Devices
-* **TODO**
+* **CIS Checklist IOS** [See](https://www.cisecurity.org/benchmark/apple_ios)
+* **CIS Checklist Android** [See](https://www.cisecurity.org/benchmark/google_android)
+
+#### Mobile Device Management (MDM)
+
 
 ## Resources
 
