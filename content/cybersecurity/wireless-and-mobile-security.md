@@ -193,7 +193,7 @@
 ### Wireless Authentication
 * *Open Networks* - Often us portals to login. Doesn't offer protection unless someone uses https.
 * *Preshared keys* - allows encrypted traffic but not unique identifiedf.
-* *Enterprise* - Relies on [RADUIS](<identity-and-access-management#Remote Authentication Dial-In User Service (RADIUS)>) and Extensible Authentication Protocol (EAP) for authN.
+* *Enterprise* - Relies on [RADUIS](<identity-and-access-management#RemoteAuthentication Dial-In User Service (RADIUS)>) and Extensible Authentication Protocol (EAP) for authN.
 
 #### Extensible Authentication Protocol (EAP)
 > Extensible Authentication Protocol (EAP) is a wireleess authentication protocol that has many variants because it's extensible.
