@@ -85,11 +85,93 @@ Makes sense to `Incident Response Policies` that are used to guide the incident 
   * [Lockheed Martin's Cyber Kill Chain](https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/Gaining_the_Advantage_Cyber_Kill_Chain.pdf)
 
 ## Incident Response Data and Tools
+
 ### Monitoring Computing Resources
-### Security Information and Event Management Systems
+* **Systems** - system logs, system health and performance.
+* **Appllication** - Application logs, performance
+* **Infrastructure** - SNMP, Syslogs, ...
+
+### Security Information and Event Management Systems (SIEM)
+> The central security monitoring tool that collects and aggregates logs from variety of sources to perform correlation and analysis activities.
+> As you got all these logs, you can create reports, alerts, ...
+
+* **Sources**: Network devices, network packets, applications, IDS, IPS, ...
+* **Dashboards**: of the most relevant SIEM collected data/insights
+* **Sensors**: Software/hardware agents to agather additional data. Might send the original data or preprocess if desireable.
+* **Sensitivity and Thresholds** - adjust correctly for alerts to avoid fatigue and false positives.
+* **Trends** can also indicate issues and give more context.
+
 ### Alerts and Alarms
+* **Alert Tuning** - modify alerts to omly alarm on important events (avoid alert fatigue)
+  * Remember, attackers can use alert fatigue on purpose
+  * Might cause actual incidents to dismissed
+
 ### Log Aggregation, Correlation, and Analysis Rules
-### Benchmarks and Logging Reporting and Archiving
+#### Rules
+One can configure rules to trigger actions on.
+#### Log Files
+Commong logs used during incident response:
+* **Firewall Logs** including, NGFW, WAF, UTM,
+* **Application Logs**
+* **Endpoint logs**
+* **OS specific security Logs**
+  * Linux `/var/log/auth.log` and `/var/log/secure`
+* **IDS/IPS logs**
+* **Network Logs**
+
+* **Tools**
+  * `grep`, `tail`
+  * Network flows: Uses sampling!
+    * Determine what traffix sas sent on your network, where it went, where it came from.
+
+#### Logging Protocols and Tools
+
+##### **Local Syslog (Traditional):**
+* **On Linux machines:**
+  - **syslogd daemon**: Collects logs from applications/kernel
+  - **Local storage**: Writes to `/var/log/` files (messages, auth.log, kern.log)
+  - **Log rotation**: logrotate manages file sizes/retention
+  - **Local analysis**: Logs stay on the machine that generated them
+
+##### **Network Syslog (Centralized):**
+* **Syslog Protocol (RFC 3164/5424):**
+  - **UDP port 514**: Standard syslog transmission
+  - **Client → Server**: Devices send logs to central syslog server
+  - **Structured format**: Timestamp, facility, severity, message
+
+##### **Modern Implementations:**
+* **rsyslog (most common):**
+  - **Enhanced syslog**: Supports TCP, TLS, databases, filtering
+  - **Both roles**: Can be local daemon AND central server
+  - **Configuration**: `/etc/rsyslog.conf`
+* **syslog-ng:**
+  - **Next generation**: Advanced filtering, parsing, routing
+  - **Enterprise features**: Better performance, more destinations
+
+#### Going Beyond Logs: Using metadata
+* **Examples**
+  * *Email Metadata* (e.g Header)
+  * *Mobile Metadata* Call logs, SMS, data Usage, GPS tracking, Cellular tower...
+    * Powerful for geospatial stuff
+  * *Web Metadata* meta tags, headers, cookies, ...
+  * *File Metadata* when modifed, who modifed, Geotag (photos), camera used, size, hash...
+* Very useful for forensics.
+#### Other Data Sources
+* *Examples*
+  * Vulnerability scans
+  * Packet captures
+  * Automated reports etc
+  * Dashboards
+* These can be read by agents or else just fed to the logging infrastructue, making it agentless then.
+
+### Benchmarks and Logging
+* We know benchmarks for hardening, but in these hardening benchmarks there are often tips/instructions on configuring pproper logging.
+
+### Reporting and Archiving
+> After logging, you must report and archive.
+
+* *Reporting* is part of the identification process step, looking at trends, changes and sio.
+* *Archiving* finally of the logs, keep size manageable, do retenetion based in your documents, polcies, compliance and such. Keep privacy compliance also in mind.
 
 ## Mitigation and Recovery
 ### Secure Orchestration, Automation, and Response (SOAR)
