@@ -38,9 +38,40 @@
 | 802.11be | Wi-Fi 7 | 40+ Gbit/s | 2.4 GHz, 5 GHz, 6 GHz |
 
 #### Bluetooth
-  * *Operating Scope* : close range
-### RFID
-* **RFID**
+* *radio band*: `2.4 GHz`
+* *purpose* : Low power, short range and low bandwith.
+* *Operationg mode* : Point-2-Point
+* *Operating Scope* : close range
+* *Pairing* : Process for establishing a connection, requires sometimes a `pin` to complete.
+* *Security Modes*
+  * 1 - No Security (non-secure)
+  * 2 - Service-level enforced security
+  * 3 - Link-level enforced securty
+  * 4 - Standard pairing with Security Simple Pairing (SSP)
+* *encryption* is supported, relies on `PIN` used by both devices, like a shared key.
+  * Devices like headsets use `FIXED PINS` decreasing its security.
+* *Attacks* against authN and negotiating encryption keys allows for eavesdropping.
+
+### Radio Frequency Identification (RFID)
+* Tags are either
+  * `active`: Powered themselves and always emits signals to be read by a reader
+  * `semie-active`: Powered themselves, but emit signals when the reader asks for it
+  * `passive`: entirely powered by the reader.
+* *Frequencey Ranges*
+  * `low` - short-range, low-power (touch field)
+    * Use case : Entry Access & Identification
+    * power and frequency can be different around the world, so might not work everywhere the same.
+  * `high` - Up to a meter (near field)
+    * Communicates faster than `low`
+    * Support `read-only`, `write-only` and `rewritable` tags
+  * `ultra-high` - highest range and speed to read.
+    * Use Cases: inventory, antitheft (shops)
+* *Operating Scope* : near to close range (up yo 100m for active tags)
+* *Tags are small and inexpensive*
+* *Attack Vectors*
+  * Destruct/damage tag so they can't be read
+  * Reprograming of tags
+  * Tags can be cloned, modified or spoofed, or readers can be impersonated.
 #### GPS
 * **GPS**
 #### NFC

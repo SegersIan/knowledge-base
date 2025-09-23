@@ -24,3 +24,12 @@ bookCollapseSection: true
 ![ing1](assets/learning_paths.jpeg)
 ![ing2](assets/secure_insecure_ports.png)
 ![ing3](assets/top_tools_per_field.jpeg)
+
+## Goodies
+
+* [Great Scott Gadgets](https://greatscottgadgets.com/)
+  * [HackerRF One](https://www.antratek.com/hackrf-one-sdr-software-defined-radio)
+      * [Antenna 300 MHz to 1.1 GHz](https://www.antratek.com/telescopic-antenna-sma-300-mhz-to-1-ghz-ant700)
+      * [Antenna 75 MHz to 1 GHz](https://www.antratek.com/telescopic-antenna-sma-75-mhz-to-1-ghz-ant500)
+  * [HackerRF Pro](https://www.hackmod.de/p/hackrf-pro)
+  * [YARD Stick One](https://www.antratek.com/yard-stick-one)
