@@ -208,12 +208,43 @@
 * **EAP-Tunneled Trasport Layer Security (EAP-TTLS)** extends `EAP-TLS` but client is NOT required to have certificate.
   * It removes the certificate overhead that comes with `EAP-TLS`.
 
-
 ## Managing Secure Mobile Devices
-* **TODO**
 
 ### Mobile Device Deployment Methods
-* **TODO**
+
+#### Bring-Your-Own-Device (BYOD)
+* *Who Owns The Device*: The User
+* *Who Controls and Maintains Device*: The User
+* *Cost For Organization*: Low
+* *Risk Factor*: High
+* *Description*: Bring personally owned device, gives user freedom and lower cost to organization, but greater risk.
+#### Choose-Your-Own-Device (CYOD)
+* *Who Owns The Device*: The Organization
+* *Who Controls and Maintains Device*: The Organization
+* *Cost For Organization*: High
+* *Risk Factor*: Low
+* *Description*: gives user freedom and less risk
+#### Corporate-Owned, Personally-Enabled (COPE)
+* *Who Owns The Device*: The Organization
+* *Who Controls and Maintains Device*: The Organization
+* *Cost For Organization*: High
+* *Risk Factor*: Low
+* *Description*: Allow reasonable personal use while meeting enterprise needs control and security.
+#### Corporate-Owned
+* *Who Owns The Device*: The Organization
+* *Who Controls and Maintains Device*: The Organization
+* *Cost For Organization*: High
+* *Risk Factor*: Lowest
+* *Description*: Least flexibility but most secure
+#### Corporate-Owned; Business Only (COBO)
+* *Who Owns The Device*: The Organization
+* *Who Controls and Maintains Device*: The Organization
+* *Cost For Organization*: High
+* *Risk Factor*: Lowest
+* *Description*: For devices that are not meant to be used outsid work (like ticket scanners for events)
+#### Precautions
+* **Virtual Desktop Infrastucture** - Allows low-security devices to access a secure managed environment
+* **Ccntainerization** - split devices bbetween work and personal-use environments without mixing data/access.
 
 ### Hardening Mobile Devices
 * **TODO**
