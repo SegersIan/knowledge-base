@@ -150,7 +150,19 @@
 * **Jailbreaks** do privilege escalation in the OS of the device.
 
 ### Designing a Network
-* **TODO**
+* Requires careful **Wireless Access Point (WAP)** placement + configuration.
+  * There is limited amount of channels
+  * Too many WAPs using same channel in range of each other can degrade performance.
+* **Site Surveys** - Move through facility/space to determine
+  * Existing networks
+  * Location options for WAPs
+  * Tools allow to make **Heatmap**
+    * where wifi signals are, the strength, the channels they use and devices.
+    * APs reach are no perfect circles, cause objects influence their reach
+  * Wifi channels overlap each other slightly, the goal is, based on existing networks and their channels, to pick a channel that has the least overlap with used channels.
+* Wifi Analyzers are your go to tool fro doing site surveys and build heatmaps.
+
+![img](assets/network_wifi_channels.jpg)
 
 ### Controller and Access Point Security
 * **TODO**
