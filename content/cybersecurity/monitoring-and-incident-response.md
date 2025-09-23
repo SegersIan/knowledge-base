@@ -175,5 +175,62 @@ Commong logs used during incident response:
 
 ## Mitigation and Recovery
 ### Secure Orchestration, Automation, and Response (SOAR)
+**Platforms that automate repetitive security tasks and coordinate incident response across multiple security tools.**
+
+#### **The Core Problem SOAR Solves:**
+- **Alert fatigue**: Security teams drowning in thousands of daily alerts
+- **Manual processes**: Analysts spending hours on repetitive investigation tasks
+- **Tool silos**: Security tools don't communicate with each other
+- **Slow response**: Manual processes delay incident response
+
+#### **What SOAR Does:**
+
+**Orchestration:**
+- **Connects disparate tools**: SIEM, firewalls, endpoint tools, threat intel feeds
+- **Unified workflow**: Single pane of glass for incident management
+
+**Automation:**
+- **Playbooks**: Automated response workflows for common scenarios
+- **Enrichment**: Automatically gathers context (IP reputation, user info, file analysis)
+- **Response actions**: Block IPs, isolate endpoints, create tickets - automatically
+
+**Response:**
+- **Incident management**: Tracks cases from detection to resolution
+- **Collaboration**: Team communication and task assignment
+- **Reporting**: Metrics on response times, effectivenes
+
 ### Containment, Mitigation, and Recovery Techniques
-### Root Cause Analysis
+* First mitigation is often quickly blocking the cause of an incident.
+  * This means reconfigure endpoint security solutions:
+* Examples:
+  * *Application Allow List*
+  * *Application Deny List*
+  * *Isolation/Quarantine* - place files in a safe zone or sytems in safe network
+  * *Monitoring* - VALIDATE IF your mitigation effors are effective nad working and don't create unintended side
+  effects.
+  * *Configuration Change* - These need to be tracked carefully for later rollback, diagnostics, etc...
+* Quarantine vs Delete
+  * Antimalware can default to quarantine or deleting after identification,
+    * Quarantine is good, cause it doesn't blindly all files, imagine if you're having a false positive!
+* Remediation Actions
+  * Modify firewall changes (add, remove, update rules)
+  * Mobile Device Management (MDM) changes
+  * Data Loss Prevention (DLP) changes
+  * Content filter changes
+  * Updateding/revoking certificates.
+* Network containment techniques
+  * *Isolation* - move a sustem into protected space/network, away from other systems.
+    * Remove from network, move it to isolation vlan, security rules
+  * *Containment* - leave system in place, but find other ways to contain
+    * Firewall rules on the system itself
+    * Be catious to shut down the system, might cause issues for later forensics.
+  * *Segmentation* - create seperate security levels and segemtns, but this is before an incident happens
+
+### Root Cause Analysis (RCA)
+> Identify the underlying cause of for an issue or compromise
+> Identify how to fix the problem
+
+* **Techniques**
+  * 5 whys
+  * Event analise
+  * Diagramming cause and effect
