@@ -185,7 +185,10 @@ https://www.cisecurity.org/benchmark/apple_ios Wireless and Mobile Security
 * **WPA3**
   * Adds `Network Authentication` on top of `WPA2` (which only has `User Authentication`) - The right for the device itself to connect.
   * `Simultaneous Authentication of Equals (SAE)` replaces preshared key and require interaction from client and network to validate both.
+    * Mutual proof: Both prove they know the password without revealing it
     * It's slows down brute-force attacks
+    * Password-to-key derivation: Converts WiFi password into unique session keys
+    * Different keys per session: Each connection gets unique encryption keys
     * **Perfect Forward Secrecy** - Rotates the keys ongoing basis so a single exposed key doesnt' result in entire communication to be exposed. Keys can be refreshed any time basically.
     * Adds **authenticated encryption** => Encryption + integrity protection in one operation.
 * **Opertunistic Wireless Encryption (OWE)** to provide encypted WIFI on ope networks when possible.
@@ -256,6 +259,8 @@ https://www.cisecurity.org/benchmark/apple_ios Wireless and Mobile Security
 * Features
   * Mobile Content Management (MCM) for secure access and control of organizational files
   * Geolocation migth help found lost phones or disable usage outside a perimeter.
+    * Can be used for Geofencing and context-aware authentication
+  * Geofence
   * Enforce locks/passwor/biometrics
   * Context-aware authN
   * Containerizarion
