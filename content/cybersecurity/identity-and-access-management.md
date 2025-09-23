@@ -23,41 +23,42 @@
 
 ### Authentication and Authorization Technologies
 #### Extensible Authentication Protocol (EAP)
-  * Authentication framework for Wifi.
-  * Implementations EAP-TLS, LEAP, EAP-TTLS...
+* Authentication framework for Wifi.
+* Implementations EAP-TLS, LEAP, EAP-TTLS...
 #### Challenge Handshake Authentication Protocol (CHAP)
-  * Authentication framework
-  * Encrypted challenge + 3-way handshake
-  * ![img](assets/identity_and_access_mgmt_chap.jpg)
+* Authentication framework
+* Encrypted challenge + 3-way handshake
+* ![img](assets/identity_and_access_mgmt_chap.jpg)
 #### 802.1XX
-  * Authentication framework
-  * IEEE standard for devices that want to connect to network
-    * Network Access Control (NAC)
-  * How It works
-    * Device sent authentication request to authenticators/controllers (switches, AP,...)
-    * Controllers connect to authentication server, typically via RADIUS
-    * RADIUS might use LDAP or Active Directory as data source for Identity information.
-  * ![img](assets/identity_and_access_mgmt_8021x.jpg)
+* Authentication framework
+* IEEE standard for devices that want to connect to network
+  * Network Access Control (NAC)
+* How It works
+  * Device sent authentication request to authenticators/controllers (switches, AP,...)
+  * Controllers connect to authentication server, typically via RADIUS
+  * RADIUS might use LDAP or Active Directory as data source for Identity information.
+* ![img](assets/identity_and_access_mgmt_8021x.jpg)
 #### Remote Authentication Dial-In User Service (RADIUS)
-  * Most common authentication, authorization and accounting (AAA) system for network devices.
-    * Accounting refers to resource utilization like time, bandwith or CPU
-  * Operates over UDP and TCP as client-server model.
-  * How It Works
-    * RADIUS sends passwords obfuscated by shared secret + MD5 hash.
-    * Traffic between RADIUS Network Server and RADUI server encrypted in IPSec tunnels usaully.
+* Most common authentication, authorization and accounting (AAA) system for network devices.
+  * Accounting refers to resource utilization like time, bandwith or CPU
+* Operates over UDP and TCP as client-server model.
+* How It Works
+  * RADIUS sends passwords obfuscated by shared secret + MD5 hash.
+  * Traffic between RADIUS Network Server and RADUI server encrypted in IPSec tunnels usaully.
+* RADIUS is essentially a federation protocol for network authentication - centralizing authentication across multiple network devices.
 #### Terminal Access Controller Acees Control Systgem Plus (TACACS+)
-  * Proviedes AAA services
-  * By Cisco
-  * Operates over TCP
+* Proviedes AAA services
+* By Cisco
+* Operates over TCP
 #### Kerberos
-  * Authentication Protocol
-  * Between trusted hosts across an untrusted network (e.g. the internet)
-  * Uses authentication to shield its authentication traffiix
-  * Kerberos users have
-    * The primairy (e.g. username)
-    * The instance (to help differentiate similar primaries)
-    * The Realms (groups of users) seperated by trust boundries
-  * ![img](assets/identity_and_access_mgmt_kerberos.jpg)
+* Authentication Protocol
+* Between trusted hosts across an untrusted network (e.g. the internet)
+* Uses authentication to shield its authentication traffiix
+* Kerberos users have
+  * The primairy (e.g. username)
+  * The instance (to help differentiate similar primaries)
+  * The Realms (groups of users) seperated by trust boundries
+* ![img](assets/identity_and_access_mgmt_kerberos.jpg)
 #### Single Sign-On (SSO)
 * Single identity to access multiple services/systems without reuathentication.
 * Lightweight Directory Access Protocol (LDAP)

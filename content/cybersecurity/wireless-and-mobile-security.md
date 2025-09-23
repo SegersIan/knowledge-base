@@ -193,8 +193,21 @@
 ### Wireless Authentication
 * *Open Networks* - Often us portals to login. Doesn't offer protection unless someone uses https.
 * *Preshared keys* - allows encrypted traffic but not unique identifiedf.
-* *Enterprise* - Relies on [RADUIS](<identity-and-access-management#Remote Authentication Dial-In User Service (RADIUS)>) and Estensive Authentication Protocol (EAP) for authN.
-* **Wireless Authentication Protocols**
+* *Enterprise* - Relies on [RADUIS](<identity-and-access-management#Remote Authentication Dial-In User Service (RADIUS)>) and Extensible Authentication Protocol (EAP) for authN.
+
+#### Extensible Authentication Protocol (EAP)
+> Extensible Authentication Protocol (EAP) is a wireleess authentication protocol that has many variants because it's extensible.
+
+* **Protected EAP (PEAP)** authenticates with certificate and wraps EAP in TLS tunnel.
+  * Devices use unqiue encryption keys (public key encruption) during TLS establishment.
+  * Temporal Key Integrity Protocol (TKIP) - used to replace keys regularly
+* **EAP-Flexible Authentication Via Secure Tunneling (EAP-FAST)** CISCO developed and imrpvoes on Lightweigth EAP.
+  * Focus on faster authentication while devices are roaming.
+  * Uses preshared private key for faster for reauthentication
+* **EAP-Transport Layer Security (EAP-TLS)** certificate-based authentication + mutual authentication of device and network. Due to certificate management, less mainstream.
+* **EAP-Tunneled Trasport Layer Security (EAP-TTLS)** extends `EAP-TLS` but client is NOT required to have certificate.
+  * It removes the certificate overhead that comes with `EAP-TLS`.
+
 
 ## Managing Secure Mobile Devices
 * **TODO**
