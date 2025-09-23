@@ -6,7 +6,7 @@
 * 1. **Preparation** - build tools, processes, and procedures to respond to an incident.
   * Includes: Build team, train, conduct exercises, document, configure tools.
 * 2. **Detection** Reviewing events to identify incidents
-  * Pay attention to IoCs
+  * Pay attention to [IoCs](<malware-types#indicators-of-compromise-iocs>)
 * 3. **Analysis**
 * 4. **Containment**
 * 5. **Eradication**
