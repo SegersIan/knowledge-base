@@ -33,3 +33,5 @@ bookCollapseSection: true
       * [Antenna 75 MHz to 1 GHz](https://www.antratek.com/telescopic-antenna-sma-75-mhz-to-1-ghz-ant500)
   * [HackerRF Pro](https://www.hackmod.de/p/hackrf-pro)
   * [YARD Stick One](https://www.antratek.com/yard-stick-one)
+  * There are extended versions:
+    * [PortaPack](https://lab401.com/products/portapack-h4m)
