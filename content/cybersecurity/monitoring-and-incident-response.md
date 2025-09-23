@@ -23,13 +23,56 @@
 
 #### Prepering for Incident Response
 
-* Building the **Incident Response Team**
-  * Includes a member of management/organizational leadership.
-    * Takes decisions
-     
+* **Incident Response Team Members**
+  * Member of management/organizational leadership.
+    * Takes decisions & communictates to senior management, should have the permission to take decisions.
+  * Information Security Staff
+  * Technnical Experts
+    * System admins, developers, ...
+  * Communications and PR staff
+  * Legal and HR if staff may be involved
+  * Law enforcement in some cases
+* **Excercices**
+  * *Tabletop* - talk through the process regarding a hpyothetical situation
+    * Lowest learning quality, but least impact also to operations
+  * *Similations* - Similate parts of a plan or entire plans
+    * Higher learning quality, but requires more resources and people must be informed.
+    * Every commumucation should pretext with `This is an excercise`
+* **Building Incident Response Plans**
+  * Must be reviewed reguraly
+  * Must be tested reguraly
+  * May contain various subplans, like
+    * Communication plan - who talks to who and how
+    * Stakeholder management plan - Who are the stakeholders and how do we involve them
+    * Business Continuity (BC) plans - how do we continue business process in case of failure
+      * e.g. do everything with pen or paper, use another system,...
+    * Disaster Recovery (DR) plans - focuses on estoration or continuation dispise a natural/human disaster
+
+#### Policies
+> Formal statements about the intent of an organization. This means it does not talk about the implementation.
+> Explains the WHY, not the HOW
+
+Makes sense to `Incident Response Policies` that are used to guide the incident response implementation.
 
 ### Training
+* Training if the plans
+* General trainings through certifications and such
+* [CISA Incident Response Training](https://www.cisa.gov/resources-tools/programs/Incident-Response-Training)
+
 ### Threat Hunting
+> Part of the "Detection" and "Analysis" steps of the Incident Response Process.
+> You look for incidents, compromises, IoCs
+
+* **Indicator Examples**
+  * *Account Lockout* - Sign of brute-force attempts
+  * *Concurrent Session Usage* - If the same user is using concurrent connections from different devices, especially if one of the devices is new/unknown or in another geographical location.
+  * *Blocked Content* - Any attempts of accessing blocked content
+  * *Impossible Travel* - When a user connects from 2 different locations that was impossible to travel between so fast
+  * *Resource Consumption* - Especially if unusal patterns, but this is used often in addition to other indicators.
+  * *Out-Of-Cycle logging* - events that happen outside of their usual time/schedule (a job running an another moment, a user at 2 AM)
+  * *Missing Logs*- an absence of logs where there should be, might indicate someone cleaned their tracks.
+  * *published/documented* - discovered/published indicators, distributed via threat feeds.
+
 ### Understanding Attacks and Incidents
 
 ## Incident Response Data and Tools
