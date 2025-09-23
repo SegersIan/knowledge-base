@@ -251,7 +251,18 @@ https://www.cisecurity.org/benchmark/apple_ios Wireless and Mobile Security
 * **CIS Checklist Android** [See](https://www.cisecurity.org/benchmark/google_android)
 
 #### Mobile Device Management (MDM)
-
+* Or **Unified Endpoint Management (UEM)** tools, they reach further than just mobiles as endpoint.
+* Or **Mobile Application Management (MAM)** is more about the applications, not the OS level.
+* Features
+  * Mobile Content Management (MCM) for secure access and control of organizational files
+  * Geolocation migth help found lost phones or disable usage outside a perimeter.
+  * Enforce locks/passwor/biometrics
+  * Context-aware authN
+  * Containerizarion
+  * Storage segmentation
+  * Full Device Encryption
+  * Push Notifications
+  * remote wipe
 
 ## Resources
 
