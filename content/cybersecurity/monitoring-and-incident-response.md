@@ -80,6 +80,10 @@ Makes sense to `Incident Response Policies` that are used to guide the incident 
   * `Adversarial Tactis, Techniques, and Common Knowledge knowledgebase of adversary tactics and techniques`
   * [FInd there the knowledgebase](https://attack.mitre.org/)
   * This knowledgebase can be also used for Threat Modeling.
+* Others
+  * [Diamond Model](https://apps.dtic.mil/sti/pdfs/ADA586960.pdf)
+  * [Lockheed Martin's Cyber Kill Chain](https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/Gaining_the_Advantage_Cyber_Kill_Chain.pdf)
+
 ## Incident Response Data and Tools
 ### Monitoring Computing Resources
 ### Security Information and Event Management Systems
