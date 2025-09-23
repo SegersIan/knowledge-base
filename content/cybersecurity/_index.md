@@ -34,4 +34,4 @@ bookCollapseSection: true
   * [HackerRF Pro](https://www.hackmod.de/p/hackrf-pro)
   * [YARD Stick One](https://www.antratek.com/yard-stick-one)
   * There are extended versions:
-    * [PortaPack](https://lab401.com/products/portapack-h4m)
+    * [PortaPack](https://lab401.com/products/portapack-h4m) (Shipped in EU!)
