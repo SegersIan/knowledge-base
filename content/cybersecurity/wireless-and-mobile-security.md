@@ -165,13 +165,33 @@
 ![img](assets/network_wifi_channels.jpg)
 
 ### Controller and Access Point Security
-* **TODO**
+* **Wireless Local Area Network (WLAN)** controllers
+  * Manage APs and wireless network.
+  * You could operate with only stand-alone APs, ok for small organizations.
+  * Hardening:
+    * Change default settings
+    * Disable insecure protocols and services
+    * Strong passwords
+    * protect admin interfaces
+    * patch and update
 
 ### Wi-Fi Security Standards
-* **TODO**
+* **Wifi Protected Access (WPA)**
+* **WPA2**
+  * **WPA2-Personal** uses pre-shared key (aka `WPA2-psk`)
+  * **WPA2-Enterprise** uses RADIUS authentication server. Users can have unique credentials to connect.
+  * Uses `Counter Mode Cipher Block Chaining Message Authentication Code Protocol (CCMP)`
+      * Uses `AES` to offer condifentiality, authentication and control capabilities,
+* **WPA3**
+  * Adds `Network Authentication` on top of `WPA2` (which only has `User Authentication`) - The right for the device itself to connect.
+  * `Simultaneous Authentication of Equals (SAE)` replaces preshared key and require interaction from client and network to validate both.
+    * It's slows down brute-force attacks
+    * **Perfect Forward Secrecy** - Rotates the keys ongoing basis so a single exposed key doesnt' result in entire communication to be exposed. Keys can be refreshed any time basically.
+    * Adds **authenticated encryption** => Encryption + integrity protection in one operation.
+* **Opertunistic Wireless Encryption (OWE)** to provide encypted WIFI on ope networks when possible.
 
 ### Wireless Authentication
-* **Wireless Authentication Protocokls**
+* **Wireless Authentication Protocols**
 
 ## Managing Secure Mobile Devices
 * **TODO**
@@ -181,3 +201,8 @@
 
 ### Hardening Mobile Devices
 * **TODO**
+
+## Resources
+
+* [ASUS Merlin Firmware](https://www.asuswrt-merlin.net/)
+  * [More](https://github.com/RMerl/asuswrt-merlin.ng/wiki/Installation)
