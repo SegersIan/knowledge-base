@@ -138,6 +138,12 @@
   * Basically makes a drive or image readonly, making sure nothing is written to it.
 
 ### Data Recovery
+* Aside of forensic analysis, these techniques might be used to **recover data** due to accidental deletion or system errors.
+* usually file deletion is just removing the "file index".
+* When a file is partially overwrriten, fragemments can be still recovered.
+* This `open space` on a disk, is called `slack space` => `slack space analysis`
+* **SSDs**
+  * SSDs might move data to "less worn" cells and stop using the "really worn cells". These worn cells still retain their latest data, and you don't have access anymore to it, so you can't overwrite it, but you might be able to read it with forensics, USe FulL Device Encryption to protect this when you get rid of old SSDs as organization.
 ### Forensic Suites and a Forensic Case Example
 
 ## Reporting
