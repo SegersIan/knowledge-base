@@ -145,7 +145,20 @@
 * **SSDs**
   * SSDs might move data to "less worn" cells and stop using the "really worn cells". These worn cells still retain their latest data, and you don't have access anymore to it, so you can't overwrite it, but you might be able to read it with forensics, USe FulL Device Encryption to protect this when you get rid of old SSDs as organization.
 ### Forensic Suites and a Forensic Case Example
+* [EnCase](https://www.opentext.com/products/forensic)
+* [Autopsy](https://www.autopsy.com/)
+  * Can show timelines of when files were changed and such, allowing to find further corolations.
+  * This timeline stuff is insanely useful
+  * However!!! Incorret time settings can cause problems or confusion when analyzing. Always verify the time settings before getting to conclusions.
+* [Learn hands on forensics with CFReDS](https://cfreds.nist.gov/)
+* Other features
+  * Distributed cracking of encryption
+  * hash cracking
+  * steganographic encoding detection
+  * Etc..
 
 ## Reporting
 
 ## Digital Forensics and Intelligence
+
+## Tools * Resources
