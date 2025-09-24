@@ -158,7 +158,10 @@
   * Etc..
 
 ## Reporting
-
-## Digital Forensics and Intelligence
-
-## Tools * Resources
+* The report is sharing the findings from the forensic analysis.
+* Must be relevant and useful witout too deep technical nuance.
+* **Typical report**
+  * Summary of the forensic investgation and findings
+  * outline of the forensic process, including tools and any assumptiomns that were made about the tool or process.
+  * Series of sections detailing the findings for each drive or devic. Accuracy is critical when findings are shared, and conclusions must be backed up with evidence and appropiate detail.
+  * Recommendations or conclusions in more detail than the summary included.
