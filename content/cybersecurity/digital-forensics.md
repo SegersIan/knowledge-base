@@ -39,44 +39,104 @@
     9. *Present the data* for testimony or further analysis with expers/involved parties.
   * [Visit EDRM website](https://edrm.net/)
 * **Cloud makes ediscovery more complex** often don't permit legal holds of their services/data cause they serve also other customers (a challenge with multitenancy).
-* **Chain Of Custody**
-  * **Digital-Specific Documentation:**
-  - **System information**: Computer name, IP address, OS version, time zone
-  - **Hash values**: MD5/SHA-256 of original drives and forensic images
-  - **Imaging details**: Tools used (dd, FTK Imager, EnCase), write-blocker serial numbers
-  - **Network isolation**: How system was disconnected from network
-
-  * **Digital Evidence Handling:**
-
-  * **Acquisition:**
-  - **Write-blocker usage**: Hardware device prevents accidental writes to evidence
-  - **Forensic imaging**: Bit-for-bit copy, not just file copy
-  - **Hash verification**: Before and after imaging to prove integrity
-  - **Multiple copies**: Working copy for analysis, pristine copy for court
-
-  * **Documentation Requirements:**
-  - **Drive serial numbers**: Physical identifiers of storage devices
-  - **System state**: Running processes, network connections at time of seizure
-  - **Imaging software**: Version numbers, settings used
-  - **Analysis timeline**: What forensic tools touched the evidence when
-
-  * **Critical Digital Chain Elements:**
-  - **Image integrity**: Cryptographic hashes prove no modification
-  - **Tool validation**: Using accepted forensic tools (not just cp/xcopy)
-  - **Working vs. original**: Never analyze original evidence directly
-  - **Time synchronization**: NTP timestamps for all forensic activities
-
-  * **Security+ Context:**
-  - **Legal admissibility**: Digital evidence needs stricter controls than physical
-  - **Technical proof**: Hash values, write-blockers show technical competence
-  - **Tool reliability**: Using forensically sound tools and procedures
-
-  * **Bottom line:** Digital chain of custody emphasizes cryptographic integrity, proper imaging tools, and technical documentation that courts can understand.
 
 ## Conducting Digital Forensics
-### Acquiring Forensic Data
+
+### Acquiring Forensic Dat
+* **Order of Volatility** - [See Visual](assets/order_of_volatility.jpeg)
+  * From top (most volitale) to bottom (least volitale). You start collecting the most volatile data and then work your way down, as it has the highest risk getting lost.
+  * 1. *CPU cache and registers* - ephemeral
+    * Least likely to be useful or be collected, it's just too ephemeral.
+  * 2. *Routing table, ARP Cache, process table, kernel statistics* - ephemeral
+    * Most likely already changed compared to when an incident occured, be aware, it's jsut the state from when you snap it
+  * 3. *System Memory - RAM* - ephemeral
+    * Can contain encryption keys, ephemeral data from apps, ...
+  * 4. *Temporary Files and Swap Space* - ephemeral
+    * Might be persisten based on how the system was shut down.
+  * 5. *Data on the Hard Disk* - persistent
+    * Capture entire disk, so you can also find "deleted" files
+  * 6. *Remote logs* - persistent
+    * Windows registry is a common target for analysis.
+  * 7. *Backups* - persistent
+**Other systems to target**
+  * Smartphones, tablets, IoT, Embedded, Specialized Systems
+  * Firmware -> was it modified?
+    * Often available for cloning via direct usb, memory forensics or serial cable.
+  * Snapshots from VMs.
+  * Network traffic and logs.
+  * Devices, printouts, media
+* **Prevent malicious USB cloning and data acquisition**
+  * Data blockers can block USB sticks from transfering signals, but still able to charge.
+* **Chain-Of-Custody** - Documentation of the chain of custody of the evidence.
+  * This document is linked to a single artifact.
+  * You record every time the custody changes (from who to who?, where, when)
+  * Who, when and how copies were made.
+  * You want to document/audit each "Access", "transfer" or "otherwise handled" event of a given disk, device or drive.
+  * Allows to document if the evidence can be legally submitted.
+* **Admissable evidence** must be
+  * Relevant and reliable
+  * legally obtained
+  * Authentic
+  * Must be the best evidence available
+  * The process and procedures should stand up to challenges in court.
+* **Admisibility**
+  * Data must be intact
+  * Data must be unaltered
+  * Data must be provably unaltered before and after forensic process.
+  * Forensic Analysits must be able to demonstraite appropiate skills, riight tools and techniques and have documented their actions in reliable, testable way via auditble trail. So their effors and findings must be repeatable by a 3th party if necessary.
+* For **Cloud Forensics**, consider
+  * *Right-to-audit clauses* in contract with cloud service provider (CSP). with small companies it might not be in the contract, but you should take it in consideration, So either you can make the audit or a 3th party. Many providers do regular audits and just update the findings regularly to find a more "Reasonable" approach to them.
+  * *Regulatory and jurisdictions*
+    * Regulatory requiremments might differ from the location the cloud service operatates and where it headquarters.
+    * Local jurisdiction can claim access to your data of a given location. Worry about where you are based, the HQ of your CSP and the location of your datacenters used.
+  * *Data Breach Notification Laws* also vary from country to country or state to state.
+
 ### Acquisition Tools
+#### Forensic Drive Data
+* **Forensic Copy Of Drive** requires complete bit-for-bit copy of a drive.
+* **dd** Linux CLI that allows to create images for forensic or other purposes.
+  * Example: `dd if=/dev/sda of=example.img conv=noerror,sync`
+    `if` - input file
+    `of` - output file
+    `conv=noerror,sync` - copy, despite errors
+  * Other settings are mostly useful for performance, like block size.
+  * TIP: Also make a MD5sum hash of the image itself, by tracking that one also in chain of custody, one can verify if the image was tampered with since its creation.
+    * Example `dd if=... | tee outputfile.img | md5sum > example.md5`
+    * The hash of the drive and of the image should match!!!
+* **FTK Imager** free windows tool for forensic imagess
+  * Supported formats:
+    * `raw` (like `dd` does)
+    * `SMART` (ASR Data's format)
+    * `E01` (EnCase)
+    * `AFF` (Advanced Forensics Format)
+  * Sources: Phsycial drives, logical drives, image files, folders, CD, DVD
+  * Extra: Can capture live memoery from a system.
+    * Target format `AD1`, native to FTK.
+* **WinHex** windows disk editing tool
+  * Can also make disk images in `raw` (like `dd`) format.
+  * Used to directly read and modify data from drive, memoery, RAID arrays and other file systems
+
+#### Forensive Network Data
+* By default network data is barely captured, unless it's setup in advance,
+* Forensic artifacts like firewall logs, IDS and IPS logs, email server logs, authentication logs and other secondary sources may provide the information you need.
+* If they do capcture network, will be Wireshark like tools.
+* Can be a lot of data that network capturing
+
+#### Forensive Data from Other SOurces
+* **Virtual Machines** - Risky, cause there is a virtualization layer underneat, a restart or shut down might move data to other hardware. Make a SNAPSHOT and that should be satisfying forensic demands.,
+* **Containers** - Needs specialized tools due to the nature of shared resources and such.
+
 ### Validating Forensic Data Integrity
+* Document the provenance/origin of the data and ensure the data + process cannot be repudiated.
+* Best way: Hash the original file/disk/source and the forensic copy, they should match.
+  * Hashes will be a part of the chain-of-custody
+* MD5 and SHA1 hashes are outmoded where hackers are involved, but for forensics, it's ok, apparently ?
+* **Forensic vs Logical Copies**
+  * "normal" copying a file, folder, drvie is a logical copy. Data is preserved but not the same state of the drive or device it was copied from.
+  * Remember, on bit level is what matters.
+* **Write Blockers** (hardware/sofrware) - ensure their worl doesn't alter the drives/images they work with
+  * Basically makes a drive or image readonly, making sure nothing is written to it.
+
 ### Data Recovery
 ### Forensic Suites and a Forensic Case Example
 
