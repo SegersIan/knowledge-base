@@ -15,3 +15,4 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 * https://localmess.github.io/
 * https://cyata.ai/blog/cracking-the-vault-how-we-found-zero-day-flaws-in-authentication-identity-and-authorization-in-hashicorp-vault/
 * [Screen Record Terminal](https://asciinema.org/ )
+  * Allows for recording screencasts from terminal, whhere you can copy text from directly. saved as some text file instead of blob.
