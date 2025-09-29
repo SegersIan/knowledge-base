@@ -9,6 +9,7 @@ title: "AI"
 ## Varia
 
 * [Defalte LLMS Sets](https://www.scalarlm.com/blog/llm-deflate-extracting-llms-into-datasets/)
+* [Project management with Agent](https://github.com/MrLesk/Backlog.md)
 
 ### General Models
 
