@@ -126,4 +126,6 @@ This handbook is from my experience and many materials that I have read. My inte
 
 Here you can find my [raw todo notes](./todo.md) on all topics that I plan to address in this handbook.
 
-## Others
+## Resources
+
+* [System Design Interview Training](https://leetsys.dev/)
