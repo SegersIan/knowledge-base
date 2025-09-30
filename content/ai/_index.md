@@ -10,6 +10,7 @@ bookCollapseSection: true
 * Prompt Engineering
   * [Claude Prompt Engineering](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
   * [Prompt Engineering Book](https://www.oreilly.com/library/view/prompt-engineering-for/9781098153427/) (Read chapter 1...3) for conceptual foundation
+* https://developers.llamaindex.ai/python/framework/module_guides/workflow/#workflows
 * https://research.trychroma.com/context-rot
 
 
