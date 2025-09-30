@@ -23,6 +23,7 @@ bookCollapseSection: true
 ## Tools
 
 * [Claude Code Router](https://github.com/musistudio/claude-code-router)
+* [Superwhisper - fast speech to text](https://superwhisper.com/)
 
 ### General Models
 
