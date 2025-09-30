@@ -16,6 +16,8 @@ bookCollapseSection: true
 * https://newsletter.pragmaticengineer.com/p/mcp
 * [Microsoft AI Product Manager](https://www.coursera.org/professional-certificates/microsoft-ai-product-manager/paidmedia)
 * https://martinfowler.com/articles/exploring-gen-ai.html
+* https://modelcontextprotocol.io/docs/getting-started/intro
+
   
 ## Varia
 
