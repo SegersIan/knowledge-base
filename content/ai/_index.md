@@ -18,6 +18,8 @@ bookCollapseSection: true
 
 ## Tools
 
+* [Claude Code Router](https://github.com/musistudio/claude-code-router)
+
 ### General Models
 
 * [ChatGPT](https://chatgpt.com/)
