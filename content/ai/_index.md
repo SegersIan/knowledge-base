@@ -13,7 +13,8 @@ bookCollapseSection: true
 * https://developers.llamaindex.ai/python/framework/module_guides/workflow/#workflows
 * https://research.trychroma.com/context-rot
 * https://newsletter.pragmaticengineer.com/p/software-engineering-with-llms-in-2025
-
+* https://newsletter.pragmaticengineer.com/p/mcp
+  
 ## Varia
 
 * [Defalte LLMS Sets](https://www.scalarlm.com/blog/llm-deflate-extracting-llms-into-datasets/)
