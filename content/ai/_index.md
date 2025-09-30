@@ -1,15 +1,20 @@
 ---
 bookCollapseSection: true
-title: "AI"
 ---
 # AI
 
-## Tools
+## Readings
+
+* https://www.oneusefulthing.org/p/gpt-5-it-just-does-stuff
+* https://userjot.com/blog/best-practices-building-agentic-ai-systems
+* 
 
 ## Varia
 
 * [Defalte LLMS Sets](https://www.scalarlm.com/blog/llm-deflate-extracting-llms-into-datasets/)
 * [Project management with Agent](https://github.com/MrLesk/Backlog.md)
+
+## Tools
 
 ### General Models
 
