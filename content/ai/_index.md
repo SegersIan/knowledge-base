@@ -24,6 +24,7 @@ bookCollapseSection: true
 
 * [Claude Code Router](https://github.com/musistudio/claude-code-router)
 * [Superwhisper - fast speech to text](https://superwhisper.com/)
+* [Windsurf](https://windsurf.com/)
 
 ### General Models
 
