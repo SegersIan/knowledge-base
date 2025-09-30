@@ -14,7 +14,7 @@ bookCollapseSection: true
 * https://research.trychroma.com/context-rot
 * https://newsletter.pragmaticengineer.com/p/software-engineering-with-llms-in-2025
 * https://newsletter.pragmaticengineer.com/p/mcp
-  
+* [Microsoft AI Product Manager](https://www.coursera.org/professional-certificates/microsoft-ai-product-manager/paidmedia)
 ## Varia
 
 * [Defalte LLMS Sets](https://www.scalarlm.com/blog/llm-deflate-extracting-llms-into-datasets/)
