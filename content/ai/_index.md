@@ -7,7 +7,7 @@ bookCollapseSection: true
 
 * https://www.oneusefulthing.org/p/gpt-5-it-just-does-stuff
 * https://userjot.com/blog/best-practices-building-agentic-ai-systems
-* 
+* [Claude Prompt Engineering](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
 
 ## Varia
 
