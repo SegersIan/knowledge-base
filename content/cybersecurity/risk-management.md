@@ -146,7 +146,12 @@
 * **Risk Owner** - Individual/entity responsible managing/monitoring risk and implementing controls.
 
 ### Risk Register
-* **TODO**
+* The tool that tracks all the risks.
+* Too communicate to leadership risk matrixes and heatmaps are often used.
+* **To include: Risk Owner, RIsk Threshold information, KRIs.**
+
+![img](assets/risk_mgmt_impact_likelihood.jpg)
+
 ### Risk Reporting
 * **TODO**
 
