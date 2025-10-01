@@ -132,12 +132,24 @@
   * `Exemptions` - more formal exceptions, may require high level approval and may come with an "end date".
 
 ## Risk Tracking
+* **TODO**
+* **TODO**
+* **TODO**
+* **TODO**
+* **TODO**
+* **TODO**
+* **TODO**
+
 ### Risk Register
+* **TODO**
 ### Risk Reporting
+* **TODO**
 
 ## Disaster Recovery Planning
 ### Disaster Types
+* **TODO**
 ### Business Impact Analysis
+* **TODO**
 
 ## Privacy
 ### Data Inentory
