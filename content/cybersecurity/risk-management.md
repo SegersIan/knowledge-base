@@ -153,7 +153,14 @@
 ![img](assets/risk_mgmt_impact_likelihood.jpg)
 
 ### Risk Reporting
-* **TODO**
+> Communicating the status and evolution of risks to stakeholders.
+
+* *Reporting Methods*
+  * **Regular Updates** - routing reports to stakeholders with status, effectiveness of controls and changes
+  * **Dashboard Reporting** - Real-time visual aids to summerize risk
+  * **Ad Hoc Reports** - Created as needed
+  * **Risk Trend Analysis** - Analyze history to indetify patterns/trends
+  * **Risk Event Reports** - Document specific security events, like incidents
 
 ## Disaster Recovery Planning
 ### Disaster Types
