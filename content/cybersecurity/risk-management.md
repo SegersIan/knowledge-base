@@ -132,13 +132,18 @@
   * `Exemptions` - more formal exceptions, may require high level approval and may come with an "end date".
 
 ## Risk Tracking
-* **TODO**
-* **TODO**
-* **TODO**
-* **TODO**
-* **TODO**
-* **TODO**
-* **TODO**
+* **Inherent Risk** - original level of risk before any security controls were implemented.
+  * Therefore, they are inherint to the business.
+* **Residual Risk** - level of risk after implementing controls
+* **Risk Appetite** - level of risk the organization is willing to accept
+  * **Expansionary Risk Appetite** high risk, for high rewards. Typical for high growth organizations
+  * **Neutral Risk Appetite** medium risk, medium rewards. Stability and growth is keu
+  * **Conservative Risk Appetite** avoid high risk all together, prioritize security over high growth, risk averse.
+* **Risk Threshold** - the specific threshold where the risk appetite stops and would trigger some actions
+* **Risk Tolerance** - ability to whitstand risk and continue operations
+* **Key Risk Indicator (KRI)** - metrics to measure increased level of risk.
+  * Measures effectiviness of risk mitigations and makeing sure the risks stays within the appetite.
+* **Risk Owner** - Individual/entity responsible managing/monitoring risk and implementing controls.
 
 ### Risk Register
 * **TODO**
