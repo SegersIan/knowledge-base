@@ -162,11 +162,27 @@
   * **Risk Trend Analysis** - Analyze history to indetify patterns/trends
   * **Risk Event Reports** - Document specific security events, like incidents
 
-## Disaster Recovery Planning
-### Disaster Types
-* **TODO**
-### Business Impact Analysis
-* **TODO**
+## Disaster Recovery Planning (DRP)
+> Develop as soon as possible in case of disaster.
+> Usually the key focus is a plan for each facility, as disasters often are scoped to a facility.
+
+### Disaster Types (Examples)
+* **Hurricans**
+* **Floods**
+* **Natural disasters**
+* **human-made origin**
+* **internal risk**
+* ...
+
+### Business Impact Analysis (BIA)
+> Formal process to indentify mission essential functions in an organization and identify the systems that support those functions.
+
+* **Mean Time Between Failures (MTBF)** - measure stability of a system, how much time between failures
+* **Mean Time To Repair (MTTR)** - averahe time to restore operations after failure
+* **Recovery Time Objective (OTR)** - Time you can tolerate the system being down
+* **Recovery Point Objective (RPO)** - Amount of data you can tolerate to lose
+
+* Note: Focus on `single-point-of-failure`
 
 ## Privacy
 ### Data Inentory
