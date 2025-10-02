@@ -51,6 +51,19 @@
  * **Data Protection Officer (DPO)** - overall responsibility for data privacy efforts
 
 ## Information Life Cycle
+> Protection of data must happen through entire lifecycle of the data.
+
+* **Data Minimization** - Collect smalles possible amount of data necessary to meet business requirements.
+  * Unnecessary information should never be collected in the first place
+* **Purpose Limitation** - Data should be only used for the purpose that it was originally collected for and that was consented by the data subject.
+* **Right to Be Forgotten/erasure (GDPR)** - A data subject has the right to be forgotten and request this withing a reasonable timeframe, under certain circumstances:
+  * The data no longer is needed for its original purpose
+  * The individual withdraws consent
+  * The individual objects, so no oveeridin legitimate interest
+  * The data has been unlawfully processed
+  * tere is legal obligation to erase the data
+  * Note: Incorrect information can be harmful or misleading
+* **Data Retention** - should be in place so it's clear when and for how long data is kept.
 
 ## Privacy Enhancing Technologies
 
