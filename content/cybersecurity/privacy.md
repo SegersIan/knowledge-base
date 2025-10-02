@@ -1,7 +1,11 @@
 # Privacy
-### Data Inventory
-### Information Classification
-### Data Roles and Responsibilities
-### Information Life Cycle
-### Privacy Enhancing Technologies
-### Privacy and Data Breach Notification
+
+* **Privacy Notice** - outlines the privacy commitments of an organization
+  * In addition, also to their ToCs
+    
+## Data Inventory
+## Information Classification
+## Data Roles and Responsibilities
+## Information Life Cycle
+## Privacy Enhancing Technologies
+## Privacy and Data Breach Notification
