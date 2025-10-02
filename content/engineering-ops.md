@@ -1,11 +1,6 @@
----
-title: Engineering Ops
----
-Absolutely — let’s reframe **Engineering Ops** with **Team Topologies** concepts baked in.
+# Engineering Ops
 
----
-
-# 🔧 What is Engineering Ops?
+## 🔧 What is Engineering Ops?
 
 Engineering Operations (Engineering Ops, or EngOps) is the function that helps an engineering organization **optimize how teams work**, not just what they deliver. It sits at the intersection of **people, process, and tooling**, with the goal of creating a healthy system of delivery at scale.
 
@@ -13,7 +8,7 @@ If you think in **Team Topologies** terms, Engineering Ops acts as the *meta-ena
 
 ---
 
-## 1. **Shaping Team Structures & Interactions**
+### 1. **Shaping Team Structures & Interactions**
 
 * Works with engineering leadership to design **team boundaries** that reduce cognitive load.
 * Helps shift from teams “owning systems” to **stream-aligned teams**, **platform teams**, or **enabling teams** where appropriate.
@@ -21,7 +16,7 @@ If you think in **Team Topologies** terms, Engineering Ops acts as the *meta-ena
 
 ---
 
-## 2. **Optimizing Developer Experience (DX)**
+### 2. **Optimizing Developer Experience (DX)**
 
 * Owns the **tooling ecosystem** (version control, CI/CD, observability, developer portals).
 * Ensures that consuming shared services is a **frictionless “X-as-a-service” interaction**.
@@ -29,7 +24,7 @@ If you think in **Team Topologies** terms, Engineering Ops acts as the *meta-ena
 
 ---
 
-## 3. **Process & Flow of Work**
+### 3. **Process & Flow of Work**
 
 * Designs and maintains the **operating model**: how work flows between teams, how dependencies are managed, how incidents are handled.
 * Facilitates **interaction modes** (collaboration, facilitation, X-as-a-service) so teams know *when* to collaborate and *when* to consume.
@@ -37,7 +32,7 @@ If you think in **Team Topologies** terms, Engineering Ops acts as the *meta-ena
 
 ---
 
-## 4. **Metrics, Reporting & Continuous Improvement**
+### 4. **Metrics, Reporting & Continuous Improvement**
 
 * Tracks org-wide **flow metrics** (deployment frequency, lead time, mean time to restore, cognitive load surveys).
 * Runs retrospectives **at the org level**, identifying systemic blockers to team flow.
@@ -45,14 +40,14 @@ If you think in **Team Topologies** terms, Engineering Ops acts as the *meta-ena
 
 ---
 
-## 5. **Change Management & Enablement**
+### 5. **Change Management & Enablement**
 
 * Leads organizational transformations (like adopting **Team Topologies**) by piloting changes, creating playbooks, and supporting adoption.
 * Example: guiding a tribe of 75 engineers from a structure of siloed system teams into stream-aligned teams supported by a platform group.
 
 ---
 
-# ✅ In Short
+## ✅ In Short
 
 **Engineering Ops = the organizational enabler of effective team topologies.**
 They make sure teams are:
@@ -62,7 +57,3 @@ They make sure teams are:
 * **supported by the right practices and metrics** to deliver flow at scale.
 
 This frees engineering managers to focus on **people leadership and technical delivery**, while EngOps ensures the *system of teams* is healthy and sustainable.
-
----
-
-Would you like me to create a **visual mapping** (like a diagram) that shows how EngOps functions map directly onto the four Team Topologies archetypes and their interaction modes? That could make it even clearer.
