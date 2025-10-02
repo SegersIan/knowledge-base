@@ -183,19 +183,3 @@
 * **Recovery Point Objective (RPO)** - Amount of data you can tolerate to lose
 
 * Note: Focus on `single-point-of-failure`
-
-## Privacy
-* **Privacy Notice** - outlines the privacy commitments of an organization
-  * In addition, also to their ToCs
-
-### Data Inventory
-
-### Information Classification
-
-### Data Roles and Responsibilities
-
-### Information Life Cycle
-
-### Privacy Enhancing Technologies
-
-### Privacy and Data Breach Notification
