@@ -2,7 +2,7 @@
 
 * **Privacy Notice** - outlines the privacy commitments of an organization
   * In addition, also to their ToCs
-    
+
 ## Data Inventory
 > An overview of all types of information maintained by the organization, where it is stored, processed and transmitted.
 
@@ -76,3 +76,7 @@
 ## Privacy and Data Breach Notification
 > In case of a data breach, right regulatory bodies and stakeholders should be notified. Sometimes the affected data subjects should be also informed.
 > some jurisdictions might require also public notification
+
+## Tools
+
+* https://privacybadger.org/
