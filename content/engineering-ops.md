@@ -4,7 +4,7 @@
 
 Engineering Operations (Engineering Ops, or EngOps) is the function that helps an engineering organization **optimize how teams work**, not just what they deliver. It sits at the intersection of **people, process, and tooling**, with the goal of creating a healthy system of delivery at scale.
 
-If you think in **Team Topologies** terms, Engineering Ops acts as the *meta-enabler*: ensuring the right kinds of teams exist, have the right interactions, and are supported by the right practices.
+Note: In relation to **Team Topologies**, Engineering Ops acts as the *meta-enabler*: ensuring the right kinds of teams exist, have the right interactions, and are supported by the right practices.
 
 ---
 
@@ -37,6 +37,7 @@ If you think in **Team Topologies** terms, Engineering Ops acts as the *meta-ena
 * Tracks org-wide **flow metrics** (deployment frequency, lead time, mean time to restore, cognitive load surveys).
 * Runs retrospectives **at the org level**, identifying systemic blockers to team flow.
 * Example: EngOps discovers through metrics that a subsystem team is a bottleneck → they work with leadership to reclassify it as a **complicated subsystem team** with a clear service contract.
+* Note: At some organizations Metrics are not well received, so this is "optional"
 
 ---
 
