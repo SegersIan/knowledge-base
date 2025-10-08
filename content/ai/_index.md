@@ -17,7 +17,7 @@ bookCollapseSection: true
 * [Microsoft AI Product Manager](https://www.coursera.org/professional-certificates/microsoft-ai-product-manager/paidmedia)
 * https://martinfowler.com/articles/exploring-gen-ai.html
 * https://modelcontextprotocol.io/docs/getting-started/intro
-
+* https://a2a-protocol.org/latest/topics/key-concepts/
   
 ## Varia
 
