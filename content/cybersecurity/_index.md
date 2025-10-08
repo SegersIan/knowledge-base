@@ -13,7 +13,8 @@ bookCollapseSection: true
   * [NPM Malware Reportimg](https://docs.npmjs.com/reporting-malware-in-an-npm-package)
   * [Signapure reporting](https://www.csa.gov.sg/alerts-and-advisories/advisories/ad-2025-019)
   * [More](https://www.wiz.io/blog/shai-hulud-npm-supply-chain-attack)
-
+* https://batteringram.eu/
+  
 ## Links
 
 * [Resources](resources.md)
