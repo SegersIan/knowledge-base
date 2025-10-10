@@ -19,7 +19,8 @@ bookCollapseSection: true
 
 * [Resources](resources.md)
 * [Hack The Box Labs](https://www.hackthebox.com/hacker/hacking-labs)
-
+* https://portswigger.net/research
+* 
 ## Info Graphs
 
 ![ing1](assets/learning_paths.jpeg)
