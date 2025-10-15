@@ -1,5 +1,6 @@
 ---
 bookCollapseSection: true
+title: "Psychology"
 ---
 # Psychology
 

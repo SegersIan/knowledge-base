@@ -1,5 +1,6 @@
 ---
 bookCollapseSection: true
+title: "Software Design"
 ---
 # Design Patterns
 

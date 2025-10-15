@@ -1,5 +1,6 @@
 ---
 bookCollapseSection: true
+title: "Project Management"
 ---
 # Project Management
 

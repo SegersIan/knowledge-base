@@ -1,5 +1,6 @@
 ---
 bookCollapseSection: true
+title: "Software Architecture"
 ---
 # The (Software) Architect Handbook
 
