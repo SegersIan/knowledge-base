@@ -224,12 +224,15 @@ title: "Application Security"
 
 ## Secure Coding Practices
 
-### Source Handling Comments - Remove code comments in production code (for the non compiled code, like JS)
-### Error Handling - Be cautious that error messages dont give to much detail, no debug mode in prod!
+### Source Handling Comments
+Remove code comments in production code (for the non compiled code, like JS)
+### Error Handling
+Be cautious that error messages dont give to much detail, no debug mode in prod!
 ### Hard-Coded Credentials
 * Well intentioned backdoor - Once the credentials are known, any deployed version is at risk
 * Non intentioned - API keys etc..
-### Package Monitoring - Monitor your dependencies and packages,
+### Package Monitoring
+Monitor your dependencies and packages,
 ### Memory Management
 * *Resource Exhaustion* - Can make the application crash (e.g. memory leak)
 * *Pointer Deference* - Memory Pointers, when a pointer points to a memory spot with unkown value it can crash or worst case bypass validation
