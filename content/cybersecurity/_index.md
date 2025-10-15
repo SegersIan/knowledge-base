@@ -1,6 +1,6 @@
 ---
 bookCollapseSection: true
-title: "Data Structures & Algorithms"
+title: "Cybersecurity"
 ---
 # Cybersecurity
 
