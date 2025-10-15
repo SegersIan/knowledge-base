@@ -1,5 +1,6 @@
 ---
 bookCollapseSection: true
+title: "IT Strategy"
 ---
 # IT Strategy
 

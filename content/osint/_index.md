@@ -1,5 +1,6 @@
 ---
 bookCollapseSection: true
+title"\: "OSINT"
 ---
 # OSINT: Open Source Intelligence
 

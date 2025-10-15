@@ -1,6 +1,8 @@
 ---
 bookCollapseSection: true
+title: "Business"
 ---
+
 # Business
 
 ## The Marketing Process

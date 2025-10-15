@@ -1,5 +1,6 @@
 ---
 bookCollapseSection: true
+title: "Change Management"
 ---
 # Change Management
 

@@ -1,5 +1,6 @@
 ---
 bookCollapseSection: true
+title: "Linux LPIC 1"
 ---
 # LPIC-1
 
