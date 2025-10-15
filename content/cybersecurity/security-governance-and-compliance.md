@@ -4,10 +4,10 @@ title: "Security Governance And Compliance"
 # Security Governance and Compliance
 
 ## Security Governance
-* **Governance programs** - Set of procedures/controls put in place to allow an orgization to effectively direct its work.
+* **Governance programs** - Set of procedures/controls put in place to allow an organization to effectively direct its work.
 
 ### Corporate Governance
-> Ensure that organizations set an appropiate direction, develops a plan to implement that direction and then execture its plan.
+> Ensure that organizations set an appropriate direction, develop a plan to implement that direction and then execute its plan.
 
 In public companies, there are too many and volatile "owners" (shareholders), impossible for them to vote on every important thing, therefore corporate governance models exist.
 
@@ -20,19 +20,19 @@ In public companies, there are too many and volatile "owners" (shareholders), im
   * *CEO* appoints and managers the `management team`.
     * Managers daily operations.
 * *Note* This is a typical model for public owned companies, private and non profit can have very different models. It is what it says it is "Typical".
-* **Internal Commities** of subject matter experts (SME) may be incorperated.
-* **Government/Regulatary agnencies** might also play role in governance of an organization (e.g. with Banks)
+* **Internal Committees** of subject matter experts (SME) may be incorporated.
+* **Government/Regulatory agencies** might also play a role in governance of an organization (e.g., with banks)
 
 ### Governance, Risk, and Compliance (GRC) Programs
 * **GRC Programs integrate**
   * 1. Governance of the organization
-  * 2. Risk maangement
+  * 2. Risk management
   * 3. Compliance"
 
 ### Information Security Governance
 * **Natural extension to corporate governance**
-* **Chief Information Security Officer** the top guy about infromation security usually.
-  * *Does not have operational control* of the origanization, so must collaborate with all other senior management.
+* **Chief Information Security Officer** the top person about information security usually.
+  * *Does not have operational control* of the organization, so must collaborate with all other senior management.
   * It's not a rogue function, no unilateral decisions, you must respect and following reporting lines.
 * **Policies** help to implement (Cybersecurity Requirements) across the organization
   * Remember, the CISO has no operational control, so this is a tool to get things done in the entire organization.
@@ -46,26 +46,26 @@ In public companies, there are too many and volatile "owners" (shareholders), im
   * each Business unit implements as they see fit.
 
 ## Understanding Policy Documents
-* **Information Security Policy Framework** contains documents that are designed to describe the cybersecurity progam of an organization.
+* **Information Security Policy Framework** contains documents that are designed to describe the cybersecurity program of an organization.
 * Generally include **4 types of documents**: Policies, Standards, Procuedures and Guidelines
   * These categories vary from organization to organization, as long they achieve their desired purpose.
 * **What influences your policies**
   * *Organization's business objectives*
   * *Regulatory and legal requirements* (e.g PCI-DSS)
   * *Industry-specific considerations* (e.g. Banking)
-  * *Jurisdiction-specfifc considerations* (e.g A land, state, village...)
+  * *Jurisdiction-specific considerations* (e.g., a land, state, village...)
 
 ### Policies
 * **Short: High-Level statements of management intent.**
 * **Compliance with a Policy is mandatory**
-* **Approval** is high level (e.g. CEO). By keeping the policies very high level, the CISO remains flexibility to adapt and change specific requirements,
+* **Approval** is high level (e.g., CEO). By keeping the policies very high level, the CISO remains flexible to adapt and change specific requirements,
   * So a policy will refer more to `there will be standards` and not `those 5 specific standards`
 * **Content** - Broad statements about cybersecurity objectives
   * Examples
     * Statement about importance of Cybersecurity to the organization.
     * Requirement that anyone + contracts takes measures to protect CIA properties
-    * Designation of CISO or other lead/executivie on cybersecurity
-    * Delegation of authorit to CISO or whatever executive on cybersecurity
+    * Designation of CISO or other lead/executive on cybersecurity
+    * Delegation of authority to CISO or whatever executive on cybersecurity
   * Avoid details and concrete things
     * Else it needs re-appoval and high maintance of the document. Cause changes happen regularly
 * **Examples** of Policy documents
@@ -78,26 +78,26 @@ In public companies, there are too many and volatile "owners" (shareholders), im
 
 ### Standards
 * **Short: Requirements describing how an organization will execute policies**
-* **Compliance with a Standards is mandatory**
-* **Approval** At lower organization level, therefore, change more regularly
+* **Compliance with Standards is mandatory**
+* **Approval** at lower organization level, therefore, changes more regularly
 * **Content**
   * May be specific configuration settings used for a common OS
   * Controls that must be in place for highly sensitive information
-  * Other securty objectives...
+  * Other security objectives...
 * **Examples** of Standards documents
-  * [University Of Berkeley - Minimum Security Standards For Electroniic Information](https://security.berkeley.edu/minimum-security-standards-electronic-information)
-    * Defines information in 4 Data Protection LEvels and what controls are required for each level.
+  * [University Of California, Berkeley - Minimum Security Standards For Electronic Information](https://security.berkeley.edu/minimum-security-standards-electronic-information)
+    * Defines information in 4 Data Protection Levels and what controls are required for each level.
   * *Password Standards* password requirements, reuse, length,....
   * *Access Control Standards* account lifecycle (from provision, active-use, to deprovision).
     * Should clarify difference (or lack off) between users and contractors.
     * Dictates needs of passwords for sytems, devices, ...
-  * *Physcial Security Standards* Access COntrol Systems, Cameras, security personel, visitor access, handloing of breaces.
+  * *Physical Security Standards* Access Control Systems, Cameras, security personnel, visitor access, handling of breaches.
   * *Encryption Standards*
 
 ### Procedures
 * **Short: Detailed, step-by-step processes for specific circumstances**
-* **Compliance with a Procedures is mandatory**
-* **Approval** At lower organization level, therefore, change more regularly
+* **Compliance with Procedures is mandatory**
+* **Approval** at lower organization level, therefore, change more regularly
 * **Content**
   * Ensure a consisten process of achieving a security objective.
 * **Examples** of Procedures documents
@@ -113,7 +113,7 @@ In public companies, there are too many and volatile "owners" (shareholders), im
 * **Short: Best practices and recommendations to a given concept/tech/task**
 * **Compliance with Guidelines is optional**
   * Can be open for discussion in some culture, so it CAN happen.
-* **Approval** At lower organization level, therefore, change more regularly
+* **Approval** at lower organization level, therefore, change more regularly
 * **Content**
   * Ensure a consisten process of achieving a security objective.
 * **Examples** of Procedures documents

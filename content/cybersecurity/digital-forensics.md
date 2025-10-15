@@ -12,10 +12,10 @@ title: "Digital Forensics"
 ## Digital Forensic Concepts
 * **Acquisition and analysis of digital forensic data**
   * Drives, files, copies of live memory, network capture,...
-  * Crucial to have a complete and intact picture of what occured.
+  * Crucial to have a complete and intact picture of what occurred.
 * **Document the process**
   * What you have observed, what conclusions can be made from data, what evidence exists to support those conclusions.
-  * Timelines, sequence of events, cues as what occured and why, use timestaqmps, file metadata, evengt logs and many clues.
+  * Timelines, sequence of events, cues as what occurred and why, use timestamps, file metadata, event logs and many clues.
 * **Human Side**
   * Interview individuals involve in the activity, can't always be merely a technical expert.
 
