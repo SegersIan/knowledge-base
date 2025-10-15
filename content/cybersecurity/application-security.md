@@ -1,3 +1,6 @@
+---
+title: "Application Security"
+---
 # Application Security
 
 ## Software Assurance Best Practices
@@ -59,7 +62,7 @@
       * Now specify `123' OR 1=2` which results in `SELECT * FROM Users WHERE Id = '123' OR 1=2`
       * This returns no row, did it break anything on the front end aside of just saying that there were no results? Yes ? Good ✅
       * We can now asume that SQL injection is possible.
-      ### *Now you can inject other querys that ALTER data. The baseline feedback if it was succesful or not your query is established in previous steps. Based on the _CONTENT_ you were able to validate if your queries are working*
+      * *Now you can inject other querys that ALTER data. The baseline feedback if it was succesful or not your query is established in previous steps. Based on the _CONTENT_ you were able to validate if your queries are working*
     * *Blind Time-Based SQL Injection* - (example in Microsoft SQL)
       * First: Validate if SQL Injection is possible
       * Asume we expect an UserID as User input, and let's assume `123` is a vailid UserID.
@@ -129,7 +132,7 @@
 * TIP: Patch the vulnerability and persist your access with the web shell
 ### Privilege Escalation
 * Upgrade your user to have more rights or higher group
-* Dirty Cow - Linux vulnerability
+* [Dirty Cow](https://en.wikipedia.org/wiki/Dirty_COW) - Linux vulnerability
 
 ## Exploiting Web Application Vulnerabilities
 
@@ -188,7 +191,7 @@
   * Remember, always test at least server side.
 * Next best method: Deny Listing (Cause often describing only what is allow is to wide)
   * Look and block for SQL code, HTML tags, etc..
-* Parameter Pollution - a trick attackers try to get around input validatio/filtering
+* Parameter Pollution - a trick attackers try to get around input validation/filtering
   * Example `www.example.com/status?account=1&account=1' or 1=1;--`
     * Here the hope is that validiation only happens on the first specification of the parameter, but not the second.
     * This behaviour is very tech specific (PHP, ExpressJS, ASP, Python Flask,....) so the hack really depends on the web server stack.

@@ -1,3 +1,6 @@
+---
+title: "Resources"
+---
 # Cybsersecurity Resources
 
 ## Sites
@@ -14,7 +17,7 @@
   * Every country has such an agency and feed, get familiar with it, based where you work
 * US Department of Defence Cyber Crime Center - `www.dc3.mil`
 * CISA's automated Indicator Sharing (AIS)
-* Microsoft - `http://www.microsoft.com/en-us/security/blog/topic/threat-intelligence`
+* Microsoft - `http://www.microsoft.com/en-us/security/blog/topic/threat-intelligence``
 * Cisco
 * SANS Internet Storm Center - `isc.sans.org`
 * Virusshare - `virusshare.com`

@@ -1,3 +1,6 @@
+---
+title: "Risk Management"
+---
 # Risk Management and Privacy
 
 ## Analyzing Risk

@@ -1,3 +1,6 @@
+---
+title: "PCI DSS"
+---
 # Payment Card Industry Data Security Standard (PIC DSS)
 
 ## The 5 criteria for compensating controls

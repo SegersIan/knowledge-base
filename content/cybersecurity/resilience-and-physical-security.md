@@ -1,3 +1,6 @@
+---
+title: "Resilience And Physical Security"
+---
 # Resilience and Physical Security
 * **Resilience** is key to tackle the **availability** goal of the CIA Triad.
 

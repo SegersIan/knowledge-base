@@ -1,3 +1,6 @@
+---
+title: "Privacy"
+---
 # Privacy
 
 * **Privacy Notice** - outlines the privacy commitments of an organization
