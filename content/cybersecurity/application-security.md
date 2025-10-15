@@ -136,7 +136,8 @@ title: "Application Security"
 
 ## Exploiting Web Application Vulnerabilities
 
-### Cross-Site Scripting XSS - when an attacker does HTML injection (inject their own HTML into a webpage)
+### Cross-Site Scripting XSS
+when an attacker does HTML injection (inject their own HTML into a webpage)
 ### Reflected XSS
   * When an application allows *"reflected input"*
   * Anywhere, where a user can provide "input" that later would be viewed by another user there is a XSS oppertunity.
