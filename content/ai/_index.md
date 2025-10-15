@@ -18,6 +18,7 @@ bookCollapseSection: true
 * https://martinfowler.com/articles/exploring-gen-ai.html
 * https://modelcontextprotocol.io/docs/getting-started/intro
 * https://a2a-protocol.org/latest/topics/key-concepts/
+* https://arxiv.org/abs/2510.07192v1
   
 ## Varia
 

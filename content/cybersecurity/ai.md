@@ -3,6 +3,11 @@ title: "AI"
 ---
 # AI
 
+## Articles
+
+* [Paper: Poisoning Attacks on LLMs Require a Near-constant Number of Poison Samples
+](ttps://arxiv.org/abs/2510.07192v1)
+
 ## Sources
 
 * [OWASP TOP 10 LLM](https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/)
