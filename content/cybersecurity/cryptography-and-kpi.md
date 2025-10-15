@@ -186,8 +186,8 @@ There are 4 fundamental goals of cryptography
     * Uses asymmetric crypto principles but creates symmetric keys
     * more info see page `210` of the CompTia Security+ study book.
 * **Storage and Desctruction**
-  * Never store en cryption key on same system where the encrypted data resides
-  * _*SPlit Knowledge*_ 2 people with each half of the key
+  * Never storean cryption key on same system where the encrypted data resides
+  * _*Split Knowledge*_ 2 people with each half of the key
     * When one leaves, do regeneration
 * **Key Escrow and Recovery**
   * What if the key is forgotten/lost or the one who encrypted it leaves?
