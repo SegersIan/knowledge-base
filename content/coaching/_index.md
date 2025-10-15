@@ -1,6 +1,6 @@
 ---
 bookCollapseSection: true
-titl: "Coaching"
+title: "Coaching"
 ---
 # Coaching
 

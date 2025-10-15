@@ -1,5 +1,6 @@
 ---
 bookCollapseSection: true
+titile: "USB Spec"
 ---
 # USB Spec and how it works
 

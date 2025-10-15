@@ -1,5 +1,6 @@
 ---
 bookCollapseSection: true
+title: "Data Structures & Algorithmns"
 ---
 # Data Structures and Algorithms
 ## Introduction

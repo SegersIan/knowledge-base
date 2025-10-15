@@ -1,8 +1,8 @@
 ---
 bookCollapseSection: true
-title: "Data Structures & Algorightms"
+title: "Data Structures & Algorithms"
 ---
-# Cybsersecurity
+# Cybersecurity
 
 ## Certifications
 
@@ -11,8 +11,8 @@ title: "Data Structures & Algorightms"
 * [XML Injection with SVG](https://www.cloudflare.com/en-gb/threat-intelligence/research/report/svgs-the-hackers-canvas/)
   * [More](https://cloudmersive.com/article/Understanding-SVG-Files-and-the-Dangers-of-XML-Exploits)
 * NPM Malware
-  * [NPM Malware Reportimg](https://docs.npmjs.com/reporting-malware-in-an-npm-package)
-  * [Signapure reporting](https://www.csa.gov.sg/alerts-and-advisories/advisories/ad-2025-019)
+* [NPM Malware Reporting](https://docs.npmjs.com/reporting-malware-in-an-npm-package)
+* [Signature reporting](https://www.csa.gov.sg/alerts-and-advisories/advisories/ad-2025-019)
   * [More](https://www.wiz.io/blog/shai-hulud-npm-supply-chain-attack)
 * https://batteringram.eu/
   
@@ -24,9 +24,9 @@ title: "Data Structures & Algorightms"
 * 
 ## Info Graphs
 
-![ing1](assets/learning_paths.jpeg)
-![ing2](assets/secure_insecure_ports.png)
-![ing3](assets/top_tools_per_field.jpeg)
+![img1](assets/learning_paths.jpeg)
+![img2](assets/secure_insecure_ports.png)
+![img3](assets/top_tools_per_field.jpeg)
 
 ## Goodies
 
@@ -62,14 +62,14 @@ title: "Data Structures & Algorightms"
 * [**PKI**](cryptography-and-kpi.md) - Public Key Infrastructure
 * [**CN**](cryptography-and-kpi.md) - Common Name
 * [**SANS**](cryptography-and-kpi.md) - Subject Alternative Names
-* [**CSR**](cryptography-and-kpi.md) - Certificate Signiung Request
-* [**DV**](cryptography-and-kpi.md) - Dommain Validation
+* [**CSR**](cryptography-and-kpi.md) - Certificate Signing Request
+* [**DV**](cryptography-and-kpi.md) - Domain Validation
 * [**EX**](cryptography-and-kpi.md) - Extended Validation
 * [**CRL**](cryptography-and-kpi.md) - Certificate Revocation List
 * [**OCSP**](cryptography-and-kpi.md) - Online Certificate Status Protocol
-* [**CPS**](cryptography-and-kpi.md) - Certicicate Practice Statement
+* [**CPS**](cryptography-and-kpi.md) - Certificate Practice Statement
 * [**DER**](cryptography-and-kpi.md) - Distinguished Encoding Rules
-* [**PEM**](cryptography-and-kpi.md) - Privact Enhanced Email
+* [**PEM**](cryptography-and-kpi.md) - Privacy Enhanced Mail
 * [**PFX**](cryptography-and-kpi.md) - Personal Information Exchange
 * [**HMAC**](cryptography-and-kpi.md) - Hash-Based Message Authentication Code
 * [**SHS**](cryptography-and-kpi.md) - Secure Hash Standard
@@ -80,24 +80,24 @@ title: "Data Structures & Algorightms"
 * [**CVE**](security-assesment-and-testing.md) - Common Vulnerabilities and Exposures
 * [**CVSS**](security-assesment-and-testing.md) - Common Vulnerability Scoring System
 * [**XCCDF**](security-assesment-and-testing.md) - Common Configuration Checklist Description Format
-* [**OVAL**](security-assesment-and-testing.md) - Open Vulnerability and Assesment Language
+* [**OVAL**](security-assesment-and-testing.md) - Open Vulnerability and Assessment Language
 * [**SIEM**](security-assesment-and-testing.md) - Security Information and Event Management
 * [**IDS**](security-assesment-and-testing.md) - Intrusion detection systems
 * [**IPS**](security-assesment-and-testing.md) - Intrusion prevention systems
-* [**APT**](threat-landscape.md) - advance persistant threat
+* [**APT**](threat-landscape.md) - advanced persistent threat
 * [**STIX**](threat-landscape.md) - Structured Threat Information eXpression
 * [**TAXII**](threat-landscape.md) - Trusted Automated eXchange of Intelligence Information
-* [**ISACs**](threat-landscape.md) - Information Sharing and Analys Centers
-* [**RAID**](resilience-and-physical-security.md) - Redundent Arrays of Inexpensive Disks
+* [**ISACs**](threat-landscape.md) - Information Sharing and Analysis Centers
+* [**RAID**](resilience-and-physical-security.md) - Redundant Array of Independent Disks
 * [**RTO**](resilience-and-physical-security.md) - Recovery Time Objective
-* [**UAV**](resilience-and-physical-security.md) - Unmanned Areal Vechicles
+* [**UAV**](resilience-and-physical-security.md) - Unmanned Aerial Vehicles
 * [**CCTV**](resilience-and-physical-security.md) - Closed-Circuit TV
-* [**RFID**](resilience-and-physical-security.md) - Radio Frequencey Identification
-* [**UEFI**](endpoint-security.md) - Unifued Extensible Firmware Interface
+* [**RFID**](resilience-and-physical-security.md) - Radio Frequency Identification
+* [**UEFI**](endpoint-security.md) - Unified Extensible Firmware Interface
 * [**OEM**](endpoint-security.md) - Original Equipment Manufacturer
 * [**PCRs**](endpoint-security.md) - Platform Configuration Registers
-* [**TPM**](endpoint-security.md) - Trusted Plaform Module
-* [**PUFs**](endpoint-security.md) - Phsycially Unclonable Functions
+* [**TPM**](endpoint-security.md) - Trusted Platform Module
+* [**PUFs**](endpoint-security.md) - Physically Unclonable Functions
 * [**KMS**](endpoint-security.md) - Key Management Services
 * [**EDR**](endpoint-security.md) - Endpoint Detection and Response
 * [**DLP**](endpoint-security.md) - Data Loss Prevention
@@ -105,7 +105,7 @@ title: "Data Structures & Algorightms"
 * [**SD-WAN**](network-security.md) - Software-Defined Wide Area Network
 * [**MPLS**](network-security.md) - Multiprotocol Label Switching
 * [**SASE**](network-security.md) - Secure Access Service Edge
-* [**DMZ**](network-security.md) - Demilitarizewd Zones
+* [**DMZ**](network-security.md) - Demilitarized Zone
 * [**NAC**](network-security.md) - Network Access Control
 * [**BPDU**](network-security.md) - Bridge Protocol Data Unit
 * [**STP**](network-security.md) - Spanning Tree Protocol
@@ -113,45 +113,45 @@ title: "Data Structures & Algorightms"
 * [**VPN**](network-security.md) - Virtual Private Network
 * [**IPSec**](network-security.md) - Internet Protocol Security
 * [**AH**](network-security.md) - Authentication Header
-* [**ESP**](network-security.md) - Encapsualting Security Payload
+* [**ESP**](network-security.md) - Encapsulating Security Payload
 * [**SA**](network-security.md) - Security Associations
 * [**SSL**](network-security.md) - Secure Socket Layer
 * [**TLS**](network-security.md) - Transport Layer Security
-* [**SNMP**](network-security.md) - Simple Network Mangement Protocol
-* [**DKIM**](network-security.md) - Domain Keys Identified Maiul
+* [**SNMP**](network-security.md) - Simple Network Management Protocol
+* [**DKIM**](network-security.md) - DomainKeys Identified Mail
 * [**SPF**](network-security.md) - Sender Policy Framework
 * [**DMARC**](network-security.md) - Domain Based Message Authentication Reporting and Conformance
 * [**S/MIME**](network-security.md) - Secure Multipurpose Internet Mail Extension
 * [**SRTP**](network-security.md) - Secure Real Time Transport Protocol
 * [**SRTCP**](network-security.md) - Secure Real Time Control Protocol
-* [**HSTS**](network-security.md) - HTTP Strict Tansport Security
+* [**HSTS**](network-security.md) - HTTP Strict Transport Security
 * [**QoS**](network-security.md) - Quality Of Service
 * [**DDoS**](network-security.md) - Distributed Denial-of-Service
 * [**NGFW**](network-security.md) - Next-Generation Firewalls
-* [**UTM**](network-security.md) - Uniform Threat Management
+* [**UTM**](network-security.md) - Unified Threat Management
 * [**ACLs**](network-security.md) - Access Control Lists
 * [**SSID**](wireless-and-mobile-security.md) - Service Set Identifiers
-* [**WPA**](wireless-and-mobile-security.md) - Wifi Protected Access
+* [**WPA**](wireless-and-mobile-security.md) - Wi‑Fi Protected Access
 * [**CCMP**](wireless-and-mobile-security.md) - Counter Mode Cipher Block Chaining Message Authentication Code Protocol
 * [**SAE**](wireless-and-mobile-security.md) - Simultaneous Authentication of Equals
-* [**OWE**](wireless-and-mobile-security.md) - Opertunistic Wireless Encryption
+* [**OWE**](wireless-and-mobile-security.md) - Opportunistic Wireless Encryption
 * [**WLAN**](wireless-and-mobile-security.md) - Wireless Local Area Network
 * [**EAP**](wireless-and-mobile-security.md) - Extensible Authentication Protocol
 * [**PEAP**](wireless-and-mobile-security.md) - Protected EAP
 * [**EAP-FAST**](wireless-and-mobile-security.md) - EAP-Flexible Authentication Via Secure Tunneling
 * [**EAP-TLS**](wireless-and-mobile-security.md) - EAP-Transport Layer Security
-* [**EAP-TTLS**](wireless-and-mobile-security.md) - EAP-Tunneled Trasport Layer Security
+* [**EAP-TTLS**](wireless-and-mobile-security.md) - EAP-Tunneled Transport Layer Security
 * [**TKIP**](wireless-and-mobile-security.md) - Temporal Key Integrity Protocol
 * [**BYOD**](wireless-and-mobile-security.md) - Bring-Your-Own-Device
 * [**CYOD**](wireless-and-mobile-security.md) - Choose-Your-Own-Device
 * [**COPE**](wireless-and-mobile-security.md) - Corporate-Owned, Personally-Enabled
 * [**COBO**](wireless-and-mobile-security.md) - Corporate-Owned; Business Only
-* [**VDI**](wireless-and-mobile-security.md) - Virtual Desktop Infrastucture
+* [**VDI**](wireless-and-mobile-security.md) - Virtual Desktop Infrastructure
 * [**UEM**](wireless-and-mobile-security.md) - Unified Endpoint Management
 * [**MDM**](wireless-and-mobile-security.md) - Mobile Device Management
 * [**MAM**](wireless-and-mobile-security.md) - Mobile Application Management
 * [**MCM**](wireless-and-mobile-security.md) - Mobile Content Management
-* [**GPS**](wireless-and-mobile-security.md) - Global Position System
+* [**GPS**](wireless-and-mobile-security.md) - Global Positioning System
 * [**NFC**](wireless-and-mobile-security.md) - Near Field Communication
 * [**PII**](privacy.md) - Personal Identifiable Information
 * [**PHI**](privacy.md) - Protected Health Information

@@ -9,29 +9,29 @@ title: "Network Security"
 
 ### Infrastructure Considerations
 * **Attack Surface** - Points at which an unauthorized user could gain access.
-* **Device Placement** - Physical placement are impact by needs, features and prefered topology and security design
-  * Examplex: create VLANs, ...
+* **Device Placement** - Physical placement is impacted by needs, features and preferred topology and security design
+  * Examples: create VLANs, ...
 * **Security Zones** - Network segments (physical/virtual)
   * For many reasons
-  * Exampoles: Guest networks, internet facing networks (DMZ), management networks, higher clearance level, more sensitive data.
-* **Connectivity Considerations** how connectivity is implemented (wifi, optics, cable, ...) and necessary throughput
+  * Examples: Guest networks, internet-facing networks (DMZ), management networks, higher clearance level, more sensitive data.
+* **Connectivity Considerations** how connectivity is implemented (Wi‑Fi, optics, cable, ...) and necessary throughput
   * Also multiple ISPs/failover connections are part of this
 * **Failure Modes** - What if a security device fails ? Depends on business requirements
   * `fail-closed` - block any traffic during failure
-  * `fail-open` - do't interfere with traffic during failure
+  * `fail-open` - don't interfere with traffic during failure
 * **Network Taps** to monitor traffic
   * `active` powered
-  * `passive` not powered (removes los off power failure mode)
+  * `passive` not powered (removes loss of power failure mode)
 
 ### Network Design Concepts
 * **Physical Isolation** - requires physical presence to move data between air-gapped systems.
-  * aka **Air-Gapped**`
+  * aka **Air-Gapped**
   * Known hack: Malware that copied itself to USB sticks.
 * **Logical Segmentation** - Virtual/software level isolation of networks
   * Often on Layer 2,3
   * aka VLANs, Subnets, ...
   * Packets move with VLAN tags.
-  * Attacks focust on devices/systems that seperate/enforce this.
+  * Attacks focus on devices/systems that separate/enforce this.
 * **High Availability (HA)** to handle the `Availability` goal
 * **Implementing Secure Protocols** - ensure that services/communication is secure
   * E.g. HTTPS over HTTP; SSH over Telnet
@@ -40,8 +40,8 @@ title: "Network Security"
 * **Reputation Services** - feeds that track IP addresses, domains, and hosts known to engage in malicious activity.
   * Often combined with threat feeds.
 * **Software-Defined Networking (SDN)** software-based network configuration.
-  * Relies on controllers that managed network devices and configurations.
-  * Flexibile, can be changed based on metrics/insights.
+  * Relies on controllers that manage network devices and configurations.
+  * Flexible, can be changed based on metrics/insights.
   * You can configure security zones and such (like security groups in AWS).
   * Often on Layer 2,3 and sometimes 4.
 * **Software-Defined Wide Area Network (SD-WAN)**
@@ -69,12 +69,12 @@ title: "Network Security"
   * **Cloud Access Security Brokers (CASB)** - policy enforcement point between service providers and service customers to allow organizations to enforce their policies for cloud resources.
 
 ### Network Segmentation
-* **VLAN** is oneof the many technologies to implement segmentation.
+* **VLAN** is one of the many technologies to implement segmentation.
   * Sets up a broadcast domain that is segmented at Data Link Layer (Layer 2).
-  * Netowkrk devices enforce these packet forward based on the VLAN "tag".
+  * Network devices enforce packet forwarding based on the VLAN "tag".
   * The tag is assigned by the network devices as they receive traffic from an endpoint, the endpoint itself doesn't tag the data.
-* **Segementation Designs**
-  * Demilitarizewd Zones (DMZ)/Screened Subnets - Exposed to less trusted areas (public internet)
+* **Segmentation Designs**
+  * Demilitarized Zones (DMZ)/Screened Subnets - Exposed to less trusted areas (public internet)
     * Mostly used for public facing devices. But internally in networks this could also be necessary.
   * Intranets - Like only for employees
   * Extranets - For external access
@@ -91,14 +91,14 @@ title: "Network Security"
 * ![img](assets/zero_trust_architecture.png)
   * [Source - NIST Zero Trust Architecture (NIST SP 800-207)](https://csrc.nist.gov/pubs/sp/800/207/final)
   * *Subjct*: The actors
-  * *Policy Engines*: Are the decision/rule engines"
+  * *Policy Engines*: Are the decision/rule engines
   * *Policy Administrators*: Enforce the decisions
   * *Policy Enforcement Points*: Where enforcement happens
     * Commonly deployed as a local agent
   * *Control Plane*
     * *Adaptive Identity/Authentication* - use context-based authN
       * based on: location subject, device of subject, does device meet security, ...
-      * Can request additional validation for AuthN if necesary
+      * Can request additional validation for AuthN if necessary
     * *Threat Scope Reduction (limited blast radius)*
       * `least privilege` + `identity based network segmentation`
         * meaning, based on your identity, the scope for network segmentation is set for the subject.
@@ -107,10 +107,10 @@ title: "Network Security"
   * *Data Plane*
     * *Implicit trust zones*  - where can subject move once authenticated
     * *Subjects and systems* - users/systems that seek access
-    * *Policy Enforcement Points* - Where its enforced
+    * *Policy Enforcement Points* - Where it's enforced
 
 ### Network Access Control (NAC)
-> Is a system/device/endpoint alllwed to connect to given network?
+> Is a system/device/endpoint allowed to connect to a given network?
 
 * Implementation types
   * Agent
@@ -128,20 +128,20 @@ title: "Network Security"
   * Post authentication/connecting, then segmentation happens if applied.
   * [See also](<identity-and-access-management#Authentication and Authorization Technologies>)
   * Also used for `port-authentication`, being the `physical port`.
-    * So even when you connect physically to a port, a `supplicant` has to be provided and a AuthN process must find place.
+    * So even when you connect physically to a port, a `supplicant` has to be provided and an AuthN process must take place.
 
 ### Port Security and Port-Level Protections
-> Again, we are reffering here to the physical ports.
-* **Port Security** - Allow list `mac addresses` for a specific port (or max amount of mac addresses)
-  * Prevents MAC spoofing, content-addresable memory (CAM) table overfflows, plug in extra network devices
-* **Content-addresable memory (CAM) table**
-  * Maps `mac` addresses to `ip` addreses.
-  * Poisining the **CAM** could allow attackers to "escape" certain limitations.
+> Again, we are referring here to the physical ports.
+* **Port Security** - Allow list `MAC addresses` for a specific port (or max amount of MAC addresses)
+  * Prevents MAC spoofing, content-addressable memory (CAM) table overflows, plug in extra network devices
+* **Content-addressable memory (CAM) table**
+  * Maps `MAC` addresses to `IP` addresses.
+  * Poisoning the **CAM** could allow attackers to "escape" certain limitations.
   * **CAM Table Overflow Attack**
-    * Overflow the CAM table (usually fixed size) by spamming thousands of frames with random different mac addresses
-    * Once full, no new mac addresses can b learned, so it falls back to HUB (broadcast anything you get)
-    * Result: Attack reveives now all traffic on their port
-* **Mac Spoofing** might not be hard, port security can still be that extra layer of challenge.
+    * Overflow the CAM table (usually fixed size) by spamming thousands of frames with random different MAC addresses
+    * Once full, no new MAC addresses can be learned, so it falls back to HUB (broadcast anything you get)
+    * Result: Attacker receives now all traffic on their port
+* **MAC Spoofing** might not be hard, port security can still be that extra layer of challenge.
 * **Port-Level Protections**
   * **General Concepts**
       * *Bridge Protocol Data Unit (BPDU)* - Messages to coordinate the Spanning Tree.
@@ -150,10 +150,10 @@ title: "Network Security"
     * *Loop Prevention* - Detect and stop loops (e.g. connect 2 ports on the same switch)
       * Spanning Tree Protocol (STP) is used for this, using BPDUs.
     * *Broadcast storm prevention* - Prevent broadcast packets from being amplified and traverse the network.
-    * *DPU Guard* - Block ports from sending BPDU messages that shouldn't. Usually ports with endpoints connecting to them.
+    * *BPDU Guard* - Block ports from sending BPDU messages that shouldn't. Usually ports with endpoints connecting to them.
     * *Dynamic Host Configuration Protocol (DHCP) SNOOPING* - Prevent rogue/random DHCP servers of handing out IP addresses.
       * If DHCP message is not from a "trust list" and/or "expected mac list", drop the message.
-      * If DHCP message resonse to "offer an IP address" does not come from the same port as it was requested
+      * If DHCP message response to "offer an IP address" does not come from the same port as it was requested
         * Why did you come from the left door? I send my request through the right door.
 
 ### Virtual Private Networks (VPNs) and Remote Access
@@ -176,17 +176,17 @@ title: "Network Security"
   * *SSL VPNs**
     * Actually uses TLS obviously
     * Either
-      * Portal-Based approach : Users acces via web page and access services through the connection
-      * `tunnel` mode like IPSec.: Entirely encrypted data, but don't require the client!
-    * Don't requirce a client.
-    * Allows to segment application access, so more granualar access without too much complexity.
+      * Portal-Based approach: Users access via web page and access services through the connection
+      * `tunnel` mode like IPSec: Entirely encrypted data, but doesn't require the client!
+    * Doesn't require a client.
+    * Allows segmenting application access, so more granular access without too much complexity.
 * **Deciding VPN Type**
   * Do you need
     * `site-to-site` (always-on)
     * `remote access` (as-needed) - for traveling/remote employees
 * **Tunneling**
   * *Split-Tunnel* - Only send traffic intended for the secure other side of the tunnel.
-    * Example: Public internet via usual connetion, but intranet storage via Tunnel.
+    * Example: Public internet via usual connection, but intranet storage via tunnel.
   * *Full-Tunnel*  - Send all network traffic through VPN tunnel
     * Example: When you are in a coffeeshop and you can't trust even the local network, you might then want to direct ALL traffic through the tunnel.
 
@@ -198,25 +198,25 @@ title: "Network Security"
 * **Load Balancing**
   * *Modes*
       * `Active/Active` distribute equally across backend systems
-      * `Acive/Passive` bring backup backend systems online when an active system fails.
+      * `Active/Passive` bring backup backend systems online when an active system fails.
   * *Algorithms*
     * `round robin`
     * `Least connection` - send to backend with least connections
     * `agent based` - based on reporting of agents installed on the backend systems.
-    * `Source IP hashing` - randomized algorithm using the IP address of the coient
-    * `weighed least connection` -  `least connection` + `weights` to influence prefereence
-    * `fixed weights` - just fixed weights set per backend system.
-    * `weighted response times` - backend's response time + `weights` to influence prefereence
+    * `Source IP hashing` - randomized algorithm using the IP address of the client
+    * `weighted least connection` -  `least connection` + `weights` to influence preference
+    * `fixed weights` - fixed weights set per backend system.
+    * `weighted response times` - backend's response time + `weights` to influence preference
   * *Sticky Sessions* - Let a client stick to a distinct backend for entire session,
   * *Network Level*
-    * Layer 4: Transport level based load balancing - Is dummer
+    * Layer 4: Transport level based load balancing - Is dumber
       * Less overhead, but limited to protocol, port, IP address, etc...
     * Layer 7: Application level load balancing - Can do smart stuff based on request level (e.g. inspect headers)
-      * more overhead, cpu, etc... has performance penalty
+      * more overhead, CPU, etc... has performance penalty
 
 * **Proxy Servers**
   * Forward requests
-  * Due to centraliztions of forwarding requests, you can take actions on these request or responses.
+  * Due to centralization of forwarding requests, you can take actions on these requests or responses.
   * Actions
     * Filter
     * modify
@@ -235,27 +235,27 @@ title: "Network Security"
 * **Data Protection**
   * Use Data Loss Protection (DLP) to avoid exfiltration points.
     * Can send notifications, block traffic, encrypt data, ...
-* **Intrusion Detection (IDSs) and Intrustion Prevention Systems (IPSs)**
+* **Intrusion Detection (IDSs) and Intrusion Prevention Systems (IPSs)**
   * To either detect and/or block threats.
   * Methods
-    * `Signature-Based` detection rely on known Hash/signatures of threats
-    * `Anomaly-Bases` detection rely on having a baseline and then spot anomalies.
-  * An IPS in passive mode, just monitors and takes no action, acting as a IDS essentially.
+    * `Signature-Based` detection rely on known hash/signatures of threats
+    * `Anomaly-Based` detection rely on having a baseline and then spot anomalies.
+  * An IPS in passive mode just monitors and takes no action, acting as an IDS essentially.
   * `Active/Inline` mode - All traffic flows THROUGH the IDS/IPS
     * Network dependency: If IDS fails, network traffic stops, although SOME have a `fail open` possibility.
-  * `Passive/Tap` mode - IDS/IPS receives COPY of network traffic
+  * `Passive/Tap` mode - IDS/IPS receives a COPY of network traffic
     * No network impact: If IDS fails, network traffic continues normally
 * **Firewalls**
   * *Next-Generation Firewalls (NGFW)* can interact on level 4 (transport) and level 7 (application) of the network layers.
     * Can be called `all-in-one` network security devices.
       * Can do IDS/IPS, deep inspectiom, antivirus/malware detections, overlap a bit with UTM, but typically faster cause it's still a bit more focussed.
       * More configuration and expertise required.
-  * *Uniform Threat Management (UTM)* - firwall, IDS/IPS, antimalwaree, URL + Email filtering, DLP, VPN, Security and analytics capabilities. EVERYHTING.
+  * *Unified Threat Management (UTM)* - firewall, IDS/IPS, antimalware, URL + Email filtering, DLP, VPN, security and analytics capabilities. EVERYTHING.
     * "Out of the box"
     * Deployed at network boundires.
   * `Stateless` - Just apply the filter rules, very basic.
-  * `Statefull` - They keep the state of flow, so they can make more overarching decisions.
-    * Example: They can "recognize" a message that's an agress response from a previously approved ingress request.
+  * `Stateful` - They keep the state of flow, so they can make more overarching decisions.
+    * Example: They can "recognize" a message that's an egress response from a previously approved ingress request.
   * *Web Application Firewals (WAF)*
     * Works only on level 7 (application) and does even stuff like XSS/SQL injection and other scanning, so this is more specialized for distinct application. So firewall + IPS without other fancies.
   * **Screened Subnets**
@@ -289,17 +289,17 @@ title: "Network Security"
 * **Out-Of-Band Management** - another way of accessing the admin interface
   * Physical seperate port or vlan for the admin pannel of some device.
   * Physical access itself is also option, but often far less realistic for frequent access.
-* **DNS** - Can be poisoned, so attacker can "impersonate"
+* **DNS** - Can be poisoned, so an attacker can "impersonate"
   * **DNSSEC**
     * Provides authentication of DNS data
   * *Proper configuration*
     * Disable zone transfers
     * DNS logging
     * Requests to malicious DNS domains blocked
-  * *DNS Filtering* blocks mailicious domians
-    * Often fed through threat, reputation and deeny lists feeds.
+  * *DNS Filtering* blocks malicious domains
+    * Often fed through threat, reputation and deny list feeds.
 * **Email Security**
-  * *Domain Keys Identified Maiul (DKIM)* - Public DNS record lists Public Key which van be used to verify all the emails from a given domain. All those email bodies and headers are signed with corrolated Private Key.
+  * *DomainKeys Identified Mail (DKIM)* - Public DNS record lists Public Key which can be used to verify all the emails from a given domain. All those email bodies and headers are signed with correlated Private Key.
     * TL;DR; Signing of emails
     * This helps those reveive your emails.
   * *Sender Policy Framework (SPF)* - List all the allowed senders/servers where emails can be sent from
@@ -332,23 +332,23 @@ title: "Network Security"
 ### Using Secure Protocols
 * **Scenario:** Video/Voice/Videoconferencing (initially HTTP, SIP, RTP)
   * *Secure Protocol(s)/Alternatives:* HTTPS, Session Initiation Protocol over TLS (SIPS), Secure Real Time Transport Protocol (SRTP)
-* **Scenario** Network Time Prococol (NTP)
-  * *Secure Protocol(s)/Alternatives:* NTS (relies on TLS), does not protect the data, but provides authN and integrity reinsurrance. Not widely adopted tho.
-* **Scenario** Email Web traffic
-  * *Secure Protocol(s)/Alternatives:* HTTPS, IMAPS, DMARK, DKIM, SPF
+* **Scenario** Network Time Protocol (NTP)
+  * *Secure Protocol(s)/Alternatives:* NTS (relies on TLS), does not protect the data, but provides authN and integrity reassurance. Not widely adopted though.
+* **Scenario** Email/Web traffic
+  * *Secure Protocol(s)/Alternatives:* HTTPS, IMAPS, DMARC, DKIM, SPF
 * **Scenario** FTP
   * *Secure Protocol(s)/Alternatives:* HTTP, SFTP or FTPS
 * **Scenario** LDAP
   * *Secure Protocol(s)/Alternatives:*: LDAPS
-* **Scenario:** Remote Access (Tetlnet)
+* **Scenario:** Remote Access (Telnet)
   * *Secure Protocol(s)/Alternatives:* SSH, RDS, HTTPS
-* **Scenario:**  Routing and switching protcol security - Border Gateway Protocol (BGP)
+* **Scenario:**  Routing and switching protocol security - Border Gateway Protocol (BGP)
   * *Secure Protocol(s)/Alternatives:* No secure alternative
-* **Scenario:** Domain Name Resolution (DNS)
-  * *Secure Protocol(s)/Alternatives:* DNSSEC and DNS Reputation lists
-* **Scenario:** Network Addres allocation (DHCP)
-  * *Secure Protocol(s)/Alternatives:* no alternative, relie on detection and response instead of detterent
-* **Scenario:** Subscription Servicees and cloud toold (HTTPS)
+* **Scenario:** Domain Name System (DNS)
+  * *Secure Protocol(s)/Alternatives:* DNSSEC and DNS reputation lists
+* **Scenario:** Network address allocation (DHCP)
+  * *Secure Protocol(s)/Alternatives:* no alternative, rely on detection and response instead of deterrent
+* **Scenario:** Subscription services and cloud tools (HTTPS)
   * *Secure Protocol(s)/Alternatives:* N/A
 
 ### Secure Protocols
@@ -371,11 +371,11 @@ title: "Network Security"
 | Telnet | TCP 23          | SSH      | TCP 22                                         | Remote Access |
 | SMPT   | TCP 25          | SMTPS over TLS | TCP 465                                  | Sending of emails |
 * `DNSSEC` uses digital signatures for authentication and integrity.
-* `SNMPv3` improves with authentication, integrity validation and encruptions.
+* `SNMPv3` improves with authentication, integrity validation and encryption.
   * You can still run this on a lower security level, if you don't use `authPriv`, then it's insecure, even `v3`
-* `ssh` is also used as tunneling protoctol or `sftp`.
-  * If you don't use a password for the `ssh keys`, it's still less ecure.
-* `SRPT` uses encryption and authentication
+* `ssh` is also used as tunneling protocol or `sftp`.
+  * If you don't use a password for the `ssh keys`, it's still less secure.
+* `SRTP` uses encryption and authentication
   * pairs with `Secure Real Time Control Protocol (SRTCP)` that monitors the `QoS`
 * `LDAPS` is a TLS version of LDAP.
 
