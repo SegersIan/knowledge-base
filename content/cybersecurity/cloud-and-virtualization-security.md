@@ -149,7 +149,7 @@ Auditiability of a CSP is important.
 Software tools that serve as intemediaries between cloud service users and cloud service providers.
 This allows for monitoring user activity and enforce policy requirements, 2 different approaches:
 
-* **Inline CASB solutions** - physically/logically reside in connectio path between the user and service.
+* **Inline CASB solutions** - physically/logically reside in connection path between the user and service.
   * Requires configurtion of network and/or endpoints.
   * Allows to see and block requests before they arrive at cloud service.
 * **API-Based CASB solutions** - Interacts directly with CSP's API
