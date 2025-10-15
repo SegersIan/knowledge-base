@@ -1,3 +1,6 @@
+---
+title: "Communication Modes"
+---
 # Communication Modes
 
 Much of this is inspired from [Florian](https://xahteiwi.eu/) and findings regarding on how [remote work](https://xahteiwi.eu/devopsdaystlv-2019/#/) can work.

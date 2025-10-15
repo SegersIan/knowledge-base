@@ -1,4 +1,6 @@
-
+---
+title: "Presenting Ideas & Talks (TED)"
+---
 # Presenting Ideas & Talks (TED)
 
 TED is about sharing ideas in an interconnected world. Ideas worth sharing. Ideas that connect.

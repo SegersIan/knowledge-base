@@ -1,3 +1,6 @@
+---
+title: "Terms And Abbreviations"
+---
 # Terms and Abbreviations
 
 I'm listing here terms and abbreviations that were relevant for my research. Skipping some more mainstream ones like "audio device"

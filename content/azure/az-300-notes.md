@@ -1,3 +1,6 @@
+---
+title: "Az 300 Notes"
+---
 # AZ-300 Study Notes
 
 ## Various

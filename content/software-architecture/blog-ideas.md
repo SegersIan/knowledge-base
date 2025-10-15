@@ -1,3 +1,6 @@
+---
+title: "Blog Ideas"
+---
 # Blog Ideas
 
 Shortlist of ideas on what to write or blog about.

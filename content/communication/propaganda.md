@@ -1,3 +1,6 @@
+---
+title: "Propaganda"
+---
 # Propaganda
 
 ## Institute for Propaganda Analysis (IPA)

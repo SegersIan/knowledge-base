@@ -1,3 +1,6 @@
+---
+title: "Change Management"
+---
 # Change Management
 
 ## Mitigate or limit stakeholders to doubt

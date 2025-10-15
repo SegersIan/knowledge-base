@@ -1,3 +1,6 @@
+---
+title: "Internal Open Source"
+---
 # Internal Open Source
 
 ## Resources

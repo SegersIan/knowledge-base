@@ -1,3 +1,6 @@
+---
+title: "Hub-And-Spoke"
+---
 # Hub-and-Spoke Network Topology
 
 ## **Concept:**

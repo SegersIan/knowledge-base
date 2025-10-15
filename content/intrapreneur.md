@@ -1,3 +1,6 @@
+---
+title: "Intrapreneur"
+---
 # Intrapreneur
 
 Today, Chaitali covers seven habits of “intrapreneurs”:

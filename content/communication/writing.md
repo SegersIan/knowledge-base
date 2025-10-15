@@ -1,3 +1,6 @@
+---
+title: "Writing"
+---
 #  Writing
 
 These notes come from 2 different books by the same author, but the content feel so intertwined, it feels like one book.
