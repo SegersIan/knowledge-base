@@ -46,7 +46,7 @@ title: "Digital Forensics"
 ## Conducting Digital Forensics
 
 ### Acquiring Forensic Dat
-* **Order of Volatility** - [See Visual](assets/order_of_volatility.jpeg)
+* **Order of Volatility** - [See Visual](../assets/order_of_volatility.jpeg)
   * From top (most volitale) to bottom (least volitale). You start collecting the most volatile data and then work your way down, as it has the highest risk getting lost.
   * 1. *CPU cache and registers* - ephemeral
     * Least likely to be useful or be collected, it's just too ephemeral.

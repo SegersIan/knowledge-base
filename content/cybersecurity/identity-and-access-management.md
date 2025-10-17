@@ -33,7 +33,7 @@ title: "Identity And Access Management"
 #### Challenge Handshake Authentication Protocol (CHAP)
 * Authentication framework
 * Encrypted challenge + 3-way handshake
-* ![img](assets/identity_and_access_mgmt_chap.jpg)
+* ![img](../assets/identity_and_access_mgmt_chap.jpg)
 
 #### 802.1XX
 * Authentication framework
@@ -43,7 +43,7 @@ title: "Identity And Access Management"
   * Device sent authentication request to authenticators/controllers (switches, AP,...)
   * Controllers connect to authentication server, typically via RADIUS
   * RADIUS might use LDAP or Active Directory as data source for Identity information.
-* ![img](assets/identity_and_access_mgmt_8021x.jpg)
+* ![img](../assets/identity_and_access_mgmt_8021x.jpg)
 
 #### Remote Authentication Dial-In User Service (RADIUS)
 
@@ -68,7 +68,7 @@ title: "Identity And Access Management"
   * The primairy (e.g. username)
   * The instance (to help differentiate similar primaries)
   * The Realms (groups of users) seperated by trust boundries
-* ![img](assets/identity_and_access_mgmt_kerberos.jpg)
+* ![img](../assets/identity_and_access_mgmt_kerberos.jpg)
 
 #### Single Sign-On (SSO)
 * Single identity to access multiple services/systems without reuathentication.
@@ -76,7 +76,7 @@ title: "Identity And Access Management"
   * Offer hierarchical organized information about the organization.
     * `ou` organizational unit
     * `cn` common name
-  * ![img](assets/identity_and_access_mgmt_ldap_hierarchy.jpg)
+  * ![img](../assets/identity_and_access_mgmt_ldap_hierarchy.jpg)
 * Kerberos can be also used for SSO.
 * **Core Technologies for authN & authZ to implement SSO**
   * **Security Assertion Markup Language (SAML)**
@@ -229,4 +229,4 @@ Determine which users, services, and programs can access various files or other 
 
 ## Resources
 
-![img](assets/iam_vs_pam.jpeg)
+![img](../assets/iam_vs_pam.jpeg)

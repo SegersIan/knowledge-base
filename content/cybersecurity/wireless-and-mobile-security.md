@@ -167,7 +167,7 @@ https://www.cisecurity.org/benchmark/apple_ios Wireless and Mobile Security
   * Wifi channels overlap each other slightly, the goal is, based on existing networks and their channels, to pick a channel that has the least overlap with used channels.
 * Wifi Analyzers are your go to tool fro doing site surveys and build heatmaps.
 
-![img](assets/network_wifi_channels.jpg)
+![img](../assets/network_wifi_channels.jpg)
 
 ### Controller and Access Point Security
 * **Wireless Local Area Network (WLAN)** controllers
