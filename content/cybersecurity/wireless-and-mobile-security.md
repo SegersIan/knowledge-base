@@ -60,7 +60,7 @@ https://www.cisecurity.org/benchmark/apple_ios Wireless and Mobile Security
 ### Radio Frequency Identification (RFID)
 * Tags are either
   * `active`: Powered themselves and always emits signals to be read by a reader
-  * `semie-active`: Powered themselves, but emit signals when the reader asks for it
+  * `semi-active`: Powered themselves, but emit signals when the reader asks for it
   * `passive`: entirely powered by the reader.
 * *Frequencey Ranges*
   * `low` - short-range, low-power (touch field)
@@ -201,7 +201,7 @@ https://www.cisecurity.org/benchmark/apple_ios Wireless and Mobile Security
 ### Wireless Authentication
 * *Open Networks* - Often us portals to login. Doesn't offer protection unless someone uses https.
 * *Preshared keys* - allows encrypted traffic but not unique identifiedf.
-* *Enterprise* - Relies on [RADUIS](<identity-and-access-management#remote-authentication-dial-in-user-service-radius>) and Extensible Authentication Protocol (EAP) for authN.
+* *Enterprise* - Relies on [RADIUS](<identity-and-access-management/#remote-authentication-dial-in-user-service-radius>) and Extensible Authentication Protocol (EAP) for authN.
 
 #### Extensible Authentication Protocol (EAP)
 > Extensible Authentication Protocol (EAP) is a wireleess authentication protocol that has many variants because it's extensible.
