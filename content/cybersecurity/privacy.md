@@ -42,16 +42,16 @@ title: "Privacy"
   * Example: Head of Sales, all customer information
   * Data Owner Might delegete responsibility to others.
 * **Data Privacy Roles**
- * **Data Subjects** - individuals whose personal data is being processed
-   * Have often right to deletion of data, request data, access, correct, ...
- * **Data Controllers** - entities that determine the reasons for processing personal information and the methods. (kind of the data owner, but doens't have to have an interest)
- * **Data Stewards** - individuals who carrout out work for Data Controller and are delegated responsibility.
- * **Data Custodian** - responsible for secure safekeeping of the information but are neither stewards or owners of the data-
-   * Example: A cloud service provider hosting customer data for a bank.
-   * Exammple: A university’s database administrator maintaining student records.
- * **Data Processors** service providers that process data on-behalf of a data controller.
-   * Example: Credit card processor on behalf of a reseller
- * **Data Protection Officer (DPO)** - overall responsibility for data privacy efforts
+  * **Data Subjects** - individuals whose personal data is being processed
+    * Have often right to deletion of data, request data, access, correct, ...
+  * **Data Controllers** - entities that determine the reasons for processing personal information and the methods. (kind of the data owner, but doens't have to have an interest)
+  * **Data Stewards** - individuals who carrout out work for Data Controller and are delegated responsibility.
+  * **Data Custodian** - responsible for secure safekeeping of the information but are neither stewards or owners of the data-
+    * Example: A cloud service provider hosting customer data for a bank.
+    * Exammple: A university’s database administrator maintaining student records.
+  * **Data Processors** service providers that process data on-behalf of a data controller.
+    * Example: Credit card processor on behalf of a reseller
+  * **Data Protection Officer (DPO)** - overall responsibility for data privacy efforts
 
 ## Information Life Cycle
 > Protection of data must happen through entire lifecycle of the data.
