@@ -181,7 +181,7 @@ title: "Risk Management"
 > Formal process to indentify mission essential functions in an organization and identify the systems that support those functions.
 
 * **Mean Time Between Failures (MTBF)** - measure stability of a system, how much time between failures
-* **Mean Time To Repair (MTTR)** - averahe time to restore operations after failure
+* **Mean Time To Repair (MTTR)** - average time to restore operations after failure
 * **Recovery Time Objective (RTO)** - Time you can tolerate the system being down
 * **Recovery Point Objective (RPO)** - Amount of data you can tolerate to lose
 
