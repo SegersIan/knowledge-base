@@ -88,7 +88,7 @@ title: "Network Security"
 ### Zero Trust
 * Never trust, always verify.
 * See also [General Concepts](<general-concepts#Zero Trust>)
-* ![img](assets/zero_trust_architecture.png)
+* ![img](../assets/zero_trust_architecture.png)
   * [Source - NIST Zero Trust Architecture (NIST SP 800-207)](https://csrc.nist.gov/pubs/sp/800/207/final)
   * *Subjct*: The actors
   * *Policy Engines*: Are the decision/rule engines
