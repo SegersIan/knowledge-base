@@ -72,7 +72,7 @@ title: "Risk Management"
   * Formula: `AV * EF`
   * Example: `1000 EUR * 50% => 500 EUR` loss if the risk materializes
 * **Calculuate Annualized Loss Expectancy (ALE)** - absolute value of the asset to be affected if the risk materializes accordingly to annual probability.
-  * Formula: `SLE * ARE`
+  * Formula: `SLE * ARO`
   * Example: `500 EUR * 2.0 => 1000 EUR` loss if the risk materializes
   * Use **ALE** to prioritize, if it cost more to protect an asset than the value of its ALE, there is no point arguably to put in the effort.
 
