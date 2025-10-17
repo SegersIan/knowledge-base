@@ -156,3 +156,43 @@ title: "Cybersecurity"
 * [**PII**](privacy.md) - Personal Identifiable Information
 * [**PHI**](privacy.md) - Protected Health Information
 * [**DPO**](privacy.md) - Data Protection Officer
+
+## Study Topics
+* Discretionary Access Control (DAC)
+* Hot Site
+* A documented restoration order helps ensure that systems and services that have dependencies start in the right order and that high‐priority or mission‐critical services are restored first
+* Fog commputing
+* Cloud Access Security Brokers
+* Transit gateway <VPC/On Prem connection>
+* General concepts
+* Backups
+* Endpoint security -> Insecure Ports
+* XDR is similar to EDR but has a broader perspective covering not only endpoints but also cloud services, security platforms, and other components. 
+* A Windows Group Policy Object (GPO) can be used to control whether users are able to install software. Antivirus will not stop this, nor will EDR or a HIPS.
+* A host‐based intrusion prevention system (HIPS) can detect and prevent attacks against services while allowing the service to be accessible
+* SCADA (supervisory control and data acquisition) is a system architecture that combines data acquisition and control devices with communications methods and interfaces to oversee complex industrial and manufacturing processes, just like those used in utilities.
+* SCADA (supervisory control and data acquisition) is a system architecture that combines data acquisition and control devices with communications methods and interfaces to oversee complex industrial and manufacturing processes, just like those used in utilities.
+* SNMP traps can be configured to provide additional information, but typical SNMP traps provide information about issues such as links going down, authentication failures, and reboots
+* SD‐WAN (software‐defined wide area network) is commonly used to replace MPLS (Multiprotocol Label Switching) networks, which are typically higher cost than other connectivity options
+* Policy enforcement points communicate with policy administrators to forward requests from subjects and to receive instructions from them about connections to allow or end. 
+* SASE (Secure Access Service Edge) combines network security and device security by leveraging SD‐WAN with security tools like Zero Trust, firewalls, and cloud access security brokers (CASBs) 
+* Simultaneous Authentication of Equals (SAE) is used to establish a secure peering environment and to protect session traffic. Since the process requires additional cryptographic steps, it causes brute‐force attacks to be much slower and thus less likely to succeed
+* Wireless protocol
+* FDE: Full Disk Encryption
+* The Windows Security log records logon events when logon auditing is enabled. The Application and System logs do not contain these events.
+* CVSS format / SCAP
+* Metasploit  
+* Footprinting - Detecitng running oS and versions etc  
+* Spearphishing - specific group
+* Secure baselines are used to document the settings and procedures used to configure systems or devices. The other answer choices are not common industry terms
+* Ephemeral, short‐lived keys, are used with key establishment.
+8 A checksum is a computation that is used to determine whether a file or message has been changed, allowing error detection. A hash generates a unique value for a file and is a one‐way function—it cannot be reversed to re‐create the original file.
+* RAID
+* A UPS (uninterruptible power supply) relies on batteries or other stored power to keep systems online during short power outages, and it can also provide stable power during power sags and undervoltage events. 
+* The /etc/shadow file contains password hashes for most modern Linux implementations, and Ben can then use a tool such as rainbow tables or John the Ripper to crack passwords. John itself is not a password file or repository, and /etc/passwd is a secure pointer to /etc/shadow and does not actually contain useful information. Finally, an offline password attack implies activity that does not take place over the network, so SSH is not a valid answer.
+* n MOU provides an informal means to document the relationship between separate parties, making it well suited for situations involving different business units within the same company.
+* Boot attestation provides information about the software that it booted with to an attestation verification platform or system after boot, unlike secure boot, which uses a chained verification process to ensure that each component is signed and acceptable before it is loaded.
+* Remote access Trojans (RATs) are Trojans that are specifically designed to provide remote administrative access. The rest of the answers here are made up.
+*Trusted Automated Exchange of Indicator Information (TAXII) is intended to allow cyberthreat information to be communicated at the application layer via HTTPS. Structured Threat Information Expression (STIX) is an XML format for describing threat components. OpenIOC is an XML format for describing indicators of compromise. TTP is a generic term for adversary tactics, techniques, and procedures and is not a communication protocol or standard.
+* Sarbanes–Oxley Act (SOX Act), as it is specifically designed for U.S. publicly traded companies. It insists on a high level of confidence in the IT systems that manage these companies’ financial records.
+* Emily is looking for a solution to minimize the load of numerous third‐party audits. In such a situation, SSAE 18, also referred to as service organization controls (SOC) audits, is an ideal solution as it provides a common standard for auditors assessing service organizations. It allows the organization to undertake an external assessment instead of multiple third‐party assessments, sharing the resulting report with customers and potential clients. While COBIT, ISO 27001, and ISO 27002 are valuable auditing and assessment standards, they do not specifically address the issue of multiple third‐party audits. COBIT is a common framework for conducting audits and assessments, ISO 27001 describes an approach for setting up an information security management system, and ISO 27002 provides more detail on the specifics of information security controls, but none of them offer a solution like SSAE 18 for service organizations facing numerous audits.
