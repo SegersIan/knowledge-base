@@ -27,7 +27,7 @@ In public companies, there are too many and volatile "owners" (shareholders), im
 * **GRC Programs integrate**
   * 1. Governance of the organization
   * 2. Risk management
-  * 3. Compliance"
+  * 3. Compliance
 
 ### Information Security Governance
 * **Natural extension to corporate governance**

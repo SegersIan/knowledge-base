@@ -33,7 +33,7 @@ title: "Social Engineering"
 > Phising via SMS/IM
 * Often based on urgency/trust and authority
 * Often trick someone to click on a link to enter credentials or senstive information
-### *Misinformation & Disinformation
+### Misinformation & Disinformation
 > Online influencer campaigns
 * Social media, email, online mediums
 * Types (MDM)
