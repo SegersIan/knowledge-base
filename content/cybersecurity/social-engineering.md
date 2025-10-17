@@ -35,7 +35,7 @@ title: "Social Engineering"
       * I believe it's true, but its wrong
     *** Disinformation - Not True, *with* malicious intent
     *** Malinformation - based on reaility, but consciously removed context and using exaggeration *with* malicious intent
-  * CISA recommends "TRUST" oricess to counter mis/disinformation
+  * CISA recommends "TRUST" process to counter mis/disinformation
     *** Tell your story
     *** Ready your team
     *** Understand and assess MDM.
@@ -52,7 +52,7 @@ title: "Social Engineering"
     * Sending spoofed emails
     * Using common fake but similar domain techniques
     * Using malware or other tools
-* *Pretexting* - Using a made uo scenario on why the attacker approaches the target
+* *Pretexting* - Using a made up scenario on why the attacker approaches the target
   * Often to make impersonation more believable
   * Defeneses: Be critical, and do a verification call
 * *Watering Hole Attacks* - Use websites that the target frequently uses
