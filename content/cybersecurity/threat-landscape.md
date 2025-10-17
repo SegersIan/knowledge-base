@@ -12,8 +12,13 @@ title: "Threat Landscape"
   * White Hat - Act with authorization and seek vulnerabilities with the intent of correcting them.
   * Grey Hat - Act without authorization, but seek to inform targets from found vulnerabilities.
   * Black hat - Act without authorization, with malicious intent.
-### Advanced Persistent Threat (APT) - Advanced attacks that persist for a long time, stalking targets to attack when most strategic.
-### Shadow IT - Individuals/groups use technology/tools that are outside the approved solutions.
+  
+### Advanced Persistent Threat (APT)
+Advanced attacks that persist for a long time, stalking targets to attack when most strategic.
+
+### Shadow IT
+Individuals/groups use technology/tools that are outside the approved solutions.
+
 ### Threat Actors
 * Unskilled - (Script kiddie), little skill, depend on (automated) tools they downloaded, often don't understand how the tools work.
   * Do not underestimate this threat and risk
