@@ -217,6 +217,24 @@ https://www.cisecurity.org/benchmark/apple_ios Wireless and Mobile Security
   * It removes the certificate overhead that comes with `EAP-TLS`.
   * Requires extra sofrware, and PEAP not, in case you want something without certificates.
 
+| Protocol | Uses Certificates? | Tunnel Type | Inner Authentication | Developed By | Typical Use | Security Level |
+|-----------|--------------------|--------------|-----------------------|---------------|--------------|----------------|
+| **EAP-TLS** | ✅ **Server + Client** | No tunnel (mutual TLS) | N/A – cert-based auth | IETF / Microsoft | Enterprises with strong PKI | 🔒🔒🔒 **Very High** |
+| **PEAP** | ✅ **Server only** | TLS tunnel | Username/password (e.g. MSCHAPv2) | Microsoft / Cisco / RSA | Enterprise Wi-Fi (802.1X) | 🔒🔒 **High** |
+| **EAP-TTLS** | ✅ **Server only** | TLS tunnel | Username/password or token | Funk / Cisco | VPNs, Wi-Fi | 🔒🔒 **High** |
+| **EAP-FAST** | ⚙️ **Optional (PAC instead)** | Protected tunnel (TLS-like) | Username/password | Cisco | Cisco networks | 🔒 **Medium–High** |
+
+
+| Protocol | Certificates Needed | Ease of Deployment | Security | Notes |
+|-----------|---------------------|--------------------|-----------|-------|
+| **EAP-TLS** | Both client & server | ❌ Harder (needs PKI) | 🔒🔒🔒 | Most secure |
+| **PEAP** | Server only | ✅ Easier | 🔒🔒 | Very common |
+| **EAP-TTLS** | Server only | ✅ Easier | 🔒🔒 | More flexible inner methods |
+| **EAP-FAST** | None (uses PAC) | ✅ Easiest | 🔒 | Cisco-specific, no PKI |
+
+
+
+
 ## Managing Secure Mobile Devices
 
 ### Mobile Device Deployment Methods
