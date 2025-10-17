@@ -232,6 +232,11 @@ https://www.cisecurity.org/benchmark/apple_ios Wireless and Mobile Security
 | **EAP-TTLS** | Server only | ✅ Easier | 🔒🔒 | More flexible inner methods |
 | **EAP-FAST** | None (uses PAC) | ✅ Easiest | 🔒 | Cisco-specific, no PKI |
 
+* *In short*
+  * EAP-TLS → “Most secure, but hardest to deploy.” (Certificates for everyone)
+  * PEAP → “Secure and common.” (Just a server cert; protects passwords inside TLS
+  * EAP-TTLS → “Like PEAP but more flexible.” (Can use various inner methods)
+  * EAP-FAST → “Cisco’s lightweight version.” (No certs, uses PAC tokens instead)
 
 
 
