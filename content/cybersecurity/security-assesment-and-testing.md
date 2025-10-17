@@ -111,15 +111,19 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 
 ## Vulnerability Classification
 
-### Patch Management - Often ignored due to lack of resources or fear of change/instability
-### Legacy Platforms - Discontinued products, Often ignored due to lack of resources or "Fear" of change/instability
+### Patch Management
+> Often ignored due to lack of resources or fear of change/instability
+### Legacy Platforms
+> Discontinued products, Often ignored due to lack of resources or "Fear" of change/instability
 ### Weak Configurations
 * Use of default config (admin/setup page still exposed)
 * Default credentials or unsecured accounts
 * Open service ports (but unused)
 * Permissions that violate the least privilege
-### Error Messages - Descriptive error messages, useful to the attacker, especially if debug mode is still on
-### Insecure Protocols - Discontinued or old protocol versions
+### Error Messages
+> Descriptive error messages, useful to the attacker, especially if debug mode is still on
+### Insecure Protocols
+> Discontinued or old protocol versions
 ### Weak Encryption
 * Most important:
   * The algorithm
@@ -127,7 +131,8 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 
 ## Penetration Testing
 
-### Adopting the Hacker Mindset - Instead of defending against everything, you just need to find one little crack, you only need to win once
+### Adopting the Hacker Mindset 
+> Instead of defending against everything, you just need to find one little crack, you only need to win once
 * Taking an adversary mindset
 ### Reasons for Penetration Testing
 * Complementary to all other efforts, and brings another angle.
@@ -135,7 +140,8 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 * Benchmark: someone with the skillset of this pen tester can or cannot get in
 * Get remediation tips and insights
 * Get step by step insights on how to reproduce vulnerabilities
-### Threat Hunting is also using a hacker mindset, but you don't test against the live system,
+### Threat Hunting is also using a hacker mindset
+> but you don't test against the live system,
   * They imagine on how a hacker might have getting around a security control, what evidence they might leave behind and then search for proof (IoCs).
 * This usually outputs different results.
 * If they find compromise, go incident handling mode, and create a postmortem.
@@ -180,7 +186,8 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 
 ## Audits and Assessments
 
-### Security Tests - Verify that a control is functioning properly
+### Security Tests
+> Verify that a control is functioning properly
 * Should happen regular
 * Focus on the key security controls
 * Assess following factors when scheduling a test
@@ -197,9 +204,11 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 ### Responsible Disclosure Programs
   * Allows security researchers to securely share info about vulnerabilities in a product with the vendor.
   * Bug bounties is a form of this
-### Security Assessments - Comprehensive review of the security of a given scope
+### Security Assessments
+> Comprehensive review of the security of a given scope
 * Perform risk assessment of a said scope
-### Security Audits - External/impartial people who test the security controls
+### Security Audits
+> External/impartial people who test the security controls
 * Uses similar techniques as security assessments
 * Results in an attestation (good for certification)
 * With internal auditing, the auditors have a different line of reporting than the security team.
