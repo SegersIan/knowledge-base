@@ -31,16 +31,16 @@ title: "Social Engineering"
 * *Misinformation & Disinformation* - Online influencer campaigns
   * Social media, email, online mediums
   * Types (MDM)
-    ### Misinformation - Not True, *without* malicious intent
+    *** Misinformation - Not True, *without* malicious intent
       * I believe it's true, but its wrong
-    ### Disinformation - Not True, *with* malicious intent
-    ### Malinformation - based on reaility, but consciously removed context and using exaggeration *with* malicious intent
+    *** Disinformation - Not True, *with* malicious intent
+    *** Malinformation - based on reaility, but consciously removed context and using exaggeration *with* malicious intent
   * CISA recommends "TRUST" oricess to counter mis/disinformation
-    ### Tell your story
-    ### Ready your team
-    ### Understand and assess MDM.
-    ### Strategize response.
-    ### Track outocomes.
+    *** Tell your story
+    *** Ready your team
+    *** Understand and assess MDM.
+    *** Strategize response.
+    *** Track outocomes.
     * Defense: asses info environment, identify vulnerabilities, proactive communication, develop incident response plan.
 * *Impersonation* - Attack pretends to be someone else
   * Might use identity graud
