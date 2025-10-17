@@ -12,7 +12,7 @@ title: "Threat Landscape"
   * White Hat - Act with authorization and seek vulnerabilities with the intent of correcting them.
   * Grey Hat - Act without authorization, but seek to inform targets from found vulnerabilities.
   * Black hat - Act without authorization, with malicious intent.
-  
+
 ### Advanced Persistent Threat (APT)
 Advanced attacks that persist for a long time, stalking targets to attack when most strategic.
 
@@ -68,7 +68,8 @@ Individuals/groups use technology/tools that are outside the approved solutions.
 
 ## Threat Data & Intelligence
 
-### Threat Intelligence: Resources and activities available to learn about changes in the threat environment.
+### Threat Intelligence
+> Resources and activities available to learn about changes in the threat environment.
 * Can be used for predictive risk.
 * OSINT tools/methods
 * Vulnerability databases
@@ -79,9 +80,12 @@ Individuals/groups use technology/tools that are outside the approved solutions.
 * [Examples](./resources.md#threat-feeds)
 ### Proprietary & Closed-Source Intelligence
 * Might provide, better, curated and quality threat feeds
-### Use multiple feeds - To cross check if any is slow or not updating
-### Threat Maps - Geographic view of threat intelligence, but notoriously unreliable (VPNs, proxies, ...)
-### Assessing Threat Intelligence - regardless of the source, assessment is required
+### Use multiple feeds 
+> To cross check if any is slow or not updating
+### Threat Maps
+> Geographic view of threat intelligence, but notoriously unreliable (VPNs, proxies, ...)
+### Assessing Threat Intelligence
+> regardless of the source, assessment is required
 * Is it timely?
 * Is this information accurate? - Can you rely on provided information? Often correct?
 * Is this information relevant? - Might not be relevant to your organization
