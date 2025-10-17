@@ -100,8 +100,8 @@ Individuals/groups use technology/tools that are outside the approved solutions.
   * 2 - 29: Improbable - Possible but refuted by others
   * 1 : Discredited - Just plain not true
 ### Threat Indicator Management & Exchange - standardized communication protocols
-* Structured Threat Information eXpression (STIX) - XML, a JSON variation exists
-* Trusted Automated eXchange of Intelligence Information (TAXII) - communicate on HTTP level.
+* Structured Threat Information eXpression (STIX) - A structured language for cyber threat intelligence
+* Trusted Automated eXchange of Intelligence Information (TAXII) - A transport mechanism for sharing cyber threat intelligence
 * [See Github](https://oasis-open.github.io/cti-documentation/)
 ### Information Sharing Organizations
 * Industry-specific collaborative organizations that facilitate trusted human + machine
