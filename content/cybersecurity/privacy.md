@@ -72,7 +72,7 @@ title: "Privacy"
 > True anonymization is hard, but we can try pseudo anonymization techniuqes. This process is data obfuscation.
 
 * **Data Obfuscation** tools
-  * **Hashing** - Use the hash value instead of the ientifyable information - sensitive to rainbow attacks, so the attacker should never have access to all records, else they can built such a table.
+  * **Hashing** - Use the hash value instead of the identifyable information - sensitive to rainbow attacks, so the attacker should never have access to all records, else they can built such a table.
   * **Tokenization** - Replace sensitive values with randomly generated values. then there is protected lookup table incase identification is important.
   * **Data Masking** - Replacing all values with character except for last, like a creit card `**** **** **** 1234`
 
