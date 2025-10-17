@@ -182,7 +182,7 @@ title: "Risk Management"
 
 * **Mean Time Between Failures (MTBF)** - measure stability of a system, how much time between failures
 * **Mean Time To Repair (MTTR)** - averahe time to restore operations after failure
-* **Recovery Time Objective (OTR)** - Time you can tolerate the system being down
+* **Recovery Time Objective (RTO)** - Time you can tolerate the system being down
 * **Recovery Point Objective (RPO)** - Amount of data you can tolerate to lose
 
 * Note: Focus on `single-point-of-failure`
