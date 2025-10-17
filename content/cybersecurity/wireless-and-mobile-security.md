@@ -206,16 +206,6 @@ https://www.cisecurity.org/benchmark/apple_ios Wireless and Mobile Security
 #### Extensible Authentication Protocol (EAP)
 > Extensible Authentication Protocol (EAP) is a wireleess authentication protocol that has many variants because it's extensible.
 
-* **Protected EAP (PEAP)** authenticates without certificate and wraps EAP in TLS tunnel.
-  * Devices use unqiue encryption keys (public key encruption) during TLS establishment.
-  * Temporal Key Integrity Protocol (TKIP) - used to replace keys regularly
-* **EAP-Flexible Authentication Via Secure Tunneling (EAP-FAST)** CISCO developed and imrpvoes on Lightweigth EAP.
-  * Focus on faster authentication while devices are roaming.
-  * Uses preshared private key for faster for reauthentication
-* **EAP-Transport Layer Security (EAP-TLS)** certificate-based authentication + mutual authentication of device and network. Due to certificate management, less mainstream.
-* **EAP-Tunneled Trasport Layer Security (EAP-TTLS)** extends `EAP-TLS` but client is NOT required to have certificate.
-  * It removes the certificate overhead that comes with `EAP-TLS`.
-  * Requires extra sofrware, and PEAP not, in case you want something without certificates.
 
 | Protocol | Uses Certificates? | Tunnel Type | Inner Authentication | Developed By | Typical Use | Security Level |
 |-----------|--------------------|--------------|-----------------------|---------------|--------------|----------------|
