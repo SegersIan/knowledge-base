@@ -16,7 +16,7 @@ title: "Risk Management"
     * The Weak Spot: It’s the thing that makes it easier for the bad guy. Like if you left the window unlocked.
   * **Risk: Overlap between of Threats and Vulnerabilities**
     * What could actually happen: It’s the chance of the bad guy using the weak spot to cause harm. Like the burglar actually climbing through your unlocked window and stealing your toys.
-* ![img](assets/risk_mgmt_vendiagram.jpg)
+* ![img](../assets/risk_mgmt_vendiagram.jpg)
   * A **threat** that has no corresponding **Vulnerability** to exploit, results in no **risk**.
 * *CyberSecurity Example*
   * Threat - An attacker with a brute-force tool
@@ -95,7 +95,7 @@ title: "Risk Management"
   * **Probability**
 * *Risks with `high` magnitude and `high` probability should be prioritized*
 * *Risks with `low` magnitude and `low` probability should be deprioritized*
-![img](assets/risk_mgmt_prob_mag.jpg)
+![img](../assets/risk_mgmt_prob_mag.jpg)
 
 ### Supply Chain Assesment
 > Don't forget to also do a risk assesment of your supply chain.
@@ -153,7 +153,7 @@ title: "Risk Management"
 * Too communicate to leadership risk matrixes and heatmaps are often used.
 * **To include: Risk Owner, RIsk Threshold information, KRIs.**
 
-![img](assets/risk_mgmt_impact_likelihood.jpg)
+![img](../assets/risk_mgmt_impact_likelihood.jpg)
 
 ### Risk Reporting
 > Communicating the status and evolution of risks to stakeholders.
