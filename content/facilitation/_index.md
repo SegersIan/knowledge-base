@@ -112,7 +112,7 @@ Usually we make a (right) decisions but then must built up commitment. With a go
 * Coach
 
 ## The Framework
-![theframework](assets/theframework.png)
+![theframework](../assets/theframework.png)
 
 * **Before Event**:
     * Determine Audience, is possible use DISC to prepare.
@@ -258,7 +258,7 @@ And event is made up of activities, there are many variations, but they all try 
 * **When**:
     * During event
 
-![eisenhower](assets/eisenhower.png)
+![eisenhower](../assets/eisenhower.png)
 
 ### Check-In Exercise
 
@@ -294,7 +294,7 @@ And event is made up of activities, there are many variations, but they all try 
     * Maintain it throughout event.
     * Recap at event closing.
 
-![img](assets/issues_decisions_action.png)
+![img](../assets/issues_decisions_action.png)
 
 ### Weather Check
 
@@ -622,7 +622,7 @@ Reasons a facilitation/event can fail.
 
 Allows to identify different personalities. If you are able to locate/place your participants, it will be easier to tailor your messaging accordingly.
 
-![disc](assets/disc.png)
+![disc](../assets/disc.png)
 
 ### Remote Workshops
 

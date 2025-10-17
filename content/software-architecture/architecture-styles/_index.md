@@ -91,4 +91,4 @@ Here is an example of a more objective and rational guidance approach to decide 
 
 You can list the key characteristics that we need to decide on. The lower rating would lean towards style 1 and the higher rating to style 2.
 
-![img](assets/decision_framework_between_2_styles.PNG)
+![img](../assets/decision_framework_between_2_styles.PNG)

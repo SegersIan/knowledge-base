@@ -149,7 +149,7 @@ title: "Linux LPIC 1"
           * `emergency` - emergency.target
   * with `init`/`telinit` you can tell what level to run
                   
-![linux_01](assets/linux_01.png)
+![linux_01](../assets/linux_01.png)
 
 * `systemctl`
   * How you drive/control `systemd`
@@ -211,7 +211,7 @@ title: "Linux LPIC 1"
   * Create partitions from pools
   * Can grow or shrink partitions
   
-![linux_02](assets/linux_02.png)
+![linux_02](../assets/linux_02.png)
   
 * Install a boot manager
   * Boot Loader

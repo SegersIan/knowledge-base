@@ -336,11 +336,11 @@ Like all proxies, you pust sugorate in between so you can add additional logic a
 
 > The pattern chains the receiving objects together, and then passes any request messages from object to object until it reaches an object capable of handling the message. The number and type of handler objects isn't known a priori, they can be configured dynamically. The chaining mechanism uses recursive composition to allow an unlimited number of handlers to be linked.
 
-![image](assets/Chain_of_responsibility_01.png)
+![image](../assets/Chain_of_responsibility_01.png)
 
 Chain of Responsibility simplifies object interconnections. Instead of senders and receivers maintaining references to all candidate receivers, each sender keeps a single reference to the head of the chain, and each receiver keeps a single reference to its immediate successor in the chain.
 
-![image](assets/Chain_of_responsibility_02.png)
+![image](../assets/Chain_of_responsibility_02.png)
 
 #### Command
 
@@ -371,7 +371,7 @@ Goal is to remove direct/explicit relations between different objects types.
 
 > The Mediator defines an object that controls how a set of objects interact. Loose coupling between colleague objects is achieved by having colleagues communicate with the Mediator, rather than with each other. The control tower at a controlled airport demonstrates this pattern very well. The pilots of the planes approaching or departing the terminal area communicate with the tower rather than explicitly communicating with one another. The constraints on who can take off or land are enforced by the tower. It is important to note that the tower does not control the whole flight. It exists only to enforce constraints in the terminal area.
 
-![mediator](assets/Mediator_example.png)
+![mediator](../assets/Mediator_example.png)
 
 #### Memento
 
@@ -420,7 +420,7 @@ Intersting, so instead of changing behaviour purely based on changing state in a
 
 Everytime you have a finite state machine, evaluate this pattern. The State pattern does not specify where the state transitions will be defined. The choices are two: the "context" object, or each individual State derived class. The advantage of the latter option is ease of adding new State derived classes. The disadvantage is each State derived class has knowledge of (coupling to) its siblings, which introduces dependencies between subclasses.
 
-![state](assets/State1.png)
+![state](../assets/State1.png)
 
 - State objects are often Singletons.
 - Flyweight explains when and how State objects can be shared.
@@ -432,7 +432,7 @@ Everytime you have a finite state machine, evaluate this pattern. The State patt
 
 This is perfect when you have algorithms that work perfect for a specific size of data set. This is basicaly the core Open/Closed principle of the SOLID. Define one Interface/Abstract class, and have different implementations that have a different strategy. 
 
-![state](assets/Strategy1.png)
+![state](../assets/Strategy1.png)
 
 #### Template method
 
@@ -448,4 +448,4 @@ Another example is : Kind of basic inheritance.
 
 >  "the Hollywood principle" - "don't call us, we'll call you".
 
-![Template](assets/Template_method_example.png)
+![Template](../assets/Template_method_example.png)

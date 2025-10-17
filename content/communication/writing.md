@@ -33,7 +33,7 @@ Both writing skills are necessary, all can be thought and honed, none of it is a
 
 ### Types defined by WAC Clearinghouse
 
-![img](assets/img2.jpg)
+![img](../assets/img2.jpg)
 
 * **[Writing To Learn (WTL)](https://wac.colostate.edu/repository/teaching/intro/wtl/)**: to help students learn foundational concepts to check students' understanding of material
 * **[Writing To Engage (WTE)](https://wac.colostate.edu/repository/teaching/intro/wte/)**: to practice in critical thinking, reading and writing; to engage students in critical thinking
@@ -52,7 +52,7 @@ Both writing skills are necessary, all can be thought and honed, none of it is a
 * Evaluating
 * Creating
 
-[See imgage](assets/imgjpg)
+[See imgage](../assets/imgjpg)
 
 ## Type 1: Explanatory Writing
 

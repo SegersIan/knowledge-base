@@ -8,7 +8,7 @@ title: "Change Management"
 
 *Science based, applied in Nike.*
 
-![221_rule](assets/221_rule.jpg)
+![221_rule](../assets/221_rule.jpg)
 
 * 2 points of reinforcement from management chain for given individual communicate they think its a good idea. They show support.
 * 2 points of reinforcement from peers for given individual communicate they think its a good idea. They show support.
@@ -76,7 +76,7 @@ There are other models on [wikipedia](https://en.wikipedia.org/wiki/Change_manag
 
 ## Reactions in the change curve
 
-![change curve](assets/change-curve.PNG)
+![change curve](../assets/change-curve.PNG)
 
 > Kübler-Ross herself acknowledged that the stages were often misunderstood and oversimplified. She emphasized that they were not prescriptive or exhaustive but rather a way to normalize and validate the range of emotions people might feel when confronting profound loss or change.
 
@@ -84,8 +84,8 @@ As this change curve is based on Elisabeth Kübler-Ross's stages of grief model.
 
 ## Others
 
-![1](assets/how_to_succeed_as_Change_leaderPNG.PNG)
-![2](assets/summary.PNG)
+![1](../assets/how_to_succeed_as_Change_leaderPNG.PNG)
+![2](../assets/summary.PNG)
 
 ## Resources
 

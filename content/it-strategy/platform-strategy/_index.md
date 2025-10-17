@@ -39,7 +39,7 @@ Properties:
 
 ### Chapter 2: The different types of platforms
 
-![Platform Models](assets/platform_models.jpg)
+![Platform Models](../assets/platform_models.jpg)
 
 | Model/Type | Examples | Value Proposition | Interaction | Implementation |
 | ---        | ---      | ---               | ---         | ---            |
@@ -120,7 +120,7 @@ A good strategy consists of:
 
 Simple linear road maps are unrealistic, foresee decision points, possible paths to be taken and the data needed to make those decisions.
 
-![img](assets/strategic_roadmaps.png)
+![img](../assets/strategic_roadmaps.png)
 
 #### From Strategy to Execution
 
@@ -172,14 +172,14 @@ A strategy is not a detailed plan but an overall direction.
 
 * Alignment of the business and technology models are a force multiplier if well aligned. But misaligned, and all is often doomed. A misalignment between business and technology teams dooms the most promising platform initiatives.
 
-![img1](assets/chapter1_0.jpg)
-![img2](assets/chapter1_1.jpg)
+![img1](../assets/chapter1_0.jpg)
+![img2](../assets/chapter1_1.jpg)
 
 ### Chapter 5: The Platform Paradox
 
 > **The paradox: How we destroy the conflict of standardization vs innovation? How do we solve this?**
 
-![img1](assets/chapter5_0.jpg)
+![img1](../assets/chapter5_0.jpg)
 
 * Platforms break the dichotomy between harmonization and innovation.
 * Cloud platforms are a great example of high harmonization, yet boosting innovation and not constraining.
@@ -189,13 +189,13 @@ A strategy is not a detailed plan but an overall direction.
   * Old school way of doing things, anything applying to entire business is shared and more unique things for specific units and geographies are configured. Its flawed as in:
     * You have to anticipate all users needs, which is impossible and kills innovation.
     * Even if you do it well, the base layer is a massive effort.
-  * ![img1](assets/chapter5_1.jpg)
+  * ![img1](../assets/chapter5_1.jpg)
 * Platforms Aren't pyramids
   * Platforms don't try to anticipate every use case.
   * If your users haven't built something that surprised you, you probably didn't built a platform.
-  * ![img1](assets/chapter5_2.jpg)
+  * ![img1](../assets/chapter5_2.jpg)
 * The Double Double Pyramid
-  * ![img1](assets/chapter5_3.jpg)
+  * ![img1](../assets/chapter5_3.jpg)
 * How Platforms Break Barriers
   * Componentization: Allows for recomposition (e.g. standard-sized bricks sped up construction without reducing creative possibilities)
     * Requires an overarching architecture that defines boundaries and connecting elements. The right boundary matters to make it reusable and recompensable.
@@ -212,12 +212,12 @@ A strategy is not a detailed plan but an overall direction.
     * Speed is what encourages experiments and innovation.
     * Easy and Fast is what allows for innovation.
     * Cloud platforms provide scale-optimized technology as a speed-oriented product.
-    * See [example where lower lays change slower than higher layers](assets/chapter5_4.jpg), like the 19" server rack standard is from 1922, but K8S is from a few years ago or months ago.
+    * See [example where lower lays change slower than higher layers](../assets/chapter5_4.jpg), like the 19" server rack standard is from 1922, but K8S is from a few years ago or months ago.
   * Centralizing Decentralization:
     * Centralize expertise
     * Decentralize innovation
     * Done by commodification of services in a way **which relinquishes an amount of control ans is open to extension**.
-    * ![img](assets/chapter5_6.jpg),
+    * ![img](../assets/chapter5_6.jpg),
 
 ### Chapter 6: Mapping Platforms
 
@@ -237,7 +237,7 @@ A strategy is not a detailed plan but an overall direction.
 * 2x2 Maps
   * Simple models provide highest abstraction and are often most useful
   * Examples contains Context, Orientation, Components, and even movement.
-  * ![img](assets/chapter6_0.PNG)
+  * ![img](../assets/chapter6_0.PNG)
 * [Wardley Mapping](https://learnwardleymapping.com/)
   * At intersection of Technical Capability and Business Value.
   * 2 dimensional
@@ -317,7 +317,7 @@ Most IT organizations experience platforms when they set out to build one. This 
       * Enable new business models
       * Provide better customer/employee experience
       * Assure efficient, reliable and data-driven operations
-    * ![img](assets/chapter9_0.PNG)
+    * ![img](../assets/chapter9_0.PNG)
       * Interaction Platform: Powers websites, mobile apps, and APIs  to connect customers and to partners.
       * Business Capability Platform: Provides functions to support the business domain (e.g. payment services, e-commerce catalog, ...)
       * Base/Cloud Platform: All elements for operational IT parts.
@@ -334,7 +334,7 @@ Most IT organizations experience platforms when they set out to build one. This 
       * Operating
     * Analysis
       * Done well, the harmonization can provide higher compliance, security, allowing for speed AND quality.
-    * ![img](assets/chapter9_1.PNG)
+    * ![img](../assets/chapter9_1.PNG)
   * **Data Platforms**:
     * Goal for being more data-driven.
     * Analysis
@@ -348,7 +348,7 @@ Most IT organizations experience platforms when they set out to build one. This 
       * Data as a product, including ease of use, secure access and trust
       * Abstract the infra complexity into a common self-service data platform  to reduce friction
       * Providing federated governance
-    * ![img](assets/chapter9_2.PNG)
+    * ![img](../assets/chapter9_2.PNG)
   * **API Platforms**:
     * Can utilize open-source service meshes like Istio/Kong. Allowing to get more metrics and control.
     * Typical capabilities
@@ -359,7 +359,7 @@ Most IT organizations experience platforms when they set out to build one. This 
       * Catalog/Registry for API Discovery
       * Stream or Event handling
       * Monitoring/Dashboards
-    * ![img](assets/chapter9_3.PNG)
+    * ![img](../assets/chapter9_3.PNG)
   * **Abstraction Layers/Cross-Platform Platforms**:
     * Just an abstraction layer for portability
     * Usually strong focus on vendor-locking is not so important.
@@ -369,17 +369,17 @@ Most IT organizations experience platforms when they set out to build one. This 
     * Self Service + pricing reduces friction
     * Not all SaaS are platforms
     * SaaS is distribution, operational, and pricing model. Platforms are abstractions tha enable teams to build on top of them.
-  * ![img](assets/chapter9_4.PNG)
+  * ![img](../assets/chapter9_4.PNG)
 
 ### Chapter 10: IT Platform and IT services are Opposites
 
 From a static structural model a "platform" and "Infra/Operations" seem the same, but it does not illustrate the interactions between them.
 
-![img1](assets/chapter10_0.jfif)
+![img1](../assets/chapter10_0.jfif)
 
 Like, here the structure looks the same but in the first model, app development "throws their app" over the wall, and Ops people will be paged on issues. So that's not the interaction we're looking for, we're more looking for a DevOps interaction between the app development and the platform. 
 
-![img1](assets/chapter10_1.jfif)
+![img1](../assets/chapter10_1.jfif)
 
 That's why, a structural model might seem the same, but the interactions can be very different.
 
@@ -413,7 +413,7 @@ Just a strategy and objectives won't be a recipe for success, the implementation
 2. **Mechanisms**, explains the specific technical implementation.
 3. Implementation details, explains what needs to be built.
 
-![img](assets/chapter11_0.jfif)
+![img](../assets/chapter11_0.jfif)
 
 #### Mechanisms
 
@@ -449,7 +449,7 @@ Just a strategy and objectives won't be a recipe for success, the implementation
 * Opinionated is the strategy that frameworks also choose for expecting higher speed. (e.g. convention over configuration with Ruby On Rails).
 * Having opinions improves the developer experience.
 
-![img](assets/chapter12_0.jfif)
+![img](../assets/chapter12_0.jfif)
 
 #### 3 Key Properties for opinionated
 
@@ -460,7 +460,7 @@ Just a strategy and objectives won't be a recipe for success, the implementation
 
 #### Multiple Opinionated(s)
 
-![img](assets/chapter12_1.jfif)
+![img](../assets/chapter12_1.jfif)
 * There can be multiple opinionated frameworks/platforms based on needs/preferences. 
 * Having only "one opinionated" will work if the return is really high
 
@@ -470,14 +470,14 @@ As they're not have financial goals to have a big reach.
 
 #### Platforms have high cohesion 
 
-![img](assets/chapter12_2.jfif)
-![img](assets/chapter12_3.jfif)
+![img](../assets/chapter12_2.jfif)
+![img](../assets/chapter12_3.jfif)
 
 ### Chapter 13: Platform Decisions To Think Off
 
 A trap is during a platform development cycle is making decisions without being aware of it.
 
-![img](assets/chapter13_0.jfif)
+![img](../assets/chapter13_0.jfif)
 
 * Open/Closed
   * **Closed**: Limited input from platform users, rare, but can be valid in cases of regulation and certification (e.g. PCI).

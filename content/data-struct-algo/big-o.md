@@ -45,16 +45,16 @@ e.g. `Log2 8 = 3` as ` 8 / 2 / 2 = 1`
 
 ### This chart shows the comparison of different Big 0 notations.
 
-![big-0-1](assets/big-o-1.png)
+![big-0-1](../assets/big-o-1.png)
 
 ### This chart show the efficiency of Data Structure operations
 
 Do note that some values are not correct for linked lists.
-![big-0-2](assets/big-o-2.png)
+![big-0-2](../assets/big-o-2.png)
 
 ### This chart show the efficiency of sorting algorithms
 
-![big-0-3](assets/big-o-3.png)
+![big-0-3](../assets/big-o-3.png)
 
 ## In Depth
 
@@ -71,7 +71,7 @@ Do note that some values are not correct for linked lists.
 
 ### The different asymptotic notations explained
 
-![asymptotic notations comparison](assets/asymptotic_notations.png)
+![asymptotic notations comparison](../assets/asymptotic_notations.png)
 [Source: Introduction to algorithms](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)
 
 Let's say we have a function `g` that operates on `n` amount of items. We can then express if a function `f(n)` 

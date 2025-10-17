@@ -50,7 +50,7 @@ Summary of network relevant topics regarding computers.
 
 * A layer has a "Service" which is the primitives/operations that it exposes to the higher level layer using our given layer, see it as the interface. The protocol is rather the rules for a the same layer but between different machines, the peer layers. (e.g. how is the data structured for given layer)
 
-![layers](assets/layers.png)
+![layers](../assets/layers.png)
 
 ## Introduction TCP/IP Model
 

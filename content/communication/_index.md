@@ -17,7 +17,7 @@ title: "Communication"
 * [Propaganda](propaganda.md)
 * [Writing](writing.md)
 
-![img](assets/writing_rhytm.png)
+![img](../assets/writing_rhytm.png)
 
 ## General
 

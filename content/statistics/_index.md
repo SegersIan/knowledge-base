@@ -175,9 +175,9 @@ Distributions describe the pattern of data points. Distributions can be of any s
 * **Uniform**: All outcomes are equally likely.
 * **Exponential**: Right skewed with rapid decrease in frequency as you move away from the mode.
 * And many more, here are some visualizations of them
-    * [Set 1](assets/distributions_1.png)
-    * [Set 2](assets/distributions_2.png)
-    * [Set 3](assets/distributions_3.png)
+    * [Set 1](../assets/distributions_1.png)
+    * [Set 2](../assets/distributions_2.png)
+    * [Set 3](../assets/distributions_3.png)
 
 #### Extra Average Types
 

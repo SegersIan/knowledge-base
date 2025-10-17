@@ -128,7 +128,7 @@ Creativity is a major component in reasoning. The process of trying to think of 
 * A conclusion is an inference, actually every inference/step is a kind of mini/inbetween conclusion
 * An inference and implication are different. An implication is something that is not directly inferenced by the speaker of the argument, an inference is a clear step that the speaker takes. “The eggs are now rotten, therefore it’s not safe to eat. The inference is that you can’t eat the eggs because they’re rotten, an implication would be, that the spoiled eggs probably now smell like rotten eggs.
 
-![argument_structure](assets/argument_structure.png)
+![argument_structure](../assets/argument_structure.png)
 
 
 ## The 7 steps in argument analysis overview
@@ -202,13 +202,13 @@ D. Do give a number to the implicit conclusions you first located in 1E and 2A.
 
 E. Set out the relationships between the relevant assertions in a tree diagram like the one shown here. It is read downward on the page.
 
-![img](assets/argument_analysis_3_e.PNG)
+![img](../assets/argument_analysis_3_e.PNG)
 
 If 1 and 2 are claims put forward to support 3 and are not themselves supported by any other assertion, and if 3 is supposed to support 4, but not vice-versa, the diagram looks like the illustration. If 4 might be an unstated conclusion, you might put it in parentheses, as shown.
 
 F. For a "balance of considerations" argument, where we say that 1, 2, and 3 suggest the conclusion 5, "Despite" 4 (which points the other way), use symbolism as shown in this diagram.
 
-![img](assets/argument_analysis_3_f.PNG)
+![img](../assets/argument_analysis_3_f.PNG)
 
 G. Sometimes, you can set the structure out on a single line, e.g., ( 1 + 2 + 3 + 4) -> 5 or 1 -> 2 -> ( 3 + 4 ). The arrow then stands for "implies". Sometimes the suggestion is made that, for example, ( 1 + 2 ) imply ( 3 + 4 ) and are implied by them then use a double-ended arrow, thus: ( 1 + 2 ) <-> ( 3 + 4 ).
 
@@ -216,7 +216,7 @@ H. Terminology: IF statement 1 implies statement 2, we can also say 2 "follows f
 
 I. While doing this, begin to look for places where there are significant, unstated assumptions ("missing premises"). You can locate them by adding circles to the tree diagram with letters in them at the appropriate places, thus:
 
-![img](assets/argument_analysis_3_i.PNG)
+![img](../assets/argument_analysis_3_i.PNG)
 
 (A is an assumption that is needed to support the interference from 1 and 2 to 3)
 To formulate them exactly, see the next section.

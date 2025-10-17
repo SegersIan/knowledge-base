@@ -25,7 +25,7 @@ As you learn new algorithms, you will find the performance for each of the diffe
 
 Data Structures often differ in their efficiency for each sorting algorithm and their basic operations (like read, insert, remove, update and search).
 
-![big-0-2](assets/big-o-2.png)
+![big-0-2](../assets/big-o-2.png)
 
 * [Array](data-structures/array.md)
 * [Stack](data-structures/stack.md)
@@ -37,7 +37,7 @@ Data Structures often differ in their efficiency for each sorting algorithm and 
 
 ## Algorithms
 
-![big-0-3](assets/big-o-3.png)
+![big-0-3](../assets/big-o-3.png)
 
 * [Binary Search](algorithms/binary-search.md)
 * [Linear Search](algorithms/linear-search.md)
