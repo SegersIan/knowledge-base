@@ -207,3 +207,4 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * TCP 6667 => IRC
 * Worms spread themselves via vulnerabilities, 
 * The Windows Security Account Manager (SAM) file and the /etc/shadow file for Linux systems both contain passwords and are popular targets for offline brute‐force attacks.
+* TCP port SQL: 1433
