@@ -214,3 +214,7 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * `https://www.example.com/viewer.php?filename=../../../etc/passwd%00.png` > `%00` is a null byte, so applications stop readying after it, so the `.png` part is ignored.
 * Horizontal privilege escalation occurs when users at a similar level are able to use privileges or accounts belonging to peer users.
 * Firewall rules start at top and first match wins. So deny all usually is at the bottom.
+* AH > Authentication Header
+* NIPS -> Network Based Intrusion Prevention/Detection System
+* Partial backups are not the same as differential, partial is just a part of the entire scope that is backup, like a specific file.
+* COOP plans address loss of access to some or all of a facility, personnel, or services. 
