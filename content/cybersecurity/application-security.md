@@ -266,3 +266,91 @@ Automation can remove human error and make security easier and more scaleable.
 * Speed up
 ### Other Considerations
   * Complexity, Cost, Single point of failure, Technical Debt, Ongoing supportability
+
+## Attacks Overview/Comparison
+
+| Attack                                                          | What It Is                                                            | What It Targets               | Typical Impact                                                    | Mitigation                                                           |
+| --------------------------------------------------------------- | --------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **🧩 Cross-Site Scripting (XSS)**                               | Injecting malicious JavaScript into web pages viewed by others.       | Browser / Client-side         | Session theft, credential theft, defacement, malware delivery.    | Input validation, output encoding, Content Security Policy (CSP).    |
+| **🔗 Cross-Site Request Forgery (CSRF)**                        | Tricks a logged-in user’s browser into sending unwanted requests.     | User session / Authentication | Unauthorized actions (e.g., changing passwords, money transfers). | Use anti-CSRF tokens, `SameSite` cookies, re-authentication.         |
+| **💉 SQL Injection (SQLi)**                                     | Injecting malicious SQL commands through user input fields.           | Database                      | Data theft, modification, or deletion.                            | Use parameterized queries, ORM frameworks, input validation.         |
+| **📜 Command Injection**                                        | Injecting OS commands through input that’s passed to system calls.    | Server / OS                   | Full server compromise, remote code execution.                    | Input sanitization, avoid shell calls, least privilege.              |
+| **🗝️ Authentication Bypass**                                   | Exploiting weak login logic or missing checks.                        | Login / Session management    | Unauthorized access.                                              | Strong authentication logic, MFA, secure session handling.           |
+| **🔐 Broken Access Control**                                    | Users performing actions beyond their authorization.                  | Application logic             | Data exposure or privilege escalation.                            | Enforce server-side authorization checks.                            |
+| **📦 Insecure Direct Object Reference (IDOR)**                  | Manipulating URLs or parameters to access unauthorized data.          | API / File paths              | Data leaks, privilege escalation.                                 | Validate user authorization for each object reference.               |
+| **🧱 Security Misconfiguration**                                | Using default passwords, debug modes, or exposed error messages.      | Application / Server          | Data exposure, easier exploitation.                               | Harden configs, disable defaults, patch systems.                     |
+| **🕵️‍♂️ Sensitive Data Exposure**                              | Storing or transmitting data insecurely (no encryption, weak crypto). | Data in transit or rest       | Credential or personal data theft.                                | Use TLS, encrypt sensitive data, mask logs.                          |
+| **🧬 XML External Entity (XXE)**                                | Injecting malicious XML input that accesses server files or systems.  | XML parsers                   | File disclosure, SSRF, DoS.                                       | Disable external entity resolution, use safe parsers.                |
+| **🌐 Server-Side Request Forgery (SSRF)**                       | Forcing the server to make requests to internal or external systems.  | Server / Internal network     | Internal service exposure, metadata theft.                        | Validate URLs, restrict outbound requests, allowlist destinations.   |
+| **💣 Denial of Service (DoS / DDoS)**                           | Overwhelming a service with traffic or resource exhaustion.           | Availability                  | Service outage, business disruption.                              | Rate limiting, WAF, CDN protection.                                  |
+| **📨 Email Injection / SMTP Injection**                         | Injecting mail headers into web forms to send spam or spoofed emails. | Mail server                   | Spam relay, phishing attacks.                                     | Sanitize form input, validate email fields.                          |
+| **🔄 Insecure Deserialization**                                 | Injecting manipulated serialized objects into the app.                | Application logic             | Remote code execution, privilege escalation.                      | Validate input, use safe serialization formats (JSON), sign objects. |
+| **⚙️ Path Traversal**                                           | Using `../` sequences to access files outside allowed directories.    | Filesystem                    | File theft or system compromise.                                  | Canonicalize paths, restrict file access.                            |
+| **📡 Remote File Inclusion (RFI) / Local File Inclusion (LFI)** | Including malicious code files in server-side scripts.                | Web server                    | Remote code execution.                                            | Validate file paths, disable remote includes.                        |
+| **🎭 Clickjacking**                                             | Tricking users into clicking hidden UI elements (iframes, overlays).  | Browser / UI                  | Forced actions, phishing.                                         | X-Frame-Options or CSP `frame-ancestors`.                            |
+| **🧾 API Abuse / Parameter Tampering**                          | Modifying parameters or API calls to gain extra privileges.           | APIs                          | Data manipulation, privilege escalation.                          | Enforce strict server-side validation and authorization.             |
+| **🪞 Man-in-the-Middle (MITM)**                                 | Intercepting traffic between user and server.                         | Network / Transport           | Data theft, credential capture.                                   | TLS everywhere, certificate pinning.                                 |
+| **🧍 Insider Threat**                                           | Legitimate users abusing access.                                      | Internal systems              | Data theft, sabotage.                                             | Least privilege, monitoring, auditing.                               |
+
+---
+
+## 🧩 **Grouped by OWASP Top 10 (2021)**
+
+| OWASP Category                                    | Example Attacks                                |
+| ------------------------------------------------- | ---------------------------------------------- |
+| **A01: Broken Access Control**                    | IDOR, privilege escalation                     |
+| **A02: Cryptographic Failures**                   | Sensitive data exposure, weak encryption       |
+| **A03: Injection**                                | SQLi, Command injection, LDAP injection        |
+| **A04: Insecure Design**                          | Poor logic allowing abuse                      |
+| **A05: Security Misconfiguration**                | Default creds, open S3 buckets                 |
+| **A06: Vulnerable Components**                    | Outdated libraries, unpatched code             |
+| **A07: Identification & Authentication Failures** | Weak login, session hijacking                  |
+| **A08: Software & Data Integrity Failures**       | Insecure deserialization, supply chain attacks |
+| **A09: Security Logging & Monitoring Failures**   | No audit trail for breaches                    |
+| **A10: Server-Side Request Forgery (SSRF)**       | Forcing internal requests                      |
+
+---
+
+## 🔍 **Visual Mental Model (Simplified Layers)**
+
+```
+───────────────────────────────
+ 🧑‍💻 CLIENT-SIDE ATTACKS
+───────────────────────────────
+• XSS
+• CSRF
+• Clickjacking
+
+───────────────────────────────
+ ⚙️ SERVER-SIDE ATTACKS
+───────────────────────────────
+• SQL Injection
+• Command Injection
+• Path Traversal
+• XXE
+• Insecure Deserialization
+• SSRF
+• File Inclusion
+
+───────────────────────────────
+ 📡 NETWORK / TRANSPORT ATTACKS
+───────────────────────────────
+• MITM
+• DoS / DDoS
+
+───────────────────────────────
+ 🔑 LOGIC & ACCESS ATTACKS
+───────────────────────────────
+• Broken Access Control
+• Authentication Bypass
+• IDOR
+• API Abuse
+
+───────────────────────────────
+ 🔐 DATA & CONFIGURATION FAILURES
+───────────────────────────────
+• Sensitive Data Exposure
+• Security Misconfiguration
+• Vulnerable Components
+───────────────────────────────
+```
