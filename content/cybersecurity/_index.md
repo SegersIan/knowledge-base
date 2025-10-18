@@ -209,4 +209,4 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * The Windows Security Account Manager (SAM) file and the /etc/shadow file for Linux systems both contain passwords and are popular targets for offline brute‐force attacks.
 * TCP port SQL: 1433
 * business email compromise (BEC) can be done via typo squatting, spoofing email or actual email compromise.
-* Jailbreaking and pakcage managers is iOS specific.
+* Jailbreaking and pakcage managers (requires jailbreak) is iOS specific.
