@@ -218,3 +218,5 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * NIPS -> Network Based Intrusion Prevention/Detection System
 * Partial backups are not the same as differential, partial is just a part of the entire scope that is backup, like a specific file.
 * COOP plans address loss of access to some or all of a facility, personnel, or services. 
+* ICS: Industrial Controk Systems
+* IPSEC VPN works on Network lauer, VPN TLS on Transport layer
