@@ -209,4 +209,8 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * The Windows Security Account Manager (SAM) file and the /etc/shadow file for Linux systems both contain passwords and are popular targets for offline brute‐force attacks.
 * TCP port SQL: 1433
 * business email compromise (BEC) can be done via typo squatting, spoofing email or actual email compromise.
-* Jailbreaking and pakcage managers (requires jailbreak) is iOS specific.
+* Jailbreaking and pakcage managers (requires jailbreak`) is iOS specific.
+* Sam is using blocked content logging to determine what systems may be compromised and attempting to connect to malicious domains and if users are trying to access those IP addresses or domains.
+* `https://www.example.com/viewer.php?filename=../../../etc/passwd%00.png` > `%00` is a null byte, so applications stop readying after it, so the `.png` part is ignored.
+* Horizontal privilege escalation occurs when users at a similar level are able to use privileges or accounts belonging to peer users.
+* Firewall rules start at top and first match wins. So deny all usually is at the bottom.
