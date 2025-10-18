@@ -203,3 +203,7 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * If a phising email is tailored to your business (I work in insurance and they use insurance relevant topics or your role speicfic things) it will be spearphising instead of phising
 * Common motivations for internal threat actors include blackmail, financial gain, and ethical reasons. 
 * New Technology LAN Manager (NTLM) had the flaw that sessions could be replayed.
+* Integer overflow is a thing, Buffer overflow is mroe about arrays or all non-initger attackcs
+* TCP 6667 => IRC
+* Worms spread themselves via vulnerabilities, 
+* The Windows Security Account Manager (SAM) file and the /etc/shadow file for Linux systems both contain passwords and are popular targets for offline brute‐force attacks.
