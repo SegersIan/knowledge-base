@@ -173,7 +173,7 @@ title: "Network Security"
       * `transport` - IP header is unprotected, but IP payload is encrypted.
         * Network devices route based on tunnel endpoint IP addresses
         * Important if you still need routing/network visibility (That's why `site-to-site` works great)
-  * *SSL VPNs**
+  * *SSL/TLS VPNs**
     * Actually uses TLS obviously
     * Either
       * Portal-Based approach: Users access via web page and access services through the connection
