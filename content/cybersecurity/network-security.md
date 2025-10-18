@@ -387,6 +387,7 @@ title: "Network Security"
 ### On-Path Attacks
 * aka **Man-In-The-middle**
 * Attacker forces traffic to go through him, allowing for eavesdropping and/or altering the communication.
+* Can be often done by using the Adress Resolution Protocol (IP to MAC mapping). The ARP was poisined with a malicious MAC address/location, so all traffic goes to that one.
 * **SSL Stripping** for when someone is "on-path"
   * How its done
     1. Victim types: https://bank.com
