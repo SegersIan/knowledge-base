@@ -202,3 +202,4 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * Logging is operational control
 * If a phising email is tailored to your business (I work in insurance and they use insurance relevant topics or your role speicfic things) it will be spearphising instead of phising
 * Common motivations for internal threat actors include blackmail, financial gain, and ethical reasons. 
+* New Technology LAN Manager (NTLM) had the flaw that sessions could be replayed.
