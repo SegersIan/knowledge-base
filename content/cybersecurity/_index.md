@@ -249,4 +249,5 @@ but for users and services communicating over a network.
 * Embedded systems typically have few, if any hardening options because of their purpose‐built functionality. Benchmarks are rarely available for them, and most are not designed for central management or adding on security software.
 * Qualitative risk assessments measure likelihood on a descriptive scale like high, medium, or low. Quantitative assessments measure likelihood on a numeric scale using known event occurrence rates where possible.
 * Boards often include external members who may have industry or other experience and expertise that will benefit the organization, and they are sometimes, but not always, paid as part of their work on the board. Committees are frequently composed of internal staff;
+* A one‐time risk assessment that addresses the acquisition will best meet Sharon’s needs. Ad hoc assessments are less formal, and they are often used to quickly assess a system or other potential risk.
 ![img](../assets/incident_response_process.jpg)
