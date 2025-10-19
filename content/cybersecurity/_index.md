@@ -231,6 +231,11 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * NXLog collects log
 * Incident response simulation involves actual actions taken, without creating issues or affecting prod.
 * Security keys are commonly used for passwordless authentication since they can provide both a physical token and cryptographic login credentials that are unlocked using a password, fingerprint reader, or camera.
-OAuth 2.0 = Authorization framework (delegates access).
-OpenID Connect (OIDC) = Authentication layer built on top of OAuth 2.0.
+* OAuth 2.0 = Authorization framework (delegates access).
+* OpenID Connect (OIDC) = Authentication layer built on top of OAuth 2.0.
+* The Security Content Automation Protocol (SCAP) is frequently used to allow for monitoring and measurement of NIST 800‐53‐based controls.
+* Kerberos is one of a small number of commonly used AAA protocols for network devices
+* Kerberos is mainly used in: Windows domains (Active Directory) — it’s the default authentication mechanism.
+
+
 ![img](../assets/incident_response_process.jpg)
