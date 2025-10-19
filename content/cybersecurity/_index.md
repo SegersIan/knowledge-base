@@ -220,3 +220,8 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * COOP plans address loss of access to some or all of a facility, personnel, or services. 
 * ICS: Industrial Controk Systems
 * IPSEC VPN works on Network lauer, VPN TLS on Transport layer
+* Screened subnet designs use a firewall with three interfaces, one for the Internet or an untrusted network, one for a protected but front‐facing network, and one for a shielded or protected network
+* Endpoint detection and response (EDR) focuses on identifying anomalies and issues, but it is not designed to be a malware analysis tool. 
+* Red Hat stores authentication log information in /var/log/secure instead of /var/log/auth.log used by Debian and Ubuntu systems
+* Cuckoo, or Cuckoo Sandbox, is a malware analysis sandbox that will safely run malware and then analyze and report on its behavior. 
+* Sn1per is a pen test framework.
