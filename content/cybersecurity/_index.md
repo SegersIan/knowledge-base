@@ -244,4 +244,7 @@ but for users and services communicating over a network.
 * Software source code escrow is often used to ensure that organizations can obtain the software code if a company goes out of business or other adverse events occur that might endanger the company relying on the code. Reviewing the source code for an entire application is outside of the scope and capability of the majority of organizations, particularly when other dependencies are included.
 * SELinux switches linux to Mandatory Access COntrols
 * Enterprise password managers allow for "checking out" passwords and enforcing these to be changed after check out.
+* UEBA stands for User and Entity Behavior Analytics, a cybersecurity solution that uses machine learning to detect threats by analyzing the behavior of both users and non-human "entities"
+* Certification of destruction can include photographic evidence,
+* Embedded systems typically have few, if any hardening options because of their purpose‐built functionality. Benchmarks are rarely available for them, and most are not designed for central management or adding on security software.
 ![img](../assets/incident_response_process.jpg)
