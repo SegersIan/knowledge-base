@@ -229,6 +229,8 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * FDE can be enabled via MDM.
 * Windows Defender Firewall operates on a per‐application model and can filter traffic based on whether the system is on a trusted private network or a public network. 
 * NXLog collects log
-* 
-
+* Incident response simulation involves actual actions taken, without creating issues or affecting prod.
+* Security keys are commonly used for passwordless authentication since they can provide both a physical token and cryptographic login credentials that are unlocked using a password, fingerprint reader, or camera.
+OAuth 2.0 = Authorization framework (delegates access).
+OpenID Connect (OIDC) = Authentication layer built on top of OAuth 2.0.
 ![img](../assets/incident_response_process.jpg)
