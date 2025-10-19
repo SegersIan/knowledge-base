@@ -146,6 +146,8 @@ title: "Risk Management"
 * **Risk Tolerance** - ability to whitstand risk and continue operations
 * **Key Risk Indicator (KRI)** - metrics to measure increased level of risk.
   * Measures effectiviness of risk mitigations and makeing sure the risks stays within the appetite.
+  * A Key Risk Indicator (KRI) is a metric that signals increasing risk exposure in an organization — like an early warning system for potential problems.
+  * measurable signs that a risk might materialize or worsen.
 * **Risk Owner** - Individual/entity responsible managing/monitoring risk and implementing controls.
 
 ### Risk Register
