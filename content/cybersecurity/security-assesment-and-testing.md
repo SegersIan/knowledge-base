@@ -108,7 +108,9 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
   * **environment** (Tailor the score for your organization’s environment — the impact in your context.)
     * Confidentiality/Integrity/Availability Requirements (CR/IR/AR)
     * Modified base metrics based on your environment
-* **Base** Calculated by
+* Overal Scoring
+  * Base score = what the CVE lists publicly (the “official” 0–10 number).
+  * Temporal and Environmental scores = adjusted by each organization to reflect real-world conditions.
 ### Confirmation of Scan Results
 * When a vulnerability is present: Positive report
 * When a vulnerability is not present: Negative report
