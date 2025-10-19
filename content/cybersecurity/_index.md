@@ -247,4 +247,6 @@ but for users and services communicating over a network.
 * UEBA stands for User and Entity Behavior Analytics, a cybersecurity solution that uses machine learning to detect threats by analyzing the behavior of both users and non-human "entities"
 * Certification of destruction can include photographic evidence,
 * Embedded systems typically have few, if any hardening options because of their purpose‐built functionality. Benchmarks are rarely available for them, and most are not designed for central management or adding on security software.
+* Qualitative risk assessments measure likelihood on a descriptive scale like high, medium, or low. Quantitative assessments measure likelihood on a numeric scale using known event occurrence rates where possible.
+* Boards often include external members who may have industry or other experience and expertise that will benefit the organization, and they are sometimes, but not always, paid as part of their work on the board. Committees are frequently composed of internal staff;
 ![img](../assets/incident_response_process.jpg)
