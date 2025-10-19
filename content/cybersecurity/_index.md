@@ -225,3 +225,5 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * Red Hat stores authentication log information in /var/log/secure instead of /var/log/auth.log used by Debian and Ubuntu systems
 * Cuckoo, or Cuckoo Sandbox, is a malware analysis sandbox that will safely run malware and then analyze and report on its behavior. 
 * Sn1per is a pen test framework.
+* sFlow, NetFlow, and IPFIX are all used to capture network flow information, 
+* FDE can be enabled via MDM.
