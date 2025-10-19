@@ -227,5 +227,8 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * Sn1per is a pen test framework.
 * sFlow, NetFlow, and IPFIX are all used to capture network flow information, 
 * FDE can be enabled via MDM.
+* Windows Defender Firewall operates on a per‐application model and can filter traffic based on whether the system is on a trusted private network or a public network. 
+* NXLog collects log
+* 
 
 ![img](../assets/incident_response_process.jpg)
