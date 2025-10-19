@@ -255,5 +255,21 @@ but for users and services communicating over a network.
 * Provides technical guidelines for digital identity, focusing on authentication and password lifecycle management.
 * Risk exception recognizes risk areas where an organization may not be in compliance with policies or regulations, and may be acknowledged because they cannot be addressed in a timely manner or are required for the organization to conduct business.
 * Integrated penetration testing combines both offensive and defensive penetration testing,
-
+* A regulatory assessment doesn’t necessarily mean it’s performed by the regulator — it means the assessment’s purpose is to ensure compliance with a regulation.
+* CompTia: “Which concept label best fits the clues in this short paragraph?”— not “Which would I choose in a real-world scenario?”
+* The Payment Card Industry Data Security Standard (PCI DSS) is an industry standard, not a law, !!!!
+* An Audit Committee is a subcommittee of an organization’s Board of Directors that oversees financial reporting, risk management, and internal and external audit activities. Often meets with CFO, CISO, internal auditors, and external auditors
+* Continuous integration/continuous delivery (CI/CD) pipelines deploy software on an ongoing basis, making them a good fit for continuous risk assessment techniques.
+* HIPPA is A REGULATION, LAW.
+* An organization’s risk threshold is the level where they will switch from accepting a risk to seeking to handle the risk. Their risk appetite is the amount of risk an organization is willing to accept to achieve its goals.
+* Anomalous behaviour: Risky, unexpected, and unintentional
+* Due Diligience : reasonable steps taken by a person to avoid committing a tort or offence.
+* Waylon is a risk owner. He is responsible for ensuring that the risks related to data and the application are managed appropriately. Risk owner is a thing.
+* Businesscontinuity is about HOW TO KEEP THE ORGANIZATION running, Dissaster recoveru is about HOW TO REPSONSE TO SITUATION X.
+* Playbooks list the actions that an organization will take as part of a response process. 
+    * Guides incident response teams — what to do, who to involve, how to communicate.
+* Runbook lists the steps required to perform an action like notification, removing malware, or similar tasks. 
+    * Guides technicians/analysts — the how-to instructions to execute tasks.
+* 27002 guides the implementtion if a ISMS and controls, while 27001 is a STANDARD of ISMS framework.
+* For Risk Acceptance the residual risk is most important, cause you want to know what the risk is you will be accepting.
 ![img](../assets/incident_response_process.jpg)
