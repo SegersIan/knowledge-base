@@ -24,6 +24,8 @@ title: "Monitoring And Incident Response"
 * 7. \[Optional\] **Post Mortem** - Lessons learned, reflect.
 * **Back to 1** - so repeat, as you can now prepare again better
 
+![img](../assets/incident_response_process.jpg)
+
 #### Prepering for Incident Response
 
 * **Incident Response Team Members**

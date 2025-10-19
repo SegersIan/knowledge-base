@@ -227,3 +227,5 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * Sn1per is a pen test framework.
 * sFlow, NetFlow, and IPFIX are all used to capture network flow information, 
 * FDE can be enabled via MDM.
+
+![img](../assets/incident_response_process.jpg)
