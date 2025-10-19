@@ -258,6 +258,7 @@ but for users and services communicating over a network.
 * A regulatory assessment doesn’t necessarily mean it’s performed by the regulator — it means the assessment’s purpose is to ensure compliance with a regulation.
 * CompTia: “Which concept label best fits the clues in this short paragraph?”— not “Which would I choose in a real-world scenario?”
 * The Payment Card Industry Data Security Standard (PCI DSS) is an industry standard, not a law, !!!!
+    * BUt there is a PCI DSS organization that contractlyly (not regulatory) enforces following it. So you do get fined by the bank or payment processor, cause htey get fined by this PCI SSC.
 * An Audit Committee is a subcommittee of an organization’s Board of Directors that oversees financial reporting, risk management, and internal and external audit activities. Often meets with CFO, CISO, internal auditors, and external auditors
 * Continuous integration/continuous delivery (CI/CD) pipelines deploy software on an ongoing basis, making them a good fit for continuous risk assessment techniques.
 * HIPPA is A REGULATION, LAW.
@@ -272,4 +273,10 @@ but for users and services communicating over a network.
     * Guides technicians/analysts — the how-to instructions to execute tasks.
 * 27002 guides the implementtion if a ISMS and controls, while 27001 is a STANDARD of ISMS framework.
 * For Risk Acceptance the residual risk is most important, cause you want to know what the risk is you will be accepting.
+* Disaster recovery plan tell what to do before, during and after the disaster occurs.
+* If you make decisions, data controller, if you enforce it, data steward.
+* Policy handbooks are used to provide information about high‐level security practices and goals. 
+* NIST no longer recommends requiring password changes on a regular basis, and instead suggests that passwords only be changed when necessary. This helps to prevent password reuse and avoids influencing users to slightly modify passwords.
+* A malicious USB cable or drive can be made to look like jsut a keyboard.
+* There are actually some reasonable KPIs for monitoring security awareness effect.
 ![img](../assets/incident_response_process.jpg)
