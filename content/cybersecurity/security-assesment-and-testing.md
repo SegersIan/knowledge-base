@@ -75,31 +75,40 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
   * 4.0 -> 6.9 - Medium
   * 7.0 -> 8.9 - High
   * 9.0 -> 10 - Critical
-* Calculated by
-  * 3 metrics types
-    * First 4 evaluate *the exploitability*
-    * Next 3 evaluates *the impact*
-    * Last 1 evaluates *the scope scope*
-  * 8 distinct metrics
-    1. Attack Vector (exploitability) - Need to be physically there or can it be remotely?
-    2. Attack Complexity (exploitability) - Do I need specialized conditions ?
-    3. Privileges Required (exploitability) - What privileges do I need  ?
-    4. User Interaction (exploitability) - is another human required ?
-    5. Confidentiality (impact)
-    6. Integrity (impact)
-    7. Availability (impact)
-    8. Scope
-  * The total score (and other derivatives) can be computed, as the individual scores are in the CVSS format.
-  * Example CVSS Vector: `CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N`
-    * CVSS Format `v3.0`
-    * Attack Vector `Network`
-    * Attack Complexity `Low`
-    * Privileges Required `None`
-    * User Interaction `None`
-    * Scope `Unchanged`
-    * Confidentiality `High`
-    * Integrity `None`
-    * Availability `None`
+* 3 groups
+  * **Base**
+    * 3 metrics types 
+    * First 4 evaluate *the exploitability* (Base Metrics)
+    * Next 3 evaluates *the impact* ()
+    * Last 1 evaluates *the scope scope* (environmental)
+    * 8 distinct metrics
+      1. Attack Vector (exploitability) - Need to be physically there or can it be remotely?
+      2. Attack Complexity (exploitability) - Do I need specialized conditions ?
+      3. Privileges Required (exploitability) - What privileges do I need  ?
+      4. User Interaction (exploitability) - is another human required ?
+      5. Confidentiality (impact)
+      6. Integrity (impact)
+      7. Availability (impact)
+      8. Scope
+    * The total score (and other derivatives) can be computed, as the individual scores are in the CVSS format.
+    * Example CVSS Vector: `CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N`
+      * CVSS Format `v3.0`
+      * Attack Vector `Network`
+      * Attack Complexity `Low`
+      * Privileges Required `None`
+      * User Interaction `None`
+      * Scope `Unchanged`
+      * Confidentiality `High`
+      * Integrity `None`
+      * Availability `None`
+  * **Temporal** (Adjust the base score over time, based on real-world factors.)
+    * Exploit Code Maturity
+    * Remediation Level
+    * Report Confidence
+  * **environment** (Tailor the score for your organization’s environment — the impact in your context.)
+    * Confidentiality/Integrity/Availability Requirements (CR/IR/AR)
+    * Modified base metrics based on your environment
+* **Base** Calculated by
 ### Confirmation of Scan Results
 * When a vulnerability is present: Positive report
 * When a vulnerability is not present: Negative report

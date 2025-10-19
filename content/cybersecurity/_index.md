@@ -239,5 +239,7 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * Kerberos is primarily a network authentication protocol, not just for “network devices,”
 but for users and services communicating over a network.
 * Kerberos is a network authentication protocol for verifying the identity of users and services within a trusted domain — it’s not mainly for network devices like routers or switches, but for networked systems and applications.
-
+* Email security gateways are appliances or software virtual appliances that provide anti‐spam, anti‐phishing, and other email security–related services.
+* Bluetooth devices can be fingerprinted.
+* Software source code escrow is often used to ensure that organizations can obtain the software code if a company goes out of business or other adverse events occur that might endanger the company relying on the code. Reviewing the source code for an entire application is outside of the scope and capability of the majority of organizations, particularly when other dependencies are included.
 ![img](../assets/incident_response_process.jpg)
