@@ -250,4 +250,6 @@ but for users and services communicating over a network.
 * Qualitative risk assessments measure likelihood on a descriptive scale like high, medium, or low. Quantitative assessments measure likelihood on a numeric scale using known event occurrence rates where possible.
 * Boards often include external members who may have industry or other experience and expertise that will benefit the organization, and they are sometimes, but not always, paid as part of their work on the board. Committees are frequently composed of internal staff;
 * A one‐time risk assessment that addresses the acquisition will best meet Sharon’s needs. Ad hoc assessments are less formal, and they are often used to quickly assess a system or other potential risk.
+* Data owners classify, protect, oversee the use of, and ensure the quality of data.
+*  Data Custodians are the staff and teams who handle data
 ![img](../assets/incident_response_process.jpg)

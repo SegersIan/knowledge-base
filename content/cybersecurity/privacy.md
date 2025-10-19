@@ -47,6 +47,7 @@ title: "Privacy"
   * **Data Controllers** - entities that determine the reasons for processing personal information and the methods. (kind of the data owner, but doens't have to have an interest)
   * **Data Stewards** - individuals who carrout out work for Data Controller and are delegated responsibility.
   * **Data Custodian** - responsible for secure safekeeping of the information but are neither stewards or owners of the data-
+    * They are more the implementers.
     * Example: A cloud service provider hosting customer data for a bank.
     * Exammple: A university’s database administrator maintaining student records.
   * **Data Processors** service providers that process data on-behalf of a data controller.
