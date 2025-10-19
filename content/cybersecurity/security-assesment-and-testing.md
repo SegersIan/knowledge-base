@@ -111,6 +111,51 @@ Definition: Identify, prioritize and remediate vulnerabilities in your environme
 * Overal Scoring
   * Base score = what the CVE lists publicly (the “official” 0–10 number).
   * Temporal and Environmental scores = adjusted by each organization to reflect real-world conditions.
+
+Perfect 👍 — here’s a clean **visual-style summary chart** you can use as a quick reference for **CVSS metric groups and their metrics**:
+
+---
+
+#### 🧩 **CVSS Scoring Overview**
+
+| **Metric Group**     | **Sub-Category**          | **Metric**                                                                | **What It Measures**                          | **Possible Values**                                                                   |
+| -------------------- | ------------------------- | ------------------------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **🔹 BASE**          | **Exploitability**        | **Attack Vector (AV)**                                                    | How attacker reaches the target               | Network (N), Adjacent (A), Local (L), Physical (P)                                    |
+|                      |                           | **Attack Complexity (AC)**                                                | How difficult the attack is                   | Low (L), High (H)                                                                     |
+|                      |                           | **Privileges Required (PR)**                                              | Level of privileges attacker needs            | None (N), Low (L), High (H)                                                           |
+|                      |                           | **User Interaction (UI)**                                                 | Whether a user must act for exploit           | None (N), Required (R)                                                                |
+|                      |                           | **Scope (S)**                                                             | Whether exploit affects other systems/domains | Unchanged (U), Changed (C)                                                            |
+|                      | **Impact**                | **Confidentiality (C)**                                                   | Degree of data disclosure                     | None (N), Low (L), High (H)                                                           |
+|                      |                           | **Integrity (I)**                                                         | Degree of data tampering                      | None (N), Low (L), High (H)                                                           |
+|                      |                           | **Availability (A)**                                                      | Degree of service disruption                  | None (N), Low (L), High (H)                                                           |
+| **🔹 TEMPORAL**      |                           | **Exploit Code Maturity (E)**                                             | How developed the exploit is                  | Not Defined (X), Unproven (U), POC (P), Functional (F), High (H)                      |
+|                      |                           | **Remediation Level (RL)**                                                | Availability of a fix/workaround              | Not Defined (X), Official Fix (O), Temporary Fix (T), Workaround (W), Unavailable (U) |
+|                      |                           | **Report Confidence (RC)**                                                | Confidence in the vulnerability report        | Not Defined (X), Unknown (U), Reasonable (R), Confirmed (C)                           |
+| **🔹 ENVIRONMENTAL** | **Requirements**          | **Confidentiality Requirement (CR)**                                      | How critical confidentiality is to your org   | Low (L), Medium (M), High (H)                                                         |
+|                      |                           | **Integrity Requirement (IR)**                                            | How critical integrity is                     | Low (L), Medium (M), High (H)                                                         |
+|                      |                           | **Availability Requirement (AR)**                                         | How critical availability is                  | Low (L), Medium (M), High (H)                                                         |
+|                      | **Modified Base Metrics** | Same as base metrics (AV, AC, PR, etc.) but adjusted for your environment | Context-specific                              |                                                                                       |
+
+
+#### 📊 **Score Ranges**
+
+| Range          | Rating   | Description               |
+| -------------- | -------- | ------------------------- |
+| **0.0**        | None     | No impact                 |
+| **0.1 – 3.9**  | Low      | Minor risk                |
+| **4.0 – 6.9**  | Medium   | Moderate risk             |
+| **7.0 – 8.9**  | High     | Serious risk              |
+| **9.0 – 10.0** | Critical | Severe impact, urgent fix |
+
+#### ✅ **Quick summary**
+
+* **Base metrics:** define *what the vulnerability is*.
+* **Temporal metrics:** define *how it behaves right now*.
+* **Environmental metrics:** define *how much it matters to you*.
+
+
+
+
 ### Confirmation of Scan Results
 * When a vulnerability is present: Positive report
 * When a vulnerability is not present: Negative report
