@@ -252,4 +252,8 @@ but for users and services communicating over a network.
 * A one‐time risk assessment that addresses the acquisition will best meet Sharon’s needs. Ad hoc assessments are less formal, and they are often used to quickly assess a system or other potential risk.
 * Data owners classify, protect, oversee the use of, and ensure the quality of data.
 *  Data Custodians are the staff and teams who handle data
+* Provides technical guidelines for digital identity, focusing on authentication and password lifecycle management.
+* Risk exception recognizes risk areas where an organization may not be in compliance with policies or regulations, and may be acknowledged because they cannot be addressed in a timely manner or are required for the organization to conduct business.
+* Integrated penetration testing combines both offensive and defensive penetration testing,
+
 ![img](../assets/incident_response_process.jpg)

@@ -45,6 +45,7 @@ title: "Privacy"
   * **Data Subjects** - individuals whose personal data is being processed
     * Have often right to deletion of data, request data, access, correct, ...
   * **Data Controllers** - entities that determine the reasons for processing personal information and the methods. (kind of the data owner, but doens't have to have an interest)
+    - Usually the entity, but if a person in a organization decides on the why and how, he's technically fulfulling the data controller profile.
   * **Data Stewards** - individuals who carrout out work for Data Controller and are delegated responsibility.
   * **Data Custodian** - responsible for secure safekeeping of the information but are neither stewards or owners of the data-
     * They are more the implementers.
@@ -52,7 +53,7 @@ title: "Privacy"
     * Exammple: A university’s database administrator maintaining student records.
   * **Data Processors** service providers that process data on-behalf of a data controller.
     * Example: Credit card processor on behalf of a reseller
-  * **Data Protection Officer (DPO)** - overall responsibility for data privacy efforts
+  * **Data Protection Officer (DPO)** - overall responsibility for data privacy efforts, but no why and how data is processed.
 
 ## Information Life Cycle
 > Protection of data must happen through entire lifecycle of the data.
