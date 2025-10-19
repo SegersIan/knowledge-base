@@ -236,6 +236,8 @@ Each session gets its own unique, temporary encryption key, which is deleted aft
 * The Security Content Automation Protocol (SCAP) is frequently used to allow for monitoring and measurement of NIST 800‐53‐based controls.
 * Kerberos is one of a small number of commonly used AAA protocols for network devices
 * Kerberos is mainly used in: Windows domains (Active Directory) — it’s the default authentication mechanism.
-
+* Kerberos is primarily a network authentication protocol, not just for “network devices,”
+but for users and services communicating over a network.
+* Kerberos is a network authentication protocol for verifying the identity of users and services within a trusted domain — it’s not mainly for network devices like routers or switches, but for networked systems and applications.
 
 ![img](../assets/incident_response_process.jpg)

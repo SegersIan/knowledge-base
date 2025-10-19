@@ -21,3 +21,4 @@ title: "Common Network Ports"
 ## Less Common
 
 * 515 - Network printing services (legacy)
+* 3389 - RDP
