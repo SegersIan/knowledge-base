@@ -1,6 +1,7 @@
 ---
 bookCollapseSection: true
 title: "AI & ML"
+math: true
 ---
 # AI & ML
 
