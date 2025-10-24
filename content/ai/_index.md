@@ -74,8 +74,10 @@ Preprocessing steps depend on the context and use case, but to give some example
 ## Language Model
 > Models that can predict the next token based on the previous sequence of tokens (context) are Language Models.
 
-* Mathemeticall a language model is a probability distribution over *all the words that occur in a language*.
-    * $P(x_1, x_2, x_3, \ldots, x_n)$
+* Mathemeticall a language model is a probability distribution over *all the words that occur in a language*
+* Chain Rule of probility
+    * Calculating the most probable next word based on the previous tokens.
+
 
 ## History Of LLMs
 
