@@ -78,6 +78,26 @@ Preprocessing steps depend on the context and use case, but to give some example
 * Chain Rule of probility
     * Calculating the most probable next word based on the previous tokens.
 
+## Corpus Of Data
+A corpus is just the body of data you feed into a system so it can learn from it.
+
+## Word Embeddings
+* aka `word2vec`
+* Vector representation of words in a high dimensional space (many dimensions in othr words).
+* Such a vector representation would contain the semantic (meaning) and syntactic (grammar) relationship between words based on the usage of the words found in the data corpus.
+    * Semantic (meaning): `god` and `puppy` are related
+    * Syntactic (grammar): `run` and `running` are the same word.
+
+### Architecture Types 
+There are different Architecture Types To Train/Get Word Embeddings.    
+
+* **Continious Bag Of Words (CBOW)**
+    * predicts the missing word from its neighbors
+    * Better for when data is limited
+    * Faster to train.
+* **Skip-Gram Architecture**
+    * predicts the neighbors from the center word. 
+    * Better for when data is large
 
 ## History Of LLMs
 
@@ -95,3 +115,19 @@ Preprocessing steps depend on the context and use case, but to give some example
         * *Trigram (3-gram)* - Like 2-gram, but the sliding window size is 3.
             * Ex: `She likes icecream the most` -> `she likes icrecream`, `likes icrecream the`, `icecream the most`
         * *n-gram* - A sliding window if size n.
+    * The challenge: If you have a bigram, the context window is too small, so it's not aware of the a relation between a word at the beginning and end of the sentence.
+* **Neural Language Models**
+    * Meant to address limittions of *n-gram* models.
+    * To caputre semantic relationship between words it uses: 
+        * Feed-forward neural architecture
+        * Distributed word respresentation (*word embeddings*)
+    * The word embeddigns/vectors were fed into the neural architecture.
+
+## RRN and LSTM
+
+* **Recurrent Neural Network (RRN)**
+* **Long short-term Memory**
+
+## Transformer
+* [Attention Is All You Need - Paper](https://arxiv.org/abs/1706.03762)
+
