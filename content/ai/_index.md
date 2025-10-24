@@ -81,3 +81,17 @@ Preprocessing steps depend on the context and use case, but to give some example
 
 ## History Of LLMs
 
+* **Rule-Based Language Models** - Rules & Regex (but extremely hard for an entire language)
+* **Statistical Language Models** - Based on patterns learned from huge data sets.
+    * **N-Gram Model** 
+        * Used conditional probability to generate next token.
+        * More scaleable thant Rule Based Language models (could ingest huge amounts of data)
+        * Used an idea of "context window"
+    * N-Gram Types
+        * *Unigram (1-gram)* - Each word im a sequence is considered an individual token with no dependency.
+        * *Bigram (2-gram)* - Sequence consists of a pair of items where the occurance of the latter depend on the former. 
+            * It's like a sliding window with a size of 2 items going through the whole sequence.
+            * Ex: `She likes icecream the most` -> `she likes`, `likes icrecream`, `icecream the`, `the most`,
+        * *Trigram (3-gram)* - Like 2-gram, but the sliding window size is 3.
+            * Ex: `She likes icecream the most` -> `she likes icrecream`, `likes icrecream the`, `icecream the most`
+        * *n-gram* - A sliding window if size n.
