@@ -40,6 +40,23 @@ Preprocessing steps depend on the context and use case, but to give some example
 * **Remove Numbers** - Often numbers in sentences have no segmantic significance, remove them if irrelevant.
 * **Interpretate Emojis** - Often used as expression of feeling, so replace them with their corrolating emotions.
 
+### Data Transformation
+> Done after preprocessing.
+> Additional transformations that will further enhance the data for better modelling.
+> These techniques are linguistic in nature, often break down sentences or words to reduce complexity.
+
+* **Tokenization** - Breaking down sentences into smaller units (like words).
+    * *By Whitespace* is the simplest decompensition technique.
+    * Other techniques exist.
+* **Lemmatization** - Reduce bords into their base form (aka `lemmas`)
+    * Thanks to *POS Tagging* you know the grammatical category for each token, allowing for proper lemmatization.
+    * Ex: `am, is, are, was, were, been, beeing` => `be`
+    * Ex: `run, runs, running, ran` => `run`
+* **Stemming** - Reduce bords into their base form/stem.
+    * Samme goal as lemmatization, but another approach.
+    * Done by chopping of prefixes and suffixes to get the base form/stem.
+    * This approach is less CPU intensive, so if no high accuracy is neccessary, this might be a better approach.
+
 ### Supervised & Unsupervised Training
 
 * **Supervised** = learning with answers given.
