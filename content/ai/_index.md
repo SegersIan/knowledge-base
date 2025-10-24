@@ -70,7 +70,11 @@ Preprocessing steps depend on the context and use case, but to give some example
 ### Foundation Models
 > Model trained on vast amount of data (unsupervised) which is applicable to a lot of tasks and is not task-centric.
 
+## Language Model
+> Models that can predict the next token based on the previous sequence of tokens (context) are Language Models.
 
+* Mathemeticall a language model is a probability distribution over *all the words that occur in a language*.
+    * $P(x_1, x_2, x_3, \ldots, x_n)$
 
-
+## History Of LLMs
 

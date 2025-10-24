@@ -3,6 +3,16 @@ languageCode: en-us
 title: Knowledgebase
 theme: hugo-book
 
+# Needed for mermaid/katex shortcodes
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 1
+  highlight:
+    style: base16-snazzy
+
 menu:
   after:
     - name: "Github - Site"
