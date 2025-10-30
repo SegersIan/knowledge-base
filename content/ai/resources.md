@@ -17,3 +17,8 @@
 * https://arxiv.org/abs/2510.07192v1
 * [Defalte LLMS Sets](https://www.scalarlm.com/blog/llm-deflate-extracting-llms-into-datasets/)
 * [Project management with Agent](https://github.com/MrLesk/Backlog.md)
+* https://factory.ai/news?category=engineering
+* https://martinfowler.com/articles/agentic-ai-security.html
+* https://www.continue.dev/
+* https://docs.continue.dev/guides/overview#mcp-integration-cookbooks
+* 
