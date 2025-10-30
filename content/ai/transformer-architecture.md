@@ -77,9 +77,9 @@ The transformer architecture is the current mainstream architecture used for the
                 * if a student decides that another student’s Key is relevant, they attend to that student and take their Value — the actual content.
                 * Example: Once “dog” realizes “chased” has the Key it was looking for, it takes its Value — maybe information like “the action is chasing” — to understand the full meaning.
     * The model has 3 different Weight matrices:
-        * \\( \mathbf{W}_Q \\) - The *Query** weight matrix.
-        * \\( \mathbf{W}_K \\) - The *Key** weight matrix.
-        * \\( \mathbf{W}_V \\) - The *Value** weight matrix.
+        * \\( \mathbf{W}_Q \\) - The **Query** weight matrix.
+        * \\( \mathbf{W}_K \\) - The **Key** weight matrix.
+        * \\( \mathbf{W}_V \\) - The **Value** weight matrix.
     * Now we can calculate each vector by multiplying our token embedding \\( \mathbf{x}_i \\) with the respective weight matrix (Q, K or V).
         * **Query vector** \\( \mathbf{q}_i = \mathbf{x}_i \mathbf{W}_Q \\)
         * **Key vector** \\( \mathbf{k}_i = \mathbf{x}_i \mathbf{W}_K \\)
