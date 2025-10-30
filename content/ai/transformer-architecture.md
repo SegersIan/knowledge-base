@@ -12,8 +12,21 @@ The transformer architecture is the current mainstream architecture used for the
 ### Self-Attention Mechanism
 
 ### Definition
+> Self-attention is a way for the model to look at all the words in a sentence at once and decide which ones are important to each other when figuring out meaning.
+
+* Captures context, relationships, and meaning across whole sentences or paragraphs.
+* Each word looks at all the other words.
+* The model assigns attention scores — higher scores mean “this other word is important for understanding me.”
+* The model then combines information from all the words, weighted by how much attention it gives to each.
+
+> “The cat sat on the mat because it was tired.”
+
+* You know that “it” refers to “the cat”, not “the mat.”
 
 #### How it works
+
+
+
 
 #### Multi-Head Attention
 
