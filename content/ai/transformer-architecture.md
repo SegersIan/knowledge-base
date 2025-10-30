@@ -55,6 +55,10 @@ The transformer architecture is the current mainstream architecture used for the
         * **Query vector** \\( \mathbf{q}_i \\)
         * **Key vector** \\( \mathbf{k}_i \\)
         * **Value vector** \\( \mathbf{v}_i \\)
+    * Each of these is obtained by multiplying the embedding with a different weight matrix — parameters the model learns during training.
+        * **Query vector** \\( \mathbf{q}_i = \mathbf{x}_i \mathbf{W}_Q \\)
+        * **Key vector** \\( \mathbf{k}_i = \mathbf{x}_i \mathbf{W}_K \\)
+        * **Value vector** \\( \mathbf{v}_i = \mathbf{x}_i \mathbf{W}_V \\)
 
 
 * TODO... Similarity Score
