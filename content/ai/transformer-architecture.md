@@ -8,13 +8,15 @@ The transformer architecture is the current mainstream architecture used for the
 
 ![omg](../assets/transformer_arch_1.png)
 
-## Self-Attention Mechanism
+## Components
+
+### Self-Attention Mechanism
 
 ### Definition
 
-### How it works
+#### How it works
 
-### Multi-Head Attention
+#### Multi-Head Attention
 
 ### Positional Encoding
 
