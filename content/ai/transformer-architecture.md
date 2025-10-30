@@ -23,10 +23,12 @@ The transformer architecture is the current mainstream architecture used for the
         * `[How, Are, You]`
     * Then each token is mapped to their Token ID from the model's vocabulary.
          * `[1234, 456, 23]`
-    * Then for each Token ID their corresponding embedding can be retrieved.
+    * Then for each Token ID their corresponding embedding (\\( E(\text{token}_i) \\)) can be retrieved.
         * `How` -> tokenId `1234` -> {{< katex >}} \mathbf{x}_i = \begin{bmatrix} 0.8 & -1.8 & 0.6 & -0.5 \end{bmatrix} {{< /katex >}}
         * `Are` -> tokenId `456` -> {{< katex >}} \mathbf{x}_i = \begin{bmatrix} -1.6 & 1.3 & -1.9 & 0.4 \end{bmatrix} {{< /katex >}}
         * `You` -> tokenId `23` -> {{< katex >}} \mathbf{x}_i = \begin{bmatrix} -0.3 & 0.7 & -1.4 & -0.9 \end{bmatrix} {{< /katex >}}
+    * At this stage, all the tokens that are the same, would have the same embedding. However, the position of the token in the input sequence has also influence and relevance. So for each token, the original embedding is taken and "manipulated" to reflect also the position in the sequence.
+        * \\( x_i = E(\text{token}_i) + P(\text{position}_i) \\)
 
 ## Components
 
@@ -50,7 +52,7 @@ The transformer architecture is the current mainstream architecture used for the
 ##### Detailed
 
 * Calculate the **attention score** for each token:
-    * The embedding for an input token is expressed as {{< katex >}} \mathbf{x}_i {{< /katex >}} 
+    * The embedding for an input token is expressed as \\( \mathbf{x}_i \\)
     * For each token we need the following vector representations:
         * **Query vector** (\\( \mathbf{q}_i \\)) : what this token is asking for?
             * What am I looking for in other tokens?
@@ -78,7 +80,7 @@ The transformer architecture is the current mainstream architecture used for the
         * \\( \mathbf{W}_Q \\) - The *Query** weight matrix.
         * \\( \mathbf{W}_K \\) - The *Key** weight matrix.
         * \\( \mathbf{W}_V \\) - The *Value** weight matrix.
-    * Each of these is obtained by multiplying the embedding with a different weight matrix — parameters the model learns during training.
+    * Now we can calculate each vector by multiplying our token embedding \\( \mathbf{x}_i \\) with the respective weight matrix (Q, K or V).
         * **Query vector** \\( \mathbf{q}_i = \mathbf{x}_i \mathbf{W}_Q \\)
         * **Key vector** \\( \mathbf{k}_i = \mathbf{x}_i \mathbf{W}_K \\)
         * **Value vector** \\( \mathbf{v}_i = \mathbf{x}_i \mathbf{W}_V \\)
