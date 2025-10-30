@@ -24,9 +24,9 @@ The transformer architecture is the current mainstream architecture used for the
     * Then each token is mapped to their Token ID from the model's vocabulary.
          * `[1234, 456, 23]`
     * Then for each Token ID their corresponding embedding can be retrieved.
-        * `How` -> tokenId `1234` -> {{< katex >}} \begin{bmatrix} 0.8 & -1.8 & 0.6 & -0.5 \end{bmatrix} {{< /katex >}}
-        * `Are` -> tokenId `456` -> {{< katex >}} \begin{bmatrix} -1.6 & 1.3 & -1.9 & 0.4 \end{bmatrix} {{< /katex >}}
-        * `You` -> tokenId `23` -> {{< katex >}} \begin{bmatrix} -0.3 & 0.7 & -1.4 & -0.9 \end{bmatrix} {{< /katex >}}
+        * `How` -> tokenId `1234` -> {{< katex >}} \mathbf{x}_i = \begin{bmatrix} 0.8 & -1.8 & 0.6 & -0.5 \end{bmatrix} {{< /katex >}}
+        * `Are` -> tokenId `456` -> {{< katex >}} \mathbf{x}_i = \begin{bmatrix} -1.6 & 1.3 & -1.9 & 0.4 \end{bmatrix} {{< /katex >}}
+        * `You` -> tokenId `23` -> {{< katex >}} \mathbf{x}_i = \begin{bmatrix} -0.3 & 0.7 & -1.4 & -0.9 \end{bmatrix} {{< /katex >}}
 
 ## Components
 
@@ -47,6 +47,17 @@ The transformer architecture is the current mainstream architecture used for the
 * The model assigns attention scores — higher scores mean “this other word is important for understanding me.”
 * The model then combines information from all the words, weighted by how much attention it gives to each.
 
+##### Detailed
+
+* Calculate the **attention score** for each token:
+    * The embedding for an input token is expressed as {{< katex >}} \mathbf{x}_i {{< /katex >}} 
+    * For each token we need the following vector representations:
+        * **Query vector** \\( \mathbf{q}_i \\)
+        * **Key vector** \\( \mathbf{k}_i \\)
+        * **Value vector** \\( \mathbf{v}_i \\)
+
+
+* TODO... Similarity Score
 
 #### Multi-Head Attention
 
