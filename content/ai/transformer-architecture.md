@@ -38,21 +38,10 @@ The transformer architecture is the current mainstream architecture used for the
     * Vector length is set by the model at training.
     * For our example the vector length is `4`.
     * Example of the word embeddings of our input sequence.
-        * `how` 
+        * `how` => $\begin{bmatrix} 0.8 & -1.8 & 0.6 & -0.5 \end{bmatrix}$
+        * `are` => $\begin{bmatrix} -1.6 & 1.3 & -1.9 & 0.4 \end{bmatrix}$
+        * `you` => $\begin{bmatrix} -0.3 & 0.7 & -1.4 & -0.9 \end{bmatrix}$
 
-$$
-\begin{bmatrix}
-a & b \\
-c & d
-\end{bmatrix}
-$$
-
-```katex
-\begin{bmatrix}
-a & b \\
-c & d
-\end{bmatrix}
-```
 
 
 #### Multi-Head Attention
