@@ -15,9 +15,6 @@ The transformer architecture is the current mainstream architecture used for the
 > Self-attention is a way for the model to look at all the words in a sentence at once and decide which ones are important to each other when figuring out meaning.
 
 * Captures context, relationships, and meaning across whole sentences or paragraphs.
-* Each word looks at all the other words.
-* The model assigns attention scores — higher scores mean “this other word is important for understanding me.”
-* The model then combines information from all the words, weighted by how much attention it gives to each.
 
 > “The cat sat on the mat because it was tired.”
 
@@ -25,6 +22,25 @@ The transformer architecture is the current mainstream architecture used for the
 
 #### How it works
 
+* Each word looks at all the other words.
+* The model assigns attention scores — higher scores mean “this other word is important for understanding me.”
+* The model then combines information from all the words, weighted by how much attention it gives to each.
+
+#### Detailed
+
+* We have an **input sequence** (e.g. a prompt)
+* **Each token** in the input sequence must be **converted to a "word embedding"**
+    * A word embedding is a vector representation of a token in a highly dimensional space.
+    * Computers can only work with numbers, so vectors are used for all processing.
+* Assign **3 vectors to each token** in an input sequence.
+    * All vectors have the same fixed length.
+    * Vector length is set by the model at training.
+    $$
+    \begin{bmatrix}
+    a & b \\
+    c & d
+    \end{bmatrix}
+    $$
 
 
 
