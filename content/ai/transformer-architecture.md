@@ -29,19 +29,30 @@ The transformer architecture is the current mainstream architecture used for the
 #### Detailed
 
 * We have an **input sequence** (e.g. a prompt)
+    * Example `How Are You` (and for the sake of simplicity in the explanation, `one word == one token`)
 * **Each token** in the input sequence must be **converted to a "word embedding"**
     * A word embedding is a vector representation of a token in a highly dimensional space.
     * Computers can only work with numbers, so vectors are used for all processing.
 * Assign **3 vectors to each token** in an input sequence.
     * All vectors have the same fixed length.
     * Vector length is set by the model at training.
-    $$
-    \begin{bmatrix}
-    a & b \\
-    c & d
-    \end{bmatrix}
-    $$
+    * For our example the vector length is `4`.
+    * Example of the word embeddings of our input sequence.
+        * `how` 
 
+$$
+\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}
+$$
+
+```katex
+\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}
+```
 
 
 #### Multi-Head Attention
@@ -58,16 +69,3 @@ The transformer architecture is the current mainstream architecture used for the
 
 ## Resources
 * [Attention Is All You Need - Paper](https://arxiv.org/abs/1706.03762)
-
-## Katex test
-
-$$
-\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
-$$
-
-```katex
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
-```
-$$
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
-$$
