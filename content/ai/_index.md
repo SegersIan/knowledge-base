@@ -128,6 +128,33 @@ There are different Architecture Types To Train/Get Word Embeddings.
 * **Recurrent Neural Network (RRN)**
 * **Long short-term Memory**
 
-## Transformer
-* [Attention Is All You Need - Paper](https://arxiv.org/abs/1706.03762)
+## Foundation Models 
+
+### Parameters
+> The size of a model is measured by the amount of parameters.
+
+### Training Process
+* Big Data + Transformer Architecture allows to Train a model now
+* **Training Types**
+    * *Pre-Training* - Model takes the raw data as input - with an **objective function** - and performs self-supervised learning that doesn't require labels.
+        * *Objective Function* is the rule that tells the model how wrong it is and helps it learn to make better predictions.
+            * For most LLMs, the objective function is the cross-entropy loss — it measures how far off the model’s predicted word probabilities are from the actual correct word.
+            * Other non language models might have "predicting the right next pixel".
+    * *Fine-tuning* - Customize the pre-trained model to become good at a specific task (without changing the weights significantly that came from pre-training)
+        * Pre-training was general school, fine tuning is specializing.
+        * During fine tuning, the new model transfers knowledge from its pretraining (basic school).
+
+### Benefits
+
+* **Reusability** - The pre-training is the heavy lifting, which can then be reused for finetuning to a specific domain which is less expensive and intensive.
+* **Elimination Of Annotation** - No need to have labeled data (cause of self supervision), making the data preparation much easier.
+* **Multimodality** - Capability to take information in varios formats and generate output in any format.
+
+### Risks
+
+* **Environmental Impact**
+* **Inherent Bias** - The available data does not express all opinions and ideas, causing bias
+* **Privacy & Security** - Used data can contain IP and sensitive content that is not intended to be shared
+* **Hallicunations** - Models are trained to predict the best nest word, not the truth.
+* **Explainability** - Hard to decode and understand the output that is generated
 
