@@ -28,6 +28,10 @@ The transformer architecture is the current mainstream architecture used for the
 
 #### Detailed
 
+* Computers work with numbers, not text, so they need to endocde any text to numerical representations. 
+* LLMs use tokens as their basic "unit" of text. Each token has a vector representation (aka word embedding)
+* 
+
 * We have an **input sequence** (e.g. a prompt)
     * Example `How Are You` (and for the sake of simplicity in the explanation, `one word == one token`)
 * **Each token** in the input sequence must be **converted to a "word embedding"**
@@ -38,9 +42,9 @@ The transformer architecture is the current mainstream architecture used for the
     * Vector length is set by the model at training.
     * For our example the vector length is `4`.
     * Example of the word embeddings of our input sequence.
-        * `how` => $\begin{bmatrix} 0.8 & -1.8 & 0.6 & -0.5 \end{bmatrix}$
-        * `are` => $\begin{bmatrix} -1.6 & 1.3 & -1.9 & 0.4 \end{bmatrix}$
-        * `you` => $\begin{bmatrix} -0.3 & 0.7 & -1.4 & -0.9 \end{bmatrix}$
+        * `how` => {{< katex >}}\\begin{bmatrix} 0.8 & -1.8 & 0.6 & -0.5 \end{bmatrix}{{< /katex >}}
+        * `are` => {{< katex >}}\begin{bmatrix} -1.6 & 1.3 & -1.9 & 0.4 \end{bmatrix}{{< /katex >}}
+        * `you` => {{< katex >}}\begin{bmatrix} -0.3 & 0.7 & -1.4 & -0.9 \end{bmatrix}{{< /katex >}}
 
 
 
