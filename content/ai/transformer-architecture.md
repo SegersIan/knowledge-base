@@ -52,7 +52,7 @@ The transformer architecture is the current mainstream architecture used for the
 ##### Detailed
 
 * Calculate the **attention score** for each token:
-    * The embedding for an input token is expressed as \\( \mathbf{x}_i \\)
+    * The embedding for an input token is expressed as \\( \mathbf{x}_i \\) (which includes the positional encoding already)
     * For each token we need the following vector representations:
         * **Query vector** (\\( \mathbf{q}_i \\)) : what this token is asking for?
             * What am I looking for in other tokens?
