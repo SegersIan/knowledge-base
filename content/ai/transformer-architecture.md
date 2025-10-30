@@ -7,11 +7,32 @@ The transformer architecture is the current mainstream architecture used for the
 
 ![omg](../assets/transformer_arch_1.png)
 
+## Basics
+
+* **Context**
+    * Computers work with numbers, not text, so they need to encode any text to numerical representations. 
+    * LLMs use tokens as their basic "unit" of text. Each token has a vector representation (aka word embedding)
+    * All embeddings are of the same fixed length which is set/defined before the model is trained.
+        * This is called the **Embedding Dimension** {{< katex >}} d_{\text{model}} {{ /katex }}
+        * *This dimension is super important, all laywers, steps etc in the architecture will use the same dimension to do calculations*.
+        * In our example we will use a length of `4`
+* 1. We have an **input sequence** (e.g. a prompt)
+    * Example `How Are You` (and for the sake of simplicity in the explanation, `one word == one token`)
+* 2. **Each token** in the input sequence must be **converted to a "(word) embedding"**
+    * A *tokenizer* converts the input sequence into tokens.
+        * `[How, Are, You]`
+    * Then each token is mapped to their Token ID from the model's vocabulary.
+         * `[1234, 456, 23]`
+    * Then for each Token ID their corresponding embedding can be retrieved.
+        * "How" (tokenId `1234`) => {{< katex >}} \begin{bmatrix} 0.8 & -1.8 & 0.6 & -0.5 \end{bmatrix} {{< /katex >}}
+        * "Are" (tokenId `456`) => {{< katex >}} \begin{bmatrix} -1.6 & 1.3 & -1.9 & 0.4 \end{bmatrix} {{< /katex >}}
+        * "You" (tokenId `23`) => {{< katex >}} \begin{bmatrix} -0.3 & 0.7 & -1.4 & -0.9 \end{bmatrix} {{< /katex >}}
+
 ## Components
 
 ### Self-Attention Mechanism
 
-### Definition
+#### Definition
 > Self-attention is a way for the model to look at all the words in a sentence at once and decide which ones are important to each other when figuring out meaning.
 
 * Captures context, relationships, and meaning across whole sentences or paragraphs.
@@ -25,27 +46,6 @@ The transformer architecture is the current mainstream architecture used for the
 * Each word looks at all the other words.
 * The model assigns attention scores — higher scores mean “this other word is important for understanding me.”
 * The model then combines information from all the words, weighted by how much attention it gives to each.
-
-#### Detailed
-
-* Computers work with numbers, not text, so they need to endocde any text to numerical representations. 
-* LLMs use tokens as their basic "unit" of text. Each token has a vector representation (aka word embedding)
-* 
-
-* We have an **input sequence** (e.g. a prompt)
-    * Example `How Are You` (and for the sake of simplicity in the explanation, `one word == one token`)
-* **Each token** in the input sequence must be **converted to a "word embedding"**
-    * A word embedding is a vector representation of a token in a highly dimensional space.
-    * Computers can only work with numbers, so vectors are used for all processing.
-* Assign **3 vectors to each token** in an input sequence.
-    * All vectors have the same fixed length.
-    * Vector length is set by the model at training.
-    * For our example the vector length is `4`.
-    * Example of the word embeddings of our input sequence.
-        * `how` => {{< katex >}}\\begin{bmatrix} 0.8 & -1.8 & 0.6 & -0.5 \end{bmatrix}{{< /katex >}}
-        * `are` => {{< katex >}}\begin{bmatrix} -1.6 & 1.3 & -1.9 & 0.4 \end{bmatrix}{{< /katex >}}
-        * `you` => {{< katex >}}\begin{bmatrix} -0.3 & 0.7 & -1.4 & -0.9 \end{bmatrix}{{< /katex >}}
-
 
 
 #### Multi-Head Attention
