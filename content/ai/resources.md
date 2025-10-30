@@ -21,4 +21,6 @@
 * https://martinfowler.com/articles/agentic-ai-security.html
 * https://www.continue.dev/
 * https://docs.continue.dev/guides/overview#mcp-integration-cookbooks
+* https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk
+* https://newsletter.pragmaticengineer.com/p/how-claude-code-is-built
 * 
