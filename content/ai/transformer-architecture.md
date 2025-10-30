@@ -52,9 +52,28 @@ The transformer architecture is the current mainstream architecture used for the
 * Calculate the **attention score** for each token:
     * The embedding for an input token is expressed as {{< katex >}} \mathbf{x}_i {{< /katex >}} 
     * For each token we need the following vector representations:
-        * **Query vector** \\( \mathbf{q}_i \\)
-        * **Key vector** \\( \mathbf{k}_i \\)
-        * **Value vector** \\( \mathbf{v}_i \\)
+        * **Query vector** (\\( \mathbf{q}_i \\)) : what this token is asking for?
+            * What am I looking for in other tokens?
+        * **Key vector** (\\( \mathbf{k}_i \\) )) : what this token offers?
+            * What kind of information do I have that others might need?
+        * **Value vector** (\\( \mathbf{v}_i \\)) : the actual information content that can be shared?
+            * Here’s the stuff you can take from me if you attend to me.
+    * Illistruative example
+        * Imagine you’re in a classroom with students working on a group discussion.
+        * Each student is a token (a word in a sentence).
+        * They’re all trying to listen to each other and decide who has the information they need.
+             * **Query vector** - “What am I looking for in other students?”
+                * Think of your Query as the question you have in your mind.
+                * Example: You’re the student “dog” in the sentence “The dog chased the ball.”
+                * “Who tells me what I’m doing?” (You’re looking for the verb.)
+                * So your Query describes what kind of information you want from others.
+             * **Key vector** - “What kind of information do I have that others might need?”
+                * Example: The student “chased” (the verb) has a Key that says:
+                * “I can tell others what action is happening.”
+                * So if another token is looking for an action (like “dog”), they’ll notice that your Key matches what they’re querying.
+             * **Value vector** - “Here’s the actual information I can share.”
+                * if a student decides that another student’s Key is relevant, they attend to that student and take their Value — the actual content.
+                * Example: Once “dog” realizes “chased” has the Key it was looking for, it takes its Value — maybe information like “the action is chasing” — to understand the full meaning.
     * Each of these is obtained by multiplying the embedding with a different weight matrix — parameters the model learns during training.
         * **Query vector** \\( \mathbf{q}_i = \mathbf{x}_i \mathbf{W}_Q \\)
         * **Key vector** \\( \mathbf{k}_i = \mathbf{x}_i \mathbf{W}_K \\)
