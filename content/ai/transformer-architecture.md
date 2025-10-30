@@ -13,7 +13,7 @@ The transformer architecture is the current mainstream architecture used for the
     * Computers work with numbers, not text, so they need to encode any text to numerical representations. 
     * LLMs use tokens as their basic "unit" of text. Each token has a vector representation (aka word embedding)
     * All embeddings are of the same fixed length which is set/defined before the model is trained.
-        * This is called the **Embedding Dimension** {{< katex >}} d_{\text{model}} {{ /katex }}
+        * This is called the **Embedding Dimension** {{< katex >}} d_{\text{model}} {{< /katex >}}
         * *This dimension is super important, all laywers, steps etc in the architecture will use the same dimension to do calculations*.
         * In our example we will use a length of `4`
 * 1. We have an **input sequence** (e.g. a prompt)
