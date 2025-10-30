@@ -54,7 +54,7 @@ The transformer architecture is the current mainstream architecture used for the
     * For each token we need the following vector representations:
         * **Query vector** (\\( \mathbf{q}_i \\)) : what this token is asking for?
             * What am I looking for in other tokens?
-        * **Key vector** (\\( \mathbf{k}_i \\) )) : what this token offers?
+        * **Key vector** (\\( \mathbf{k}_i \\)) : what this token offers?
             * What kind of information do I have that others might need?
         * **Value vector** (\\( \mathbf{v}_i \\)) : the actual information content that can be shared?
             * Here’s the stuff you can take from me if you attend to me.
@@ -74,11 +74,15 @@ The transformer architecture is the current mainstream architecture used for the
              * **Value vector** - “Here’s the actual information I can share.”
                 * if a student decides that another student’s Key is relevant, they attend to that student and take their Value — the actual content.
                 * Example: Once “dog” realizes “chased” has the Key it was looking for, it takes its Value — maybe information like “the action is chasing” — to understand the full meaning.
+    * The model has 3 different Weight matrices:
+        * \\( \mathbf{W}_Q \\) - The *Query** weight matrix.
+        * \\( \mathbf{W}_K \\) - The *Key** weight matrix.
+        * \\( \mathbf{W}_V \\) - The *Value** weight matrix.
     * Each of these is obtained by multiplying the embedding with a different weight matrix — parameters the model learns during training.
         * **Query vector** \\( \mathbf{q}_i = \mathbf{x}_i \mathbf{W}_Q \\)
         * **Key vector** \\( \mathbf{k}_i = \mathbf{x}_i \mathbf{W}_K \\)
         * **Value vector** \\( \mathbf{v}_i = \mathbf{x}_i \mathbf{W}_V \\)
-
+    * 
 
 * TODO... Similarity Score
 
