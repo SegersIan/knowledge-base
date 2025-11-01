@@ -55,11 +55,11 @@ The transformer architecture is the current mainstream architecture used for the
     * Goal: The self-attention mechanism allows each token in an input sequence to determine how much attention it should pay to every other token in the same sequence when computing its representation.
     * The embedding for an input token is expressed as \\( \mathbf{x}_i \\) (which includes the positional encoding already)
     * For each token we need the following vector representations:
-        * **Query vector** (\\( \mathbf{q}_i \\)) : what this token is asking for?
+        * **Query vector** \\( \mathbf{q}_i \\) : what this token is asking for?
             * What am I looking for in other tokens?
-        * **Key vector** (\\( \mathbf{k}_i \\)) : what this token offers?
+        * **Key vector** \\( \mathbf{k}_i \\) : what this token offers?
             * What kind of information do I have that others might need?
-        * **Value vector** (\\( \mathbf{v}_i \\)) : the actual information content that can be shared?
+        * **Value vector** \\( \mathbf{v}_i \\) : the actual information content that can be shared?
             * Here’s the stuff you can take from me if you attend to me.
     * Illistruative example
         * Imagine you’re in a classroom with students working on a group discussion.
@@ -139,7 +139,6 @@ This answers multiple questions, like who wants to visit rome? where is romem si
             * **Key vector** \\( \mathbf{k}_i = \mathbf{x}_i \mathbf{W}_K \\)
             * **Value vector** \\( \mathbf{v}_i = \mathbf{x}_i \mathbf{W}_V \\)
     * For a single token, you create per "head" basically another Q, K and V vectors. That means that "per head" there is another weight matrix. So if you want 5 heads, the models needs to have 5 different weight matrixes for Q, K and V. That means, the head count is set and defined at training stage.
-
 
 ### Positional Encoding
 
