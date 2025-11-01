@@ -52,6 +52,7 @@ The transformer architecture is the current mainstream architecture used for the
 ##### Detailed
 
 * Calculate the **attention score** for each token:
+    * Goal: The self-attention mechanism allows each token in an input sequence to determine how much attention it should pay to every other token in the same sequence when computing its representation.
     * The embedding for an input token is expressed as \\( \mathbf{x}_i \\) (which includes the positional encoding already)
     * For each token we need the following vector representations:
         * **Query vector** (\\( \mathbf{q}_i \\)) : what this token is asking for?
@@ -76,6 +77,7 @@ The transformer architecture is the current mainstream architecture used for the
              * **Value vector** - “Here’s the actual information I can share.”
                 * if a student decides that another student’s Key is relevant, they attend to that student and take their Value — the actual content.
                 * Example: Once “dog” realizes “chased” has the Key it was looking for, it takes its Value — maybe information like “the action is chasing” — to understand the full meaning.
+            * Conclusion: When you go through all tokens in a sequence, we need to deterine for each token how much attention it will pay (relatively) to each other token of that same sequence. So you go through each token, for the token you are processing, you need the "query" vector, cause this is your "search query" you could say, and from all other tokens you use the "key vector" cause that key is used to match the query token (e.g. my query token is "beer", what other tokens have a key "beer, meaning they have something to say about beer.). Eventually later the value vector can be used to get actually the content of related token (e.g. "Trampist" , "Pils", ...).
     * The model has 3 different Weight matrices:
         * \\( \mathbf{W}_Q \\) - The **Query** weight matrix.
         * \\( \mathbf{W}_K \\) - The **Key** weight matrix.
@@ -95,7 +97,14 @@ The transformer architecture is the current mainstream architecture used for the
         ```
         
 
-* TODO... Similarity Score
+* To calculate for a token, to which other tokens it should pay most attention to, we can use the concept of "Similarity Between Vectors" in maths. To calculate the similarity between vector `a` and `b` of dimension `k` we use the following formula
+```katex
+similarity(a, b) = \frac{a \cdot b}{\sqrt{k}}
+```
+    * The reason we divide by \\(similarity(a, b) = \frac{a \cdot b}{\sqrt{k}}\\) is a normalization trick to prevent very large dot products (especially in high-dimensional spaces) from causing the attention weights to become unstable or skewed.
+    * This normalization is not ALWAYS done, so it could be that it's not a part, but usually it does.
+* So we use this concept of "Similarity Between Vectors" to calculate the **Attention Score**, that score tells how much a token should pay attention to other tokens. We do this by calculturing the similarity between the query vector of the current token and the key vector of a given other token.
+* Now we have the **attention SCORE**, but we want the **attention WEIGHT**. Attention scores tell how similar they are but now yet how much attention we should give them, By weighing, it becomes very clear, cause all the weights add up to 1. So you could say, I should give 74% of my attention to this token.
 
 #### Multi-Head Attention
 
