@@ -138,7 +138,8 @@ This answers multiple questions, like who wants to visit rome? where is romem si
             * **Query vector** \\( \mathbf{q}_i = \mathbf{x}_i \mathbf{W}_Q \\)
             * **Key vector** \\( \mathbf{k}_i = \mathbf{x}_i \mathbf{W}_K \\)
             * **Value vector** \\( \mathbf{v}_i = \mathbf{x}_i \mathbf{W}_V \\)
-    * For a single token, you create per "head" basically another Q, K and V vectors. 
+    * For a single token, you create per "head" basically another Q, K and V vectors. That means that "per head" there is another weight matrix. So if you want 5 heads, the models needs to have 5 different weight matrixes for Q, K and V. That means, the head count is set and defined at training stage.
+
 
 ### Positional Encoding
 
