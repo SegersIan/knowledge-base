@@ -142,11 +142,32 @@ This answers multiple questions, like who wants to visit rome? where is romem si
 
 ### Positional Encoding
 
+* The word embedding for a token would be exactly the same as the word embedding of another token that shares the same tokenID. Position in a sequence matters. So therefore we use positional encoding.
+* We take the word embedding vector is added to a positional embedding vector. The sum will be the input vector used for all the other processing (e.g. for self attention).
+* Sunusoidal functions are used to calculate position emmbeddings, cause it can handle varying input length and capture the relative distance between words. 
+
 ### Add and Norm
+
+* This block is added after every sublayer (in the orignal transformer architecure)
+* The block implements 2 techniques (add and norm) for making the training process more efficient.
+* **Add**
+    * "Residual Connection"
+    * Idea: Add the `input` to the `output` of the sublayer.
+* **Normalization**
+    * Idea: Normalize the output generate after each layer.
+        * Computes the mean and standard deviation across the word embedding deimension.
+        * Result: Ensures a proper flow of gradients during training and stability of the model.
+* The combination of **Residual Connection"** and **layer normalization** solves the vanishing gradient problem which is common in deep learning.
+
 
 ### Feed-Forward Network
 
+In a Transformer, the Feed-Forward Network is a small two-layer neural network applied to each token separately — it refines the token’s representation after attention and gives the model more learning power.
+
 ### Encoder and Decoder
+
+* **Encoder** component is used for taking plain languge and convert it to a vector presentation.
+* **Decodeer** component is used for taking the generated output (vector presentation) to human interpretable language.
 
 ## Types Of Transformers
 
@@ -192,3 +213,27 @@ k_{jd_k}
 ]
 ```
 That “⊤” (transpose) flips ( q_i ) from a column into a row, so you can multiply it with ( k_j ) and get a **single number** (a scalar).
+
+### Vanishing Gradient Problem
+
+When a neural network learns, it updates its weights using **gradients** — basically little nudges that tell it *how much to change* to make the output better.
+
+But in very **deep networks** (many layers), those gradients have to be passed **backward** through all the layers (this is called *backpropagation*).
+
+If each layer makes the gradient a bit smaller, by the time it reaches the early layers (near the input), it’s almost **zero** — it *vanishes*.
+
+When that happens:
+
+* The early layers stop learning.
+* The network’s training gets very slow or stuck.
+* The model might only learn in the top layers.
+
+That’s the **vanishing gradient problem**.
+
+#### Simple analogy
+
+Imagine you’re passing a message through a long chain of people by whispering.
+Each person hears it a little quieter and passes it on.
+After 50 people, the message is *barely a whisper* — or completely gone.
+
+That’s what happens to gradients in deep networks — they fade away before reaching the start.
