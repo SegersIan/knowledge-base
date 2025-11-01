@@ -116,6 +116,29 @@ The transformer architecture is the current mainstream architecture used for the
                 * Weights (= [7.39/11.11,; 2.72/11.11,; 1/11.11] \approx [0.665,; 0.245,; 0.090]).
 
 #### Multi-Head Attention
+Think of multi-headattention with "h" different copies of a single self-attention head. Each attention head focusses on another aspect of the language, making its understanding richer.
+
+> I want to visit Rome, the capital city of Italy.
+
+This answers multiple questions, like who wants to visit rome? where is romem situated? What is the capital of italy? so there is a lot of different things happening, so different heads will capture different contexts and focus to a variert of information.
+
+* Each head
+    * has its own set of linear projections for Q, K, V;
+    * focuses on a different aspect of the token relationships.
+* So when you’re processing *token i:
+    * head 1 might focus on syntactic roles (like “who’s the subject?”),
+    * head 2 might focus on semantic relatedness,
+    * head 3 might look for position or structure, etc.
+* In practices
+    * Remember that we had a weight matrix in the model.
+        * \\( \mathbf{W}_Q \\) - The **Query** weight matrix.
+        * \\( \mathbf{W}_K \\) - The **Key** weight matrix.
+        * \\( \mathbf{W}_V \\) - The **Value** weight matrix.
+        * We would calculate the Q, K, and V vectors by
+            * **Query vector** \\( \mathbf{q}_i = \mathbf{x}_i \mathbf{W}_Q \\)
+            * **Key vector** \\( \mathbf{k}_i = \mathbf{x}_i \mathbf{W}_K \\)
+            * **Value vector** \\( \mathbf{v}_i = \mathbf{x}_i \mathbf{W}_V \\)
+    * For a single token, you create per "head" basically another Q, K and V vectors. 
 
 ### Positional Encoding
 
