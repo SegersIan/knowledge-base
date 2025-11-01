@@ -86,25 +86,34 @@ The transformer architecture is the current mainstream architecture used for the
         * **Query vector** \\( \mathbf{q}_i = \mathbf{x}_i \mathbf{W}_Q \\)
         * **Key vector** \\( \mathbf{k}_i = \mathbf{x}_i \mathbf{W}_K \\)
         * **Value vector** \\( \mathbf{v}_i = \mathbf{x}_i \mathbf{W}_V \\)
-    * Now can calculate the **similarity score** (which we need for calculating the **attention score**).
-        * Defintion: Raw measure of how well each key aligns with a query
-        * Large positive values mean “highly related,” small or negative values mean “unrelated.”
-        * These scores are the core signals telling the model which tokens (keys) should pay more attention to which current token (query).
-        * Fomula for calculating the similarity betweenany 2 arbitrary vectors of the same length.
+    * To calculate for a token, to which other tokens it should pay most attention to, we can use the concept of "Similarity Between Vectors" in maths. To calculate the similarity between vector `a` and `b` of dimension `k` we use the following formula
+    ```katex
+    similarity(a, b) = \frac{a \cdot b}{\sqrt{k}}
+    ```
+        * The reason we divide by \\(similarity(a, b) = \frac{a \cdot b}{\sqrt{k}}\\) is a normalization trick to prevent very large dot products (especially in high-dimensional spaces) from causing the attention weights to become unstable or skewed.
+        * This normalization is not ALWAYS done, so it could be that it's not a part, but usually it does.
+    * So we use this concept of "Similarity Between Vectors" to calculate the **Attention Score**, that score tells how much a token should pay attention to other tokens. We do this by calculturing the similarity between the query vector of the current token and the key vector of a given other token.
+        * The normal similarity function:
         ```katex
-        similarity(a, b) = 
-        \text{similarity}_{ab} = \frac{Q_a \cdot K_b}{\sqrt{d_k}}
+        similarity(a, b) = \frac{a \cdot b}{\sqrt{k}}
         ```
-        
-
-* To calculate for a token, to which other tokens it should pay most attention to, we can use the concept of "Similarity Between Vectors" in maths. To calculate the similarity between vector `a` and `b` of dimension `k` we use the following formula
-```katex
-similarity(a, b) = \frac{a \cdot b}{\sqrt{k}}
-```
-    * The reason we divide by \\(similarity(a, b) = \frac{a \cdot b}{\sqrt{k}}\\) is a normalization trick to prevent very large dot products (especially in high-dimensional spaces) from causing the attention weights to become unstable or skewed.
-    * This normalization is not ALWAYS done, so it could be that it's not a part, but usually it does.
-* So we use this concept of "Similarity Between Vectors" to calculate the **Attention Score**, that score tells how much a token should pay attention to other tokens. We do this by calculturing the similarity between the query vector of the current token and the key vector of a given other token.
-* Now we have the **attention SCORE**, but we want the **attention WEIGHT**. Attention scores tell how similar they are but now yet how much attention we should give them, By weighing, it becomes very clear, cause all the weights add up to 1. So you could say, I should give 74% of my attention to this token.
+        * Becomes now as attention score formula between token `i` and token `j`.
+        ```katex
+        \text{attention score}_{ij} = \frac{Q_i^{\top} \cdot K_j}{\sqrt{d_k}}
+        ```
+        * The `T` in \\(Q_i^{\top} \\) means "transpose", cause that's how you can do mathemetically the dot product, it's just a maths thing.
+    * Now we have the **attention SCORE**, but we want the **attention WEIGHT**. Attention scores tell how similar they are but now yet how much attention we should give them, By weighing, it becomes very clear, cause all the weights add up to 1. So you could say, I should give 74% of my attention to this token.
+        * We apply `softmax` to our attention scores.
+        ```katex
+            \text{weights}*{i,j} ;=; \frac{e^{\text{scores}*{i,j}}}{\sum_{j'} e^{\text{scores}_{i,j'}}}
+        ```
+            * Exponentiate to make all numbers positive.
+            * Normalize so each row sums to 1.
+            * Result: a probability-like distribution saying “how much should token (i) listen to token (j)?”
+            * Example: Suppose one token compares to three tokens and gets scaled scores \\([2,;1,;0]\\).
+                * (e^2 \approx 7.39,; e^1 \approx 2.72,; e^0 = 1).
+                * Sum (= 7.39 + 2.72 + 1 \approx 11.11).
+                * Weights (= [7.39/11.11,; 2.72/11.11,; 1/11.11] \approx [0.665,; 0.245,; 0.090]).
 
 #### Multi-Head Attention
 
@@ -120,3 +129,43 @@ similarity(a, b) = \frac{a \cdot b}{\sqrt{k}}
 
 ## Resources
 * [Attention Is All You Need - Paper](https://arxiv.org/abs/1706.03762)
+
+## Math Appendix 
+
+### Transpose
+
+If your query ( q_i ) and key ( k_j ) are **column vectors** (like in most linear algebra conventions):
+```katex
+[
+q_i =
+\begin{bmatrix}
+q_{i1} \
+q_{i2} \
+\vdots \
+q_{id_k}
+\end{bmatrix},
+\quad
+k_j =
+\begin{bmatrix}
+k_{j1} \
+k_{j2} \
+\vdots \
+k_{jd_k}
+\end{bmatrix}
+]
+
+then the **dot product** is written as:
+
+[
+q_i^{\top} k_j =
+[q_{i1}, q_{i2}, \dots, q_{id_k}]
+\begin{bmatrix}
+k_{j1} \
+k_{j2} \
+\vdots \
+k_{jd_k}
+\end{bmatrix}
+= \sum_{\ell=1}^{d_k} q_{i\ell} k_{j\ell}
+]
+```
+That “⊤” (transpose) flips ( q_i ) from a column into a row, so you can multiply it with ( k_j ) and get a **single number** (a scalar).
