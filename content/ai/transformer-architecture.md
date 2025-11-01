@@ -84,7 +84,16 @@ The transformer architecture is the current mainstream architecture used for the
         * **Query vector** \\( \mathbf{q}_i = \mathbf{x}_i \mathbf{W}_Q \\)
         * **Key vector** \\( \mathbf{k}_i = \mathbf{x}_i \mathbf{W}_K \\)
         * **Value vector** \\( \mathbf{v}_i = \mathbf{x}_i \mathbf{W}_V \\)
-    * 
+    * Now can calculate the **similarity score** (which we need for calculating the **attention score**).
+        * Defintion: Raw measure of how well each key aligns with a query
+        * Large positive values mean “highly related,” small or negative values mean “unrelated.”
+        * These scores are the core signals telling the model which tokens (keys) should pay more attention to which current token (query).
+        * Fomula for calculating the similarity betweenany 2 arbitrary vectors of the same length.
+        ```katex
+        similarity(a, b) = 
+        \text{similarity}_{ab} = \frac{Q_a \cdot K_b}{\sqrt{d_k}}
+        ```
+        
 
 * TODO... Similarity Score
 
