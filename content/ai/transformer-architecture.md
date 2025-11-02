@@ -174,6 +174,7 @@ In a Transformer, the Feed-Forward Network is a small two-layer neural network a
 
 #### Encoder
 
+![img](../assets/transformer_arch_3_encoder.png)
 
 The encoder is composed of a stack of 6 identical layers. Each layer has two sub-layers. The first is a multi-head self-attention mechanism, and the second is a simple, position-wise fully connected feed-forward network. We employ a residual connection around each of the two sub-layers, followed by layer normalization. That is, the output of each sub-layer is `LayerNorm(x+Sublayer(x))` , where `Sublayer(x)` is the function implemented by the sub-layer itself. To facilitate these residual connections, all sub-layers in the model, as well as the embedding layers, produce outputs of dimension d model = 512 .
 
