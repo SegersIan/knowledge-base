@@ -174,7 +174,7 @@ In a Transformer, the Feed-Forward Network is a small two-layer neural network a
 
 #### Encoder
 
-![img](../assets/transformer_arch_3_encoder.png)
+![img](../assets/transformer_arch_3_encoder.jpg)
 
 * You can recognize all the components that we discussed and the order.
 
@@ -186,7 +186,7 @@ The encoder is composed of a stack of 6 identical layers. Each layer has two sub
 
 * The nature of the decoder is "auto-regregressive", it used the previously generated output to generate the new output. So basically, once it decided on the next token, it needs to again take that new token in considerating to find the most probably token after that.
 
-![omg](../assets/transformer_arch_3_decoder_autoregrssive.png)
+![omg](../assets/transformer_arch_3_decoder_autoregrssive.jpg)
 
 The decoder is also composed of a stack of 6 identical layers. In addition to the two sub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack. Similar to the encoder, we employ residual connections around each of the sub-layers, followed by layer normalization. We also modify the self-attention sub-layer in the decoder stack to prevent positions from attending to subsequent positions. This masking, combined with fact that the output embeddings are offset by one position, ensures that the predictions for position i can depend only on the known outputs at positions less than i.
 
