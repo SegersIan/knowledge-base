@@ -180,7 +180,6 @@ In a Transformer, the Feed-Forward Network is a small two-layer neural network a
 
 If your query ( q_i ) and key ( k_j ) are **column vectors** (like in most linear algebra conventions):
 ```katex
-[
 q_i =
 \begin{bmatrix}
 q_{i1} \
@@ -196,11 +195,10 @@ k_{j2} \
 \vdots \
 k_{jd_k}
 \end{bmatrix}
-]
-
+```
 then the **dot product** is written as:
+```katex
 
-[
 q_i^{\top} k_j =
 [q_{i1}, q_{i2}, \dots, q_{id_k}]
 \begin{bmatrix}
@@ -210,7 +208,6 @@ k_{j2} \
 k_{jd_k}
 \end{bmatrix}
 = \sum_{\ell=1}^{d_k} q_{i\ell} k_{j\ell}
-]
 ```
 That “⊤” (transpose) flips ( q_i ) from a column into a row, so you can multiply it with ( k_j ) and get a **single number** (a scalar).
 
