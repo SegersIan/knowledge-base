@@ -188,9 +188,26 @@ The encoder is composed of a stack of 6 identical layers. Each layer has two sub
 
 ![omg](../assets/transformer_arch_3_decoder_autoregrssive.jpg)
 
+* The decoder starts decoding by generating the first token, which can be called the beginning of a sentence or `<bos>`, start of sequence or `<sos>`, `<start>`. This token signals the decoder to start generating the output, and the models keeps generating the output until it reachs the end of the seauence or `<eos>` or the maximum output length.
+
+* The masked multi-head makes sure to only predict on the tokens that are generated before the current position `i`.
+
 The decoder is also composed of a stack of 6 identical layers. In addition to the two sub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack. Similar to the encoder, we employ residual connections around each of the sub-layers, followed by layer normalization. We also modify the self-attention sub-layer in the decoder stack to prevent positions from attending to subsequent positions. This masking, combined with fact that the output embeddings are offset by one position, ensures that the predictions for position i can depend only on the known outputs at positions less than i.
 
 ## Types Of Transformers
+
+* **Encoder-Decoder Transformers** - Classic architecture like in the "all you need is attention" paper. The encoder block generates vectors and the decoder block which generates output based on those vectors.
+    * Models also known as `sequence-to-sequence` models.
+    * Example Models: Bart, Pegasus, T5
+* **Encoder-Only Transformers** 
+    * Models also known as `auto-encoding ` models.
+    * Attention layer can access all the words because there is no masking, thus making the attention bidirectional in nature.
+    * Example Models: BERT, RoBERTa, ALBERT, DeBERTa
+* **Decoder-Only Transformers**
+    * Models also known as `auto-regressive` models.
+    * Attentuin layer can't access the future words in the sentence, thus making them undirectional in nature.
+    * General pre-training objective is generally to predict the next word in the sentence.
+    * Example Models: GPT-2, GPT, GPT-3.
 
 ## Resources
 * [Attention Is All You Need - Paper](https://arxiv.org/abs/1706.03762)
