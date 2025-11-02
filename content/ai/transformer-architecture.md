@@ -116,6 +116,9 @@ The transformer architecture is the current mainstream architecture used for the
                 * Weights (= [7.39/11.11,; 2.72/11.11,; 1/11.11] \approx [0.665,; 0.245,; 0.090]).
 
 #### Multi-Head Attention
+
+![img](../assets/transformer_arch_2.png)
+
 Think of multi-headattention with "h" different copies of a single self-attention head. Each attention head focusses on another aspect of the language, making its understanding richer.
 
 > I want to visit Rome, the capital city of Italy.
@@ -168,6 +171,9 @@ In a Transformer, the Feed-Forward Network is a small two-layer neural network a
 
 * **Encoder** component is used for taking plain languge and convert it to a vector presentation.
 * **Decodeer** component is used for taking the generated output (vector presentation) to human interpretable language.
+
+#### Encoder
+
 
 ## Types Of Transformers
 
