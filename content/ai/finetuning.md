@@ -15,6 +15,13 @@ You **freeze the initial layers such that the existing weights remain intact, an
 
 **Transer Knowledfge** is what makes finetuning possible.
 
+```mermaid
+flowchart LR
+    A[car<br>(pre-training data)] -->|pre-training| B[base model]
+    B -->|fine tuning| C[fine tuned model]
+    D[tractor<br>(fine-tuning data)] -->|fine tuning| B
+```
+
 ### TEST
 
 {{< mermaid >}}
