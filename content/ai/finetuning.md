@@ -31,9 +31,7 @@ flowchart LR
 
 * **Instruction Tuning** - To make an LLM follow instructions given by you. This best uses labeled data (supervised learning) as fine-tuning data, to do the fine tuning.
 * **Aligment Tuning** - Align it with certain values, like, human values, helpfulness, intent etc. Reinforcement training with a human feedback loop (the once who decides to give punishment or rewards) is the popular approach.
-
 ---
-
 ## Alignment Tuning
 ...todo
 
