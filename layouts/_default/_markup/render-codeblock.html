@@ -1,8 +1,10 @@
-{{- $lang := .Language | lower -}}
+{{/* Get the code fence language from attributes (works across Hugo versions) */}}
+{{- $lang := .Attributes.lang | default "" | lower -}}
+
 {{- if eq $lang "mermaid" -}}
-<div class="mermaid">
-{{ .Inner | safeHTML }}
-</div>
+  <div class="mermaid">
+    {{ .Inner | safeHTML }}
+  </div>
 {{- else -}}
-<pre><code class="language-{{ $lang }}">{{ .Inner | htmlEscape }}</code></pre>
+  <pre><code{{ if $lang }} class="language-{{ $lang }}"{{ end }}>{{ .Inner | htmlEscape }}</code></pre>
 {{- end -}}

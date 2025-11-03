@@ -22,6 +22,11 @@ sequenceDiagram
   Alice->>Bob: Hello Bob
 {{< /mermaid >}}
 
+{{< mermaid >}}
+graph TD
+  A --> B
+{{< /mermaid >}}
+
 orrr
 
 ```mermaid
