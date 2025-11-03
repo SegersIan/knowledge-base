@@ -17,28 +17,8 @@ You **freeze the initial layers such that the existing weights remain intact, an
 
 ```mermaid
 flowchart LR
-    A[car<br>(pre-training data)] -->|pre-training| B[base model]
-    B -->|fine tuning| C[fine tuned model]
-    D[tractor<br>(fine-tuning data)] -->|fine tuning| B
+    A["car (pre-training data)"] -->|"pre-training"| B["base model"]
+    B -->|"fine tuning"| C["fine tuned model"]
+    D["tractor (fine-tuning data)"] -->|"fine tuning"| B
+
 ```
-
-### TEST
-
-{{< mermaid >}}
-sequenceDiagram
-  Alice->>Bob: Hello Bob
-{{< /mermaid >}}
-
-{{< mermaid >}}
-graph TD
-  A --> B
-{{< /mermaid >}}
-
-orrr
-
-```mermaid
-graph TD
-  A --> B
-```
-
-
