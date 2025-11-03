@@ -21,3 +21,12 @@ You **freeze the initial layers such that the existing weights remain intact, an
 sequenceDiagram
   Alice->>Bob: Hello Bob
 {{< /mermaid >}}
+
+orrr
+
+```mermaid
+graph TD
+  A --> B
+```
+
+
