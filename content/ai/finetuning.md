@@ -13,7 +13,7 @@ You **freeze the initial layers such that the existing weights remain intact, an
 
 > You take a pre-trained model, adjust some model-weights and you have a new model without too much pain.
 
-**Transer Knowledfge** is what makes finetuning possible.
+**Transer Knowledfx`ge** is what makes finetuning possible.
 
 ```mermaid
 flowchart LR
@@ -22,3 +22,8 @@ flowchart LR
     D["tractor (fine-tuning data)"] -->|"fine tuning"| B
 
 ```
+
+## Finetuning Technique Categories
+
+* **Instruction Tuning** - To make an LLM follow instructions given by you. This best uses labeled data (supervised learning) as fine-tuning data, to do the fine tuning.
+* **Aligment Tuning** - Align it with certain values, like, human values, helpfulness, intent etc. Reinforcement training with a human feedback loop (the once who decides to give punishment or rewards) is the popular approach.
