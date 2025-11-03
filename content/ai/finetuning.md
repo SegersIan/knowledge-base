@@ -34,6 +34,23 @@ flowchart LR
 ---
 
 ## Instruction Tuning or Supervised Fine-tuning (SFT)
+> Train a pre-trained model on a relatively smaller dataset in a supervised manner.
+
+* Fine-tuning dataset schema example
+    * Record 1: 
+        * Instruction: <some instruction>
+        * Input: <some input text>
+        * Output: <some expected output text>
+    * Example Record
+        * Instruction: `Solve the equation, explain step-by-step`
+        * Input: `1+1`
+        * Output: `The answer is 2, because ...`
+* **Ways to construct the dataset**
+    * **Manual Creation** - Basic manual approach.
+    * **Use the existing NLP datasets** - There are a lof of existing NLP datasets for when supervised learning was/is used in NLP. 
+        * Example: Fine-Tuned Language Net, FLAN
+    * **Synthetic data** - Use LLMs to generate the data and maybe with some human help.
+* Many public datasets exists - ShareGPT, Dolly, LIMA, ... 
 
 ### Instruction Fine-Tuned Models
 
