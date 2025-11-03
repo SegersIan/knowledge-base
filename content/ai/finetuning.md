@@ -14,3 +14,10 @@ You **freeze the initial layers such that the existing weights remain intact, an
 > You take a pre-trained model, adjust some model-weights and you have a new model without too much pain.
 
 **Transer Knowledfge** is what makes finetuning possible.
+
+### TEST
+
+{{< mermaid >}}
+sequenceDiagram
+  Alice->>Bob: Hello Bob
+{{< /mermaid >}}
