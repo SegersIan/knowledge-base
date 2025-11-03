@@ -71,6 +71,11 @@ flowchart LR
 
 ### Understanding GPU for Fine-Tuning
 
+* **(Popular) Techniques to optimize fine-tuning**
+    * *Zero Redundanct Optimizer (ZeRo)* - used for memory optimization
+        * It removes redundancies that occur during parallel training
+    * *Fully Sharded Data Parallel (FSDP)* - Speeds up training
+        * Idea is to shard not just the model weights but also optimizer states and gradients.
 
 ---
 ## Alignment Tuning
