@@ -7,3 +7,15 @@
             (window.plausible.q = window.plausible.q || []).push(arguments);
         };
 </script>
+
+<!-- Mermaid Support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.mermaid) {
+    mermaid.initialize({
+      startOnLoad: true, securityLevel: 'loose', theme: 'default'
+    });
+  }
+});
+</script>
