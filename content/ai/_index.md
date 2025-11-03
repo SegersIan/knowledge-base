@@ -99,6 +99,31 @@ There are different Architecture Types To Train/Get Word Embeddings.
     * predicts the neighbors from the center word. 
     * Better for when data is large
 
+## RRN and LSTM
+
+* **Recurrent Neural Network (RRN)**
+* **Long short-term Memory**
+
+## Compute Unified Device Architecture (CUDA)
+
+### CUDA
+CUDA is a parallel computing platform and programming model developed by NVIDIA that lets developers use the GPU (graphics processing unit) for general-purpose computing.
+It allows coordination between the CPU and GPU, but the GPU — not the CPU — is what does the parallel computation.t Te CPU manages tasks, the GPU does the heavy parallel lifting.
+
+### CUDA COre
+* A CUDA Core is basically a single processing unit inside an NVIDIA GPU that executes one part of a parallel task.
+* A CPU has a few powerful cores that handle complex tasks one after another.
+* A GPU has thousands of smaller CUDA cores that handle many simple tasks at the same time — perfect for graphics rendering and AI computations.
+
+### Tensor Core
+
+* A Tensor Core is a specialized type of core inside newer NVIDIA GPUs, designed to speed up matrix and tensor (multi-dimensional array) math, which is the backbone of deep learning.
+* CUDA Cores → handle general parallel math (like adds, multiplies, etc.).
+* Tensor Cores → handle matrix multiplications and accumulations (the heavy stuff in neural networks) much faster and with mixed precision.
+* Tensor Cores are specialized hardware units in NVIDIA GPUs built to accelerate deep learning computations far beyond what regular CUDA cores can do.
+
+---
+
 ## History Of LLMs
 
 * **Rule-Based Language Models** - Rules & Regex (but extremely hard for an entire language)
@@ -123,10 +148,7 @@ There are different Architecture Types To Train/Get Word Embeddings.
         * Distributed word respresentation (*word embeddings*)
     * The word embeddigns/vectors were fed into the neural architecture.
 
-## RRN and LSTM
-
-* **Recurrent Neural Network (RRN)**
-* **Long short-term Memory**
+---
 
 ## Foundation Models 
 
