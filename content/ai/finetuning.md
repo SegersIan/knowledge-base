@@ -3,6 +3,8 @@
 ## In Plain Words
 When an LLM is done with the pre-training, then the model has passed its "general training", it has a lot of knowledge and it can then based on that, predict the best next token. But now you need to specialize it to your use case. So even the ability to ask it questions to get a "good" answer requires finetuning, cause you want to finetune it to answer questions well for example.
 
+---
+
 ## Technical Intro
 
 > The method wehre the parameters of a pre-trained model are tweaked by training it on acustom data set of interest to get a model with domain-specific knowledfe or expertise in following the instructions.
@@ -13,7 +15,7 @@ You **freeze the initial layers such that the existing weights remain intact, an
 
 > You take a pre-trained model, adjust some model-weights and you have a new model without too much pain.
 
-**Transer Knowledfx`ge** is what makes finetuning possible.
+**Transer Knowledge** is what makes finetuning possible.
 
 ```mermaid
 flowchart LR
@@ -23,7 +25,33 @@ flowchart LR
 
 ```
 
+---
+
 ## Finetuning Technique Categories
 
 * **Instruction Tuning** - To make an LLM follow instructions given by you. This best uses labeled data (supervised learning) as fine-tuning data, to do the fine tuning.
 * **Aligment Tuning** - Align it with certain values, like, human values, helpfulness, intent etc. Reinforcement training with a human feedback loop (the once who decides to give punishment or rewards) is the popular approach.
+
+---
+
+## Alignment Tuning
+...todo
+
+---
+
+## Parameter Efficent Model Tuning (PEFT)
+...todo
+
+### Adapter Tuning
+...todo
+
+### Soft Prompting
+...todo
+
+### Low-Rank Adaptation (LoRA)
+
+...todo
+
+### Quantized Low-Rank Adaptation (QLoRA)
+
+...todo
