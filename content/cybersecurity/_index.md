@@ -39,6 +39,9 @@ title: "Cybersecurity"
   * There are extended versions:
     * [PortaPack](https://lab401.com/products/portapack-h4m) (Shipped in EU!)
 * [Flipper Zero](https://lab401.com/collections/flipper-zero/products/flipper-zero)
+* [Proxmark 3](https://lab401.com/products/proxmark-3-rdv4?variant=12406152560751)
+    * https://www.youtube.com/watch?v=Ccm1caB6bao
+    
 
 ## Abbreviations
 
