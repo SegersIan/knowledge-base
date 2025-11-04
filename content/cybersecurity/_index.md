@@ -41,7 +41,7 @@ title: "Cybersecurity"
 * [Flipper Zero](https://lab401.com/collections/flipper-zero/products/flipper-zero)
 * [Proxmark 3](https://lab401.com/products/proxmark-3-rdv4?variant=12406152560751)
     * https://www.youtube.com/watch?v=Ccm1caB6bao
-    
+    * [ICopy-XS](https://icopyx.com/)
 
 ## Abbreviations
 
