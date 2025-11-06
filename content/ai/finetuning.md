@@ -79,6 +79,18 @@ flowchart LR
 
 ---
 ## Alignment Tuning
+> Definition: Alignment tuning is the process of adjusting a model to align its behavior with human values, preferences, and ethical guidelines, ensuring it produces correct, helpful, and harmless outputs. Meaning, just following an instruction is not enough.
+
+* How: **Reinforcement Learning with Human Feedback (RLHF)**
+    * **3 components**
+        * *Pre-Trained LLM* - The model to be aligned
+        * *Reward LLM* - The model which returns output using human feedback.
+            * Predicts human preference for another LLM's output, providing a scalar score to guide the training process
+        * *RL ALgorithm* - Reinforcement learning algoritm used to optimize the pre-trained LLM using the reward model.
+    * **3 Stages**
+        * *Instruction Fine-Tuning* - First we finetune the pre-trained LLM with instructing finetuning so the models can respond well to instructions. (First learn to handle insctructions before we teach you to use ethics in responding to these)
+        * *Getting Reward Model*
+        * *Getting Aligned Model*
 
 
 ---
