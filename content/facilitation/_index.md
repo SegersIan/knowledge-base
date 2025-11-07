@@ -672,14 +672,20 @@ Allows to identify different personalities. If you are able to locate/place your
 
 ## Resources
 
+### Books
+* [Book: Pocket Guide to Facilitating Human Connection - Touches on Experiential Facilitation](https://www.amazon.com/Facilitating-Connections-Littlefield-Self-Improvement-Teambuilding/dp/0996423974)
+* [Book: Ask Powerful questions - Touches on Dialogue Facilitation](https://www.amazon.com/Ask-Powerful-Questions-Create-Conversations/dp/1545322996)
+* [Book: Visual Meetings](https://www.adlibris.com/nb/bok/visual-meetings-9780470601785) (Book with good visualization to use during facilitation)
+* [Book: Game Storming](https://www.ark.no/produkt/boker/fagboker/gamestorming-20-9781098148089) (Book with "Activities" to use during facilitation, e.g. dot voting)
+
+### Links
 * [YouTube Channel: Chad Littlefield](https://www.youtube.com/@chad.littlefield)
 * [YouTube Channel: Facilitating XYZ](https://www.youtube.com/@facilitatingxyz5984)
 * [YouTube Channel: AJ&Smart](https://www.youtube.com/@AJSmart)
 * [YouTube Channel: Adriana Girdler (Project Management))](https://www.youtube.com/@AdrianaGirdler)
 * [YouTube Channel: workshop.work (Podcast on Workshop Facilitation)](https://www.youtube.com/@myriamhadnes)
 * [YouTube Channel: North Star Facilitators](https://www.youtube.com/@NorthStarFacilitators)
-* [Book: Pocket Guide to Facilitating Human Connection - Touches on Experiential Facilitation](https://www.amazon.com/Facilitating-Connections-Littlefield-Self-Improvement-Teambuilding/dp/0996423974)
-* [Book: Ask Powerful questions - Touches on Dialogue Facilitation](https://www.amazon.com/Ask-Powerful-Questions-Create-Conversations/dp/1545322996)
+
 * [YouTube Video: How To Think Faster](https://youtu.be/Z2-oteiLuyU?si=8TrAl0O6ErRhnKW2)
 * [YouTube Video: Deal with dominant people in conversation](https://youtu.be/tWKoQv45wzo?si=TaZqqunDKvMeaL1B)
 * [Training: The Effective Facilitator](https://www.leadstrat.com/courses/effective-facilitator/)
