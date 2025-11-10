@@ -229,6 +229,15 @@ And event is made up of activities, there are many variations, but they all try 
 * **When**:
     * Closing of event
 
+### Assumptions, Expectations, Fears & Hopes
+* **Description**:
+    * Collect Assumptions, Expectations, Fears & Hopes of relevant stakeholders.
+* **Why**:
+    * To gauge sentiment and input, before a big project or change is happening.
+* **When**:
+    * When bootstrapping a big project or change and you are understanding the scope/complexity and make an according plan.
+
+
 ### Fist of 5 voting
 
 * **Description**:
