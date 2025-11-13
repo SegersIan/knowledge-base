@@ -31,7 +31,7 @@ Taking [Conways Law](conways-law.md) in consideration, we can use this to our ad
 
 Refers to how changes in software and systems are managed and how they flow through an organization's structure of teams.
 
-[Image: Visual Representation](../assets/img_team_topologies_flow_of_change.png)
+[Image: Visual Representation](./assets/img_team_topologies_flow_of_change.png)
 
 ### Team Types
 
@@ -45,7 +45,7 @@ Refers to how changes in software and systems are managed and how they flow thro
     * *Reduce load for stream-aligned teams, where stream-aligned teams are the internal customer of the platform.*
 > The goal of the these team types, is to manage cognitive load for teams by defining clear responsibilities and boundaries.
 
-[Image: Visual Representation](../assets/img_team_topologies_team_types.png)
+[Image: Visual Representation](./assets/img_team_topologies_team_types.png)
 
 ### Interaction Modes
 
@@ -55,7 +55,7 @@ There are only three ways in which team should interact:
 * **X-as-a-Service**: one team provides and one team consumes something “as a Service”
 * **Facilitation**: one team helps and mentors another team
 
-[Image: Visual Representation](../assets/img_team_topologies_interaction_modes.png)
+[Image: Visual Representation](./assets/img_team_topologies_interaction_modes.png)
 
 ## Relation To Systems Thinking
 
