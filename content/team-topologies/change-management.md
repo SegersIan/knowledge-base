@@ -7,6 +7,8 @@ Here I document my experience with rolling out Team Topologies in a larger organ
 * Before you choose and adapt Team topologies, make sure you have a thorough understanding of problems, challenges and pain points and what works well. Synthesize all this input (maybe through workshops or more 1-1 feedback gathering) and have a clear problem statement, then make sure that all key stakeholders agree on this. Once this aligment and agreement is in placem then you can naturally move into "do we want to solve these"?
 * Once you problem is clear and agreed, then consider what options are on the table and for each options evaluate how these options tackle parts of the problem statement (and maybe other problems it introduces).
 * Then, Team topologies could be one of the valid options, but don't be biased to make it win. You want to solve actual problems, not a PR project.
+* Always keep in mind: Team topologies is an ideal, you then needs to see how it fits in your organization's culture. Sure, Team topologies itsel is some cultural and mindset shift, but you must shape it in a compliant way.
+* Consider: No need to introduce all the team types if they are not necessary at the beginning, it might make things a bit easier at first, but keep an open mind to add the other team types based on practial experience.
 * Remember the key [change agency framework](../change-management)
 * Clarify the shift from being a **Delivery Mindset** to **Delivery Creation Mindset**.
     * This requires extra attention on the Business Stakeholders to shift their mindset **and** in the teams their PO or business team members.
