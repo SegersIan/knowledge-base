@@ -22,7 +22,7 @@ Here I document my experience with rolling out Team Topologies in a larger organ
     * Support Documents
         * Green and red flags
         * Playbooks (how to take over ownership, how to come squad type x, how to onboard business, ...)
-        * best practices and tips (how do do cao)
+        * best practices and tips (how do do collaboration, innersourcing, self service patterns, ...)
     * quantify or Qualift success
         * Collect these metrics that measure success and report this in the status.
     * Feedback loops - how to collect feedback on the progress and direction
