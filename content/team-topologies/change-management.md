@@ -37,6 +37,6 @@ Here I document my experience with rolling out Team Topologies in a larger organ
 * Process: Monitor and follow up with teams that transitioned into the model and their learnings
 * Monitor: Always try to have baseline metris before the change starts.
 * Don't: Don't micromanage, mostly create guidance and tools, but every situation is unique and challenging.
-
+* Consider having a change agent that can focus on all of this, but make sure that the right decisions are driven and communicated by the appropiate stakehoders (e.g. leadership).
     
     
