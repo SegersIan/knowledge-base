@@ -111,7 +111,7 @@ When "doing architecture" as a software architect you should:
 * [Modules](topics/modules.md)
 * [Software Architect Role](topics/software-architect-role.md)
 * [Systems Thinking](topics/systems-thinking.md)
-* [Team Topologies](topics/team-topologies.md)
+* [Team Topologies](../team-topologies)
 
 ## Useful
 
