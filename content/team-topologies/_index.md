@@ -1,3 +1,7 @@
+---
+bookCollapseSection: true
+---
+
 # Team Topologies
 
     Although Team Topologies is strictly not about architecture, it has a huge impact and connection on how we structure team ownership and our architecture according to Conways law. Therefore, I felt this made sense to cover in the Architecture Handbook.
