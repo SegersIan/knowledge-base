@@ -151,3 +151,4 @@ title: "Resources"
    * [Wardriving in Oslo for Wifi and Blue tooth](https://www.hegnes.tech/2021/09/01/location-tracking-of-wifi-access-point-and-bluetooth-devices/)
 * [PukingMonkey](https://x.com/pukingmonkey)
    * [Def Con: Exploiting EZPass sensors](https://www.youtube.com/watch?v=T43Ti7c11lY)
+* [Michael Bazzel](https://inteltechniques.com/)
