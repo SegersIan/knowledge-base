@@ -1,5 +1,4 @@
 # Resources
-# Resources
 
 * https://www.oneusefulthing.org/p/gpt-5-it-just-does-stuff
 * https://userjot.com/blog/best-practices-building-agentic-ai-systems
@@ -23,3 +22,9 @@
 * https://docs.continue.dev/guides/overview#mcp-integration-cookbooks
 * https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk
 * https://newsletter.pragmaticengineer.com/p/how-claude-code-is-built
+
+## Courses
+
+* [AI Guide For Senior Software Engineers](https://www.emadibrahim.com/ai-guide)
+* [DeepLearning.AI](https://www.deeplearning.ai/)
+* [Foundations of AI Security](https://www.academy.attackiq.com/courses/foundations-of-ai-security)
