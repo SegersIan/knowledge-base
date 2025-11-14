@@ -33,5 +33,5 @@ params:
   BookMenuBundle: true
   BookCollapseSection: true
   BookLastChangeLink: 'https://github.com/SegersIan/knowledge-base/commit/{{ .GitInfo.Hash }}'
-  BookEditLink: 'https://github.com/SegersIan/knowledge-base/edit/main/exampleSite/{{ .Path }}'
+  BookEditLink: 'https://github.com/SegersIan/knowledge-base/edit/master/{{ .Path }}'
   BookDateFormat: "2006-01-02 @ 15:04:05"
