@@ -26,7 +26,6 @@ menu:
     - name: "My Blog"
       url: "https://blog.segersian.com/
       weight: 30
-bookCollapseSection: true
 
 params:
   BookTheme: "auto"
