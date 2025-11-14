@@ -15,10 +15,10 @@ markup:
 
 menu:
   after:
-    - name: "Github - Site"
+    - name: "GitHub Repo"
       url: "https://github.com/SegersIan/knowledge-base"
       weight: 10
-    - name: "Github - Profile"
+    - name: "Github User"
       url: "https://github.com/SegersIan"
       weight: 20
 bookCollapseSection: true
