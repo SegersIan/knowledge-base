@@ -3,6 +3,8 @@ languageCode: en-us
 title: Knowledgebase
 theme: hugo-book
 
+enableGitInfo: true
+
 # Needed for mermaid/katex shortcodes
 markup:
   goldmark:
@@ -12,8 +14,6 @@ markup:
     startLevel: 1
   highlight:
     style: base16-snazzy
-
-enableGitInfo: true
 
 menu:
   after:
@@ -26,6 +26,7 @@ menu:
     - name: "My Blog"
       url: "https://blog.segersian.com/
       weight: 30
+
 
 params:
   BookTheme: "auto"
