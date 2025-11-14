@@ -24,9 +24,8 @@ menu:
       url: "https://github.com/SegersIan"
       weight: 20
     - name: "My Blog"
-      url: "https://blog.segersian.com/
+      url: "https://blog.segersian.com/"
       weight: 30
-
 
 params:
   BookTheme: "auto"
