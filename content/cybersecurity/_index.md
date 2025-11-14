@@ -24,9 +24,9 @@ title: "Cybersecurity"
 * 
 ## Info Graphs
 
-![img1](../assets/learning_paths.jpeg)
-![img2](../assets/secure_insecure_ports.png)
-![img3](../assets/top_tools_per_field.jpeg)
+![img1](./assets/learning_paths.jpeg)
+![img2](./assets/secure_insecure_ports.png)
+![img3](./assets/top_tools_per_field.jpeg)
 
 ## Goodies
 
