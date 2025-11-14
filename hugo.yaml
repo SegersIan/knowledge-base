@@ -13,6 +13,8 @@ markup:
   highlight:
     style: base16-snazzy
 
+enableGitInfo: true
+
 menu:
   after:
     - name: "My GitHub Repo"
@@ -31,3 +33,6 @@ params:
   BookSection: /
   BookMenuBundle: true
   BookCollapseSection: true
+  BookLastChangeLink: 'https://github.com/SegersIan/knowledge-base/commit/{{ .GitInfo.Hash }}'
+  BookEditLink: 'https://github.com/SegersIan/knowledge-base/edit/main/exampleSite/{{ .Path }}'
+  BookDateFormat: "2006-01-02 @ 15:04:05"
