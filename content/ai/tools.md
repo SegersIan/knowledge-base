@@ -3,6 +3,7 @@
 * [Claude Code Router](https://github.com/musistudio/claude-code-router)
 * [Superwhisper - fast speech to text](https://superwhisper.com/)
 * [Windsurf](https://windsurf.com/)
+* [TOON](https://github.com/toon-format/toon) - minimize token count when ingesting large sets of JSON into LLM's.
 
 ## General Models
 
