@@ -152,3 +152,7 @@ title: "Resources"
 * [PukingMonkey](https://x.com/pukingmonkey)
    * [Def Con: Exploiting EZPass sensors](https://www.youtube.com/watch?v=T43Ti7c11lY)
 * [Michael Bazzel](https://inteltechniques.com/)
+
+## Breaches
+
+* https://www.heise.de/en/news/3-5-Billion-Accounts-Complete-WhatsApp-Directory-Retrieved-and-Evaluated-11083244.html?seite=all
