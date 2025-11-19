@@ -320,3 +320,29 @@ How to Apply It:
 	•	Paint a compelling picture of what success looks like and why it matters. Use this vision to anchor decisions and maintain focus amid complexity.
 	•	Stay Open to Iteration:
 	•	Be ready to pivot when new information arises or when initial
+
+## Should you be a manager?
+
+Becoming a manager likely means stepping away from what you’re trained for (engineering) and moving, at least partially, into something you are untrained for. This means, at first, you will not be good at it and will need to learn a whole new set of skills. For example, how to fire someone legally in various countries around the world is very different from rolling back a deployment – even if there could be some parallels.
+
+It’s important to know why you want to be a manager and what will sustain you during a years-long learning process. For most people, learning to be a truly good manager takes as long as becoming a good L5 engineer – that is, five or more years. While the pay and prestige may be attractive, I would argue that managers who seek mainly money or power are rarely great bosses.
+
+Better reasons to consider management include a desire to help others succeed, a drive to organize work to make it successful, or a goal of building bigger things by working with others. Have a plan and a commitment to learning the new skills you’ll need. Think about why you want to work less with technology directly and more with people, as that will be the new job.
+
+**Observe your manager and their peers closely. Analyze what you think they do well and poorly. For things they do which you disagree with, try to figure out why they did it, while avoiding the assumption they’re incompetent. Even if what they are doing is not working, they must have a good reason in their minds because no one intentionally sets out to fail.**
+
+### Manager Levels (At amazon)
+
+An L5 manager  is expected to focus inward with a small team. The team size is usually 4 to 6, but possibly as many as 10, and the manager’s job is to drive successful execution, take care of team members, and get things done. Compared to higher-level managers, they are rarely asked to negotiate with other leaders, to make big choices themselves, to reason about the product or business, etc. Their job is to get whatever is assigned to them built and working on time, while taking care of the basics of personnel management like hiring and reviews.
+
+If this seems like a modest set of expectations, remember that an L5 manager is like a new graduate engineer. It is their first job of this kind and they’ll be successful if they can master the basics of normal operation. Just like new graduates are not expected to handle complex designs or tricky debugging during an outage, entry-level managers are not expected to handle complex management challenges.
+
+The L6 manager is the “logical equivalent” of the L5 engineer: expected to be solid and reliable at a wide range of management challenges, but not to yet be an independent master or expert in all aspects of the job.
+
+L6s may manage a large team of more senior individual contributors, or they may start managing a couple of other managers as well. Today, it is common for the most senior L6s, who are getting ready to become Senior Managers, to manage teams of 25 and a mix of ICs and other managers.
+
+At this level, they are expected to organize large projects that may take a year or more, to fully own major services, to negotiate with other teams over schedules and dependencies, to plan and handle their own operational load, and so on. They are also expected to handle complex personnel challenges, such as putting colleagues on performance management plans and delivering termination messages (usually with HR in the room for support) when necessary. L6s need to think about the larger technical and business picture, interacting with other team owners and their management chain with an awareness of where their team fits into the whole.
+
+L7s are large-scale business leaders whom I often think of as executives in training. This is because the next step is usually an executive role (Director). Today, L7s may manage 80 to 100+ people, which is the same size as many small companies. For context, Amazon often hired startup founders into L7 roles who had been CEOs. Coming into my L7 job at Amazon, I had been a Vice President at three different startups, and managed six teams totaling 30 people in one. It’s a big role.
+
+L7s are leading other leaders and are therefore skilled at it. They are comfortable with delegating entire areas to managers whom they have hired and developed. L7s are expected to have a full understanding of the business in addition to the technology they build. They think about and contribute to the course of events, not only the technical architecture and its direction.
