@@ -29,3 +29,11 @@
 * [AI Guide For Senior Software Engineers](https://www.emadibrahim.com/ai-guide)
 * [DeepLearning.AI](https://www.deeplearning.ai/)
 * [Foundations of AI Security](https://www.academy.attackiq.com/courses/foundations-of-ai-security)
+
+## To Read
+
+* https://martinfowler.com/articles/research-review-rebuild.html
+* https://martinfowler.com/articles/convo-llm-abstractions.html
+* https://martinfowler.com/articles/202508-ai-thoughts.html
+* https://martinfowler.com/articles/agentic-ai-security.html
+* https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro
