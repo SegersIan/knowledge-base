@@ -22,6 +22,7 @@
 * https://docs.continue.dev/guides/overview#mcp-integration-cookbooks
 * https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk
 * https://newsletter.pragmaticengineer.com/p/how-claude-code-is-built
+* [MAESTRO - The STRIDE thread modeling for AI](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro)
 
 ## Courses
 
