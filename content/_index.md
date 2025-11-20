@@ -15,7 +15,9 @@ Consider this entirely "Work In Progress", there will be many incomplete parts, 
 * https://hbr.org/2021/04/have-we-taken-agile-too-far
 * https://localmess.github.io/
 * https://cyata.ai/blog/cracking-the-vault-how-we-found-zero-day-flaws-in-authentication-identity-and-authorization-in-hashicorp-vault/
+* 
 
 ## Blog Tools
 * [Screen Record Terminal](https://asciinema.org/ )
   * Allows for recording screencasts from terminal, whhere you can copy text from directly. saved as some text file instead of blob.
+
