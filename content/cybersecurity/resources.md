@@ -156,3 +156,7 @@ title: "Resources"
 ## Breaches
 
 * https://www.heise.de/en/news/3-5-Billion-Accounts-Complete-WhatsApp-Directory-Retrieved-and-Evaluated-11083244.html?seite=all
+
+## Threat Modeling
+
+* [MAESTRO - The STRIDE thread modeling for AI](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro)
