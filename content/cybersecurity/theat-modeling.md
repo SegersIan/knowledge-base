@@ -40,8 +40,6 @@ Meastro base itself on the [7 Layered Agentic AI Reference Architecture](https:/
 
 Each layer has a clear, distint purpose and abstracting complexity from the layers above. The threat model basically lists a set of threats for each layer in that reference architecture. In addition, there are a few cross-layer threats.
 
-Here are the **“A. Layer-Specific Threat Modeling”** items from the article reformulated into lay-terms (only the “Threat Landscape” bullet items for each layer):
-
 #### Layer 7: Agent Ecosystem
 
 * **Compromised Agents**: Bad actors sneak in fake or malicious AI agents into the marketplace.
@@ -120,8 +118,6 @@ Here are the **“A. Layer-Specific Threat Modeling”** items from the article 
 * **Privilege Escalation**: Someone or something gains higher-level permissions in one layer and uses that elevated access to interfere with other layers in the system. ([Cloud Security Alliance][1])
 * **Data Leakage**: Sensitive information belonging to one layer gets exposed or accessed through another layer due to an interaction or gap between them. ([Cloud Security Alliance][1])
 * **Goal Misalignment Cascades**: A mis-set or manipulated goal in one agent or layer propagates through the ecosystem, causing other agents/layers to “go off script” and do unintended harmful things. ([Cloud Security Alliance][1])
-
-Here are the **“C. Mitigation Strategies”** and **“D. Using MAESTRO: A Step-by-Step Approach”** sections from the article, reformulated into accessible layman-terms and formatted in markdown:
 
 ### Mitigation Strategies
 
