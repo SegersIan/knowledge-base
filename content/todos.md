@@ -12,3 +12,7 @@ title: "TODOs"
 * Build your personal website with apps further to create a greate playground.
     * With this you learn to use AI assisted development and tooling.
 * YouTube music channel
+* Make a PoC with https://pages.nist.gov/OSCAL/
+* Make a PoC with https://github.com/invariantlabs-ai/mcp-scan
+* Make a Poc for Agents with https://google.github.io/adk-docs/
+

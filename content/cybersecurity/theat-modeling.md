@@ -20,6 +20,10 @@ tags: ["Cybersecurity", "AI", "Agentic AI"]
 
 # Threat Modeling - Agentic AI
 
+## Secure AI Framework (SAIF)
+
+* [SAIF](https://saif.google/) by google.
+
 ## MAESTRO
 
 CEO and Chief AI officer Ken Huan at DistributedApps.ai came up with the **MAESTRO** threat modeling framework for agentic AI. The MAESTRO is an abbreviation for **M**ulti-**A**gent **E**nvironment, **S**ecurity, **T**hreat, **R**isk, and **O**utcome.
