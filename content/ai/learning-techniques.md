@@ -1,3 +1,7 @@
+---
+title: "Learning Techniques"
+tags: ["AI"]
+---
 # Learning Techniques
 
 ### **1. Supervised learning**

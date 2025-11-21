@@ -1,3 +1,8 @@
+---
+title: "Resources"
+tags: ["AI"]
+---
+
 # Resources
 
 * https://www.oneusefulthing.org/p/gpt-5-it-just-does-stuff

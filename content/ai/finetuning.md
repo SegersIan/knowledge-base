@@ -1,3 +1,7 @@
+---
+title: "Finetuning"
+tags: ["AI"]
+---
 # Finetuning
 
 ## In Plain Words

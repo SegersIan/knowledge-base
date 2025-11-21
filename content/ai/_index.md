@@ -2,6 +2,7 @@
 bookCollapseSection: true
 title: "AI & ML"
 math: true
+tags: ["AI"]
 ---
 # AI & ML
 

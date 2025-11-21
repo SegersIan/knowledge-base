@@ -1,3 +1,7 @@
+---
+title: "Tools"
+tags: ["AI"]
+---
 # Tools
 
 * [Claude Code Router](https://github.com/musistudio/claude-code-router)

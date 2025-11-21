@@ -1,5 +1,6 @@
 ---
 title: "AI"
+tags: ["Cybersecurity", "AI", "Agentic AI"]
 ---
 # AI
 

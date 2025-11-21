@@ -1,5 +1,6 @@
 ---
 title: "Theat Modeling"
+tags: ["Cybersecurity", "AI", "Agentic AI"]
 ---
 # Threat Modeling - General
 
