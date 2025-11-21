@@ -28,6 +28,10 @@ tags: ["AI"]
 * https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk
 * https://newsletter.pragmaticengineer.com/p/how-claude-code-is-built
 * [MAESTRO - The STRIDE thread modeling for AI](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro)
+* https://github.com/ag-ui-protocol/ag-ui
+* https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html
+* https://github.com/github/spec-kit
+
 
 ## Courses
 
