@@ -11,3 +11,4 @@ title: "TODOs"
 * Try spec driven development
 * Build your personal website with apps further to create a greate playground.
     * With this you learn to use AI assisted development and tooling.
+* YouTube music channel
