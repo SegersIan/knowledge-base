@@ -121,6 +121,7 @@ title: "Resources"
 
 - [SEF: Social Engineering Franework BOOK](https://subscription.packtpub.com/book/security/9781788837927/1/ch01lvl1sec04/the-social-engineering-framework)
 - https://www.maltego.com/downloads/
+
 ## Others
 
 - https://cloudsecurityalliance.org/
@@ -132,6 +133,7 @@ title: "Resources"
 - [Way Back Machine](www.archive.org) - (In history, some interesting formation can be found on company sites or so)
 - [Website watcher](https://www.aignes.com/) - Wath websites and notify if anything changes
 - https://www.shodan.io/ - Find anything connected
+* https://pages.nist.gov/OSCAL/
 
 ## Vulnerability Databases
 
@@ -157,6 +159,8 @@ title: "Resources"
 
 * https://www.heise.de/en/news/3-5-Billion-Accounts-Complete-WhatsApp-Directory-Retrieved-and-Evaluated-11083244.html?seite=all
 
-## Threat Modeling
+## AI
 
 * [MAESTRO - The STRIDE thread modeling for AI](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro)
+* https://github.com/invariantlabs-ai/mcp-scan
+* https://saif.google/
