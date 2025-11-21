@@ -33,6 +33,7 @@ tags: ["AI"]
 * https://github.com/github/spec-kit
 * https://agents.md/
 * https://www.thoughtworks.com/radar/techniques/context-engineering
+* https://google.github.io/adk-docs/
 
 ## Courses
 
