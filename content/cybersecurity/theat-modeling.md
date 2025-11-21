@@ -113,29 +113,29 @@ Each layer has a clear, distint purpose and abstracting complexity from the laye
 
 #### Cross-Layer Threats
 
-* **Supply Chain Attacks**: A weakness in one part of the stack (for example a library) is compromised and that breach affects other layers too. ([Cloud Security Alliance][1])
-* **Lateral Movement**: An attacker breaks into one layer (e.g., infrastructure) and then moves sideways to access and exploit other layers (e.g., data operations). ([Cloud Security Alliance][1])
-* **Privilege Escalation**: Someone or something gains higher-level permissions in one layer and uses that elevated access to interfere with other layers in the system. ([Cloud Security Alliance][1])
-* **Data Leakage**: Sensitive information belonging to one layer gets exposed or accessed through another layer due to an interaction or gap between them. ([Cloud Security Alliance][1])
-* **Goal Misalignment Cascades**: A mis-set or manipulated goal in one agent or layer propagates through the ecosystem, causing other agents/layers to “go off script” and do unintended harmful things. ([Cloud Security Alliance][1])
+* **Supply Chain Attacks**: A weakness in one part of the stack (for example a library) is compromised and that breach affects other layers too. 
+* **Lateral Movement**: An attacker breaks into one layer (e.g., infrastructure) and then moves sideways to access and exploit other layers (e.g., data operations). 
+* **Privilege Escalation**: Someone or something gains higher-level permissions in one layer and uses that elevated access to interfere with other layers in the system. 
+* **Data Leakage**: Sensitive information belonging to one layer gets exposed or accessed through another layer due to an interaction or gap between them. 
+* **Goal Misalignment Cascades**: A mis-set or manipulated goal in one agent or layer propagates through the ecosystem, causing other agents/layers to “go off script” and do unintended harmful things. 
 
 ### Mitigation Strategies
 
-* **Adversarial Training**: Train your AI models and agents with tricky or malicious inputs so they learn to handle them safely. ([Cloud Security Alliance][1])
-* **Formal Verification**: Use rigorous checks (math/model-proofs) to ensure agents behave as intended, aligned with goals. ([arXiv][2])
-* **Explainable AI (XAI)**: Make sure the AI agents’ decisions can be understood, audited and traced by humans (so you can check “why did it do that?”). ([Cloud Security Alliance][1])
-* **Red Teaming**: Regularly simulate attacks or adversarial behaviours against your AI agents to find weak spots before real attackers do. ([toreon.com][3])
-* **Safety Monitoring & Runtime Controls**: Keep watching what your agents actually do in real time (logs, dashboards, alerts), so you can catch unsafe behaviour early. ([Cloud Security Alliance][1])
-* **Defense in Depth**: Use multiple layers of protection (infrastructure, models, data, agents) rather than relying on a single security control. ([Cloud Security Alliance][1])
+* **Adversarial Training**: Train your AI models and agents with tricky or malicious inputs so they learn to handle them safely. 
+* **Formal Verification**: Use rigorous checks (math/model-proofs) to ensure agents behave as intended, aligned with goals.
+* **Explainable AI (XAI)**: Make sure the AI agents’ decisions can be understood, audited and traced by humans (so you can check “why did it do that?”). 
+* **Red Teaming**: Regularly simulate attacks or adversarial behaviours against your AI agents to find weak spots before real attackers do.
+* **Safety Monitoring & Runtime Controls**: Keep watching what your agents actually do in real time (logs, dashboards, alerts), so you can catch unsafe behaviour early. 
+* **Defense in Depth**: Use multiple layers of protection (infrastructure, models, data, agents) rather than relying on a single security control. 
 
 ### Using MAESTRO: A Step-by-Step Approach
 
-* **1. System Decomposition**: Break down your AI-agent system into components using the 7-layer MAESTRO architecture (foundation models, data ops, frameworks, infra, evaluation, security/compliance, agent ecosystem). ([Cloud Security Alliance][1])
-* **2. Layer-Specific Threat Modeling**: For each of those seven layers, use the “Threat Landscape” lists to identify what specific threats apply in your system. ([Cloud Security Alliance][1])
-* **3. Cross-Layer Threat Identification**: Look for risks that hop between layers (for example: a weakness in infrastructure enabling a model attack). ([arXiv][2])
-* **4. Risk Assessment**: For every identified threat, estimate how likely it is and how bad the impact could be — then prioritise. ([Cloud Security Alliance][1])
-* **5. Mitigation Planning**: Choose the most relevant mitigation strategies (from section C) and map them to the highest-priority threats. ([Cloud Security Alliance][1])
-* **6. Implementation & Monitoring**: Put the mitigations into practice, keep monitoring, and update the threat model as your agents evolve. ([Cloud Security Alliance][1])
+* **1. System Decomposition**: Break down your AI-agent system into components using the 7-layer MAESTRO architecture (foundation models, data ops, frameworks, infra, evaluation, security/compliance, agent ecosystem). 
+* **2. Layer-Specific Threat Modeling**: For each of those seven layers, use the “Threat Landscape” lists to identify what specific threats apply in your system. 
+* **3. Cross-Layer Threat Identification**: Look for risks that hop between layers (for example: a weakness in infrastructure enabling a model attack).
+* **4. Risk Assessment**: For every identified threat, estimate how likely it is and how bad the impact could be — then prioritise. 
+* **5. Mitigation Planning**: Choose the most relevant mitigation strategies (from section C) and map them to the highest-priority threats. 
+* **6. Implementation & Monitoring**: Put the mitigations into practice, keep monitoring, and update the threat model as your agents evolve. 
 
 ### Agentic Architecture Patterns
 
