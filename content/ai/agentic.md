@@ -4,6 +4,12 @@ tags: ["AI", "Agentic AI"]
 ---
 # Agentic
 
+## 7 Layered Agentic AI Reference Architecture
+> By Ken Huang, not perse a industry adopted thing.
+
+... todo https://kenhuangus.medium.com/7-layered-agentic-ai-reference-architecture-20276f83b7ee
+ 
+
 ## Agentic Architecture Patterns
 
 ### Single-Agent Pattern
@@ -40,7 +46,7 @@ tags: ["AI", "Agentic AI"]
 
 ## Resources
 
-[1]: https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro?utm_source=chatgpt.com "Agentic AI Threat Modeling Framework: MAESTRO | CSA"
+[1]: https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro"Agentic AI Threat Modeling Framework: MAESTRO | CSA"
 
 
 

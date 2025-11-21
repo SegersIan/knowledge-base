@@ -288,6 +288,6 @@ Here are the **“C. Mitigation Strategies”** and **“D. Using MAESTRO: A Ste
 
 * [MAESTRO - Threat model framework for agentic AI](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro)
 * [7 Layered Agentic AI Reference Architecture](https://kenhuangus.medium.com/7-layered-agentic-ai-reference-architecture-20276f83b7ee)
-[1]: https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro?utm_source=chatgpt.com "Agentic AI Threat Modeling Framework: MAESTRO | CSA"
-[2]: https://arxiv.org/html/2508.10043v1?utm_source=chatgpt.com "Securing Agentic AI: Threat Modeling and Risk Analysis for ..."
-[3]: https://www.toreon.com/threat-modeling-insider-june-2025/?utm_source=chatgpt.com "Threat Modeling Insider - June 2025"
+* [1]: https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro"Agentic AI Threat Modeling Framework: MAESTRO | CSA"
+* [2]: https://arxiv.org/html/2508.10043v1 "Securing Agentic AI: Threat Modeling and Risk Analysis for ..."
+* [3]: https://www.toreon.com/threat-modeling-insider-june-2025/"Threat Modeling Insider - June 2025"
