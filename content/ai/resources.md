@@ -31,7 +31,8 @@ tags: ["AI"]
 * https://github.com/ag-ui-protocol/ag-ui
 * https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html
 * https://github.com/github/spec-kit
-
+* https://agents.md/
+* https://www.thoughtworks.com/radar/techniques/context-engineering
 
 ## Courses
 
