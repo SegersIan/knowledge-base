@@ -48,3 +48,7 @@ tags: ["AI"]
 * https://martinfowler.com/articles/202508-ai-thoughts.html
 * https://martinfowler.com/articles/agentic-ai-security.html
 * https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro
+
+## Refining  your  copilot
+
+* https://github.com/github/awesome-copilot
