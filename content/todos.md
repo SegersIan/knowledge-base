@@ -3,7 +3,9 @@ title: "TODOs"
 ---
 
 * Blog about the Team Topologies Journey
-* Find actual  good use cases for Copilot  agents or tech agents.
+* Find actual  good use cases for Copilot  agents or tech agents and blog about it
+   * One agent for Team Topologies / Delivery Setup
+   * ...
 * Do a wardriving in you home town.
 * Inspect all of your home devices and what data they egress
 * Wardrive your garage
