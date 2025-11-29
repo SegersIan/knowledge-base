@@ -33,6 +33,10 @@ Refers to how changes in software and systems are managed and how they flow thro
 
 [Image: Visual Representation](./assets/img_team_topologies_flow_of_change.png)
 
+## Fast Flow
+
+The whole goal that we try to achieve is FAST FLOW OF CHANGES.
+
 ### Team Types
 
 * **Stream-aligned team** aligned to a flow of work from (usually) a segment of the business domain. These are “You Built It, You Run It” teams. No hand-offs to other teams for any purpose.
@@ -143,6 +147,25 @@ Notice that we recognize the key parts of any generic "system" from [Systems Thi
 
 > 1. Combine a team-first approach with Conway's law, the 4 fundamental topologies, team interaction modes, topology evolution, and organizational sensing.
 > 2. Get Started: begin with the team, identify streams, identify the thinnest viable platform, identify capability gaps, and practice team interactions.
+
+## Others Related Topics
+
+### Restrict Unnecessary Communication
+
+Communication methods, channels and most importantly **patterns** are important to monitor. Frequent communication between teams can be a red flag. Communication in a social context is not a bad thing, but as in "to get work done" is a very important signal to pay attention to.
+If communication does help, is it temporary ? (like a temporary enablement squad?) or is it continious ? Is that the type of communication we want, versus, x-as-a-service.
+* Example: Due to an open office, and everyone talking to each other directly, might stand in the way from creating a proper self-service communication/interaction pattern.
+* Shared communication tools between teams is good when they need to work together (like ticketing system, or chat), but if they  should not  work together, don't put them in the same slack team maybe?
+* **FAST FLOW requires restricting communication between  teams**
+
+### Teams First
+
+* **Teams, Not individuals** - Teams are the smallest, core organism. Research has shown that team dynamics have more impact on performance than who is on the team. 
+* **Team Size, keep it low and stable** - Follow [Dunbars number](https://psychsafety.com/psychological-safety-82-dunbars-number-and-team-size/), from 5 to 9 ideally. It can take from 2 weeks to 3 months for a team to become a cohesive unit.
+* **Protect Cognitive Load** - 
+* **Clear Boundaries of responsibility**
+* **Team Working Environment** - 
+
 
 ## Resources
 
