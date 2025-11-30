@@ -166,6 +166,35 @@ If communication does help, is it temporary ? (like a temporary enablement squad
 * **Clear Boundaries of responsibility**
 * **Team Working Environment** - 
 
+Design systems with a Teams first mindset (see cogntive load).
+
+### Cognitive Load
+
+* **Measure**
+    * Simple way "Do you feel like you're efective and able to r espond in a timely fashion to the work you are asked to do?"
+* **Factors** many things have impact
+    * code based and the chosen stack (including the language)
+    * project work
+    * domain
+    * So the best is to focus on **domain complexity**. This can be **business domain** and **technical domain**  (infra automation, test automation, kubernetes, ...).
+        * Clarify and focus bump employee satisifaction signifcantly.
+* **Limit the number and type of domains**. (page 42, 2nd edition)
+    * This is not an exact science, but look for similarity and synergies between domains if you combine  them in a single team.
+    * You can have 3 simple domains, but they can be too different fromm each other maybe to put them together. Depends how much the  context switching cost is,
+    * **An Approach**
+        * **Identify distinct domains** that each team delas with **and classify** them in `simple` (most work has a clear path of  action), `complicated` (changes need to be analyzed and might require few iterations on the solution to get it right), and `complex` (solutions require a lot of experimentation and discovery).
+            - Example `simple` - old system that has irregular, simple, straightforward changes.  (more routine)
+        * Recommendation: A team should be able to accomedate 2-3 `simple` dommains.
+        * Recommendation: A team should not have other domains if it owns a `complex` domain.
+        * Recommendation: A team should not have 2 or more `complicated` domains .
+* **Design a system with boundaries that fit available cognitive load within delivery teams** - so design systemas with a **"Teams First" design** approach.`
+* **TIP: Minimuze cognitive load for others**
+
+### Loose Notes
+
+* Focus with a team, even within the team on the **GOAL (what)** not the **implementation (How)**, it's  the value/result that matters, not the implementation.
+    * `Eyes On, Hands Off` (Team of Teams)
+* Platform products should always help **reduce** the cognitive load, not increase it.
 
 ## Resources
 
