@@ -2,6 +2,7 @@
 title: "TODOs"
 ---
 
+* Start your hack a box journey
 * Blog about the Team Topologies Journey
 * Find actual  good use cases for Copilot  agents or tech agents and blog about it
    * One agent for Team Topologies / Delivery Setup
