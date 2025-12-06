@@ -28,3 +28,19 @@ title: "TODOs"
 - ai.segersian.com , what could I do here?
 
 Use by default material design from google maybe for simple basic UI. Combined with react if the app is at that maturity level.
+
+
+## Ideas
+
+* An EU alternative to GitHub, that's decoupled from US.
+    * See your chatgpt for alternative, experiment, try and see if building a new alternative makes sense.
+    * A agent or tool in GitHub that can scan for finding max use cases in github native env as part of devops flow. Just easy poc with somenpromp engineering!
+    * Add AI in it's core flow, check European models for that.
+    * Rmemeber, your repo workbench toolkit would be a cool addition/feature to it.
+    * Ai and mcp at it's core!
+    * Think like the ai repo/gir, happy face or whatever for Europe
+    * Are there really no cool privacy or security ideas, together with eu gdpr models that you can find cool use cases ? Dev tools are cool, but will nee a free tier GTM strategy, finding something that can be white label, can go through partner reselling
+* Create your own wireshark, just to learn to low level stuff.
+    * But split it into a pcap viewer , where you can visualize the frames in a cool informative way, and the actual capture tool that can stream/output pcap format?
+    * As part/separwte or the network capture, the zigbee or whatever protocol for home automation PAN so only listen and replay that.
+* Build this telegram chat bot for phising with voice and audio call, elevnlabs and stuff. What you saw on telegram
