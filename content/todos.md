@@ -40,7 +40,17 @@ Use by default material design from google maybe for simple basic UI. Combined w
     * Ai and mcp at it's core!
     * Think like the ai repo/gir, happy face or whatever for Europe
     * Are there really no cool privacy or security ideas, together with eu gdpr models that you can find cool use cases ? Dev tools are cool, but will nee a free tier GTM strategy, finding something that can be white label, can go through partner reselling
+    * gitverse
+    * Must be geeky and badass
+    * Maybe there are some oss versions as temporary first approach and then build your own business
 * Create your own wireshark, just to learn to low level stuff.
     * But split it into a pcap viewer , where you can visualize the frames in a cool informative way, and the actual capture tool that can stream/output pcap format?
     * As part/separwte or the network capture, the zigbee or whatever protocol for home automation PAN so only listen and replay that.
+    * Refine the tool so it helps to measure stuff in the basement network.
+    * Also, from network capacture, also a tool for RF capture? So is there a format dor that? Capture the analogue or already digital format for a specific range or protocol, i assume you need a protocol and RF range to know how to read and decode it to digital? …. Research
+    * Make a tool that cannlost all tcp and udpnports and services listening on it
 * Build this telegram chat bot for phising with voice and audio call, elevnlabs and stuff. What you saw on telegram
+
+## Tools
+
+* https://getpublicip.com/
