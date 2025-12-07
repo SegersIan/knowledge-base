@@ -50,6 +50,8 @@ Use by default material design from google maybe for simple basic UI. Combined w
     * Also, from network capacture, also a tool for RF capture? So is there a format dor that? Capture the analogue or already digital format for a specific range or protocol, i assume you need a protocol and RF range to know how to read and decode it to digital? …. Research
     * Make a tool that cannlost all tcp and udpnports and services listening on it
 * Build this telegram chat bot for phising with voice and audio call, elevnlabs and stuff. What you saw on telegram
+* Download alle norge bank decisions; preprocess, wnd us ai and FSB data to see patterjs between theird decisions and reality.
+    * Cool would be to know how different the banks think, based on their fixed rates and norges bank decisions
 
 ## Tools
 
