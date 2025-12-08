@@ -52,7 +52,14 @@ Use by default material design from google maybe for simple basic UI. Combined w
 * Build this telegram chat bot for phising with voice and audio call, elevnlabs and stuff. What you saw on telegram
 * Download alle norge bank decisions; preprocess, wnd us ai and FSB data to see patterjs between theird decisions and reality.
     * Cool would be to know how different the banks think, based on their fixed rates and norges bank decisions
+- Guru Channel: Take a GURU podcast/video, transcribe and then analyse the flaws of arguments and good arguments and give a score at the end.
+- Fashion Channel: Explain the basics of fashion
+- Music Channel: Either just generate music and upload it for tracks or continuous play, OR discuss music/analysis
+- Music Analysis Channel: Take a song per time and create insights and analytics of it and produce a video.
+- Technical explanations of an existing as-a-service (BLOG POST)
+
 
 ## Tools
 
 * https://getpublicip.com/
+`
