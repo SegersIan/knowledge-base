@@ -312,3 +312,4 @@ title: "OSINT"
 * [https://www.bellingcat.com](https://www.bellingcat.com)
 * [https://benjaminstrick.com/](https://benjaminstrick.com/)
 * [Renee Diresta Blog - If you give a mouse a cookie](https://www.reneediresta.com/if-you-give-a-mouse-a-cookie/)
+* https://www.dutchosintguy.com/post/the-slow-collapse-of-critical-thinking-in-osint-due-to-ai
