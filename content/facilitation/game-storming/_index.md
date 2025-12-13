@@ -82,3 +82,20 @@ Create conditions in which humans venture into new spaces of possibility. Tempor
 
 ## Gamestorming In Practice
 
+> Chapter 3.
+
+### Energy
+### Structure
+### Natural Energy Flows
+### Opening and Closing
+### Artifacts
+### Meaningful Space
+### Sketching And Modelmaking
+### Randomness, Reversal, Reframing
+### Firestarting 
+### Setups
+### Asking Questions
+### Improvisation
+### Selection
+### Try Something New
+### Practices
