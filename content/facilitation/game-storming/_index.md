@@ -79,3 +79,6 @@ Create conditions in which humans venture into new spaces of possibility. Tempor
     * ![img](../assets/gamestorming_gameshape_close.jpg)
         * Move towards conclusion, decisions, actions.
         * Now asses ideas with a realistic, critical eye. You converge, filter, narrow down.
+
+## Gamestorming In Practice
+
