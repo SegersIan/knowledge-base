@@ -34,6 +34,8 @@ Create conditions in which humans venture into new spaces of possibility. Tempor
 * **Games** - Powerful and purposeful thought experiments.
 * **Games Sequences** - We might want to pipe different games to build a bigger journey.
 
+Volatile, uncertain, complex, and ambiguous environments are the norm. We all know that the military uses games and simulations as a way to practice for war. But they also use something called a concept of operations, or CONOPS, to (I) create an overall picture of the system and the goals that they want to achieve, and (2) communicate that picture to the people who will work together to reach those goals. A concept of operations is a way to say, "Given what we know today, here is how we think this system works, and here is how we plan to approach it."
+
 ## A Game
 
 > Chapter 2.
