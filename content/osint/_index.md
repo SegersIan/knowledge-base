@@ -4,6 +4,10 @@ title: "OSINT"
 ---
 # OSINT: Open Source Intelligence
 
+## Blogs/Articles/Resources
+
+* https://nkinternet.com/2025/12/08/hunting-for-north-korean-fiber-optic-cables/
+
 ## Certifications
 
 * https://www.giac.org/certifications/open-source-intelligence-gosi/
