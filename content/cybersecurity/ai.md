@@ -8,6 +8,7 @@ tags: ["Cybersecurity", "AI", "Agentic AI"]
 
 * [Paper: Poisoning Attacks on LLMs Require a Near-constant Number of Poison Samples
 ](ttps://arxiv.org/abs/2510.07192v1)
+* [DAN - Do Anything Now](https://learnprompting.org/docs/prompt_hacking/offensive_measures/dan)
 
 ## Sources
 
