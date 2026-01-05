@@ -30,6 +30,7 @@ See also [Domain Driven Design]({{< relref "/software-architecture/topics/domain
 * based on the  **subdomains types**, you might make an investment strategy (Core subdomain you build as it's a differnetiatior, generic should be outsourced...)
 * Any subdomain can be broken down in one or more **Bounded Contexts**.
 * The Business Domain describes your **Problem Space** and your Subdomains your **Solution Space**.
+* A bounded context can identify reusable / modular parts of the domain.
 
 ### Team Toplogies
 
