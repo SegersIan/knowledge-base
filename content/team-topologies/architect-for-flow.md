@@ -52,11 +52,11 @@ Through **7 steps**, the canvas helps you map **the as-is** of your organization
 ### 5. Modulerizing Solution Space
 * ![Slide Step 5](../assets/architect_for_flow_canvas_step_5.png)
 ### 6. Visualizing Future Landsape
-* [Slide Step 6](../assets/architect_for_flow_canvas_step_6.png)
+* ![Slide Step 6](../assets/architect_for_flow_canvas_step_6.png)
 ### 7. Defining Future Team Organization
 * ![Slide Step 7_1](../assets/architect_for_flow_canvas_step_7_1_value-stream-teams.png)
 * ![Slide Step 7_2_1](../assets/architect_for_flow_canvas_step_7_2_1-platform-teams.png)
-* ![Slide Step 7_2_2(assets/architect_for_flow_canvas_step_7_2_2-platform-value-chain.png)
+* ![Slide Step 7_2_2](../assets/architect_for_flow_canvas_step_7_2_2-platform-value-chain.png)
 * ![Slide Step 7_3](../assets/architect_for_flow_canvas_step_7_3_enabling-teams.png)
 * ![Slide Step 7_4](../assets/architect_for_flow_canvas_step_7_4_wins_vs_big_ball_of_mud.png)
 
