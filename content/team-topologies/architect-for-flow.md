@@ -23,9 +23,17 @@ This is a interpretation of the talk on architectuure for flow.
 
 ### Domain Driven Design
 
+See also [Domain Driven Design]({{< relref "/software-architecture/topics/domain-driven-design.md" >}}), but a quick overview of what is relevant for this talk:
+
+* A business has a **Business Domain**.
+* The busininess domain exists out of **subdomains types** (*Core, Supporting, Generic*)
+* based on the  **subdomains types**, you might make an investment strategy (Core subdomain you build as it's a differnetiatior, generic should be outsourced...)
+* Any subdomain can be broken down in one or more **Bounded Contexts**.
+* The Business Domain describes your **Problem Space** and your Subdomains your **Solution Space**.
+
 ### Team Toplogies
 
-We are covering [Team Topologies]({{< relref "/team-topologies" >}})
+We are covering [Team Topologies]({{< relref "/team-topologies" >}}) already extensively.
 
 
 ## Architecture For Flow Canvas
