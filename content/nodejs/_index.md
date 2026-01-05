@@ -1,8 +1,8 @@
 ---
 bookCollapseSection: true
-title: "NodeJS Streams And Networking"
+title: "NodeJS"
 ---
-# Streams and Networking
+# NodeJS Streams and Networking
 These are notes based on the Frontend Masters course by James Holiday (aka Substack).
 Link [here](https://frontendmasters.com/courses/networking-streams/)
 
