@@ -13,9 +13,20 @@ This is a interpretation of the talk on architectuure for flow.
 * **What** - 
     * There are **3 tools** introduced to help implement this efficiency and effectivity. 
         * *Wardley Maps* - To understand and map you value chain
-        * *Domain Driven Deign* - To understand your boundaries, oppertunity to reuse (modulerize) and choose appropiate investment strategy (Build, buy, outsource).
+        * *Domain Driven Design* - To understand your boundaries, oppertunity to reuse (modulerize) and choose appropiate investment strategy (Build, buy, outsource).
         * *Team Topologies* - To properly design the organization and the team's boundaries.
     * She introduces the **Architecture For Flow Canvas** where she designs an opionated approach that combines these 3 tools to reach the stated goal.
+
+## The Tools
+
+### Warley Maps
+
+### Domain Driven Design
+
+### Team Toplogies
+
+We are covering [Team Topologies]({{< relref "/team-topologies" >}})
+
 
 ## Architecture For Flow Canvas
 
@@ -39,6 +50,7 @@ Through **7 steps**, the canvas helps you map **the as-is** of your organization
 * ![Slide Step 7_2_2(assets/architect_for_flow_canvas_step_7_2_2-platform-value-chain.png)
 * ![Slide Step 7_3](assets/architect_for_flow_canvas_step_7_3_enabling-teams.png)
 * ![Slide Step 7_4](assets/architect_for_flow_canvas_step_7_4_wins_vs_big_ball_of_mud.png)
+
 
 
 ## Critique / Remarks
