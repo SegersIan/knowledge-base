@@ -4,7 +4,7 @@ title: "Architecture For Flow"
 
 # Architecture For Flow
 
-This is a interpretation of the talk on architectuure for flow.
+This is a interpretation of the talk on architecture for flow.
 
 ## The Elevator Pitch
 
@@ -13,19 +13,19 @@ This is a interpretation of the talk on architectuure for flow.
 * **What** - 
     * There are **3 tools** introduced to help implement this efficiency and effectivity. 
         * *Wardley Maps* - To understand and map you value chain
-        * *Domain Driven Design* - To understand your boundaries, oppertunity to reuse (modulerize) and choose appropiate investment strategy (Build, buy, outsource).
+        * *Domain Driven Design* - To understand your boundaries, opportunity to reuse (modularize) and choose appropriate investment strategy (Build, buy, outsource).
         * *Team Topologies* - To properly design the organization and the team's boundaries.
-    * She introduces the **Architecture For Flow Canvas** where she designs an opionated approach that combines these 3 tools to reach the stated goal.
+    * She introduces the **Architecture For Flow Canvas** where she designs an opinionated approach that combines these 3 tools to reach the stated goal.
 
 ## The Tools
 
 ### Warley Maps
 
 * A 2 dimensional graph with
-    * The **x-axe** being **Evolution** (With the main areas *Genesis, Custom-Builtm, Product/Rental, Commodity*)
+    * The **x-axe** being **Evolution** (With the main areas *Genesis, Custom-Built, Product/Rental, Commodity*)
     * The **y-axe** being **Value Chain** (with the scale from *Invisible* to *Visible* to the end user)
 * The idea is that you draw from the top, the most visible part (for your end user) of the value chain.
-    * This can start with a certain functionality, using application X, hosted on platform Y, running on infrastructure Z, ending with the physical datacenter China (the least visible to the end user).
+    * This can start with a certain functionality, using application X, hosted on platform Y, running on infrastructure Z, ending with the physical data-center China (the least visible to the end user).
     * As you have drawn the value chain, you can move each item horizontally given component, module, feature, capability based on their evolution. 
         * Is this commodity? (like a virtual machine) - Put it all the way right.
         * Is this genesis? (Like your IP, value proposition, unique) - Put it all the way left.
@@ -36,13 +36,13 @@ This is a interpretation of the talk on architectuure for flow.
 See also [Domain Driven Design]({{< relref "/software-architecture/topics/domain-driven-design.md" >}}), but a quick overview of what is relevant for this talk:
 
 * A business has a **Business Domain**.
-* The busininess domain exists out of **subdomains types** (*Core, Supporting, Generic*)
-* based on the  **subdomains types**, you might make an investment strategy (Core subdomain you build as it's a differnetiatior, generic should be outsourced...)
+* The business domain exists out of **subdomains types** (*Core, Supporting, Generic*)
+* based on the  **subdomains types**, you might make an investment strategy (Core subdomain you build as it's a differentiator, generic should be outsourced...)
 * Any subdomain can be broken down in one or more **Bounded Contexts**.
 * The Business Domain describes your **Problem Space** and your Subdomains your **Solution Space**.
 * A bounded context can identify reusable / modular parts of the domain.
 
-### Team Toplogies
+### Team Topologies
 
 We are covering [Team Topologies]({{< relref "/team-topologies" >}}) already extensively.
 
@@ -56,7 +56,7 @@ Through **7 steps**, the canvas helps you map **the as-is** of your organization
 * Analyze:
     * How are teams currently structured (size, boundaries types, ...)?
     * What are the dependencies and interactions between teams.
-    * How do these themse work together (Like a seperate Dev and Ops).
+    * How do these teams work together (Like a separate Dev and Ops).
 
 ### 2. Assessing Flow Of Change
 
@@ -68,7 +68,7 @@ Through **7 steps**, the canvas helps you map **the as-is** of your organization
         * Every dependency comes with overhead
         * Constraints slow down overall performance
     * **Team Ownership**
-        * Not owning neture e2e flow
+        * Not owning entire e2e flow
         * Lack of ownership clarity
         * Too big of scope
         * High cognitive load
@@ -78,7 +78,7 @@ Through **7 steps**, the canvas helps you map **the as-is** of your organization
     * **Work Management**
         * Lack of clear priorities
         * High WIP
-        * Many interuptions and context switches
+        * Many interruptions and context switches
 
 ### 3. Visualizing Current Landscape
 
@@ -100,27 +100,27 @@ Through **7 steps**, the canvas helps you map **the as-is** of your organization
 * Categorize everything in your **Problem Space** to either a *Core, Supporting, or Generic* subdomain.
     * Based on this you can decide if given area should be build (differentiating), Buy/Use or outsourced (e.g. accounting).
 
-### 5. Modulerizing Solution Space
+### 5. Modularizing Solution Space
 
 * [Slide Step 5](../assets/architect_for_flow_canvas_step_5.png)
-* Modulerize everything in your **Solution Space** by decomposing into **bounded contexts**:
+* Modularize everything in your **Solution Space** by decomposing into **bounded contexts**:
     * Group related behavior together
     * Enforce high cohesion and modularity
-    * Serve as well-defined owernship boundaries
-* Available techniques: Event Storming, Domain Storytelling, Example mapping, Userstory Mapping, ...
+    * Serve as well-defined ownership boundaries
+* Available techniques: Event Storming, Domain Storytelling, Example mapping, User story Mapping, ...
 
-### 6. Visualizing Future Landsape
+### 6. Visualizing Future Landscape
 
 * [Slide Step 6](../assets/architect_for_flow_canvas_step_6.png)
-* Analyze the modularizied solution spaces and bounded contexs and move components/context accross the evolution axe accordingly.
+* Analyze the modularized solution spaces and bounded contexts and move components/context across the evolution axe accordingly.
     * Focus major development investments on differentiators
-    * Close efficiency gaps by using standerized commodoties (e.g. Cloud)
+    * Close efficiency gaps by using standardized commodities (e.g. Cloud)
     * Modular, well-encapsulate, loosely coupled architecture.
 
 ### 7. Defining Future Team Organization
 
 * Now you have designed your solution space to a TO BE state. 
-* Use the Team Topologies and the reverse conway manouver to **design an organization that fits the defined future landscape**.
+* Use the Team Topologies and the reverse conway maneuver to **design an organization that fits the defined future landscape**.
     * *Value Stream Teams* - [Slide Step 7_1](../assets/architect_for_flow_canvas_step_7_1_value-stream-teams.png)
     * *Platform Teams* - [Slide Step 7_2_1](../assets/architect_for_flow_canvas_step_7_2_1-platform-teams.png)
         * ![Slide Step 7_2_2](../assets/architect_for_flow_canvas_step_7_2_2-platform-value-chain.png)
