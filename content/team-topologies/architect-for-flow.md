@@ -16,6 +16,10 @@ This is a interpretation of the talk on architecture for flow.
         * *Domain Driven Design* - To understand your boundaries, opportunity to reuse (modularize) and choose appropriate investment strategy (Build, buy, outsource).
         * *Team Topologies* - To properly design the organization and the team's boundaries.
     * She introduces the **Architecture For Flow Canvas** where she designs an opinionated approach that combines these 3 tools to reach the stated goal.
+* In general
+    * Optimize for of sustainable value
+    * Enable fast and constant feedback
+    * Be adaptive to rapid changes.
 
 ## The Tools
 
@@ -122,13 +126,47 @@ Through **7 steps**, the canvas helps you map **the as-is** of your organization
 * Now you have designed your solution space to a TO BE state. 
 * Use the Team Topologies and the reverse conway maneuver to **design an organization that fits the defined future landscape**.
     * *Value Stream Teams* - [Slide Step 7_1](../assets/architect_for_flow_canvas_step_7_1_value-stream-teams.png)
+        * Find suitable team boundaries aligned to customer-facing streams of changes.
+        * Bounded contexts as team boundaries for stream aligned teams.
+        * Optimize for team cognitive load
+        * Create clear ownership boundaries
+        * Limit number, type, size of components per team (scope).
     * *Platform Teams* - [Slide Step 7_2_1](../assets/architect_for_flow_canvas_step_7_2_1-platform-teams.png)
-        * ![Slide Step 7_2_2](../assets/architect_for_flow_canvas_step_7_2_2-platform-value-chain.png)
+        * They support stream aligned teams to have a fast flow of change
+        * Identify services needed to support reliable flow of change
+        * Providing self-service capabilities (x-as-a-service)
+        * You can use the same Wardley Map to analyze how to create platforms. Here the end user is the value stream team instead of the customer.
+            * [Slide Step 7_2_2](../assets/architect_for_flow_canvas_step_7_2_2-platform-value-chain.png)
     * *Enabling Teams* - [Slide Step 7_3](../assets/architect_for_flow_canvas_step_7_3_enabling-teams.png)
-* [Slide Step 7_4](../assets/architect_for_flow_canvas_step_7_4_wins_vs_big_ball_of_mud.png)
+        * Help Value Stream and Platform teams to upskill on missing capabilities. This unblocks teams to wait on someone with a certain expertise.
+        * Examples
+            * Software Development
+            * UX & Accessability 
+            * Software design & architecture
+            * Testing & Q&A
+            * DevOps Practices
+            * AppSec
+            * Data and analytics
+            * Product management
+            * Effective communication
+            * Documentation
+            * Platform engineering
+            * DevEx
+            * Infra management
+            * Cost Management
+            * ...
+* Unlocking blockers to flow, in summary a bit - [Slide Step 7_4](../assets/architect_for_flow_canvas_step_7_4_wins_vs_big_ball_of_mud.png)
+    * Modular well encapsulated, loosely coupled architecture with bounded context.
+    * Focus major development investments on differentiators with discovered subdomain types.
+    * Closing efficiency gaps by using standardized commodities.
+    * Bounded-contexts serve as well defined ownership boundaries.
+    * Optimize for team cognitive load.
+    * Cross-functional, autonomous, stream-aligned teams & platform teams providing self-services.
+    * Enabling teams as internal mentor, coaches to upskill teams
 
 ## Critique / Remarks
 
+This seems to take in account a single learning loop. So it allows to get better and more efficient towards a given product and end goal. But what about the changing needs for customers? Changes is business and domain ? How do you innovate on a larger scale here? Something that goes across existing bounded contexts and subdomains. The second learning loop is at least not explained here.
 
 ## Resources
 
