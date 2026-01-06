@@ -83,6 +83,7 @@ Through **7 steps**, the canvas helps you map **the as-is** of your organization
 ### 3. Visualizing Current Landscape
 
 * [Slide Step 3](../assets/architect_for_flow_canvas_step_3.png)
+* Note: Here we introduce ***Wardley Mapping** for the first time.
 * Mapping the current landscape using **Wardley Mapping**
     * Start on top with the **Problem Space**, the suggested approach to articulate this is using the [Jobs To Be Done](https://strategyn.com/jobs-to-be-done/) (but other methodologies exist).
         * This makes sense, cause the Jobs To Be Done are the most visible part to the end user.
@@ -94,11 +95,19 @@ Through **7 steps**, the canvas helps you map **the as-is** of your organization
 
 ### 4. Categorizing Problem Space
 
-* ![Slide Step 4](../assets/architect_for_flow_canvas_step_4.png)
+* [Slide Step 4](../assets/architect_for_flow_canvas_step_4.png)
+* Note: Here we introduce ***Domain Driven Design** for the first time.
+* Categorize everything in your **Problem Space** to either a *Core, Supporting, or Generic* subdomain.
+    * Based on this you can decide if given area should be build (differentiating), Buy/Use or outsourced (e.g. accounting).
 
 ### 5. Modulerizing Solution Space
 
-* ![Slide Step 5](../assets/architect_for_flow_canvas_step_5.png)
+* [Slide Step 5](../assets/architect_for_flow_canvas_step_5.png)
+* Modulerize everything in your **Solution Space** by decomposing into **bounded contexts**:
+    * Group related behavior together
+    * Enforce high cohesion and modularity
+    * Serve as well-defined owernship boundaries
+* Available techniques: Event Storming, Domain Storytelling, Example mapping, Userstory Mapping, ...
 
 ### 6. Visualizing Future Landsape
 
