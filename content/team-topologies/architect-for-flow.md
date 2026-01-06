@@ -36,13 +36,13 @@ See also [Domain Driven Design]({{< relref "/software-architecture/topics/domain
 
 We are covering [Team Topologies]({{< relref "/team-topologies" >}}) already extensively.
 
-
 ## Architecture For Flow Canvas
 
 Through **7 steps**, the canvas helps you map **the as-is** of your organization and then the **to-be** state.
 
 ### 1. Analyzing Current Teams
 * ![Slide Step 1](../assets/architect_for_flow_canvas_step_1.png)
+
 ### 2. Assessing Flow Of Change
 * ![Slide Step 2](../assets/architect_for_flow_canvas_step_2.png)
 ### 3. Visualizing Current Landscape
@@ -59,7 +59,7 @@ Through **7 steps**, the canvas helps you map **the as-is** of your organization
 * ![Slide Step 7_2_2](../assets/architect_for_flow_canvas_step_7_2_2-platform-value-chain.png)
 * ![Slide Step 7_3](../assets/architect_for_flow_canvas_step_7_3_enabling-teams.png)
 * ![Slide Step 7_4](../assets/architect_for_flow_canvas_step_7_4_wins_vs_big_ball_of_mud.png)
-
+* ![Slide Step 7_5](team-topologies/assets/architect_for_flow_canvas_step_7_4_wins_vs_big_ball_of_mud.png)
 
 
 ## Critique / Remarks
