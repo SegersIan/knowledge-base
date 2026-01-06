@@ -119,11 +119,10 @@ Through **7 steps**, the canvas helps you map **the as-is** of your organization
 
 ### 7. Defining Future Team Organization
 
-* [Slide Step 7_1](../assets/architect_for_flow_canvas_step_7_1_value-stream-teams.png)
 * Now you have designed your solution space to a TO BE state. 
 * Use the Team Topologies and the reverse conway manouver to **design an organization that fits the defined future landscape**.
-
-* ![Slide Step 7_2_1](../assets/architect_for_flow_canvas_step_7_2_1-platform-teams.png)
+    * *Value Stream Teams* - [Slide Step 7_1](../assets/architect_for_flow_canvas_step_7_1_value-stream-teams.png)
+    * *Platform Teams* - [Slide Step 7_2_1](../assets/architect_for_flow_canvas_step_7_2_1-platform-teams.png)
 * ![Slide Step 7_2_2](../assets/architect_for_flow_canvas_step_7_2_2-platform-value-chain.png)
 * ![Slide Step 7_3](../assets/architect_for_flow_canvas_step_7_3_enabling-teams.png)
 * ![Slide Step 7_4](../assets/architect_for_flow_canvas_step_7_4_wins_vs_big_ball_of_mud.png)
