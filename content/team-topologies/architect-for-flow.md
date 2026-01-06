@@ -111,10 +111,18 @@ Through **7 steps**, the canvas helps you map **the as-is** of your organization
 
 ### 6. Visualizing Future Landsape
 
-* ![Slide Step 6](../assets/architect_for_flow_canvas_step_6.png)
+* [Slide Step 6](../assets/architect_for_flow_canvas_step_6.png)
+* Analyze the modularizied solution spaces and bounded contexs and move components/context accross the evolution axe accordingly.
+    * Focus major development investments on differentiators
+    * Close efficiency gaps by using standerized commodoties (e.g. Cloud)
+    * Modular, well-encapsulate, loosely coupled architecture.
 
 ### 7. Defining Future Team Organization
-* ![Slide Step 7_1](../assets/architect_for_flow_canvas_step_7_1_value-stream-teams.png)
+
+* [Slide Step 7_1](../assets/architect_for_flow_canvas_step_7_1_value-stream-teams.png)
+* Now you have designed your solution space to a TO BE state. 
+* Use the Team Topologies and the reverse conway manouver to **design an organization that fits the defined future landscape**.
+
 * ![Slide Step 7_2_1](../assets/architect_for_flow_canvas_step_7_2_1-platform-teams.png)
 * ![Slide Step 7_2_2](../assets/architect_for_flow_canvas_step_7_2_2-platform-value-chain.png)
 * ![Slide Step 7_3](../assets/architect_for_flow_canvas_step_7_3_enabling-teams.png)
