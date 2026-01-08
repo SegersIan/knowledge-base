@@ -28,12 +28,12 @@ title: "OSINT"
 > Intelligence about a person and direct metadata (address, name, email, accounts, ...)
 
 ![img](assets/subject_intelligence_attack_vector_1.jpg)
-![img](../assets/subject_intelligence_attack_vector_2.jpg)
-![img](../assets/subject_intelligence_attack_vector_3.jpg)
-![img](../assets/subject_intelligence_attack_vector_4.jpg)
-![img](../assets/subject_intelligence_attack_vector_5.jpg)
-![img](../assets/subject_intelligence_attack_vector_6.jpg)
-![img](../assets/subject_intelligence_attack_vector_7.jpg)
+![img](assets/subject_intelligence_attack_vector_2.jpg)
+![img](assets/subject_intelligence_attack_vector_3.jpg)
+![img](assets/subject_intelligence_attack_vector_4.jpg)
+![img](assets/subject_intelligence_attack_vector_5.jpg)
+![img](assets/subject_intelligence_attack_vector_6.jpg)
+![img](assets/subject_intelligence_attack_vector_7.jpg)
 
 ### Tools
 
@@ -54,13 +54,13 @@ title: "OSINT"
   * **Malinformation**: Based in reality but is purposfully harmfull. It's is based on reality but shared out of context or intent to cause harm.
     * Example: Political party post fake story of immigrant assaulting a native woman to ignite hated.
 
-![img](../assets/social_media_intelligence_1.png)
-![img](../assets/social_media_intelligence_2.png)
-![img](../assets/social_media_intelligence_3.png)
-![img](../assets/social_media_intelligence_4.png)
-![img](../assets/social_media_intelligence_5.png)
-![img](../assets/social_media_intelligence_6.png)
-![img](../assets/social_media_intelligence_7.png)
+![img](assets/social_media_intelligence_1.png)
+![img](assets/social_media_intelligence_2.png)
+![img](assets/social_media_intelligence_3.png)
+![img](assets/social_media_intelligence_4.png)
+![img](assets/social_media_intelligence_5.png)
+![img](assets/social_media_intelligence_6.png)
+![img](assets/social_media_intelligence_7.png)
 
 ### Tools
 
@@ -125,7 +125,7 @@ title: "OSINT"
   * IPs  can show connections or shared infrastructure between seemingly unrelated organizations . Remember, a single hosting can run for various companies sites that are unrelated to, rhey just use the same hosting (e.g wordpress).
 
 
-![img](../assets/organizational_intelligence_1.png)
+![img](assets/organizational_intelligence_1.png)
 
 ### Tools
 
