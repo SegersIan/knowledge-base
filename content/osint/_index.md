@@ -64,6 +64,8 @@ title: "OSINT"
 
 ### Tools
 
+* https://openinframap.org/
+* https://www.shipmap.org/
 * [Telegram Stats](https://tgstat.com)
 * [Reddit Post Analyzer 1](https://reditr.com/)
 * [Reddit Post Analyzer 2](https://www.osintcombine.com/free-osint-tools/reddit-post-analyser)
