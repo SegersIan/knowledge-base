@@ -27,7 +27,7 @@ title: "OSINT"
 
 > Intelligence about a person and direct metadata (address, name, email, accounts, ...)
 
-![img](../assets/subject_intelligence_attack_vector_1.jpg)
+![img](assets/subject_intelligence_attack_vector_1.jpg)
 ![img](../assets/subject_intelligence_attack_vector_2.jpg)
 ![img](../assets/subject_intelligence_attack_vector_3.jpg)
 ![img](../assets/subject_intelligence_attack_vector_4.jpg)
