@@ -62,6 +62,9 @@ Use by default material design from google maybe for simple basic UI. Combined w
     * See swiss thing
     * confederalism
     * Of course, there is no voting here, so make sure to highlight that, but focus more on communication paths ?
+    * https://unfix.com/base-types
+    * Team Topologies
+    * ...
 
 ## Tools
 
