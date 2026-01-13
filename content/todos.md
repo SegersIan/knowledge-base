@@ -57,7 +57,11 @@ Use by default material design from google maybe for simple basic UI. Combined w
 - Music Channel: Either just generate music and upload it for tracks or continuous play, OR discuss music/analysis
 - Music Analysis Channel: Take a song per time and create insights and analytics of it and produce a video.
 - Technical explanations of an existing as-a-service (BLOG POST)
-
+* DO an analysis between Political systems and Delivery organizations
+    * https://unfix.com/base-types
+    * See swiss thing
+    * confederalism
+    * Of course, there is no voting here, so make sure to highlight that, but focus more on communication paths ?
 
 ## Tools
 
