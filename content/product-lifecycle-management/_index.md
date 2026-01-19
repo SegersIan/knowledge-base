@@ -58,3 +58,5 @@ These subdomains represent common areas of product work. Their scope and emphasi
 * https://www.strategyzer.com/library/the-value-proposition-canvas
 * https://www.hyperact.co.uk/blog/product-development-blueprint
 * https://www.wardleymaps.com/
+* Positioning a product
+    * ![ing](assets/selling_product.jpg)
