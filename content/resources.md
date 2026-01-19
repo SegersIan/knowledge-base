@@ -1,6 +1,8 @@
 # Resources
 
 * https://github.com/zalando/tech-radar
+* https://european-alternatives.eu/
+
 
 
 ## Articles
