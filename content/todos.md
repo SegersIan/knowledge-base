@@ -1,6 +1,7 @@
 ---
 title: "TODOs"
 ---
+# Ideas & Todo's
 
 * Start your hack a box journey
 * Blog about the Team Topologies Journey
