@@ -56,6 +56,9 @@ title: "TODOs"
 * Make a Poc for Agents with https://google.github.io/adk-docs/
 * mcp-studio.segersian.com (mcp tools connecting to my various downstream tools, integrations, moght be a business idea)
 * ai.segersian.com , what could I do here?
+* Explore https://code.claude.com/docs/en/vs-code
+* Explore https://claude.com/download?
+
 
 ## Product Ideas
 
