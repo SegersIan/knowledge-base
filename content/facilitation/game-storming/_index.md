@@ -123,7 +123,7 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
         * Then, Do something that they can individually (come up with solutions)
         * Then, do something in smaller groups (discuss the solutions)
         * Then, present again in the larger group the results
-        * ![IMG](../assets/chap3_natural_energy_flow.jpg)
+        * ![IMG](assets/chap3_natural_energy_flow.jpg)
 
 
 ### Opening and Closing
