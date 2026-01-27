@@ -58,6 +58,7 @@ title: "TODOs"
 * ai.segersian.com , what could I do here?
 * Explore https://code.claude.com/docs/en/vs-code
 * Explore https://claude.com/download?
+* Explore https://clawd.bot/
 
 
 ## Product Ideas
