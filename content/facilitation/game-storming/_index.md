@@ -84,11 +84,48 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
 
 ## Gamestorming In Practice
 
-> Chapter 3.
+> Foundational Concepts and and ideas (Chapter 3)
 
 ### Energy
+* The mental, emotional and phsyical energy that paricipants bring.
+* Use the available energy productively or waste it.
+* We want to adjust energy accordingly, steady. A campfire is contained and channel energy , a forest fire is energy out of control.
+
 ### Structure
+
+* Harnessing energy requires thinking about structure
+* Structures are different templates that help channel the energy to get different results. Each "part" of game storming has a different expected outcome, so we choose appropiate template/structure.
+    * **Result Types**: New Ideas, Agreement, Tough Decision, Problem-Solving, Unraveling Complexity, Planning, ...
+* **Energy follows structure**
+* Room layout matters, a presenter focused room will channel energy differently than a room with round tables. Sitting opposite, side by side, stand at flip charts... it all influences how energy will flow.
+* A agenda is a set of activities that create a sotry from beginning till end. Output of one activity flows seamlessly in the next.
+
 ### Natural Energy Flows
+
+* **Bright and Stimulating Environments**
+    * Natural light over fluorescent light
+    * Big windows and high ceilings
+    * Bright coloured sticky notes and markers
+    * Anything fun and inviting
+* **Energy Gradients**
+    * Most people peak between mid-morning and mid-day with mid-afternoon dip. Include that in your agenda and planning if possible.
+* **Time-Boxing** 
+    * Mostly attentive at start meeting and end
+    * Usually attention wanes after 10 minutes
+    * Consider designing an agenda so there is a change-up every 10-15 minutes. Frequent change ups is a cheat code.
+        * Re-energizes and refocusses
+* **Introvert and Extrovert Energy**
+    * Introverts recharge when working alone, drains when working with others
+    * Extraverts recharge when working with others, drains when working alone
+    * Follow a energy flow that allows all types to rechage
+    * Example:
+        * Start with group activity (introduce the challenge)
+        * Then, Do something that they can individually (come up with solutions)
+        * Then, do something in smaller groups (discuss the solutions)
+        * Then, present again in the larger group the results
+        * ![IMG](../assets/chap3_natural_energy_flow.jpg)
+
+
 ### Opening and Closing
 ### Artifacts
 ### Meaningful Space
