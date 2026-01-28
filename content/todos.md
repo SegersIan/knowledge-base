@@ -11,6 +11,8 @@ title: "TODOs"
 ## Top Things
 
 * AI Security Specialist - Learn and consult
+* OSINT specialist
+* Leadership
 
 ## Video Editing
 
