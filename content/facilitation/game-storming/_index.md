@@ -125,8 +125,28 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
         * Then, present again in the larger group the results
         * ![IMG](assets/chap3_natural_energy_flow.jpg)
 
-
 ### Opening and Closing
+
+* Any agenda/session needs a proper **opening** and **closing**.
+* **Opening** invites anticipation and exploration of what comes next.
+    * **Divergent** - spark imaginations
+    * Create warm, inviting environment for participants that will open their minds and explore possibilities.
+    * Set frame of reference, context, and lay out journey (agenda).
+* **Closing** invites reflection and decision about next steps.
+    * **Convergent**
+    * Making choices and decisions, realign with the group.
+* **Risks**
+    * Don't open and close at the same time
+        * When you explore creative posibilities, shut down judging and critical mind. 
+        * When you you are making difficult choices, shut down the creative part. 
+        * Seperate them and keep them in order
+    * Close everything you open
+        * If you don't, there might be many ideas and oppertunities but no plan tackling them.
+        * Can be as simple as "This thread doesn't seem to be taking us anywhere, let's not waste any more time on it."
+        
+
+
+
 ### Artifacts
 ### Meaningful Space
 ### Sketching And Modelmaking
