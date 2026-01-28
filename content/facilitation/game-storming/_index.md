@@ -87,25 +87,25 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
 > Foundational Concepts and and ideas (Chapter 3)
 
 ### Energy
-* The mental, emotional and phsyical energy that paricipants bring.
+* The mental, emotional and physical energy that participants bring.
 * Use the available energy productively or waste it.
 * We want to adjust energy accordingly, steady. A campfire is contained and channel energy , a forest fire is energy out of control.
 
 ### Structure
 
 * Harnessing energy requires thinking about structure
-* Structures are different templates that help channel the energy to get different results. Each "part" of game storming has a different expected outcome, so we choose appropiate template/structure.
+* Structures are different templates that help channel the energy to get different results. Each "part" of game storming has a different expected outcome, so we choose appropriate template/structure.
     * **Result Types**: New Ideas, Agreement, Tough Decision, Problem-Solving, Unraveling Complexity, Planning, ...
 * **Energy follows structure**
 * Room layout matters, a presenter focused room will channel energy differently than a room with round tables. Sitting opposite, side by side, stand at flip charts... it all influences how energy will flow.
-* A agenda is a set of activities that create a sotry from beginning till end. Output of one activity flows seamlessly in the next.
+* A agenda is a set of activities that create a story from beginning till end. Output of one activity flows seamlessly in the next.
 
 ### Natural Energy Flows
 
 * **Bright and Stimulating Environments**
     * Natural light over fluorescent light
     * Big windows and high ceilings
-    * Bright coloured sticky notes and markers
+    * Bright colored sticky notes and markers
     * Anything fun and inviting
 * **Energy Gradients**
     * Most people peak between mid-morning and mid-day with mid-afternoon dip. Include that in your agenda and planning if possible.
@@ -113,11 +113,11 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
     * Mostly attentive at start meeting and end
     * Usually attention wanes after 10 minutes
     * Consider designing an agenda so there is a change-up every 10-15 minutes. Frequent change ups is a cheat code.
-        * Re-energizes and refocusses
+        * Re-energizes and refocuses
 * **Introvert and Extrovert Energy**
     * Introverts recharge when working alone, drains when working with others
     * Extraverts recharge when working with others, drains when working alone
-    * Follow a energy flow that allows all types to rechage
+    * Follow a energy flow that allows all types to recharge
     * Example:
         * Start with group activity (introduce the challenge)
         * Then, Do something that they can individually (come up with solutions)
@@ -139,19 +139,19 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
     * Making choices and decisions, realign with the group.
 * **Risks**
     * Don't open and close at the same time
-        * When you explore creative posibilities, shut down judging and critical mind. 
+        * When you explore creative possibilities, shut down judging and critical mind. 
         * When you you are making difficult choices, shut down the creative part. 
-        * Seperate them and keep them in order
+        * Separate them and keep them in order
     * Close everything you open
-        * If you don't, there might be many ideas and oppertunities but no plan tackling them.
+        * If you don't, there might be many ideas and opportunities but no plan tackling them.
         * Can be as simple as "This thread doesn't seem to be taking us anywhere, let's not waste any more time on it."
 
 ### Artifacts
 
-* Artofacts are any objects that tholds information.
+* Artifacts are any objects that holds information.
     * Index cards, post its, cards, counters, ...
 * Artifacts are aids.
-* Artifacs can make things explicit, clear, tangible, persistant.
+* Artifacts can make things explicit, clear, tangible, persistent.
 * **Sticky Notes** - One of the best tools, allows for breaking down into small movable artifacts.
 * **Nodes** - Can be be pretty much anything when seen as a part of a larger system.
     * Nodes are more an abstract concept, and you can use sticky notes or index cards for that. 
@@ -162,9 +162,12 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
     * ...
 
 ### Meaningful Space
+
+
+
 ### Sketching And Modelmaking
 ### Randomness, Reversal, Reframing
-### Firestarting 
+### Fire-starting 
 ### Setups
 ### Asking Questions
 ### Improvisation
