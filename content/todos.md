@@ -59,7 +59,7 @@ title: "TODOs"
 * Explore https://code.claude.com/docs/en/vs-code
 * Explore https://claude.com/download?
 * Explore https://clawd.bot/
-
+* Explore https://agents.craft.do/
 
 ## Product Ideas
 
