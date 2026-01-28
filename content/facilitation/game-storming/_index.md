@@ -127,6 +127,8 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
 
 ### Opening and Closing
 
+![img](assets/chap3_opening_and_closing.jpg)
+
 * Any agenda/session needs a proper **opening** and **closing**.
 * **Opening** invites anticipation and exploration of what comes next.
     * **Divergent** - spark imaginations
@@ -143,9 +145,6 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
     * Close everything you open
         * If you don't, there might be many ideas and oppertunities but no plan tackling them.
         * Can be as simple as "This thread doesn't seem to be taking us anywhere, let's not waste any more time on it."
-        
-
-
 
 ### Artifacts
 ### Meaningful Space
