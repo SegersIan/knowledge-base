@@ -8,6 +8,10 @@ title: "TODOs"
 * Download alle norge bank decisions; preprocess, wnd us ai and FSB data to see patterjs between theird decisions and reality.
     * Cool would be to know how different the banks think, based on their fixed rates and norges bank decisions
 
+## Top Things
+
+* AI Security Specialist - Learn and consult
+
 ## Video Editing
 
 * Learn DaVinci Resolve [Official Training](https://www.blackmagicdesign.com/products/davinciresolve/training)
