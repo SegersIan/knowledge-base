@@ -147,6 +147,20 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
         * Can be as simple as "This thread doesn't seem to be taking us anywhere, let's not waste any more time on it."
 
 ### Artifacts
+
+* Artofacts are any objects that tholds information.
+    * Index cards, post its, cards, counters, ...
+* Artifacts are aids.
+* Artifacs can make things explicit, clear, tangible, persistant.
+* **Sticky Notes** - One of the best tools, allows for breaking down into small movable artifacts.
+* **Nodes** - Can be be pretty much anything when seen as a part of a larger system.
+    * Nodes are more an abstract concept, and you can use sticky notes or index cards for that. 
+    * Now you can cluster, pile, or shuffle these nodes.
+* **Linking** - You can connect nodes based on the context
+    * Flow Charts
+    * Mind Maps
+    * ...
+
 ### Meaningful Space
 ### Sketching And Modelmaking
 ### Randomness, Reversal, Reframing
