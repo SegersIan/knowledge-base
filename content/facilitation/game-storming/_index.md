@@ -163,7 +163,35 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
 
 ### Meaningful Space
 
-
+* **General Concept**
+    * [Concept Introduced in 'The Language Of Graphics'](https://dare.uva.nl/search?identifier=c136c6f0-b987-4264-aeef-db053ea56a61)
+    * Framing any space to make relationships within more meaningful. (like a grid on a chessboard)
+    * **Affinity Mapping** uses meaningful space for grouping nodes into related domains. You can do this by drawing a few vertical lines to create clusters/domains for nodes. Avoid naming the clusters at first, you are looking for patterns. Redundant/duplicates can be stack on each other.
+    * Gives the position of artifacts exact meaning.
+* **Components**
+    * **Borders** - Lines that frame a space, a box, a column, imaginary lines with great impact
+    * **Axes** - Lines that give direction within a space. It has force, direction compared to border lines.
+        * There are also hidden/implied axes
+            * We read from left to right, so we assume you want us to read nodes from left to right.
+            * We read from top to bottom usually. we expect high level or more important things to be on top and lower level details below.
+    * **Circles and Targets** - Excellent for "distance" between nodes or places (e.g. Distance from the node and a goal)
+        * Inside the scope, in the circle, outside the scope, outside the circle.
+        * Concentric circles give more gradients (WHY, HOW, WHAT, BEST, BETTER, GOOD)
+    * **Metric vs Ordered Space**
+        * Metric space is a space we measure - Exact numbers or approx size (Small, Medium, ...). We care about individual information.
+        * Ordered space is space where precedence is what key - E.g. From less to most likely. We care about relation between things.
+    * **Grids** - Grids, quadrants, columns, rows...
+        * Allows to order, structure
+    * **Landscape and maps** - Sometimes it makes sense of information in a landscape, to express the journey or topology between nodes of information.
+        * A journey tells more about a direction (we need to launch a new product in stages), a map gives more context and topology (business conditions, competition, etc...)
+        * TIP: Search for visualization examples
+         * ![img](assets/chap3_maps.jpg)
+    * **Metaphor** - Organizing information so you see the relationships. Perfect reframing.
+        * Represent as a house, airplane, building, animal, ship, **anything that will help you break out of habitual thinking patterns**.¨
+        * Can help to ask new and thought provoking questions that you might not have considered before. **It's like reframing.**
+        * House example: What are the foundations? What are the columns and beams that support he roof
+        * [VisualFrameworks](https://visualframeworks.com/)
+        * ![img](assets/chap3_metaphors.jpg)
 
 ### Sketching And Modelmaking
 ### Randomness, Reversal, Reframing
@@ -174,3 +202,7 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
 ### Selection
 ### Try Something New
 ### Practices
+
+## Resources
+
+* https://visualframeworks.com/
