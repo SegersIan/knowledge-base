@@ -54,6 +54,9 @@ title: "TODOs"
 
 ## AI
 
+* **Good Courses**
+    * https://learn.deeplearning.ai/courses/agent-skills-with-anthropic/lesson/ldn5c3/introduction
+    
 * Find actual  good use cases for Copilot  agents or tech agents and blog about it
    * One agent for Team Topologies / Delivery Setup
    * ...
