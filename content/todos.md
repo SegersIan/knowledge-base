@@ -68,7 +68,7 @@ title: "TODOs"
     * https://learn.deeplearning.ai/courses/ai-for-everyone/lesson/quis4/week-1-introduction
     * https://learn.deeplearning.ai/specializations/machine-learning/lesson/bw6i6/welcome-to-machine-learning!
     * https://learn.deeplearning.ai/courses/design-develop-and-deploy-multi-agent-systems-with-crewai/lesson/rc39v/welcome
-
+* Find a PoC that you can setup that tracks your movemebts and overlays with a fake person. You know, cool video things.
 * Find actual  good use cases for Copilot  agents or tech agents and blog about it
    * One agent for Team Topologies / Delivery Setup
    * ...
