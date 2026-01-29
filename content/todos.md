@@ -54,9 +54,20 @@ title: "TODOs"
 
 ## AI
 
-* **Good Courses**
+* **Good Foundational Courses**
     * https://learn.deeplearning.ai/courses/agent-skills-with-anthropic/lesson/ldn5c3/introduction
-    
+    * https://learn.deeplearning.ai/courses/agentic-ai/lesson/pu5xbv/welcome!
+    * https://learn.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant/lesson/66b35/introduction
+    * https://learn.deeplearning.ai/courses/building-coding-agents-with-tool-execution/lesson/deetno/introduction
+    * https://learn.deeplearning.ai/courses/red-teaming-llm-applications/lesson/t1tp1/introduction
+* **Good Additional Courses**
+    * https://learn.deeplearning.ai/courses/safe-and-reliable-ai-via-guardrails/lesson/rz5a6/introduction
+    * https://learn.deeplearning.ai/courses/evaluating-ai-agents/lesson/sqkza/introduction
+    * https://learn.deeplearning.ai/courses/how-transformer-llms-work/lesson/nfshb/introduction
+    * https://learn.deeplearning.ai/courses/ai-for-everyone/lesson/quis4/week-1-introduction
+    * https://learn.deeplearning.ai/specializations/machine-learning/lesson/bw6i6/welcome-to-machine-learning!
+    * https://learn.deeplearning.ai/courses/design-develop-and-deploy-multi-agent-systems-with-crewai/lesson/rc39v/welcome
+
 * Find actual  good use cases for Copilot  agents or tech agents and blog about it
    * One agent for Team Topologies / Delivery Setup
    * ...
