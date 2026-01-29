@@ -60,6 +60,7 @@ title: "TODOs"
     * https://learn.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant/lesson/66b35/introduction
     * https://learn.deeplearning.ai/courses/building-coding-agents-with-tool-execution/lesson/deetno/introduction
     * https://learn.deeplearning.ai/courses/red-teaming-llm-applications/lesson/t1tp1/introduction
+    * https://learn.deeplearning.ai/specializations/generative-ai-for-software-development/information?tab=0 (certificationable)
 * **Good Additional Courses**
     * https://learn.deeplearning.ai/courses/safe-and-reliable-ai-via-guardrails/lesson/rz5a6/introduction
     * https://learn.deeplearning.ai/courses/evaluating-ai-agents/lesson/sqkza/introduction
