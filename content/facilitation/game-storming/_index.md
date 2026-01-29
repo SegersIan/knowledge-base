@@ -194,6 +194,30 @@ Volatile, uncertain, complex, and ambiguous environments are the norm. We all kn
         * ![img](assets/chap3_metaphors.jpg)
 
 ### Sketching And Modelmaking
+
+Easy building blocks for visuals, without being an artist.
+
+* **Visual Language** - Confidence is keys, see [Visual Thinking School](https://xplaner.com/visual-thinking-school/) for help.
+* **Visual Alphabet** - The small visuals elements that allow you to compose any visual.
+    * Glyphs: Point, line, Angle, Arc, Spiral and Loop
+    * Forms: Oval, seed, triangle, rectangle, house and cloud
+    * From these 12 you can draw alphabet, numbers, and complex shapes.
+* **Drawing People** (page 53) - With the 12 basic components you can draw these things. Often when drawing humans, you want to draw a certain action.
+    * Get a reference (over time you won't need it anymore) - [Image](assets/chap3_draw_man_1.jpg)
+    * Start with the center of gravity (not the head), so the trunk of the body - [Image](assets/chap3_draw_man_2.jpg)
+    * Then the feet, then legs with knees, and finally the floor - [Image](assets/chap3_draw_man_3.jpg) and [Image](assets/chap3_draw_man_4.jpg)
+    * Then the hands, usually a small circle for the hands, then the arms with elbows - [Image](assets/chap3_draw_man_5.jpg)
+    * Then the head, notice that the head not always aligns with the center of gravity - [Image](assets/chap3_draw_man_6.jpg)
+    * Finally the face, the nose can be a simple line, adjust expression accordingly -  [Image](assets/chap3_draw_man_6.jpg)
+* **Perspective**
+    * [Linear Perspective](https://www.britannica.com/art/linear-perspective)
+        * Draw 2 vanishing points and horizon line - [Image](assets/chap3_draw_perspective_1.jpg)
+        * Then draw construction lines - [Image](assets/chap3_draw_perspective_1.jpg)
+        * [Image](assets/chap3_draw_perspective_2.jpg)
+    * [Parallel Perspective](https://en.wikipedia.org/wiki/Parallel_projection)
+        * Same as linear, but the constructions lines don't converge in vanishing points, they just stay parallel
+    * [Egyptian Perspective]() - [Image](assets/chap3_draw_perspective_2.jpg)
+        * Just draw like a young child approaches it
 ### Randomness, Reversal, Reframing
 ### Fire-starting 
 ### Setups
