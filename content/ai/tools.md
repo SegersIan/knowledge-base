@@ -9,6 +9,11 @@ tags: ["AI"]
 * [Windsurf](https://windsurf.com/)
 * [TOON](https://github.com/toon-format/toon) - minimize token count when ingesting large sets of JSON into LLM's.
 
+## Hot
+
+* https://n8n.io/
+* https://llmspy.org/
+
 ## General Models
 
 * [ChatGPT](https://chatgpt.com/)
@@ -107,3 +112,4 @@ tags: ["AI"]
 
 ## Sales
 * [Clay](https://clay.com/)
+
