@@ -228,6 +228,12 @@ Easy building blocks for visuals, without being an artist.
 * Examples: A map of the world with the south on top might create new ideas about nations an relationships
 
 ### Fire-starting 
+
+* How to get the energy going?
+* Anything to ignite people's imagination and call to adventure.
+* **Remember: You want to channel the energy the right way.**
+* The **way** 
+
 ### Setups
 ### Asking Questions
 ### Improvisation
