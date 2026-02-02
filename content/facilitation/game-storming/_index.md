@@ -218,7 +218,15 @@ Easy building blocks for visuals, without being an artist.
         * Same as linear, but the constructions lines don't converge in vanishing points, they just stay parallel
     * [Egyptian Perspective]() - [Image](assets/chap3_draw_perspective_2.jpg)
         * Just draw like a young child approaches it
+
 ### Randomness, Reversal, Reframing
+
+* If they brain spots patterns, it might get into auto pilot modus.
+* Creating randomness is a way of fooling the mind so that you can more easily search for new patterns in familiar domains.
+* Randomness is an essential element in any kind of creativity.
+* Modular artifacts (like sticky notes, index cards) allow for reshuffling and randomness.
+* Examples: A map of the world with the south on top might create new ideas about nations an relationships
+
 ### Fire-starting 
 ### Setups
 ### Asking Questions

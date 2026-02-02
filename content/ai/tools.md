@@ -13,6 +13,8 @@ tags: ["AI"]
 
 * https://n8n.io/
 * https://llmspy.org/
+* https://anythingllm.com/
+* https://www.librechat.ai/
 
 ## General Models
 
