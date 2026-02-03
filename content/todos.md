@@ -18,11 +18,11 @@ title: "TODOs"
 ## Video Editing
 
 * Learn DaVinci Resolve [Official Training](https://www.blackmagicdesign.com/products/davinciresolve/training)
+* Screenshot the finn ad of ukens bolig, google maps, animation, zoom etc
 
 ## Personal Projects
 
 > Use by default material design from google maybe for simple basic UI. Combined with react if the app is at that maturity level.
-
 
 * Build your personal website with apps further to create a greate playground.
     * With this you learn to use AI assisted development and tooling.
@@ -30,9 +30,33 @@ title: "TODOs"
     * Music Analysis Channel: Take a song per time and create insights and analytics of it and produce a video.
 * Guru Channel: Take a GURU podcast/video, transcribe and then analyse the flaws of arguments and good arguments and give a score at the end.
 * Fashion Channel: Explain the basics of fashion
+    * Fashion insights: Collect massive data sets on fashion, create a workflow to analyze the images, fashion wise, and then create data sets that allow for insights building.
 * Music Channel: Either just generate music and upload it for tracks or continuous play, OR discuss music/analysis
-* sso.segersian.com- apps.segersian.com (only the once your user is allowee to see, and his allows to have other people veta test your solution. Alternatively call it home/user so you have a landing page to see your user, organization and the apps you have access to and all the personal data that we have on your and what’s it used for + a tool to be removed.
-* create a tenant/group for just segersian personal user account by default 
+* Telegram Bot Family
+    * Shopping list and reminder list
+    * Tracking kids, education, checklist, activities, etc… to do. Etc…
+* **Agents**
+    -   DaVinci Resolve (editing)
+    -   YouTube (analytics, uploading, info)
+    -   Github (code)
+    -   Miro (design, planning)
+    -   Google Sheets
+    -   Google Drive
+    -   Apple Photos
+    -   Youtube video one
+    -   A bot that tells me every day something new to learn
+    -   Take a course > Transcribe it or so and make in miro a structure that mimics the the flow of the course and key information > then generate a video of this ? > Maybe have also powerpoint slides/materials
+    -   Add a finn add > Kick off whole analysis > add to miro board in a column, screenshot of a map > a whole analysis of the tilstandraport etc.
+    -   Telegram bot with phishing flow thing (as you saw from the video), call someone , trigger a chat, try to phise etc…
+    -   How can you use HackerRf and AI workflow ? Google
+    -   Make sure all emails of proton go to billing folder and then create a workflow that reads all the billing and add it to a report
+    -   Workflows from monitoring the security stuff in local network
+    -   Create a bot that looks for birthday parties in your calendar and suggest presents a few weeks in advance.
+    -   Create a bot that can scan for cloathing you like and present it to you
+    -   Something with azure and terraform
+    -   TELEGRAM CAN BE A REALLY GOOD PRIMARY UI for automation or bigger ecosystem from mobile device.
+    -   What can we take from spotify ? as MCP and stuff
+    -   Wireshark integration ? Read cap files and do stuff
 
 ## OSINT
 
@@ -87,7 +111,6 @@ title: "TODOs"
 * Explore https://agents.craft.do/
 
 ## Product Ideas
-
 
 * dev-graph.segersian.com (graph of entire dev environment)
 * An EU alternative to GitHub, that's decoupled from US.
