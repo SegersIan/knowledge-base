@@ -125,6 +125,33 @@ title: "TODOs"
     * Must be geeky and badass
     * Maybe there are some oss versions as temporary first approach and then build your own business
 
+### Anime Album
+
+Create a workflow that converts photo albums to animation books to print.
+
+-   ai for conversion (mid journeys? Or others)
+-   figure out how to create consistency of theme, faces, styling.  
+-   there can be predefined themes 
+-   drop shipping idea 
+-   How can this be automated with easy web preview? 
+-   start with a simple layout of a book and maybe a manual order step
+-   later it can be more complex layouts 
+-   later an entire video could be generated as extra up sell.
+-   first version : upload image, convert with single themse, preview and order
+-   second version: upload multiple images 
+-   3th cersion: consistency of faces/theming across images
+-   4th version: mutiple themes 
+-   5th version: import images from 3th party providers 
+-   6th version: different page layouts   
+-   think how agents and internal mcp's can help do less coding, more ai, but does that make sense in the actual determinstic workflows  
+-   this should be a first simple side project/business to generate income.
+-   And another version has rhe animated video upsell!
+-   As first mvp you can just make 4 second static clips into a video, this could be the free extra. And the upsell to get an animated version.
+-   So you get a book, video, and maybe a qr code in the book to find the video?
+- partner up with CEWE as reseller, as it uses their printing service in the background for norway.- later, you can extend outside comic themes
+
+
+
 ## Product Management
 
 ## Team Topologies & Co
