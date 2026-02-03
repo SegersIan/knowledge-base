@@ -13,6 +13,7 @@ title: "TODOs"
 * AI Security Specialist - Learn and consult
 * OSINT specialist
 * Leadership
+* Built in europe, for europe
 
 ## Video Editing
 
