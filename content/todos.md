@@ -28,6 +28,7 @@ title: "TODOs"
     * With this you learn to use AI assisted development and tooling.
 * YouTube music channel
     * Music Analysis Channel: Take a song per time and create insights and analytics of it and produce a video.
+    * https://n8n.io/workflows/8642-generate-ai-viral-videos-with-veo-3-and-upload-to-tiktok/
 * Guru Channel: Take a GURU podcast/video, transcribe and then analyse the flaws of arguments and good arguments and give a score at the end.
 * Fashion Channel: Explain the basics of fashion
     * Fashion insights: Collect massive data sets on fashion, create a workflow to analyze the images, fashion wise, and then create data sets that allow for insights building.
