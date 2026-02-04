@@ -81,6 +81,7 @@ title: "TODOs"
 ## AI
 
 * **Good Foundational Courses**
+    * https://www.deeplearning.ai/courses/retrieval-augmented-generation-rag/
     * https://learn.deeplearning.ai/courses/agent-skills-with-anthropic/lesson/ldn5c3/introduction
     * https://learn.deeplearning.ai/courses/agentic-ai/lesson/pu5xbv/welcome!
     * https://learn.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant/lesson/66b35/introduction
