@@ -9,8 +9,8 @@ This is a interpretation of the talk on architecture for flow.
 ## The Elevator Pitch
 
 * **Goal** - How to build adaptive, socio-technical systems optimized for continuous change and feedback? Cause we know changes are constant.
-* **How** - The way to do that is, to be **efficient** (building systems well, be good at building) and to be **effective** (building the right system, solving the actual problems and providing value). For that we need to *align Tech Strategy, Architecture, and Team boundaries*.
-* **What** - 
+* **Strategy** - The way to do that is, to be **efficient** (building systems well, be good at building) and to be **effective** (building the right system, solving the actual problems and providing value). For that we need to *align Tech Strategy, Architecture, and Team boundaries*.
+* **How** - 
     * There are **3 tools** introduced to help implement this efficiency and effectivity. 
         * *Wardley Maps* - To understand and map you value chain
         * *Domain Driven Design* - To understand your boundaries, opportunity to reuse (modularize) and choose appropriate investment strategy (Build, buy, outsource).
