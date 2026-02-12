@@ -172,3 +172,4 @@ This seems to take in account a single learning loop. So it allows to get better
 
 * The Talk: https://www.youtube.com/watch?v=PK-y-iG5VnE
 * The Book: https://architectureforflow.com/
+* Learn Wardley Maps: https://learnwardleymapping.com/
