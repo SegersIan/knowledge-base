@@ -14,6 +14,8 @@ title: "TODOs"
 * OSINT specialist
 * Leadership
 * Built in europe, for europe
+* ComfyUI
+* https://huggingface.co/
 
 ## Video Editing
 
@@ -24,6 +26,7 @@ title: "TODOs"
 
 > Use by default material design from google maybe for simple basic UI. Combined with react if the app is at that maturity level.
 
+* Create ai that can visualize music
 * Build your personal website with apps further to create a greate playground.
     * With this you learn to use AI assisted development and tooling.
 * YouTube music channel
