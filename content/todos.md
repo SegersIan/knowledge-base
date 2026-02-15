@@ -16,6 +16,8 @@ title: "TODOs"
 * Built in europe, for europe
 * ComfyUI
 * https://huggingface.co/
+* https://github.com/upscayl/upscayl/releases/tag/v2.15.0
+* make deep fake for once
 
 ## Video Editing
 
