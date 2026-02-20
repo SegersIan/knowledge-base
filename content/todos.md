@@ -20,6 +20,7 @@ title: "TODOs"
 * make deep fake for once
 * https://app.runwayml.com/video-tools/teams/segersian/ai-tools/generate?mode=apps
 * Google Veo 3
+* Download video, describe what's happening in it and then augment it.
 
 ## Video Editing
 
