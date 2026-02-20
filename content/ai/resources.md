@@ -53,3 +53,10 @@ tags: ["AI"]
 ## Refining  your  copilot
 
 * https://github.com/github/awesome-copilot
+
+## Agentic Use Cases
+
+* https://enterpriseaiexecutive.ai/p/19-must-read-agentic-ai-case-studies
+* https://www.youtube.com/watch?v=VvmUoBfYIjY
+* https://www.anthropic.com/engineering/multi-agent-research-system
+* https://medium.com/@plawanrath/case-study-building-a-multi-agent-research-assistant-with-a2a-protocol-0df1d6eb71c3
