@@ -46,4 +46,8 @@ tags: ["AI", "Agentic AI"]
 
 ## Resources
 
+* https://medium.com/@plawanrath/case-study-building-a-multi-agent-research-assistant-with-a2a-protocol-0df1d6eb71c3
+* https://www.anthropic.com/engineering/multi-agent-research-system
+* https://www.youtube.com/watch?v=VvmUoBfYIjY
+* https://enterpriseaiexecutive.ai/p/19-must-read-agentic-ai-case-studies
 
