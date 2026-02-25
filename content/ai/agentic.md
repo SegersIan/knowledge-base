@@ -50,4 +50,6 @@ tags: ["AI", "Agentic AI"]
 * https://www.anthropic.com/engineering/multi-agent-research-system
 * https://www.youtube.com/watch?v=VvmUoBfYIjY
 * https://enterpriseaiexecutive.ai/p/19-must-read-agentic-ai-case-studies
-
+* https://docs.solace.com/Agentic-AI/agent-mesh.htm?utm_source=chatgpt.com
+* https://www.gravitee.io/blog/best-practices-principles-for-agent-mesh-implementations?utm_source=chatgpt.com
+* https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/seizing%20the%20agentic%20ai%20advantage/seizing-the-agentic-ai-advantage.pdf
