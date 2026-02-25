@@ -53,3 +53,4 @@ tags: ["AI", "Agentic AI"]
 * https://docs.solace.com/Agentic-AI/agent-mesh.htm?utm_source=chatgpt.com
 * https://www.gravitee.io/blog/best-practices-principles-for-agent-mesh-implementations?utm_source=chatgpt.com
 * https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/seizing%20the%20agentic%20ai%20advantage/seizing-the-agentic-ai-advantage.pdf
+* https://www.linkedin.com/pulse/event-driven-ai-agents-architecture-pattern-every-needs-venkatesan-fzwfc/
