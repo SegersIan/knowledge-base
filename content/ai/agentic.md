@@ -55,3 +55,4 @@ tags: ["AI", "Agentic AI"]
 * https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/seizing%20the%20agentic%20ai%20advantage/seizing-the-agentic-ai-advantage.pdf
 * https://www.linkedin.com/pulse/event-driven-ai-agents-architecture-pattern-every-needs-venkatesan-fzwfc/
 * https://youtu.be/NmblVxyBhi8?si=8wXyWS5j83BBArzF
+* https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system
