@@ -72,3 +72,4 @@ These subdomains represent common areas of product work. Their scope and emphasi
 *  https://www.youtube.com/watch?v=K7ra-I2e8r0
 *  https://www.youtube.com/watch?v=-e8yFtLL6ss
 *  https://www.youtube.com/watch?v=LOHgRw43fFk
+*  https://skillbuilder.deeplearning.ai/
