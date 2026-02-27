@@ -58,3 +58,8 @@ tags: ["AI", "Agentic AI"]
 * https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system
 * https://cloud.google.com/discover/what-are-ai-agents#what-is-an-ai-agent
 * https://docs.cloud.google.com/architecture/agentic-ai-overview
+* https://developers.openai.com/cookbook/examples/agents_sdk/multi-agent-portfolio-collaboration/multi_agent_portfolio_collaboration?utm_source=enterpriseaiexecutive.ai&utm_medium=referral&utm_campaign=19-must-read-agentic-ai-case-studies
+* https://www.youtube.com/watch?v=NmblVxyBhi8
+* https://www.youtube.com/watch?v=oyqeCHFM5U4
+* https://www.youtube.com/watch?v=Bugs0dVcNI8
+* https://www.uber.com/en-CA/blog/enhanced-agentic-rag/
