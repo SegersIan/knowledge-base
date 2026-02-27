@@ -60,3 +60,15 @@ These subdomains represent common areas of product work. Their scope and emphasi
 * https://www.wardleymaps.com/
 * Positioning a product
     * ![ing](assets/selling_product.jpg)
+ 
+ ### Useful for Neptune Product 
+
+* https://www.youtube.com/watch?v=fYh1CWadxDM
+*  https://www.youtube.com/watch?v=gj5UhZ4SctI
+*  https://www.youtube.com/watch?v=qcbsKOajYq4
+*  https://www.youtube.com/watch?v=TB7XhOfPsYY
+*  https://www.youtube.com/watch?v=QTG52891tzc
+*  https://www.youtube.com/watch?v=BP599X-gze0
+*  https://www.youtube.com/watch?v=K7ra-I2e8r0
+*  https://www.youtube.com/watch?v=-e8yFtLL6ss
+*  https://www.youtube.com/watch?v=LOHgRw43fFk
