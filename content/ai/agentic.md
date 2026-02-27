@@ -56,3 +56,5 @@ tags: ["AI", "Agentic AI"]
 * https://www.linkedin.com/pulse/event-driven-ai-agents-architecture-pattern-every-needs-venkatesan-fzwfc/
 * https://youtu.be/NmblVxyBhi8?si=8wXyWS5j83BBArzF
 * https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system
+* https://cloud.google.com/discover/what-are-ai-agents#what-is-an-ai-agent
+* 
