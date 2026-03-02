@@ -63,3 +63,4 @@ tags: ["AI", "Agentic AI"]
 * https://www.youtube.com/watch?v=oyqeCHFM5U4
 * https://www.youtube.com/watch?v=Bugs0dVcNI8
 * https://www.uber.com/en-CA/blog/enhanced-agentic-rag/
+* https://x.com/trq212/status/2027463795355095314
