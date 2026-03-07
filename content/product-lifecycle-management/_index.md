@@ -61,7 +61,7 @@ These subdomains represent common areas of product work. Their scope and emphasi
 * Positioning a product
     * ![ing](assets/selling_product.jpg)
 * https://cloud.google.com/transform/unlocking-product-success-by-combining-dora-and-heart
-
+* https://productschool.com/blog/product-strategy/lean-product-management-glassbox
  
  ### Useful for Neptune Product 
 
