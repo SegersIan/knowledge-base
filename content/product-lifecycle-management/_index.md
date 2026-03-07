@@ -60,6 +60,8 @@ These subdomains represent common areas of product work. Their scope and emphasi
 * https://www.wardleymaps.com/
 * Positioning a product
     * ![ing](assets/selling_product.jpg)
+* https://cloud.google.com/transform/unlocking-product-success-by-combining-dora-and-heart
+
  
  ### Useful for Neptune Product 
 
