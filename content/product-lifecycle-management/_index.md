@@ -75,3 +75,4 @@ These subdomains represent common areas of product work. Their scope and emphasi
 *  https://www.youtube.com/watch?v=-e8yFtLL6ss
 *  https://www.youtube.com/watch?v=LOHgRw43fFk
 *  https://skillbuilder.deeplearning.ai/
+*  https://archive.org/details/principlesofprod0000rein
