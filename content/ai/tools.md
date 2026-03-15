@@ -21,6 +21,16 @@ tags: ["AI"]
 * https://anythingllm.com/
 * https://www.librechat.ai/
 
+## Deepfaking
+
+* Resemble AI
+* DeepFaceLab (DFL)
+* FaceSwap.dev
+* Roop / Roop-Unleashed:
+* HeyGen
+* JoggAI
+
+
 ## General Models
 
 * [ChatGPT](https://chatgpt.com/)
