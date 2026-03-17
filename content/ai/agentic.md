@@ -64,3 +64,11 @@ tags: ["AI", "Agentic AI"]
 * https://www.youtube.com/watch?v=Bugs0dVcNI8
 * https://www.uber.com/en-CA/blog/enhanced-agentic-rag/
 * https://x.com/trq212/status/2027463795355095314
+
+## Design / Architecture
+
+* https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns
+* https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system
+* https://docs.cloud.google.com/architecture/multiagent-ai-system
+* https://aws.amazon.com/blogs/enterprise-strategy/from-tools-to-teammates-ctos-guide-to-evolving-architecture-for-agentic-ai/
+* https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-patterns/introduction.html
