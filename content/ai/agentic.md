@@ -64,7 +64,7 @@ tags: ["AI", "Agentic AI"]
 * https://www.youtube.com/watch?v=Bugs0dVcNI8
 * https://www.uber.com/en-CA/blog/enhanced-agentic-rag/
 * https://x.com/trq212/status/2027463795355095314
-
+* https://alash3al.github.io/stash/?_v01
 ## Design / Architecture
 
 * https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns
